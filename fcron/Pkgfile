@@ -14,6 +14,7 @@ build () {
     autoconf
     ./configure --prefix=/usr \
                 --with-etcdir=/etc/fcron \
+                --mandir=/usr/man \
 		--with-docdir=/usr/doc \
 		--with-spooldir=/var/spool/fcron \
 		--with-fifodir=/var/run \
