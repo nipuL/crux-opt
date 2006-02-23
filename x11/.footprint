@@ -41,13 +41,8 @@ drwxr-xr-x	root/root	etc/X11/app-defaults/
 -rw-r--r--	root/root	etc/X11/app-defaults/Xvidtune
 drwxr-xr-x	root/root	etc/X11/fs/
 -rw-r--r--	root/root	etc/X11/fs/config
-drwxr-xr-x	root/root	etc/X11/init.d/
--rwxr-xr-x	root/root	etc/X11/init.d/xprint
 drwxr-xr-x	root/root	etc/X11/lbxproxy/
 -rw-r--r--	root/root	etc/X11/lbxproxy/AtomControl
-drwxr-xr-x	root/root	etc/X11/profile.d/
--rwxr-xr-x	root/root	etc/X11/profile.d/xprint.csh
--rwxr-xr-x	root/root	etc/X11/profile.d/xprint.sh
 drwxr-xr-x	root/root	etc/X11/proxymngr/
 -rw-r--r--	root/root	etc/X11/proxymngr/pmconfig
 drwxr-xr-x	root/root	etc/X11/rstart/
@@ -75,13 +70,15 @@ drwxr-xr-x	root/root	etc/X11/xdm/
 -rwxr-xr-x	root/root	etc/X11/xdm/GiveConsole
 -rwxr-xr-x	root/root	etc/X11/xdm/TakeConsole
 -rw-r--r--	root/root	etc/X11/xdm/Xaccess
+-rwxr-xr-x	root/root	etc/X11/xdm/Xreset
 -rw-r--r--	root/root	etc/X11/xdm/Xresources
 -rw-r--r--	root/root	etc/X11/xdm/Xservers
 -rwxr-xr-x	root/root	etc/X11/xdm/Xsession
 -rwxr-xr-x	root/root	etc/X11/xdm/Xsetup_0
+-rwxr-xr-x	root/root	etc/X11/xdm/Xstartup
 -rwxr-xr-x	root/root	etc/X11/xdm/Xwilling
 lrwxrwxrwx	root/root	etc/X11/xdm/authdir -> ../../../var/lib/xdm
--rwxr-xr-x	root/root	etc/X11/xdm/chooser
+lrwxrwxrwx	root/root	etc/X11/xdm/chooser -> /usr/X11R6/bin/chooser
 drwxr-xr-x	root/root	etc/X11/xdm/pixmaps/
 -rw-r--r--	root/root	etc/X11/xdm/pixmaps/xorg-bw.xpm
 -rw-r--r--	root/root	etc/X11/xdm/pixmaps/xorg.xpm
@@ -101,11 +98,12 @@ drwxr-xr-x	root/root	etc/X11/xkb/compat/
 -rw-r--r--	root/root	etc/X11/xkb/compat/basic
 -rw-r--r--	root/root	etc/X11/xkb/compat/complete
 -rw-r--r--	root/root	etc/X11/xkb/compat/default
--rw-r--r--	root/root	etc/X11/xkb/compat/group_led
 -rw-r--r--	root/root	etc/X11/xkb/compat/iso9995
 -rw-r--r--	root/root	etc/X11/xkb/compat/japan
 -rw-r--r--	root/root	etc/X11/xkb/compat/keypad
--rw-r--r--	root/root	etc/X11/xkb/compat/leds
+-rw-r--r--	root/root	etc/X11/xkb/compat/ledcaps
+-rw-r--r--	root/root	etc/X11/xkb/compat/lednum
+-rw-r--r--	root/root	etc/X11/xkb/compat/ledscroll
 -rw-r--r--	root/root	etc/X11/xkb/compat/misc
 -rw-r--r--	root/root	etc/X11/xkb/compat/mousekeys
 -rw-r--r--	root/root	etc/X11/xkb/compat/norepeat
@@ -252,6 +250,7 @@ drwxr-xr-x	root/root	etc/X11/xkb/symbols/
 -rw-r--r--	root/root	etc/X11/xkb/symbols/by
 -rw-r--r--	root/root	etc/X11/xkb/symbols/ca
 -rw-r--r--	root/root	etc/X11/xkb/symbols/ca_enhanced
+-rw-r--r--	root/root	etc/X11/xkb/symbols/capslock
 -rw-r--r--	root/root	etc/X11/xkb/symbols/compose
 -rw-r--r--	root/root	etc/X11/xkb/symbols/ctrl
 -rw-r--r--	root/root	etc/X11/xkb/symbols/cz
@@ -271,7 +270,9 @@ drwxr-xr-x	root/root	etc/X11/xkb/symbols/digital/
 -rw-r--r--	root/root	etc/X11/xkb/symbols/el
 -rw-r--r--	root/root	etc/X11/xkb/symbols/en_US
 -rw-r--r--	root/root	etc/X11/xkb/symbols/es
+-rw-r--r--	root/root	etc/X11/xkb/symbols/eurosign
 -rw-r--r--	root/root	etc/X11/xkb/symbols/fi
+-rw-r--r--	root/root	etc/X11/xkb/symbols/fo
 -rw-r--r--	root/root	etc/X11/xkb/symbols/fr
 -rw-r--r--	root/root	etc/X11/xkb/symbols/fr_CH
 drwxr-xr-x	root/root	etc/X11/xkb/symbols/fujitsu/
@@ -338,83 +339,69 @@ drwxr-xr-x	root/root	etc/X11/xkb/symbols/nec/
 drwxr-xr-x	root/root	etc/X11/xkb/symbols/pc/
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/al
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/am
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ar
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ara
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/az
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ba
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/bd
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/be
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ben
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/bg
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/br
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/bt
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/by
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ca
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ch
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/cz
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/cz_qwerty
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/de
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/dev
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/dk
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/dvorak
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/dz
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ee
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/el
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/en_US
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/es
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/fi
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/fo
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/fr
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/fr-latin9
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/gb
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ge_la
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ge_ru
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/guj
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/gur
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ge
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/gr
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/hr
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/hu
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ie
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/il
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/il_phonetic
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/in
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ir
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/is
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/it
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/iu
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/kan
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/jp
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/kg
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/la
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/latam
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/latin
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/lo
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/lk
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/lt
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/lv
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mk
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ml
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mao
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mkd
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mm
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mn
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mt
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/mt_us
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/nl
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/no
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ogham
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ori
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/pc
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/pk
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/pl
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/pl2
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/pt
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ro
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ru
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/sapmi
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/se
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/se_FI
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/se_NO
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/se_SE
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/si
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/sk
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/sk_qwerty
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/sr
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/syr
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/syr_phonetic
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/tel
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/srp
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/sy
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/th
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/th_pat
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/th_tis
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/tj
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/tml
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/tr
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/ua
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/us
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/us_intl
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc/uz
--rw-r--r--	root/root	etc/X11/xkb/symbols/pc/yu
+-rw-r--r--	root/root	etc/X11/xkb/symbols/pc/vn
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pc104
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pl
 -rw-r--r--	root/root	etc/X11/xkb/symbols/pl2
@@ -486,7 +473,6 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/attributes/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/ddx-config/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/ddx-config/raster/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/ddx-config/raster/pcl
--rw-r--r--	root/root	etc/X11/xserver/C/print/ddx-config/raster/postscript (EMPTY)
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/CANONBJ10E-GS/
 lrwxrwxrwx	root/root	etc/X11/xserver/C/print/models/CANONBJ10E-GS/fonts -> ../GSdefault/fonts
@@ -574,7 +560,6 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/9nb00093.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/9nb00094.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/README
--rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/fonts.alias (EMPTY)
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/fonts.dir
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/lpr0ye1a.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/model-config
@@ -658,7 +643,6 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/9nb00093.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/9nb00094.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/README
--rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/fonts.alias (EMPTY)
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/fonts.dir
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/lpr0ye1a.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/model-config
@@ -724,8 +708,11 @@ lrwxrwxrwx	root/root	etc/X11/xserver/C/print/models/SPSPARC2/fonts/Times-Roman.p
 lrwxrwxrwx	root/root	etc/X11/xserver/POSIX -> C
 -rw-r--r--	root/root	etc/X11/xserver/README
 -rw-r--r--	root/root	etc/X11/xserver/SecurityPolicy
+lrwxrwxrwx	root/root	etc/X11/xserver/af -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/af_ZA -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/af_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/af_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/afrikaans -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ar -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ar_AE -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ar_AE.iso88596 -> C
@@ -788,10 +775,17 @@ lrwxrwxrwx	root/root	etc/X11/xserver/bg_BG -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bg_BG.ISO8859-5 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bg_BG.cp1251 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bg_BG.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bn_IN.UTF-8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bn_IN.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bokmal -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/br_FR -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/br_FR.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bs -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA.ISO-8859-2 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA.ISO8859-2 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA.ISO_8859-2 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA.UTF-8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/bs_BA.iso88592 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ca -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ca.ISO8859-1 -> C
@@ -1058,6 +1052,8 @@ lrwxrwxrwx	root/root	etc/X11/xserver/gl_ES.iso88591 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/gl_ES.iso885915@euro -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/gl_ES.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/gl_ES@euro -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/gu_IN.UTF-8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/gu_IN.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/gv_GB -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/gv_GB.iso88591 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/he -> C
@@ -1134,6 +1130,9 @@ lrwxrwxrwx	root/root	etc/X11/xserver/korean -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/korean.euc -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/kw_GB -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/kw_GB.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ky_KG -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ky_KG.UTF-8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ky_KG.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/lithuanian -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/lt -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/lt.ISO8859-13 -> C
@@ -1160,6 +1159,7 @@ lrwxrwxrwx	root/root	etc/X11/xserver/mt_MT -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/mt_MT.iso88593 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/nb_NO -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/nb_NO.ISO-8859-1 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ndebele -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/nl -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/nl.ISO8859-1 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/nl.ISO8859-15 -> C
@@ -1187,8 +1187,18 @@ lrwxrwxrwx	root/root	etc/X11/xserver/no_NO.ISO8859-1@nynorsk -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/no_NO.iso88591 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/no_NO.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/norwegian -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nr -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nr_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nr_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nr_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nso -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nso_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nso_ZA.iso885915 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/nso_ZA.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/oc_FR -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/oc_FR.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/pa_IN.UTF-8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/pa_IN.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/pl_PL -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/pl_PL.ISO8859-2 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/pl_PL.UTF-8 -> C
@@ -1240,12 +1250,20 @@ lrwxrwxrwx	root/root	etc/X11/xserver/ru_UA.koi8u -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/russian -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/se_NO -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/se_NO.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/sepedi -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/sesotho -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/setswana -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh.ISO8859-2 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh_BA.ISO8859-2@bosnia -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh_YU -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh_YU.iso88592 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sh_YU.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/si -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/si_LK -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/si_LK.UTF8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/sinhala -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/siswati -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sk -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sk.ISO8859-2 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sk_SK -> C
@@ -1272,6 +1290,14 @@ lrwxrwxrwx	root/root	etc/X11/xserver/sr_YU.iso88592 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sr_YU.iso88595@cyrillic -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sr_YU.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sr_YU@cyrillic -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ss -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ss_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ss_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ss_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/st -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/st_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/st_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/st_ZA.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/su -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/su.ISO8859-1 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/sv -> C
@@ -1307,6 +1333,10 @@ lrwxrwxrwx	root/root	etc/X11/xserver/th_TH.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/thai -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tl_PH -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tl_PH.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/tn -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/tn_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/tn_ZA.iso885915 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/tn_ZA.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr.ISO8859-9 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr_TR -> C
@@ -1314,6 +1344,11 @@ lrwxrwxrwx	root/root	etc/X11/xserver/tr_TR.ISO8859-9 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr_TR.UTF-8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr_TR.iso88599 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/tr_TR.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ts -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ts_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ts_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ts_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/tsonga -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/turkish -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/uk_UA -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/uk_UA.koi8u -> C
@@ -1322,6 +1357,10 @@ lrwxrwxrwx	root/root	etc/X11/xserver/ur_PK -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/ur_PK.utf8 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/uz_UZ -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/uz_UZ.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ve -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ve_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/ve_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/venda -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/vi_VN -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/vi_VN.tcvn -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/vi_VN.utf8 -> C
@@ -1329,6 +1368,11 @@ lrwxrwxrwx	root/root	etc/X11/xserver/wa_BE -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/wa_BE.iso88591 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/wa_BE.iso885915@euro -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/wa_BE@euro -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/xh -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/xh_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/xh_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/xh_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/xhosa -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/yi_US -> en_US
 lrwxrwxrwx	root/root	etc/X11/xserver/yi_US.cp1255 -> en_US
 lrwxrwxrwx	root/root	etc/X11/xserver/zh -> C
@@ -1383,6 +1427,11 @@ lrwxrwxrwx	root/root	etc/X11/xserver/zh_TW.UTF-8@zhuyin -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/zh_TW.big5 -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/zh_TW.euctw -> C
 lrwxrwxrwx	root/root	etc/X11/xserver/zh_TW.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/zu -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/zu_ZA -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/zu_ZA.iso88591 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/zu_ZA.utf8 -> C
+lrwxrwxrwx	root/root	etc/X11/xserver/zulu -> C
 drwxr-xr-x	root/root	etc/X11/xsm/
 -rw-r--r--	root/root	etc/X11/xsm/system.xsm
 drwxr-xr-x	root/root	etc/rc.d/
@@ -1405,11 +1454,11 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/X -> Xorg
 -rwxr-xr-x	root/root	usr/X11R6/bin/bitmap
 -rwxr-xr-x	root/root	usr/X11R6/bin/bmtoa
 -rwxr-xr-x	root/root	usr/X11R6/bin/ccmakedep
+-rwxr-xr-x	root/root	usr/X11R6/bin/chooser
 -rwxr-xr-x	root/root	usr/X11R6/bin/cleanlinks
 -rwxr-xr-x	root/root	usr/X11R6/bin/cxpm
 -rwxr-xr-x	root/root	usr/X11R6/bin/dga
--rwxr-xr-x	root/root	usr/X11R6/bin/dpsexec
--rwxr-xr-x	root/root	usr/X11R6/bin/dpsinfo
+-rwxr-xr-x	root/root	usr/X11R6/bin/dmxtodmx
 -rwxr-xr-x	root/root	usr/X11R6/bin/editres
 -rwxr-xr-x	root/root	usr/X11R6/bin/fslsfonts
 -rwxr-xr-x	root/root	usr/X11R6/bin/fstobdf
@@ -1432,7 +1481,6 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/inw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/luit
 -rwxr-xr-x	root/root	usr/X11R6/bin/makedepend
 -rwxr-xr-x	root/root	usr/X11R6/bin/makeg
--rwxr-xr-x	root/root	usr/X11R6/bin/makepsres
 -rwxr-xr-x	root/root	usr/X11R6/bin/makestrs
 -rwxr-xr-x	root/root	usr/X11R6/bin/mergelib
 -rwxr-xr-x	root/root	usr/X11R6/bin/mkcfm
@@ -1448,7 +1496,6 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outl -> ioport
 lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/pcitweak
 -rwxr-xr-x	root/root	usr/X11R6/bin/proxymngr
--rwxr-xr-x	root/root	usr/X11R6/bin/pswrap
 -rwxr-xr-x	root/root	usr/X11R6/bin/resize
 -rwxr-xr-x	root/root	usr/X11R6/bin/revpath
 -rwxr-xr-x	root/root	usr/X11R6/bin/rman
@@ -1462,14 +1509,15 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/smproxy
 -rwxr-xr-x	root/root	usr/X11R6/bin/startx
 -rwxr-xr-x	root/root	usr/X11R6/bin/sxpm
--rwxr-xr-x	root/root	usr/X11R6/bin/texteroids
 -rwxr-xr-x	root/root	usr/X11R6/bin/twm
 -rwxr-xr-x	root/root	usr/X11R6/bin/ucs2any
 -rwxr-xr-x	root/root	usr/X11R6/bin/uxterm
+-rwxr-xr-x	root/root	usr/X11R6/bin/vdltodmx
 -rwxr-xr-x	root/root	usr/X11R6/bin/viewres
 -rwxr-xr-x	root/root	usr/X11R6/bin/x11perf
 -rwxr-xr-x	root/root	usr/X11R6/bin/x11perfcomp
 -rwxr-xr-x	root/root	usr/X11R6/bin/xauth
+-rwxr-xr-x	root/root	usr/X11R6/bin/xauth_switch_to_sun-des-1
 -rwxr-xr-x	root/root	usr/X11R6/bin/xbiff
 -rwxr-xr-x	root/root	usr/X11R6/bin/xcalc
 -rwxr-xr-x	root/root	usr/X11R6/bin/xclipboard
@@ -1479,8 +1527,11 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/xcursor-config
 -rwxr-xr-x	root/root	usr/X11R6/bin/xcursorgen
 -rwxr-xr-x	root/root	usr/X11R6/bin/xcutsel
+-rwxr-xr-x	root/root	usr/X11R6/bin/xdbedizzy
 -rwxr-xr-x	root/root	usr/X11R6/bin/xditview
 -rwxr-xr-x	root/root	usr/X11R6/bin/xdm
+-rwxr-xr-x	root/root	usr/X11R6/bin/xdmxconfig
+-rwxr-xr-x	root/root	usr/X11R6/bin/xdpr
 -rwxr-xr-x	root/root	usr/X11R6/bin/xdpyinfo
 -rwxr-xr-x	root/root	usr/X11R6/bin/xdriinfo
 -rwxr-xr-x	root/root	usr/X11R6/bin/xedit
@@ -1521,6 +1572,7 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/xorgconfig
 -rwxr-xr-x	root/root	usr/X11R6/bin/xphelloworld
 -rwxr-xr-x	root/root	usr/X11R6/bin/xplsprinters
+-rwxr-xr-x	root/root	usr/X11R6/bin/xpr
 -rwxr-xr-x	root/root	usr/X11R6/bin/xprehashprinterlist
 -rwxr-xr-x	root/root	usr/X11R6/bin/xprop
 -rwxr-xr-x	root/root	usr/X11R6/bin/xpsimplehelloworld
@@ -1535,7 +1587,7 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/xsetroot
 -rwxr-xr-x	root/root	usr/X11R6/bin/xsm
 -rwxr-xr-x	root/root	usr/X11R6/bin/xstdcmap
--rws--x--x	root/root	usr/X11R6/bin/xterm
+-rwxr-xr-x	root/root	usr/X11R6/bin/xterm
 -rwxr-xr-x	root/root	usr/X11R6/bin/xtrapchar
 -rwxr-xr-x	root/root	usr/X11R6/bin/xtrapin
 -rwxr-xr-x	root/root	usr/X11R6/bin/xtrapinfo
@@ -1549,33 +1601,6 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/xwininfo
 -rwxr-xr-x	root/root	usr/X11R6/bin/xwud
 drwxr-xr-x	root/root	usr/X11R6/include/
-drwxr-xr-x	root/root	usr/X11R6/include/DPS/
--rw-r--r--	root/root	usr/X11R6/include/DPS/ColorSB.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/ColorSBP.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/DPSScrollW.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/DPSScrollWP.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontCreatP.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontCreato.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontSB.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontSBP.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontSamplP.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/FontSample.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/PSres.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/XDPS.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/XDPSlib.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/XDPSproto.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsNXargs.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsXclient.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsXcommon.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsXpreview.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsXshare.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsXuserpath.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsclient.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsconfig.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsexcept.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsfriends.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/dpsops.h
--rw-r--r--	root/root	usr/X11R6/include/DPS/psops.h
 drwxr-xr-x	root/root	usr/X11R6/include/GL/
 -rw-r--r--	root/root	usr/X11R6/include/GL/GLwDrawA.h
 -rw-r--r--	root/root	usr/X11R6/include/GL/GLwDrawAP.h
@@ -1592,14 +1617,19 @@ drwxr-xr-x	root/root	usr/X11R6/include/GL/
 -rw-r--r--	root/root	usr/X11R6/include/GL/glxtokens.h
 -rw-r--r--	root/root	usr/X11R6/include/GL/osmesa.h
 drwxr-xr-x	root/root	usr/X11R6/include/X11/
+-rw-r--r--	root/root	usr/X11R6/include/X11/CallbackI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Composite.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/CompositeP.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ConstrainP.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Constraint.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/ConvertI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Core.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/CoreP.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/CreateI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/DECkeysym.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/EventI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/HPkeysym.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/HookObjI.h
 drwxr-xr-x	root/root	usr/X11R6/include/X11/ICE/
 -rw-r--r--	root/root	usr/X11R6/include/X11/ICE/ICE.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ICE/ICEconn.h
@@ -1607,23 +1637,33 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/ICE/
 -rw-r--r--	root/root	usr/X11R6/include/X11/ICE/ICEmsg.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ICE/ICEproto.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ICE/ICEutil.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/ImUtil.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/InitialI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Intrinsic.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/IntrinsicI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/IntrinsicP.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Object.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ObjectP.h
 drwxr-xr-x	root/root	usr/X11R6/include/X11/PM/
 -rw-r--r--	root/root	usr/X11R6/include/X11/PM/PM.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/PM/PMproto.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/PassivGraI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/RectObj.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/RectObjP.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/ResourceI.h
 drwxr-xr-x	root/root	usr/X11R6/include/X11/SM/
 -rw-r--r--	root/root	usr/X11R6/include/X11/SM/SM.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/SM/SMlib.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/SM/SMproto.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/SelectionI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Shell.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/ShellI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/ShellP.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/StringDefs.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Sunkeysym.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/ThreadsI.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/TranslateI.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/VarargsI.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Vendor.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/VendorP.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/X.h
@@ -1720,6 +1760,7 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/Xft/
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xfuncproto.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xfuncs.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xlib.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/XlibConf.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xlibint.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xlocale.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xmd.h
@@ -1756,6 +1797,7 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/XprintUtil/
 -rw-r--r--	root/root	usr/X11R6/include/X11/XprintUtil/xprintutil.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xproto.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xprotostr.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/Xregion.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xresource.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xthreads.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/Xutil.h
@@ -1946,8 +1988,8 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/extensions/
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/shmstr.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/sync.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/syncstr.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/extensions/vldXvMC.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xcmiscstr.h
--rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xevieplaceholder.h (EMPTY)
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86bigfont.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86bigfstr.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86dga.h
@@ -1975,10 +2017,27 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/fonts/
 -rw-r--r--	root/root	usr/X11R6/include/X11/fonts/FS.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/fonts/FSlib.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/fonts/FSproto.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/bdfint.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/bitmap.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/bufio.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fntfil.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fntfilio.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fntfilst.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/font.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontenc.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontencc.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontmisc.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontmod.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontshow.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontstruct.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontutil.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fontxlfd.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/fonts/fsmasks.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/fonts/pcf.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/keysym.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/keysymdef.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/misc.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/os.h
 drwxr-xr-x	root/root	usr/X11R6/include/X11/pixmaps/
 -rw-r--r--	root/root	usr/X11R6/include/X11/pixmaps/card.xpm
 -rw-r--r--	root/root	usr/X11R6/include/X11/pixmaps/computer.xpm
@@ -1999,6 +2058,7 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/X11/app-defaults -> ../../../../etc/X11/app-d
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/config/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/Amoeba.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/DGUX.cf
+-rw-r--r--	root/root	usr/X11R6/lib/X11/config/DragonFly.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/FreeBSD.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/Imake.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/Imake.rules
@@ -2058,6 +2118,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/config/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/lynx.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/macII.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/mach.cf
+-rw-r--r--	root/root	usr/X11R6/lib/X11/config/mingw.cf
+-rw-r--r--	root/root	usr/X11R6/lib/X11/config/mingw.rules
+-rw-r--r--	root/root	usr/X11R6/lib/X11/config/mingw.tmpl
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/minix.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/moto.cf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/config/ncr.cf
@@ -6004,24 +6067,111 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/Type1/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/l049033t.pfa
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/l049036t.afm
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/l049036t.pfa
+drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/cyrillic/
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1c.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1cb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1cbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1co.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox1to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2c.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2cb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2cbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2co.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox2to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3c.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3cb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3cbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3co.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox3to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox4to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox5to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6h.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6hb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6hbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6ho.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6t.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6tb.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6tbo.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/crox6to.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/encodings.dir
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/fonts.alias
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/fonts.dir
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/fonts.scale
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi10x16b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi10x20.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi12x24.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi12x24b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi5x8.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi6x10.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi6x13.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi6x13b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi6x9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi7x14.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi7x14b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi8x13.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi8x16.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi8x16b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi9x15.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi9x15b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi9x18.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koi9x18b.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/koinil2.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/proof9x16.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/screen8x16.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/cyrillic/screen8x16b.pcf.gz
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/encodings/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/adobe-dingbats.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/adobe-standard.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/adobe-symbol.enc.gz
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ansi-1251.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/armscii-8.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ascii-0.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/dec-special.enc
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ansi-1251.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/armscii-8.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ascii-0.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/dec-special.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/encodings.dir
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp437.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp850.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp852.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp866.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-11.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-13.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-16.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-6.16.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-6.8x.enc
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp437.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp850.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp852.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/ibm-cp866.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-11.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-13.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-16.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-6.16.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/iso8859-6.8x.enc.gz
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/encodings/large/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/big5.eten-0.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/big5hkscs-0.enc.gz
@@ -6029,6 +6179,7 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/encodings/large/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/cns11643-2.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/cns11643-3.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/encodings.dir
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/gb18030-0.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/gb18030.2000-0.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/gb18030.2000-1.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/gb2312.1980-0.enc.gz
@@ -6039,23 +6190,23 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/encodings/large/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/ksc5601.1987-0.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/ksc5601.1992-3.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/large/sun.unicode.india-0.enc.gz
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1250.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1251.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1252.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1253.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1254.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1255.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1256.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1257.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1258.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-win3.1.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-0.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-1.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-2.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulelao-1.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/suneu-greek.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/tcvn-0.enc
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/tis620-2.enc
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1250.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1251.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1252.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1253.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1254.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1255.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1256.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1257.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-cp1258.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/microsoft-win3.1.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-0.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-1.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulearabic-2.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/mulelao-1.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/suneu-greek.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/tcvn-0.enc.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/tis620-2.enc.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/encodings/viscii1.1-1.enc.gz
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/local/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/local/fonts.dir
@@ -6070,7 +6221,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/10x20.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/12x13ja.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/12x24.pcf.gz
@@ -6086,7 +6241,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/4x6.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-10.pcf.gz
@@ -6097,7 +6256,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x7.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-10.pcf.gz
@@ -6108,7 +6271,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/5x8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-10.pcf.gz
@@ -6119,7 +6286,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x10.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-10.pcf.gz
@@ -6130,7 +6301,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x12.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-10.pcf.gz
@@ -6142,7 +6317,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-10.pcf.gz
@@ -6153,6 +6332,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13B.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-1.pcf.gz
@@ -6164,6 +6346,8 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-7.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x13O.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-1.pcf.gz
@@ -6175,7 +6359,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/6x9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-10.pcf.gz
@@ -6187,7 +6375,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-10.pcf.gz
@@ -6199,6 +6391,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13B.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-1.pcf.gz
@@ -6211,6 +6406,8 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-7.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x13O.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-1.pcf.gz
@@ -6223,8 +6420,12 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-JISX0201.1976-0.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-10.pcf.gz
@@ -6236,6 +6437,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/7x14B.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-1.pcf.gz
@@ -6247,7 +6451,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-10.pcf.gz
@@ -6258,6 +6466,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13B.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-1.pcf.gz
@@ -6269,6 +6480,8 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-7.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x13O.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/8x16.pcf.gz
@@ -6283,7 +6496,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-10.pcf.gz
@@ -6295,6 +6512,9 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x15B.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-1.pcf.gz
@@ -6307,7 +6527,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-1.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-10.pcf.gz
@@ -6318,8 +6542,12 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B-ISO8859-9.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/9x18B.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/arabic24.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clB6x10.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clB6x12.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clB8x10.pcf.gz
@@ -6345,7 +6573,11 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/misc/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-2.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-3.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-4.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-5.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-7.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-8.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-ISO8859-9.pcf.gz
+-rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12-KOI8-R.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x12.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x13.pcf.gz
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/misc/clR6x6.pcf.gz
@@ -6754,6 +6986,10 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/vi_VN.viscii/
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_CN.UTF-8/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.UTF-8/XI18N_OBJS
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.UTF-8/XLC_LOCALE
+drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_CN.gb18030/
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.gb18030/Compose
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.gb18030/XI18N_OBJS
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.gb18030/XLC_LOCALE
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_CN.gbk/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.gbk/Compose
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN.gbk/XI18N_OBJS
@@ -6762,9 +6998,15 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_CN/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN/Compose
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN/XI18N_OBJS
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_CN/XLC_LOCALE
+drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_HK.UTF-8/
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.UTF-8/XI18N_OBJS
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.UTF-8/XLC_LOCALE
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5/
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5/Compose
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5/XI18N_OBJS
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5/XLC_LOCALE
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5hkscs/
+-rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5hkscs/Compose
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5hkscs/XI18N_OBJS
 -rw-r--r--	root/root	usr/X11R6/lib/X11/locale/zh_HK.big5hkscs/XLC_LOCALE
 drwxr-xr-x	root/root	usr/X11R6/lib/X11/locale/zh_TW.UTF-8/
@@ -6810,6 +7052,7 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/xedit/lisp/progmodes/
 lrwxrwxrwx	root/root	usr/X11R6/lib/X11/xinit -> ../../../../etc/X11/xinit
 lrwxrwxrwx	root/root	usr/X11R6/lib/X11/xkb -> ../../../../etc/X11/xkb
 -rw-r--r--	root/root	usr/X11R6/lib/X11/xman.help
+-rw-r--r--	root/root	usr/X11R6/lib/X11/xorg.conf.eg
 lrwxrwxrwx	root/root	usr/X11R6/lib/X11/xserver -> ../../../../etc/X11/xserver
 lrwxrwxrwx	root/root	usr/X11R6/lib/X11/xsm -> ../../../../etc/X11/xsm
 -rw-r--r--	root/root	usr/X11R6/lib/libFS.a
@@ -6833,9 +7076,9 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libI810XvMC.so -> libI810XvMC.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libI810XvMC.so.1 -> libI810XvMC.so.1.0
 -rwxr-xr-x	root/root	usr/X11R6/lib/libI810XvMC.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libICE.a
-lrwxrwxrwx	root/root	usr/X11R6/lib/libICE.so -> libICE.so.6.3
-lrwxrwxrwx	root/root	usr/X11R6/lib/libICE.so.6 -> libICE.so.6.3
--rwxr-xr-x	root/root	usr/X11R6/lib/libICE.so.6.3
+lrwxrwxrwx	root/root	usr/X11R6/lib/libICE.so -> libICE.so.6.4
+lrwxrwxrwx	root/root	usr/X11R6/lib/libICE.so.6 -> libICE.so.6.4
+-rwxr-xr-x	root/root	usr/X11R6/lib/libICE.so.6.4
 -rw-r--r--	root/root	usr/X11R6/lib/libOSMesa.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libOSMesa.so -> libOSMesa.so.4.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libOSMesa.so.4 -> libOSMesa.so.4.0
@@ -6857,6 +7100,9 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libXTrap.so -> libXTrap.so.6.4
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXTrap.so.6 -> libXTrap.so.6.4
 -rwxr-xr-x	root/root	usr/X11R6/lib/libXTrap.so.6.4
 -rw-r--r--	root/root	usr/X11R6/lib/libXau.a
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXau.so -> libXau.so.6.0
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXau.so.6 -> libXau.so.6.0
+-rwxr-xr-x	root/root	usr/X11R6/lib/libXau.so.6.0
 -rw-r--r--	root/root	usr/X11R6/lib/libXaw.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXaw.so -> libXaw.so.8.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXaw.so.6 -> libXaw.so.6.1
@@ -6878,6 +7124,9 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libXdamage.so -> libXdamage.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXdamage.so.1 -> libXdamage.so.1.0
 -rwxr-xr-x	root/root	usr/X11R6/lib/libXdamage.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libXdmcp.a
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXdmcp.so -> libXdmcp.so.6.0
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXdmcp.so.6 -> libXdmcp.so.6.0
+-rwxr-xr-x	root/root	usr/X11R6/lib/libXdmcp.so.6.0
 -rw-r--r--	root/root	usr/X11R6/lib/libXevie.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXevie.so -> libXevie.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXevie.so.1 -> libXevie.so.1.0
@@ -6954,6 +7203,10 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libXv.so.1 -> libXv.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXvMC.so -> libXvMC.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXvMC.so.1 -> libXvMC.so.1.0
 -rwxr-xr-x	root/root	usr/X11R6/lib/libXvMC.so.1.0
+-rw-r--r--	root/root	usr/X11R6/lib/libXvMCW.a
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXvMCW.so -> libXvMCW.so.1.0
+lrwxrwxrwx	root/root	usr/X11R6/lib/libXvMCW.so.1 -> libXvMCW.so.1.0
+-rwxr-xr-x	root/root	usr/X11R6/lib/libXvMCW.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libXxf86dga.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXxf86dga.so -> libXxf86dga.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXxf86dga.so.1 -> libXxf86dga.so.1.0
@@ -6971,24 +7224,20 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libXxf86vm.so -> libXxf86vm.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libXxf86vm.so.1 -> libXxf86vm.so.1.0
 -rwxr-xr-x	root/root	usr/X11R6/lib/libXxf86vm.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libdmx.a
--rw-r--r--	root/root	usr/X11R6/lib/libdps.a
-lrwxrwxrwx	root/root	usr/X11R6/lib/libdps.so -> libdps.so.1.0
-lrwxrwxrwx	root/root	usr/X11R6/lib/libdps.so.1 -> libdps.so.1.0
--rwxr-xr-x	root/root	usr/X11R6/lib/libdps.so.1.0
--rw-r--r--	root/root	usr/X11R6/lib/libdpstk.a
-lrwxrwxrwx	root/root	usr/X11R6/lib/libdpstk.so -> libdpstk.so.1.0
-lrwxrwxrwx	root/root	usr/X11R6/lib/libdpstk.so.1 -> libdpstk.so.1.0
--rwxr-xr-x	root/root	usr/X11R6/lib/libdpstk.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libfntstubs.a
 -rw-r--r--	root/root	usr/X11R6/lib/libfontenc.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libfontenc.so -> libfontenc.so.1.0
 lrwxrwxrwx	root/root	usr/X11R6/lib/libfontenc.so.1 -> libfontenc.so.1.0
 -rwxr-xr-x	root/root	usr/X11R6/lib/libfontenc.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/liboldX.a
--rw-r--r--	root/root	usr/X11R6/lib/libpsres.a
-lrwxrwxrwx	root/root	usr/X11R6/lib/libpsres.so -> libpsres.so.1.0
-lrwxrwxrwx	root/root	usr/X11R6/lib/libpsres.so.1 -> libpsres.so.1.0
--rwxr-xr-x	root/root	usr/X11R6/lib/libpsres.so.1.0
+-rw-r--r--	root/root	usr/X11R6/lib/libviaXvMC.a
+lrwxrwxrwx	root/root	usr/X11R6/lib/libviaXvMC.so -> libviaXvMC.so.1.0
+lrwxrwxrwx	root/root	usr/X11R6/lib/libviaXvMC.so.1 -> libviaXvMC.so.1.0
+-rwxr-xr-x	root/root	usr/X11R6/lib/libviaXvMC.so.1.0
+-rw-r--r--	root/root	usr/X11R6/lib/libviaXvMCPro.a
+lrwxrwxrwx	root/root	usr/X11R6/lib/libviaXvMCPro.so -> libviaXvMCPro.so.1.0
+lrwxrwxrwx	root/root	usr/X11R6/lib/libviaXvMCPro.so.1 -> libviaXvMCPro.so.1.0
+-rwxr-xr-x	root/root	usr/X11R6/lib/libviaXvMCPro.so.1.0
 -rw-r--r--	root/root	usr/X11R6/lib/libxf86config.a
 -rw-r--r--	root/root	usr/X11R6/lib/libxkbfile.a
 lrwxrwxrwx	root/root	usr/X11R6/lib/libxkbfile.so -> libxkbfile.so.1.0
@@ -7006,7 +7255,6 @@ lrwxrwxrwx	root/root	usr/X11R6/lib/libxrxnest.so.6 -> libxrxnest.so.6.8
 -rwxr-xr-x	root/root	usr/X11R6/lib/libxrxnest.so.6.8
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/dri/
--rw-r--r--	root/root	usr/X11R6/lib/modules/dri/gamma_dri.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/dri/i810_dri.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/dri/i915_dri.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/dri/mga_dri.so
@@ -7016,114 +7264,123 @@ drwxr-xr-x	root/root	usr/X11R6/lib/modules/dri/
 -rw-r--r--	root/root	usr/X11R6/lib/modules/dri/sis_dri.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/dri/tdfx_dri.so
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/drivers/
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/apm_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/ark_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/ati_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/atimisc_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/chips_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_alpine.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_laguna.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cyrix_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/dummy_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/fbdev_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/glint_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i128_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i740_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i810_drv.o
-drwxr-xr-x	root/root	usr/X11R6/lib/modules/drivers/linux/
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/linux/v4l_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/mga_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/neomagic_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/nsc_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/nv_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/r128_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/radeon_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/rendition_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/riva128.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/s3_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/s3virge_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/savage_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/siliconmotion_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/sis_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tdfx_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tga_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/trident_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tseng_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vesa_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vga_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/via_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vmware_drv.o
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/apm_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/ark_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/ati_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/atimisc_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/chips_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_alpine.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cirrus_laguna.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/cyrix_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/dummy_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/fbdev_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/glint_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i128_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i740_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/i810_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/mga_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/neomagic_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/nsc_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/nv_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/r128_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/radeon_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/rendition_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/riva128.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/s3_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/s3virge_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/savage_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/siliconmotion_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/sis_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/sisusb_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tdfx_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tga_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/trident_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/tseng_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/v4l_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vesa_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vga_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/via_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/drivers/vmware_drv.so
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/extensions/
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libGLcore.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libdbe.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libdri.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libextmod.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libglx.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/librecord.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libxtrap.a
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libGLcore.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libdbe.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libdri.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libextmod.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libglx.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/librecord.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/extensions/libxtrap.so
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/fonts/
--rw-r--r--	root/root	usr/X11R6/lib/modules/fonts/libbitmap.a
+-rw-r--r--	root/root	usr/X11R6/lib/modules/fonts/libbitmap.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/fonts/libfreetype.so
--rw-r--r--	root/root	usr/X11R6/lib/modules/fonts/libtype1.a
+-rw-r--r--	root/root	usr/X11R6/lib/modules/fonts/libtype1.so
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/input/
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/acecad_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/aiptek_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/calcomp_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/citron_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/digitaledge_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/dmc_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/dynapro_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/elographics_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/fpit_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/hyperpen_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/js_x_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/kbd_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/keyboard_drv.o
-drwxr-xr-x	root/root	usr/X11R6/lib/modules/input/linux/
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/linux/ur98_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/magellan_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/microtouch_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/mouse_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/mutouch_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/palmax_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/penmount_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/spaceorb_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/summa_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/tek4957_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/void_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/input/wacom_drv.o
--rw-r--r--	root/root	usr/X11R6/lib/modules/libafb.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb16.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb24.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb32.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libcw.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libdamage.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libddc.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libfb.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libi2c.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libint10.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/liblayer.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libmfb.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libpcidata.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/librac.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libramdac.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libscanpci.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libshadow.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libshadowfb.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libvbe.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libvgahw.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxaa.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxf1bpp.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxf24_32bpp.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxf4bpp.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxf8_16bpp.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/libxf8_32bpp.a
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/acecad_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/aiptek_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/calcomp_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/citron_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/digitaledge_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/dmc_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/dynapro_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/elographics_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/evdev_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/fpit_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/hyperpen_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/js_x_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/kbd_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/keyboard_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/magellan_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/microtouch_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/mouse_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/mutouch_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/palmax_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/penmount_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/spaceorb_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/summa_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/tek4957_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/ur98_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/void_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/input/wacom_drv.so
+drwxr-xr-x	root/root	usr/X11R6/lib/modules/internal/
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libafb.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb16.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libcfb32.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libddc.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libexa.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libfb.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libi2c.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libint10.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/liblayer.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libmfb.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libpcidata.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/librac.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libramdac.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libscanpci.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libshadow.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libshadowfb.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libvbe.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libvgahw.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libxaa.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libxf1bpp.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libxf4bpp.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libxf8_16bpp.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/libxf8_32bpp.so
 drwxr-xr-x	root/root	usr/X11R6/lib/modules/linux/
--rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libdrm.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libfbdevhw.a
--rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libint10.a
+-rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libdrm.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libfbdevhw.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/linux/libint10.so
+drwxr-xr-x	root/root	usr/X11R6/lib/modules/multimedia/
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/bt829_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/fi1236_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/msp3430_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/tda8425_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/tda9850_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/tda9885_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/theatre200_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/theatre_detect_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/theatre_drv.so
+-rw-r--r--	root/root	usr/X11R6/lib/modules/multimedia/uda1380_drv.so
 -rw-r--r--	root/root	usr/X11R6/lib/modules/v10002d.uc
 -rw-r--r--	root/root	usr/X11R6/lib/modules/v20002d.uc
 drwxr-xr-x	root/root	usr/X11R6/man/
@@ -7148,8 +7405,6 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/cxpm.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/dga.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/dmxtodmx.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/dpsexec.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/dpsinfo.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/dumpkeymap.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/editres.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/fslsfonts.1x.gz
@@ -7169,7 +7424,6 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/luit.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/makedepend.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/makeg.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/makepsres.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/makestrs.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/mergelib.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/mkcfm.1x.gz
@@ -7180,7 +7434,6 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/oclock.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/pcitweak.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/proxymngr.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/pswrap.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/resize.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/revpath.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/rman.1x.gz
@@ -7194,7 +7447,6 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/smproxy.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/startx.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/sxpm.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/texteroids.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/twm.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/ucs2any.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/vdltodmx.1x.gz
@@ -7210,9 +7462,11 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/xconsole.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xcursorgen.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xcutsel.1x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man1/xdbedizzy.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xditview.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xdm.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xdmxconfig.1x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man1/xdpr.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xdpyinfo.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xdriinfo.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xedit.1x.gz
@@ -7223,6 +7477,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/xfontsel.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xfs.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xfsinfo.1x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man1/xft-config.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xfwp.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xgamma.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xgc.1x.gz
@@ -7249,6 +7504,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/xorgconfig.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xphelloworld.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xplsprinters.1x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man1/xpr.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xprehashprinterlist.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xprop.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xpsimplehelloworld.1x.gz
@@ -7307,6 +7563,15 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/DMXRemoveInput.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/DMXRemoveScreen.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/DMXSync.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSCapable.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSDisable.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSEnable.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSForceLevel.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSGetTimeouts.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSGetVersion.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSInfo.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSQueryExtension.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/DPMSSetTimeouts.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/DefaultColormap.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/DefaultColormapOfScreen.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/DefaultDepth.3x.gz
@@ -7342,7 +7607,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/IsFunctionKey.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/IsKeypadKey.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/IsMiscFunctionKey.3x.gz
--rw-r--r--	root/root	usr/X11R6/man/man3/IsModiferKey.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/IsModifierKey.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/IsPFKey.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/IsPrivateKeypadKey.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/LastKnownRequestProcessed.3x.gz
@@ -7522,6 +7787,15 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XExtendedMaxRequestSize.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XExtentsOfFontSet.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XF86DGA.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86Misc.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscGetKbdSettings.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscGetMouseSettings.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscGetSaver.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscQueryExtension.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscQueryVersion.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscSetKbdSettings.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscSetMouseSettings.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XF86MiscSetSaver.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XF86VidMode.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XF86VidModeDeleteModeLine.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XF86VidModeGetAllModeLines.3x.gz
@@ -7567,6 +7841,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeColors.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeCursor.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeDeviceList.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XFreeExtensionList.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeFont.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeFontInfo.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XFreeFontNames.3x.gz
@@ -7661,6 +7936,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XKeysymToString.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XKillClient.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XListDepths.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XListExtensions.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XListFonts.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XListFontsWithInfo.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XListHosts.3x.gz
@@ -7722,12 +7998,29 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryColor.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryColors.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryDeviceState.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XQueryExtension.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryFont.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryKeymap.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryPointer.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryTextExtents.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryTextExtents16.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XQueryTree.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfig.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigCurrentConfiguration.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigCurrentRate.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigRates.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigRotations.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigSizes.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRConfigTimes.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRFreeScreenConfigInfo.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRGetScreenInfo.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRQueryExtension.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRQueryVersion.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRRootToScreen.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRScreenConfig.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRSelectInput.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRSetScreenConfig.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XRRSetScreenConfigAndRate.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XRaiseWindow.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XReadBitmapFile.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XReadBitmapFileData.3x.gz
@@ -7966,6 +8259,9 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XcmsTekHVCQueryMaxVC.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XcmsTekHVCQueryMaxVSamples.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XcmsTekHVCQueryMinV.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XcupGetReservedColormapEntries.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XcupQueryVersion.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XcupStoreColors.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/Xcursor.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XdbeAllocateBackBufferName.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XdbeBeginIdiom.3x.gz
@@ -7980,6 +8276,11 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XeviQueryExtension.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XeviQueryVersion.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/Xevie.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XevieEnd.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XevieQueryVersion.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XevieSelectInput.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XevieSendEvent.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XevieStart.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/Xfixes.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/Xft.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XmbDrawImageString.3x.gz
@@ -8081,6 +8382,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man3/
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAddRawEventHandler.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAddTimeOut.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAddTimeout.3x.gz
+-rw-r--r--	root/root	usr/X11R6/man/man3/XtAddWorkProc.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAllocateGC.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAppAddActionHook.3x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man3/XtAppAddActions.3x.gz
@@ -8936,6 +9238,7 @@ drwxr-xr-x	root/root	usr/X11R6/man/man4/
 -rw-r--r--	root/root	usr/X11R6/man/man4/savage.4.gz
 -rw-r--r--	root/root	usr/X11R6/man/man4/siliconmotion.4.gz
 -rw-r--r--	root/root	usr/X11R6/man/man4/sis.4.gz
+-rw-r--r--	root/root	usr/X11R6/man/man4/sisusb.4.gz
 -rw-r--r--	root/root	usr/X11R6/man/man4/sunbw2.4.gz
 -rw-r--r--	root/root	usr/X11R6/man/man4/suncg14.4.gz
 -rw-r--r--	root/root	usr/X11R6/man/man4/suncg3.4.gz
@@ -8966,10 +9269,9 @@ drwxr-xr-x	root/root	usr/X11R6/man/man7/
 -rw-r--r--	root/root	usr/X11R6/man/man7/XStandards.7.gz
 -rw-r--r--	root/root	usr/X11R6/man/man7/Xprint.7.gz
 -rw-r--r--	root/root	usr/X11R6/man/man7/Xsecurity.7.gz
--rw-r--r--	root/root	usr/X11R6/man/whatis (EMPTY)
 drwxr-xr-x	root/root	usr/include/
-lrwxrwxrwx	root/root	usr/include/GL -> ../X11R6/include/GL
-lrwxrwxrwx	root/root	usr/include/X11 -> ../X11R6/include/X11
+lrwxrwxrwx	root/root	usr/include/GL -> ../../../usr/X11R6/include/GL
+lrwxrwxrwx	root/root	usr/include/X11 -> ../../../usr/X11R6/include/X11
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/xcomposite.pc

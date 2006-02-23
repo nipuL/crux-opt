@@ -2,11 +2,17 @@
  * CRUX X11 configuration.
  */
 
-#define DefaultGcc2i386Opt	#CFLAGS# -fno-strength-reduce
+#define DefaultGcc2AMD64Opt	#CFLAGS# -fno-strength-reduce
 #define TermcapLibrary		-lncurses
 #define ForceNormalLib		YES
 #define SystemManDirectory	/usr/man
 #define VarLibDir               /var/lib
+
+#define SharedLibXau		YES
+
+#define BuildXterm              YES
+#define InstallXtermSetUID      NO
+#define InstallXtermSetGID      NO
 
 #define HasNCurses		YES
 #define HasFreetype2		YES
@@ -23,16 +29,16 @@
 #define BuildHtmlManPages	NO
 #define BuildSpecsDocs          NO
 #define BuildAllSpecsDocs       NO
+#define BuildIPv6               YES
 
-#define BuildCyrillicFonts	NO
-#define BuildArabicFonts	NO
-#define BuildGreekFonts		NO
-#define BuildHebrewFonts	NO
-/*
-#define BuildThaiFonts          NO
-#define BuildJapaneseFonts	NO
-#define BuildKoreanFonts	NO
-#define BuildChineseFonts	NO
-*/
+#define BuildCyrillicFonts      YES
+#define BuildKOI8_RFonts        YES
+#define BuildArabicFonts	YES
+#define BuildGreekFonts		YES
+#define BuildHebrewFonts	YES
+#define BuildThaiFonts          YES
+#define BuildJapaneseFonts	YES
+#define BuildKoreanFonts	YES
+#define BuildChineseFonts	YES
 
 /* End of file */

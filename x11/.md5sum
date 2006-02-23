@@ -1,5 +1,5 @@
-8131cd7ea1e4566e6e05c438a93fcfe1  X11R6.8.2-src.tar.bz2
-fc2ddb4ef3449b84787a6eb868a642fb  host.def
-acdfe82713d65d05c54eb38e2d9a7f7f  x11-6.8.2-linux_config.patch
-32d7acc8343f729701a29342162b8cfb  x11-6.8.2-xterm.patch
+52ad69832db5c36c7041f90625ed4598  X11R6.9.0-src.tar.bz2
+58deecb7f2a14acad5dd6f971ae66964  host.def
+3196b65d8c4416cad412a0c49d75c461  x11-6.9.0-linux_config.patch
+5527ad8177942a919981d4fba690879a  x11-6.9.0-xterm256.patch
 05f76e7c05dcda1dcb065e2f1eeaa88f  xdm

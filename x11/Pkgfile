@@ -1,34 +1,45 @@
 # Description: The Open Group X Window System
-# URL:         http://xorg.freedesktop.org/wiki/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
-# Depends on:  libpng, fontconfig, ncurses
-# Nice to have: libtxc_dxtn
+# URL: http://freedesktop.org
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Packager: Brett Goulder, predatorfreak at dcaf-security dot org
+# Depends on: fontconfig libpng, ncurses
 
 name=x11
-version=6.8.2
+version=6.9.0
 release=1
-source=(http://xorg.freedesktop.org/X11R$version/src-single/X11R$version-src.tar.bz2 \
-	$name-$version-xterm.patch $name-$version-linux_config.patch xdm host.def)
+source=(http://xorg.freedesktop.org/releases/X11R$version/src-single/X11R$version-src.tar.bz2 \
+    xdm \
+    host.def \
+    $name-$version-linux_config.patch \
+    $name-$version-xterm256.patch)
 
 build() {
     cd xc
-    patch -p1 < ../$name-$version-xterm.patch
     patch -p1 < ../$name-$version-linux_config.patch
-    sed "s/#CFLAGS#/$CFLAGS/" ../host.def > config/cf/host.def
+    patch -p1 < ../$name-$version-xterm256.patch
+    sed "s/#CFLAGS#/$CFLAGS/" $SRC/host.def > config/cf/host.def
     make World
     make DESTDIR=$PKG install
     make DESTDIR=$PKG install.man
-    rm -rf $PKG/usr/X11R6/lib/X11/doc \
-	   $PKG/usr/X11R6/src \
-	   $PKG/usr/include/GL \
-	   $PKG/usr/lib \
-	   $PKG/etc/rc.d
-    install -D -m 755 ../xdm $PKG/etc/rc.d/xdm
-    ln -s ../X11R6/include/X11 $PKG/usr/include/X11
-    ln -s ../X11R6/include/GL $PKG/usr/include/GL
-    touch $PKG/usr/X11R6/man/whatis
-    mkdir -p $PKG/usr/lib
+    install -D -m 755 $SRC/xdm $PKG/etc/rc.d/xdm
+    rm -rf \
+	$PKG/usr/X11R6/lib/X11/doc \
+	$PKG/usr/X11R6/src \
+	$PKG/usr/include/GL \
+	$PKG/usr/lib
+    ln -s ../../../usr/X11R6/include/X11 $PKG/usr/include/X11
+    ln -s ../../../usr/X11R6/include/GL  $PKG/usr/include/GL
+    install -d $PKG/usr/lib
     mv $PKG/usr/X11R6/lib/pkgconfig $PKG/usr/lib
-    mv $PKG/etc/{init.d,profile.d} $PKG/etc/X11
     chmod -R +w $PKG
+    # Fix a bug with XDM, otherwise you may not be able to
+    # type your login-info.
+    sed -i 's|:0 local.*|& vt7|' $PKG/etc/X11/xdm/Xservers
+    # Remove empty files.
+    find $PKG -depth -type f -empty -exec rm -rf {} \;
+    # Remove nonsense.
+    rm -rf $PKG/etc/{init.d,profile.d,rc.d/rc*.d}
+    # Odd place for a binary...
+    mv $PKG/etc/X11/xdm/chooser $PKG/usr/X11R6/bin
+    ln -s /usr/X11R6/bin/chooser $PKG/etc/X11/xdm/chooser
 }

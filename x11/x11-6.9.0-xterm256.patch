@@ -1,6 +1,7 @@
---- xc/programs/xterm/Imakefile.orig	2004-08-13 14:57:19.000000000 +0200
-+++ xc/programs/xterm/Imakefile	2004-09-20 22:04:49.505263720 +0200
-@@ -93,7 +93,7 @@
+diff -Nru xc-old/programs/xterm/Imakefile xc/programs/xterm/Imakefile
+--- xc-old/programs/xterm/Imakefile	2006-01-09 14:59:11.000000000 +0100
++++ xc/programs/xterm/Imakefile	2006-01-09 15:06:18.000000000 +0100
+@@ -127,7 +127,7 @@
  #endif
  
  #ifdef UTF8support
