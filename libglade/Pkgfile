@@ -1,7 +1,7 @@
 # Description: library to load glade interface files in a program at runtime
 # URL: http://glade.gnome.org/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: glib, atk, gtk, libxml2, python, pkgconfig
+# Depends on: glib, atk, gtk, libxml2, python
 # Group: gnome
 
 name=libglade

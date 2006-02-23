@@ -1,7 +1,7 @@
 # Description: gtk2 xmms-alike
 # URL: http://beepmp.sourceforge.net/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: libglade, pkgconfig, libogg, libvorbis
+# Depends on: libglade, libogg, libvorbis
 
 name=bmp
 version=0.9.7.1

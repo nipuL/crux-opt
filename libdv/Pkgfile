@@ -2,7 +2,7 @@
 # URL: http://libdv.sourceforge.net/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Packager: Martin Opel, mo at obbl-net dot de
-# Depends on: x11, gtk1, pkgconfig, libsdl, popt
+# Depends on: x11, gtk1, libsdl, popt
 
 name=libdv
 version=0.104

@@ -1,7 +1,7 @@
 # Description: A library that provides a secure layer over a reliable transport layer
 # URL: http://www.gnu.org/software/gnutls/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: pkgconfig, libgcrypt, opencdk
+# Depends on: libgcrypt, opencdk
 
 name=gnutls
 version=1.0.25
