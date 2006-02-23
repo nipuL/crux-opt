@@ -2,7 +2,7 @@
  * CRUX X11 configuration.
  */
 
-#define DefaultGcc2AMD64Opt	#CFLAGS# -fno-strength-reduce
+#define DefaultGcc2i386Opt	#CFLAGS# -fno-strength-reduce
 #define TermcapLibrary		-lncurses
 #define ForceNormalLib		YES
 #define SystemManDirectory	/usr/man
