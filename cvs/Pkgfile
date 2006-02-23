@@ -5,7 +5,7 @@
 name=cvs
 version=1.11.20
 release=1
-source=(http://www.fukt.bth.se/~per/crux/files/cvs/$name-$version.tar.bz2)
+source=(http://mirrors.sunsite.dk/gnu/non-gnu/cvs/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
