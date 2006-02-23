@@ -5,11 +5,16 @@
 
 name=windowmaker
 version=0.92.0
-release=1
-source=(ftp://ftp.windowmaker.org/pub/source/release/WindowMaker-$version.tar.bz2)
+release=2
+source=(ftp://ftp.windowmaker.org/pub/source/release/WindowMaker-$version.tar.bz2 \
+        $name-$version-gcc4.patch)
 
 build() {
     cd WindowMaker-$version
+    patch -p0 < ../$name-$version-gcc4.patch
+    aclocal
+    autoconf
+    automake -a
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
