@@ -7,7 +7,7 @@
 name=audiofile
 version=0.2.6
 release=1
-source=(http://www.68k.org/~michael/audiofile/$name-$version.tar.gz)
+source=(http://www.68k.org/~michael/$name/$name-$version.tar.gz)
 
 build () {
 	cd $name-$version

@@ -1,0 +1,21 @@
+PRE-INSTALL
+
+    Kernel sources must exist in /usr/src/linux[-version]
+
+	Note that this port does not provide a .md5sum, as it is built from
+	a daily svn snapshot of madwifi-ng.
+
+POST-INSTALL
+
+	Run depmod -a, edit /etc/modprobe.conf and /etc/rc.d/net.  The module 
+	name is ath_hal or ath_pci, depending on your card.  The wireless 
+	ifdevice name is ath0.  Something like this should work:
+
+	/etc/modprobe.conf:
+	alias ath0 ath_pci
+
+	/etc/rc.d/net:
+	wlanconfig ath0 create wlandev wifi0 wlanmode sta
+
+	The ath0 device may then be manipulated with ifconfig or dhcpcd.
+

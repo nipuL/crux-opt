@@ -4,7 +4,7 @@
 # Depends on: 
 
 name=libsndfile
-version=1.0.12
+version=1.0.14
 release=1
 source=(http://www.mega-nerd.com/$name/$name-$version.tar.gz)
 
