@@ -1,0 +1,21 @@
+# Description: a high-level tool for configuring Netfilter via simple textfiles
+# URL: http://www.shorewall.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: iptables, iproute2
+
+name=shorewall
+version=3.0.5
+release=1
+source=(ftp://ftp.shorewall.net/pub/shorewall/3.0/shorewall-$version/shorewall-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	export DEST="/etc/rc.d"
+	export OWNER=root
+	export GROUP=root
+	export PREFIX=$PKG
+	./install.sh
+	sed -i 's:/var/lock/subsys/shorewall:"":' \
+	    $PKG/etc/shorewall/shorewall.conf
+}

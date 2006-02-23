@@ -1,0 +1,15 @@
+# Description: A fast, 3D multiplayer tank battle game.
+# URL: http://bzflag.org/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+
+name=bzflag
+version=2.0.4
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.20050930.tar.bz2)
+
+build() {
+	cd $name-$version.20050930
+	./configure 	--prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

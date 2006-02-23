@@ -1,0 +1,19 @@
+# Packager: Daniel Mueller, daniel at danm dot de
+# Maintainer: Johannes Winkelmann, jw at tks6 dot net
+# URL: http://www.xemacs.org
+# Description: All packages for xemacs
+# Depends on: emacs, xemacs
+
+# Note:
+# This is a *full*-featured version of xemacs.  (about 20 MB!)
+# I know.. it's not lightweight - but who said (x)emacs is ? ;-)
+
+name=xemacs-sumo
+version=2005-12-08
+release=1
+source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
+build(){
+	mkdir -p $PKG/usr/lib/xemacs
+	mv xemacs-packages $PKG/usr/lib/xemacs/
+	chown -R root:root $PKG
+}

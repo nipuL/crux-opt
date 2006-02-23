@@ -1,0 +1,14 @@
+# Description: MySQL interface for Python
+# URL:         http://sourceforge.net/projects/mysql-python/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  python, mysql
+
+name=mysql-python
+version=1.2.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/MySQL-python-$version.tar.gz )
+
+build () {
+    cd MySQL-python-$version
+    python setup.py install --root=$PKG --prefix=/usr
+}

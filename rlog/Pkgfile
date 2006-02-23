@@ -1,0 +1,18 @@
+# Description: C++ logging library
+# URL: http://arg0.net/users/vgough/rlog/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=rlog
+version=1.3.7
+release=1
+source=(http://arg0.net/users/vgough/download/$name-$version.tgz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share
+}

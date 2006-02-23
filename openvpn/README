@@ -1,0 +1,21 @@
+REQUIREMENTS
+
+OpenVPN requires the universal TUN/TAP driver in your kernel to function.
+
+PRE-INSTALL
+
+POST-INSTALL
+
+This port is set to use static keys by default. You need to generate one 
+by running:
+
+openvpn --genkey --secret /etc/openvpn/openvpn.key
+
+Edit /etc/openvpn/openvpn.conf to set up the IP addresses for the 
+tunnel.
+
+If you want to enable IP forwarding, use this command:
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+PRECAUTION

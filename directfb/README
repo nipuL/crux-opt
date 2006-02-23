@@ -1,0 +1,10 @@
+README for DirectFB 0.9.20
+
+By default, DirectFB is built without support for the
+multi application core. To enable the multi application core,
+you'll have to
+
+* apply the Fusion device kernel patch (included in the
+  DirectFB tarball in patches/)
+* copy /usr/src/linux-version/include/linux/fusion.h to /usr/include/linux
+* uncomment the line saying '# EXTRA_ARGS="--enable-multi"' in Pkgfile

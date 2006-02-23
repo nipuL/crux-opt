@@ -1,0 +1,18 @@
+# Description: the musicbrainz client library, and simple tagger
+# URL: http://www.musicbrainz.org/products/tunepimp/download.html
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: libvorbis, flac, libmad, libogg, expat, libmusicbrainz, libid3tag
+
+name=libtunepimp
+version=0.3.0
+release=2
+source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz \
+	$name-$version.patch)
+build() {
+	cd $name-$version
+	patch -p1 < $SRC/$name-$version.patch
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
+}

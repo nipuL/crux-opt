@@ -1,0 +1,19 @@
+# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at varlock dot com
+# Description: a graphical login utility
+# URL: http://slim.berlios.de
+# Depends on: x11
+
+name=slim
+version=1.2.4
+release=1
+source=(http://download.berlios.de/$name/$name-$version.tar.gz
+        $name.rc)
+
+build () {
+   cd $name-$version
+   make
+   make DESTDIR=$PKG install
+   mkdir $PKG/etc/rc.d
+   install -m 755 ../$name.rc $PKG/etc/rc.d/$name
+}

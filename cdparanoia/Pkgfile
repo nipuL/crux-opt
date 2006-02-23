@@ -1,0 +1,17 @@
+# Description: CDDA extraction tool with jitter correction
+# URL:         http://xiph.org/paranoia/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+
+name=cdparanoia
+version=alpha9.8
+release=3
+source=(http://xiph.org/paranoia/download/$name-III-$version.src.tgz \
+        $name-$version.patch)
+
+build () {
+    cd $name-III-$version
+    patch -p1 < $SRC/$name-$version.patch
+    ./configure --prefix=/usr 
+    make FLAGS="$CFLAGS"
+    make prefix=$PKG/usr install
+}

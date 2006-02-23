@@ -1,0 +1,117 @@
+diff -rU1 ./dict/Makefile /tmp/WordNet-2.0/dict/Makefile
+--- ./dict/Makefile	2003-07-17 08:27:36.000000000 -0600
++++ /tmp/WordNet-2.0/dict/Makefile	2005-01-28 01:26:47.711865240 -0700
+@@ -4,4 +4,4 @@
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
+-WN_INSTALLDIR = $(WN_ROOT)/dict
++WN_ROOT = /usr
++WN_INSTALLDIR = $(WN_ROOT)/share/wordnet/dict
+ 
+diff -rU1 ./include/wnconsts.h /tmp/WordNet-2.0/include/wnconsts.h
+--- ./include/wnconsts.h	2003-06-16 09:49:43.000000000 -0600
++++ /tmp/WordNet-2.0/include/wnconsts.h	2005-01-28 01:26:48.293776776 -0700
+@@ -18,4 +18,4 @@
+ #define DICTDIR         "/dict"
+-#define DEFAULTPATH	"/usr/local/WordNet-2.0/dict"
+-#define DEFAULTBIN      "/usr/local/WordNet-2.0/bin"
++#define DEFAULTPATH	"/usr/share/wordnet/dict"
++#define DEFAULTBIN      "/usr/bin"
+ #define DATAFILE	"%s/data.%s"
+diff -rU1 ./Makefile /tmp/WordNet-2.0/Makefile
+--- ./Makefile	2003-06-16 10:09:25.000000000 -0600
++++ /tmp/WordNet-2.0/Makefile	2005-01-28 01:26:48.293776776 -0700
+@@ -36,3 +36,3 @@
+ 
+-PLATFORM = solaris
++PLATFORM = linux
+ #PLATFORM = irix
+@@ -64,3 +64,3 @@
+ 
+-WN_ROOT = /usr/local/WordNet-2.0
++WN_ROOT = $(PKG)/usr
+ 
+@@ -78,3 +78,3 @@
+ 
+-WN_DICTDIR = $(WN_ROOT)/dict
++WN_DICTDIR = $(PKG)/usr/share/wordnet/dict
+ 
+@@ -106,4 +106,4 @@
+ 
+-WN_MANDIR = $(WN_ROOT)/man
+-WN_DOCDIR = $(WN_ROOT)/doc
++WN_MANDIR = $(PKG)/usr/man
++WN_DOCDIR = $(PKG)/usr/share/doc/wordnet-2.0
+ 
+@@ -120,6 +120,6 @@
+ # Use this for Solaris
+-LOCAL_LDFLAGS = -R/usr/openwin/lib:/usr/lib:/usr/local/lib
++#LOCAL_LDFLAGS = -R/usr/openwin/lib:/usr/lib:/usr/local/lib
+ 
+ # Use this for Irix and Linux
+-#LOCAL_LDFLAGS = 
++LOCAL_LDFLAGS = -L/usr/X11R6/lib 
+ 
+@@ -127,3 +127,3 @@
+ 
+-LOCAL_CFLAGS = -O -DUNIX
++LOCAL_CFLAGS = $(CFLAGS) -DUNIX #-I$PKG/usr/include
+ 
+@@ -144,8 +144,8 @@
+ 
+-TCL_INCDIR = /usr/local/include
+-TCL_LIBDIR = /usr/local/lib
+-TK_INCDIR = /usr/local/include
+-TK_LIBDIR = /usr/local/lib
+-X11_INCDIR = /usr/openwin/include
+-X11_LIBDIR = /usr/openwin/lib
++#TCL_INCDIR = /usr/local/include
++#TCL_LIBDIR = /usr/local/lib
++#TK_INCDIR = /usr/local/include
++#TK_LIBDIR = /usr/local/lib
++#X11_INCDIR = /usr/openwin/include
++#X11_LIBDIR = /usr/openwin/lib
+ 
+@@ -162,8 +162,8 @@
+ 
+-#TCL_INCDIR = /usr/include
+-#TCL_LIBDIR = /usr/lib
+-#TK_INCDIR = /usr/include
+-#TK_LIBDIR = /usr/lib
+-#X11_INCDIR = /usr/X11R6/include
+-#X11_LIBDIR = /usr/X11R6/lib
++TCL_INCDIR = /usr/include
++TCL_LIBDIR = /usr/lib
++TK_INCDIR = /usr/include
++TK_LIBDIR = /usr/lib
++X11_INCDIR = /usr/X11R6/include
++X11_LIBDIR = /usr/X11R6/lib
+ 
+@@ -171,3 +171,3 @@
+ 
+-WNB_LIBS = -ltk8.3 -ltcl8.3 -lX11 -lm -lsocket -lnsl -ldl -lpthread
++#WNB_LIBS = -ltk8.3 -ltcl8.3 -lX11 -lm -lsocket -lnsl -ldl -lpthread
+ 
+@@ -180,3 +180,3 @@
+ 
+-#WNB_LIBS = -ltk -ltcl -lX11 -lm -lnsl -ldl -lpthread
++WNB_LIBS = -ltk8.4 -ltcl8.4 -lX11 -lm -lnsl -ldl -lpthread
+ 
+diff -rU1 ./src/include/wnconsts.h /tmp/WordNet-2.0/src/include/wnconsts.h
+--- ./src/include/wnconsts.h	2003-06-16 09:49:43.000000000 -0600
++++ /tmp/WordNet-2.0/src/include/wnconsts.h	2005-01-28 01:26:47.709865544 -0700
+@@ -18,4 +18,4 @@
+ #define DICTDIR         "/dict"
+-#define DEFAULTPATH	"/usr/local/WordNet-2.0/dict"
+-#define DEFAULTBIN      "/usr/local/WordNet-2.0/bin"
++#define DEFAULTPATH	"/usr/share/wordnet/dict"
++#define DEFAULTBIN      "/usr/bin"
+ #define DATAFILE	"%s/data.%s"
+diff -rU1 ./src/wnb/wnb /tmp/WordNet-2.0/src/wnb/wnb
+--- ./src/wnb/wnb	2003-08-01 08:20:42.000000000 -0600
++++ /tmp/WordNet-2.0/src/wnb/wnb	2005-01-28 01:26:47.709865544 -0700
+@@ -99,3 +99,3 @@
+    if {[lsearch -exact [array names env] WNHOME] == -1} {
+-	set resourcedir "/usr/local/WordNet-2.0/lib/wnres"
++	set resourcedir "/usr/lib/wnres"
+    } else {

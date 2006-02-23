@@ -1,0 +1,34 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/speexdec
+-rwxr-xr-x	root/root	usr/bin/speexenc
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/speex.h
+drwxr-xr-x	root/root	usr/include/speex/
+-rw-r--r--	root/root	usr/include/speex/speex.h
+-rw-r--r--	root/root	usr/include/speex/speex_bits.h
+-rw-r--r--	root/root	usr/include/speex/speex_callbacks.h
+-rw-r--r--	root/root	usr/include/speex/speex_header.h
+-rw-r--r--	root/root	usr/include/speex/speex_stereo.h
+-rw-r--r--	root/root	usr/include/speex_bits.h
+-rw-r--r--	root/root	usr/include/speex_callbacks.h
+-rw-r--r--	root/root	usr/include/speex_header.h
+-rw-r--r--	root/root	usr/include/speex_stereo.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libspeex.a
+-rwxr-xr-x	root/root	usr/lib/libspeex.la
+lrwxrwxrwx	root/root	usr/lib/libspeex.so -> libspeex.so.1.3.0
+lrwxrwxrwx	root/root	usr/lib/libspeex.so.1 -> libspeex.so.1.3.0
+-rwxr-xr-x	root/root	usr/lib/libspeex.so.1.3.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/speex.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/speexdec.1.gz
+-rw-r--r--	root/root	usr/man/man1/speexenc.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/speex.m4
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/speex-1.0.5/
+-rw-r--r--	root/root	usr/share/doc/speex-1.0.5/manual.pdf

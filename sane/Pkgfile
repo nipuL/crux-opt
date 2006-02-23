@@ -1,0 +1,27 @@
+# Description: Scanner Access Now Easy - Scanner driver for Linux
+# URL:         http://www.sane-project.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  libusb, libjpeg
+
+name=sane
+version=1.0.17
+release=1
+source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
+
+build () {
+    cd $name-backends-$version
+
+    ./configure --prefix=/usr \
+                --localstatedir=/var \
+                --disable-translations \
+                --disable-locking
+    make
+    make prefix=$PKG/usr install
+
+    # hotplug scripts for USB scanners
+    install -d $PKG/etc/hotplug/usb
+    install -m 755 tools/hotplug/libusbscanner $PKG/etc/hotplug/usb
+    install -m 644 tools/hotplug/libsane.usermap $PKG/etc/hotplug/usb
+
+    rm -r $PKG/usr/{doc,share}
+}

@@ -1,0 +1,16 @@
+# Description: gd libraries
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Jeremy Jones, jeremy at samnjack dot com
+# URL: http://www.boutell.com/gd/
+# Depends on: x11, libpng, libjpeg, freetype
+
+name=libgd
+version=2.0.33
+release=1
+source=(http://www.boutell.com/gd/http/gd-$version.tar.gz)
+
+build () {
+	cd gd-$version
+	./configure --prefix=/usr
+	make DESTDIR=$PKG install
+}

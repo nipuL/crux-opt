@@ -1,0 +1,20 @@
+# Description: Utility for maintaining your dynamic DNS entries
+# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# URL: http://ddclient.sf.net
+# Depends on: 
+
+name=ddclient
+version=3.6.7
+release=1
+source=(http://dl.sf.net/$name/$name-$version.tar.bz2 ddclient)
+
+build(){
+	cd $name-$version
+	install -d $PKG/usr/sbin
+	install ddclient $PKG/usr/sbin/
+	sed -i "s|/etc/ddclient/|/etc/|" $PKG/usr/sbin/ddclient
+
+	install -d $PKG/etc/rc.d
+	install ../ddclient $PKG/etc/rc.d/ddclient
+	install -m 600 sample-etc_ddclient.conf $PKG/etc/ddclient.conf
+}

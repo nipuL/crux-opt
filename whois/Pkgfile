@@ -1,0 +1,18 @@
+# Description: A modern whois client
+# URL:         http://www.linux.it/~md/software/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Olle Gustafsson, ogg at linux dot se
+# Depends on:
+
+name=whois
+version=4.7.12
+release=1
+source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.gz)
+
+build() {
+    cd $name-$version
+    make
+    mkdir -p $PKG/usr/bin $PKG/usr/man/man1
+    install -m 755 whois $PKG/usr/bin/whois
+    install -m 644 whois.1 $PKG/usr/man/man1/whois.1
+}

@@ -1,0 +1,16 @@
+# Description: XML::Parser
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: expat, perl
+
+name=p5-xml-parser
+version=2.34
+release=4
+source=(http://cpan.develooper.com/modules/by-category/11_String_Lang_Text_Proc/XML/XML-Parser-$version.tar.gz)
+
+build() {
+	cd XML-Parser-$version
+	perl Makefile.PL
+	make OPTIMIZE="$CFLAGS"
+	make DESTDIR=$PKG install
+	find $PKG -name .packlist -o -name perllocal.pod -exec rm '{}' \;
+}

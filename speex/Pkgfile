@@ -1,0 +1,18 @@
+# Description: an open-source patent-free voice codec
+# URL: http://www.speex.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: libogg
+
+name=speex
+version=1.0.5
+release=1
+source=(http://www.speex.org/download/speex-$version.tar.gz)
+
+build () {
+	cd speex-$version
+	./configure --prefix=/usr
+	make CFLAGS="$CFLAGS"
+	make prefix=$PKG/usr install
+	mv $PKG/usr/share/man $PKG/usr/
+}

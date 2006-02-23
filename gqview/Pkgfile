@@ -1,0 +1,17 @@
+# Description: An image viewer for X
+# URL: http://gqview.sourceforge.net/
+# Maintainer: Per Lidén <per@fukt.bth.se>
+# Depends on: gtk
+
+name=gqview
+version=2.0.1
+release=1
+source=(http://dl.sourceforge.net/gqview/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}

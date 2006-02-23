@@ -1,0 +1,4 @@
+2cd1c5348b7df46cf7f9d91e1dbfebd2  kdegraphics-3.5.1.tar.bz2
+7463d2a1f85871a042770178d073c9f0  kpdf.patch
+bc7dc2a5235f95a41fc1d7ab885899da  post-3.5.1-kdegraphics-CVE-2006-0301.diff
+3f41a80a3acebaa1130e01d7f4b1f8de  svgdisplay.desktop

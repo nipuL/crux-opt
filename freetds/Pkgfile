@@ -1,0 +1,17 @@
+# Description: Library for accessing MSSQL and Sybase rdbms
+# URL: http://www.freetds.org
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+
+name=freetds
+version=0.63
+release=1
+source=(http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --enable-msdblib
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/share
+}

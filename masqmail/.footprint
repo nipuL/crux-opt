@@ -1,0 +1,44 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/masqmail/
+-rw-r--r--	root/root	etc/masqmail/connect_route
+-rw-r--r--	root/root	etc/masqmail/example.conf
+-rw-r--r--	root/root	etc/masqmail/example.get
+-rw-r--r--	root/root	etc/masqmail/example.route
+-rw-r--r--	root/root	etc/masqmail/inet.route
+-rw-r--r--	root/root	etc/masqmail/masqmail.alias
+-rw-r--r--	root/root	etc/masqmail/masqmail.conf
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/masqmail
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/mailq -> ../sbin/masqmail
+-rwxr-xr-x	root/root	usr/bin/mservdetect
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man5/
+-rw-r--r--	root/root	usr/man/man5/masqmail.aliases.5.gz
+-rw-r--r--	root/root	usr/man/man5/masqmail.conf.5.gz
+-rw-r--r--	root/root	usr/man/man5/masqmail.get.5.gz
+-rw-r--r--	root/root	usr/man/man5/masqmail.route.5.gz
+drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/masqmail.8.gz
+-rw-r--r--	root/root	usr/man/man8/mservdetect.8.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwsr-xr-x	root/root	usr/sbin/masqmail
+lrwxrwxrwx	root/root	usr/sbin/sendmail -> masqmail
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/masqmail/
+drwxr-xr-x	root/root	usr/share/masqmail/tpl/
+-rw-r--r--	root/root	usr/share/masqmail/tpl/failmsg.tpl
+-rw-r--r--	root/root	usr/share/masqmail/tpl/warnmsg.tpl
+drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/log/
+drwxr-xr-x	mail/mail	var/log/masqmail/
+-rw-r--r--	mail/mail	var/log/masqmail/debug.log (EMPTY)
+-rw-r--r--	mail/mail	var/log/masqmail/masqmail.log (EMPTY)
+drwxr-xr-x	root/root	var/run/
+drwxr-xr-x	mail/mail	var/run/masqmail/
+drwxr-xr-x	root/root	var/spool/
+drwxr-xr-x	mail/mail	var/spool/masqmail/
+drwxr-xr-x	mail/mail	var/spool/masqmail/input/
+drwxr-xr-x	mail/mail	var/spool/masqmail/lock/
+drwxr-xr-x	mail/mail	var/spool/masqmail/popuidl/

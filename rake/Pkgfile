@@ -1,0 +1,15 @@
+# Description: Make like utility with Ruby syntax
+# URL: http://rake.rubyforge.org
+# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Depends on: ruby
+
+name=rake
+version=0.7.0
+release=1
+source=(http://rubyforge.org/frs/download.php/8129/$name-$version.tgz)
+
+build () {
+	cd $name-$version
+
+	DESTDIR=$PKG ruby install.rb
+}

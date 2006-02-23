@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# /etc/rc.d/openvpn: start/stop openvpn daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/openvpn \
+        --config /etc/openvpn/openvpn.conf \
+        --writepid /var/run/openvpn.pid \
+        --log-append /var/log/openvpn.log \
+        --daemon
+	;;
+stop)
+	kill `cat /var/run/openvpn.pid`
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

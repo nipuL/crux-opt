@@ -1,0 +1,23 @@
+README for masqmail 0.2.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+1. Remove sendmail. Masqmail and sendmail can not coexist.
+      
+POST-INSTALL
+1. Check /etc/masqmail/masqmail.conf for correct values for
+   your host/domain. 
+2. Now masqmail delivers all non-local mail directly to the 
+   mail server of the recipient. To use the mail server of
+   your provider for delivering mail, edit inet.route.
+3. In this configuration masqmail doesn't take care about
+   your online status. See masqmail.conf(5) about online
+   detection.
+ 
+PRECAUTION
+   As of version 0.2.21 the masqmail log files must be 
+   writeable by the system-user 'mail'. 
+   
+     chown mail:mail /var/log/masqmail/*
+   

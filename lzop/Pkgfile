@@ -1,0 +1,17 @@
+# Description: fast (de)compression utility
+# URL: http://www.oberhumer.com/opensource/lzop/
+# Packager: Martin Opel, mo at obbl-net dot de
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: lzo
+
+name=lzop
+version=1.02rc1
+release=1
+source=(http://www.lzop.org/download/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

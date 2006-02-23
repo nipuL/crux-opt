@@ -1,0 +1,20 @@
+# Description: an intuitive media player for KDE
+# URL: http://amarok.kde.org/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: kdelibs, kdebase, xine-lib, k3b
+
+name=amarok
+version=1.3.8
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --disable-debug
+    make
+    make prefix=$PKG/usr install
+    rm -rf $PKG/usr/share/locale
+    rm -rf $PKG/usr/share/doc
+}

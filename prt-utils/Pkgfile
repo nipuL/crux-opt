@@ -1,0 +1,16 @@
+# Description: some scripts for CRUX ports
+# URL: http://prt-utils.berlios.de
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on: prt-get
+
+name=prt-utils
+version=0.7.1
+release=1
+source=(http://download.berlios.de/prt-utils/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir -p $PKG/usr/{man/man1,bin}
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,26 @@
+# Description: a portable scripting environment for Unix, Windows, and Macintosh
+# URL: http://tcl.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Sven Dahl, dahl at c64 dot org
+
+name=tcl
+version=8.4.9
+release=1
+source=(http://dl.sourceforge.net/sourceforge/tcl/tcl${version}-src.tar.gz)
+
+build() {
+    cd $SRC/tcl${version}/unix/
+    ./configure --prefix=/usr
+    make
+    make MKLINKS_FLAGS="-s" INSTALL_ROOT=$PKG install
+
+    cp ../generic/*.h $PKG/usr/include/
+    cp tclUnixPort.h $PKG/usr/include/tclPort.h
+    cp tclUnixThrd.h $PKG/usr/include/tclThrd.h
+
+    sed -i "s|$SRC/tcl${version}/unix|/usr/lib|" $PKG/usr/lib/tclConfig.sh
+
+    rm $PKG/usr/include/regex.h
+    ln -s tclsh8.4 $PKG/usr/bin/tclsh
+    find $PKG/usr/man -type f -exec chmod a-x,u+w {} \;
+}

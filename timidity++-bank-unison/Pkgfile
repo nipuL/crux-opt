@@ -1,0 +1,16 @@
+# Description: Unison SoundFont for TiMidity++
+# URL: http://www.personalcopy.com/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: timidity++
+
+name=timidity++-bank-unison
+version=20040530
+release=1
+source=(ftp://ftp.personalcopy.net/pub/Unison.sf2.gz)
+
+build() {
+    install -d $PKG/usr/share/timidity
+    gzip -dc Unison.sf2.gz > $PKG/usr/share/timidity/unison.sf2
+    echo soundfont /usr/share/timidity/unison.sf2 > $PKG/usr/share/timidity/timidity.cfg
+}

@@ -1,0 +1,9 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/chroot_safe/
+-rwxr-xr-x	root/root	usr/lib/chroot_safe/chroot_safe.so
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-r--r--r--	root/root	usr/man/man1/chroot_safe.1.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-x---	root/root	usr/sbin/chroot_safe

@@ -1,0 +1,12 @@
+README for smartmontools 5.x
+
+REQUIREMENTS
+To send email notifications smartd needs a mail binary.
+The contrib ports nail or mailx are recommend for that
+purpose.
+
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION

@@ -1,0 +1,22 @@
+# Description: A cursed frontend to the giFT daemon.
+# URL: http://www.nongnu.org/giftcurs/
+# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Depends on: gift
+
+name=giftcurs
+version=0.6.2
+release=2
+source=(http://savannah.nongnu.org/download/$name/giFTcurs-$version.tar.gz \
+        $name.diff)
+
+build () {
+	cd giFTcurs-$version
+
+	# don't mess with my term's title if you don't set it back!
+	patch -Np1 -i ../$name.diff
+
+	./configure --prefix=/usr --disable-nls
+
+	make
+	make DESTDIR=$PKG install
+}

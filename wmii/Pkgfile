@@ -1,0 +1,24 @@
+# Description: The next generation of WMI
+# URL: http://wmii.de/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: 9base
+
+name=wmii
+version=2.5.2
+release=1
+source=(http://wmii.de/download/$name-$version.tar.gz $name-$version.patch)
+
+build() {
+    cd $name-$version
+
+    # disable annoying mouse warping 
+    patch -p1 < ../$name-$version.patch
+    
+    sed -i 's|^PREFIX.*|PREFIX=/usr|' config.mk
+    sed -i 's|^MANPREFIX.*|MANPREFIX=/usr/man|' config.mk
+    sed -i 's|^9PREFIX.*|9PREFIX=/usr/share/9base|' config.mk
+
+    make DESTDIR=$PKG clean install
+
+    chmod 644 $PKG/usr/man/man?/*
+}

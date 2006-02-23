@@ -1,0 +1,11 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/x11vnc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/x11vnc.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/x11vnc/
+drwxr-xr-x	root/root	usr/share/x11vnc/classes/
+-rw-r--r--	root/root	usr/share/x11vnc/classes/VncViewer.jar
+-rw-r--r--	root/root	usr/share/x11vnc/classes/index.vnc

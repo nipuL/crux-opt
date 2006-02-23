@@ -1,0 +1,19 @@
+# Description: C-style arbitrary precision calculator
+# URL: http://www.isthe.com/chongo/tech/comp/calc/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=calc
+version=2.11.11
+release=1
+source=(http://www.isthe.com/chongo/src/calc/$name-$version.tar.gz \
+        $name.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 < ../$name.patch
+    make CCMISC="$CFLAGS"
+    make -e T=$PKG MANDIR=/usr/man/man1 install
+    chmod -R +w $PKG
+}

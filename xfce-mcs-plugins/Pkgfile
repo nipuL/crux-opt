@@ -1,0 +1,21 @@
+# Description: Plugins for the XFce4 Multi Channel Settings manager
+# URL:         http://www.xfce.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xfce-mcs-manager
+# Group:       xfce4
+
+name=xfce-mcs-plugins
+version=4.2.3
+release=1
+source=(http://www.us.xfce.org/archive/xfce-$version/src/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --disable-static \
+                --disable-debug 
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/locale
+    rm -r $PKG/usr/share/xfce4/doc/{fr,he}
+}

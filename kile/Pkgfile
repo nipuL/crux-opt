@@ -1,0 +1,19 @@
+# Description: an integrated LaTeX environment for the KDE desktop (LaTeX source editor, TeX shell, and GnuPlot frontend)
+# URL: http://kile.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: tetex, kdegraphics, gv, acroread, gnuplot, xfig
+
+name=kile
+version=1.8.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/kile/kile-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/doc
+	rm -rf $PKG/usr/share/locale
+}

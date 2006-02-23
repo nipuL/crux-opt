@@ -1,0 +1,18 @@
+# Description: Library with doubly linked lists, string functions and a wrapper for imlib2
+# URL: http://www.linuxbrit.co.uk/giblib/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Eduardo Lopes, eduol at gmx dot net
+# Dependencies: imlib2
+
+name=giblib
+version=1.2.4
+release=1
+source=(http://www.linuxbrit.co.uk/downloads/$name-$version.tar.gz)
+
+build() {
+     cd $name-$version
+     ./configure --prefix=/usr
+     make
+     make DESTDIR=$PKG install
+     rm -rf $PKG/usr/doc
+}

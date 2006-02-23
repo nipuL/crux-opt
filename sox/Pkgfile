@@ -1,0 +1,19 @@
+# Description: audio conversion tools, (c) copyright Lance Norskog
+# URL: http://sox.sourceforge.net/
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on:
+
+name=sox
+version=12.17.9
+release=1
+source=(http://dl.sourceforge.net/sourceforge/sox/$name-$version.tar.gz) 
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make prefix=$PKG/usr install
+	rm $PKG/usr/bin/rec
+	( cd $PKG/usr/bin; ln -s play rec )
+}

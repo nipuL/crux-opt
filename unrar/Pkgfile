@@ -1,0 +1,17 @@
+# Description: Extracts RAR archives
+# URL: http://www.rarlab.com/rar_add.htm
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=unrar
+version=3.5.4
+release=1
+source=(http://www.rarlab.com/rar/${name}src-$version.tar.gz)
+
+build() {
+    cd $name
+    sed -i "s/-O2/$CFLAGS/" makefile.unix
+    make -f makefile.unix
+    install -D -m 755 unrar $PKG/usr/bin/unrar
+}

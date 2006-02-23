@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/cdrwtool
+-rwxr-xr-x	root/root	usr/bin/mkudffs
+-rwxr-xr-x	root/root	usr/bin/pktsetup
+-rwxr-xr-x	root/root	usr/bin/udffsck
+-rwxr-xr-x	root/root	usr/bin/wrudf
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libudffs.a
+-rwxr-xr-x	root/root	usr/lib/libudffs.la
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/cdrwtool.1.gz
+drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/mkudffs.8.gz
+-rw-r--r--	root/root	usr/man/man8/pktsetup.8.gz

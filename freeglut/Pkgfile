@@ -1,0 +1,17 @@
+# Description: a free alternative to the OpenGL Utility Toolkit (GLUT) library
+# URL: http://freeglut.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: x11
+
+name=freeglut
+version=2.4.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,15 @@
+# Description: Documentation generation tool 
+# URL: http://www.doxygen.org
+# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+
+name=doxygen
+version=1.4.6
+release=2
+source=(ftp://ftp.stack.nl/pub/users/dimitri/$name-$version.src.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix /usr
+	make
+	make INSTALL=$PKG/usr install
+}

@@ -1,0 +1,219 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH UNISON 1 "September 23, 2001"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+unison \- a file-synchronization tool for Unix and Windows
+.SH SYNOPSIS
+.B unison
+.RI [ options ]
+.br
+.B unison
+root1 root2
+.RI [ options ]
+.br
+.B unison
+profilename
+.RI [ options ]
+.br
+.B unison-gtk
+.RI [ options ]
+.SH DESCRIPTION
+This manual page briefly documents Unison, and was written for the
+Debian GNU/Linux distribution because the original program does not
+have a manual page. For a full description, please refer to the
+inbuilt documentation or the manuals in /usr/share/doc/unison/. The
+unison-gtk binary has similar command-line options, but allows the user
+to select and create profiles and configure options from within the
+program.
+.PP
+Unison is a file-synchronization tool for Unix and Windows. It allows
+two replicas of a collection of files and directories to be stored on
+different hosts (or different disks on the same host), modified
+separately, and then brought up to date by propagating the changes in
+each replica to the other.
+.PP
+Unison offers several advantages over various synchronization methods
+such as CVS, Coda, rsync, Intellisync, etc. Unison can run on and
+synchronize between Windows and many UNIX platforms. Unison requires
+no root privileges, system access or kernel changes to function. Unison
+can synchronize changes to files and directories in both directions,
+on the same machine, or across a network using ssh or a direct
+socket connection.
+.PP
+Transfers are optimised using a version of the rsync protocol, making
+it ideal for slower links. Unison has a clear and precise specification,
+and is resilient to failure due to its careful handling of the replicas
+and its private structures.
+.SH OPTIONS
+All Unison options are long, starting with one dash (`-') only.
+A summary of options is included here. For a complete description,
+see the inbuilt documentation or the manuals in /usr/share/doc/unison/.
+.TP
+.B \-addprefsto
+specify a file to add new preferences to in interactive mode
+.TP
+.B \-addversionno
+add version number to name of unison executable on server
+.TP
+.B \-auto
+automatically accept default actions
+.TP
+.B \-backup xxx
+add a regexp to the backup list
+.TP
+.B \-backups
+keep backup copies of files (deprecated: use 'backup')
+.TP
+.B \-batch
+batch mode: ask no questions at all
+.TP
+.B \-contactquietly
+suppress the 'contacting server' message during startup
+.TP
+.B \-debug xxx
+debug module xxx ('all' -> everything, 'verbose' -> more)
+.TP
+.B \-doc xxx
+show documentation ('-doc topics' lists topics)
+.TP
+.B \-dumbtty
+do not try to change terminal settings in text UI
+.TP
+.B \-editor xxx
+command for displaying the output of the -merge program
+.TP
+.B \-fastcheck
+do fast (and slightly unsafe) update detection on windows
+.TP
+.B \-follow xxx
+add a regexp to the follow list
+.TP
+.B \-force xxx
+force changes from this replica to the other
+.TP
+.B \-group
+synchronize group
+.TP
+.B \-height n
+height (in lines) of main window in graphical interface
+.TP
+.B \-ignore xxx
+add a regexp to the ignore list
+.TP
+.B \-ignorecase
+ignore upper/lowercase spelling of filenames
+.TP
+.B \-ignorenot xxx
+add a regexp to the ignorenot list
+.TP
+.B \-killserver
+kill server when done (even when using sockets)
+.TP
+.B \-log
+record actions in file specified by logfile preference
+.TP
+.B \-logfile xxx
+log file name
+.TP
+.B \-maxbackups n
+number of backed up versions of a file to keep
+.TP
+.B \-merge xxx
+command for merging conflicting files
+.TP
+.B \-merge2 xxx
+command for merging files (when no common version exists)
+.TP
+.B \-numericids
+don't map uid/gid values by user/group names
+.TP
+.B \-owner
+synchronize owner
+.TP
+.B \-path xxx
+path to synchronize
+.TP
+.B \-perms n
+part of the permissions which is synchronized
+.TP
+.B \-prefer xxx
+choose this replica's version in case of conflict
+.TP
+.B \-root xxx
+root of a replica
+.TP
+.B \-rootalias xxx
+register alias for canonical root names
+.TP
+.B \-rshargs xxx
+other arguments (if any) for remote shell command
+.TP
+.B \-rshcmd xxx
+path to the rsh executable
+.TP
+.B \-servercmd xxx
+name of unison executable on remote server
+.TP
+.B \-silent
+print nothing (except error messages)
+.TP
+.B \-socket xxx
+act as a server on a socket
+.TP
+.B \-sortbysize
+list changed files by size, not name
+.TP
+.B \-sortfirst xxx
+add a regexp to the sortfirst list
+.TP
+.B \-sortlast xxx
+add a regexp to the sortlast list
+.TP
+.B \-sortnewfirst
+list new before changed files
+.TP
+.B \-sshcmd xxx
+path to the ssh executable
+.TP
+.B \-statusdepth n
+status display depth for local files
+.TP
+.B \-terse
+suppress status messages
+.TP
+.B \-testserver
+exit immediately after the connection to the server
+.TP
+.B \-times
+synchronize modification times
+.TP
+.B \-ui xxx
+select user interface ('text' or 'graphic')
+.TP
+.B \-version
+print version and exit
+.PP
+Some preferences are just boolean flags. Others take numeric or string
+arguments, indicated in the preferences list by n or xxx. Most of the
+string preferences can be given several times; the arguments are
+accumulated into a list internally.
+.SH SEE ALSO
+The program is documented fully in the in-built documentation and the
+manual, available as HTML, PostScript and text in /usr/share/doc/unison/.
+.SH AUTHOR
+This manual page was written by Robert McQueen <robot101@debian.org>,
+for the Debian GNU/Linux system (but may be used by others).

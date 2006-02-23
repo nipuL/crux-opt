@@ -1,0 +1,6 @@
+Dependencies:
+
+gtk1            (required)
+libungif        (recommended)
+libjpeg         (recommended)
+libtiff         (recommended)

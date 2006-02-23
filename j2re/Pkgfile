@@ -1,0 +1,33 @@
+# Maintainer: Jay Dolan, jasonthomasdolan at yahoo dot com
+# Description: Java 2 Runtime Environment
+# URL: http://java.sun.com
+
+# Please download the source files from http://java.sun.com after
+# accepting the license terms, and place them in this directory.
+
+name=j2re
+version=1.5.0
+release=06
+source=(file:///jre-${version//./_}_${release}-linux-i586.bin)
+
+build(){
+	sed -i 's|more <<"EOF"|cat <<"EOF"|' jre-*.bin
+	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
+	yes | sh $SRC/jre-*.bin
+
+	export GLOBIGNORE="*/man1"
+	rm -rf jre*/{man/,lib/javaws/messages_,demo,sample}*
+	rm -rf jre*/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
+	rm -rf jre*/plugin/i386/ns7-gcc29
+
+	for i in jre*/*; do
+		test -f $i && rm -rf $i;
+	done
+
+	ln -s jre* java
+
+	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
+	for j in java jar keytool; do
+		ln -s ../lib/java/bin/$j
+	done
+}

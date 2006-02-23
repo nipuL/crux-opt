@@ -1,0 +1,15 @@
+# Description: OGG encoded music files for the Exult engine.
+# URL: http://exult.sourceforge.net/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: exult
+
+name=exult-musicpack
+version=1.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/exult/U7MusicOGG_1of2.zip \
+        http://dl.sourceforge.net/sourceforge/exult/U7MusicOGG_2of2.zip)
+
+build() {
+	install -d $PKG/usr/share/exult/music
+        install -m 0644 $SRC/*.ogg $PKG/usr/share/exult/music
+}

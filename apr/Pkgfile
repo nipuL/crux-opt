@@ -1,0 +1,30 @@
+# Description: Apache Portable Runtime library
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# URL:         http://apr.apache.org/
+# Depends on:  expat
+# Group:       apache
+
+name=apr
+version=2.0.55
+release=1
+source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2)
+
+build(){
+   cd httpd-$version/srclib/$name
+   ./configure --prefix=/usr \
+               --with-installbuilddir=/usr/share/apr
+   make 
+   make DESTDIR=$PKG install
+
+   cd ../$name-util
+   ./configure --prefix=/usr \
+               --with-expat=/usr \
+               --with-apr=../apr
+   make
+   make DESTDIR=$PKG install
+
+   cp ../../build/make_exports.awk $PKG/usr/share/apr
+   sed -i '/^APR_SOURCE/s|=.*|="/usr/share/apr"|' $PKG/usr/bin/apr-config
+   sed -i '/^apr_/s|=.*|="/usr/share/apr"|' $PKG/usr/share/apr/apr_rules.mk
+   chown -R root:root $PKG
+}

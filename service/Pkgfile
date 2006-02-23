@@ -1,0 +1,19 @@
+# Description: Wrapper for starting/stopping services, with completion
+# URL: http:///www.varlock.com
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on: bash-completion
+
+name=service
+version=0.2
+release=1
+source=(http://www.varlock.com/files/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	mkdir -p $PKG/usr/sbin
+	install -m 755 $name $PKG/usr/sbin
+	mkdir -p $PKG/usr/lib/bash-completion
+	install -m 755 ${name}_completions $PKG/usr/lib/bash-completion
+
+}

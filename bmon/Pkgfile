@@ -1,0 +1,17 @@
+# Description: Network bandwidth monitor
+# URL: http://people.suug.ch/~tgr/bmon/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=bmon
+version=2.1.0
+release=1
+source=(http://people.suug.ch/~tgr/$name/files/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,15 @@
+# Description: Simple text formatting tool
+# URL: http://txt2tags.sourceforge.net/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: python
+
+name=txt2tags
+version=2.3
+release=1
+source=(http://$name.sourceforge.net/src/$name-$version.tgz)
+
+build() {
+    cd $name-$version
+    install -D -m 0755 $name $PKG/usr/bin/$name
+}

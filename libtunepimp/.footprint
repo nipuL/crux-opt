@@ -1,0 +1,17 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/tp_tagger
+-rwxr-xr-x	root/root	usr/bin/trm
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/tunepimp/
+-rw-r--r--	root/root	usr/include/tunepimp/context.h
+-rw-r--r--	root/root	usr/include/tunepimp/defs.h
+-rw-r--r--	root/root	usr/include/tunepimp/tp_c.h
+-rw-r--r--	root/root	usr/include/tunepimp/track.h
+-rw-r--r--	root/root	usr/include/tunepimp/tunepimp.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libtunepimp.a
+-rwxr-xr-x	root/root	usr/lib/libtunepimp.la
+lrwxrwxrwx	root/root	usr/lib/libtunepimp.so -> libtunepimp.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libtunepimp.so.2 -> libtunepimp.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libtunepimp.so.2.0.0

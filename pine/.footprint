@@ -1,0 +1,8 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/pico
+-rwxr-xr-x	root/root	usr/bin/pine
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/pico.1.gz
+-rw-r--r--	root/root	usr/man/man1/pine.1.gz

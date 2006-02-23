@@ -1,0 +1,30 @@
+diff -aur libtxc_dxtn.orig/Makefile libtxc_dxtn/Makefile
+--- libtxc_dxtn.orig/Makefile	2004-04-23 00:19:21.000000000 +0200
++++ libtxc_dxtn/Makefile	2005-12-29 17:43:18.365917000 +0100
+@@ -1,14 +1,17 @@
+-libtxc_dxtn.so: txc_compress_dxtn.o txc_fetch_dxtn.o
+-	gcc -v -O3 -Wall -pedantic -fPIC -lpthread -shared -o libtxc_dxtn.so txc_compress_dxtn.o txc_fetch_dxtn.o
++CFLAGS += -pedantic -fPIC -Wall
++LDFLAGS += -shared
++OBJS = txc_compress_dxtn.o txc_fetch_dxtn.o
++LIB = libtxc_dxtn.so
+ 
+-txc_compress_dxtn.o : txc_compress_dxtn.c txc_dxtn.h
+-	gcc -c -O3 -Wall -pedantic -fPIC -o txc_compress_dxtn.o txc_compress_dxtn.c
++$(LIB): $(OBJS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJS)
+ 
+-txc_fetch_dxtn.o : txc_fetch_dxtn.c txc_dxtn.h
+-	gcc -c -O3 -Wall -pedantic -fPIC -o txc_fetch_dxtn.o txc_fetch_dxtn.c
++.c.o:
++	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ clean:
+-	rm txc_fetch_dxtn.o txc_compress_dxtn.o libtxc_dxtn.so
++	rm -f $(OBJS) $(LIB)
+ 
+-install: libtxc_dxtn.so
+-	install libtxc_dxtn.so /usr/lib/
++install: $(LIB)
++	install -d $(DESTDIR)/usr/lib
++	install $(LIB) $(DESTDIR)/usr/lib

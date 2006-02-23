@@ -1,0 +1,34 @@
+README for sane 1.0.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+  1. If you're using an USB scanner, create the group 'scanner' and 
+     add all users which need access to your device.
+
+  2. To find the vendor/product id of your scanner, run the command:
+
+     # sane-find-scanner -q
+     found USB scanner (vendor=0x04a9 [Canon], product=0x2204 [CanoScan] at libusb:002:002
+
+     You need the 'vendor' id (0x04a9) and the 'product' id (0x2204)
+
+  3. Check if /etc/hotplug/usb/libsane.usermap already knows about 
+     your scanner. If your scanner is not in this list, add a line 
+     like the following, remember to replace 0x04a9 and 0x2204 with 
+     your values:
+
+     libusbscanner   0x0003  0x04a9  0x2204  0x0000  0x0000  0x00  0x00 0x00  0x00  0x00  0x00  0x00000000
+
+  4. Check the file permissions in /proc/bus/usb after you have plugged 
+     in your scanner device.
+
+     # ls -l /proc/bus/usb/001
+     total 0
+     -rw-r--r--  1 root root    43 Aug  3 10:58 001
+     -rw-rw----  1 root scanner 50 Aug  3 10:58 005
+
+PRECAUTION

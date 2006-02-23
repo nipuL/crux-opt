@@ -1,0 +1,18 @@
+# Description: Fast and small window manager
+# URL:         http://blackboxwm.sourceforge.net
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Depends:     x11 
+
+name=blackbox
+version=0.70.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/blackboxwm/$name-$version.tar.bz2)
+ 
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+}

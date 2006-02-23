@@ -1,0 +1,23 @@
+# Description: Ghostscript add-on for HP inkjet/laserjet printers
+# URL:         http://hpinkjet.sourceforge.net/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ghostscript, foomatic-filters
+
+name=hpijs
+version=2.1.8
+release=1
+source=(http://dl.sourceforge.net/sourceforge/hpinkjet/hplip-0.9.8.tar.gz)
+
+build () {
+    cd hplip-0.9.8/prnt/$name
+    
+    ./configure --prefix=/usr 
+    make 
+    make DESTDIR=$PKG install
+    mv $PKG/usr/share/{ppd/HP,cups/model}
+    
+    rm $PKG/usr/bin/foomatic-rip
+    rm $PKG/usr/share/cups/model/foomatic-ppds
+    rm -r $PKG/usr/{lib,share/{ppd,doc}}
+    chown -R root:root $PKG
+}

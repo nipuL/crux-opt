@@ -1,0 +1,61 @@
+README for exult 1.2
+
+
+REQUIREMENTS
+1. Copies of Ultima 7: The Black Gate and/or Ultima 7: Serpent Isle.
+
+
+PRE-INSTALL
+   
+
+POST-INSTALL
+1. locate the 'static' folder from either of your Ultima 7 installations 
+   and copy them in seperate directories (eg: /usr/share/exult/blackgate/static).
+
+2. Run exult once to generate a default config file (~/.exult.cfg)
+
+3. Make sure the path for each game points directly above from where the
+   static directory is held. For example: if the static directory for
+   'The Black Gate' is located in /usr/share/exult/blackgate/static the
+   path in your ~/.exult.cfg would be:
+
+---------<snip>----------
+   <blackgate>
+    <path>
+    /usr/share/exult/blackgate/
+    </path>
+    ...
+   </blackgate>
+---------<snip>----------
+
+4. Edit ~/.exult.cfg and make sure the relavant lines are inserted 
+   as shown below:
+
+---------<snip>----------
+   <blackgate>
+    ...
+    <waves>
+    jmsfx.flx
+    </waves>
+    ...
+   </blackgate>
+---------<snip>----------
+
+---------<snip>----------
+   <serpentisle>
+    ...
+    <waves>
+    jmsisfx.flx
+    </waves>
+    ...
+   </serpentisle>  
+---------<snip>----------
+
+5. Make sure the sound driver is set to 'digital' from the ingame menu.
+
+6. If you want the OGG encoded music for Exult, install 'exult-musicpack' port.
+
+
+PRECAUTION
+1. Do not mix static directories from both games, either games must have
+   their own directories.

@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/Mail -> nail
+lrwxrwxrwx	root/root	usr/bin/mail -> nail
+lrwxrwxrwx	root/root	usr/bin/mailx -> nail
+-rwxr-xr-x	root/root	usr/bin/nail
+drwxr-xr-x	root/root	usr/etc/
+-rw-r--r--	root/root	usr/etc/nail.rc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+lrwxrwxrwx	root/root	usr/man/man1/mail.1.gz -> nail.1.gz
+-rw-r--r--	root/root	usr/man/man1/nail.1.gz

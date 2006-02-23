@@ -1,0 +1,20 @@
+# Description: Tool for reading,sending, and managing electronic messages
+# URL:         http://www.washington.edu/pine/
+# Depends on:  openssl
+# Maintainer:  Per Lidén <per@fukt.bth.se>
+
+name=pine
+version=4.64
+release=1
+source=(ftp://ftp.cac.washington.edu/pine/$name$version.tar.bz2)
+
+build() {
+    cd $name$version
+    ./build EXTRACFLAGS="$CFLAGS" \
+	    SSLDIR=/usr \
+	    SSLCERTS=/etc/ssl/certs \
+	    slx
+    mkdir -p $PKG/usr/bin $PKG/usr/man/man1
+    cp bin/pine bin/pico $PKG/usr/bin
+    cp doc/pine.1 doc/pico.1 $PKG/usr/man/man1
+}

@@ -1,0 +1,41 @@
+Recommended dependencies:
+
+libwv2      (needed for anything resembling decent .doc support)
+libwpd      (needed to import Wordperfect documents)
+wordnet     (run-time dependency of kthesaurus.  It is very, very useful imho)
+imagemagick (adds proper image support)
+
+Optional dependencies:
+
+tetex       (needed for writing of TeX documents)
+             note: as of koffice-1.3.3, reading TeX documents is not supported
+
+
+Here's an example of WordNet's output (kthesaurus):
+There are another NINE types of output. (many of which are closer to a "normal"
+thesaurus)
+
+--
+Synonyms/Hypernyms of noun crux
+
+Sense 1
+Southern Cross, Crux, Crux Australis -- (a small conspicuous constellation in 
+the southern hemisphere in the Milky Way near Centaurus)
+    => constellation (a configuration of stars as seen from the earth)
+
+Sense 2
+crux, crux of the matter -- (the most important point)
+    => point (a brief version of the essential meaning of something; "get 
+       to the point"; "he missed the point of the joke"; "life has lost its 
+       point")
+
+
+Holonyms of noun crux
+
+Sense 1
+Southern Cross, Crux, Crux Australis -- (a small conspicuous constellation in 
+the southern hemisphere in the Milky Way near Centaurus)
+
+MEMBER OF: Milky Way, Milky Way Galaxy, Milky Way System -- (the galaxy 
+           containing the solar system; consists of millions of stars that can
+           be seen as a diffuse band of light stretching across the night sky)

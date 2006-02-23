@@ -1,0 +1,17 @@
+# Description: A 'virtual machine' for several classic graphical point-and-click adventure games.
+# URL: http://www.scummvm.org/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: libsdl, libogg, libmad, zlib, mpeg2dec
+
+name=scummvm
+version=0.8.2
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure
+	make
+	install -D -m 0755 $name $PKG/usr/bin/$name
+	install -D -m 0644 $name.xpm $PKG/usr/share/icons/$name.xpm
+}

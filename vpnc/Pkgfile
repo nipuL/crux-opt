@@ -1,0 +1,19 @@
+# Description: Client for cisco3000 VPN concentrators
+# URL: http://www.unix-ag.uni-kl.de/~massar/vpnc/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: iproute2, libgcrypt
+
+name=vpnc
+version=0.3.3
+release=2
+source=(http://www.unix-ag.uni-kl.de/~massar/$name/$name-$version.tar.gz \
+	$name-$version-script.patch)
+
+build() {
+	cd $name-$version
+	patch -p0 < $SRC/$name-$version-script.patch
+	make
+	make install DESTDIR=$PKG PREFIX=/usr MANDIR=/usr/man
+	mkdir -p $PKG/etc/vpnc
+	rm -f $PKG/etc/vpnc/vpnc.conf
+}

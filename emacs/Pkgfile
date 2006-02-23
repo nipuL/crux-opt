@@ -1,0 +1,25 @@
+# Description: An extensible, customizable, self-documenting real-time display editor
+# URL:         http://www.gnu.org/software/emacs/
+# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Depends on:  x11, libtiff
+
+name=emacs
+version=21.4a
+release=1
+source=(http://mirrors.sunsite.dk/gnu/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-21.4
+    ./configure --prefix=/usr \
+		--libexecdir=/usr/lib \
+		--with-x
+    make
+    make prefix=$PKG/usr libexecdir=$PKG/usr/lib install
+    rm -rf $PKG/usr/bin/emacs-21.4 $PKG/usr/info
+    find $PKG/usr/share/emacs -name "*.el" | while read file; do
+	[ -f ${file}c ] && rm -f $file
+    done
+    chown -R root.root $PKG
+    find $PKG/usr/share -type d -exec chmod 755 {} \;
+    find $PKG/usr/share -type f -exec chmod 644 {} \;
+}

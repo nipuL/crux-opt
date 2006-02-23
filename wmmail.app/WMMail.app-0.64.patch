@@ -1,0 +1,139 @@
+diff -ru WMMail.app-0.64/configure WMMail.app-0.64-new/configure
+--- WMMail.app-0.64/configure	Mon Jul  3 11:51:00 2000
++++ WMMail.app-0.64-new/configure	Mon Oct  8 00:38:44 2001
+@@ -1832,54 +1832,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-echo $ac_n "checking for PLGetProplistWithPath in -lPropList""... $ac_c" 1>&6
+-echo "configure:1837: checking for PLGetProplistWithPath in -lPropList" >&5
+-ac_lib_var=`echo PropList'_'PLGetProplistWithPath | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  ac_save_LIBS="$LIBS"
+-LIBS="-lPropList $LIBS $LIBS"
+-cat > conftest.$ac_ext <<EOF
+-#line 1845 "configure"
+-#include "confdefs.h"
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-/* We use char because int might match the return type of a gcc2
+-    builtin and then its argument prototype would still apply.  */
+-char PLGetProplistWithPath();
+-
+-int main() {
+-PLGetProplistWithPath()
+-; return 0; }
+-EOF
+-if { (eval echo configure:1856: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=yes"
+-else
+-  echo "configure: failed program was:" >&5
+-  cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+-  eval "ac_cv_lib_$ac_lib_var=no"
+-fi
+-rm -f conftest*
+-LIBS="$ac_save_LIBS"
+-
+-fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+-  echo "$ac_t""yes" 1>&6
+-    ac_tr_lib=HAVE_LIB`echo PropList | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+-    -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+-  cat >> confdefs.h <<EOF
+-#define $ac_tr_lib 1
+-EOF
+-
+-  LIBS="-lPropList $LIBS"
+-
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
+-
+-
++LIBS="-WUtils -lWINGs $LIBS"
+ 
+ 
+ 
+diff -ru WMMail.app-0.64/src/imap.c WMMail.app-0.64-new/src/imap.c
+--- WMMail.app-0.64/src/imap.c	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/imap.c	Mon Oct  8 00:25:56 2001
+@@ -30,7 +30,7 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <time.h>
+-#include <proplist.h>
++#include <WINGs/proplist-compat.h>
+ #include "wmmail.h"
+ #include "wmutil.h"
+ #include "net.h"
+diff -ru WMMail.app-0.64/src/mbox.c WMMail.app-0.64-new/src/mbox.c
+--- WMMail.app-0.64/src/mbox.c	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/mbox.c	Mon Oct  8 00:26:17 2001
+@@ -30,7 +30,7 @@
+ #include <time.h>
+ #include <utime.h>
+ #include <unistd.h>
+-#include <proplist.h>
++#include <WINGs/proplist-compat.h>
+ #include "wmmail.h"
+ #include "wmutil.h"
+ 
+diff -ru WMMail.app-0.64/src/pop3.c WMMail.app-0.64-new/src/pop3.c
+--- WMMail.app-0.64/src/pop3.c	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/pop3.c	Mon Oct  8 00:26:35 2001
+@@ -30,7 +30,7 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <time.h>
+-#include <proplist.h>
++#include <WINGs/proplist-compat.h>
+ #include "wmmail.h"
+ #include "wmutil.h"
+ #include "net.h"
+diff -ru WMMail.app-0.64/src/properties.c WMMail.app-0.64-new/src/properties.c
+--- WMMail.app-0.64/src/properties.c	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/properties.c	Mon Oct  8 00:26:56 2001
+@@ -47,7 +47,7 @@
+ #include <stdlib.h>
+ #include <strings.h>
+ #include <pwd.h>
+-#include <proplist.h>
++#include <WINGs/proplist-compat.h>
+ #include <unistd.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+diff -ru WMMail.app-0.64/src/wmmail.h WMMail.app-0.64-new/src/wmmail.h
+--- WMMail.app-0.64/src/wmmail.h	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/wmmail.h	Mon Oct  8 00:25:30 2001
+@@ -29,7 +29,7 @@
+ 
+ 
+ /* includes for type information */
+-#include <proplist.h>
++#include <WINGs/proplist-compat.h>
+ #include <X11/Xlib.h>
+ #include <X11/Intrinsic.h>
+ #include <X11/xpm.h>
+diff -ru WMMail.app-0.64/src/wmutil.c.in WMMail.app-0.64-new/src/wmutil.c.in
+--- WMMail.app-0.64/src/wmutil.c.in	Mon Jul  3 11:51:01 2000
++++ WMMail.app-0.64-new/src/wmutil.c.in	Mon Oct  8 00:42:52 2001
+@@ -121,6 +121,7 @@
+ }
+ 
+ 
++/*
+ char *wstrdup(char *str)
+ {
+   if (str == NULL)
+@@ -128,7 +129,7 @@
+ 
+   return strcpy(wmalloc(strlen(str) + 1), str);
+ }
+-
++*/
+ 
+ char *get_home_dir()
+ {

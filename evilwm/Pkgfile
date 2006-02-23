@@ -1,0 +1,17 @@
+# Description: The minimalist window manager
+# URL:         http://www.6809.org.uk/evilwm/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  x11
+
+name=evilwm
+version=0.99.24
+release=1
+source=(http://www.6809.org.uk/$name/$name-$version.tar.gz \
+        $name-config.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 < ../$name-config.patch
+    make 
+    make DESTDIR=$PKG install
+}

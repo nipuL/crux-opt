@@ -1,0 +1,41 @@
+diff -aur quilt-0.43.orig/Makefile.in quilt-0.43/Makefile.in
+--- quilt-0.43.orig/Makefile.in	2006-02-01 19:17:08.000000000 +0100
++++ quilt-0.43/Makefile.in	2006-02-03 22:59:52.000000000 +0100
+@@ -9,9 +9,9 @@
+ libdir :=	@libdir@
+ datadir :=	@datadir@
+ docdir :=	@docdir@
+-mandir :=	$(datadir)/man
++mandir :=	$(prefix)/man
+ localedir :=	$(datadir)/locale
+-etcdir :=	$(subst /usr/etc,/etc,$(prefix)/etc)
++etcdir :=	$(prefix)/etc
+ 
+ INSTALL :=	@INSTALL@
+ POD2MAN :=	@POD2MAN@
+@@ -321,10 +321,10 @@
+ 	$(INSTALL) -d $(BUILD_ROOT)$(mandir)/man1
+ 	$(INSTALL) -m 644 $(MAN1) $(BUILD_ROOT)$(mandir)/man1/
+ 
++	$(INSTALL) -d $(BUILD_ROOT)$(libdir)
++	$(INSTALL) -d $(BUILD_ROOT)$(libdir)/bash-completion
++	$(INSTALL) -m 644 bash_completion $(BUILD_ROOT)$(libdir)/bash-completion/quilt
+ 	$(INSTALL) -d $(BUILD_ROOT)$(etcdir)
+-	$(INSTALL) -d $(BUILD_ROOT)$(etcdir)/bash_completion.d
+-	$(INSTALL) -m 644 bash_completion				\
+-		   $(BUILD_ROOT)$(etcdir)/bash_completion.d/quilt
+ 	$(INSTALL) -m 644 quilt.quiltrc $(BUILD_ROOT)$(etcdir)/
+ 
+ install-compat: install-compat1 $(COMPAT_SYMLINKS:%=install-compat-symlink-%)
+diff -aur quilt-0.43.orig/bin/quilt.in quilt-0.43/bin/quilt.in
+--- quilt-0.43.orig/bin/quilt.in	2006-01-16 20:33:00.000000000 +0100
++++ quilt-0.43/bin/quilt.in	2006-02-03 23:00:24.000000000 +0100
+@@ -14,7 +14,7 @@
+ 
+ if [ -z "$QUILTRC" ]
+ then
+-	for QUILTRC in $HOME/.quiltrc /etc/quilt.quiltrc; do
++	for QUILTRC in $HOME/.quiltrc /usr/etc/quilt.quiltrc; do
+ 		[ -e $QUILTRC ] && break
+ 	done
+ 	export QUILTRC

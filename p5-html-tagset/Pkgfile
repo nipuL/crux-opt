@@ -1,0 +1,17 @@
+# Description: HTML::Tagset
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: perl
+
+name=p5-html-tagset
+version=3.04
+release=1
+source=(http://www.cpan.org/authors/id/S/SB/SBURKE/HTML-Tagset-$version.tar.gz)
+
+build() {
+	cd HTML-Tagset-$version
+	perl Makefile.PL
+	make OPTIMIZE="$CFLAGS"
+	make DESTDIR=$PKG install
+	find ${PKG} -name perllocal.pod -exec rm '{}' \;
+	find ${PKG} -name .packlist -exec rm '{}' \;
+}

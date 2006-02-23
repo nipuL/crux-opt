@@ -1,0 +1,25 @@
+--- xxdiff-3.0.2/src/app.cpp.orig	2004-10-28 10:41:20.782609600 +0200
++++ xxdiff-3.0.2/src/app.cpp	2004-10-28 10:42:00.925506952 +0200
+@@ -261,22 +261,6 @@
+    // Read in the resources and create resources object.
+    _resources = buildResources();
+ 
+-#ifndef XX_KDE
+-#if (QT_VERSION >= 0x030000)
+-   // By default, if not specified, force SGI style.
+-   if ( _cmdline._forceStyle == false ) {
+-      _style = QStyleFactory::create( _resources->getStyleKey() );
+-      setStyle( _style );
+-   }
+-#endif
+-#endif
+-
+-#ifndef XX_KDE
+-   if ( _cmdline._forceFont == false ) {
+-      setFont( _resources->getFontApp(), true );
+-   }
+-#endif
+-
+    // Read in the file names.
+    QString filenames[3];
+    QString displayFilenames[3];

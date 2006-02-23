@@ -1,0 +1,16 @@
+# Description: A temperature utility designed to be docked in Window Maker
+# URL: http://www.fukt.bth.se/~per/temperature/
+# Maintainer: Per Lidén <per@fukt.bth.se>
+# Depends on:
+
+name=temperature.app
+version=1.4
+release=1
+source=(http://www.fukt.bth.se/~per/temperature/Temperature.app-$version.tar.gz)
+
+build() {
+	cd Temperature.app-$version
+	make
+	make DESTDIR=$PKG GNUSTEP_BINDIR=/usr/GNUstep/Apps/Temperature.app install
+	strip $PKG/usr/GNUstep/Apps/Temperature.app/*
+}

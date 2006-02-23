@@ -1,0 +1,21 @@
+# Description: xterm replacement with transparency and fading
+# URL:         http://aterm.sourceforge.net
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  x11
+
+name=aterm
+version=1.0.0
+release=1
+source=(ftp://ftp.afterstep.org/apps/$name/$name-$version.tar.gz \
+        $name-fake_root.patch)
+
+build () {
+    cd aterm-$version
+    patch -p1 < $SRC/$name-fake_root.patch
+    cp autoconf/configure.in .
+    autoconf 
+    autoheader 
+    ./configure --prefix=/usr --enable-fake-root
+    make
+    make DESTDIR=$PKG install
+}

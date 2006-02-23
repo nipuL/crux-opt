@@ -1,0 +1,11 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/opencdk-config
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/opencdk.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libopencdk.a
+-rwxr-xr-x	root/root	usr/lib/libopencdk.la
+lrwxrwxrwx	root/root	usr/lib/libopencdk.so -> libopencdk.so.8.0.3
+lrwxrwxrwx	root/root	usr/lib/libopencdk.so.8 -> libopencdk.so.8.0.3
+-rwxr-xr-x	root/root	usr/lib/libopencdk.so.8.0.3

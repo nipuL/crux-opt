@@ -1,0 +1,15 @@
+# Description: Make socket connection using SOCKS4/5 and HTTP tunnel
+# URL: http://www.taiyo.co.jp/~gotoh/ssh/connect.html
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: 
+
+name=connect
+version=1.95
+release=1
+source=(http://www.taiyo.co.jp/~gotoh/ssh/$name.c)
+
+build() {
+    install -d $PKG/usr/bin
+    gcc $CFLAGS $SRC/$name.c -o $PKG/usr/bin/$name
+}

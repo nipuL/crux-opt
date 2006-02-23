@@ -1,0 +1,28 @@
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION
+
+	pcre means Perl Compatible Regular Expressions. Please note that some 
+	packages in 'base' and 'opt' will depend on libpcre after recompiling.
+
+	Example: base/grep
+
+	Assuming that you've compiled a newer version of grep.
+	`./configure` said:
+	..
+	checking for pcre_exec in -lpcre... yes
+	..
+	After `pkgrm libpcre` grep will say:
+
+	$ grep string infile
+	grep: error while loading shared libraries: libpcre.so.0: cannot open _
+	shared object file: No such file or directory
+
+	'grep' will not work without libpcre, please keep that in mind.
+
+Daniel Mueller

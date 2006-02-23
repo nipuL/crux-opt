@@ -1,0 +1,11 @@
+NIS Yellow Pages Services
+
+POST-INSTALL
+
+Ensure YPDOMAIN is defined in /etc/rc.conf and edit 
+/etc/yp.conf to specify your NIS server.  You'll also 
+want to add ypbind to SERVICES in /etc/rc.conf, after
+a network device has been configured.
+
+It would also be wise to install yp-tools.
+

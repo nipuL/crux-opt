@@ -1,0 +1,24 @@
+# Description: Image manipulation wizard
+# Packager: danm, maol, jaeger
+# Maintainer: Simone Rota, sip at varlock dot com
+# URL: http://imagemagick.sourceforge.net/
+# Depends on: freetype ghostscript lcms libungif libxml2
+
+name=imagemagick
+version=6.2.6
+release=2
+source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version-0.tar.bz2
+	$name-$version.patch)
+
+build () {
+    cd ImageMagick-$version
+    patch -p1 < ../$name-$version.patch
+    ./configure --prefix=/usr --enable-shared --enable-lzw --with-perl
+    make
+    mkdir -p $PKG/usr/
+    make DESTDIR=$PKG PREFIX=$PKG/usr install
+    rm -rf $PKG/usr/lib/{perl5/?.?.?,ImageMagick/modules,libltdl.*}
+    rm -rf $PKG/usr/share/ImageMagick-$version/{ChangeLog,LICENSE,NEWS}
+    rm -rf $PKG/usr/share/doc
+    find $PKG -name perllocal.pod -o -name .packlist -exec rm {} \;
+}

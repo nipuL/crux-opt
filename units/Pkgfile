@@ -1,0 +1,19 @@
+# Description: converts between system units
+# URL: http://www.gnu.org/software/units
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=units
+version=1.85
+release=1
+source=(ftp://ftp.gnu.org/gnu/units/units-$version.tar.gz)
+build () {
+	cd "units-$version";
+	./configure --prefix=/usr --datadir=/usr/share/units
+        sed -i -e "s|\"sed.*$||" units.c;
+	make
+	mkdir -p "$PKG/usr/bin" "$PKG/usr/share/units" "$PKG/usr/man/man1";
+	cp units "$PKG/usr/bin";
+	cp units.dat "$PKG/usr/share/units";
+	cp units.1 "$PKG/usr/man/man1";
+}

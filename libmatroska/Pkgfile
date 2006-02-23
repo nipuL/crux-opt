@@ -1,0 +1,17 @@
+# Description: Extensible open source A/V container format
+# URL: http://www.matroska.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: libebml
+
+name=libmatroska
+version=0.8.0
+release=1
+source=(http://dl.matroska.org/downloads/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    cd make/linux
+    make
+    make -e prefix=$PKG/usr install
+}

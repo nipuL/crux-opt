@@ -1,0 +1,27 @@
+# Description: Python interpreter
+# URL:         http://www.python.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  db, gdbm, ncurses, openssl, readline, zlib
+
+name=python
+version=2.4.2
+release=1
+source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
+        $name-$version.patch)
+
+build () {
+    cd Python-$version
+    patch -p1 < ../$name-$version.patch
+    ./configure --prefix=/usr \
+                --enable-shared \
+                --with-threads \
+                --enable-ipv6 
+    make 
+    make DESTDIR=$PKG install
+    
+    ln -sf python2.4 $PKG/usr/bin/python
+    ln -sf python2.4 $PKG/usr/lib/python
+    ln -sf python2.4 $PKG/usr/include/python
+    rm -r $PKG/usr/lib/python/{test,{email,bsddb}/test}
+    rm -r $PKG/usr/lib/python/distutils/tests
+}

@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/check_wtmpx
+-rwxr-xr-x	root/root	usr/sbin/chkdirs
+-rwxr-xr-x	root/root	usr/sbin/chklastlog
+-rwxr-xr-x	root/root	usr/sbin/chkproc
+-rwxr-xr-x	root/root	usr/sbin/chkrootkit
+-rwxr-xr-x	root/root	usr/sbin/chkrootkit.scr
+-rwxr-xr-x	root/root	usr/sbin/chkutmp
+-rwxr-xr-x	root/root	usr/sbin/chkwtmp
+-rwxr-xr-x	root/root	usr/sbin/ifpromisc
+-rwxr-xr-x	root/root	usr/sbin/strings-static

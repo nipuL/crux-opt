@@ -1,0 +1,36 @@
+# Description: Base set of libraries needed by KDE programs
+# URL: http://www.kde.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: sudo, perl, db, libidn, imlib, hicolor-icon-theme, freeglut, libart_lgpl, qt3, audiofile, libxml2, libxslt, libpcre, openssl, aspell, gnupg, gpgme, gamin, cups, openldap, arts
+
+name=kdelibs
+version=3.5.1
+release=2
+source=(http://download.kde.org/stable/3.5.1/src/$name-$version.tar.bz2 \
+    http://www.kde-look.org/content/files/10888-bt.tar.gz \
+    kdelibs-3.5.1-pcre.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 -i $SRC/kdelibs-3.5.1-pcre.patch
+    ./configure	--prefix=/usr \
+        --with-distribution="CRUX Linux" \
+        --enable-sendfile \
+        --enable-libfam \
+        --enable-mitshm \
+        --with-alsa \
+        --with-ssl \
+        --without-hspell \
+        --disable-debug \
+        --disable-dependency-tracking \
+        --enable-final
+    make
+    make DESTDIR=$PKG install
+    cd ../bt
+    cp -r * $PKG/usr/share/icons/crystalsvg/
+    echo Icon=bt >> $PKG/usr/share/mimelnk/application/x-bittorrent.desktop
+    rm -f $PKG/usr/share/icons/hicolor/index.theme
+    rm -f $PKG/usr/include/ltdl.h
+    rm -rf $PKG/usr/share/doc $PKG/usr/share/apps/LICENSES
+}

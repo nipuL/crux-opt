@@ -1,0 +1,32 @@
+# Description: Extremely simple MTA to get mail off the system to a mail hub
+# URL:         http://packages.debian.org/unstable/mail/ssmtp.html
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=ssmtp
+version=2.61
+release=2
+source=(http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}.orig.tar.gz \
+        http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}-5.diff.gz)
+
+build () {
+    cd $name-$version
+    gunzip -c $SRC/${name}_${version}-5.diff.gz | patch -p1
+    autoconf
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --enable-inet6 \
+                --enable-ssl \
+                --enable-md5auth
+    make
+    
+    sed -i "s|_HOSTNAME_|`hostname -f`|" ssmtp.conf
+    sed -i "s|/etc/ssmtp.conf|/etc/ssmtp/ssmtp.conf|" ssmtp.conf
+    sed -i "s|/usr/lib/|/usr/sbin/|" ssmtp.8
+    
+    install -D -m 644 ssmtp.conf $PKG/etc/ssmtp/ssmtp.conf
+    install -D -m 644 revaliases $PKG/etc/ssmtp/revaliases
+    install -D -m 755 ssmtp $PKG/usr/sbin/ssmtp
+    install -D -m 644 ssmtp.8 $PKG/usr/man/man8/ssmtp.8
+    install -D -m 644 ssmtp.conf.5 $PKG/usr/man/man5/ssmtp.conf.5
+}

@@ -1,0 +1,21 @@
+# Description: Version control and project management software
+# URL:         http://www.gnu.org/directory/rcs.html
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Jens Fischer, jens dot fischer at gmx dot li
+
+name=rcs
+version=5.7
+release=2
+source=(http://ftp.sunet.se/pub/gnu/rcs/$name-$version.tar.gz \
+	$name-$version.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 < ../$name-$version.patch
+    ./configure --prefix=/usr 
+    make
+    mkdir $PKG/usr
+    make prefix=$PKG/usr install
+    chown -R root.root $PKG
+}
+

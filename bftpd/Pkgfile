@@ -1,0 +1,21 @@
+# Description: Small, easy-to-configure FTP server
+# URL:         http://bftpd.sourceforge.net/
+# Maintainer:  Per Lidén <per@fukt.bth.se>
+
+name=bftpd
+version=1.0.24
+release=3
+source=(http://bftpd.sourceforge.net/downloads/src/$name-$version.tar.gz \
+	$name-$version.patch ftpd)
+
+build () {
+    cd $name-$version
+    patch -p1 < ../$name-$version.patch
+    ./configure --prefix=/usr --enable-libz
+    make
+    mkdir -p $PKG/usr/sbin $PKG/usr/man/man8 $PKG/etc $PKG/etc/rc.d
+    make DESTDIR=$PKG install
+    install -D -m 755 ../ftpd $PKG/etc/rc.d/ftpd
+    chmod 600 $PKG/etc/bftpd.conf
+    ln -sf bftpd $PKG/usr/sbin/in.ftpd
+}

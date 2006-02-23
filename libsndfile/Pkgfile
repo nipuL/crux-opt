@@ -1,0 +1,16 @@
+# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# Description:  C library for manipulating sound files
+# Url: http://www.mega-nerd.com/libsndfile
+# Depends on: 
+
+name=libsndfile
+version=1.0.12
+release=1
+source=(http://www.mega-nerd.com/$name/$name-$version.tar.gz)
+
+build(){
+	cd $name-$version
+	./configure --prefix=/usr --with-gnu-ld
+	make && make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}

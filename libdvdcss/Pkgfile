@@ -1,0 +1,16 @@
+# Description: a library which provides functions for reading DVD video disks.
+# URL: http://www.dtek.chalmers.se/groups/dvd
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Olle Gustafsson, ogg at linux dot se
+
+name=libdvdcss
+version=1.2.8
+release=1
+source=(http://www.videolan.org/pub/videolan/libdvdcss/$version/libdvdcss-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

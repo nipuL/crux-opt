@@ -1,0 +1,23 @@
+# Description: Identd daemon with IPv6 support
+# URL: http://dev.ojnk.net/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Daniel Mueller, daniel at danm dot de
+
+name=oidentd
+version=2.0.7
+release=2
+source=(http://dl.sourceforge.net/sourceforge/ojnk/$name-$version.tar.gz \
+	$name.conf $name)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--enable-ipv6 \
+		--enable-masq \
+		--sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+	mkdir -p $PKG/etc/rc.d
+	install -m 755 $SRC/$name $PKG/etc/rc.d/
+	install -m 644 $SRC/$name.conf $PKG/etc/
+}

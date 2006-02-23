@@ -1,0 +1,19 @@
+# Description: Libksba provides an easy API to create and parse X.509 and CMS related objects
+# URL: http://www.gnupg.org/(en)/related_software/libksba/index.html
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Daniel Mueller, daniel at danm dot de
+# Depends on: libgpg-error
+
+name=libksba
+version=0.9.12
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/alpha/$name/$name-$version.tar.bz2)
+
+build()
+{
+    cd $name-$version
+    ./configure	--prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    test -d $PKG/usr/info && rm -rf $PKG/usr/info
+}

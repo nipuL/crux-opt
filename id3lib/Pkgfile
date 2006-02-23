@@ -1,0 +1,16 @@
+# Description: a library for reading, writing, and manipulating ID3v1 and ID3v2 tags
+# URL: http://id3lib.sourceforge.net/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Jean-Philippe Combe, jphcombe at yahoo dot fr
+
+name=id3lib
+version=3.8.3
+release=1
+source=(http://heanet.dl.sourceforge.net/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# /etc/rc.d/atd: start/stop atd daemon
+#
+
+if [ "$1" = "start" ]; then
+    /usr/sbin/atd
+elif [ "$1" = "stop" ]; then
+    killall -q /usr/sbin/atd
+elif [ "$1" = "restart" ]; then
+    killall -q /usr/sbin/atd
+    /usr/sbin/atd
+else
+    echo "usage: $0 start|stop|restart"
+fi
+
+# End of file

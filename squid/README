@@ -1,0 +1,58 @@
+README for squid 2.5
+
+REQUIREMENTS
+
+PRE-INSTALL
+1. Create user/group squid with a unused id < 99:
+   'groupadd -g 20 squid'
+   'useradd -g squid -u 20 -d /var/squid -s /bin/false squid'
+   'passwd -l squid'
+   
+POST-INSTALL
+1. run '/usr/sbin/squid -z' to build the cache structure
+
+PRECAUTION
+1. all directories used by squid must be chown to 
+   squid.squid or to the effective cache user/group defined 
+   in squid.conf
+2. With version 2.5 the location of the squid executable has 
+   changed from /usr/bin to /usr/sbin. Don't reject the new
+   startscript /etc/rc.d/squid.
+
+CONFIGURATION OPTIONS
+There are many other configuration options for squid. This
+port should be a very basic one, read the docs for the more 
+advanced options. George Adamopoulos sent me an email with
+some suggestions, which I'll not include in the port, but
+put here because of his useful comments:
+
+--enable-delay-pools
+  Enable delay pools to limit bandwidth usage. You need to 
+  enable the option in order to use Squid to limit bandwith 
+  usage. It will give fair bandwith usage for everybody. 
+  In my case, I don't want one person sucking all of the 
+  available bandwidth by downloading a big movie, causing 
+  others to suffer.
+
+--enable-storeio=diskd,ufs
+  Enable diskd. Improve disk I/O performance. According to 
+  the Squid FAQ, if you enable diskd you can gain a 400% 
+  increase of perfomance. However, you would need to 
+  recompile the kernel because your operating system must 
+  support message queues and shared memory.
+
+--enable-removal-policies
+  Build support for the list of removal policies. 
+  By default, Squid uses LRU, but there are two better 
+  policies: GDSF and LFUDA. See the Squid config for a more 
+  detailed explanation.
+
+--disable-ident-lookups
+  Removes code that performs Ident (RFC 931) lookups. 
+  Not really important. By the way, if you do transparent 
+  proxy, ident lookups won't work.
+
+--enable-snmp
+  You can monitor Squid with mrtg or rrdtool.
+
+

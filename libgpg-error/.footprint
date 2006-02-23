@@ -1,0 +1,15 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/gpg-error
+-rwxr-xr-x	root/root	usr/bin/gpg-error-config
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/gpg-error.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libgpg-error.a
+-rwxr-xr-x	root/root	usr/lib/libgpg-error.la
+lrwxrwxrwx	root/root	usr/lib/libgpg-error.so -> libgpg-error.so.0.1.4
+lrwxrwxrwx	root/root	usr/lib/libgpg-error.so.0 -> libgpg-error.so.0.1.4
+-rwxr-xr-x	root/root	usr/lib/libgpg-error.so.0.1.4
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/gpg-error.m4

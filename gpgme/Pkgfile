@@ -1,0 +1,19 @@
+# Description: GnuPG Made Easy - API for GnuPG 
+# URL:         http://www.gnupg.org/gpgme.html
+# Maintainer: sten, nick dot steeves at shat dot ca
+# Packager: Daniel Mueller, daniel at danm dot de
+# Depends on:  gnupg, libgpg-error
+
+name=gpgme
+version=1.0.3
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-static
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/info
+}

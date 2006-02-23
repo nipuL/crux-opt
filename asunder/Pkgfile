@@ -1,0 +1,19 @@
+# Description: CD Ripping frontend
+# URL: http://ericlathrop.com/asunder/
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on: gtk, flac, lame, vorbis-tools, cdparanoia, libcddb
+
+name=asunder
+version=0.1.0
+release=2
+source=(http://ericlathrop.com/asunder/Asunder-$version.tar.bz2 \
+		$name-refreshdisc.patch)
+
+build() {
+	cd Asunder-$version
+	patch -p1 < ../$name-refreshdisc.patch
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

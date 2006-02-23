@@ -1,0 +1,17 @@
+# Description: Support library for ROX apps
+# URL: http://rox.sourceforge.net/phpwiki/index.php/ROX-Lib
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on: pygtk
+
+name=rox-lib
+version=2.0.2
+release=1
+source=(http://dl.sourceforge.net/sourceforge/rox/$name-$version.tgz)
+
+build() {
+	mkdir -p $PKG/usr/lib
+	cd $name-$version
+	rm -rf ROX-Lib2/{Help,Messages}
+	cp -rf ROX-Lib2 $PKG/usr/lib
+}

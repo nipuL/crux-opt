@@ -1,0 +1,24 @@
+# Description: Vector drawing program for X
+# URL: http://www.xfig.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on: xaw3d, libjpeg, libpng
+
+name=xfig
+version=3.2.5-alpha5
+release=1
+source=(http://xfig.org/software/$name/3.2.5-alpha/$name.$version.full.tar.gz \
+        $name.$version.patch)
+
+build () {
+    cd $name.$version
+    patch -p1 < ../$name.$version.patch
+    xmkmf
+    make depend
+    make
+    make DESTDIR=$PKG install
+    make DESTDIR=$PKG install.libs
+    install -D -m 644 Doc/xfig.man $PKG/usr/man/man1/xfig.1
+    find $PKG/usr/share/xfig -name *.gz -exec gunzip {} \;
+    rm -r $PKG/usr/X11R6
+}

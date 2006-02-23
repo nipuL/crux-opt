@@ -1,0 +1,22 @@
+# Description: Ruby bindings for glib2, pango, atk, gdkpixbuf2 and gtk2
+# URL: http://ruby-gnome2.sourceforge.jp/
+# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Packager: Håvard Moen, vanilje at netcom dot no
+# Depends on: ruby, gtk
+
+name=ruby-gtk
+version=0.14.1
+release=1
+source=(http://dl.sourceforge.net/ruby-gnome2/ruby-gtk2-$version.tar.gz \
+        $name.diff)
+
+build() {
+	cd ruby-gtk2-$version
+
+	patch -Np1 -i ../$name.diff
+
+	ruby extconf.rb
+
+	make
+	make DESTDIR=$PKG install
+}

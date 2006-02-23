@@ -1,0 +1,19 @@
+# Description: CD Burning program
+# URL: http://www.nongnu.org/graveman/
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on: libglade, libid3tag, libmad, libvorbis, cdrtools, sox, cdrdao, p5-xml-parser, libmng
+
+name=graveman
+version=0.3.12-4
+release=1
+source=(http://graveman.tuxfamily.org/sources/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --enable-linux-ide
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/share/{locale,applications}
+	rm -r $PKG/usr/man/{fr,nl}/
+}

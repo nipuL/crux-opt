@@ -1,0 +1,37 @@
+README for chrony 1.20
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+Add up to eight time server of your country to /etc/chrony.conf.
+A list of public servers can be found here:
+
+  http://www.eecis.udel.edu/~mills/ntp/clock1a.html
+  http://www.eecis.udel.edu/~mills/ntp/clock2a.html
+
+
+PRECAUTION
+
+Remove the both '/sbin/hwclock ...' entries from /etc/rc.shutdown 
+and /etc/rc. No other software should manipulate the system hardware 
+clock if chronyd is running.
+
+
+Chrony is a pure Network time protocol (NTP) server, that mean it
+provides it's services on port 123/UDP. Utilities like rdate uses
+the time protocol on port 37/TCP. To use rdate with chrony you must 
+add the following line to the /etc/inetd.conf of your chrony server 
+and run inetd:
+
+  time   stream   tcp   nowait   root   internal
+
+To avoid this, I recommend the use of the NTP utility msntp to sync 
+your clients with your chrony server or better run chrony on all of 
+your clients. 
+
+The start script /etc/rc.d/chronyd has a online and a offline option. 
+Use this in your ip-up/ip-down scripts to tell chrony whether we are 
+online or offline.

@@ -1,0 +1,17 @@
+# Description: ALSA utils
+# URL: http://www.alsa-project.org
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: gettext, alsa-lib
+
+name=alsa-utils
+version=1.0.10
+release=1
+source=(ftp://ftp.alsa-project.org/pub/utils/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share $PKG/usr/man/fr
+}

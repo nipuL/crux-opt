@@ -1,0 +1,49 @@
+diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/Makefile NVIDIA-Linux-x86-1.0-7676-pkg0/Makefile
+--- NVIDIA-Linux-x86-1.0-7676-pkg0.orig/Makefile	2005-07-29 15:30:44.000000000 -0500
++++ NVIDIA-Linux-x86-1.0-7676-pkg0/Makefile	2005-08-26 08:36:42.736205664 -0500
+@@ -95,4 +95,4 @@
+ 	@echo -n "      "
+ 	cp -r usr/share/doc/* ${DOCDIR}
+ 	@echo -n "      "
+-	/sbin/ldconfig
++	#/sbin/ldconfig
+diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild NVIDIA-Linux-x86-1.0-7676-pkg0/usr/src/nv/Makefile.kbuild
+--- NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild	2005-07-29 15:30:43.000000000 -0500
++++ NVIDIA-Linux-x86-1.0-7676-pkg0/usr/src/nv/Makefile.kbuild	2005-08-26 08:36:42.736205664 -0500
+@@ -255,10 +255,10 @@
+ #
+ 
+ suser-sanity-check:
+-	@if ! $(CONFTEST) suser_sanity_check; then exit 1; fi
++	#@if ! $(CONFTEST) suser_sanity_check; then exit 1; fi
+ 
+ rmmod-sanity-check:
+-	@if ! $(CONFTEST) rmmod_sanity_check; then exit 1; fi
++	#@if ! $(CONFTEST) rmmod_sanity_check; then exit 1; fi
+ 
+ gcc-sanity-check:
+ 	@if ! $(CONFTEST) cc_sanity_check full_output; then exit 1; fi
+@@ -293,9 +293,9 @@
+ #
+ 
+ module-install: suser-sanity-check module
+-	@mkdir -p $(MODULE_ROOT)/video; \
+-	install -m 0664 -o root -g root $(MODULE_OBJECT) $(MODULE_ROOT)/video; \
+-	PATH="$(PATH):/bin:/sbin" depmod -ae;
++	#@mkdir -p $(MODULE_ROOT)/video; \
++	#install -m 0664 -o root -g root $(MODULE_OBJECT) $(MODULE_ROOT)/video; \
++	#PATH="$(PATH):/bin:/sbin" depmod -ae;
+ 
+ #
+ # This target builds, then installs, then creates device nodes and inserts
+@@ -303,8 +303,8 @@
+ #
+ 
+ package-install: module-install rmmod-sanity-check
+-	PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
+-	echo "$(MODULE_OBJECT) installed successfully.";
++	#PATH="$(PATH):/bin:/sbin" modprobe $(MODULE_NAME) && \
++	#echo "$(MODULE_OBJECT) installed successfully.";
+ 
+ #
+ # Build an object file suitable for further processing by the installer and

@@ -1,0 +1,27 @@
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: graphical file and directories comparator and merge tool
+# URL:         http://xxdiff.sourceforge.net/ 
+# Depends:     qt3 
+
+name=xxdiff
+version=3.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz\
+    ftp://ftp.trolltech.com/freebies/tmake/tmake-1.8.tar.gz \
+    xxdiff-nostyleforce.diff
+    xxdiff-cvs-fix.diff) 
+
+build() {
+    export TMAKEPATH=$SRC/tmake-1.8/lib/linux-g++
+    export QTDIR=${QTDIR:=/usr/share/qt}
+
+    cd $name-$version/src
+    patch -p2 < ../../xxdiff-nostyleforce.diff
+    patch ../bin/xxdiff-cvs-diff $SRC/xxdiff-cvs-fix.diff
+
+    $SRC/tmake-1.8/bin/tmake xxdiff.pro > Makefile
+    make
+    install -m 755 -d $PKG/usr/bin
+    install -m 755 ../bin/xxdiff{,-cvs-diff} $PKG/usr/bin
+}

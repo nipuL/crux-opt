@@ -1,0 +1,18 @@
+# Description: electronic lexical database of the English language (aka: a superb thesaurus)
+# URL: http://www.cogsci.princeton.edu/~wn/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: tk
+
+name=wordnet
+version=2.0
+release=3
+source=(ftp://ftp.cogsci.princeton.edu/pub/wordnet/2.0/WordNet-$version.tar.gz wordnet-$version.patch)
+
+build() {
+	cd WordNet-$version
+	patch -p1 < ../wordnet-$version.patch
+	make SrcWorld
+	chown -R root.root $PKG/usr
+	rm -rf $PKG/usr/share/doc
+}

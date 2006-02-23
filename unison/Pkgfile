@@ -1,0 +1,21 @@
+# Description: File synchronization tool with text and GTK+2 UI
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Markus Ackermann, maol at symlink dot ch
+# URL:         http://www.cis.upenn.edu/~bcpierce/unison/
+# Depends on:  ocaml, lablgtk
+
+name=unison
+version=2.13.16
+release=1
+source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz \
+        $name.1)
+
+build() {
+    cd $name-$version
+    unset CFLAGS CXXFLAGS
+    make UISTYLE=text
+    install -D -m 755 unison $PKG/usr/bin/unison
+    make UISTYLE=gtk2
+    install -D -m 755 unison $PKG/usr/bin/unison-gtk
+    install -D -m 644 ../unison.1 $PKG/usr/man/man1/unison.1
+}

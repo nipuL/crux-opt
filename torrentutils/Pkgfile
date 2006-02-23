@@ -1,0 +1,18 @@
+# Description: Utilities for managing BitTorrent (`.torrent') files
+# URL: http://oskarsapps.mine.nu/torrentutils.html
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: p5-digest-sha1
+
+name=torrentutils
+version=0.3.0
+release=2
+source=(http://oskarsapps.mine.nu/src/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    sed -i 's:share/man:man:' Makefile
+    make
+    make PREFIX=$PKG/usr install
+    rm -rf $PKG/usr/share
+}

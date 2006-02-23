@@ -1,0 +1,19 @@
+*** src314/exec.c	2005-11-01 21:10:47.000000000 +0100
+--- src/exec.c	2005-11-12 15:52:15.000000000 +0100
+***************
+*** 388,394 ****
+  
+  	tilde = *str == '~';
+  	quote = needs_dq = 0;
+! 	for (real_len = i = 0; (ch = str[i]); i++) {
+  		if (quote)
+  			quote = 0;
+  		else if (ch == '\\')
+--- 388,394 ----
+  
+  	tilde = *str == '~';
+  	quote = needs_dq = 0;
+! 	for (real_len = 0, i = tilde /* 0 or 1 */; (ch = str[i]); i++) {
+  		if (quote)
+  			quote = 0;
+  		else if (ch == '\\')

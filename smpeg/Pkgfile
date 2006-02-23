@@ -1,0 +1,17 @@
+# Description: A SDL MPEG player library.
+# URL: http://www.lokigames.com/development/smpeg.php3
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: libsdl
+
+name=smpeg
+version=0.4.4
+release=1
+source=(ftp://sunsite.dk/pub/os/linux/loki/open-source/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure 	--prefix=/usr \
+			--disable-nls
+	make
+	make install DESTDIR=$PKG
+}

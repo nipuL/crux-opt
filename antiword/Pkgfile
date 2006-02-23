@@ -1,0 +1,26 @@
+# Description: Show the text and images of MS Word documents
+# URL: http://www.winfield.demon.nl
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+# Tip: If you put the following entry in your mailcap file,
+# Some mailclients, like mutt, will extract text from .doc-files:
+# application/msword;antiword %s;copiousoutput
+
+name=antiword
+version=0.36.1
+release=1
+
+source=(http://www.winfield.demon.nl/linux/$name-$version.tar.gz)
+
+build()
+{
+	cd $name-$version
+	make GLOBAL_INSTALL_DIR=/usr/bin
+	mkdir -p $PKG/usr/bin $PKG/usr/share/$name $PKG/usr/man/man1
+	make DESTDIR=$PKG GLOBAL_INSTALL_DIR=/usr/bin global_install
+	cp Docs/$name.1 $PKG/usr/man/man1
+	chmod 644 $PKG/usr/man/man1/*
+	# kantiword is a shell wrapper to make d&d possible in KDE
+	#rm $PKG/usr/bin/kantiword
+}

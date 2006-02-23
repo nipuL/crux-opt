@@ -1,0 +1,20 @@
+# Description: Utility for network exploration or security auditing
+# URL: http://www.insecure.org/nmap
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: sten, nick dot steeves at shaw dot ca
+
+name=nmap
+version=4.01
+release=1
+source=(http://download.insecure.org/$name/dist/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+	--without-nmapfe \
+	--with-libpcre=included \
+	--with-libpcap=included
+    make
+    make prefix=$PKG/usr install
+    rm -rf $PKG/usr/share/applications
+}

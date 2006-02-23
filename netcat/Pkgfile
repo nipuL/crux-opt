@@ -1,0 +1,18 @@
+# Description: a simple Unix utility which reads and writes data across network connections using TCP or UDP protocol
+# URL: http://netcat.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=netcat
+version=0.7.1
+release=1
+
+source=(http://dl.sourceforge.net/sourceforge/netcat/netcat-0.7.1.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{share,info}
+}

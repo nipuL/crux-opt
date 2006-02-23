@@ -1,0 +1,22 @@
+# Description: a file and directory monitoring system defined to be a subset of the FAM (File Alteration Monitor) system.  The difference between Gamin and FAM, is that Gamin supports inotify!  (needs linux >= 2.6.13)
+# URL: http://www.gnome.org/~veillard/gamin/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: glib, python
+
+name=gamin
+version=0.1.7
+release=1
+source=(http://www.gnome.org/~veillard/gamin/sources/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --libexecdir=/usr/sbin \
+        --disable-gtk-doc \
+        --disable-dnotify \
+        --enable-inotify \
+        --disable-debug
+    make
+    make DESTDIR=$PKG install
+}

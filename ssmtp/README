@@ -1,0 +1,13 @@
+README for ssmtp 2.61.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+To use ssmtp as an sendmail replacement remove sendmail
+and create a symlink from ssmtp to sendmail:
+
+  ln -s /usr/bin/ssmtp /usr/sbin/sendmail
+
+PRECAUTION

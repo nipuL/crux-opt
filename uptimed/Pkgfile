@@ -1,0 +1,24 @@
+# Description: System uptime record daemon
+# URL: http://podgorny.cz/uptimed/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=uptimed
+version=0.3.7
+release=1
+source=(http://podgorny.cz/$name/releases/$name-$version.tar.bz2 \
+        $name.patch \
+        $name.rc)
+
+build() {
+    cd $name-$version
+    patch -p1 < $SRC/$name.patch
+
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+    make DESTDIR=$PKG install
+
+    mv $PKG/etc/$name.conf-dist $PKG/etc/$name.conf
+    install -D -m 0755 $SRC/$name.rc $PKG/etc/rc.d/$name
+}

@@ -1,0 +1,20 @@
+# Description: a filesystem snapshot utility based on rsync
+# URL: http://www.rsnapshot.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: perl
+
+name=rsnapshot
+version=1.2.1
+release=1
+source=(http://www.rsnapshot.org/downloads/rsnapshot-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --disable-debug
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/locale
+    rm -rf $PKG/usr/share/doc
+}

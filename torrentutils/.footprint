@@ -1,0 +1,8 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/defrag
+-rwxr-xr-x	root/root	usr/bin/torrenttool
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/defrag.1.gz
+-rw-r--r--	root/root	usr/man/man1/torrenttool.1.gz

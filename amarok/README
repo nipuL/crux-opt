@@ -1,0 +1,25 @@
+Dependencies:
+
+kdelibs            (required)
+kdebase            (recommended)
+    * adds embedded filemanager lets one browse the filesystem
+      this makes manual addition of music fast and easy.  If
+      kdebase is installed, one can also drag and drop from a
+      normal konqueror window, to various fields in Amarok, to
+      do different actions.
+
+xine-lib           (recommended)
+    * Xine is faster then GStreamer.  Amarok's graphic equalizer, and other
+      visualizations, are tuned to Xine for low-latency.
+
+AND/OR
+
+gst-plugins        (optional)
+    * Use GStreamer instead of Xine, if desired.  Personally, I find
+      that Xine is faster and more stable.
+
+libvisual-plugins  (optional)
+    * LibVisual provides audio visualization support.  Very nice eye candy!
+
+k3b                (optional)
+    * needed for cd-burning integration

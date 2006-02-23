@@ -1,0 +1,16 @@
+# $Id: Pkgfile,v 1.3 2005/04/04 14:01:34 jaeger Exp $
+# Description: Macromedia Flash Plugin for Firefox
+# URL: http://www.macromedia.com/shockwave/download/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: firefox
+
+name=firefox-flash-plugin
+version=7.0r61
+release=1
+source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_7_linux.tar.gz)
+
+build() {
+	mkdir -p $PKG/usr/lib/firefox/plugins
+	cp install_flash_player_7_linux/{libflashplayer.so,flashplayer.xpt} $PKG/usr/lib/firefox/plugins
+	chown -R root:root $PKG
+}

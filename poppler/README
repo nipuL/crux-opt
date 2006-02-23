@@ -1,0 +1,11 @@
+Optional Dependencies:
+
+gtk, and/or qt3
+
+Note:
+
+I built this against gtk and qt3.  Should you omit the installation of
+one of these, pkgmk may exclaim the following: ".footprint mismatch"!
+This is not something to be particularly worried over, because it is
+likely that if you don't have gtk/qt3 installed, then the reason is
+that you don't want gtk/qt3 to take up your hard drive space. :-)

@@ -1,0 +1,18 @@
+# Description: Minimalistic program for locking down X
+# URL:
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: x11
+
+name=xtrlock
+version=2.0
+release=2
+source=(http://ftp.debian.org/debian/pool/main/x/$name/${name}_$version-10.tar.gz)
+
+build() {
+    cd $name-$version
+    xmkmf
+    make CFLAGS="$CFLAGS -DSHADOW_PWD" xtrlock
+    install -D -m 4755 xtrlock $PKG/usr/bin/xtrlock
+    install -D -m 644 xtrlock.man $PKG/usr/man/man1/xtrlock.1
+}

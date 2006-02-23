@@ -1,0 +1,21 @@
+#!/bin/sh
+
+cd /etc/postfix
+
+/bin/sh post-install \
+  manpage_directory=/usr/man \
+  command_directory=/usr/sbin \
+  config_directory=/etc/postfix \
+  setgid_group=postdrop \
+  mail_owner=mail \
+  upgrade-package
+
+/bin/sh post-install \
+  command_directory=/usr/sbin \
+  config_directory=/etc/postfix \
+  setgid_group=postdrop \
+  mail_owner=mail \
+  create-missing
+
+/usr/sbin/postalias /etc/postfix/aliases
+/usr/sbin/postmap hash:/etc/postfix/{virtual,relocated,access,transport}

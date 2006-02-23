@@ -1,0 +1,69 @@
+#
+# /etc/mararc
+#
+
+# Base settings
+hide_disclaimer = "YES"
+chroot_dir = "/etc/maradns"
+maradns_uid = 99
+maradns_gid = 99
+random_seed_file = "/dev/urandom"
+
+# Timing and size settings
+maximum_cache_elements = 2048
+maxprocs = 96
+timeout_seconds = 5
+
+# Logging and debug settings
+timestamp_type = 4
+verbose_level = 3
+debug_msg_level = 3
+
+# The addresses mara bind to
+# CHANGING THIS IS REQUIRED !
+ipv4_bind_addresses = "127.0.0.1,192.168.0.1"
+
+# The various zones we support
+csv2 = {}
+csv2["localhost."] = "db.localhost"
+csv2["0.0.127.in-addr.arpa."] = "db.0.0.127"
+# csv2["example.net."] = "db.example.net"
+
+# ACL for localhost, localnet
+# CHANGING THIS IS REQUIRED !
+ipv4_alias = {}
+ipv4_alias["localhost"] = "127.0.0.0/8"
+ipv4_alias["localnet"] = "192.168.0.0/24"
+recursive_acl = "localhost,localnet"
+zone_transfer_acl = "localnet"
+
+# The root servers which we use when making recursive queries.
+# http://www.icann.org
+ipv4_alias["icann"]  = "198.41.0.4,192.228.79.201,192.33.4.12,128.8.10.90,"
+ipv4_alias["icann"] += "192.203.230.10,192.5.5.241,192.112.36.4,"
+ipv4_alias["icann"] += "128.63.2.53,192.36.148.17,192.58.128.30,"
+ipv4_alias["icann"] += "193.0.14.129,198.32.64.12,202.12.27.33"
+
+# OSRC: http://www.open-rsc.org/
+ipv4_alias["osrc"]  = "199.166.24.1,205.189.73.102,199.166.24.3,"
+ipv4_alias["osrc"] += "207.126.103.16,195.117.6.10,205.189.73.10,"
+ipv4_alias["osrc"] += "204.57.55.100,213.196.2.97"
+
+# AlterNIC: http://www.alternic.org/
+ipv4_alias["alternic"]  = "160.79.129.192,24.6.78.12,160.79.133.70,"
+ipv4_alias["alternic"] += "65.15.8.202,216.162.42.240,195.224.64.190,"
+ipv4_alias["alternic"] += "160.79.133.66,216.162.42.185"
+
+# OpenNIC: http://www.opennic.unrated.net/
+ipv4_alias["opennic"]  = "131.161.247.226,209.151.84.102,64.247.218.140,"
+ipv4_alias["opennic"] += "64.247.218.149,209.104.33.250,209.104.63.249,"
+ipv4_alias["opennic"] += "209.151.84.103,199.175.137.211,207.6.128.246,"
+ipv4_alias["opennic"] += "65.243.92.254"
+
+root_servers = {}
+root_servers["."] = "icann"
+
+# upstream_servers = {}
+# upstream_servers["."] = "usually_your_isps_dns_servers"
+
+# End of file

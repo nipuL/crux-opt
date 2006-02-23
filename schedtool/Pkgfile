@@ -1,0 +1,18 @@
+# Description: schedtool interfaces with the Linux CPU scheduler
+# URL: http://freequaos.host.sk/schedtool/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: 
+
+name=schedtool
+version=1.2.6
+release=1
+source=(http://freequaos.host.sk/schedtool/schedtool-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    make no_affinity
+	sed -i "s,DESTPREFIX=/usr/local,DESTPREFIX=${PKG}/usr," Makefile
+    make install
+	rm -rf $PKG/usr/share
+}

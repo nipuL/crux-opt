@@ -1,0 +1,16 @@
+# Description: programmable bash completion for pkt-get
+# URL: http://www.varlock.com/blosxom.cgi/CruxProjects/pkgget/index.html
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on: bash-completion, pkg-get
+
+name=pkg-get-bashcompletion
+version=0.4.3
+release=1
+source=(http://www.varlock.com/files/pkg-get-$version.tar.gz)
+
+build() {
+        cd pkg-get-$version/scripts
+        install -D -m 755 pkg-get_completion.sh \
+          $PKG/usr/lib/bash-completion/pkg-get_completion
+}

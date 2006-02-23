@@ -1,0 +1,23 @@
+# Description: Advanced Configuration and Power Interface event management daemon
+# URL: http://acpid.sf.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Markus Heinz, su1690 at studserver dot uni-dortmund dot de
+
+name=acpid
+version=1.0.4
+release=1
+source=(http://dl.sourceforge.net/${name}/${name}-$version.tar.gz \
+	acpid.rc default default.sh)
+
+build() {
+	cd $name-$version
+	mkdir -p $PKG/usr/{bin,sbin,man/man8}
+	make INSTPREFIX=/usr
+	make INSTPREFIX=$PKG MAN8DIR=$PKG/usr/man/man8 install
+	mkdir -p $PKG/etc/{acpi/events,rc.d}
+	mv ../acpid.rc $PKG/etc/rc.d/acpid
+	mv ../default $PKG/etc/acpi/events
+	mv ../default.sh $PKG/etc/acpi
+	chmod 00755 $PKG/etc/rc.d/acpid $PKG/etc/acpi/default.sh
+	chown -R root:root $PKG
+}

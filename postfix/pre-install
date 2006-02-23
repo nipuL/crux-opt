@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/bin/pkgrm sendmail
+/usr/sbin/groupadd postdrop

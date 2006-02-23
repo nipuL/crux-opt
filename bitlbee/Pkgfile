@@ -1,0 +1,29 @@
+# Description: IRC proxy to connect to ICQ, AOL, MSN and Jabber
+# URL: http://www.bitlbee.org/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: glib, openssl
+
+name=bitlbee
+version=1.0.1
+release=1
+source=(http://get.$name.org/src/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure \
+        --prefix=/usr \
+        --etcdir=/usr/etc/$name \
+        --config=/var/lib/$name \
+        --mandir=/usr/man \
+        --ssl=openssl
+    make
+    make DESTDIR=$PKG install
+    make DESTDIR=$PKG install-etc
+
+    mkdir -p $PKG/var/lib/bitlbee
+    chown bitlbee:bitlbee $PKG/var/lib/bitlbee
+    chmod 0700 $PKG/var/lib/bitlbee
+    chmod 0750 $PKG/usr/sbin/$name
+    chown root:bitlbee $PKG/usr/sbin/$name
+}

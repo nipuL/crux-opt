@@ -1,0 +1,25 @@
+$Id: README,v 1.1 2005/07/15 19:41:23 jaeger Exp $
+
+README for alsa-driver
+
+You can specify card support with the ALSA_CARDS environment variable. If
+it's left empty the port will build all drivers. This is the default behavior
+so the .footprint will mismatch if you set the ALSA_CARDS environment
+variable!
+
+If you want to set a specific card, pass the -if option to pkgmk like so:
+
+	# pkgmk -if
+	or
+	# prt-get install alsa-driver --margs="-if"
+
+This will ignore the footprint.
+
+EXAMPLE: To download and build alsa-driver with support for the emu10k1
+and intel8x0 cards, use the following:
+
+	# env ALSA_CARDS="emu10k1,intel8x0" pkgmk -d -if
+	or
+	# env ALSA_CARDS="emu10k1,intel8x0" prt-get install alsa-driver --margs="-if"
+
+

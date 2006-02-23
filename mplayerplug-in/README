@@ -1,0 +1,13 @@
+PRE-INSTALL
+
+To watch many of the new Quicktime trailers, you'll need to install:
+
+libsndfile
+lame
+id3lib
+faad2
+faac
+liba52
+
+You should then recompile and upgrade mplayer, so that is built with support
+for these codecs.

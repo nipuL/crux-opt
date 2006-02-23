@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/nmap
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/nmap.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/nmap/
+-rw-r--r--	root/root	usr/share/nmap/nmap-mac-prefixes
+-rw-r--r--	root/root	usr/share/nmap/nmap-os-fingerprints
+-rw-r--r--	root/root	usr/share/nmap/nmap-protocols
+-rw-r--r--	root/root	usr/share/nmap/nmap-rpc
+-rw-r--r--	root/root	usr/share/nmap/nmap-service-probes
+-rw-r--r--	root/root	usr/share/nmap/nmap-services
+-rw-r--r--	root/root	usr/share/nmap/nmap.dtd
+-rw-r--r--	root/root	usr/share/nmap/nmap.xsl

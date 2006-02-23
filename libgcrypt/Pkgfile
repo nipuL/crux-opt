@@ -1,0 +1,17 @@
+# Description: A general purpose cryptographic library based on GnuPG
+# URL: http://directory.fsf.org/security/libgcrypt.html
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: libgpg-error
+
+name=libgcrypt
+version=1.2.2
+release=1
+source=(http://mirrors.rootmode.com/ftp.gnupg.org/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/info
+}

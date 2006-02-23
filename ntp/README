@@ -1,0 +1,32 @@
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+To use ntpd to keep your time accurate, the minimum required is to find a
+public server and add it to /etc/ntp/ntp.conf: "server <ip-address>"
+
+  Public stratum 1 servers: http://www.eecis.udel.edu/~mills/ntp/clock1a.html
+  Public stratum 2 servers: http://www.eecis.udel.edu/~mills/ntp/clock2a.html
+  
+  or use the DNS round robin servers 'pool.ntp.org'
+
+The daemon produces log output into the file /var/log/ntp.log. So you should
+think about adding the line "/usr/sbin/rotatelog ntp.log" to your weekly
+system crontab file /etc/cron/weekly/syslog.
+
+If you want to use ntpd to synchronize your lan or similar, or get 
+synchronization from other devices like radio, I suggest reading the manual.
+
+PRECAUTION
+
+To keep your time as accurate as possible, you should run ntpd continously, as
+it works by adjusting the clock by very small intervals (to not disrupt 
+programs depending on time). If your clock is way off, you might want to adjust
+it with ntpdate first, as ntpd by default does not update your clock when the 
+difference is more than 3600 seconds.
+
+Beware of dhcpcd without the -N flag, because it overwrites your ntp.conf
+file. Of course it makes a backup, but it's annoying...

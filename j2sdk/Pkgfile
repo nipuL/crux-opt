@@ -1,0 +1,35 @@
+# Maintainer: Jay Dolan, jasonthomasdolan at yahoo dot com
+# Description: Java 2 Software Development Kit
+# URL: http://java.sun.com
+
+# Please download the source files from http://java.sun.com after
+# accepting the license terms, and place them in this directory.
+
+name=j2sdk
+version=1.5.0
+release=06
+source=(file:///jdk-${version//./_}_${release}-linux-i586.bin)
+
+build(){
+	sed -i 's|more <<"EOF"|cat <<"EOF"|' jdk-*.bin
+	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
+	yes | sh $SRC/jdk-*.bin
+	
+	export GLOBIGNORE="*/man1"
+	rm -rf jdk*/{man/,jre/lib/javaws/messages_,demo,sample}*
+	rm -rf jdk*/jre/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
+	rm -rf jdk*/jre/plugin/i386/ns7-gcc29
+
+	export GLOBIGNORE="*/src.zip"
+	for i in jdk*/* jdk*/jre/*; do
+	  test -f $i && rm -rf $i;
+	done
+	
+	ln -s jdk* java
+
+	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
+	for j in java javac javah javap jar keytool; do
+		ln -s ../lib/java/bin/$j
+	done
+}
+

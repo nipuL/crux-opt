@@ -1,0 +1,32 @@
+# Description: Thunderbird EMail client from the Mozilla project
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# URL: http://www.mozilla.org/projects/thunderbird/
+# Depends on: libidl, gtk, libjpeg, libpng, zlib, expat
+
+name=thunderbird
+version=1.5
+release=1
+source=(http://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
+	mozconfig)
+
+build() {
+	cd mozilla
+
+	# configure
+	sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
+
+	# build it
+	make -f client.mk build_all
+
+	# put everything in the right place
+	mkdir -p $PKG/usr/lib/thunderbird $PKG/usr/bin
+	cp -rL --no-preserve=links dist/bin/* $PKG/usr/lib/thunderbird/
+	(cd $PKG/usr/bin && ln -s ../lib/thunderbird/thunderbird thunderbird)
+
+	# register components
+	cd $PKG/usr/lib/thunderbird
+	MOZILLA_FIVE_HOME=$PWD LD_LIBRARY_PATH=$PWD ./regxpcom
+
+	# fix ownership
+	chown -R root:root $PKG
+}

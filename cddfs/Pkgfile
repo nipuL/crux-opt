@@ -1,0 +1,17 @@
+# Description: Mount audio CDs as filesystems with WAV files
+# URL: http://castet.matthieu.free.fr/cddfs/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: cdparanoia, fuse
+
+name=cddfs
+version=0.2
+release=1
+source=(http://castet.matthieu.free.fr/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    sed -i s:/dev/cdrom:/dev/cdroms/cdrom0:g $name.c
+    make
+    install -D -m 0755 $name $PKG/usr/bin/$name
+}

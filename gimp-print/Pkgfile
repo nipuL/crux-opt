@@ -1,0 +1,20 @@
+# Description: GIMP print plugin and ghostscript/cups driver
+# URL:         http://gimp-print.sourceforge.net/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  cups, ncurses, readline
+
+name=gimp-print
+version=4.2.7
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --disable-nls \
+                --with-gimp=no \
+                --with-samples=no
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/{info,share/gimp-print,lib/gimp}
+}

@@ -1,0 +1,24 @@
+# Description: Digest::SHA1 - Perl interface to the SHA-1 algorithm
+# URL: http://search.cpan.org/~gaas/Digest-SHA1-2.10/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=p5-digest-sha1
+version=2.10
+release=2
+source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Digest-SHA1-$version.tar.gz)
+
+build() {
+    cd Digest-SHA1-$version
+    perl Makefile.PL
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/lib/perl5/5.8.7 \
+           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/Digest/SHA1/.packlist \
+           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/Digest/SHA1/SHA1.bs
+
+    chmod -R +w $PKG
+}

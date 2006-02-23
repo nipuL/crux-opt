@@ -1,0 +1,4 @@
+Dependencies:
+
+glib    (required)
+python  (optional)

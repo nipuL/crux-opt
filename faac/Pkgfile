@@ -1,0 +1,18 @@
+# Description: "Freeware Advanced Audio Coder" --  An MPEG-2 and MPEG-4 AAC audio encoder
+# URL: http://sourceforge.net/projects/faac/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: faad2
+
+name=faac
+version=1.24
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build () {
+	cd $name
+	sh ./bootstrap
+	./configure --prefix=/usr
+	make CFLAGS="$CFLAGS"
+	make prefix=$PKG/usr install
+}

@@ -1,0 +1,16 @@
+# Description: Provides a uniform API for accessing many audio file formats
+# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# Packager: Per Lidén per at fukt dot bth dot se
+# URL: http://www.68k.org/~michael/audiofile
+# Depends on:
+
+name=audiofile
+version=0.2.6
+release=1
+source=(http://www.68k.org/~michael/audiofile/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr
+	make && make DESTDIR=$PKG install
+}

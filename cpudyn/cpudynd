@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/cpudynd: start/stop cpudynd daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/cpudynd -d -i 1 -t 120 
+	;;
+stop)
+	killall -q /usr/sbin/cpudynd 
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

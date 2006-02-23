@@ -1,0 +1,62 @@
+# Description: Postfix Mail Transport Agent (MTA)
+# URL: http://www.postfix.org
+# Maintainer: Simon Gloßner, viper at hometux dot de
+# Packager: Victor, victord at users dot berlios dot de
+# Depends on: cyrus-sasl, openssl, db
+
+name=postfix
+version=2.2.9
+release=1
+source=(ftp://postfix.ulimit.org/postfix/official/$name-$version.tar.gz
+        aliases postfix.rc)
+
+build() {
+    cd $name-$version
+
+    _CCARGS="$CCARGS -DUSE_SASL_AUTH -I/usr/include/sasl -DUSE_TLS"
+    _AUXLIBS="-L/usr/lib -lsasl2 -lssl -lcrypto"
+
+    make tidy
+    make makefiles DEBUG="" OPT="$CFLAGS" CCARGS="$_CCARGS" AUXLIBS="$_AUXLIBS"
+    make           DEBUG="" OPT="$CFLAGS" CCARGS="$_CCARGS" AUXLIBS="$_AUXLIBS"
+
+    sh ./postfix-install -non-interactive install_root=$PKG \
+	mail_owner=mail \
+	setgid_group=postdrop \
+	config_directory=/etc/postfix \
+	manpage_directory=/usr/man \
+	daemon_directory=/usr/lib/postfix \
+	command_directory=/usr/sbin \
+	queue_directory=/var/spool/postfix \
+	sendmail_path=/usr/sbin/sendmail \
+	newaliases_path=/usr/bin/newaliases \
+	mailq_path=/usr/bin/mailq
+
+    #
+    # Set proper permissions
+    #
+    ( cd $PKG/var/spool/postfix
+      chown mail *
+      chgrp postdrop public maildrop )
+
+    ( cd $PKG/usr/sbin
+      chgrp postdrop postqueue postdrop
+      chmod g+s postqueue postdrop )
+
+    #
+    # Add .gz extensions to manpages (pkgmk compresses them)
+    #
+    ( cd $PKG/etc/postfix
+      cp postfix-files temp-files
+      cat temp-files | grep -v LICENSE | sed 's#\(/man[0-9]/[a-zA-Z0-9_-]\+\.[0-9]\):#\1\.gz:#' > postfix-files
+      rm -f temp-files LICENSE )
+
+    install -D -m 00644 ../aliases    $PKG/etc/postfix/aliases
+    install -D -m 00755 ../postfix.rc $PKG/etc/rc.d/postfix
+
+    touch $PKG/etc/postfix/{aliases,access,canonical,relocated,transport,virtual}.db
+    touch $PKG/etc/postfix/relay-domains
+    touch $PKG/etc/postfix/header-checks
+    touch $PKG/etc/postfix/body-checks
+    touch $PKG/etc/postfix/mime-header-checks
+}

@@ -1,0 +1,24 @@
+# Description: ASCII to Postscript converter (Prettyprint)
+# URL:         http://www.inf.enst.fr/~demaille/a2ps/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de 
+# Packager:    Martin Opel, mo at obbl-net dot de
+# Depends on:  psutils
+
+name=a2ps
+version=4.13c
+release=1
+source=(http://ftp.belnet.be/mirror/rsync.gentoo.org/gentoo/distfiles/$name-$version.tar.gz \
+        $name-$version.patch)
+
+build() {
+    cd $name-4.13
+    patch -p1 < $SRC/$name-$version.patch
+    ./configure --prefix=/usr \
+                --disable-extensions \
+                --sysconfdir=/usr/share/a2ps
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/{info,share/{locale,ogonkify}}
+    rm -rf $PKG/usr/man/man1/ogonkify.1
+}

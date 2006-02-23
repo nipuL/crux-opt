@@ -1,0 +1,17 @@
+# Description: GNU aspell is a spell checker designed to replace ispell
+# URL:         http://aspell.net
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ncurses
+
+name=aspell
+version=0.60.4
+release=1
+source=(http://mirrors.sunsite.dk/gnu/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -R $PKG/usr/{info,share}
+}

@@ -1,0 +1,15 @@
+# Description: Realsound 8 MB GS SoundFont for TiMidity++
+# URL:
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: timidity++
+
+name=timidity++-bank-realsound
+version=2.0
+release=1
+source=(ftp://ftp.lysator.liu.se/pub/awe32/soundfonts/8RealGS20.zip)
+
+build() {
+    install -D -m 644 8RealGS20.SF2 $PKG/usr/share/timidity/8realgs20.sf2
+    echo soundfont /usr/share/timidity/8realgs20.sf2 > $PKG/usr/share/timidity/timidity.cfg
+}

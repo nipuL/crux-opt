@@ -1,0 +1,23 @@
+# Description: Open-source 2D CAD system
+# URL:         http://www.qcad.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  qt3
+
+name=qcad
+version=2.0.5.0
+release=1
+source=(http://www.ribbonsoft.com/archives/$name/$name-$version-1-community.src.tar.gz)
+
+build () {
+    cd $name-$version-1-community.src
+    sed -i '3d' mkspecs/defs.pro
+    cd scripts
+    export QTDIR=/usr/share/qt
+    export QMAKESPEC=$QTDIR/mkspecs/linux-g++
+    sh build_qcad.sh
+
+    cd $SRC/$name-$version-1-community.src/qcad
+    mkdir -p $PKG/usr/{bin,share/qcad}
+    cp qcad $PKG/usr/bin
+    cp -r fonts patterns $PKG/usr/share/qcad
+}

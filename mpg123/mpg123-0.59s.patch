@@ -1,0 +1,414 @@
+diff -Nru mpg123.orig/Makefile mpg123/Makefile
+--- mpg123.orig/Makefile	2005-01-12 20:37:18.161565297 +0100
++++ mpg123/Makefile	2005-01-12 20:37:36.919696257 +0100
+@@ -227,10 +227,9 @@
+ 	$(MAKE) CC=gcc LDFLAGS= \
+ 		AUDIO_LIB='-lesd -laudiofile' \
+ 		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
+-			audio_esd.o' \
++			audio_esd.o term.o' \
+ 		CFLAGS='$(CFLAGS) -DI386_ASSEM -DREAL_IS_FLOAT -DPENTIUM_OPT -DLINUX \
+-			-DOSS -DUSE_ESD \
+-			-Wall  -O2 -m486 \
++			-DOSS -DUSE_ESD -DTERM_CONTROL -Wall \
+ 			-fomit-frame-pointer -funroll-all-loops \
+ 			-finline-functions -ffast-math \
+ 			$(RPM_OPT_FLAGS)' \
+diff -Nru mpg123.orig/audio.c mpg123/audio.c
+--- mpg123.orig/audio.c	2005-01-12 20:37:18.202554658 +0100
++++ mpg123/audio.c	2005-01-12 20:37:36.921695738 +0100
+@@ -1,4 +1,4 @@
+-
++#include <stdlib.h>
+ #include "mpg123.h"
+ 
+ void audio_info_struct_init(struct audio_info_struct *ai)
+diff -Nru mpg123.orig/audio_nas.c mpg123/audio_nas.c
+--- mpg123.orig/audio_nas.c	2005-01-12 20:37:18.196556215 +0100
++++ mpg123/audio_nas.c	2005-01-12 20:37:36.923695219 +0100
+@@ -185,7 +185,7 @@
+     info.buf_size = buf_samples * ai->channels * AuSizeofFormat(format);
+     info.buf = (char *) malloc(info.buf_size);
+     if (info.buf == NULL) {
+-        fprintf(stderr, "Unable to allocate input/output buffer of size %ld\n",
++        fprintf(stderr, "Unable to allocate input/output buffer of size %d\n",
+              info.buf_size);
+         exit(1);
+     }
+diff -Nru mpg123.orig/common.c mpg123/common.c
+--- mpg123.orig/common.c	2005-01-12 20:37:18.174561924 +0100
++++ mpg123/common.c	2005-01-12 20:37:36.926694441 +0100
+@@ -127,7 +127,7 @@
+ 	return FALSE;
+     if(!((head>>17)&3))
+ 	return FALSE;
+-    if( ((head>>12)&0xf) == 0xf)
++    if( ((head>>12)&0xf) == 0xf || ((head>>12)&0xf) == 0) 
+ 	return FALSE;
+     if( ((head>>10)&0x3) == 0x3 )
+ 	return FALSE;
+@@ -140,7 +140,7 @@
+  *       -1: giving up
+  *        1: synched
+  */
+-#define MAX_INPUT_FRAMESIZE 1920
++#define MAX_INPUT_FRAMESIZE 4096
+ #define SYNC_HEAD_MASK    0xffff0000
+ #define SYNC_HEAD_MASK_FF 0x0000f000
+ #define LOOK_AHEAD_NUM 3
+@@ -579,7 +579,11 @@
+         fprintf(stderr,"Sorry, unknown layer type.\n"); 
+         return (0);
+     }
+-
++    if (fr->framesize>MAX_INPUT_FRAMESIZE) {
++        fprintf(stderr,"Frame size too big.\n");
++        fr->framesize = MAX_INPUT_FRAMESIZE;
++        return 0;
++    } 
+     if(!fr->bitrate_index) {
+         /* fprintf(stderr,"Warning, Free format not heavily tested: (head %08lx)\n",newhead); */
+         fr->framesize = 0;
+diff -Nru mpg123.orig/httpget.c mpg123/httpget.c
+--- mpg123.orig/httpget.c	2005-01-12 20:37:18.169563221 +0100
++++ mpg123/httpget.c	2005-01-12 20:37:36.928693922 +0100
+@@ -3,6 +3,11 @@
+  *
+  *   Oliver Fromme  <oliver.fromme@heim3.tu-clausthal.de>
+  *   Wed Apr  9 20:57:47 MET DST 1997
++ *
++ *   Modified by Jeremy Huddleston <eradicator@gentoo.org> 2004.10.21 per 
++ *   http://bugs.gentoo.org/show_bug.cgi?id=68343
++ *   http://www.barrossecurity.com/advisories/mpg123_getauthfromurl_bof_advisory.txt
++ *
+  */
+ 
+ #undef ALSA
+@@ -55,7 +60,7 @@
+ #endif
+ 	int pos = 0;
+ 
+-	while(1) {
++	while(maxlen>pos) {
+ 		if( read(fileno(f),string+pos,1) == 1) {
+ 			pos++;
+ 			if(string[pos-1] == '\n') {
+@@ -221,12 +226,12 @@
+ #define ACCEPT_HEAD "Accept: audio/mpeg, audio/x-mpegurl, */*\r\n"
+ 
+ char *httpauth = NULL;
+-char httpauth1[256];
++char *httpauth1 = NULL;
+ 
+ int http_open (char *url)
+ {
+ 	char *purl, *host, *request, *sptr;
+-	int linelength;
++	unsigned int linelength, linelengthbase;
+ 	unsigned long myip;
+ 	unsigned char *myport;
+ 	int sock;
+@@ -270,53 +275,74 @@
+                        exit(1);
+                }
+ 
+-	
+-	if ((linelength = strlen(url)+200) < 1024)
+-		linelength = 1024;
+-	if (!(request = malloc(linelength)) || !(purl = malloc(1024))) {
++	/* The length of purl is upper bound by 3*strlen(url) + 1 if everything in it is a space */
++	purl = (char *)malloc(sizeof(char) * (strlen(url)*3 + 1));
++	if (!purl) {
+ 		fprintf (stderr, "malloc() failed, out of memory.\n");
+ 		exit (1);
+ 	}
+-       /*
+-        * 2000-10-21:
+-        * We would like spaces to be automatically converted to %20's when
+-        * fetching via HTTP.
+-        * -- Martin Sjögren <md9ms@mdstud.chalmers.se>
+-        */
+-       if ((sptr = strchr(url, ' ')) == NULL) {
+-               strncpy (purl, url, 1023);
+-               purl[1023] = '\0';
+-       }
+-       else {
+-               int purllength = 0;
+-               char *urlptr = url;
+-               purl[0] = '\0';
+-               do {
+-                       purllength += sptr-urlptr + 3;
+-                       if (purllength >= 1023)
+-                               break;
+-                       strncat (purl, urlptr, sptr-urlptr);
+-                       //purl[sptr-url] = '\0';
+-                       strcat (purl, "%20");
+-                       urlptr = sptr + 1;
+-               }
+-               while ((sptr = strchr (urlptr, ' ')) != NULL);
+-               strcat (purl, urlptr);
+-       }
+ 
++	/*
++	 * 2000-10-21:
++	 * We would like spaces to be automatically converted to %20's when
++	 * fetching via HTTP.
++	 * -- Martin Sjögren <md9ms@mdstud.chalmers.se>
++	 */
++	if ((sptr = strchr(url, ' ')) == NULL) {
++		strcpy (purl, url);
++	} else {
++		char *urlptr = url;
++		purl[0] = '\0';
++		do {
++			strncat (purl, urlptr, sptr - urlptr);
++			strcat (purl, "%20");
++			urlptr = sptr + 1;
++		}
++		while ((sptr = strchr (urlptr, ' ')) != NULL);
++		strcat (purl, urlptr);
++	}
++
++	httpauth1 = (char *)malloc((strlen(purl) + 1) * sizeof(char));
++	if(!httpauth1) {
++		fprintf(stderr, "malloc() failed, out of memory.\n");
++		exit(1);
++	}
++	getauthfromURL(purl,httpauth1);
++
++	/* "GET http://" +               11
++	 * " HTTP/1.0\r\nUser-Agent: <prgName>/<prgVersion>\r\n"  26 + prgName + prgVersion
++	 * ACCEPT_HEAD               strlen(ACCEPT_HEAD)
++	 * "Authorization: Basic \r\n"   23
++	 * "\r\n"                         2
++	 */
++	linelengthbase = 62 + strlen(prgName) + strlen(prgVersion) + strlen(ACCEPT_HEAD);
++
++	if(httpauth)
++		linelengthbase += (strlen(httpauth) + 1) * 4;
+ 
+-        getauthfromURL(purl,httpauth1);
++	if(httpauth1)
++		linelengthbase += (strlen(httpauth1) + 1) * 4;
+ 
+ 	do {
+-		strcpy (request, "GET ");
+ 		if (proxyip != INADDR_NONE) {
+-                        if (strncasecmp(url, "http://", 7) != 0 && strncasecmp(url,"ftp://", 6) != 0)
+-				strcat (request, "http://");
+-			strcat (request, purl);
+ 			myport = proxyport;
+ 			myip = proxyip;
+-		}
+-		else {
++
++			linelength = linelengthbase + strlen(purl);
++			if(host)
++				linelength += 9 + strlen(host) + strlen(myport); /* "Host: <host>:<port>\r\n" */
++
++			request = (char *)malloc((linelength + 1) * sizeof(char));
++			if (!request) {
++				fprintf (stderr, "malloc() failed, out of memory.\n");
++				exit (1);
++			}
++
++			strcpy (request, "GET ");
++			if (strncasecmp(url, "http://", 7) != 0 && strncasecmp(url,"ftp://", 6) != 0)
++				strcat (request, "http://");
++			strcat (request, purl);
++		} else {
+ 			if (host) {
+ 				free(host);
+ 				host=NULL;
+@@ -325,19 +351,30 @@
+ 				free(proxyport);
+ 				proxyport=NULL;
+ 			}
+-			if (!(sptr = url2hostport(purl, &host, &myip, &myport))) {
+-				fprintf (stderr, "Unknown host \"%s\".\n",
+-					host ? host : "");
++			
++			sptr = url2hostport(purl, &host, &myip, &myport);
++			if (!sptr) {
++				fprintf (stderr, "Unknown host \"%s\".\n", host ? host : "");
+ 				exit (1);
+ 			}
++
++			linelength = linelengthbase + strlen(sptr);
++			if(host)
++				linelength += 9 + strlen(host) + strlen(myport); /* "Host: <host>:<port>\r\n" */
++
++			request = (char *)malloc((linelength + 1) * sizeof(char));
++			if (!request) {
++				fprintf (stderr, "malloc() failed, out of memory.\n");
++				exit (1);
++			}
++
++			strcpy (request, "GET ");
+ 			strcat (request, sptr);
+ 		}
+-		sprintf (request + strlen(request),
+-			" HTTP/1.0\r\nUser-Agent: %s/%s\r\n",
+-			prgName, prgVersion);
++
++		sprintf (request + strlen(request), " HTTP/1.0\r\nUser-Agent: %s/%s\r\n", prgName, prgVersion);
+ 		if (host) {
+-			sprintf(request + strlen(request),
+-				"Host: %s:%s\r\n", host, myport);
++			sprintf(request + strlen(request), "Host: %s:%s\r\n", host, myport);
+ #if 0
+ 			free (host);
+ #endif
+@@ -394,15 +431,30 @@
+ 			exit(1);
+ 		}
+ 
+-		if (strlen(httpauth1) || httpauth) {
+-			char buf[1023];
++		if (httpauth1 || httpauth) {
++			char *buf;
+ 			strcat (request,"Authorization: Basic ");
+-                        if(strlen(httpauth1))
+-                          encode64(httpauth1,buf);
+-                        else
+-			  encode64(httpauth,buf);
+-			strcat (request,buf);
++			if(httpauth1) {
++				buf=(char *)malloc((strlen(httpauth1) + 1) * 4 * sizeof(char));
++				if(!buf) {
++					fprintf(stderr, "Error allocating sufficient memory for http authentication.  Exiting.");
++					exit(1);
++				}
++				encode64(httpauth1,buf);
++				free(httpauth1);
++			} else {
++				buf=(char *)malloc((strlen(httpauth) + 1) * 4 * sizeof(char));
++				if(!buf) {
++					fprintf(stderr, "Error allocating sufficient memory for http authentication.  Exiting.");
++					exit(1);
++				}
++				encode64(httpauth,buf);
++			}
++
++			if(strlen(request) + strlen(buf) + 4)
++			strcat (request, buf);
+ 			strcat (request,"\r\n");
++			free(buf);
+ 		}
+ 		strcat (request, "\r\n");
+ 
+@@ -431,13 +483,14 @@
+ 			if (!strncmp(request, "Location:", 9))
+ 				strncpy (purl, request+10, 1023);
+ 		} while (request[0] != '\r' && request[0] != '\n');
++		
++		free(request);
+ 	} while (relocate && purl[0] && numrelocs++ < 5);
+ 	if (relocate) {
+ 		fprintf (stderr, "Too many HTTP relocations.\n");
+ 		exit (1);
+ 	}
+-	free (purl);
+-	free (request);
++	free(purl);
+ 	free(host);
+ 	free(proxyport);
+ 	free(myport);
+diff -Nru mpg123.orig/layer2.c mpg123/layer2.c
+--- mpg123.orig/layer2.c	2005-01-12 20:37:18.205553879 +0100
++++ mpg123/layer2.c	2005-01-12 20:38:13.915088208 +0100
+@@ -262,7 +262,7 @@
+        { alloc_0, alloc_1, alloc_2, alloc_3 , alloc_4 };
+   static int sblims[5] = { 27 , 30 , 8, 12 , 30 };
+ 
+-  if(fr->lsf)
++  if(fr->sampling_frequency >= 3) /* Or equivalent: (fr->lsf == 1) */
+     table = 4;
+   else
+     table = translate[fr->sampling_frequency][2-fr->stereo][fr->bitrate_index];
+@@ -287,6 +287,12 @@
+   fr->jsbound = (fr->mode == MPG_MD_JOINT_STEREO) ?
+      (fr->mode_ext<<2)+4 : fr->II_sblimit;
+ 
++  /* security fix. */
++  if (fr->jsbound > fr->II_sblimit) {
++    fprintf(stderr, "Truncating stereo boundary to sideband limit.\n");
++    fr->jsbound=fr->II_sblimit;
++  }
++
+   if(stereo == 1 || single == 3)
+     single = 0;
+ 
+diff -Nru mpg123.orig/layer3.c mpg123/layer3.c
+--- mpg123.orig/layer3.c	2005-01-12 20:37:18.205553879 +0100
++++ mpg123/layer3.c	2005-01-12 20:37:36.934692365 +0100
+@@ -609,7 +609,7 @@
+  * Dequantize samples (includes huffman decoding)
+  */
+ /* 24 is enough because tab13 has max. a 19 bit huffvector */
+-#define BITSHIFT ((sizeof(long)-1)*8)
++#define BITSHIFT ((sizeof(int)-1)*8)
+ #define REFRESH_MASK \
+   while(num < BITSHIFT) { \
+     mask |= ((unsigned long)getbyte(&bsi))<<(BITSHIFT-num); \
+@@ -626,7 +626,7 @@
+   int *me;
+ 
+   int num=getbitoffset(&bsi);
+-  long mask;
++  int mask;
+   /* we must split this, because for num==0 the shift is undefined if you do it in one step */
+   mask  = ((unsigned long) getbits(&bsi,num))<<BITSHIFT;
+   mask <<= 8-num;
+@@ -713,7 +713,7 @@
+         if(x == 15 && h->linbits) {
+           max[lwin] = cb;
+           REFRESH_MASK;
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -737,7 +737,7 @@
+         if(y == 15 && h->linbits) {
+           max[lwin] = cb;
+           REFRESH_MASK;
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -891,7 +891,7 @@
+         if (x == 15 && h->linbits) {
+           max = cb;
+ 	  REFRESH_MASK;
+-          x += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          x += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+@@ -915,7 +915,7 @@
+         if (y == 15 && h->linbits) {
+           max = cb;
+ 	  REFRESH_MASK;
+-          y += ((unsigned long) mask) >> (BITSHIFT+8-h->linbits);
++          y += ((unsigned int) mask) >> (BITSHIFT+8-h->linbits);
+           num -= h->linbits+1;
+           mask <<= h->linbits;
+           if(mask < 0)
+diff -Nru mpg123.orig/playlist.c mpg123/playlist.c
+--- mpg123.orig/playlist.c	2005-01-12 20:37:18.161565297 +0100
++++ mpg123/playlist.c	2005-01-12 20:37:36.936691846 +0100
+@@ -110,9 +110,9 @@
+ 		if ((playlist->listnamedir) && (line[0]!='/') && (line[0]!='\\') 
+                     && (strncasecmp(line, "http://", 7)) && (strncasecmp(line, 
+ "ftp://",6)) ){
+-		    strcpy (linetmp, playlist->listnamedir);
+-		    strcat (linetmp, line);
+-		    strcpy (line, linetmp);
++		    strncpy (linetmp, playlist->listnamedir, 1023);
++		    strncat (linetmp, line, 1023 - strlen(linetmp));
++		    strncpy (line, linetmp, 1023);
+ 		}
+ 		return 1;
+ 	    }

@@ -1,0 +1,18 @@
+# Description: Implementation of S3TC
+# URL: http://homepage.hispeed.ch/rscheidegger/dri_experimental/s3tc_index.html
+# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+
+name=libtxc_dxtn
+version=050908
+release=1
+source=(http://homepage.hispeed.ch/rscheidegger/dri_experimental/$name$version.tar.gz \
+        $name.diff)
+
+build () {
+	cd $name
+
+	patch -Np1 -i ../$name.diff
+
+	make
+	make DESTDIR=$PKG install
+}

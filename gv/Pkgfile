@@ -1,0 +1,17 @@
+# Description: GhostView, Postscript/PDF viewer
+# URL:         http://www.gnu.org/software/gv/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xaw3d, ghostscript
+
+name=gv
+version=3.6.1
+release=1
+source=(http://mirrors.sunsite.dk/gnu/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/info
+}

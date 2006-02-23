@@ -1,0 +1,16 @@
+# Description: Tools for monitoring system health (temperatures, voltages, fan speed, etc)
+# URL: http://www2.lm-sensors.nu/~lm78
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=lm_sensors
+version=2.9.2
+release=1
+source=(http://www2.lm-sensors.nu/~lm78/archive/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+	make user PREFIX=/usr
+	make PREFIX=$PKG/usr ETCDIR=$PKG/etc user_install
+	rm $PKG/usr/include/linux/i2c-dev.h
+}

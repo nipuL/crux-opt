@@ -1,0 +1,53 @@
+# Description: Z-Object Publishing Environment - a web application server framework based on python
+# URL: http://www.zope.org
+# Maintainer: Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager: Gunter Coelle, gunter dot coelle at dbaudio dot com
+# Depends on: python
+
+name=zope
+version=2.8.2-final
+release=1
+source=(http://zope.org/Products/Zope/2.8.2/Zope-$version.tar.gz\
+        zope)
+
+build() {
+    cd Zope-$version
+    
+    sed -i 's/ACCEPTABLE=\"\"/ACCEPTABLE=\"2.4 2.4.1 2.4.2\"/' configure
+    
+    ./configure --prefix=/usr/lib/zope
+    make
+    make PREFIX=$PKG/usr/lib/zope/ install
+    rm $PKG/usr/lib/zope/doc -r
+    
+    # Create a ZOPE instance
+    mkdir -p $PKG/var/lib/zope
+    chown zope:zope $PKG/var/lib/zope
+    su zope -c "$PKG/usr/lib/zope/bin/mkzopeinstance.py --dir=$PKG/var/lib/zope --user=admin:secret"
+      
+    sed -i "s|$PKG||" $PKG/var/lib/zope/etc/zope.conf
+    sed -i "s|$PKG||" $PKG/var/lib/zope/bin/*
+
+    # Remove Windows stuff
+    rm $PKG/var/lib/zope/bin/runzope.bat
+    rm $PKG/var/lib/zope/bin/zopeservice.py
+    
+    # Move logs, configs and bins to CRUX conformal locations
+    mkdir -p $PKG/var/log/zope $PKG/etc $PKG/usr/bin
+    touch $PKG/var/log/zope/{event.log,Z2.log}
+    
+    sed -i 's|^CONFIG_FILE=\"/var/lib/zope/etc/zope.conf\"|CONFIG_FILE=\"/etc/zope.conf\"|' $PKG/var/lib/zope/bin/*
+    mv $PKG/var/lib/zope/bin/zopectl $PKG/usr/bin
+    
+    sed -i 's|path $INSTANCE/log/|path /var/log/zope/|' $PKG/var/lib/zope/etc/zope.conf
+    mv $PKG/var/lib/zope/etc/zope.conf $PKG/etc
+    rm -r $PKG/var/lib/zope/{etc,log}
+    
+    rm $PKG/var/lib/zope/inituser
+    rm -r $PKG/usr/lib/zope/skel
+
+    chown -R root:root $PKG/{usr,etc}
+    chown -R zope:zope $PKG/var/{log,lib}/zope
+
+    install -D -m 755 ../zope $PKG/etc/rc.d/zope
+}

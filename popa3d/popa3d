@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/popa3d: start/stop popa3d daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/popa3d -D
+	;;
+stop)
+	killall -q /usr/sbin/popa3d
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

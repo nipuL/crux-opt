@@ -1,0 +1,18 @@
+# Description: library for creating CDs
+# URL: http://www.gnu.org/software/libcdio
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on:
+
+name=libcdio
+version=0.73
+release=1
+source=(ftp://ftp.ibiblio.org/pub/gnu/ftp/gnu/libcdio/libcdio-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{info,man}
+}

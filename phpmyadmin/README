@@ -1,0 +1,26 @@
+README for phpmyadmin 2.6.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+   Add the following directives to httpd.conf:
+   
+   LoadModule php5_module lib/apache/libphp5.so
+   AddType application/x-httpd-php .php
+
+   Alias /phpmyadmin /var/www/phpmyadmin/
+
+   <Directory /var/www/phpmyadmin/>
+      Options None
+      AllowOverride None
+      Order deny,allow
+      Deny from all
+      Allow from 192.168.0.
+   </Directory>
+
+
+PRECAUTION
+

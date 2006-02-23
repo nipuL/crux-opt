@@ -1,0 +1,21 @@
+diff -Nru httpd-2.0.55.orig/docs/conf/ssl-std.conf.in httpd-2.0.55/docs/conf/ssl-std.conf.in
+--- httpd-2.0.55.orig/docs/conf/ssl-std.conf.in	2005-10-15 09:54:54.000000000 +0200
++++ httpd-2.0.55/docs/conf/ssl-std.conf.in	2005-10-15 09:56:21.000000000 +0200
+@@ -105,7 +105,7 @@
+ #   in mind that if you have both an RSA and a DSA certificate you
+ #   can configure both in parallel (to also allow the use of DSA
+ #   ciphers, etc.)
+-SSLCertificateFile @exp_sysconfdir@/ssl.crt/server.crt
++SSLCertificateFile /etc/ssl/certs/apache.crt
+ #SSLCertificateFile @exp_sysconfdir@/ssl.crt/server-dsa.crt
+ 
+ #   Server Private Key:
+@@ -113,7 +113,7 @@
+ #   directive to point at the key file.  Keep in mind that if
+ #   you've both a RSA and a DSA private key you can configure
+ #   both in parallel (to also allow the use of DSA ciphers, etc.)
+-SSLCertificateKeyFile @exp_sysconfdir@/ssl.key/server.key
++SSLCertificateKeyFile /etc/ssl/keys/apache.key
+ #SSLCertificateKeyFile @exp_sysconfdir@/ssl.key/server-dsa.key
+ 
+ #   Server Certificate Chain:

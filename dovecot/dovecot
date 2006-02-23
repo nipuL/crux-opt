@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# /etc/rc.d/dovecot: start/stop dovecot IMAP/POP3 daemon
+#
+
+CRT=/etc/ssl/certs/dovecot.crt
+KEY=/etc/ssl/keys/dovecot.key
+
+make_cert() {
+	FQDN=$(hostname -f) || FQDN=localhost
+	echo "Creating SSL certificate $CRT for host $FQDN"
+	INFO=".\n.\n.\n.\n.\n$FQDN\nroot@$FQDN"
+	OPTS="req -new -nodes -x509 -days 365 -newkey rsa:1024" 
+	echo -e $INFO | openssl $OPTS -out $CRT -keyout $KEY 2> /dev/null
+	chmod 0600 $CRT $KEY
+}
+
+
+case $1 in
+start)
+	if [ ! -s $KEY -o ! -s $CRT ]; then 
+		make_cert
+	fi
+	/usr/sbin/dovecot
+	;;
+stop)
+	killall -q /usr/sbin/dovecot
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+reload)
+	kill -s SIGHUP $(pidof dovecot)
+	;;
+*)
+	echo "usage: $0 [start|stop|restart|reload]"
+	;;
+esac
+
+# End of file

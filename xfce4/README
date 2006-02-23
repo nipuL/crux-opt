@@ -1,0 +1,21 @@
+README for xfce4 4.2.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION
+
+  Update/install the xfce4 ports in the following order:
+   
+    - libxfce4util
+    - libxfcegui4
+    - libxfce4mcs
+    - xfce-mcs-manager
+    - all the rest ...
+    
+  or use prt-get:
+    
+    prt-get update `prt-get quickdep xfce4`

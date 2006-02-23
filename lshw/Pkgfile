@@ -1,0 +1,17 @@
+# Description: Small tool to extract detailed information about hardware
+# URL: http://ezix.org/project/wiki/HardwareLiSter
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=lshw
+version=B.02.06
+release=1
+source=(http://ezix.org/software/files/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    find -name Makefile -exec sed -i -e "s/-Os/$CFLAGS/g" -e "s:share/man:man:g" {} \;
+    make
+    make DESTDIR=$PKG install
+}

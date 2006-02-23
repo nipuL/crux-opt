@@ -1,0 +1,70 @@
+diff -ru bftpd-1.0.24/Makefile.in bftpd-1.0.24-new/Makefile.in
+--- bftpd-1.0.24/Makefile.in	2003-05-09 23:47:48.000000000 +0200
++++ bftpd-1.0.24-new/Makefile.in	2003-05-11 12:20:20.000000000 +0200
+@@ -30,10 +30,9 @@
+ 	$(INSTALL) -g 0 -m 644 -o 0 bftpd.8 $(DESTDIR)/$(mandir)/man8
+ 	[ -f $(DESTDIR)/etc/bftpd.conf ] || \
+ 		$(INSTALL) -g 0 -m 600 -o 0 bftpd.conf $(DESTDIR)/etc
+-	touch /var/log/bftpd.log
+-	chmod 644 /var/log/bftpd.log
+-	mkdir -p /var/run/bftpd
+-	chmod 755 /var/run/bftpd
++	mkdir -p $(DESTDIR)/var/{log,run}
++	touch $(DESTDIR)/var/{log/bftpd,run/bftpdutmp}
++	chmod 644 $(DESTDIR)/var/{log/bftpd,run/bftpdutmp}
+ 
+ clean distclean:
+ 	rm -f *~ $(OBJS) bftpd mksources.finished
+diff -ru bftpd-1.0.24/bftpd.conf bftpd-1.0.24-new/bftpd.conf
+--- bftpd-1.0.24/bftpd.conf	2003-05-09 23:47:48.000000000 +0200
++++ bftpd-1.0.24-new/bftpd.conf	2003-05-11 12:23:14.000000000 +0200
+@@ -1,5 +1,6 @@
+-#Configuration file for bftpd.
+-#The given values are only examples, modify this file for your own needs.
++#
++# /etc/bftpd.conf: bftpd(8) configuration
++#
+ 
+ global {
+ 
+@@ -53,7 +54,7 @@
+   #Note that the directory in which the file resides must already exist.
+   #Set the option to "" if you do not want that. This is discouraged for normal
+   #use, but can be helpful if you want to create a boot floppy or something.
+-  PATH_BFTPDUTMP="/var/run/bftpd/bftpdutmp"
++  PATH_BFTPDUTMP="/var/run/bftpdutmp"
+ 
+   #This option controls the buffer size while transferring files.
+   #If you are on a very fast network (fast meaning 100 Mbit/s or more),
+@@ -70,11 +71,11 @@
+   ALLOW_FXP="no"
+ 
+   #After how many seconds of idle time should a user be kicked from the server?
+-  CONTROL_TIMEOUT="300"
++  CONTROL_TIMEOUT="0"
+ 
+   #After how many seconds of idle time should a user be kicked from the server
+   #during a file transfer?
+-  DATA_TIMEOUT="30"
++  DATA_TIMEOUT="60"
+ 
+   #Use Ratio if you want the client to send a file before he can get a file.
+   #Usage: RATIO=send/receive or RATIO=none. Example: RATIO=2/1 lets the client
+@@ -90,7 +91,7 @@
+ 
+   #Name of the log file. Say "syslog" to log into syslog.
+   #Say "" for no logging.
+-  LOGFILE="/var/log/bftpd.log"
++  LOGFILE="/var/log/bftpd"
+ 
+   #Use %v for version, %h for the server FQDN and %i for the server IP address.
+   HELLO_STRING="bftpd %v at %i ready."
+@@ -171,7 +172,7 @@
+ 
+ user ftp {
+   #Any password fits.
+-  ANONYMOUS_USER="yes"
++  ANONYMOUS_USER="no"
+ }
+ 
+ user anonymous {

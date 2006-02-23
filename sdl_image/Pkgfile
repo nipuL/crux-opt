@@ -1,0 +1,16 @@
+# Description: SDL_image
+# Packager: Antonio Musumeci bile at landofbile dot com
+# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# URL: http://www.libsdl.org/projects/SDL_image
+# Depends on: libjpeg,libpng,libsdl
+
+name=sdl_image
+version=1.2.4
+release=1
+source=(http://www.libsdl.org/projects/SDL_image/release/SDL_image-$version.tar.gz)
+
+build () {
+	cd SDL_image-$version
+	./configure --prefix=/usr
+	make && make DESTDIR=$PKG install
+}

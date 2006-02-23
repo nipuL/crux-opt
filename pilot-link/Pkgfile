@@ -1,0 +1,16 @@
+# Description: Tools for connecting palm or palm-compatible PDAs to unix/linux
+# URL: http://www.pilot-link.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=pilot-link
+version=0.11.8
+release=1
+source=(ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

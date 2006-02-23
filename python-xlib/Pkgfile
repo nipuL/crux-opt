@@ -1,0 +1,17 @@
+# Description: python interface to xlib
+# URL:         http://python-xlib.sourceforge.net
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Depends on:  python x11
+
+name=python-xlib
+version=0.12
+release=2
+source=(http://dl.sourceforge.net/sourceforge/python-xlib/$name-$version.tar.gz\
+	display.py-encoding.diff python-xlib-0.12-attr-err.diff)
+
+build() {
+    cd $name-$version
+    patch Xlib/protocol/display.py $SRC/display.py-encoding.diff
+    patch -p1 < $SRC/python-xlib-0.12-attr-err.diff
+    python setup.py install --root=$PKG --prefix=/usr
+}

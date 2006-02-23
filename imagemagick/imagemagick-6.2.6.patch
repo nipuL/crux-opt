@@ -1,0 +1,41 @@
+diff -Nru ImageMagick-6.2.6/magick/blob.c ImageMagick-6.2.6-new/magick/blob.c
+--- ImageMagick-6.2.6/magick/blob.c	2006-01-19 00:30:32.000000000 +0100
++++ ImageMagick-6.2.6-new/magick/blob.c	2006-01-26 00:12:21.000000000 +0100
+@@ -1927,8 +1927,17 @@
+             char
+               format[MaxTextExtent];
+ 
++	    /* Extract first numeric format specifier */
+             (void) CopyMagickString(format,p,MaxTextExtent);
++	    if (q-p+1 < MaxTextExtent)
++		    format[q-p+1]='\0';
++	    /* Expand format */
+             (void) FormatMagickString(p,MaxTextExtent,format,image->scene);
++	    /* Copy rest of string verbatim without further expansion */
++	    (void) ConcatenateMagickString(filename,
++	                                   image_info->filename+(q-filename)+1,
++					   MaxTextExtent);
++
+             break;
+           }
+       }
+diff -Nru ImageMagick-6.2.6/magick/image.c ImageMagick-6.2.6-new/magick/image.c
+--- ImageMagick-6.2.6/magick/image.c	2006-01-17 17:20:54.000000000 +0100
++++ ImageMagick-6.2.6-new/magick/image.c	2006-01-26 00:12:21.000000000 +0100
+@@ -2794,8 +2794,16 @@
+             char
+               format[MaxTextExtent];
+ 
++	    /* Extract first numeric format specifier */
+             (void) CopyMagickString(format,p,MaxTextExtent);
++	    if (q-p+1 < MaxTextExtent)
++		    format[q-p+1]='\0';
++	    /* Expand format */
+             (void) FormatMagickString(p,MaxTextExtent,format,image_info->scene);
++	    /* Copy rest of string verbatim without further expansion */
++	    (void) ConcatenateMagickString(filename,
++	                                   image_info->filename+(q-filename)+1,
++					   MaxTextExtent);
+             break;
+           }
+       }

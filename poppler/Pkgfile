@@ -1,0 +1,22 @@
+# Description: a PDF rendering library based on xpdf 3.0
+# URL: http://poppler.freedesktop.org/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on: t1lib, gtk, qt3, ghostscript
+
+name=poppler
+version=0.4.4
+release=1
+source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
+
+build()
+{
+    cd $name-$version
+    ./configure \
+        --prefix=/usr \
+        --disable-debug
+    make
+    make install DESTDIR=$PKG
+    rm -rf $PKG/usr/share/locale
+    rm -rf $PKG/usr/share/doc
+}

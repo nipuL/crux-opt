@@ -1,0 +1,24 @@
+# Description: Terminal based IRC client for UNIX systems
+# URL: http://www.irssi.org/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Daniel K. Gebhart, dkg at con-fuse dot org
+# Depends on: glib
+# Group: ipv6
+
+name=irssi
+version=0.8.10
+release=1
+source=(http://www.irssi.org/files/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-ipv6 \
+                --with-proxy
+    make
+    make DESTDIR=$PKG install
+    find $PKG -name '*.bs' -or \
+              -name perllocal.pod -or \
+              -name .packlist | xargs rm
+    rm -rf $PKG/usr/{include,share/doc}
+}

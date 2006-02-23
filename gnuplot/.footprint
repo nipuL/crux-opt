@@ -1,0 +1,14 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/gnuplot
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/gnuplot/
+drwxr-xr-x	root/root	usr/lib/gnuplot/4.0/
+-rwxr-xr-x	root/root	usr/lib/gnuplot/4.0/gnuplot_x11
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/gnuplot.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/gnuplot/
+drwxr-xr-x	root/root	usr/share/gnuplot/4.0/
+-rw-r--r--	root/root	usr/share/gnuplot/4.0/gnuplot.gih

@@ -1,0 +1,19 @@
+# Description: ISO AAC audio decoder
+# URL: http://www.audiocoding.com
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libsndfile, id3lib
+
+name=faad2
+version=2.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/faac/${name}-${version}.tar.gz)
+
+build() {
+	cd $name
+	touch INSTALL
+	chmod +x bootstrap && ./bootstrap
+	./configure --prefix=/usr
+	cd libfaad && make DESTDIR=$PKG install && cd ..
+	cd common && make DESTDIR=$PKG install && cd ..
+}

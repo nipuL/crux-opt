@@ -1,0 +1,30 @@
+# URL: http://corefonts.sourceforge.net/
+# Description: Microsoft's Web Fonts (truetype)
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+
+name=x11-fonts-corefonts
+version=1.2
+release=1
+source=(http://www.kyz.uklinux.net/downloads/cabextract-1.0.tar.gz \
+	http://dl.sourceforge.net/sourceforge/corefonts/andale32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/arial32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/arialb32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/comic32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/courie32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/georgi32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/impact32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/times32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/trebuc32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/verdan32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/webdin32.exe)
+
+build() {
+	(cd cabextract-1.0 && ./configure && make)
+	for font in *.exe
+	do
+		cabextract-1.0/cabextract --lowercase $font
+	done
+	mkdir -p $PKG/usr/share/fonts/corefonts
+	install -o root -g root -m 0644 *.ttf \
+		$PKG/usr/share/fonts/corefonts/
+}

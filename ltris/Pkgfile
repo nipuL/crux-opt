@@ -1,0 +1,19 @@
+# Description: a very polished Tetris clone which is highly configurable
+# URL: http://lgames.sourceforge.net
+# Packager: 
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Depends on: libpng, libsdl, sdl_mixer
+
+name=ltris
+version=1.0.11
+release=1
+source=(http://ftp1.sourceforge.net/lgames/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --localstatedir=/var/lib/games
+    make
+    make prefix=$PKG/usr install
+    mkdir -p $PKG/usr/share/pixmaps
+    cp icons/*.xpm $PKG/usr/share/pixmaps
+}

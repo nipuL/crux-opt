@@ -1,0 +1,16 @@
+# Description: Convert bitmap images into vector
+# URL: http://potrace.sourceforge.net
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on:
+
+name=potrace
+version=1.7
+release=1
+source=(http://potrace.sourceforge.net/download/$name-$version.tar.gz)
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,48 @@
+
+REQUIREMENTS
+	
+	freetype, x11
+
+PRE-INSTALL
+
+POST-INSTALL
+
+	1. Load "freetype" module in xorg.conf:
+
+	---snip---
+
+	..
+	Section "Module"
+	..
+		Load "freetype"
+	EndSection
+	..
+
+	---snip---
+	
+	2. add the truetype directory to your fontpath in
+	   the xorg.conf file:
+
+	---snip---
+
+	..
+	Section "Files"
+	..
+		FontPath   "/usr/share/fonts/corefonts/"
+	EndSection
+	..
+
+	---snip---
+
+	3. create a font info database for the new fonts
+
+	# cd /usr/share/fonts/corefonts/
+	# mkfontscale
+	# mkfontdir
+	# fc-cache -f
+
+	4. restart X or rehash the font path like so:
+	
+	# xset fp rehash
+   
+PRECAUTION

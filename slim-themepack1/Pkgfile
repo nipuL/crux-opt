@@ -1,0 +1,15 @@
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: Themepack for SLiM
+# URL:         http://slim.berlios.de
+# Depends on:  slim
+
+name=slim-themepack1
+version=1.2.3-themepack1a
+release=1
+source=(http://download.berlios.de/slim/slim-$version.tar.gz)
+
+build() {
+    mkdir -p $PKG/usr/share/slim/themes
+    mv * $PKG/usr/share/slim/themes
+    chown -R root:root $PKG/usr/share/slim/themes/*
+}

@@ -1,0 +1,37 @@
+
+README for contrib/thunderbird
+
+*** PROFILE/STARTUP ISSUES ***
+
+If thunderbird seems to hang when first started, close it and re-run it
+with the -ProfileManager option; create a new profile, then exit. Copy
+ImapMail, Mail, and prefs.js (if they all exist; if not, copy the ones that
+do) to the new profile and use that. Delete the old profile once you're
+satisfied that the new one works correctly.
+
+The extensions problem shouldn't manifest itself if you encounter the
+startup problem.
+
+** EXTENSIONS ISSUES ***
+
+The first time thunderbird 0.7.3/0.8/0.9/1.0 is run, any extensions in
+the local user's extensions directory (typically
+~/.thunderbird/default.XXX/extensions) are disabled. You'll need to
+remove the extensions directory, re-run thunderbird, and reinstall
+them to get them working again if they're in the local user's extensions.
+If they're system-wide extensions (such as enigmail) in /usr/lib/thunderbird,
+reinstallation isn't necessary, only removal of the local extensions
+directory.
+
+*** NOTE ***
+
+Please note that if you wish to use any extensions after installation,
+including enigmail built with the port, the above procedure (removing the
+local user's extensions directory) MUST be performed even if no other
+extensions are installed, and even if a new user profile is created.
+
+************
+
+Also, with 1.0.7, this can cause a segfault until the extensions directory
+is removed.
+

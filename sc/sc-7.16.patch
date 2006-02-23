@@ -1,0 +1,30 @@
+diff -Nru sc-7.16.orig/vi.c sc-7.16/vi.c
+--- sc-7.16.orig/vi.c	2005-04-02 14:49:15.000000000 +0200
++++ sc-7.16/vi.c	2005-04-02 14:55:05.000000000 +0200
+@@ -40,7 +40,7 @@
+ 
+ #define istext(a) (isalnum(a) || ((a) == '_'))
+ 
+-#define bool	int
++/*#define bool	int*/
+ #define true	1
+ #define false	0
+ 
+diff -Nru sc-7.16.orig/xmalloc.c sc-7.16/xmalloc.c
+--- sc-7.16.orig/xmalloc.c	2005-04-02 14:49:15.000000000 +0200
++++ sc-7.16/xmalloc.c	2005-04-02 14:50:06.000000000 +0200
+@@ -4,11 +4,12 @@
+  */
+ 
+ #include <curses.h>
++#include <stdlib.h>
+ #include "sc.h"
+ 
+-extern char	*malloc();
++/* extern char	*malloc();
+ extern char	*realloc();
+-extern void	free();
++extern void	free(); */
+ void		fatal();
+ 
+ #ifdef SYSV3

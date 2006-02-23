@@ -1,0 +1,17 @@
+# Description: VNC for real X displays
+# URL: http://www.karlrunge.com/x11vnc/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: x11
+
+name=x11vnc
+version=0.8
+release=1
+source=(http://www.karlrunge.com/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,23 @@
+# Description: Probably the most secure and fastest FTP server
+# URL:         http://vsftpd.beasts.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=vsftpd
+version=2.0.4
+release=1
+source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
+        $name-$version.patch vsftpd)
+
+build () {
+    cd $name-$version
+    patch -p1 < $SRC/$name-$version.patch    
+    make
+    make DESTDIR=$PKG install
+
+    install -d $PKG/{etc/{rc.d,ssl/certs},home/ftp,var/log}
+    install -m 755 $SRC/vsftpd $PKG/etc/rc.d
+    touch $PKG/etc/ssl/certs/$name.pem
+    chmod 600 $PKG/etc/ssl/certs/$name.pem
+    touch $PKG/var/log/vsftpd.log
+}

@@ -1,0 +1,21 @@
+# Name: mjpeg-tools
+# Description: Tools record and playback videos
+# URL: http://mjpeg.sourceforge.net/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on: libmovtar, libdv, libavifile, libjpeg-mmx
+
+name=mjpegtools
+version=1.6.2
+release=2
+source=(http://dl.sourceforge.net/sourceforge/mjpeg/$name-$version.tar.gz \
+	$name-$version-gcc34.patch)
+
+build() {
+	cd $name-$version
+	patch -p1 < $SRC/$name-$version-gcc34.patch
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/info
+}

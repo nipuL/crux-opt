@@ -1,0 +1,49 @@
+diff -Nru Asunder-0.1.0-orig/src/main.c Asunder-0.1.0/src/main.c
+--- Asunder-0.1.0-orig/src/main.c	2005-01-28 04:41:44.000000000 +0100
++++ Asunder-0.1.0/src/main.c	2005-02-19 17:45:57.142771592 +0100
+@@ -201,6 +201,9 @@
+ 	num_matches = cddb_query(conn, disc);
+ 	cddb_cache_enable(conn);
+ 	
++	g_list_free(disc_matches);
++	disc_matches = NULL;
++
+ 	// make a list of all the matches
+ 	for (i=0; i<num_matches; i++)
+ 	{
+@@ -249,6 +252,7 @@
+ 		GList * curr;
+ 		cddb_disc_t * tempdisc;
+ 
++		gtk_cell_layout_clear(GTK_CELL_LAYOUT(pick_disc));
+ 		renderer = gtk_cell_renderer_text_new();
+ 		gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(pick_disc), renderer, TRUE);
+ 		gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(pick_disc), renderer,
+@@ -259,10 +263,11 @@
+ 		gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(pick_disc), renderer,
+                                 "text", 1,
+                                 NULL);
+-
+ 								
+-		for (curr = g_list_first(disc_matches); curr != NULL; curr = g_list_next(curr))
++		int j;
++		for (j = 0; j < num_matches; j++)
+ 		{
++			curr = g_list_nth(disc_matches, j);
+ 			tempdisc = (cddb_disc_t *)curr->data;
+ 			gtk_list_store_append(store, &iter);
+ 			gtk_list_store_set(store, &iter,
+@@ -271,10 +276,13 @@
+ 				-1);
+ 		}
+ 		gtk_combo_box_set_model(GTK_COMBO_BOX(pick_disc), GTK_TREE_MODEL(store));
++		gtk_combo_box_set_active(GTK_COMBO_BOX(pick_disc), 1);
+ 		gtk_combo_box_set_active(GTK_COMBO_BOX(pick_disc), 0);
+ 		
+ 		gtk_widget_show(lookup_widget(win_main, "disc"));
+ 		gtk_widget_show(lookup_widget(win_main, "pick_disc"));
++		current_disc = g_list_first(disc_matches)->data;
++		update_tracklist(current_disc);
+ 	}
+ 
+ 	cddb_destroy(conn);

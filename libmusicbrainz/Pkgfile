@@ -1,0 +1,17 @@
+# Description: community music metadatabase
+# URL: http://www.musicbrainz.org/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Robert McMeekin, rrm3 at rrm3 dot org
+# Depends on: expat
+
+name=libmusicbrainz
+version=2.1.1
+release=1
+source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

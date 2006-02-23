@@ -1,0 +1,16 @@
+# Description: a free implementation of the Unicode Bidirectional (BiDi) Algorithm
+# URL: http://fribidi.sourceforge.net/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=fribidi
+version=0.10.7
+release=1
+source=(http://fribidi.org/download/fribidi-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr 
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/cups: start/stop/reload CUPS daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/cupsd
+	;;
+stop)
+	killall -q /usr/sbin/cupsd
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "Usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

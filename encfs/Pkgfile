@@ -1,0 +1,18 @@
+# Description: Encrypting filesystem for FUSE
+# URL: http://arg0.net/users/vgough/encfs.html
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: fuse, openssl, rlog
+
+name=encfs
+version=1.2.5
+release=1
+source=(http://arg0.net/users/vgough/download/$name-$version-1.tgz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share
+}

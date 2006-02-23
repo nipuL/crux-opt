@@ -1,0 +1,17 @@
+# Description: Extensible Binary Meta-Language
+# URL: http://ebml.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+# Depends on:
+
+name=libebml
+version=0.7.6
+release=1
+source=(http://dl.matroska.org/downloads/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    cd make/linux
+    make
+    make -e prefix=$PKG/usr install
+}

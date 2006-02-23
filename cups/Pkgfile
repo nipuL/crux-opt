@@ -1,0 +1,37 @@
+# Description: CUPS - Common UNIX Printing System
+# URL:         http://www.cups.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  libpng, libtiff, openssl
+
+name=cups
+version=1.1.23
+release=3
+source=(ftp://ftp3.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
+	cups-CAN-2005-2097.patch cups-CAN-2005-3191.patch cups)
+
+build () {
+    cd $name-$version
+
+    patch -p1 < $SRC/cups-CAN-2005-2097.patch
+    patch -p1 < $SRC/cups-CAN-2005-3191.patch
+
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+		--with-docdir=/usr/share/cups/doc \
+		--with-logdir=/var/log/cups \
+		--with-cups-user=daemon \
+		--with-cups-group=daemon \
+		--enable-ssl=yes \
+		--enable-pam=no
+    make
+    make BUILDROOT=$PKG install
+
+    rm -r $PKG/usr/man/{fr,cat?,es}
+    rm -r $PKG/etc/rc.d/*
+    rm -r $PKG/usr/share/cups/{doc/*.pdf,{doc,templates}/??}
+    rm -r $PKG/usr/share/locale
+    chmod 0755 $PKG/{var/spool,etc/{,cups}}   
+
+    install -m 755 $SRC/cups $PKG/etc/rc.d
+}

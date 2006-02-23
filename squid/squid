@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# /etc/rc.d/squid: start/stop squid daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/squid -DY
+	;;
+stop)
+	/usr/sbin/squid -k shutdown
+	;;
+reload)
+	/usr/sbin/squid -k reconfigure
+	;;
+*)
+	echo "usage: $0 [start|stop|reload]"
+	;;
+esac
+
+# End of file

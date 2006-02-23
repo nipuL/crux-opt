@@ -1,0 +1,58 @@
+# Description: Media player with many codecs
+# URL: http://www.mplayerhq.hu/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: x11
+
+# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, \
+# cdparanoia
+
+# More information can be found at http://www.mplayerhq.hu/DOCS/codecs.html and
+# http://www.mplayerhq.hu/DOCS/HTML/en/index.html
+
+name=mplayer
+version=1.0pre7try2
+release=1
+source=(http://mirrors.xmission.com/mplayer/releases/MPlayer-$version.tar.bz2 \
+	http://mirrors.xmission.com/mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+	http://mirrors.xmission.com/mplayer/releases/codecs/essential-20050412.tar.bz2 \
+	mplayer.conf)
+
+build() {
+	cd MPlayer-$version
+
+	# mplayer decides optimizations at configure time, don't use CRUX's
+	unset CFLAGS
+	./configure --prefix=/usr \
+		--enable-linux-devfs \
+		--disable-divx4linux \
+		--with-win32libdir=/usr/share/mplayer/codecs \
+		--with-reallibdir=/usr/share/mplayer/codecs
+
+	make
+	make DESTDIR=$PKG install
+
+	(cd $PKG/usr/man/man1; rm mencoder.1; ln -s mplayer.1.gz mencoder.1.gz)
+
+	# fonts
+	cp -a $SRC/font-arial-iso-8859-1/font-arial-??-iso-8859-1 \
+		$PKG/usr/share/mplayer/font
+	(cd $PKG/usr/share/mplayer/font
+	for i in font-arial-14-iso-8859-1/*
+		do
+			ln -s $i
+		done)
+	chmod 644 $PKG/usr/share/mplayer/font/font-arial-??-iso-8859-1/*
+
+	# codecs
+	mkdir -p $PKG/usr/share/mplayer/codecs
+	cp $SRC/essential-20050412/* $PKG/usr/share/mplayer/codecs
+	chmod 644 $PKG/usr/share/mplayer/codecs/*
+	rm $PKG/usr/share/mplayer/codecs/README
+
+	# config
+	cp $SRC/mplayer.conf $PKG/usr/etc/mplayer/
+	cp etc/input.conf $PKG/usr/etc/mplayer/
+
+	# finish up
+	chown -R root:root $PKG
+}

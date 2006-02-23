@@ -1,0 +1,20 @@
+# Description: XviD is an ISO MPEG-4 compliant video codec.
+# URL: http://www.xvid.org
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=libxvid
+version=1.0.3
+release=1
+source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
+
+build () {
+    mkdir -p $PKG/usr/{include,lib}
+    cd xvidcore-$version/build/generic/
+    ./configure --prefix=/usr
+    make
+    make includedir=$PKG/usr/include libdir=$PKG/usr/lib install
+    ln -s libxvidcore.so.4.0 $PKG/usr/lib/libxvidcore.so
+    /sbin/ldconfig -n $PKG/usr/lib
+}
+

@@ -1,0 +1,19 @@
+# Description: An Ultima 7 game engine for use on modern operating systems.
+# URL: http://exult.sourceforge.net/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: sdl_mixer
+
+name=exult
+version=1.2
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
+        http://dl.sourceforge.net/sourceforge/$name/jmsfx.zip \
+        http://dl.sourceforge.net/sourceforge/$name/jmsfxsi.zip)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	install -m 0644 $SRC/*.flx $PKG/usr/share/exult
+}

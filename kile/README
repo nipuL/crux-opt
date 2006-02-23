@@ -1,0 +1,18 @@
+Dependencies
+------------------------
+
+REQUIRED:
+tetex, kdegraphics
+
+Recommended:
+gv, acroread
+
+Optional:
+gnuplot, xfig
+
+
+Experiencing problems after upgrading? Try the following:
+	- Delete ~/.kde/share/apps/kile/kileui.rc (be aware, this will also delete
+		your toolbar settings)
+	- Delete ~/.kde/share/config/kilerc (this will delete your configuration
+		settings)

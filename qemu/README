@@ -1,0 +1,33 @@
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+In order to use the QEMU Accelerator Module, first enable /dev/shm in
+/etc/fstab. This is the area kqemu uses for the virtual machine RAM.
+
+devfs users
+-----------
+
+To get the /dev/kqemu node, add the following lines to /etc/devfsd.conf:
+
+  LOOKUP		^kqemu$		EXECUTE /bin/mknod -m 0666 $devpath c 250 0
+
+After this you need to load the kqemu kernel module either in
+/etc/rc.modules or manually.
+
+udev users
+----------
+
+When using udev, the device node is created automatically; add the 
+following to /etc/udev/rules.d/10-custom.rules to allow all users of group 
+'qemu' use kqemu:
+
+  KERNEL="kqemu", MODE="0660", GROUP="qemu"
+
+Loading the kqemu kernel module is done like in devfs except you have to use
+major=0 as a parameter for the module (i.e. "modprobe kqemu major=0"). This will
+cause the major number to be assigned dynamically.
+
+PRECAUTION

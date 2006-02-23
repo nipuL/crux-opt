@@ -1,0 +1,18 @@
+# Description: Multi-platform programmer's library
+# URL: http://www.jedsoft.org/slang/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on: 
+
+name=slang
+version=2.0.5
+release=1
+source=(ftp://space.mit.edu/pub/davis/$name/v2.0/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share
+}

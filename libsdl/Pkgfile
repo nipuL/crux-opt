@@ -1,0 +1,18 @@
+# Description: SDL, Simple DirectMedia Layer 
+# URL: http://www.libsdl.org
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Daniel Mueller, daniel at danm dot de
+# Depends on: alsa-lib
+
+name=libsdl
+version=1.2.9
+release=1
+source=(http://www.libsdl.org/release/SDL-$version.tar.gz) 
+
+build () {
+    cd SDL-$version
+    ./configure	--prefix=/usr \
+                --enable-alsa 
+    make 
+    make DESTDIR=$PKG install
+}

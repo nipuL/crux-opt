@@ -1,0 +1,19 @@
+# Description: The Enlightenment Terminal Emulator
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Packager:    Markus Ackermann <maol@symlink.ch>
+# URL:         http://www.eterm.org
+# Depends:     libast, imlib2
+
+name=eterm
+version=0.9.3
+release=1
+source=(http://www.eterm.org/download/Eterm-$version.tar.gz
+	eterm-0.9.3-deadkeys.patch)
+
+build() {
+    cd Eterm-$version
+    patch -p0 < $SRC/eterm-0.9.3-deadkeys.patch
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,23 @@
+# Description: MPEG audio layer 2 encoder
+# URL: http://mikecheng.d2.net.au/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on:
+
+name=toolame
+version=02l
+release=1
+source=(http://dl.sourceforge.net/sourceforge/toolame/$name-$version.tgz)
+
+build() {
+	cd $name-$version
+	cp Makefile{,.orig}
+	sed \
+		-e "s,^DMAL,#DMAL," \
+		-e "s,^ARCH,#ARCH," \
+		-e "s,OPTIM = -O -g -DMDEBx,OPTIM=$CFLAGS," \
+		Makefile.orig > Makefile
+	make
+	mkdir -p $PKG/usr/bin
+	cp $name $PKG/usr/bin
+}

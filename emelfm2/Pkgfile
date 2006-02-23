@@ -1,0 +1,17 @@
+# Description: A gtk file manager that implements the two-pane design.
+# URL: http://www.emelfm2.net/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: gtk, gamin
+
+name=emelfm2
+version=0.1.5
+release=1
+source=(http://emelfm2.net/rel/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	make 	USE_GAMIN=1 \
+		PREFIX=/usr
+	make PREFIX=$PKG/usr install
+	rm -rf $PKG/usr/share/doc
+}

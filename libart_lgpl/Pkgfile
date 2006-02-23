@@ -1,0 +1,16 @@
+# Description: a library for high-performance 2D graphics
+# URL: http://www.levien.com/libart
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Daniel Mueller, daniel at danm dot de
+
+name=libart_lgpl
+version=2.3.17
+release=1
+source=(http://ftp.gnome.org/pub/gnome/sources/$name/2.3/$name-$version.tar.bz2)
+build(){
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
+

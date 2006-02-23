@@ -1,0 +1,19 @@
+# Description: Chroot for dynamically linked applications
+# URL: http://chrootsafe.sourceforge.net/
+# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Depends on:
+
+name=chroot_safe
+version=1.4
+release=1
+source=(http://dl.sourceforge.net/chrootsafe/$name-$version.tgz \
+        $name.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 < $SRC/$name.patch
+    ./configure --prefix=/usr --libexecdir=/usr/lib
+    make
+    make DESTDIR=$PKG install
+}

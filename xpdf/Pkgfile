@@ -1,0 +1,27 @@
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Robert McMeekin, viper at mcmeekin dot info
+# Description: PDF viewer
+# URL: http://foolabs.com/xpdf
+# Depends on: lesstif, t1lib
+
+name=xpdf
+version=3.01pl1
+release=1
+source=(ftp://ftp.foolabs.com/pub/xpdf/$name-3.01.tar.gz \
+	$name-$version.patch)
+
+build()
+{
+    cd $name-3.01
+    patch -p1 < ../$name-$version.patch
+    ./configure \
+	--prefix=/usr \
+        --with-Xm-library=/usr/lib \
+        --with-Xm-includes=/usr/include/Xm \
+	--with-freetype2-includes=/usr/include/freetype2 \
+        --sysconfdir=/etc \
+        --enable-a4-paper \
+        --enable-opi
+    make
+    make install DESTDIR=$PKG
+}

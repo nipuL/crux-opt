@@ -1,0 +1,23 @@
+#! /bin/sh
+#
+# /etc/rc.d/zope: start/stop/restart ZOPE
+#
+
+ZOPECTL=/usr/bin/zopectl
+
+case $1 in
+start)
+	su zope -c "$ZOPECTL start"
+	;;
+stop)
+	su zope -c "$ZOPECTL stop"
+	;;
+restart)
+	su zope -c "$ZOPECTL restart"
+	;;
+*)
+	echo "Usage: $0 {start|stop|restart}"
+	;;
+esac
+
+# End of file

@@ -1,0 +1,17 @@
+# Description: Fast compression library
+# URL: http://www.oberhumer.com/opensource/lzo/
+# Maintainer: Jukka Heino, jukka at karsikkopuut dot net
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on:
+
+name=lzo
+version=2.02
+release=1
+source=(http://www.oberhumer.com/opensource/lzo/download/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --enable-shared
+	make
+	make DESTDIR=$PKG install
+}

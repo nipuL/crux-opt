@@ -1,0 +1,16 @@
+# Description: a free ATSC A/52 stream decoder
+# URL: http://liba52.sourceforge.net
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Matt Housh, jaeger at morpheus dot net
+
+name=liba52
+version=0.7.4
+release=1
+source=(http://liba52.sourceforge.net/files/a52dec-$version.tar.gz)
+
+build() {
+	cd a52dec-$version
+	./configure --prefix=/usr --disable-solaris-audio --disable-win
+	make
+	make prefix=$PKG/usr install
+}

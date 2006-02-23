@@ -1,0 +1,14 @@
+README file for apache-tomcat port
+
+NOTES
+Starting from the 5.5.x series the default tomcat installation
+requires Java 1.5; compatibilities addons are available, feel
+free to provide them as a separate addon port.
+
+The web administration interface is also removed from the
+standard installation; again, if needed please provide it
+through a dedicated port to avoid adding unnecessary stuff here.
+
+POST-INSTALL
+Set up your JAVA_HOME environment variable
+pointing to j2sdk installation path

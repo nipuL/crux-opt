@@ -1,0 +1,23 @@
+# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at varlock dot com
+# Description: an integrated development environment
+# URL: http://www.eclipse.org 
+# Depends on: gtk, j2sdk
+
+name=eclipse-sdk
+version=3.1.2
+release=3
+source=(ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/eclipse/R-3.1.2-200601181600/eclipse-SDK-3.1.2-linux-gtk.tar.gz \
+	eclipse.sh)
+
+build() {
+    mkdir -p $PKG/usr/lib
+    mv eclipse $PKG/usr/lib/
+    
+    mkdir -p $PKG/usr/bin
+    cp eclipse.sh $PKG/usr/bin/eclipse
+    chmod a+x $PKG/usr/bin/eclipse
+    chown -R root.root $PKG/usr
+    find $PKG -type f -perm -0664 -exec chmod 0644 {} \;
+    find $PKG -type d -perm -0775 -exec chmod 0755 {} \;
+}
