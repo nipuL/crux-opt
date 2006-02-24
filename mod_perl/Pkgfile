@@ -6,7 +6,7 @@
 
 name=mod_perl
 version=2.0.2
-release=2
+release=3
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
 build(){
