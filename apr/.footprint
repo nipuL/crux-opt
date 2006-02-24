@@ -67,8 +67,6 @@ drwxr-xr-x	root/root	usr/include/apr-0/
 -rw-r--r--	root/root	usr/include/apr-0/apu_version.h
 -rw-r--r--	root/root	usr/include/apr-0/apu_want.h
 drwxr-xr-x	root/root	usr/lib/
--rw-r--r--	root/root	usr/lib/apr.exp
--rw-r--r--	root/root	usr/lib/aprutil.exp
 -rw-r--r--	root/root	usr/lib/libapr-0.a
 -rw-r--r--	root/root	usr/lib/libapr-0.la
 lrwxrwxrwx	root/root	usr/lib/libapr-0.so -> libapr-0.so.0.9.7
@@ -80,7 +78,6 @@ lrwxrwxrwx	root/root	usr/lib/libaprutil-0.so -> libaprutil-0.so.0.9.7
 lrwxrwxrwx	root/root	usr/lib/libaprutil-0.so.0 -> libaprutil-0.so.0.9.7
 -rwxr-xr-x	root/root	usr/lib/libaprutil-0.so.0.9.7
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/apr/
--rw-r--r--	root/root	usr/share/apr/apr_rules.mk
--rwxr-xr-x	root/root	usr/share/apr/libtool
--rw-r--r--	root/root	usr/share/apr/make_exports.awk
+drwxr-xr-x	root/root	usr/share/apr-0/
+-rw-r--r--	root/root	usr/share/apr-0/apr_rules.mk
+-rwxr-xr-x	root/root	usr/share/apr-0/libtool
