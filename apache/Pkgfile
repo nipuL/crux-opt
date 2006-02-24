@@ -6,7 +6,7 @@
 
 name=apache
 version=2.0.55
-release=1
+release=2
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         $name-ssl_cert.patch crux.layout apache)
 
@@ -22,8 +22,6 @@ build(){
                --enable-mods-shared=all \
                --enable-ssl \
                --enable-deflate \
-               --enable-proxy{,-connect,-ftp,-http} \
-               --enable{,-disk,-mem}-cache \
                --with-gdbm \
                --with-expat=/usr \
                --with-mpm=prefork
