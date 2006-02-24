@@ -66,7 +66,7 @@ diff -Nru Python-2.4.2.orig/Modules/Setup.dist Python-2.4.2/Modules/Setup.dist
 -#DBLIB=$(DB)/lib
 -#_bsddb _bsddb.c -I$(DBINC) -L$(DBLIB) -ldb-$(DBLIBVER)
 +DB=/usr
-+DBLIBVER=4.3
++DBLIBVER=4.4
 +DBINC=$(DB)/include
 +DBLIB=$(DB)/lib
 +_bsddb _bsddb.c -I$(DBINC) -L$(DBLIB) -ldb-$(DBLIBVER)

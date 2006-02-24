@@ -1,2 +1,3 @@
 98db1465629693fc434d4dc52db93838  Python-2.4.2.tar.bz2
-572d78932e9b229a9a8ed6fad2cac213  python-2.4.2.patch
+3df7e7060e9a8dea0e46e1103b5bf7a0  python-2.4.2-bsddb.patch
+84c40c182680d71e2d2330a4f38e5647  python-2.4.2.patch
