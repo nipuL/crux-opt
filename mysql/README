@@ -1,4 +1,4 @@
-README for mysql 4.1.xx
+README for mysql 5.0.xx
 
 REQUIREMENTS
 
@@ -26,3 +26,8 @@ PRECAUTION
    To obtain such a list of packages for your system, you 
    may use the command 'prt-get dependent mysql' or use yapo 
    to list the packages.
+
+INNODB
+  InnoDB table type support is compiled in but disabled by
+  default. Comment out the skip-innodb line in /etc/my.cnf
+  to fully enable InnoDB support.
