@@ -8,11 +8,15 @@ drwxr-xr-x	root/root	usr/lib/cmus/ip/
 -rwxr-xr-x	root/root	usr/lib/cmus/ip/flac.so
 -rwxr-xr-x	root/root	usr/lib/cmus/ip/mad.so
 -rwxr-xr-x	root/root	usr/lib/cmus/ip/modplug.so
+-rwxr-xr-x	root/root	usr/lib/cmus/ip/mpc.so
 -rwxr-xr-x	root/root	usr/lib/cmus/ip/vorbis.so
 -rwxr-xr-x	root/root	usr/lib/cmus/ip/wav.so
 drwxr-xr-x	root/root	usr/lib/cmus/op/
 -rwxr-xr-x	root/root	usr/lib/cmus/op/alsa.so
+-rwxr-xr-x	root/root	usr/lib/cmus/op/ao.so
 -rwxr-xr-x	root/root	usr/lib/cmus/op/oss.so
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/cmus/
--rw-r--r--	root/root	usr/share/cmus/keybindings
+-rw-r--r--	root/root	usr/share/cmus/cyan.theme
+-rw-r--r--	root/root	usr/share/cmus/default.theme
+-rw-r--r--	root/root	usr/share/cmus/rc

@@ -3,10 +3,10 @@
 # Maintainer: Jukka Heino, jukka at karsikkopuu dot net
 # Packager: Jukka Heino, jukka at karsikkopuu dot net
 # Depends on: 
-# Nice to have: alsa-lib, flac, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
+# Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
-version=1.6.8
+version=2.0.0
 release=1
 source=(http://onion.dynserv.net/~timo/files/$name-$version.tar.bz2)
 
