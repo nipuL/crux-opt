@@ -43,9 +43,9 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar.a
 -rwxr-xr-x	root/root	usr/lib/libdar.la
-lrwxrwxrwx	root/root	usr/lib/libdar.so -> libdar.so.3.0.3
-lrwxrwxrwx	root/root	usr/lib/libdar.so.3 -> libdar.so.3.0.3
--rwxr-xr-x	root/root	usr/lib/libdar.so.3.0.3
+lrwxrwxrwx	root/root	usr/lib/libdar.so -> libdar.so.3.0.4
+lrwxrwxrwx	root/root	usr/lib/libdar.so.3 -> libdar.so.3.0.4
+-rwxr-xr-x	root/root	usr/lib/libdar.so.3.0.4
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dar.1.gz

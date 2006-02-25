@@ -1,10 +1,10 @@
 # Description: Disk ARchive - a sophisticated backup utility for Linux
 # URL:         http://dar.linux.free.fr/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  openssl, zlib
+# Depends on:  openssl, zlib, bzip2
 
 name=dar
-version=2.2.6
+version=2.2.7
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
         darrc)

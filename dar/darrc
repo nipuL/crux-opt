@@ -23,6 +23,7 @@ create:
 -P mnt
 -P proc
 -P dev
+-P sys
 
 # use gzip compression
 -z
