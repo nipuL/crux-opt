@@ -1,15 +1,14 @@
 # $Id: Pkgfile,v 1.3 2005/11/06 19:44:23 victord Exp $
 # Description: Stunnel wraps normal socket connections with SSL/TLS
 # URL:         http://www.stunnel.org
-# Maintainer:  Victor, victord at users dot berlios dot de  
-# Packager:    Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl zlib
 
 name=stunnel
 version=4.14
 release=1
 source=(http://www.stunnel.org/download/stunnel/src/$name-$version.tar.gz \
-        $name.patch $name.rc)
+        $name.patch $name)
 
 build () {
     cd $name-$version
@@ -25,7 +24,7 @@ build () {
     make
     install -D -m 0755 src/stunnel $PKG/usr/sbin/stunnel
     install -D -m 0644 doc/stunnel.8 $PKG/usr/man/man8/stunnel.8
-    install -D -m 0755 $SRC/$name.rc $PKG/etc/rc.d/$name
+    install -D -m 0755 $SRC/$name  $PKG/etc/rc.d/$name
     install -m 0644 tools/stunnel.conf-sample $PKG/etc/stunnel.conf
     install -d $PKG/{var/run,etc/ssl/{certs,keys}}
     install -d -o nobody -g nobody $PKG/var/run/stunnel

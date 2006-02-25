@@ -5,22 +5,13 @@
 
 CONF=/etc/pure-ftpd.conf
 ARGS=$(sed -e '/^\s*$/d' -e '/^#/d' $CONF)
+
 CRT=/etc/ssl/certs/pure-ftpd.pem
-
-make_cert() {
-	FQDN=$(hostname -f) || FQDN=localhost
-	echo "Creating SSL certificate $CRT for host $FQDN"
-	INFO=".\n.\n.\n.\n.\n$FQDN\nroot@$FQDN"
-	OPTS="req -new -nodes -x509 -days 365 -newkey rsa:1024" 
-	echo -e $INFO | openssl $OPTS -out $CRT -keyout $CRT 2> /dev/null
-	chmod 0600 $CRT
-}
-
 
 case $1 in
 start)
 	if [ ! -s $CRT ]; then 
-		make_cert
+		/usr/bin/mksslcert $CRT $CRT
 	fi
 	/usr/sbin/pure-ftpd $ARGS
 	;;
