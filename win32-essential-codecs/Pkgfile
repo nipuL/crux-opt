@@ -1,0 +1,14 @@
+# Description: "Essential" win32 binary codecs for mplayer, xine, etc.
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+
+name=win32-essential-codecs
+version=20050412
+release=1
+source=(http://mirrors.xmission.com/mplayer/releases/codecs/essential-$version.tar.bz2)
+
+build() {
+	cd essential-$version
+	mkdir -p $PKG/usr/lib/win32
+	install -m 0644 * $PKG/usr/lib/win32/
+	rm -f $PKG/usr/lib/win32/README
+}
