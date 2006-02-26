@@ -15,6 +15,8 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/compressor.hpp
 -rw-r--r--	root/root	usr/include/dar/config.h
 -rw-r--r--	root/root	usr/include/dar/crypto.hpp
+-rw-r--r--	root/root	usr/include/dar/data_tree.hpp
+-rw-r--r--	root/root	usr/include/dar/database.hpp
 -rw-r--r--	root/root	usr/include/dar/deci.hpp
 -rw-r--r--	root/root	usr/include/dar/ea.hpp
 -rw-r--r--	root/root	usr/include/dar/erreurs.hpp
@@ -27,6 +29,7 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/libdar.hpp
 -rw-r--r--	root/root	usr/include/dar/limitint.hpp
 -rw-r--r--	root/root	usr/include/dar/mask.hpp
+-rw-r--r--	root/root	usr/include/dar/mask_list.hpp
 -rw-r--r--	root/root	usr/include/dar/my_config.h
 -rw-r--r--	root/root	usr/include/dar/path.hpp
 -rw-r--r--	root/root	usr/include/dar/real_infinint.hpp
@@ -34,6 +37,7 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/special_alloc.hpp
 -rw-r--r--	root/root	usr/include/dar/statistics.hpp
 -rw-r--r--	root/root	usr/include/dar/storage.hpp
+-rw-r--r--	root/root	usr/include/dar/string_file.hpp
 -rw-r--r--	root/root	usr/include/dar/thread_cancellation.hpp
 -rw-r--r--	root/root	usr/include/dar/tools.hpp
 -rw-r--r--	root/root	usr/include/dar/tronconneuse.hpp
@@ -43,9 +47,11 @@ drwxr-xr-x	root/root	usr/include/dar/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdar.a
 -rwxr-xr-x	root/root	usr/lib/libdar.la
-lrwxrwxrwx	root/root	usr/lib/libdar.so -> libdar.so.3.0.4
-lrwxrwxrwx	root/root	usr/lib/libdar.so.3 -> libdar.so.3.0.4
--rwxr-xr-x	root/root	usr/lib/libdar.so.3.0.4
+lrwxrwxrwx	root/root	usr/lib/libdar.so -> libdar.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libdar.so.4 -> libdar.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libdar.so.4.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/libdar.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dar.1.gz
