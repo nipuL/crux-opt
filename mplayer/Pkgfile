@@ -1,32 +1,36 @@
-# Description: Media player with many codecs
+# Description: Versatile media player and encoder/converter
 # URL: http://www.mplayerhq.hu/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: x11
 
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, \
-# cdparanoia
+# cdparanoia, win32-essential-codecs
 
 # More information can be found at http://www.mplayerhq.hu/DOCS/codecs.html and
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
 version=1.0pre7try2
-release=1
+release=2
 source=(http://mirrors.xmission.com/mplayer/releases/MPlayer-$version.tar.bz2 \
 	http://mirrors.xmission.com/mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
-	http://mirrors.xmission.com/mplayer/releases/codecs/essential-20050412.tar.bz2 \
-	mplayer.conf)
+	mplayer.conf demuxer_h_fix_20060212.diff mplayer-1.0_pre7-gcc4.patch)
 
 build() {
 	cd MPlayer-$version
+
+	# ASF demuxer security patch (CAN-2006-0579)
+	patch -p0 -i $SRC/demuxer_h_fix_20060212.diff
+
+	# gcc4 patch
+	patch -p1 -i $SRC/mplayer-1.0_pre7-gcc4.patch
 
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
 	./configure --prefix=/usr \
 		--enable-linux-devfs \
 		--disable-divx4linux \
-		--with-win32libdir=/usr/share/mplayer/codecs \
-		--with-reallibdir=/usr/share/mplayer/codecs
+		--with-codecsdir=/usr/lib/win32
 
 	make
 	make DESTDIR=$PKG install
@@ -42,12 +46,6 @@ build() {
 			ln -s $i
 		done)
 	chmod 644 $PKG/usr/share/mplayer/font/font-arial-??-iso-8859-1/*
-
-	# codecs
-	mkdir -p $PKG/usr/share/mplayer/codecs
-	cp $SRC/essential-20050412/* $PKG/usr/share/mplayer/codecs
-	chmod 644 $PKG/usr/share/mplayer/codecs/*
-	rm $PKG/usr/share/mplayer/codecs/README
 
 	# config
 	cp $SRC/mplayer.conf $PKG/usr/etc/mplayer/
