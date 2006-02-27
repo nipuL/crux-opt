@@ -4,7 +4,7 @@
 # Depends on: gift
 
 name=gift-ares
-version=0.2.2
+version=0.3.0
 release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
