@@ -5,7 +5,7 @@
 # Depends on: gift
 
 name=gift-gnutella
-version=0.0.10
+version=0.0.10.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gift/$name-$version.tar.bz2)
 
