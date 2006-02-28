@@ -8,6 +8,7 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/pcre_scanner.h
 -rw-r--r--	root/root	usr/include/pcre_stringpiece.h
 -rw-r--r--	root/root	usr/include/pcrecpp.h
+-rw-r--r--	root/root	usr/include/pcrecpparg.h
 -rw-r--r--	root/root	usr/include/pcreposix.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpcre.a
@@ -34,6 +35,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/pcre.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcre_compile.3.gz
+-rw-r--r--	root/root	usr/man/man3/pcre_compile2.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcre_config.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcre_copy_named_substring.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcre_copy_substring.3.gz
@@ -57,7 +59,9 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/pcrecompat.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcrecpp.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcrematching.3.gz
+-rw-r--r--	root/root	usr/man/man3/pcrepartial.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcrepattern.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcreperform.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcreposix.3.gz
+-rw-r--r--	root/root	usr/man/man3/pcreprecompile.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcresample.3.gz

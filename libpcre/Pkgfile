@@ -1,23 +1,20 @@
 # Description: Perl Compatible Regular Expressions 
 # URL: http://www.pcre.org
 # Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: Daniel Mueller, daniel at danm dot de
+# Packager: 
 
 name=libpcre
-version=6.4
+version=6.6
 release=1
 source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar.bz2)
 
-build () {
+build() {
     cd pcre-$version
     export CFLAGS="$CFLAGS -L$PKG/usr/lib"
     export LDFLAGS="$LDFLAGS -L$PKG/usr/lib"
     ./configure --prefix=/usr \
-    		--enable-utf8 \
-    		--enable-unicode-properties
+        --enable-utf8 \
+        --enable-unicode-properties
     make
     make DESTDIR=$PKG install
-    # Fix broken .la files
-    sed -i "s|-L$PKG/usr/lib||g" $PKG/usr/lib/*.la
-    sed -i "s|-L$SRC/pcre-$version||g" $PKG/usr/lib/*.la
 }
