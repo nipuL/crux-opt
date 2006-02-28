@@ -6,7 +6,7 @@
 
 name=mod_php
 version=5.1.2
-release=1
+release=2
 source=(http://www.php.net/distributions/php-$version.tar.bz2) 
 
 build () {
@@ -17,7 +17,8 @@ build () {
                 --with-config-file-path=/etc \
                 --with-mysql=/usr \
                 --with-zlib-dir=/usr/lib \
-		--without-pear \
+                --with-openssl=/usr \
+                --without-pear \
                 --disable-pdo
     make
     make INSTALL_ROOT=$PKG install
