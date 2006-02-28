@@ -1,17 +1,16 @@
-# Description: Perl Compatible Regular Expressions 
+# Description: Perl Compatible Regular Expressions
 # URL: http://www.pcre.org
 # Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Packager: Han Boetes, han at mijncomputer dot nl
 
 name=libpcre
 version=6.6
-release=1
-source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar.bz2)
+release=2
+source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar\
+.bz2)
 
 build() {
     cd pcre-$version
-    export CFLAGS="$CFLAGS -L$PKG/usr/lib"
-    export LDFLAGS="$LDFLAGS -L$PKG/usr/lib"
     ./configure --prefix=/usr \
         --enable-utf8 \
         --enable-unicode-properties
