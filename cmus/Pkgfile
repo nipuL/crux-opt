@@ -7,13 +7,13 @@
 
 name=cmus
 version=2.0.0
-release=1
+release=2
 source=(http://onion.dynserv.net/~timo/files/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-arts
+    ./configure --prefix=/usr --mandir=/usr/man --disable-arts
     make
-    make DESTDIR=$PKG install
+    make DESTDIR=$PKG install install-man
     rm -rf $PKG/usr/share/doc
 }
