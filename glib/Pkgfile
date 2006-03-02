@@ -1,7 +1,7 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL: http://www.gtk.org/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: gettext, pkgconfig
+# Depends on: gettext
 
 name=glib
 version=2.8.6
