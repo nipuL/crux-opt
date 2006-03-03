@@ -5,7 +5,7 @@
 
 name=sane
 version=1.0.17
-release=1
+release=2
 source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
 
 build () {
@@ -14,12 +14,13 @@ build () {
     ./configure --prefix=/usr \
                 --localstatedir=/var \
                 --disable-translations \
-                --disable-locking
+                --enable-locking \
+                --with-group=scanner
     make
     make prefix=$PKG/usr install
 
-    # hotplug scripts for USB scanners
-    install -d $PKG/etc/hotplug/usb
+    install -d $PKG/{etc/hotplug/usb,var/lock}
+    install -d -g scanner -m 775 $PKG/var/lock/sane
     install -m 755 tools/hotplug/libusbscanner $PKG/etc/hotplug/usb
     install -m 644 tools/hotplug/libsane.usermap $PKG/etc/hotplug/usb
 
