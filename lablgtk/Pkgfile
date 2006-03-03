@@ -15,5 +15,6 @@ build () {
     make
     make opt
     make DESTDIR=$PKG install
+    chmod -R g-w $PKG
     chown -R root:root $PKG
 }
