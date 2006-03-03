@@ -2,7 +2,7 @@
 # URL: http://k3b.plainblack.com
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
-# Depends on: kdelibs, cdrtools, cdparanoia, cdrdao, taglib, flac, normalize, dvd+rw-tools, lame, libsndfile, ffmpeg, libmusicbrainz
+# Depends on: kdelibs, cdrtools, cdparanoia, cdrdao, taglib, flac, normalize, dvd+rw-tools, lame, libsndfile, ffmpeg, libmusicbrainz, libsamplerate
 
 name=k3b
 version=0.12.12

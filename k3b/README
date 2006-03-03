@@ -9,10 +9,13 @@ flac            (recommended)
 lame            (recommended)
 normalize       (recommended)
 libsndfile      (recommended)
+dvd+rw-tools    (optional)
+libsamplerate   (optional)
+
 ffmpeg          (optional)
  * decodes WMA and others
+
 musicbrainz     (optional)
  * fills in tags by matching current song with an online database of song
    "fingerprints".  This can be useful when creating so called "CD-Text"
    enabled Cds.
-dvd+rw-tools    (optional)
