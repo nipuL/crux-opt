@@ -1,0 +1,17 @@
+# Description: a powerful ftp client with a very nice text-based interface
+# URL: http://www.ncftp.com
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Jan Andersson, janneand at yahoo dot com
+
+name=ncftp
+version=3.1.9
+release=1
+source=(ftp://ftp.ncftp.com/$name/$name-$version-src.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --mandir=$PKG/usr/man
+    make
+    make prefix=$PKG/usr install
+}
