@@ -23,6 +23,7 @@ lrwxrwxrwx	root/root	usr/bin/cg-commit-id -> cg-object-id
 -rwxr-xr-x	root/root	usr/bin/cg-log
 -rwxr-xr-x	root/root	usr/bin/cg-merge
 -rwxr-xr-x	root/root	usr/bin/cg-mkpatch
+-rwxr-xr-x	root/root	usr/bin/cg-mv
 -rwxr-xr-x	root/root	usr/bin/cg-object-id
 lrwxrwxrwx	root/root	usr/bin/cg-parent-id -> cg-object-id
 -rwxr-xr-x	root/root	usr/bin/cg-patch
@@ -33,6 +34,7 @@ lrwxrwxrwx	root/root	usr/bin/cg-pull -> cg-fetch
 -rwxr-xr-x	root/root	usr/bin/cg-rm
 -rwxr-xr-x	root/root	usr/bin/cg-seek
 -rwxr-xr-x	root/root	usr/bin/cg-status
+-rwxr-xr-x	root/root	usr/bin/cg-switch
 -rwxr-xr-x	root/root	usr/bin/cg-tag
 -rwxr-xr-x	root/root	usr/bin/cg-tag-ls
 lrwxrwxrwx	root/root	usr/bin/cg-tree-id -> cg-object-id
@@ -46,3 +48,6 @@ drwxr-xr-x	root/root	usr/lib/cogito/
 -rwxr-xr-x	root/root	usr/lib/cogito/cg-Xfetchprogress
 -rwxr-xr-x	root/root	usr/lib/cogito/cg-Xlib
 -rwxr-xr-x	root/root	usr/lib/cogito/cg-Xmergefile
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/cogito/
+-rw-r--r--	root/root	usr/share/cogito/default-exclude
