@@ -6,13 +6,14 @@
 
 name=eterm
 version=0.9.3
-release=1
+release=2
 source=(http://www.eterm.org/download/Eterm-$version.tar.gz
-	eterm-0.9.3-deadkeys.patch)
+	eterm-0.9.3-deadkeys.patch eterm-0.9.3-gcc4.patch)
 
 build() {
     cd Eterm-$version
     patch -p0 < $SRC/eterm-0.9.3-deadkeys.patch
+    patch -p1 < $SRC/eterm-0.9.3-gcc4.patch
     ./configure --prefix=/usr --disable-nls
     make
     make DESTDIR=$PKG install
