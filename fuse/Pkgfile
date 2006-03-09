@@ -1,5 +1,5 @@
 # Description: Interface for userspace filesystems
-# URL: http://sourceforge.net/projects/fuse/
+# URL: http://fuse.sourceforge.net/
 # Maintainer: Jukka Heino, jukka at karsikkopuu dot net
 # Packager: Jukka Heino, jukka at karsikkopuu dot net
 # Depends on:
