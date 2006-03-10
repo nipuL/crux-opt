@@ -34,6 +34,8 @@ drwxr-xr-x	root/root	usr/lib/lighttpd/
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_expire.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_fastcgi.la
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_fastcgi.so
+-rwxr-xr-x	root/root	usr/lib/lighttpd/mod_flv_streaming.la
+-rwxr-xr-x	root/root	usr/lib/lighttpd/mod_flv_streaming.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_indexfile.la
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_indexfile.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_mysql_vhost.la
