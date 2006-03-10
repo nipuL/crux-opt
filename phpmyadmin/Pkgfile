@@ -5,7 +5,7 @@
 # Depends on:  mod_php
 
 name=phpmyadmin
-version=2.7.0-pl2
+version=2.8.0.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/phpMyAdmin-$version.tar.bz2)
 
@@ -13,11 +13,11 @@ build () {
     mkdir -p $PKG/var/www
     cp -R phpMyAdmin-$version $PKG/var/www/phpmyadmin
     cd $PKG/var/www/phpmyadmin
-    rm -r scripts
+    rm -r scripts test
     rm libraries/{fpdf,transformations}/README 
     find lang/* -path "*/english*.inc.php" -or -exec rm {} \;
     find  -maxdepth 1 -type f | egrep -v '.*php|.*html|.*css' | xargs rm
     find -type f -exec chmod -x {} \;
-    sed -i -e '50,76d' -e '80,167d' libraries/select_lang.lib.php
-    sed -i '367s|^// ||' config.default.php
+    sed -i -e '207,233d' -e '237,324d' libraries/select_lang.lib.php
+    sed -i '377s|^// ||' libraries/config.default.php
 }
