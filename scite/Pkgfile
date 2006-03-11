@@ -4,9 +4,9 @@
 # Depends on:  gtk
 
 name=scite
-version=167
+version=168
 release=1
-source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.tgz)
+source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.zip)
 
 build () {
     cd scintilla/gtk
