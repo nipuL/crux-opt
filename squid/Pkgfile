@@ -3,9 +3,9 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=squid
-version=2.5.STABLE12
+version=2.5.STABLE13
 release=1
-source=(http://www.squid-cache.org/Versions/v2/2.5/$name-$version.tar.gz \
+source=(http://www.squid-cache.org/Versions/v2/2.5/$name-$version.tar.bz2 \
         squid.conf squid)
 
 build () {
@@ -27,6 +27,6 @@ build () {
     mkdir -p $PKG/var/log/squid
     chmod 0700 $PKG/var/{squid,log/squid}
     chown -R squid.squid $PKG/var/{squid,log/squid}
-    install -D -m 755 ../squid $PKG/etc/rc.d/squid
-    install -m 644  ../squid.conf $PKG/etc/squid
+    install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
+    install -m 644  $SRC/squid.conf $PKG/etc/squid
 }
