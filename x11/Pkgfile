@@ -1,8 +1,8 @@
 # Description: The Open Group X Window System
-# URL: http://freedesktop.org
+# URL: http://www.x.org
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 # Packager: Brett Goulder, predatorfreak at dcaf-security dot org
-# Depends on: fontconfig libpng, ncurses
+# Depends on: fontconfig, libpng
 
 name=x11
 version=6.9.0
