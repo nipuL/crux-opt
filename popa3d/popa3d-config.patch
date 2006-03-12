@@ -1,6 +1,6 @@
-diff -Nru popa3d-1.0.orig/Makefile popa3d-1.0/Makefile
---- popa3d-1.0.orig/Makefile	2005-09-09 21:03:30.000000000 +0200
-+++ popa3d-1.0/Makefile	2005-09-09 21:03:44.000000000 +0200
+diff -Nru popa3d-1.0.1.orig/Makefile popa3d-1.0.1/Makefile
+--- popa3d-1.0.1.orig/Makefile	2006-03-12 11:39:29.000000000 +0100
++++ popa3d-1.0.1/Makefile	2006-03-12 11:39:40.000000000 +0100
 @@ -3,13 +3,13 @@
  RM = rm -f
  MKDIR = mkdir -p
@@ -26,9 +26,9 @@ diff -Nru popa3d-1.0.orig/Makefile popa3d-1.0/Makefile
  SBINDIR = $(PREFIX)/sbin
  MANDIR = $(PREFIX)/man
  
-diff -Nru popa3d-1.0.orig/params.h popa3d-1.0/params.h
---- popa3d-1.0.orig/params.h	2005-09-09 21:03:30.000000000 +0200
-+++ popa3d-1.0/params.h	2005-09-09 21:03:44.000000000 +0200
+diff -Nru popa3d-1.0.1.orig/params.h popa3d-1.0.1/params.h
+--- popa3d-1.0.1.orig/params.h	2006-03-12 11:39:29.000000000 +0100
++++ popa3d-1.0.1/params.h	2006-03-12 11:39:40.000000000 +0100
 @@ -13,7 +13,7 @@
  /*
   * Are we going to be a standalone server or start via an inetd clone?
@@ -39,14 +39,14 @@ diff -Nru popa3d-1.0.orig/params.h popa3d-1.0/params.h
  #if POP_STANDALONE
  
 @@ -103,7 +103,7 @@
-  * A pseudo-user to run as before authentication. The user and its UID
+  * A pseudo-user to run as before authentication.  The user and its UID
   * must not be used for any other purpose.
   */
 -#define POP_USER			POP_SERVER
 +#define POP_USER			"mail"
  
  /*
-  * An empty directory to chroot to before authentication. The directory
+  * An empty directory to chroot to before authentication.  The directory
 @@ -191,7 +191,7 @@
   *
   * #undef this for qmail-style $HOME/Mailbox mailboxes.
