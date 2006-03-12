@@ -4,7 +4,7 @@
 # Depends on:  neon
 
 name=sitecopy
-version=0.16.2
+version=0.16.3
 release=1
 source=(http://www.lyra.org/$name/$name-$version.tar.gz)
 
