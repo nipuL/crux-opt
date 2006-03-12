@@ -1,0 +1,42 @@
+diff -Nru stunnel-4.15.orig/src/Makefile.in stunnel-4.15/src/Makefile.in
+--- stunnel-4.15.orig/src/Makefile.in	2006-03-12 12:49:36.000000000 +0100
++++ stunnel-4.15/src/Makefile.in	2006-03-12 13:19:19.000000000 +0100
+@@ -222,7 +222,7 @@
+ INCLUDES = -I/usr/kerberos/include
+ 
+ # Additional compiler flags
+-AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(prefix)/var/run/stunnel/stunnel.pid"'
++AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"/var/run/stunnel/stunnel.pid"'
+ 
+ # Win32 executable
+ EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak nogui.c
+diff -Nru stunnel-4.15.orig/tools/stunnel.conf-sample.in stunnel-4.15/tools/stunnel.conf-sample.in
+--- stunnel-4.15.orig/tools/stunnel.conf-sample.in	2006-03-12 12:49:36.000000000 +0100
++++ stunnel-4.15/tools/stunnel.conf-sample.in	2006-03-12 13:19:47.000000000 +0100
+@@ -3,13 +3,13 @@
+ ; Please make sure you understand them (especially the effect of chroot jail)
+ 
+ ; Certificate/key is needed in server mode and optional in client mode
+-cert = @prefix@/etc/stunnel/mail.pem
+-;key = @prefix@/etc/stunnel/mail.pem
++cert = /etc/ssl/certs/stunnel.crt
++key = /etc/ssl/keys/stunnel.key
+ 
+ ; Some security enhancements for UNIX systems - comment them out on Win32
+-chroot = @prefix@/var/lib/stunnel/
++chroot = /var/run/stunnel/
+ setuid = nobody
+-setgid = nogroup
++setgid = nobody
+ ; PID is created inside chroot jail
+ pid = /stunnel.pid
+ 
+@@ -36,7 +36,7 @@
+ 
+ ; Some debugging stuff useful for troubleshooting
+ ;debug = 7
+-;output = stunnel.log
++output = /var/log/stunnel.log
+ 
+ ; Use it for client mode
+ ;client = yes

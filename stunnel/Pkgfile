@@ -2,17 +2,17 @@
 # Description: Stunnel wraps normal socket connections with SSL/TLS
 # URL:         http://www.stunnel.org
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  openssl zlib
+# Depends on:  openssl, zlib, tcp_wrappers
 
 name=stunnel
-version=4.14
+version=4.15
 release=1
 source=(http://www.stunnel.org/download/stunnel/src/$name-$version.tar.gz \
-        $name.patch $name)
+        $name-config.patch $name)
 
 build () {
     cd $name-$version
-    patch -p1 < $SRC/$name.patch
+    patch -p1 < $SRC/$name-config.patch
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --localstatedir=/var \
@@ -24,9 +24,10 @@ build () {
     make
     install -D -m 0755 src/stunnel $PKG/usr/sbin/stunnel
     install -D -m 0644 doc/stunnel.8 $PKG/usr/man/man8/stunnel.8
-    install -D -m 0755 $SRC/$name  $PKG/etc/rc.d/$name
+    install -D -m 0755 $SRC/stunnel  $PKG/etc/rc.d/stunnel
     install -m 0644 tools/stunnel.conf-sample $PKG/etc/stunnel.conf
     install -d $PKG/{var/run,etc/ssl/{certs,keys}}
-    install -d -o nobody -g nobody $PKG/var/run/stunnel
-    touch $PKG/etc/ssl/{certs/$name.crt,keys/$name.key}
+    install -d -m 770 -o nobody -g nobody $PKG/var/run/stunnel
+    touch $PKG/etc/ssl/{certs/stunnel.crt,keys/stunnel.key}
+    chmod 0600 $PKG/etc/ssl/keys/stunnel.key
 }
