@@ -7,7 +7,7 @@
 name=speex
 version=1.0.5
 release=1
-source=(http://www.speex.org/download/speex-$version.tar.gz)
+source=(ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/ahze/speex-$version.tar.gz)
 
 build () {
 	cd speex-$version
