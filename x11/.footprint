@@ -41,8 +41,13 @@ drwxr-xr-x	root/root	etc/X11/app-defaults/
 -rw-r--r--	root/root	etc/X11/app-defaults/Xvidtune
 drwxr-xr-x	root/root	etc/X11/fs/
 -rw-r--r--	root/root	etc/X11/fs/config
+drwxr-xr-x	root/root	etc/X11/init.d/
+-rwxr-xr-x	root/root	etc/X11/init.d/xprint
 drwxr-xr-x	root/root	etc/X11/lbxproxy/
 -rw-r--r--	root/root	etc/X11/lbxproxy/AtomControl
+drwxr-xr-x	root/root	etc/X11/profile.d/
+-rwxr-xr-x	root/root	etc/X11/profile.d/xprint.csh
+-rwxr-xr-x	root/root	etc/X11/profile.d/xprint.sh
 drwxr-xr-x	root/root	etc/X11/proxymngr/
 -rw-r--r--	root/root	etc/X11/proxymngr/pmconfig
 drwxr-xr-x	root/root	etc/X11/rstart/
@@ -78,7 +83,7 @@ drwxr-xr-x	root/root	etc/X11/xdm/
 -rwxr-xr-x	root/root	etc/X11/xdm/Xstartup
 -rwxr-xr-x	root/root	etc/X11/xdm/Xwilling
 lrwxrwxrwx	root/root	etc/X11/xdm/authdir -> ../../../var/lib/xdm
-lrwxrwxrwx	root/root	etc/X11/xdm/chooser -> /usr/X11R6/bin/chooser
+-rwxr-xr-x	root/root	etc/X11/xdm/chooser
 drwxr-xr-x	root/root	etc/X11/xdm/pixmaps/
 -rw-r--r--	root/root	etc/X11/xdm/pixmaps/xorg-bw.xpm
 -rw-r--r--	root/root	etc/X11/xdm/pixmaps/xorg.xpm
@@ -473,6 +478,7 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/attributes/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/ddx-config/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/ddx-config/raster/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/ddx-config/raster/pcl
+-rw-r--r--	root/root	etc/X11/xserver/C/print/ddx-config/raster/postscript (EMPTY)
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/
 drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/CANONBJ10E-GS/
 lrwxrwxrwx	root/root	etc/X11/xserver/C/print/models/CANONBJ10E-GS/fonts -> ../GSdefault/fonts
@@ -560,6 +566,7 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/9nb00093.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/9nb00094.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/README
+-rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/fonts.alias (EMPTY)
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/fonts.dir
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/fonts/lpr0ye1a.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPDJ1600C/model-config
@@ -643,6 +650,7 @@ drwxr-xr-x	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/9nb00093.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/9nb00094.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/README
+-rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/fonts.alias (EMPTY)
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/fonts.dir
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/fonts/lpr0ye1a.pmf
 -rw-r--r--	root/root	etc/X11/xserver/C/print/models/HPLJ4family/model-config
@@ -1454,7 +1462,6 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/X -> Xorg
 -rwxr-xr-x	root/root	usr/X11R6/bin/bitmap
 -rwxr-xr-x	root/root	usr/X11R6/bin/bmtoa
 -rwxr-xr-x	root/root	usr/X11R6/bin/ccmakedep
--rwxr-xr-x	root/root	usr/X11R6/bin/chooser
 -rwxr-xr-x	root/root	usr/X11R6/bin/cleanlinks
 -rwxr-xr-x	root/root	usr/X11R6/bin/cxpm
 -rwxr-xr-x	root/root	usr/X11R6/bin/dga
@@ -1990,6 +1997,7 @@ drwxr-xr-x	root/root	usr/X11R6/include/X11/extensions/
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/syncstr.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/vldXvMC.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xcmiscstr.h
+-rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xevieplaceholder.h (EMPTY)
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86bigfont.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86bigfstr.h
 -rw-r--r--	root/root	usr/X11R6/include/X11/extensions/xf86dga.h
@@ -9269,9 +9277,10 @@ drwxr-xr-x	root/root	usr/X11R6/man/man7/
 -rw-r--r--	root/root	usr/X11R6/man/man7/XStandards.7.gz
 -rw-r--r--	root/root	usr/X11R6/man/man7/Xprint.7.gz
 -rw-r--r--	root/root	usr/X11R6/man/man7/Xsecurity.7.gz
+-rw-r--r--	root/root	usr/X11R6/man/whatis (EMPTY)
 drwxr-xr-x	root/root	usr/include/
-lrwxrwxrwx	root/root	usr/include/GL -> ../../../usr/X11R6/include/GL
-lrwxrwxrwx	root/root	usr/include/X11 -> ../../../usr/X11R6/include/X11
+lrwxrwxrwx	root/root	usr/include/GL -> ../X11R6/include/GL
+lrwxrwxrwx	root/root	usr/include/X11 -> ../X11R6/include/X11
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/xcomposite.pc

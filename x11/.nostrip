@@ -1,1 +1,1 @@
-^usr/X11R6/lib/modules/.*$
+^usr/X11R6/lib64/modules/.*$
