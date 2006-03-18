@@ -4,15 +4,15 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=dnsmasq
-version=2.26
+version=2.27
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.gz \
-        $name-$version.patch dnsmasq)
+        $name-config.patch dnsmasq)
 
 build () {
     cd $name-$version
     
-    patch -p1 < $SRC/$name-$version.patch
+    patch -p1 < $SRC/$name-config.patch
     make
     make PREFIX=$PKG/usr install 
     
