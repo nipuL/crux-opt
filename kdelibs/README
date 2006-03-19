@@ -75,6 +75,7 @@ XML:
     libxml2             (required)
     libxslt             (required)
 
+
 Multimedia extensions
 -----------------------------------------
     audiofile           (standard)
@@ -93,12 +94,13 @@ Multimedia extensions
     libmusicbrainz      (recommended)
     taglib              (recommended)
     libtunepimp         (recommended)
-        * these three are required to build Juk
+      * these three are required to build Juk
 
     flac                (optional)
 
     libsdl              (optional)
     * advanced graphical plugins for noatun
+
 
 Other libraries
 -----------------------------------------
@@ -119,6 +121,7 @@ Other libraries
     libgmp              (recommended)
     * needed to compile KCalc
 
+
 Other extensions
 -----------------------------------------
     gnupg               (recommended)
@@ -127,9 +130,6 @@ Other extensions
 
     pinentry-qt         (recommended)
     * adds PGP/MIME support to Kmail 
-
-    gamin               (recommended)
-    * used for efficient notifications of file system changes
 
     cups                (recommended)
     * common unix printing support for KDE	
@@ -142,6 +142,14 @@ Other extensions
 
     python              (recommended)
     * some KDE components use Python as a scripting engine
+
+    gamin               (optional)
+    * used for efficient notifications of file system changes
+    * KDE can now use inotify directly, so gamin is somewhat
+      superfluous
+    * gamin is included in opt to provide libfam.so, to save you from
+      rebuilding all of you KDE applications, if you're upgrading
+    * I don't use Gamin anymore (direct inotify seems faster & more stable)
 
     openldap            (optional)
     * allows the address book and some PIM applications to access an
