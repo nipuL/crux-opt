@@ -1,7 +1,7 @@
 # Description: Directory content manager
 # URL: http://www.kernel.org/pub/software/scm/git/
 # Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
-# Depends on: openssl
+# Depends on: openssl, curl
 
 name=git
 version=1.2.4
