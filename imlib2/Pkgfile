@@ -5,7 +5,7 @@
 # Depends on: freetype, libid3tag
 
 name=imlib2
-version=1.2.1.010
+version=1.2.1.011
 release=1
 source=(http://enlightenment.freedesktop.org/files/$name-$version.tar.gz \
 	$name-$version.patch)
