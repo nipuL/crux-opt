@@ -8,12 +8,13 @@ name=x11
 version=6.9.0
 release=2
 source=(http://ftp.x.org/pub/X11R${version}/src-single/X11R${version}-src.tar.bz2 \
-	$name-$version-xterm256.patch $name-$version-linux_config.patch xdm host.def)
+	$name-$version-xterm256.patch $name-$version-linux_config.patch xdm host.def http://xorg.freedesktop.org/releases/X11R${version}/patches/${name}r${version}-geteuid.diff)
 
 build() {
     cd xc
     patch -p1 < $SRC/$name-$version-xterm256.patch
     patch -p1 < $SRC/$name-$version-linux_config.patch
+    patch -p0 < $SRC/${name}r${version}-geteuid.diff
 
     sed "s/#CFLAGS#/$CFLAGS/" $SRC/host.def > config/cf/host.def
     make World
