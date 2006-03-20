@@ -1,3 +1,5 @@
-24340f304b900460fb5f815d9d2e040c  cyrus-sasl-2.1.21.patch
+4ecd4363f41acc640bec4eedbd3b76c9  cyrus-sasl-2.1.21-crypt.patch
+d5d1c592c1581ec4bd02bb96e299bd9e  cyrus-sasl-2.1.21-gcc4.patch
+88896aa3a87ca1a56ba126a398b1ebb1  cyrus-sasl-2.1.21-plugin_path.patch
 dde02db234dea892bee298390890502e  cyrus-sasl-2.1.21.tar.gz
 ec81c1d452216c3da110d7b9a6f8fa8f  saslauthd
