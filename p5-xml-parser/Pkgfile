@@ -4,7 +4,7 @@
 
 name=p5-xml-parser
 version=2.34
-release=4
+release=5
 source=(http://cpan.develooper.com/modules/by-category/11_String_Lang_Text_Proc/XML/XML-Parser-$version.tar.gz)
 
 build() {
