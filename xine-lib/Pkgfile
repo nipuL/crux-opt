@@ -5,9 +5,9 @@
 # Depends on: x11, libpng, alsa-lib, libdvdnav, libogg, libvorbis, esound, flac, libsdl, arts, libmng, libmad, liba52, samba, speex, samba, libtheora, faad2
 
 name=xine-lib
-version=1.0.3
-release=2
-source=(http://dl.sourceforge.net/sourceforge/xine/$name-${version}a.tar.gz)
+version=1.1.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/xine/$name-${version}.tar.gz)
 
 build() {
     unset CFLAGS CXXFLAGS
