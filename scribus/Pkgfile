@@ -6,14 +6,16 @@
 
 name=scribus
 version=1.2.4.1
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-		--disable-debug
-	make
-	make prefix=$PKG/usr install
-	rm -rf $PKG/usr/share/scribus/doc
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --disable-debug
+    make
+    make prefix=$PKG/usr install
+    rm -rf $PKG/usr/lib/scribus/dicts/README*.txt \
+        $PKG/usr/share/scribus/doc \
+        $PKG/usr/man/p1
 }
