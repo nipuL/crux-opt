@@ -26,7 +26,6 @@ ipv4_bind_addresses = "127.0.0.1,192.168.0.1"
 # The various zones we support
 csv2 = {}
 csv2["localhost."] = "db.localhost"
-csv2["0.0.127.in-addr.arpa."] = "db.0.0.127"
 # csv2["example.net."] = "db.example.net"
 
 # ACL for localhost, localnet
@@ -36,6 +35,7 @@ ipv4_alias["localhost"] = "127.0.0.0/8"
 ipv4_alias["localnet"] = "192.168.0.0/24"
 recursive_acl = "localhost,localnet"
 zone_transfer_acl = "localnet"
+admin_acl = "localhost,localnet"
 
 # The root servers which we use when making recursive queries.
 # http://www.icann.org

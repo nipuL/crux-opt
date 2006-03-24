@@ -3,12 +3,12 @@
 #
 
 # SOA
-%     SOA   localhost.   root@localhost.   1 7200 3600 604800 1800
+%     SOA     localhost.   root@localhost.   1 7200 3600 604800 1800
 
 # NS 
-%     NS    localhost.
+%     NS      localhost.
 
-# A 
-%     A     127.0.0.1
+# FQDN4
+%     FQDN4   127.0.0.1
 
 # End of file

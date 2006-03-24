@@ -1,6 +1,5 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/maradns/
--rw-r--r--	root/root	etc/maradns/db.0.0.127
 -rw-r--r--	root/root	etc/maradns/db.example.net
 -rw-r--r--	root/root	etc/maradns/db.localhost
 drwxr-xr-x	root/root	etc/maradns/logger/
