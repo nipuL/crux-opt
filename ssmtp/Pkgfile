@@ -5,13 +5,13 @@
 
 name=ssmtp
 version=2.61
-release=2
+release=3
 source=(http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}.orig.tar.gz \
-        http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}-5.diff.gz)
+        http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}-6.diff.gz)
 
 build () {
     cd $name-$version
-    gunzip -c $SRC/${name}_${version}-5.diff.gz | patch -p1
+    gunzip -c $SRC/${name}_${version}-6.diff.gz | patch -p1
     autoconf
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -22,6 +22,7 @@ build () {
     
     sed -i "s|_HOSTNAME_|`hostname -f`|" ssmtp.conf
     sed -i "s|/etc/ssmtp.conf|/etc/ssmtp/ssmtp.conf|" ssmtp.conf
+    sed -i '39i\\n#AuthUser=\n#AuthPass=' ssmtp.conf
     sed -i "s|/usr/lib/|/usr/sbin/|" ssmtp.8
     
     install -D -m 644 ssmtp.conf $PKG/etc/ssmtp/ssmtp.conf
