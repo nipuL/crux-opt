@@ -1,7 +1,7 @@
 # Description: Convert flat text file to man page
 # URL: http://mvertes.free.fr/
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on:
 
 name=txt2man
