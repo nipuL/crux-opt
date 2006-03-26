@@ -1,11 +1,11 @@
 # Description: A sophisticated Object-Relational DBMS
 # URL: http://www.postgresql.org
 # Packager: Markus Heinz, su1690 at studserver.uni-dortmund dot de
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on:
 
 name=postgresql
-version=8.1.2
+version=8.1.3
 release=1
 source=(ftp://ftp2.de.postgresql.org/pub/postgresql/v$version/$name-$version.tar.bz2 postgresql)
 
