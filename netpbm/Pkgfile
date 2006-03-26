@@ -4,7 +4,7 @@
 # Depends on: libjpeg, libpng, libtiff, ghostscript
 
 name=netpbm
-version=10.31
+version=10.33
 release=1
 source=(http://dl.sf.net/$name/$name-$version.tgz Makefile.config)
 

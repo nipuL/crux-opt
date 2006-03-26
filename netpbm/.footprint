@@ -48,6 +48,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamcomp
 -rwxr-xr-x	root/root	usr/bin/pamcut
 -rwxr-xr-x	root/root	usr/bin/pamdeinterlace
+-rwxr-xr-x	root/root	usr/bin/pamdepth
 -rwxr-xr-x	root/root	usr/bin/pamdice
 -rwxr-xr-x	root/root	usr/bin/pamditherbw
 -rwxr-xr-x	root/root	usr/bin/pamedge
@@ -86,6 +87,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtojpeg2k
 -rwxr-xr-x	root/root	usr/bin/pamtopfm
 -rwxr-xr-x	root/root	usr/bin/pamtopnm
+-rwxr-xr-x	root/root	usr/bin/pamtosvg
 -rwxr-xr-x	root/root	usr/bin/pamtotga
 -rwxr-xr-x	root/root	usr/bin/pamtotiff
 -rwxr-xr-x	root/root	usr/bin/pamtouil
@@ -146,6 +148,7 @@ lrwxrwxrwx	root/root	usr/bin/pgmedge -> pamedge
 -rwxr-xr-x	root/root	usr/bin/pgmenhance
 -rwxr-xr-x	root/root	usr/bin/pgmhist
 -rwxr-xr-x	root/root	usr/bin/pgmkernel
+-rwxr-xr-x	root/root	usr/bin/pgmmake
 -rwxr-xr-x	root/root	usr/bin/pgmmedian
 -rwxr-xr-x	root/root	usr/bin/pgmminkowski
 -rwxr-xr-x	root/root	usr/bin/pgmmorphconv
@@ -174,7 +177,7 @@ lrwxrwxrwx	root/root	usr/bin/pnmarith -> pamarith
 -rwxr-xr-x	root/root	usr/bin/pnmconvol
 -rwxr-xr-x	root/root	usr/bin/pnmcrop
 -rwxr-xr-x	root/root	usr/bin/pnmcut
--rwxr-xr-x	root/root	usr/bin/pnmdepth
+lrwxrwxrwx	root/root	usr/bin/pnmdepth -> pamdepth
 lrwxrwxrwx	root/root	usr/bin/pnmenlarge -> pamenlarge
 lrwxrwxrwx	root/root	usr/bin/pnmfile -> pamfile
 -rwxr-xr-x	root/root	usr/bin/pnmflip
@@ -291,6 +294,7 @@ lrwxrwxrwx	root/root	usr/bin/ppmtouil -> pamtouil
 -rwxr-xr-x	root/root	usr/bin/rawtopgm
 -rwxr-xr-x	root/root	usr/bin/rawtoppm
 -rwxr-xr-x	root/root	usr/bin/rgb3toppm
+-rwxr-xr-x	root/root	usr/bin/rlatopam
 -rwxr-xr-x	root/root	usr/bin/rletopnm
 -rwxr-xr-x	root/root	usr/bin/sbigtopgm
 -rwxr-xr-x	root/root	usr/bin/sgitopnm
@@ -333,8 +337,8 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/ppmfloyd.h
 -rw-r--r--	root/root	usr/include/shhopt.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.31
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.31
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.33
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.33
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/411toppm.1.gz
@@ -383,6 +387,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pamcomp.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamcut.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamdeinterlace.1.gz
+-rw-r--r--	root/root	usr/man/man1/pamdepth.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamdice.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamditherbw.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamedge.1.gz
@@ -421,6 +426,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pamtojpeg2k.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtopfm.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtopnm.1.gz
+-rw-r--r--	root/root	usr/man/man1/pamtosvg.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtotga.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtotiff.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtouil.1.gz
@@ -480,6 +486,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pgmenhance.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmhist.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmkernel.1.gz
+-rw-r--r--	root/root	usr/man/man1/pgmmake.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmmedian.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmminkowski.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmmorphconv.1.gz
@@ -504,7 +511,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pnmconvol.1.gz
 -rw-r--r--	root/root	usr/man/man1/pnmcrop.1.gz
 -rw-r--r--	root/root	usr/man/man1/pnmcut.1.gz
--rw-r--r--	root/root	usr/man/man1/pnmdepth.1.gz
 -rw-r--r--	root/root	usr/man/man1/pnmflip.1.gz
 -rw-r--r--	root/root	usr/man/man1/pnmgamma.1.gz
 -rw-r--r--	root/root	usr/man/man1/pnmhisteq.1.gz
@@ -610,6 +616,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/rawtopgm.1.gz
 -rw-r--r--	root/root	usr/man/man1/rawtoppm.1.gz
 -rw-r--r--	root/root	usr/man/man1/rgb3toppm.1.gz
+-rw-r--r--	root/root	usr/man/man1/rlatopam.1.gz
 -rw-r--r--	root/root	usr/man/man1/rletopnm.1.gz
 -rw-r--r--	root/root	usr/man/man1/sbigtopgm.1.gz
 -rw-r--r--	root/root	usr/man/man1/sgitopnm.1.gz
