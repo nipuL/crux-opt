@@ -1,16 +1,18 @@
 # Description: A menu driven communications program
 # URL: http://alioth.debian.org/projects/minicom/
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: sten, nick dot steeves at shaw dot ca
 # Depends on:
 
 name=minicom
 version=2.1
-release=1
-source=(http://alioth.debian.org/download.php/123/minicom-$version.tar.gz)
+release=2
+source=(http://alioth.debian.org/download.php/123/minicom-$version.tar.gz \
+	$name-$version-gcc4.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 < ../$name-$version-gcc4.patch
 	./configure --prefix=/usr --disable-nls
 	make
 	make DESTDIR=$PKG install
