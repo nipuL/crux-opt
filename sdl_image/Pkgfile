@@ -1,6 +1,6 @@
 # Description: SDL_image
 # Packager: Antonio Musumeci bile at landofbile dot com
-# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # URL: http://www.libsdl.org/projects/SDL_image
 # Depends on: libjpeg,libpng,libsdl
 

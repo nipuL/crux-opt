@@ -1,5 +1,5 @@
 # Description: Provides a uniform API for accessing many audio file formats
-# Maintainer: Jay Dolan jasonthomasdolan at yahoo dot com
+# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Packager: Per Lidén per at fukt dot bth dot se
 # URL: http://www.68k.org/~michael/audiofile
 # Depends on:
