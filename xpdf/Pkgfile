@@ -5,7 +5,7 @@
 # Depends on: lesstif, t1lib
 
 name=xpdf
-version=3.01pl1
+version=3.01pl2
 release=1
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-3.01.tar.gz \
 	$name-$version.patch)
