@@ -2,7 +2,7 @@
 # URL: http://www.tux.org/~bagleyd/xlockmore.html 
 # Maintainer: Simone Rota, sip at varlock dot com
 # Packager: Daniel Mueller, daniel at danm dot de
-# Depends on: esound, gtk, fortune
+# Depends on: x11, fortune
 
 name=xlockmore
 version=5.20.1
