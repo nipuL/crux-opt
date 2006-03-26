@@ -1,11 +1,11 @@
 # Description: Little CMS. A free color management engine.
 # URL: http://www.littlecms.com/
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: zlib, libtiff, libjpeg
 
 name=lcms
-version=1.14
+version=1.15
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
