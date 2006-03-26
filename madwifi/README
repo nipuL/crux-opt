@@ -1,6 +1,6 @@
 PRE-INSTALL
 
-    Kernel sources must exist in /usr/src/linux[-version]
+	Kernel sources must exist in /usr/src/linux[-version]
 
 	Note that this port does not provide a .md5sum, as it is built from
 	a daily svn snapshot of madwifi-ng.
@@ -15,7 +15,7 @@ POST-INSTALL
 	alias ath0 ath_pci
 
 	/etc/rc.d/net:
-	wlanconfig ath0 create wlandev wifi0 wlanmode sta
-
-	The ath0 device may then be manipulated with ifconfig or dhcpcd.
+	iwconfig ath0 essid myid
+	iwconfig ath0 key mykey
+	dhcpcd ath0
 
