@@ -5,12 +5,11 @@
 # Depends on: t1lib, gtk, qt3, ghostscript
 
 name=poppler
-version=0.4.4
+version=0.4.5
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
-build()
-{
+build() {
     cd $name-$version
     ./configure \
         --prefix=/usr \
