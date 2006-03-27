@@ -61,13 +61,6 @@ lrwxrwxrwx	root/root	usr/lib/libxml2.so.2 -> libxml2.so.2.6.23
 -rwxr-xr-x	root/root	usr/lib/libxml2.so.2.6.23
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libxml-2.0.pc
-drwxr-xr-x	root/root	usr/lib/python2.4/
-drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/drv_libxml2.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/libxml2.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/libxml2mod.a
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/libxml2mod.la
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/libxml2mod.so
 -rw-r--r--	root/root	usr/lib/xml2Conf.sh
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/

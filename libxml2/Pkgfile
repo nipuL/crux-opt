@@ -2,16 +2,16 @@
 # URL:         http://xmlsoft.org/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Daniel Mueller, daniel at danm dot de
-# Depends on:  python, zlib
+# Depends on:  zlib
 
 name=libxml2
 version=2.6.23
-release=1
+release=2
 source=(http://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --with-python
+    ./configure --prefix=/usr --without-python
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/doc $PKG/usr/share/{doc,gtk-doc}
