@@ -3,6 +3,8 @@
 # Packager:    Daniel Mueller, daniel at danm dot de
 # URL:         http://xorg.freedesktop.org/wiki/
 # Depends on:  ncurses, libpng, fontconfig
+#
+# Nice to have: libtxc_dxtn
 
 name=x11
 version=6.9.0
