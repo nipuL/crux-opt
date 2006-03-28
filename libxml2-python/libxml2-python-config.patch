@@ -6,7 +6,7 @@ diff -Nru libxml2-2.6.23.orig/python/Makefile.in libxml2-2.6.23/python/Makefile.
  pythonLTLIBRARIES_INSTALL = $(INSTALL)
  LTLIBRARIES = $(python_LTLIBRARIES)
 -@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(top_builddir)/libxml2.la
-+@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = /usr/lib/libxml2.la
++@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(libdir)/libxml2.la
  @WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
  am__libxml2mod_la_SOURCES_DIST = libxml.c types.c libxml2-py.c
  @WITH_PYTHON_TRUE@am_libxml2mod_la_OBJECTS = libxml.lo types.lo \
@@ -18,7 +18,7 @@ diff -Nru libxml2-2.6.23.orig/python/Makefile.in libxml2-2.6.23/python/Makefile.
 +libxml2mod_la_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@ @WIN32_EXTRA_LDFLAGS@ -module -avoid-version
  @WITH_PYTHON_TRUE@mylibs = \
 -@WITH_PYTHON_TRUE@	$(top_builddir)/libxml2.la
-+@WITH_PYTHON_TRUE@	/usr/lib/libxml2.la
++@WITH_PYTHON_TRUE@	$(libdir)/libxml2.la
  
  @WITH_PYTHON_TRUE@python_LTLIBRARIES = libxml2mod.la
  @WITH_PYTHON_TRUE@libxml2mod_la_SOURCES = libxml.c types.c libxml2-py.c
