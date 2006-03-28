@@ -5,7 +5,7 @@
 name=x11-fonts-corefonts
 version=1.2
 release=1
-source=(http://www.kyz.uklinux.net/downloads/cabextract-1.0.tar.gz \
+source=(http://www.kyz.uklinux.net/downloads/cabextract-1.1.tar.gz \
 	http://dl.sourceforge.net/sourceforge/corefonts/andale32.exe \
 	http://dl.sourceforge.net/sourceforge/corefonts/arial32.exe \
 	http://dl.sourceforge.net/sourceforge/corefonts/arialb32.exe \
@@ -19,10 +19,10 @@ source=(http://www.kyz.uklinux.net/downloads/cabextract-1.0.tar.gz \
 	http://dl.sourceforge.net/sourceforge/corefonts/webdin32.exe)
 
 build() {
-	(cd cabextract-1.0 && ./configure && make)
+	(cd cabextract-1.1 && ./configure && make)
 	for font in *.exe
 	do
-		cabextract-1.0/cabextract --lowercase $font
+		cabextract-1.1/cabextract --lowercase $font
 	done
 	mkdir -p $PKG/usr/share/fonts/corefonts
 	install -o root -g root -m 0644 *.ttf \
