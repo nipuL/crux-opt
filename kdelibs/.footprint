@@ -1242,6 +1242,7 @@ drwxr-xr-x	root/root	usr/share/apps/katepart/syntax/
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/python.xml
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/r.xml
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/rexx.xml
+-rw-r--r--	root/root	usr/share/apps/katepart/syntax/rhtml.xml
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/rib.xml
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/rpmspec.xml
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/rsiidl.xml
@@ -1765,6 +1766,7 @@ drwxr-xr-x	root/root	usr/share/apps/ksgmltools2/customization/et/entities/
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/underBSDLicense.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/underFDL.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/underGPL.docbook
+-rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/underLGPL.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/underX11License.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/entities/update-doc.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/et/lang.entities
@@ -3184,6 +3186,7 @@ drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/128x128/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/128x128/actions/
+-rw-r--r--	root/root	usr/share/icons/crystalsvg/128x128/actions/fileopen.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/128x128/actions/launch.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/128x128/actions/share.png
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/128x128/apps/
@@ -4749,6 +4752,7 @@ drwxr-xr-x	root/root	usr/share/icons/crystalsvg/48x48/mimetypes/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/64x64/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/64x64/actions/
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/64x64/actions/favorites.png
+-rw-r--r--	root/root	usr/share/icons/crystalsvg/64x64/actions/fileopen.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/64x64/actions/knewstuff.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/64x64/actions/player_play.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/64x64/actions/share.png
@@ -4948,6 +4952,7 @@ drwxr-xr-x	root/root	usr/share/icons/crystalsvg/scalable/actions/
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/exit.svgz
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/fileclose.svgz
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/filenew.svgz
+-rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/fileopen.svgz
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/fileprint.svgz
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/filequickprint.svgz
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/scalable/actions/finish.svgz
@@ -5421,6 +5426,7 @@ drwxr-xr-x	root/root	usr/share/mimelnk/image/
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-portable-bitmap.desktop
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-portable-greymap.desktop
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-portable-pixmap.desktop
+-rw-r--r--	root/root	usr/share/mimelnk/image/x-raw.desktop
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-rgb.desktop
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-targa.desktop
 -rw-r--r--	root/root	usr/share/mimelnk/image/x-vnd.adobe.photoshop.desktop

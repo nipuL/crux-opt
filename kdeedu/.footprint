@@ -427,6 +427,7 @@ drwxr-xr-x	root/root	usr/share/apps/kanagram/sounds/
 drwxr-xr-x	root/root	usr/share/apps/katepart/
 drwxr-xr-x	root/root	usr/share/apps/katepart/syntax/
 -rw-r--r--	root/root	usr/share/apps/katepart/syntax/logohighlightstyle.en_US.xml
+-rw-r--r--	root/root	usr/share/apps/katepart/syntax/python-kig.xml
 drwxr-xr-x	root/root	usr/share/apps/kbruch/
 -rw-r--r--	root/root	usr/share/apps/kbruch/kbruchui.rc
 drwxr-xr-x	root/root	usr/share/apps/keduca/

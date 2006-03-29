@@ -5,9 +5,9 @@
 # Depends on: kdebase, cvs, subversion
 
 name=kdesdk
-version=3.5.1
+version=3.5.2
 release=1
-source=(http://download.kde.org/stable/3.5.1/src/$name-$version.tar.bz2)
+source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version

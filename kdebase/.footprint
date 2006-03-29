@@ -166,6 +166,7 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/kconf_update_bin/
 -rwxr-xr-x	root/root	usr/lib/kconf_update_bin/khotkeys_update
 -rwxr-xr-x	root/root	usr/lib/kconf_update_bin/kicker-3.4-reverseLayout
+-rwxr-xr-x	root/root	usr/lib/kconf_update_bin/kwin_update_default_rules
 -rwxr-xr-x	root/root	usr/lib/kconf_update_bin/kwin_update_window_settings
 drwxr-xr-x	root/root	usr/lib/kde3/
 -rwxr-xr-x	root/root	usr/lib/kde3/appletproxy.la
@@ -1166,6 +1167,7 @@ drwxr-xr-x	root/root	usr/share/apps/kconf_update/
 -rw-r--r--	root/root	usr/share/apps/kconf_update/kwin_focus1.upd
 -rwxr-xr-x	root/root	usr/share/apps/kconf_update/kwin_focus2.sh
 -rw-r--r--	root/root	usr/share/apps/kconf_update/kwin_focus2.upd
+-rw-r--r--	root/root	usr/share/apps/kconf_update/kwin_fsp_workarounds_1.upd
 -rw-r--r--	root/root	usr/share/apps/kconf_update/kwiniconify.upd
 -rw-r--r--	root/root	usr/share/apps/kconf_update/kwinsticky.upd
 -rw-r--r--	root/root	usr/share/apps/kconf_update/kwinupdatewindowsettings.upd
@@ -2020,6 +2022,8 @@ drwxr-xr-x	root/root	usr/share/apps/kthememanager/themes/YellowOnBlue/
 -rw-r--r--	root/root	usr/share/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.xml
 drwxr-xr-x	root/root	usr/share/apps/kwin/
 -rw-r--r--	root/root	usr/share/apps/kwin/b2.desktop
+drwxr-xr-x	root/root	usr/share/apps/kwin/default_rules/
+-rw-r--r--	root/root	usr/share/apps/kwin/default_rules/fsp_workarounds_1
 -rw-r--r--	root/root	usr/share/apps/kwin/eventsrc
 -rw-r--r--	root/root	usr/share/apps/kwin/keramik.desktop
 -rw-r--r--	root/root	usr/share/apps/kwin/laptop.desktop

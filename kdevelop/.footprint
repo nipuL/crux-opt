@@ -642,6 +642,8 @@ drwxr-xr-x	root/root	usr/share/apps/kdevappwizard/imports/
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/qtruby.tar.gz
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/qtrubyapp.png
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/qtrubyapp.tar.gz
+-rw-r--r--	root/root	usr/share/apps/kdevappwizard/rails.png
+-rw-r--r--	root/root	usr/share/apps/kdevappwizard/rails.tar.gz
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/rubyhello.png
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/rubyhello.tar.gz
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/sqlsimple.png
@@ -756,6 +758,7 @@ drwxr-xr-x	root/root	usr/share/apps/kdevappwizard/templates/
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/qtopiaapp.kdevtemplate
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/qtruby.kdevtemplate
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/qtrubyapp.kdevtemplate
+-rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/rails.kdevtemplate
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/rubyhello.kdevtemplate
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/sqlsimple.kdevtemplate
 -rw-r--r--	root/root	usr/share/apps/kdevappwizard/templates/superwaba.kdevtemplate
@@ -1127,6 +1130,7 @@ drwxr-xr-x	root/root	usr/share/apps/kdevdocumentation/tocs/
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/python_bugs.toc
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/qt-kdev3.toc
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/qtruby.toc
+-rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/rails.toc
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/ruby.toc
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/ruby_bugs.toc
 -rw-r--r--	root/root	usr/share/apps/kdevdocumentation/tocs/sdl.toc
@@ -1298,6 +1302,7 @@ drwxr-xr-x	root/root	usr/share/apps/kdevfilecreate/file-templates/
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/pp-unit
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/py
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/rb
+-rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/rhtml
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/ts
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/ui
 -rw-r--r--	root/root	usr/share/apps/kdevfilecreate/file-templates/ui-confdialog

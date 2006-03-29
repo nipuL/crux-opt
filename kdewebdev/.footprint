@@ -91,6 +91,8 @@ drwxr-xr-x	root/root	usr/share/apps/kimagemapeditor/
 -rw-r--r--	root/root	usr/share/apps/kimagemapeditor/removepointcursor.png
 drwxr-xr-x	root/root	usr/share/apps/klinkstatus/
 -rw-r--r--	root/root	usr/share/apps/klinkstatus/klinkstatus_shell.rc
+drwxr-xr-x	root/root	usr/share/apps/klinkstatus/styles/
+-rw-r--r--	root/root	usr/share/apps/klinkstatus/styles/results_stylesheet.xsl
 drwxr-xr-x	root/root	usr/share/apps/klinkstatuspart/
 -rw-r--r--	root/root	usr/share/apps/klinkstatuspart/klinkstatus_part.rc
 drwxr-xr-x	root/root	usr/share/apps/klinkstatuspart/pics/

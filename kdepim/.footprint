@@ -340,8 +340,6 @@ drwxr-xr-x	root/root	usr/lib/kde3/
 -rwxr-xr-x	root/root	usr/lib/kde3/kabc_slox.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kabc_xmlrpc.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kabc_xmlrpc.so
--rwxr-xr-x	root/root	usr/lib/kde3/kcal_blogging.la
--rwxr-xr-x	root/root	usr/lib/kde3/kcal_blogging.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kcal_groupdav.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kcal_groupdav.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kcal_groupwise.la
@@ -592,10 +590,6 @@ lrwxrwxrwx	root/root	usr/lib/libkaddressbook.so.0 -> libkaddressbook.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libkcal.so -> libkcal.so.2.0.0
 lrwxrwxrwx	root/root	usr/lib/libkcal.so.2 -> libkcal.so.2.0.0
 -rwxr-xr-x	root/root	usr/lib/libkcal.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libkcal_blogging.la
-lrwxrwxrwx	root/root	usr/lib/libkcal_blogging.so -> libkcal_blogging.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libkcal_blogging.so.1 -> libkcal_blogging.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libkcal_blogging.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libkcal_groupdav.la
 lrwxrwxrwx	root/root	usr/lib/libkcal_groupdav.so -> libkcal_groupdav.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libkcal_groupdav.so.1 -> libkcal_groupdav.so.1.0.0
@@ -2148,7 +2142,6 @@ drwxr-xr-x	root/root	usr/share/services/kresources/kabc/
 -rw-r--r--	root/root	usr/share/services/kresources/kabc/kabc_xmlrpc.desktop
 -rw-r--r--	root/root	usr/share/services/kresources/kabc/kolab.desktop
 drwxr-xr-x	root/root	usr/share/services/kresources/kcal/
--rw-r--r--	root/root	usr/share/services/kresources/kcal/blogging.desktop
 -rw-r--r--	root/root	usr/share/services/kresources/kcal/exchange.desktop
 -rw-r--r--	root/root	usr/share/services/kresources/kcal/imap.desktop
 -rw-r--r--	root/root	usr/share/services/kresources/kcal/kabc.desktop

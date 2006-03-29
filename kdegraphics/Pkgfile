@@ -5,16 +5,16 @@
 # Depends on: kdebase, imagemagick, tetex, fribidi, sane, libgphoto2, freeglut, poppler
 
 name=kdegraphics
-version=3.5.1
+version=3.5.2
 release=2
-source=(http://download.kde.org/stable/3.5.1/src/$name-$version.tar.bz2
-    ftp://ftp.kde.org/pub/kde/security_patches/post-3.5.1-kdegraphics-CVE-2006-0301.diff
+source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2
+    ftp://ftp.kde.org/pub/kde/security_patches/post-3.5.2-kdegraphics-CVE-2006-0301.diff
     svgdisplay.desktop kpdf.patch)
 
 build() {
     cd $name-$version
     patch -d kpdf -i $SRC/kpdf.patch
-    patch -p0 -i $SRC/post-3.5.1-kdegraphics-CVE-2006-0301.diff
+    patch -p0 -i $SRC/post-3.5.2-kdegraphics-CVE-2006-0301.diff
 
     # Nvidia hack
     NVIDIAINCLUDES=/usr/include/nvidia
