@@ -4,9 +4,9 @@
 # Depends on: glib
 
 name=atk
-version=1.10.3
+version=1.11.3
 release=1
-source=(ftp://ftp.gtk.org/pub/gtk/v2.8/$name-$version.tar.bz2)
+source=(ftp://ftp.gnome.org/pub/gnome/sources/$name/1.11/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
