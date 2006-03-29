@@ -1,9 +1,10 @@
 # Description: embeddable library implementation of Scheme
 # URL: http://www.gnu.org/software/guile/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: libgmp
 
 name=guile
-version=1.6.7
+version=1.8.0
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
