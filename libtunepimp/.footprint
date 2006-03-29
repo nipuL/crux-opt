@@ -5,13 +5,22 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/tunepimp/
 -rw-r--r--	root/root	usr/include/tunepimp/context.h
+-rw-r--r--	root/root	usr/include/tunepimp/decode_plugin.h
 -rw-r--r--	root/root	usr/include/tunepimp/defs.h
+-rw-r--r--	root/root	usr/include/tunepimp/fileio.h
+-rw-r--r--	root/root	usr/include/tunepimp/metadata_plugin.h
 -rw-r--r--	root/root	usr/include/tunepimp/tp_c.h
 -rw-r--r--	root/root	usr/include/tunepimp/track.h
 -rw-r--r--	root/root	usr/include/tunepimp/tunepimp.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libtunepimp.a
 -rwxr-xr-x	root/root	usr/lib/libtunepimp.la
-lrwxrwxrwx	root/root	usr/lib/libtunepimp.so -> libtunepimp.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/libtunepimp.so.2 -> libtunepimp.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libtunepimp.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libtunepimp.so -> libtunepimp.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libtunepimp.so.3 -> libtunepimp.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libtunepimp.so.3.0.0
+drwxr-xr-x	root/root	usr/lib/tunepimp/
+drwxr-xr-x	root/root	usr/lib/tunepimp/plugins/
+-rw-r-xr-x	root/root	usr/lib/tunepimp/plugins/flac.tpp
+-rw-r-xr-x	root/root	usr/lib/tunepimp/plugins/mp3.tpp
+-rw-r-xr-x	root/root	usr/lib/tunepimp/plugins/vorbis.tpp
+-rw-r-xr-x	root/root	usr/lib/tunepimp/plugins/wav.tpp

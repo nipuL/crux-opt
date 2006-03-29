@@ -5,14 +5,15 @@
 # Depends on: libvorbis, flac, libmad, libogg, expat, libmusicbrainz, libid3tag
 
 name=libtunepimp
-version=0.3.0
-release=2
+version=0.4.1
+release=1
 source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz \
 	$name-$version.patch)
 build() {
 	cd $name-$version
 	patch -p1 < $SRC/$name-$version.patch
-	./configure --prefix=/usr --disable-nls
+	./configure --prefix=/usr \
+        --disable-nls
 	make
 	make DESTDIR=$PKG install
 }
