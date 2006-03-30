@@ -6,13 +6,11 @@
 
 name=imagemagick
 version=6.2.6
-release=2
-source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version-0.tar.bz2
-	$name-$version.patch)
+release=1
+source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version-6.tar.bz2)
 
 build () {
     cd ImageMagick-$version
-    patch -p1 < ../$name-$version.patch
     ./configure --prefix=/usr --enable-shared --enable-lzw --with-perl
     make
     mkdir -p $PKG/usr/

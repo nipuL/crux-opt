@@ -62,6 +62,7 @@ drwxr-xr-x	root/root	usr/include/magick/
 -rw-r--r--	root/root	usr/include/magick/hashmap.h
 -rw-r--r--	root/root	usr/include/magick/identify.h
 -rw-r--r--	root/root	usr/include/magick/image.h
+-rw-r--r--	root/root	usr/include/magick/layer.h
 -rw-r--r--	root/root	usr/include/magick/list.h
 -rw-r--r--	root/root	usr/include/magick/locale_.h
 -rw-r--r--	root/root	usr/include/magick/log.h
@@ -139,31 +140,31 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-6.2.6/modules-Q16/coders/
 drwxr-xr-x	root/root	usr/lib/ImageMagick-6.2.6/modules-Q16/filters/
 -rw-r--r--	root/root	usr/lib/libMagick++.a
 -rwxr-xr-x	root/root	usr/lib/libMagick++.la
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.10.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick++.so.10 -> libMagick++.so.10.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick++.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick++.so -> libMagick++.so.10.0.2
+lrwxrwxrwx	root/root	usr/lib/libMagick++.so.10 -> libMagick++.so.10.0.2
+-rwxr-xr-x	root/root	usr/lib/libMagick++.so.10.0.2
 -rw-r--r--	root/root	usr/lib/libMagick.a
 -rwxr-xr-x	root/root	usr/lib/libMagick.la
-lrwxrwxrwx	root/root	usr/lib/libMagick.so -> libMagick.so.10.0.0
-lrwxrwxrwx	root/root	usr/lib/libMagick.so.10 -> libMagick.so.10.0.0
--rwxr-xr-x	root/root	usr/lib/libMagick.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libMagick.so -> libMagick.so.10.0.2
+lrwxrwxrwx	root/root	usr/lib/libMagick.so.10 -> libMagick.so.10.0.2
+-rwxr-xr-x	root/root	usr/lib/libMagick.so.10.0.2
 -rw-r--r--	root/root	usr/lib/libWand.a
 -rwxr-xr-x	root/root	usr/lib/libWand.la
-lrwxrwxrwx	root/root	usr/lib/libWand.so -> libWand.so.10.0.0
-lrwxrwxrwx	root/root	usr/lib/libWand.so.10 -> libWand.so.10.0.0
--rwxr-xr-x	root/root	usr/lib/libWand.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libWand.so -> libWand.so.10.0.2
+lrwxrwxrwx	root/root	usr/lib/libWand.so.10 -> libWand.so.10.0.2
+-rwxr-xr-x	root/root	usr/lib/libWand.so.10.0.2
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/Image/
--r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.7/linux/Image/Magick.pm
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/Image/
-drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/Image/Magick/
--r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/Image/Magick/Magick.bs (EMPTY)
--r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/Image/Magick/Magick.so
--r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.7/linux/auto/Image/Magick/autosplit.ix
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Image/
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Image/Magick.pm
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Image/
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Image/Magick/
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Image/Magick/Magick.bs (EMPTY)
+-r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Image/Magick/Magick.so
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Image/Magick/autosplit.ix
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick++.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/ImageMagick.pc
