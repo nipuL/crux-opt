@@ -5,7 +5,7 @@
 
 name=vsftpd
 version=2.0.4
-release=1
+release=2
 source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
         $name-$version.patch vsftpd)
 
@@ -15,7 +15,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    install -d $PKG/{etc/{rc.d,ssl/certs},home/ftp,var/log}
+    install -d $PKG/{etc/{rc.d,ssl/certs},var/ftp,var/log}
     install -m 755 $SRC/vsftpd $PKG/etc/rc.d
     touch $PKG/etc/ssl/certs/$name.pem
     chmod 600 $PKG/etc/ssl/certs/$name.pem
