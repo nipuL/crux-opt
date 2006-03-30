@@ -6,7 +6,7 @@
 
 name=imagemagick
 version=6.2.6
-release=1
+release=3
 source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version-6.tar.bz2)
 
 build () {
