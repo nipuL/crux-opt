@@ -5,15 +5,15 @@
 # Depends on: tetex, kdegraphics, gv, acroread, gnuplot, xfig
 
 name=kile
-version=1.8.1
+version=1.9
 release=1
 source=(http://dl.sourceforge.net/sourceforge/kile/kile-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share/doc
-	rm -rf $PKG/usr/share/locale
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    find $PKG/usr/share/{doc/HTML,locale}/* ! -wholename "*HTML/en*" \
+        ! -wholename "*locale/en*" -delete
 }

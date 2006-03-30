@@ -2256,6 +2256,202 @@ drwxr-xr-x	root/root	usr/share/config.kcfg/
 drwxr-xr-x	root/root	usr/share/config/
 drwxr-xr-x	root/root	usr/share/config/magic/
 -rw-r--r--	root/root	usr/share/config/magic/kolf.magic
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/atlantik/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/atlantik/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/atlantik/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/atlantik/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/atlantik/man-atlantik.6.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kasteroids/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kasteroids/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kasteroids/fuel.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kasteroids/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kasteroids/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/katomic/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/katomic/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/katomic/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/katomic/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kbackgammon/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbackgammon/board.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kbackgammon/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbackgammon/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbackgammon/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kbattleship/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kbattleship/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbattleship/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbattleship/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kblackbox/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kblackbox/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kblackbox/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kblackbox/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kblackbox/kblackboxtbar.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kbounce/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kbounce/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbounce/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbounce/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbounce/jezball_corridor1.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbounce/jezball_corridor2.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kbounce/jezball_newWall.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdegames-apidocs/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdegames-apidocs/libkdegames/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdegames-apidocs/libkdegames/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kenolaba/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kenolaba/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kenolaba/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kenolaba/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kenolaba/kenolaba-pieces.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kenolaba/man-kenolaba.6.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kfouleggs/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kfouleggs/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kfouleggs/gamescreen.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kfouleggs/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kfouleggs/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kgoldrunner/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kgoldrunner/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/editbar.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/enemy.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/hero.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/kgoldrunner.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/level010.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/select.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgoldrunner/tute008.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kjumpingcube/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kjumpingcube/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kjumpingcube/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kjumpingcube/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/klickety/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/klickety/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/klickety/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/klickety/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/klickety/screenshot.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/klines/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/klines/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/klines/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/klines/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kmahjongg/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/background.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/boardeditor.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kmahjongg/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/config.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/gamescreen.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/highscore.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/layout.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/numbered.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/shortcuts.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/showremoved.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/theme.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmahjongg/tileset.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kmines/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kmines/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmines/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmines/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmines/kmines1.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmines/kmines2.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kolf/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kolf/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kolf/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kolf/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konquest/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konquest/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konquest/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konquest/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kpat/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/clubs.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kpat/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/diamonds.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/hearts.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/man-kpat.6.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/playfield.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpat/spades.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kpoker/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kpoker/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpoker/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpoker/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpoker/kpoker1.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpoker/kpoker2.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kreversi/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kreversi/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kreversi/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kreversi/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kreversi/kreversi-configuration.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kreversi/kreversi1.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksame/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksame/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksame/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksame/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kshisen/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kshisen/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kshisen/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kshisen/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kshisen/kshisen-configuration.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kshisen/score-formula.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kshisen/score-formula.tex
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksirtet/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksirtet/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksirtet/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksirtet/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksmiletris/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksmiletris/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/gamescreen.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/icon.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/smiley.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksmiletris/symbol.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksnake/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksnake/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksnake/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksnake/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksokoban/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksokoban/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksokoban/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksokoban/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kspaceduel/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kspaceduel/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kspaceduel/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kspaceduel/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kspaceduel/kspaceduel3.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ktron/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ktron/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktron/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktron/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ktuberling/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-new.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-open.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-print.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-redo.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-save.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/button-undo.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ktuberling/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/gameboard.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/ktuberling.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-edit.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-game.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-help.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-playground.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-raw.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-settings.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/menu-speech.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/technical-reference.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktuberling/toolbar.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kwin4/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kwin4/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwin4/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwin4/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/lskat/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/lskat/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/lskat/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/lskat/index.docbook
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/16x16/

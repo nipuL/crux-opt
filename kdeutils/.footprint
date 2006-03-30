@@ -381,6 +381,146 @@ drwxr-xr-x	root/root	usr/share/config.kcfg/
 -rw-r--r--	root/root	usr/share/config.kcfg/kjots.kcfg
 drwxr-xr-x	root/root	usr/share/config/
 -rw-r--r--	root/root	usr/share/config/ksim_panelextensionrc
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/KRegExpEditor/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/altn.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/altntool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/anychar.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/anychartool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/begline.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/boundarytools.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/characters.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/charactertool.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/KRegExpEditor/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/compound.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/compoundtool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/endline.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/linestartendtool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/lookaheadtools.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/neglookahead.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/nonwordboundary.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/poslookahead.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/repeat.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/repeattool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/select.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/text.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/texttool.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/theEditor.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/KRegExpEditor/wordboundary.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ark/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ark/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ark/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ark/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ark/man-ark.1.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/irkick/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/irkick/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/irkick/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/irkick/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcalc/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcalc/commands.docbook
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcalc/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcalc/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcalc/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcalc/kcalc_on_Aix.txt
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcalc/kcalc_on_OSF.txt
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcharselect/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcharselect/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcharselect/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcharselect/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcmlirc/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcmlirc/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcmlirc/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcmlirc/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcontrol/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatcrit/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatcrit/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatcrit/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatcrit/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatwarn/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatwarn/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatwarn/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/kcmlowbatwarn/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcontrol/laptop/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcontrol/laptop/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/laptop/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/laptop/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcontrol/powerctrl/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcontrol/powerctrl/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/powerctrl/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcontrol/powerctrl/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/kcalc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/kcalc/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/kcalc/knumber/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/kcalc/knumber/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/superkaramba/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdeutils-apidocs/superkaramba/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdf/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kdf/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdf/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdf/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdf/kdf.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdf/kdf_config.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kedit/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kedit/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kedit/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kedit/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kfloppy/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kfloppy/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kfloppy/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kfloppy/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kgpg/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kgpg/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/editor.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/keygen.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/keymanage.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/keys.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/kicker.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kgpg/options.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/khexedit/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/khexedit/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/khexedit/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/khexedit/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/khexedit/khexedit1.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kinfocenter/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kinfocenter/blockdevices/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kinfocenter/blockdevices/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kinfocenter/blockdevices/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kinfocenter/blockdevices/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kjots/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kjots/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kjots/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kjots/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksim/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksim/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksim/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksim/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ktimer/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ktimer/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktimer/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ktimer/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kwallet/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kwallet/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/cr22-action-wallet_closed.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/cr22-action-wallet_open.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/edit1.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/edit2.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/edit3.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/kwalletmanager.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/password1.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kwallet/password2.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/superkaramba/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/superkaramba/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/superkaramba/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/superkaramba/index.docbook
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/128x128/

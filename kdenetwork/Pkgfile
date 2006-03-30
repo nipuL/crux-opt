@@ -6,7 +6,7 @@
 
 name=kdenetwork
 version=3.5.2
-release=1
+release=2
 source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2\
     lisa)
 
@@ -20,5 +20,4 @@ build() {
     make DESTDIR=$PKG install
     install -D ../lisa $PKG/etc/rc.d/lisa
     cp debian/lisarc $PKG/etc/lisa.conf
-    rm -rf $PKG/usr/share/doc
 }

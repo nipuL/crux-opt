@@ -6,7 +6,7 @@
 
 name=kdelibs
 version=3.5.2
-release=3
+release=2
 source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2 \
     http://www.kde-look.org/content/files/10888-bt.tar.gz)
 
@@ -30,5 +30,5 @@ build() {
     echo Icon=bt >> $PKG/usr/share/mimelnk/application/x-bittorrent.desktop
     rm -f $PKG/usr/share/icons/hicolor/index.theme
     rm -f $PKG/usr/include/ltdl.h
-    rm -rf $PKG/usr/share/doc $PKG/usr/share/apps/LICENSES
+    rm -f $PKG/usr/share/apps/LICENSES
 }

@@ -593,6 +593,60 @@ drwxr-xr-x	root/root	usr/share/apps/kworldclock/pics/
 -rw-r--r--	root/root	usr/share/apps/kworldclock/pics/flag-red.png
 -rw-r--r--	root/root	usr/share/apps/kworldclock/pics/flag.png
 -rw-r--r--	root/root	usr/share/apps/kworldclock/zone.tab
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/amor/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/billy.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/bonhomme.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/bsd.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/amor/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/eyes.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/ghost.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/man-amor.6.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/neko.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/pingus.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/spot.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/tao.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/tux.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/amor/worm.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kmoon/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmoon/carlosmail
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kmoon/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmoon/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kmoon/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kodo/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kodo/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kodo/guide.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kodo/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kodo/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kteatime/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kteatime/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kteatime/config.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kteatime/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kteatime/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kweather/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kweather/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kweather/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kweather/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kworldclock/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kworldclock/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/man-kworldclock.1.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-clock-dialog.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-mlb.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-quairading-clock.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-quairading-dialog.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-rmb-cities.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-rmb-clock.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-rmb-daylight.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-rmb-flags.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-withclocks.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot-withflags.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kworldclock/screenshot.png
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/16x16/

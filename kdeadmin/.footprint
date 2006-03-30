@@ -167,6 +167,70 @@ drwxr-xr-x	root/root	usr/share/apps/kuser/pics/
 -rw-r--r--	root/root	usr/share/apps/kuser/pics/user.png
 drwxr-xr-x	root/root	usr/share/config.kcfg/
 -rw-r--r--	root/root	usr/share/config.kcfg/kuser.kcfg
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kcron/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kcron/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/kcron.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/kcronstart.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/newtask.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/newvariable.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kcron/print.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdat/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kdat/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdat/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kdat/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/knetworkconf/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/01.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/02.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/03.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/04.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/05.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/06.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/07.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/08.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/09.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/11.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/about1.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/knetworkconf/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/knetworkconf/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kpackage/
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/bsdloc.png
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kpackage/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/debaptloc.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/debloc.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/handle.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/install.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/left.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/right-change.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/right-files.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/right-prop.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/root-prompt.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/rpmloc.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/search.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/searchf.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/searchl.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/slackloc.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kpackage/uninstall.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/ksysv/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/ksysv/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksysv/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/ksysv/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kuser/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kuser/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kuser/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kuser/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kuser/kuser.png
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/lilo-config/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/lilo-config/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/lilo-config/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/lilo-config/index.docbook
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/16x16/

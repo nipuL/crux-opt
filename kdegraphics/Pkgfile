@@ -7,14 +7,11 @@
 name=kdegraphics
 version=3.5.2
 release=2
-source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2
-    ftp://ftp.kde.org/pub/kde/security_patches/post-3.5.2-kdegraphics-CVE-2006-0301.diff
-    svgdisplay.desktop kpdf.patch)
+source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2 \
+    svgdisplay.desktop)
 
 build() {
     cd $name-$version
-    patch -d kpdf -i $SRC/kpdf.patch
-    patch -p0 -i $SRC/post-3.5.2-kdegraphics-CVE-2006-0301.diff
 
     # Nvidia hack
     NVIDIAINCLUDES=/usr/include/nvidia
@@ -29,7 +26,6 @@ build() {
         --enable-final
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/doc
     mkdir -p $PKG/usr/share/texmf/tex/kdvi
     cp doc/kdvi/*.sty $PKG/usr/share/texmf/tex/kdvi
     install -D ../svgdisplay.desktop \

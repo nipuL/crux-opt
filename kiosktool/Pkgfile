@@ -6,15 +6,15 @@
 
 name=kiosktool
 version=1.0
-release=1
+release=2
 source=(http://download.kde.org/stable/apps/KDE3.x/admin/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr \
-                --disable-debug
+        --disable-debug
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/locale
-    rm -rf $PKG/usr/share/doc
+    find $PKG/usr/share/{doc/HTML,locale}/* ! -wholename "*HTML/en*" \
+        ! -wholename "*locale/en*" -delete
 }

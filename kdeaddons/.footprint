@@ -379,6 +379,83 @@ drwxr-xr-x	root/root	usr/share/config.kcfg/
 -rw-r--r--	root/root	usr/share/config.kcfg/konq_sidebarnews.kcfg
 drwxr-xr-x	root/root	usr/share/config/
 -rw-r--r--	root/root	usr/share/config/translaterc
+drwxr-xr-x	root/root	usr/share/doc/
+drwxr-xr-x	root/root	usr/share/doc/HTML/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kate-plugins/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kate-plugins/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/configure_insertcommand.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/filetemplates.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/htmltools.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/insertcommand.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/insertcommand.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/openheader.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/textfilter.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/xmlcheck.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kate-plugins/xmltools.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kicker-applets/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/kicker-applets/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kicker-applets/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kicker-applets/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kicker-applets/kolourpicker.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/kicker-applets/ktimemon.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/babel/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/babel/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/babel/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/babel/index.docbook
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/common -> /usr/share/doc/HTML/en/common
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/crashes/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/crashes/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/crashes/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/crashes/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/dirfilter/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/dirfilter/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/dirfilter/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/dirfilter/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/domtreeviewer/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/domtreeviewer/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/domtreeviewer/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/domtreeviewer/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/fsview/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/fsview/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/fsview/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/fsview/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/folders.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/index.docbook
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/look.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/imgallery/thumbnails.png
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/khtmlsettings/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/khtmlsettings/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/khtmlsettings/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/khtmlsettings/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/kuick/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/kuick/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/kuick/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/kuick/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/mediaplayer/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/mediaplayer/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/mediaplayer/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/mediaplayer/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/uachanger/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/uachanger/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/uachanger/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/uachanger/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/validators/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/validators/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/validators/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/validators/index.docbook
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/konq-plugins/webarchiver/
+lrwxrwxrwx	root/root	usr/share/doc/HTML/en/konq-plugins/webarchiver/common -> /usr/share/doc/HTML/en/common
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/webarchiver/index.cache.bz2
+-rw-r--r--	root/root	usr/share/doc/HTML/en/konq-plugins/webarchiver/index.docbook
 drwxr-xr-x	root/root	usr/share/icons/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/
 drwxr-xr-x	root/root	usr/share/icons/crystalsvg/16x16/
