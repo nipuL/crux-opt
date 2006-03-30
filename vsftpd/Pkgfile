@@ -15,7 +15,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    install -d $PKG/{etc/{rc.d,ssl/certs},var/ftp,var/log}
+    install -d $PKG/{etc/{rc.d,ssl/certs},var/log}
     install -m 755 $SRC/vsftpd $PKG/etc/rc.d
     touch $PKG/etc/ssl/certs/$name.pem
     chmod 600 $PKG/etc/ssl/certs/$name.pem
