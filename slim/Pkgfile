@@ -6,9 +6,9 @@
 
 name=slim
 version=1.2.4
-release=1
-source=(http://download.berlios.de/$name/$name-$version.tar.gz
-        $name.rc)
+release=2
+source=(http://download.berlios.de/$name/$name-$version.tar.gz \
+        http://jw.tks6.net/files/slim-crux-smooth.tar.gz $name.rc)
 
 build () {
    cd $name-$version
@@ -16,4 +16,9 @@ build () {
    make DESTDIR=$PKG install
    mkdir $PKG/etc/rc.d
    install -m 755 ../$name.rc $PKG/etc/rc.d/$name
+   cd ../
+
+   rm -f slim-crux-smooth/README
+   cp -r slim-crux-smooth $PKG/usr/share/slim/themes/crux-smooth
+   chmod 0644 $PKG/usr/share/slim/themes/crux-smooth/*
 }

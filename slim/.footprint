@@ -11,6 +11,10 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/slim/
 drwxr-xr-x	root/root	usr/share/slim/themes/
+drwxr-xr-x	root/root	usr/share/slim/themes/crux-smooth/
+-rw-r--r--	root/root	usr/share/slim/themes/crux-smooth/background.jpg
+-rw-r--r--	root/root	usr/share/slim/themes/crux-smooth/panel.png
+-rw-r--r--	root/root	usr/share/slim/themes/crux-smooth/slim.theme
 drwxr-xr-x	root/root	usr/share/slim/themes/default/
 -rw-r--r--	root/root	usr/share/slim/themes/default/background.jpg
 -rw-r--r--	root/root	usr/share/slim/themes/default/panel.png
