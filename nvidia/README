@@ -1,12 +1,5 @@
 
-README for nvidia 1.0-6629+
-
-
-**** IMPORTANT ****
-The POST-INSTALL only needs to be run *ONCE* after installing
-the nvidia port. It is *NOT REQUIRED* when upgrading the port
-if it has been run once when the port was originally installed.
-**** IMPORTANT ****
+README for nvidia 1.0-8178+
 
 
 *** NOTE for nvidia with udev ***
@@ -17,20 +10,28 @@ use the nvidia devices required for 3d to function properly.
 
 POST-INSTALL
 
-Rename /usr/X11R6/lib/libGL.so.1.2 to something else, such
-as libGL_so_1_2 and run /sbin/ldconfig. GL applications
-should then use the nvidia-installed /usr/lib/libGL.so
-instead. Rename /usr/X11R6/lib/modules/extensions/libGLcore.a
-and libglx.a to something else, such as libGLcore.a.orig and
-libglx.a.orig.
+Use opt/gl-select from ports to select the correct gl/glx
+libraries and extensions like so:
 
-nvhelper.sh will do this for you (./nvhelper.sh --install)
+	# gl-select nvidia
+
 
 POST-REMOVE
 
-Rename /usr/X11R6/lib/libGL_so_1_2 (or whatever you called
-it) to libGL.so.1.2 and run /sbin/ldconfig. Also restore
-libglx.a and libGLcore.a in /usr/X11R6/lib/modules/extensions.
+Use opt/gl-select from ports to revert to the x11 gl/glx libraries
+and extensions like so:
 
-nvhelper.sh will do this for you (./nvhelper.sh --restore)
+	# gl-select x11
+
+
+When UPGRADING/DOWNGRADING the nvidia port (where the version changes),
+use gl-select to revert to x11 and then re-select nvidia in order to
+refresh the libGLcore and libGL symlinks, like so:
+
+	# prt-get update nvidia
+	# gl-select x11; gl-select nvidia
+
+
+nvhelper.sh is still included in the port for the time being but
+gl-select is the preferred method.
 

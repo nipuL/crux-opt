@@ -3,6 +3,8 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: x11
 
+# Nice to have: gl-select
+
 name=nvidia
 version=1.0-8178
 release=1
@@ -29,6 +31,9 @@ build() {
 
 	# remove the documentation
 	rm -rf $PKG/usr/share
+
+	# remove the conflicting libglx.so symlink
+	rm -f $PKG/usr/X11R6/lib/modules/extensions/libglx.so
 
 	# copy includes
 	mkdir -p $PKG/usr/include/nvidia
