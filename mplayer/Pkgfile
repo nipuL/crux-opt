@@ -12,8 +12,8 @@
 name=mplayer
 version=1.0pre7try2
 release=2
-source=(http://mirrors.xmission.com/mplayer/releases/MPlayer-$version.tar.bz2 \
-	http://mirrors.xmission.com/mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+source=(http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+	http://www2.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf demuxer_h_fix_20060212.diff mplayer-1.0_pre7-gcc4.patch)
 
 build() {
