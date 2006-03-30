@@ -1,23 +1,21 @@
-# $Id: Pkgfile,v 1.9 2005/11/28 01:41:12 sten Exp $
-# Description: a Mplayer & Xine frontend for KDE; has kpart for konqueror integration
+# Description: a Mplayer & Xine frontend for KDE; it has a kpart for konqueror integration
 # URL: http://kmplayer.kde.org/
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
 # Depends on: kdelibs, mplayer
 
 name=kmplayer
-version=0.9.1a
+version=0.9.1c
 release=1
 source=(http://kmplayer.kde.org/pkgs/kmplayer-$version.tar.bz2)
 
-build()
-{
-	cd $name-$version
-	./configure --prefix=/usr \
-		--without-gstreamer
-	make
-	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share/doc
-	rm -rf $PKG/usr/share/locale
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --without-gstreamer
+    make
+    make DESTDIR=$PKG install
+    find $PKG/usr/share/{doc/HTML,locale}/* ! -wholename "*HTML/en*" \
+        ! -wholename "*locale/en*" -delete
 }
 
