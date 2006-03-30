@@ -19,5 +19,5 @@ build() {
     make
     make prefix=$PKG/usr install
     find $PKG/usr/share/{doc/HTML,locale}/* ! -wholename "*HTML/en*" \
-        ! -wholename "*locale/en*" | xargs rm -rf
+        ! -wholename "*locale/en*" -delete
 }
