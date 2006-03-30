@@ -84,11 +84,11 @@ drwxr-xr-x	root/root	usr/lib/tomcat/server/webapps/host-manager/WEB-INF/lib/
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/host-manager.xml
 drwxr-xr-x	root/root	usr/lib/tomcat/server/webapps/host-manager/images/
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/add.gif
+-rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/asf-logo.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/code.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/design.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/docs.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/fix.gif
--rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/jakarta-logo.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/tomcat.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/update.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/host-manager/images/void.gif
@@ -102,11 +102,11 @@ drwxr-xr-x	root/root	usr/lib/tomcat/server/webapps/manager/WEB-INF/lib/
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/html-manager-howto.html
 drwxr-xr-x	root/root	usr/lib/tomcat/server/webapps/manager/images/
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/add.gif
+-rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/asf-logo.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/code.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/design.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/docs.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/fix.gif
--rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/jakarta-logo.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/tomcat.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/update.gif
 -rw-r--r--	root/root	usr/lib/tomcat/server/webapps/manager/images/void.gif
@@ -128,9 +128,9 @@ drwxr-xr-x	root/root	usr/lib/tomcat/webapps/ROOT/WEB-INF/lib/
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/WEB-INF/web.xml
 drwxr-xr-x	root/root	usr/lib/tomcat/webapps/ROOT/admin/
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/admin/index.html
+-rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/asf-logo-wide.gif
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/favicon.ico
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/index.jsp
--rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/jakarta-banner.gif
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/tomcat-power.gif
 -rw-r--r--	root/root	usr/lib/tomcat/webapps/ROOT/tomcat.gif
 drwxr-xr-x	root/root	usr/lib/tomcat/webapps/balancer/

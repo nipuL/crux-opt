@@ -5,9 +5,9 @@
 # Depends on: j2sdk
 
 name=apache-tomcat
-version=5.5.15
+version=5.5.16
 release=1
-source=(http://apache.fis.uniroma2.it/tomcat/tomcat-5/v$version/bin/$name-$version.tar.gz \
+source=(http://apache.markoer.org/tomcat/tomcat-5/v5.5.16/bin/apache-tomcat-5.5.16.tar.gz \
 	tomcat)
 
 build() {
@@ -18,8 +18,8 @@ build() {
   rm -r $PKG/usr/lib/tomcat/webapps/servlets-examples/ 
   rm -r $PKG/usr/lib/tomcat/webapps/tomcat-docs
   rm $PKG/usr/lib/tomcat/{RUNNING.txt,LICENSE,RELEASE-NOTES}
-  find $PKG -name *.bat|xargs rm
-  find $PKG -name *.exe|xargs rm 
+  find $PKG -name *.bat|xargs rm -f
+  find $PKG -name *.exe|xargs rm -f
 
   mkdir -p $PKG/etc/rc.d
   install -m 755 tomcat $PKG/etc/rc.d

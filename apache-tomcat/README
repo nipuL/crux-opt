@@ -1,5 +1,10 @@
 README file for apache-tomcat port
 
+CAUTION
+This port is best suited for a test / developement environment; 
+you should really use a dedicated local user for running the
+tomcat server on a production environment.
+
 NOTES
 Starting from the 5.5.x series the default tomcat installation
 requires Java 1.5; compatibilities addons are available, feel
