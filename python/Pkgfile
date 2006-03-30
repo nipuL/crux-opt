@@ -4,16 +4,15 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=python
-version=2.4.2
-release=2
+version=2.4.3
+release=1
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
-        $name-$version.patch $name-$version-bsddb.patch)
+        $name-$version.patch)
 
 build () {
     cd Python-$version
     
-    patch -p1 < ../$name-$version.patch
-    patch -p1 < ../$name-$version-bsddb.patch
+    patch -p1 < $SRC/$name-$version.patch
     
     ./configure --prefix=/usr \
                 --enable-shared \
