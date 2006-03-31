@@ -1,7 +1,7 @@
 # Description: free drop-in replacement for mpg123
 # URL: http://mpg321.sourceforge.net/
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
-# Depends on: libao
+# Depends on: libao, libmad
 
 name=mpg321
 version=0.2.10
