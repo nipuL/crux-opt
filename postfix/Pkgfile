@@ -7,7 +7,7 @@
 name=postfix
 version=2.2.9
 release=1
-source=(ftp://ftp.porcupine.org/mirrors/postfix/official/$name-$version.tar.gz
+source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc)
 
 build() {
