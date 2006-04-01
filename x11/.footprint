@@ -1575,7 +1575,6 @@ lrwxrwxrwx	root/root	usr/X11R6/bin/outw -> ioport
 -rwxr-xr-x	root/root	usr/X11R6/bin/xmodmap
 -rwxr-xr-x	root/root	usr/X11R6/bin/xmore
 -rwxr-xr-x	root/root	usr/X11R6/bin/xon
--rwxr-xr-x	root/root	usr/X11R6/bin/xorgcfg
 -rwxr-xr-x	root/root	usr/X11R6/bin/xorgconfig
 -rwxr-xr-x	root/root	usr/X11R6/bin/xphelloworld
 -rwxr-xr-x	root/root	usr/X11R6/bin/xplsprinters
@@ -7508,7 +7507,6 @@ drwxr-xr-x	root/root	usr/X11R6/man/man1/
 -rw-r--r--	root/root	usr/X11R6/man/man1/xmodmap.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xmore.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xon.1x.gz
--rw-r--r--	root/root	usr/X11R6/man/man1/xorgcfg.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xorgconfig.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xphelloworld.1x.gz
 -rw-r--r--	root/root	usr/X11R6/man/man1/xplsprinters.1x.gz
