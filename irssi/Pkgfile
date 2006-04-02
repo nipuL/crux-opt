@@ -7,11 +7,13 @@
 
 name=irssi
 version=0.8.10
-release=1
-source=(http://www.irssi.org/files/$name-$version.tar.bz2)
+release=2
+source=(http://www.irssi.org/files/$name-$version.tar.bz2 \
+       fix_segfault_on_exit.patch)
 
 build () {
     cd $name-$version
+    patch -p1 < $SRC/fix_segfault_on_exit.patch
     ./configure --prefix=/usr \
                 --enable-ipv6 \
                 --with-proxy
