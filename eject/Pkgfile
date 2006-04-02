@@ -4,16 +4,12 @@
 # Packager: 
 
 name=eject
-version=2.1.0
-release=2
-source=(http://www.ibiblio.org/pub/Linux/utils/disk-management/$name-$version.tar.gz)
+version=2.1.4
+release=1
+source=(http://ca.geocities.com/jefftranter@rogers.com/$name-$version.tar.gz)
+
 build() {
-    cd $name-$version
-    aclocal
-    automake --add-missing
-    autoconf 
-    # don't look for kernel headers
-    sed -i -e "s|-I/usr/src/linux/include||g" -e "s|-I/usr/src/linux/include||g" Makefile.*
+    cd $name
     ./configure --prefix=/usr \
         --enable-default-device=/dev/cdrom \
         --disable-nls
