@@ -14,7 +14,7 @@ build() {
     perl Makefile.PL
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/lib/perl5/5.8.7 \
-           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/FCGI/.packlist \
-           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/FCGI/FCGI.bs
+    rm -rf $PKG/usr/lib/perl5/5.8.? \
+           $PKG/usr/lib/perl5/site_perl/5.8.?/linux/auto/FCGI/.packlist \
+           $PKG/usr/lib/perl5/site_perl/5.8.?/linux/auto/FCGI/FCGI.bs
 }

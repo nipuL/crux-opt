@@ -16,9 +16,9 @@ build() {
     make
     make DESTDIR=$PKG install
 
-    rm -rf $PKG/usr/lib/perl5/5.8.7 \
-           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/Digest/SHA1/.packlist \
-           $PKG/usr/lib/perl5/site_perl/5.8.7/linux/auto/Digest/SHA1/SHA1.bs
+    rm -rf $PKG/usr/lib/perl5/5.8.? \
+           $PKG/usr/lib/perl5/site_perl/5.8.?/linux/auto/Digest/SHA1/.packlist \
+           $PKG/usr/lib/perl5/site_perl/5.8.?/linux/auto/Digest/SHA1/SHA1.bs
 
     chmod -R +w $PKG
 }
