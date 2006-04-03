@@ -8,7 +8,7 @@
 name=bittorrent
 version=4.4.0
 release=1
-source=(http://www.$name.com/dl/BitTorrent-$version.tar.gz)
+source=(http://ftp.fi.debian.org/gentoo/distfiles/BitTorrent-$version.tar.gz)
 
 build() {
     cd BitTorrent-$version
