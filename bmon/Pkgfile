@@ -7,10 +7,12 @@
 name=bmon
 version=2.1.0
 release=1
-source=(http://people.suug.ch/~tgr/$name/files/$name-$version.tar.gz)
+source=(http://people.suug.ch/~tgr/$name/files/$name-$version.tar.gz \
+        bmon-2.1.0-gcc4.diff)
 
 build() {
     cd $name-$version
+    patch -p1 < $SRC/bmon-2.1.0-gcc4.diff
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
