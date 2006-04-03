@@ -5,8 +5,8 @@
 # Depends on:
 
 name=portspage
-version=1.0.3
-release=2
+version=1.0.4
+release=1
 source=(http://www.karsikkopuu.net/crux/scripts/$name-$version)
 
 build() {
