@@ -6,7 +6,7 @@
 
 name=imagemagick
 version=6.2.6-7
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version.tar.bz2)
 
 build () {
@@ -16,7 +16,7 @@ build () {
     mkdir -p $PKG/usr/
     make DESTDIR=$PKG PREFIX=$PKG/usr install
     rm -rf $PKG/usr/lib/{perl5/?.?.?,ImageMagick/modules,libltdl.*}
-    rm -rf $PKG/usr/share/ImageMagick-$version/{ChangeLog,LICENSE,NEWS}
+    rm -rf $PKG/usr/share/ImageMagick-${version/-*}/{ChangeLog,LICENSE,NEWS}
     rm -rf $PKG/usr/share/doc
     find $PKG -name perllocal.pod -o -name .packlist -exec rm {} \;
 }
