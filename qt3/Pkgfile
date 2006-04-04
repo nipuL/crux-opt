@@ -5,10 +5,10 @@
 
 name=qt3
 version=3.3.5
-release=1
+release=2
 source=(ftp://ftp.trolltech.com/qt/source/qt-x11-free-$version.tar.bz2 \
 	http://crux.danm.de/files/dist/$name/$version/$name-$version-2-patches.tar.bz2 \
-	$name-$version-gcc4.patch)
+	$name-$version-gcc4.patch 0999_qt-3.3.5-qlistview.patch)
 
 build () {
     cd qt-x11-free-$version
@@ -25,6 +25,9 @@ build () {
     if [ "`pkginfo -i | grep mysql`" ];then
 	SQL="-qt-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
     fi
+
+    # fix serious, crashy bugs in widgets/qlistview.cpp
+    patch -p1 < $SRC/0999_qt-$version-qlistview.patch
 
     if [ -d /usr/include/nvidia ]; then
 	export CFLAGS="$CFLAGS -I/usr/include/nvidia"
