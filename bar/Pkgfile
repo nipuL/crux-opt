@@ -5,14 +5,14 @@
 # Depends on: 
 
 name=bar
-version=1.10.4
-release=2
-source=(http://dl.sourceforge.net/sourceforge/clpbar/$name-$version.tar.gz)
+version=1.10.5
+release=1
+source=(http://dl.sourceforge.net/sourceforge/clpbar/${name}_${version}.tar.gz)
 
 build() {
     cd $name-$version
     sed -i "s/-O2/$CFLAGS/g" Makefile.in
-    ./configure --prefix=/usr --disable-use-memalign
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 }
