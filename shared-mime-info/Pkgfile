@@ -5,9 +5,9 @@
 # Group: gnome
 
 name=shared-mime-info
-version=0.16
+version=0.17
 release=1
-source=(http://freedesktop.org/~jrb/$name-$version.tar.gz \
+source=(http://freedesktop.org/~hadess/$name-$version.tar.gz \
         $name.patch)
 
 build() {
