@@ -6,10 +6,12 @@
 
 name=ketchup
 version=0.9.6
-release=1
-source=(http://www.selenic.com/$name/$name-$version.tar.bz2)
+release=2
+source=(http://www.selenic.com/$name/$name-$version.tar.bz2 \
+        ketchup-list.patch)
 
 build() {
+    patch -p1 < $SRC/ketchup-list.patch
     install -D -m 0755 $name $PKG/usr/bin/$name
     install -D -m 0644 $name.1 $PKG/usr/man/man1/$name.1
 }
