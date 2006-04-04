@@ -473,35 +473,35 @@ drwxr-xr-x	root/root	usr/include/wx-2.6/wx/xrc/
 -rw-r--r--	root/root	usr/include/wx-2.6/wx/zstream.h
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libwx_base-2.6.so -> libwx_base-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_base-2.6.so.0 -> libwx_base-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_base-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_base-2.6.so.0 -> libwx_base-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_base-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_base_net-2.6.so -> libwx_base_net-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_base_net-2.6.so.0 -> libwx_base_net-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_base_net-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_base_net-2.6.so.0 -> libwx_base_net-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_base_net-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_base_xml-2.6.so -> libwx_base_xml-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_base_xml-2.6.so.0 -> libwx_base_xml-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_base_xml-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_base_xml-2.6.so.0 -> libwx_base_xml-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_base_xml-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_adv-2.6.so -> libwx_gtk2_adv-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_adv-2.6.so.0 -> libwx_gtk2_adv-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_adv-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_adv-2.6.so.0 -> libwx_gtk2_adv-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_adv-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_core-2.6.so -> libwx_gtk2_core-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_core-2.6.so.0 -> libwx_gtk2_core-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_core-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_core-2.6.so.0 -> libwx_gtk2_core-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_core-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_gl-2.6.so -> libwx_gtk2_gl-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_gl-2.6.so.0 -> libwx_gtk2_gl-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_gl-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_gl-2.6.so.0 -> libwx_gtk2_gl-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_gl-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_html-2.6.so -> libwx_gtk2_html-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_html-2.6.so.0 -> libwx_gtk2_html-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_html-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_html-2.6.so.0 -> libwx_gtk2_html-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_html-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_media-2.6.so -> libwx_gtk2_media-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_media-2.6.so.0 -> libwx_gtk2_media-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_media-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_media-2.6.so.0 -> libwx_gtk2_media-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_media-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_qa-2.6.so -> libwx_gtk2_qa-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_qa-2.6.so.0 -> libwx_gtk2_qa-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_qa-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_qa-2.6.so.0 -> libwx_gtk2_qa-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_qa-2.6.so.0.3.1
 lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_xrc-2.6.so -> libwx_gtk2_xrc-2.6.so.0
-lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_xrc-2.6.so.0 -> libwx_gtk2_xrc-2.6.so.0.2.0
--rwxr-xr-x	root/root	usr/lib/libwx_gtk2_xrc-2.6.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libwx_gtk2_xrc-2.6.so.0 -> libwx_gtk2_xrc-2.6.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libwx_gtk2_xrc-2.6.so.0.3.1
 drwxr-xr-x	root/root	usr/lib/wx/
 drwxr-xr-x	root/root	usr/lib/wx/config/
 -rwxr-xr-x	root/root	usr/lib/wx/config/gtk2-ansi-release-2.6
