@@ -4,13 +4,13 @@
 # Depends on: openssl, curl
 
 name=git
-version=1.2.4
+version=1.2.5
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
 
-	make prefix=/usr
+	make CFLAGS="$CFLAGS" prefix=/usr
 	make prefix=/usr DESTDIR=$PKG install
 }
