@@ -4,7 +4,7 @@
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=gnupg
-version=1.4.2.2
+version=1.4.3
 release=1
 source=(ftp://ftp.gnupg.org/gcrypt/gnupg/$name-$version.tar.bz2 \
 	ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz)
@@ -20,9 +20,11 @@ build () {
 	--enable-static-rnd=linux \
         --enable-dev-random \
         --disable-nls \
-	--enable-m-guard \
         --disable-ldap \
 	--enable-mailto
+
+# doesn't work in 1.4.3
+#	--enable-m-guard \
 
     make
     make DESTDIR=$PKG install
