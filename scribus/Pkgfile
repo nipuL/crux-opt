@@ -15,7 +15,7 @@ build() {
         --disable-debug
     make
     make prefix=$PKG/usr install
-    rm -rf $PKG/usr/lib/scribus/dicts/README*.txt \
-        $PKG/usr/share/scribus/doc \
-        $PKG/usr/man/p1
+    find $PKG/usr/{lib/scribus/dicts,share/scribus/doc}/* \
+        ! -wholename "*doc/en*" ! -wholename "*hyph_en.dic*" -delete
+    rm -rf $PKG/usr/man/pl/
 }
