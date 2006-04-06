@@ -1,0 +1,19 @@
+
+REQUIREMENTS
+
+    This port depends on the pcre regular expression library called
+    libpcre. 
+
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION
+
+    Due to the fact that this port compiles the libpcre into the shell
+    it's a runtime dependency of zsh. This is a problem on systems where
+    zsh needs to be available at boot before the directory containing
+    libpcre.so is mounted. 
+
+    If you don't like this library edit the Pkgfile and remove the line
+    containing the configure parameter: "--enable-pcre".

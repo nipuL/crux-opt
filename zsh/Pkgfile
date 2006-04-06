@@ -1,0 +1,39 @@
+# Description: Very powerfull shell
+# URL: http://www.zsh.org/
+# Packager: Christian Schneider, strcat at gmx dot net
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: libpcre
+
+name=zsh
+version=4.3.2
+release=1
+source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
+	http://www.grml.org/zsh/zsh-lovers.1)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+        --prefix=/usr \
+        --enable-etcdir=/etc/zsh \
+        --enable-zshrc=/etc/zsh/zshrc \
+        --enable-zshlogin=/etc/zsh/zshlogin \
+        --enable-zshenv=/etc/zsh/zshenv \
+        --enable-fndir=/usr/share/zsh/$version/functions \
+        --enable-site-fndir=/usr/share/zsh/site-functions \
+        --enable-zsh-mem \
+        --enable-zsh-secure-free \
+        --enable-maildir-support \
+        --enable-function-subdirs \
+	--enable-pcre \
+	--enable-restricted-r \
+	--enable-lfs \
+        --enable-cap \
+        --disable-locale \
+        --with-curses-terminfo
+
+    make
+    make DESTDIR=$PKG install 
+
+    install -m 644 $SRC/zsh-lovers.1 $PKG/usr/man/man1/
+}
