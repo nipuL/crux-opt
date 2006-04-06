@@ -4,7 +4,7 @@
 # Depends on: libdevmapper, libgcrypt, popt
 
 name=cryptsetup-luks
-version=1.0.3-rc1
+version=1.0.3
 release=1
 source=(http://luks.endorphin.org/source/$name-$version.tar.bz2)
 
