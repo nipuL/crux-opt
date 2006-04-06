@@ -1,6 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/hpijs
+-rwxr-xr-x	root/root	usr/bin/hppgsz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/cups/
 drwxr-xr-x	root/root	usr/share/cups/model/
@@ -170,7 +171,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-DeskJet_980C-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-DeskJet_990C-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-DeskJet_995C-hpijs.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/HP-Fax-hplip.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-DeskJet_F300-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_1010-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_1012-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_1015-hpijs.ppd.gz
@@ -391,7 +392,6 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Business_Inkjet_3000.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_2550.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_2605.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_2800.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_3000.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_3800.ppd.gz
