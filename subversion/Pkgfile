@@ -19,4 +19,7 @@ build() {
     make
     make DESTDIR=$PKG external-install local-install 
     sed -i -e "s|-L$PKG/usr/lib||g" $PKG/usr/lib/*.la
+
+    # info pages seem to get generated when makeinfo is available
+    rm -rf $PKG/usr/info
 }
