@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cg-admin-cat
 -rwxr-xr-x	root/root	usr/bin/cg-admin-ls
 -rwxr-xr-x	root/root	usr/bin/cg-admin-lsobj
+-rwxr-xr-x	root/root	usr/bin/cg-admin-rewritehist
 -rwxr-xr-x	root/root	usr/bin/cg-admin-setuprepo
 -rwxr-xr-x	root/root	usr/bin/cg-admin-uncommit
 -rwxr-xr-x	root/root	usr/bin/cg-branch-add
