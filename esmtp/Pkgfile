@@ -1,6 +1,6 @@
 # Description: A small relay-only MTA based on libesmtp
 # URL: http://esmtp.sourceforge.net
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libesmtp
 
 name=esmtp
@@ -8,7 +8,7 @@ version=0.5.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 
 	CPPFLAGS=`libesmtp-config --cflags` ./configure --prefix=/usr

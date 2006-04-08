@@ -1,6 +1,6 @@
 # Description: Ares network plugin for giFT
 # URL: http://gift-ares.berlios.de/
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: gift
 
 name=gift-ares
@@ -8,11 +8,11 @@ version=0.3.0
 release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
-build () {
-    cd $name-$version
+build() {
+	cd $name-$version
 
-    ./configure --prefix=/usr
+	./configure --prefix=/usr
 
-    make
-    make DESTDIR=$PKG install
+	make
+	make DESTDIR=$PKG install
 }

@@ -1,6 +1,6 @@
 # Description: Distributed SCM based on GIT
 # URL: http://kernel.org/pub/software/scm/cogito/README
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: git
 
 name=cogito
@@ -8,7 +8,7 @@ version=0.17.2
 release=1
 source=(http://kernel.org/pub/software/scm/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 
 	make prefix=/usr

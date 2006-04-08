@@ -1,6 +1,6 @@
-# Description: Documentation generation tool 
+# Description: Documentation generation tool
 # URL: http://www.doxygen.org
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=doxygen
 version=1.4.6

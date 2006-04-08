@@ -1,7 +1,7 @@
 # Description: Network Sniffer with nice GTK+ UI
 # URL: http://www.ethereal.com
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey de
 # Packager: Martin Opel, mo at obbl-net dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: glib gtk libpcap
 # Nice to have: libpcre
 
@@ -10,7 +10,7 @@ version=0.10.14
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 	export LDFLAGS="-L$PKG/usr/lib $LDFLAGS"
 	./configure --prefix=/usr --disable-nls --enable-snmp --enable-gtk2
@@ -24,4 +24,4 @@ build () {
 	install -m 644 \
 		image/{elogo3d48x48,hi??-app-ethereal,lo??-app-ethereal}.png \
 		$PKG/usr/share/$name/pixmaps
-} 
+}

@@ -1,6 +1,6 @@
 # Description: Directory content manager
 # URL: http://www.kernel.org/pub/software/scm/git/
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: openssl, curl
 
 name=git
@@ -8,7 +8,7 @@ version=1.2.6
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 
 	make CFLAGS="$CFLAGS" prefix=/usr

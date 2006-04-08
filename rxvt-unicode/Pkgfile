@@ -1,6 +1,6 @@
 # Description: rxvt fork with unicode and xft support
 # URL: http://software.schmorp.de/#rxvt-unicode
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: x11, perl
 
 name=rxvt-unicode
@@ -8,7 +8,7 @@ version=7.7
 release=1
 source=(http://dist.schmorp.de/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 
 	./configure --prefix=/usr \

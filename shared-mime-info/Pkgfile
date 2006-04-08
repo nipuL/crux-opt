@@ -1,6 +1,6 @@
 # Description: core database of common types
 # URL: http://freedesktop.org/Software/shared-mime-info
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: glib,libxml2,p5-xml-parser
 # Group: gnome
 

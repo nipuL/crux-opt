@@ -1,6 +1,6 @@
 # Description: xxd creates a hex dump of a given file or standard input.
 # URL: N/A
-# Maintainer: Tilman Sauerbeck tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=xxd
 version=1.10

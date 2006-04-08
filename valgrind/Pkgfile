@@ -1,13 +1,13 @@
 # Description: An open-source memory debugger for x86-GNU/Linux
 # URL: http://valgrind.org
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=valgrind
 version=3.1.1
 release=1
 source=(http://$name.org/downloads/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 	./configure --prefix=/usr
 	make

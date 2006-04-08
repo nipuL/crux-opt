@@ -1,6 +1,6 @@
 # Description: A cursed frontend to the giFT daemon.
 # URL: http://www.nongnu.org/giftcurs/
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: gift
 
 name=giftcurs
@@ -9,7 +9,7 @@ release=2
 source=(http://savannah.nongnu.org/download/$name/giFTcurs-$version.tar.gz \
         $name.diff)
 
-build () {
+build() {
 	cd giFTcurs-$version
 
 	# don't mess with my term's title if you don't set it back!

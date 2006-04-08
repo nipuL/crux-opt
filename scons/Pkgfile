@@ -1,6 +1,6 @@
 # Description: Software construction tool
 # URL: http://www.scons.org
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: python
 
 name=scons

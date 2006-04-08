@@ -1,6 +1,6 @@
 # Description: Sync local time against a time server.
 # URL: N/A
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=netdate
 version=1.2
@@ -8,7 +8,7 @@ release=3
 source=(ftp://code-monkey.de/pub/$name/$name-$version.tar.bz2 \
         ftp://code-monkey.de/pub/$name/$name-$version.patch)
 
-build () {
+build() {
 	cd $name-$version
 	patch -Np1 -i ../$name-$version.patch
 

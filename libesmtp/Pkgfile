@@ -1,6 +1,6 @@
 # Description: A library for posting electronic mail
 # URL: http://www.stafford.uklinux.net/libesmtp/
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: openssl
 
 name=libesmtp
@@ -8,7 +8,7 @@ version=1.0.4
 release=1
 source=(http://www.stafford.uklinux.net/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 	./configure \
 		--prefix=/usr \

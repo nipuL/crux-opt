@@ -1,15 +1,15 @@
 # Description: Patch management tool
 # URL: http://savannah.nongnu.org/projects/quilt
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: diffstat
 
 name=quilt
 version=0.44
 release=1
 source=(http://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz \
-       $name.diff)
+        $name.diff)
 
-build () {
+build() {
 	cd $name-$version
 
 	patch -Np1 -i ../$name.diff

@@ -1,6 +1,6 @@
 # Description: Sophisticated command line based FTP client
 # URL: http://lftp.yar.ru/
-# Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: openssl
 
 name=lftp
@@ -8,7 +8,7 @@ version=3.4.4
 release=1
 source=(http://ftp.yars.free.net/$name/$name-$version.tar.bz2)
 
-build () {
+build() {
 	cd $name-$version
 	./configure --prefix=/usr --disable-nls --with-openssl=/usr
 
