@@ -1,16 +1,16 @@
 # Description: Sync local time against a time server.
-# URL: 
+# URL: N/A
 # Maintainer: Tilman Sauerbeck, tilman at code-monkey dot de
 
 name=netdate
 version=1.2
 release=3
-source=(ftp://code-monkey.de/pub/netdate/netdate-1.2.tar.bz2 \
-        ftp://code-monkey.de/pub/netdate/netdate-1.2.patch)
+source=(ftp://code-monkey.de/pub/$name/$name-$version.tar.bz2 \
+        ftp://code-monkey.de/pub/$name/$name-$version.patch)
 
 build () {
 	cd $name-$version
-	patch -Np1 -i ../$name-1.2.patch
+	patch -Np1 -i ../$name-$version.patch
 
 	make
 	make DESTDIR=$PKG install
