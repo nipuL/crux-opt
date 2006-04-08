@@ -55,8 +55,5 @@ build() {
     install -D -m 00755 ../postfix.rc $PKG/etc/rc.d/postfix
 
     touch $PKG/etc/postfix/{aliases,access,canonical,relocated,transport,virtual}.db
-    touch $PKG/etc/postfix/relay-domains
-    touch $PKG/etc/postfix/header-checks
-    touch $PKG/etc/postfix/body-checks
-    touch $PKG/etc/postfix/mime-header-checks
+    touch $PKG/etc/postfix/{relay_domains,body_checks,mime_header_checks}
 }

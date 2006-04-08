@@ -5,21 +5,20 @@ drwxr-xr-x	root/root	etc/postfix/
 -rw-r--r--	root/root	etc/postfix/access.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/aliases
 -rw-r--r--	root/root	etc/postfix/aliases.db (EMPTY)
--rw-r--r--	root/root	etc/postfix/body-checks (EMPTY)
+-rw-r--r--	root/root	etc/postfix/body_checks (EMPTY)
 -rw-r--r--	root/root	etc/postfix/canonical
 -rw-r--r--	root/root	etc/postfix/canonical.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/generic
--rw-r--r--	root/root	etc/postfix/header-checks (EMPTY)
 -rw-r--r--	root/root	etc/postfix/header_checks
 -rw-r--r--	root/root	etc/postfix/main.cf
 -rw-r--r--	root/root	etc/postfix/main.cf.default
 -rw-r--r--	root/root	etc/postfix/makedefs.out
 -rw-r--r--	root/root	etc/postfix/master.cf
--rw-r--r--	root/root	etc/postfix/mime-header-checks (EMPTY)
+-rw-r--r--	root/root	etc/postfix/mime_header_checks (EMPTY)
 -rwxr-xr-x	root/root	etc/postfix/post-install
 -rw-r--r--	root/root	etc/postfix/postfix-files
 -rwxr-xr-x	root/root	etc/postfix/postfix-script
--rw-r--r--	root/root	etc/postfix/relay-domains (EMPTY)
+-rw-r--r--	root/root	etc/postfix/relay_domains (EMPTY)
 -rw-r--r--	root/root	etc/postfix/relocated
 -rw-r--r--	root/root	etc/postfix/relocated.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/transport
