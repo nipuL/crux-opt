@@ -1,7 +1,7 @@
 REQUIREMENTS
 
     GnuPG requires a sendmail compatiblity link '/usr/sbin/sendmail'. Be
-    sure that you have installed on of the following:
+    sure that you have installed one of the following:
 
 	- esmtp
 	- masqmail
