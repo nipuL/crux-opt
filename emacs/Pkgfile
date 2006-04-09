@@ -1,6 +1,6 @@
-# Description: An extensible, customizable, self-documenting real-time display editor
+# Description: an extensible, customizable, self-documenting real-time display editor
 # URL:         http://www.gnu.org/software/emacs/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  sten, nick dot steeves at shaw dot ca
 # Depends on:  x11, libtiff
 
 name=emacs
