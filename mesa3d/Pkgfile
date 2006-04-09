@@ -5,10 +5,9 @@
 # Depends on: x11, libdrm, freeglut
 
 name=mesa3d
-version=6.4.1
-release=2
+version=6.4.2
+release=1
 source=(http://dl.sourceforge.net/$name/MesaLib-$version.tar.gz \
-    http://dl.sourceforge.net/$name/MesaDemos-$version.tar.gz \
     libGL.la)
 
 build() {
@@ -19,7 +18,8 @@ build() {
     bin/installmesa $PKG/usr
  
     # provided by x11 / freeglut
-    for f in gl.h glext.h glu.h glx.h glxext.h osmesa.h ; do
+    for f in gl.h glext.h glu.h glx.h glxext.h osmesa.h GLwDrawA.h GLwDrawAP.h\
+        GLwMDrawA.h GLwMDrawAP.h glfbdev.h; do
         rm $PKG/usr/include/GL/$f
     done
     cp $SRC/libGL.la $PKG/usr/lib
