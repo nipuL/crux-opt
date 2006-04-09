@@ -135,22 +135,21 @@ lrwxrwxrwx	root/root	usr/lib/libgaim-remote.so -> libgaim-remote.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgaim-remote.so.0 -> libgaim-remote.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgaim-remote.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/perl5/
-drwxr-xr-x	root/root	usr/lib/perl5/5.8.7/
-drwxr-xr-x	root/root	usr/lib/perl5/5.8.7/linux/
--r--r--r--	root/root	usr/lib/perl5/5.8.7/linux/Gaim.pm
-drwxr-xr-x	root/root	usr/lib/perl5/5.8.7/linux/auto/
-drwxr-xr-x	root/root	usr/lib/perl5/5.8.7/linux/auto/Gaim/
--r--r--r--	root/root	usr/lib/perl5/5.8.7/linux/auto/Gaim/Gaim.bs (EMPTY)
--r-xr-xr-x	root/root	usr/lib/perl5/5.8.7/linux/auto/Gaim/Gaim.so
--r--r--r--	root/root	usr/lib/perl5/5.8.7/linux/auto/Gaim/autosplit.ix
+drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/
+drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/linux/
+-r--r--r--	root/root	usr/lib/perl5/5.8.8/linux/Gaim.3pm
+-r--r--r--	root/root	usr/lib/perl5/5.8.8/linux/Gaim.pm
+drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/linux/auto/
+drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/linux/auto/Gaim/
+-r--r--r--	root/root	usr/lib/perl5/5.8.8/linux/auto/Gaim/Gaim.bs (EMPTY)
+-r-xr-xr-x	root/root	usr/lib/perl5/5.8.8/linux/auto/Gaim/Gaim.so
+-r--r--r--	root/root	usr/lib/perl5/5.8.8/linux/auto/Gaim/autosplit.ix
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gaim.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gaim-remote.1.gz
 -rw-r--r--	root/root	usr/man/man1/gaim.1.gz
-drwxr-xr-x	root/root	usr/man/man3/
--r--r--r--	root/root	usr/man/man3/Gaim.3pm.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/gaim.desktop

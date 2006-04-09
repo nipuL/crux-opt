@@ -8,7 +8,7 @@
 
 name=gaim
 version=1.5.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build () {
@@ -23,6 +23,7 @@ build () {
 		--disable-gevolution
 	make
 	make DESTDIR=$PKG install
+	mv $PKG/{Gaim.*,auto} $PKG/usr/lib/perl5/*/linux/
 	find $PKG -name perllocal.pod -exec rm -f '{}' \;
 	find $PKG -name .packlist -exec rm -f '{}' \;
 } 
