@@ -1,8 +1,8 @@
 
 REQUIREMENTS
     
-    To send email notifications smartd needs a mail binary. The contrib
-    port mailx is recommend for that purpose.
+    To send email notifications smartd needs a mail binary. The opt port
+    mailx is recommend for that purpose.
 
 PRE-INSTALL
 
