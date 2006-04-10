@@ -1,0 +1,25 @@
+# Description: Utilities to control and monitor S.M.A.R.T. hard drives
+# URL: http://smartmontools.sourceforge.net/
+# Maintainer: Simon Gloßner, viper at hometux dot de
+# Packager: Jürgen Daubert, juergen dot daubert at t-online dot de
+
+name=smartmontools
+version=5.33
+release=1
+source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz \
+        smartd)
+
+build () {
+    cd $name-$version
+
+    ./configure \
+	--prefix=/usr \
+	--sysconfdir=/etc
+    make
+    make DESTDIR=$PKG install
+
+    install -m 755 ../smartd $PKG/etc/rc.d
+
+    rm -r $PKG/usr/share
+    rm -r $PKG/etc/rc.d/init.d
+}
