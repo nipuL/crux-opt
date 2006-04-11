@@ -10,15 +10,17 @@
 
 
 name=allegro
-version=4.1.18
+version=4.2.0
 release=1
 source=("http://dl.sourceforge.net/sourceforge/alleg/allegro-$version.tar.gz")
-build () {
-	cd "allegro-$version"
-	mkdir -p "$PKG/usr";
-	./configure --prefix="/usr"
-	make MAKEINFO="true" prefix="/usr" \
-		docs lib modules programs 
-	make MAKEINFO="true" prefix="$PKG/usr" \
-		install-man install-headers install-programs install-lib
+
+build() {
+    cd "allegro-$version"
+    mkdir -p "$PKG/usr";
+    ./configure --prefix="/usr" \
+        --enable-exclopts=i686
+    make MAKEINFO="true" prefix="/usr" \
+        lib modules programs 
+    make MAKEINFO="true" prefix="$PKG/usr" \
+        install-man install-headers install-programs install-lib
 }
