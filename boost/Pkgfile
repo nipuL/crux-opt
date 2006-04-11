@@ -7,10 +7,12 @@
 name=boost
 version=1.33.1
 release=1
-source=(http://dl.sourceforge.net/sourceforge/boost/boost_1_33_1.tar.bz2)
+source=(http://dl.sourceforge.net/sourceforge/boost/boost_1_33_1.tar.bz2 \
+    boost-1.33.1-gcc4.patch)
 
 build() {
     cd ${name}_1_33_1
+    patch -p1 -i $SRC/boost-1.33.1-gcc4.patch
     cd tools/build/jam_src
     ./build.sh gcc
     cd -

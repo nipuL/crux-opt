@@ -5,17 +5,18 @@
 # Depends on: imlib2, lame, libsdl, libvorbis, libogg, libxvid, faac
 
 name=ffmpeg
-version=20050806
+version=20060410
 release=1
-source=(http://www2.mplayerhq.hu/MPlayer/cvs/FFMpeg-$version.tar.bz2)
+source=(http://www2.mplayerhq.hu/MPlayer/cvs/FFMpeg-20050806.tar.bz2 \
+    ffmpeg-20060410.patch)
 
 build() {
-	cd FFMpeg-$version
+	cd FFMpeg-20050806
+    patch -p0 -i $SRC/ffmpeg-20060410.patch
 	./configure \
 		--prefix=/usr \
 		--enable-mp3lame \
 		--enable-libogg \
-		--enable-ogg \
 		--enable-vorbis \
 		--enable-a52 \
 		--enable-xvid \
@@ -24,8 +25,7 @@ build() {
 		--enable-faac \
 		--enable-gpl \
 		--enable-shared \
-		--enable-pp \
-		--enable-shared-pp
+		--enable-pp
 	make
 	( cd doc; make ffmpeg.1 ffserver.1 ffplay.1 )
 	make  install installlib \

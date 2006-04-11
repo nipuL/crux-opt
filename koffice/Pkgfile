@@ -5,16 +5,14 @@
 # Depends on: kdebase, imagemagick, libwv2, python, aspell, libwpd, wordnet, tetex
 
 name=koffice
-version=1.4.2
-release=4
-source=(http://download.kde.org/stable/$name-$version/src/$name-$version.tar.bz2 \
-ftp://ftp.kde.org/pub/kde/security_patches/post-1.3-koffice-CAN-2005-3193.diff)
+version=1.5.0
+release=1
+source=(http://download.kde.org/stable/$name-$version/src/$name-$version.tar.bz2)
 
 build(){
     cd $name-$version
-    patch -p0 < $SRC/post-1.3-koffice-CAN-2005-3193.diff
     ./configure --prefix=/usr \
-        --enable-final
+        --disable-debug
     make
     make DESTDIR=$PKG install
     find $PKG/usr/share/doc/HTML/* ! -wholename "*HTML/en*" -delete

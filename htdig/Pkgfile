@@ -1,0 +1,17 @@
+# Description: a complete HTML indexing and searching system
+# URL: http://www.htdig.org/
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: 
+
+name=htdig
+version=3.2.0b6
+release=1
+source=(http://www.htdig.org/files/htdig-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+        --disable-debug
+    make
+    make DESTDIR=$PKG install
+}
