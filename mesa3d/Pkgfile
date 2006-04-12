@@ -6,7 +6,7 @@
 
 name=mesa3d
 version=6.4.2
-release=1
+release=2
 source=(http://dl.sourceforge.net/$name/MesaLib-$version.tar.gz \
     libGL.la)
 
@@ -19,7 +19,7 @@ build() {
  
     # provided by x11 / freeglut
     for f in gl.h glext.h glu.h glx.h glxext.h osmesa.h GLwDrawA.h GLwDrawAP.h\
-        GLwMDrawA.h GLwMDrawAP.h glfbdev.h; do
+        GLwMDrawA.h GLwMDrawAP.h; do
         rm $PKG/usr/include/GL/$f
     done
     cp $SRC/libGL.la $PKG/usr/lib

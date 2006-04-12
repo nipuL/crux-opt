@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	usr/include/GL/
 -rw-r--r--	root/root	usr/include/GL/fxmesa.h
 -rw-r--r--	root/root	usr/include/GL/ggimesa.h
 -rw-r--r--	root/root	usr/include/GL/gl_mangle.h
+-rw-r--r--	root/root	usr/include/GL/glfbdev.h
 -rw-r--r--	root/root	usr/include/GL/glu_mangle.h
 -rw-r--r--	root/root	usr/include/GL/glx_mangle.h
 -rw-r--r--	root/root	usr/include/GL/mesa_wgl.h
