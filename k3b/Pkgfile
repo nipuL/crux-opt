@@ -5,8 +5,8 @@
 # Depends on: kdelibs, cdrtools, cdparanoia, cdrdao, taglib, flac, normalize, dvd+rw-tools, lame, libsndfile, ffmpeg, libmusicbrainz, libsamplerate
 
 name=k3b
-version=0.12.13
-release=2
+version=0.12.15
+release=1
 source=(http://dl.sourceforge.net/sourceforge/k3b/$name-$version.tar.bz2)
 
 build() 
