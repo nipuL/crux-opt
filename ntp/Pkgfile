@@ -5,9 +5,9 @@
 # Depends on: openssl
 
 name=ntp
-version=4.2.0
-release=4
-source=(http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/$name-$version.tar.gz \
+version=4.2.0a
+release=1
+source=(http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/snapshots/ntp-stable/2006/02/ntp-stable-4.2.0a-20060224.tar.gz \
 	http://www.danm.de/files/src/ntp/doc/ntp-doc.tar.gz \
 	ntpd \
 	ntp.conf)
@@ -19,7 +19,7 @@ build () {
 		$PKG/var/lib/ntp/stats \
 		$PKG/usr/man/{man8,man5}
 
-	cd $name-$version
+	cd ntp-stable-4.2.0a-20060224
 
 	AUTOCONF=true \
 	AUTOMAKE=true \
