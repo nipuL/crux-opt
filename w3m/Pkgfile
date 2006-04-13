@@ -1,6 +1,6 @@
 # Description: Pager that can also be used as a text-based web browser
 # URL: http://w3m.sourceforge.net/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Han Boetes, han at mijncomputer dot dl
 # Depends on: boehm-gc
 

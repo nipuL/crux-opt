@@ -1,7 +1,7 @@
 # Description: Displays a progress bar in command line pipes
 # URL: http://clpbar.sourceforge.net/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: 
 
 name=bar

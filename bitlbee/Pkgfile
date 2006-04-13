@@ -1,7 +1,7 @@
 # Description: IRC proxy to connect to ICQ, AOL, MSN and Jabber
 # URL: http://www.bitlbee.org/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: glib, openssl
 
 name=bitlbee

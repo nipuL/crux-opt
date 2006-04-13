@@ -1,7 +1,7 @@
 # Description: Encrypting filesystem for FUSE
 # URL: http://arg0.net/users/vgough/encfs.html
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: fuse, openssl, rlog
 
 name=encfs

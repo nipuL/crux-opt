@@ -1,7 +1,7 @@
 # Description: Generates an HTML index from port trees
 # URL: http://www.karsikkopuu.net/crux/scripts/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:
 
 name=portspage

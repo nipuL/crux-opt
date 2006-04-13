@@ -1,7 +1,7 @@
 # Description: Extracts RAR archives
 # URL: http://www.rarlab.com/rar_add.htm
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:
 
 name=unrar

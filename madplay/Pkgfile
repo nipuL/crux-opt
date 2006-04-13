@@ -1,6 +1,6 @@
 # Description: High-quality MPEG Audio Decoder
 # URL: http://www.underbit.com/products/mad/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Robert McMeekin, rrm3 at rrm3 dot org
 # Depends on: libid3tag, libmad
 

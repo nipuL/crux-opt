@@ -1,7 +1,7 @@
 # Description: Chroot for dynamically linked applications
 # URL: http://chrootsafe.sourceforge.net/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:
 
 name=chroot_safe

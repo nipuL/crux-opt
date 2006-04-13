@@ -1,6 +1,6 @@
 # Description: Terminal based IRC client for UNIX systems
 # URL: http://www.irssi.org/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Daniel K. Gebhart, dkg at con-fuse dot org
 # Depends on: glib
 # Group: ipv6

@@ -1,7 +1,7 @@
 # Description: fast (de)compression utility
 # URL: http://www.oberhumer.com/opensource/lzop/
 # Packager: Martin Opel, mo at obbl-net dot de
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: lzo
 
 name=lzop

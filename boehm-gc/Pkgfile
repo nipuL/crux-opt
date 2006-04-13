@@ -1,6 +1,6 @@
 # Description: Garbage collection and memory leak detection for C and C++
 # URL: http://www.hpl.hp.com/personal/Hans_Boehm/gc/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Han Boetes, han at mijncomputer dot dl
 # Depends on:
 

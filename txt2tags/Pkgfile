@@ -1,7 +1,7 @@
 # Description: Simple text formatting tool
 # URL: http://txt2tags.sourceforge.net/
-# Maintainer: Jukka Heino, jukka at karsikkopuu dot net
-# Packager: Jukka Heino, jukka at karsikkopuu dot net
+# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: python
 
 name=txt2tags
