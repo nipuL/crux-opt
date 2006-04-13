@@ -169,6 +169,10 @@ Other extensions
     * needed for KPilot
         - KPilot syncronizes a Palm device with the Kontact infrastructure
 
+    htdig               (optional)
+    * used to index and search documentation in both the KDE Help
+      Center and KDevelop
+
 -------------------------------------------------------------------------------
 
 KDE base
