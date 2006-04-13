@@ -6,7 +6,7 @@
 
 name=jedit
 version=4.2
-release=3
+release=4
 source=(http://dl.sourceforge.net/sourceforge/jedit/jedit42install.jar)
 
 build() {
@@ -26,5 +26,6 @@ JAVA_HEAP_SIZE=32
 exec /usr/lib/java/bin/java -mx${JAVA_HEAP_SIZE}m ${JEDIT} -jar /usr/lib/jedit/jedit.jar $@
 EOF
 	chmod 0755 $PKG/usr/bin/jedit
+	chown root.root $PKG -R
 	}
 
