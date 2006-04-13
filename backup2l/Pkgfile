@@ -1,7 +1,7 @@
 # Description: Handy backup utility
 # URL: http://backup2l.sourceforge.net/
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 
 name=backup2l
 version=1.4

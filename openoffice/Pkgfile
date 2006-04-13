@@ -1,7 +1,7 @@
 # Description: A full featured cross platform office suite (binary)
 # URL: http://www.openoffice.org
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: x11, rpm2targz
 
 name=openoffice

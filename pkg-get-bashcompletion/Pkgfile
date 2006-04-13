@@ -1,7 +1,7 @@
 # Description: programmable bash completion for pkt-get
 # URL: http://www.varlock.com/blosxom.cgi/CruxProjects/pkgget/index.html
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: bash-completion, pkg-get
 
 name=pkg-get-bashcompletion

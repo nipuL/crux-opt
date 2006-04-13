@@ -1,5 +1,5 @@
 # Packager: Rune Stokka, rune at stokka dot no
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Description: Ant is a Java-based build tool.
 # URL: http://ant.apache.org
 # Depends on: j2sdk

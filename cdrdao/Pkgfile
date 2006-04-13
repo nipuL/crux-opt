@@ -1,7 +1,7 @@
 # Description: CD recording in DAO mode, for example VCDs  
 # URL: http://sourceforge.net/projects/cdrdao/
 # Packager: Michael Ablassmeier, michael.ablassmeier at holzkirchen dot by dot aok dot de 
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on: 
 
 name=cdrdao

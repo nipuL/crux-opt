@@ -1,7 +1,7 @@
 # Description: Automated Password Generator (standalone version)
 # URL: http://www.adel.nursat.kz/apg/
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on:
 
 name=apg

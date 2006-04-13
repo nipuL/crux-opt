@@ -1,6 +1,6 @@
 # Description: libmng - Mutliple Image Network Graphics 
 # URL: http://www.libmng.com
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: zlib, libjpeg, lcms
 

@@ -1,7 +1,7 @@
 # URL: ftp://ftp.ibiblio.org/pub/Linux/system/filesystems/dosfs/
 # Description: tools for creating and checking DOS filesystems in linux
 # Packager: Ryan B. Lynch, rlynch at strozllc dot com
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on:
 
 name=dosfstools

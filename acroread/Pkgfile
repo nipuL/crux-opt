@@ -1,6 +1,6 @@
 # Description: Portable Document Format Viewer with Search
 # Packager: Markus Ackermann, maol at symlink dot ch
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # URL: http://www.adobe.com/
 # Depends on: gtk, libstdc++-compat
 

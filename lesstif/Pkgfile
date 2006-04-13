@@ -1,6 +1,6 @@
 # Description: GUI toolkit, which is compatible with motif.
 # URL: http://www.lesstif.org/
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: x11
 

@@ -1,7 +1,7 @@
 # Description: Acrobat Reader plugin for Firefox
 # URL: http://www.adobe.com
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: acroread, firefox
 
 name=firefox-acroread-plugin

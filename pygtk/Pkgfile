@@ -1,5 +1,5 @@
 # Packager: Stoyan Zhekov, zhware at hotpop dot com
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Description: set of bindings for the GTK widget set
 # URL: http://www.daa.com.au/~james/software/pygtk/
 # Depends on: python, gtk

@@ -1,7 +1,7 @@
 # Description: Archive manager for ROX
 # URL: http://rox.sourceforge.net/phpwiki/index.php/Archive
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: rox-lib
 
 name=rox-archive

@@ -1,7 +1,7 @@
 # Description: Bluecurve engine for qt
 # URL: http://fedora.redhat.com
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: qt3
 
 name=qt-engines-bluecurve

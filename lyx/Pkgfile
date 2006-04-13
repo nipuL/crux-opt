@@ -1,7 +1,7 @@
 # Description: LaTeX enabled word processor 
 # URL: http://www.lyx.org
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: tetex, qt3, imagemagick
 
 name=lyx

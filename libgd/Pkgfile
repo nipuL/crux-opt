@@ -1,5 +1,5 @@
 # Description: gd libraries
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Jeremy Jones, jeremy at samnjack dot com
 # URL: http://www.boutell.com/gd/
 # Depends on: x11, libpng, libjpeg, freetype

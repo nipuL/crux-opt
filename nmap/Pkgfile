@@ -1,6 +1,6 @@
 # Description: Utility for network exploration or security auditing
 # URL: http://www.insecure.org/nmap
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=nmap

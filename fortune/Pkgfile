@@ -1,6 +1,6 @@
 # Description: Display a random fortune
 # URL: ftp://sunsite.cnlab-switch.ch/mirror/linux/sunsite/games/amusements/fortune/
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=fortune

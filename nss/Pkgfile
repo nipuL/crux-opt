@@ -1,7 +1,7 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL: http://www.mozilla.org/projects/security/pki/nss/
-# Maintainer: Simone Rota, sip at varlock dot com
-# Packager: Simone Rota, sip at varlock dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: zip
 
 name=nss
