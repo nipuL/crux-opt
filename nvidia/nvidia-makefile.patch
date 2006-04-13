@@ -1,16 +1,6 @@
-diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/Makefile NVIDIA-Linux-x86-1.0-7676-pkg0/Makefile
---- NVIDIA-Linux-x86-1.0-7676-pkg0.orig/Makefile	2005-07-29 15:30:44.000000000 -0500
-+++ NVIDIA-Linux-x86-1.0-7676-pkg0/Makefile	2005-08-26 08:36:42.736205664 -0500
-@@ -95,4 +95,4 @@
- 	@echo -n "      "
- 	cp -r usr/share/doc/* ${DOCDIR}
- 	@echo -n "      "
--	/sbin/ldconfig
-+	#/sbin/ldconfig
-diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild NVIDIA-Linux-x86-1.0-7676-pkg0/usr/src/nv/Makefile.kbuild
---- NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild	2005-07-29 15:30:43.000000000 -0500
-+++ NVIDIA-Linux-x86-1.0-7676-pkg0/usr/src/nv/Makefile.kbuild	2005-08-26 08:36:42.736205664 -0500
-@@ -255,10 +255,10 @@
+--- Makefile.kbuild.orig	2006-04-13 11:14:18.437632472 -0500
++++ Makefile.kbuild	2006-04-13 11:15:28.789937296 -0500
+@@ -269,10 +269,10 @@
  #
  
  suser-sanity-check:
@@ -23,7 +13,7 @@ diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild NVIDIA-
  
  gcc-sanity-check:
  	@if ! $(CONFTEST) cc_sanity_check full_output; then exit 1; fi
-@@ -293,9 +293,9 @@
+@@ -311,9 +311,9 @@
  #
  
  module-install: suser-sanity-check module
@@ -36,7 +26,7 @@ diff -urN NVIDIA-Linux-x86-1.0-7676-pkg0.orig/usr/src/nv/Makefile.kbuild NVIDIA-
  
  #
  # This target builds, then installs, then creates device nodes and inserts
-@@ -303,8 +303,8 @@
+@@ -321,8 +321,8 @@
  #
  
  package-install: module-install rmmod-sanity-check
