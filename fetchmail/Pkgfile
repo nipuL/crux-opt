@@ -4,14 +4,12 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.2
-release=2
-source=(http://download.berlios.de/$name/$name-$version.tar.bz2 \
-	$name-$version.patch)
+version=6.3.4
+release=1
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    patch -p0 < ../$name-$version.patch
     ./configure --prefix=/usr --with-ssl=/usr --disable-nls
     make
     make DESTDIR=$PKG install
