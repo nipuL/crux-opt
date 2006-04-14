@@ -4,7 +4,7 @@
 # Depends on:  expat, db, gdbm
 
 name=apr
-version=0.9.7
+version=0.9.12
 release=1
 source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
         http://www.apache.org/dist/$name/$name-util-$version.tar.bz2)
