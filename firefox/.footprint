@@ -2700,6 +2700,7 @@ drwxr-xr-x	root/root	usr/include/firefox/widget/
 drwxr-xr-x	root/root	usr/include/firefox/windowwatcher/
 -rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsIAuthPromptWrapper.h
 -rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsIDialogParamBlock.h
+-rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsINonBlockingAlertService.h
 -rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsIPromptService.h
 -rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsIWindowWatcher.h
 -rw-r--r--	root/root	usr/include/firefox/windowwatcher/nsPIPromptService.h
@@ -4108,6 +4109,7 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsINativeAppSupport.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsINativeScrollbar.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsINetUtil.idl
+-rw-r--r--	root/root	usr/share/idl/firefox/nsINonBlockingAlertService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIOCSPResponder.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIObjectInputStream.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIObjectOutputStream.idl
