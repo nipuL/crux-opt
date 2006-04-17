@@ -1,0 +1,20 @@
+# Description: User space IEEE 802.1X/WPA supplicant (wireless client) 
+# URL:         http://hostap.epitest.fi/wpa_supplicant/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=wpa_supplicant
+version=0.4.8
+release=3
+source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    cp defconfig .config
+    echo "CONFIG_READLINE=y" >> .config
+    make
+    install -d $PKG/{usr/sbin,etc}
+    install wpa_{cli,passphrase,supplicant} $PKG/usr/sbin
+    echo -e "ctrl_interface=/var/run/wpa_supplicant\n" > $PKG/etc/wpa.conf
+    chmod 0600 $PKG/etc/wpa.conf
+}
