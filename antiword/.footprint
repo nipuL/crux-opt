@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/antiword/
 -rw-r--r--	root/root	usr/share/antiword/8859-1.txt
 -rw-r--r--	root/root	usr/share/antiword/8859-10.txt
+-rw-r--r--	root/root	usr/share/antiword/8859-11.txt
 -rw-r--r--	root/root	usr/share/antiword/8859-13.txt
 -rw-r--r--	root/root	usr/share/antiword/8859-14.txt
 -rw-r--r--	root/root	usr/share/antiword/8859-15.txt

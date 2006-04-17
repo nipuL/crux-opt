@@ -3,18 +3,12 @@
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
 
-# Tip: If you put the following entry in your mailcap file,
-# Some mailclients, like mutt, will extract text from .doc-files:
-# application/msword;antiword %s;copiousoutput
-
 name=antiword
-version=0.36.1
+version=0.37
 release=1
-
 source=(http://www.winfield.demon.nl/linux/$name-$version.tar.gz)
 
-build()
-{
+build() {
 	cd $name-$version
 	make GLOBAL_INSTALL_DIR=/usr/bin
 	mkdir -p $PKG/usr/bin $PKG/usr/share/$name $PKG/usr/man/man1
