@@ -1,8 +1,6 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/saslauthd
-drwxr-xr-x	root/root	etc/sasl/
-lrwxrwxrwx	root/root	etc/sasl/apps -> /usr/lib/sasl2
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/sasl/

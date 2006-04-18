@@ -6,11 +6,10 @@
 
 name=cyrus-sasl
 version=2.1.21
-release=3
+release=4
 source=(http://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
 	$name-$version-crypt.patch \
 	$name-$version-gcc4.patch \
-	$name-$version-plugin_path.patch \
         saslauthd)
 
 build(){
@@ -18,8 +17,6 @@ build(){
 
         # fix the crypt function
 	patch -p0 < $SRC/$name-$version-crypt.patch
-	# set the plugin path to '/etc/sasl/apps'
-	patch -p0 < $SRC/$name-$version-plugin_path.patch
 	# necessary to compile cyrus-sasl with gcc4
 	patch -p0 < $SRC/$name-$version-gcc4.patch
 
@@ -43,11 +40,10 @@ build(){
 	mkdir -p \
 	    $PKG/usr/lib/sasl2 \
 	    $PKG/var/sasl/saslauthd \
-	    $PKG/etc/{sasl,rc.d} \
+	    $PKG/etc/rc.d \
 	    $PKG/usr/man/man8 
 	
 	install -m 755 $SRC/saslauthd $PKG/etc/rc.d
-	ln -s /usr/lib/sasl2 $PKG/etc/sasl/apps
 	mv $PKG/usr/man/cat8/*.8 $PKG/usr/man/man8
 
 	rmdir $PKG/usr/man/cat8
