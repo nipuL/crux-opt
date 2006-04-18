@@ -1,5 +1,5 @@
---- wmii-2.5.2/cmd/wm/page.c	2006-02-01 18:30:37.000000000 +0100
-+++ wmii-2.5.2/cmd/wm/page.c	2006-02-01 18:31:24.000000000 +0100
+--- wmii-2.5.2/cmd/wm/page.c	2006-01-27 22:09:37.000000000 +0100
++++ wmii-2.5.2-new/cmd/wm/page.c	2006-04-18 23:04:07.000000000 +0200
 @@ -275,9 +275,6 @@
  	XTranslateCoordinates(dpy, f->win, root, wex, wey, &ex, &ey, &dummy);
  	if (blitz_ispointinrect(ex, ey, r))
