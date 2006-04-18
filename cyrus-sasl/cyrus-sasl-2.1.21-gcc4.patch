@@ -1,5 +1,5 @@
---- lib/client.c	2006-03-16 15:57:00.000000000 +0100
-+++ lib/client.c	2006-03-16 15:57:18.000000000 +0100
+--- cyrus-sasl-2.1.21/lib/client.c	2004-11-17 15:19:30.000000000 +0100
++++ cyrus-sasl-2.1.21-new/lib/client.c	2006-04-18 22:42:15.000000000 +0200
 @@ -61,7 +61,7 @@
  
  static cmech_list_t *cmechlist; /* global var which holds the list */

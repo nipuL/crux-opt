@@ -16,9 +16,9 @@ build(){
 	cd $name-$version
 
         # fix the crypt function
-	patch -p0 < $SRC/$name-$version-crypt.patch
+	patch -p1 < $SRC/$name-$version-crypt.patch
 	# necessary to compile cyrus-sasl with gcc4
-	patch -p0 < $SRC/$name-$version-gcc4.patch
+	patch -p1 < $SRC/$name-$version-gcc4.patch
 
 	./configure \
 	    --prefix=/usr \

@@ -1,6 +1,5 @@
-Index: saslauthd/auth_shadow.c
---- saslauthd/auth_shadow.c	2005-11-30 21:49:20.000000000 +0100
-+++ saslauthd/auth_shadow.c	2005-11-30 21:49:41.000000000 +0100
+--- cyrus-sasl-2.1.21/saslauthd/auth_shadow.c	2004-04-27 17:56:23.000000000 +0200
++++ cyrus-sasl-2.1.21-new/saslauthd/auth_shadow.c	2006-04-18 22:42:15.000000000 +0200
 @@ -45,6 +45,7 @@
  # include <time.h>
  # include <pwd.h>
@@ -9,4 +8,3 @@ Index: saslauthd/auth_shadow.c
  # ifndef HAVE_GETSPNAM
  
  # ifdef WITH_DES
-
