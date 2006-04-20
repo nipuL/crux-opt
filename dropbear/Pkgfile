@@ -4,9 +4,9 @@
 # Depends on:  zlib
 
 name=dropbear
-version=0.48
+version=0.48.1
 release=1
-source=(http://matt.ucc.asn.au/$name/$name-$version.tar.gz \
+source=(http://matt.ucc.asn.au/$name/releases/$name-$version.tar.gz \
         $name)
 
 build () {
