@@ -5,16 +5,12 @@
 
 name=gnupg
 version=1.4.3
-release=2
+release=3
 source=(ftp://ftp.gnupg.org/gcrypt/gnupg/$name-$version.tar.bz2 \
-	ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz \
-	$name-$version-mguard.patch)
+	ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz)
 
 build () {
     cd $name-$version
-
-    # necessary because of --enable-m-guard
-    patch -p1 < $SRC/$name-$version-mguard.patch
 
     zcat ../idea.c.gz > cipher/idea.c
 
@@ -23,7 +19,6 @@ build () {
 	--libexecdir=/usr/lib \
 	--enable-static-rnd=linux \
         --enable-dev-random \
-	--enable-m-guard \
         --disable-nls \
         --disable-ldap \
 	--enable-mailto
