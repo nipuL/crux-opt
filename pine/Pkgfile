@@ -1,7 +1,7 @@
 # Description: Tool for reading,sending, and managing electronic messages
 # URL:         http://www.washington.edu/pine/
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  openssl
-# Maintainer:  Per Lidén <per@fukt.bth.se>
 
 name=pine
 version=4.64

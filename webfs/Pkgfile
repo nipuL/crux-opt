@@ -1,6 +1,6 @@
 # Description: A simple HTTP server for static content
 # URL:         http://linux.bytesex.org/misc/webfs.html
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  openssl
 
 name=webfs

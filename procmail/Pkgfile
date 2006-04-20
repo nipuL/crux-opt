@@ -1,6 +1,6 @@
 # Description: Versatile e-mail processor
 # URL:         http://www.procmail.org/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 
 name=procmail
 version=3.22

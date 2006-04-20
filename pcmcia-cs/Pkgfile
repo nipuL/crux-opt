@@ -1,6 +1,6 @@
 # Description: Card Services for Linux
 # URL:         http://pcmcia-cs.sourceforge.net/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 
 name=pcmcia-cs
 version=3.2.8

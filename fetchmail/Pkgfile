@@ -1,6 +1,6 @@
 # Description: A remote-mail retrieval utility
 # URL:         http://fetchmail.berlios.de/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  openssl
 
 name=fetchmail

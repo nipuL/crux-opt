@@ -1,6 +1,6 @@
 # Description: A free and portable TrueType font rendering engine
 # URL:         http://www.freetype.org
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  zlib
 
 name=freetype

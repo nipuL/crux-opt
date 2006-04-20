@@ -1,6 +1,6 @@
 # Description: GTK+ based IRC client
 # URL:         http://www.xchat.org/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  openssl, gtk, perl
 
 name=xchat

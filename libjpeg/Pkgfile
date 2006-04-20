@@ -1,6 +1,6 @@
 # Description: Library of JPEG support functions.
 # URL:         http://www.ijg.org/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 
 name=libjpeg
 version=6b

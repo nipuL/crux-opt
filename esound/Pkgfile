@@ -1,6 +1,6 @@
 # Description: The Enlightened Sound Daemon
 # URL:         http://www.tux.org/~ricdude/EsounD.html
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 # Depends on:  audiofile
 
 name=esound

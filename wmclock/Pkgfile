@@ -1,6 +1,6 @@
 # Description: A Window Maker applet which displays date and time
 # URL: http://www.liquidmeme.net/WindowMaker/wmclock/
-# Maintainer: Per Lidén <per@fukt.bth.se>
+# Maintainer: Per Lidén, core-ports at crux dot nu
 # Depends on:
 
 name=wmclock

@@ -4,7 +4,7 @@
 # Depends on:  python, mysql
 
 name=mysql-python
-version=1.2.0
+version=1.2.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/MySQL-python-$version.tar.gz )
 

@@ -1,6 +1,6 @@
 # Description: Concurrent Versions System
 # URL:         https://www.cvshome.org/
-# Maintainer:  Per Lidén <per@fukt.bth.se>
+# Maintainer:  Per Lidén, core-ports at crux dot nu
 
 name=cvs
 version=1.11.20

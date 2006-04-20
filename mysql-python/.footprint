@@ -26,14 +26,8 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/MySQLdb/constants/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/converters.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/cursors.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/cursors.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/mxdatetimes.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/mxdatetimes.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/pytimes.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/pytimes.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/sets.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/sets.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/stringtimes.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/stringtimes.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/release.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/release.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/times.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/MySQLdb/times.pyc
 -rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/_mysql.so
