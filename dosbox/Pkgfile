@@ -1,11 +1,11 @@
 # Description: SDL-based DOS emulator for classic games
 # URL: http://dosbox.sourceforge.net
 # Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: Matt Housh, jaeger at morpheus dot net
+# Packager: 
 # Depends on: libsdl
 
 name=dosbox
-version=0.63
+version=0.65
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
