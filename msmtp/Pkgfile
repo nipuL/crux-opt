@@ -1,0 +1,18 @@
+# Description: An SMTP client suitable for use with mutt etc.
+# URL:         http://msmtp.sourceforge.net/
+# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:  
+
+name=msmtp
+version=1.4.5
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/info
+}
