@@ -5,7 +5,7 @@
 # Depends on: kdelibs, mplayer
 
 name=kmplayer
-version=0.9.1c
+version=0.9.2
 release=1
 source=(http://kmplayer.kde.org/pkgs/kmplayer-$version.tar.bz2)
 
