@@ -4,7 +4,7 @@
 # Depends on:  ncurses, zlib
 
 name=mysql
-version=5.0.20
+version=5.0.20a
 release=1
 source=(http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
