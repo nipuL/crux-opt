@@ -5,13 +5,11 @@
 # Depends on:
 
 name=pkg-get
-version=0.4.3
-release=2
-source=(http://www.varlock.com/files/$name-$version.tar.gz \
-	http://www.varlock.com/files/$name-$version-missingport.patch)
+version=0.4.4
+release=1
+source=(http://www.varlock.com/files/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 < ../$name-$version-missingport.patch
 	make PREFIX=$PKG/usr CFGDIR=$PKG/etc install
 }
