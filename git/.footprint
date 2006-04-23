@@ -3,11 +3,13 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git
 -rwxr-xr-x	root/root	usr/bin/git-add
 -rwxr-xr-x	root/root	usr/bin/git-am
+-rwxr-xr-x	root/root	usr/bin/git-annotate
 -rwxr-xr-x	root/root	usr/bin/git-apply
 -rwxr-xr-x	root/root	usr/bin/git-applymbox
 -rwxr-xr-x	root/root	usr/bin/git-applypatch
 -rwxr-xr-x	root/root	usr/bin/git-archimport
 -rwxr-xr-x	root/root	usr/bin/git-bisect
+-rwxr-xr-x	root/root	usr/bin/git-blame
 -rwxr-xr-x	root/root	usr/bin/git-branch
 -rwxr-xr-x	root/root	usr/bin/git-cat-file
 -rwxr-xr-x	root/root	usr/bin/git-check-ref-format
@@ -15,6 +17,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-checkout-index
 -rwxr-xr-x	root/root	usr/bin/git-cherry
 -rwxr-xr-x	root/root	usr/bin/git-cherry-pick
+-rwxr-xr-x	root/root	usr/bin/git-clean
 -rwxr-xr-x	root/root	usr/bin/git-clone
 -rwxr-xr-x	root/root	usr/bin/git-clone-pack
 -rwxr-xr-x	root/root	usr/bin/git-commit
@@ -23,6 +26,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-count-objects
 -rwxr-xr-x	root/root	usr/bin/git-cvsexportcommit
 -rwxr-xr-x	root/root	usr/bin/git-cvsimport
+-rwxr-xr-x	root/root	usr/bin/git-cvsserver
 -rwxr-xr-x	root/root	usr/bin/git-daemon
 -rwxr-xr-x	root/root	usr/bin/git-describe
 -rwxr-xr-x	root/root	usr/bin/git-diff
@@ -40,6 +44,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-hash-object
 -rwxr-xr-x	root/root	usr/bin/git-http-fetch
 -rwxr-xr-x	root/root	usr/bin/git-http-push
+-rwxr-xr-x	root/root	usr/bin/git-imap-send
 -rwxr-xr-x	root/root	usr/bin/git-index-pack
 -rwxr-xr-x	root/root	usr/bin/git-init-db
 -rwxr-xr-x	root/root	usr/bin/git-local-fetch
@@ -59,7 +64,9 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-merge-recursive
 -rwxr-xr-x	root/root	usr/bin/git-merge-resolve
 -rwxr-xr-x	root/root	usr/bin/git-merge-stupid
+-rwxr-xr-x	root/root	usr/bin/git-merge-tree
 -rwxr-xr-x	root/root	usr/bin/git-mktag
+-rwxr-xr-x	root/root	usr/bin/git-mktree
 -rwxr-xr-x	root/root	usr/bin/git-mv
 -rwxr-xr-x	root/root	usr/bin/git-name-rev
 -rwxr-xr-x	root/root	usr/bin/git-pack-objects
@@ -84,6 +91,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-rev-list
 -rwxr-xr-x	root/root	usr/bin/git-rev-parse
 -rwxr-xr-x	root/root	usr/bin/git-revert
+-rwxr-xr-x	root/root	usr/bin/git-rm
 -rwxr-xr-x	root/root	usr/bin/git-send-pack
 -rwxr-xr-x	root/root	usr/bin/git-sh-setup
 -rwxr-xr-x	root/root	usr/bin/git-shell
@@ -127,6 +135,7 @@ drwxr-xr-x	root/root	usr/share/git-core/templates/hooks/
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/post-update
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-applypatch
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-commit
+-rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-rebase
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/update
 drwxr-xr-x	root/root	usr/share/git-core/templates/info/
 -rw-r--r--	root/root	usr/share/git-core/templates/info/exclude

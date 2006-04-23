@@ -4,7 +4,7 @@
 # Depends on: openssl, curl
 
 name=git
-version=1.2.6
+version=1.3.0
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-$version.tar.bz2)
 
