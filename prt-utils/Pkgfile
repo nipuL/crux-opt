@@ -5,9 +5,9 @@
 # Depends on: prt-get
 
 name=prt-utils
-version=0.7.1
+version=0.8.0
 release=1
-source=(http://download.berlios.de/prt-utils/$name-$version.tar.gz)
+source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
