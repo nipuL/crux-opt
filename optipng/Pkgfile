@@ -1,0 +1,18 @@
+# Description: Advanced lossless PNG optimizer
+# URL:         http://www.cs.toronto.edu/~cosmin/pngtech/optipng/
+# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:  
+
+name=optipng
+version=0.5
+release=1
+source=(http://www.cs.toronto.edu/~cosmin/pngtech/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	cd src
+	sed -i "s/-O2/$CFLAGS/" scripts/gcc.mak
+	make -f scripts/gcc.mak
+	install -D -m 0755 $name $PKG/usr/bin/$name
+}
