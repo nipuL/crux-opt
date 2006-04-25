@@ -6,9 +6,9 @@
 # Nice to have: libpcre
 
 name=ethereal
-version=0.10.14
+version=0.99.0
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+source=(ftp://ftp.uni-kl.de/pub/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
