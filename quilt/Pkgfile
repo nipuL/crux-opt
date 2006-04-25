@@ -4,7 +4,7 @@
 # Depends on: diffstat
 
 name=quilt
-version=0.44
+version=0.45
 release=1
 source=(http://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz \
         $name.diff)
