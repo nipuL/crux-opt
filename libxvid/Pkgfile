@@ -4,7 +4,7 @@
 # Packager: 
 
 name=libxvid
-version=1.0.3
+version=1.1.0
 release=1
 source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
 
