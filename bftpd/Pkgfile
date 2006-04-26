@@ -3,7 +3,7 @@
 # Maintainer:  Per Lidén, core-ports at crux dot nu
 
 name=bftpd
-version=1.3
+version=1.4
 release=1
 source=(http://bftpd.sourceforge.net/downloads/src/bftpd-$version.tar.gz \
 	bftpd-$version-config.patch bftpd-$version-destdir.patch ftpd)
