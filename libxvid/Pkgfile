@@ -5,16 +5,16 @@
 
 name=libxvid
 version=1.1.0
-release=1
+release=2
 source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
 
-build () {
+build() {
     mkdir -p $PKG/usr/{include,lib}
     cd xvidcore-$version/build/generic/
     ./configure --prefix=/usr
     make
     make includedir=$PKG/usr/include libdir=$PKG/usr/lib install
-    ln -s libxvidcore.so.4.0 $PKG/usr/lib/libxvidcore.so
+    ln -s libxvidcore.so.4.1 $PKG/usr/lib/libxvidcore.so
     /sbin/ldconfig -n $PKG/usr/lib
 }
 
