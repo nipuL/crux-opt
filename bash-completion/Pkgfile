@@ -3,7 +3,7 @@
 # Description: Bash completion functions
 
 name=bash-completion
-version=20050721
+version=20060301
 release=1
 source=(http://www.caliban.org/files/bash/$name-$version.tar.gz init_bc)
 
