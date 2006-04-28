@@ -1,16 +1,20 @@
-# Description: Openbox - fast, lightweight, standards-compliant window manager
+# Description: Fast, lightweight, standards-compliant window manager
 # URL: http://www.icculus.org/openbox/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: x11, freetype, glib, expat, libxml2
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: x11, glib, libxml2, pango
 
 name=openbox
 version=3.3-rc2
-release=2
-source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz)
+release=3
+source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz \
+        pipedsplitgradient.diff)
 
 build() {
 	cd $name-$version
 	sed -i -e 's/pango_font_description_set_size/pango_font_description_set_absolute_size/' render/font.c
+
+	patch -Np0 -i $SRC/pipedsplitgradient.diff
+
 	./configure --prefix=/usr \
 		--disable-nls
 	make
