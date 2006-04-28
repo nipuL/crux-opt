@@ -4,7 +4,7 @@
 # Depends on:  x11
 
 name=evilwm
-version=0.99.24
+version=0.99.25
 release=1
 source=(http://www.6809.org.uk/$name/$name-$version.tar.gz \
         $name-config.patch)

@@ -1,6 +1,6 @@
-diff -Nru evilwm-0.99.24.orig/Makefile evilwm-0.99.24/Makefile
---- evilwm-0.99.24.orig/Makefile	2006-02-20 19:02:37.000000000 +0100
-+++ evilwm-0.99.24/Makefile	2006-02-20 19:02:48.000000000 +0100
+diff -Nru evilwm-0.99.25.orig/Makefile evilwm-0.99.25/Makefile
+--- evilwm-0.99.25.orig/Makefile	2006-04-27 16:09:35.000000000 +0200
++++ evilwm-0.99.25/Makefile	2006-04-27 16:09:47.000000000 +0200
 @@ -63,7 +63,7 @@
  #DEFINES += -DXDEBUG	# show some X calls
  
@@ -22,9 +22,9 @@ diff -Nru evilwm-0.99.24.orig/Makefile evilwm-0.99.24/Makefile
  	#gzip -9 $(prefix)/share/man/man1/evilwm.1
  
  dist:
-diff -Nru evilwm-0.99.24.orig/evilwm.1 evilwm-0.99.24/evilwm.1
---- evilwm-0.99.24.orig/evilwm.1	2006-02-20 19:02:37.000000000 +0100
-+++ evilwm-0.99.24/evilwm.1	2006-02-20 19:02:48.000000000 +0100
+diff -Nru evilwm-0.99.25.orig/evilwm.1 evilwm-0.99.25/evilwm.1
+--- evilwm-0.99.25.orig/evilwm.1	2006-04-27 16:09:35.000000000 +0200
++++ evilwm-0.99.25/evilwm.1	2006-04-27 16:09:47.000000000 +0200
 @@ -70,7 +70,7 @@
  bottom-right of screen.
  .IP I
@@ -34,9 +34,9 @@ diff -Nru evilwm-0.99.24.orig/evilwm.1 evilwm-0.99.24/evilwm.1
  Maximise current window vertically (toggle).
  .IP X
  Maximise current window (toggle).
-diff -Nru evilwm-0.99.24.orig/keymap.h evilwm-0.99.24/keymap.h
---- evilwm-0.99.24.orig/keymap.h	2006-02-20 19:02:37.000000000 +0100
-+++ evilwm-0.99.24/keymap.h	2006-02-20 19:02:48.000000000 +0100
+diff -Nru evilwm-0.99.25.orig/keymap.h evilwm-0.99.25/keymap.h
+--- evilwm-0.99.25.orig/keymap.h	2006-04-27 16:09:35.000000000 +0200
++++ evilwm-0.99.25/keymap.h	2006-04-27 16:09:47.000000000 +0200
 @@ -14,7 +14,7 @@
  #define KEY_LOWER	XK_Insert
  #define KEY_ALTLOWER	XK_KP_Insert
@@ -44,5 +44,5 @@ diff -Nru evilwm-0.99.24.orig/keymap.h evilwm-0.99.24/keymap.h
 -#define KEY_MAXVERT	XK_equal
 +#define KEY_MAXVERT	XK_v
  #define KEY_MAX		XK_x
- #define KEY_FIX		XK_f
- #define KEY_PREVDESK	XK_Left
+ #ifdef VWM
+ # define KEY_FIX		XK_f
