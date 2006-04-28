@@ -4,7 +4,7 @@
 # Depends on: alsa-lib
 
 name=alsa-oss
-version=1.0.10
+version=1.0.11
 release=1
 source=(ftp://ftp.alsa-project.org/pub/oss-lib/$name-$version.tar.bz2)
 

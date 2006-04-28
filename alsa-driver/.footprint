@@ -27,6 +27,7 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/acore/seq/oss/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd-page-alloc.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd-pcm.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd-rawmidi.ko
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd-rtctimer.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd-timer.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/acore/snd.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/drivers/
@@ -50,14 +51,12 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/drivers/vx/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-ak4114.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-ak4117.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-ak4xxx-adda.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-cs8427.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-i2c.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-tea6330t.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/ad1816a/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/ad1816a/snd-ad1816a-lib.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/ad1816a/snd-ad1816a.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/ad1848/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/ad1848/snd-ad1848-lib.ko
@@ -96,6 +95,7 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/sb/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/sb/snd-sb8-dsp.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/sb/snd-sb8.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/sb/snd-sbawe.ko
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/snd-adlib.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/snd-als100.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/snd-azt2320.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/snd-cmi8330.ko
@@ -124,6 +124,8 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ca0106/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ca0106/snd-ca0106.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/cs46xx/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/cs46xx/snd-cs46xx.ko
+drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/cs5535audio/
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/cs5535audio/snd-cs5535audio.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/echoaudio/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/echoaudio/snd-darla20.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/echoaudio/snd-darla24.ko
@@ -165,6 +167,7 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/rme9652/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/rme9652/snd-hdspm.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/rme9652/snd-rme9652.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/snd-ad1889.ko
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/snd-als300.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/snd-als4000.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/snd-atiixp-modem.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/snd-atiixp.ko
@@ -192,11 +195,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/vx222/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/vx222/snd-vx222.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ymfpci/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ymfpci/snd-ymfpci.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pcmcia/
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pcmcia/pdaudiocf/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pcmcia/pdaudiocf/snd-pdaudiocf.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pcmcia/vx/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pcmcia/vx/snd-vxpocket.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/synth/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/synth/emux/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/synth/emux/snd-emux-synth.ko
@@ -277,6 +275,7 @@ drwxr-xr-x	root/root	usr/include/sound/
 -rw-r--r--	root/root	usr/include/sound/tea6330t.h
 -rw-r--r--	root/root	usr/include/sound/timer.h
 -rw-r--r--	root/root	usr/include/sound/trident.h
+-rw-r--r--	root/root	usr/include/sound/typedefs.h
 -rw-r--r--	root/root	usr/include/sound/uda1341.h
 -rw-r--r--	root/root	usr/include/sound/util_mem.h
 -rw-r--r--	root/root	usr/include/sound/version.h
