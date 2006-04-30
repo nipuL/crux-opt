@@ -2,7 +2,7 @@
 # URL: http://wvware.sourceforge.net/
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
-# Depends on: libgsf, libpng, imagemagick
+# Depends on: libgsf, imagemagick
 
 name=libwv2
 version=0.2.2
