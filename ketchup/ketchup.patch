@@ -1,0 +1,12 @@
+diff -Nru ketchup-orig/ketchup ketchup/ketchup
+--- ketchup-orig/ketchup	2006-04-24 19:35:28.000000000 +0300
++++ ketchup/ketchup	2006-05-01 04:18:20.000000000 +0300
+@@ -728,7 +728,7 @@
+ except:
+     a = None
+ 
+-if os.listdir("."):
++if not a and os.listdir("."):
+     error("Can't find kernel version for non-empty directory")
+     sys.exit(-1)
+ 
