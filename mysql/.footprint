@@ -105,6 +105,7 @@ lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient_r.so.15 -> libmysqlclient_r.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/msql2mysql.1.gz
+-rw-r--r--	root/root	usr/man/man1/myisam_ftdump.1.gz
 -rw-r--r--	root/root	usr/man/man1/myisamchk.1.gz
 -rw-r--r--	root/root	usr/man/man1/myisamlog.1.gz
 -rw-r--r--	root/root	usr/man/man1/myisampack.1.gz
