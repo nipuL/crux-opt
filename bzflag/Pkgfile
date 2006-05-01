@@ -3,12 +3,12 @@
 # Maintainer: Daniel Walpole, daniel at walpole dot id dot au
 
 name=bzflag
-version=2.0.4
+version=2.0.6
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.20050930.tar.bz2)
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version.20050930
+	cd $name-$version
 	./configure 	--prefix=/usr
 	make
 	make DESTDIR=$PKG install
