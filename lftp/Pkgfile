@@ -4,7 +4,7 @@
 # Depends on: openssl
 
 name=lftp
-version=3.4.4
+version=3.4.6
 release=1
 source=(http://ftp.yars.free.net/$name/$name-$version.tar.bz2)
 
