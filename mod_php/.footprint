@@ -113,6 +113,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/pcre/pcrelib/
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_scanner.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_stringpiece.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcrecpp.h
+-rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcrecpparg.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcreposix.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucp.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucpinternal.h
