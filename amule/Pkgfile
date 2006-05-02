@@ -1,0 +1,20 @@
+# Description: An all-platform Edonkey client.
+# URL: http://www.amule.org/
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: wxgtk
+
+name=amule
+version=2.1.1
+release=1
+source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
+
+build() {
+	cd aMule-$version
+	export CFLAGS="${CFLAGS//-fstack-protector/}"
+	export CXXFLAGS="${CXXFLAGS//-fstack-protector/}"
+	./configure 	--prefix=/usr \
+			--disable-nls
+	make
+	make install DESTDIR=$PKG
+	rm -r $PKG/usr/{man/??,share/doc/}
+}
