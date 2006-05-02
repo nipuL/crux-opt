@@ -3,4 +3,5 @@
 3196b65d8c4416cad412a0c49d75c461  x11-6.9.0-linux_config.patch
 5527ad8177942a919981d4fba690879a  x11-6.9.0-xterm256.patch
 de85e59b8906f76a52ec9162ec6c0b63  x11r6.9.0-geteuid.diff
+d666925bfe3d76156c399091578579ae  x11r6.9.0-mitri.diff
 05f76e7c05dcda1dcb065e2f1eeaa88f  xdm
