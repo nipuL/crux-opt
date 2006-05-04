@@ -1,0 +1,15 @@
+# Description: Fast, lightweight, distributed Source Control Management system
+# URL:         http://www.selenic.com/mercurial/
+# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:  python
+
+name=mercurial
+version=0.8.1
+release=1
+source=(http://www.selenic.com/$name/release/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	python setup.py install --root=$PKG
+}
