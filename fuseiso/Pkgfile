@@ -5,14 +5,13 @@
 # Depends on: fuse
 
 name=fuseiso
-version=20051029
+version=20060107
 release=1
 source=(http://ubiz.ru/dm/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
     ./configure --prefix=/usr
-    touch linux/stat.h
     make
     make DESTDIR=$PKG install
 }
