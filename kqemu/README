@@ -11,7 +11,7 @@ When using udev, the device node is created automatically; add the following to
 /etc/udev/rules.d/10-custom.rules to allow all users of group 'qemu' to use
 kqemu:
 
-  KERNEL="kqemu", MODE="0660", GROUP="qemu"
+  KERNEL=="kqemu", MODE="0660", GROUP="qemu"
 
 Loading the kqemu kernel module is done with "modprobe kqemu major=0" This will
 cause the major number to be assigned dynamically.
