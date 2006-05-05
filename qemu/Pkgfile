@@ -1,14 +1,14 @@
-# Description: Fast CPU emulator and virtualizer
-# URL: http://fabrice.bellard.free.fr/qemu/
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
-# Packager: Jukka Heino, jukka dot heino at gmail dot com
-# Depends on: libsdl
+# Description:  Fast CPU emulator and virtualizer
+# URL:          http://fabrice.bellard.free.fr/qemu/
+# Maintainer:   Jukka Heino, jukka dot heino at gmail dot com
+# Packager:     Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:   libsdl
+# Nice to have: kqemu
 
 name=qemu
-version=0.8.0
-release=2
+version=0.8.1
+release=1
 source=(http://fabrice.bellard.free.fr/$name/$name-$version.tar.gz \
-	http://fabrice.bellard.free.fr/$name/kqemu-0.7.2.tar.gz \
 	$name-0.7.0-gcc4.patch \
 	$name-0.7.2-dyngen-check-stack-clobbers.patch \
 	$name-0.7.2-gcc4-opts.patch \
@@ -16,7 +16,6 @@ source=(http://fabrice.bellard.free.fr/$name/$name-$version.tar.gz \
 
 build() {
 	cd $name-$version
-	mv $SRC/kqemu .
 
 	patch -p1 -i $SRC/$name-0.7.0-gcc4.patch
 	patch -p1 -i $SRC/$name-0.7.2-dyngen-check-stack-clobbers.patch
@@ -24,16 +23,11 @@ build() {
 	patch -p1 -i $SRC/$name-0.8.0-gcc4-hacks.patch
 
 	./configure --prefix=/usr \
-		--enable-adlib \
-		--target-list=i386-softmmu \
-		--disable-gcc-check
-	make
+	            --enable-adlib \
+	            --target-list=i386-softmmu \
+	            --disable-gcc-check
 
-	sed -i 's:cd kqemu ; ./install.sh::' Makefile
-	make bindir=$PKG/usr/bin datadir=$PKG/usr/share/qemu \
-		docdir=$PKG/usr/share/doc mandir=$PKG/usr/man install
-	install -D -m 0755 kqemu/kqemu.ko \
-		$PKG/lib/modules/`uname -r`/misc/kqemu.ko
-	
+	make
+	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/doc
 }

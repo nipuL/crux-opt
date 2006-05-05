@@ -1,16 +1,7 @@
-drwxr-xr-x	root/root	lib/
-drwxr-xr-x	root/root	lib/modules/
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/misc/
--rwxr-xr-x	root/root	lib/modules/<kernel-version>/misc/kqemu.ko
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/qemu
 -rwxr-xr-x	root/root	usr/bin/qemu-img
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rwxr-xr-x	root/root	usr/man/man1/qemu-img.1.gz
--rwxr-xr-x	root/root	usr/man/man1/qemu.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/qemu/
 -rw-r--r--	root/root	usr/share/qemu/bios.bin
