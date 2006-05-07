@@ -4,8 +4,8 @@
 # Packager: 
 
 name=lsof
-version=4.76
-release=2
+version=4.77
+release=1
 source=(http://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/lsof_$version.tar.bz2)
 
 build() {
