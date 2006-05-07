@@ -3,11 +3,5 @@ README for xfig 3.2.x
 REQUIREMENTS
 1. Xaw3d
 
-PRE-INSTALL
-
 POST-INSTALL
 1. Append '*customization: -color' to ~/.Xdefaults
-
-PRECAUTION
-
-
