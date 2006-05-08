@@ -4,7 +4,7 @@
 # Depends on: glib, popt, pkg-config
 
 name=desktop-file-utils
-version=0.10
+version=0.11
 release=1
 source=(http://freedesktop.org/software/$name/releases/$name-$version.tar.gz)
 
