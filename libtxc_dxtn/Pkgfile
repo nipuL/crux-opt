@@ -3,15 +3,12 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=libtxc_dxtn
-version=050908
+version=060508
 release=1
-source=(http://homepage.hispeed.ch/rscheidegger/dri_experimental/$name$version.tar.gz \
-        $name.diff)
+source=(http://homepage.hispeed.ch/rscheidegger/dri_experimental/$name$version.tar.gz)
 
 build() {
 	cd $name
-
-	patch -Np1 -i ../$name.diff
 
 	make
 	make DESTDIR=$PKG install
