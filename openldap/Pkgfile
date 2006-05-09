@@ -8,50 +8,58 @@ name=openldap
 version=2.3.20
 distversion=stable-20060227
 release=1
-source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-stable/openldap-$distversion.tgz \
-	$name-config.patch \
-	slurpd \
-	slapd)
+source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-stable/$name-$distversion.tgz \
+	$name-config.patch slurpd slapd)
 
 build(){
 	cd $name-$version
-	patch -p0 < $SRC/$name-config.patch
+	patch -p0 -i $SRC/$name-config.patch
 
-	./configure --prefix=/usr 		--sysconfdir=/etc \
-		--libexecdir=/usr/sbin		--localstatedir=/var/openldap \
-		--disable-nls			--enable-syslog \
-		--with-threads			--with-tls \
-		--with-cyrus-sasl		--enable-spasswd \
-		--enable-dynamic		--enable-ipv6 \
-		--enable-modules		--enable-crypt \
-		--enable-rewrite		--enable-ldbm \
-		--with-ldbm-api=berkeley	--with-ldbm-type=btree \
-		--enable-bdb			--enable-hdb \
-		--enable-ldap			--enable-meta \
-		--enable-monitor		--enable-dnssrv \
-		--enable-null			--enable-perl \
-		--with-dyngroup 		--with-proxycache \
-		--enable-wrappers 		--enable-slurpd \
-		--enable-aci			--enable-shared
+	./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/sbin \
+		--localstatedir=/var/openldap \
+		--disable-nls \
+		--enable-syslog \
+		--with-threads \
+		--with-tls \
+		--with-cyrus-sasl \
+		--enable-spasswd \
+		--enable-dynamic \
+		--enable-ipv6 \
+		--enable-modules \
+		--enable-crypt \
+		--enable-rewrite \
+		--enable-ldbm \
+		--enable-ldbm-api=berkeley \
+		--enable-ldbm-type=btree \
+		--enable-bdb \
+		--enable-hdb \
+		--enable-ldap \
+		--enable-meta \
+		--enable-monitor \
+		--enable-dnssrv \
+		--enable-null \
+		--enable-perl \
+		--with-dyngroup \
+		--with-proxycache \
+		--enable-wrappers \
+		--enable-slurpd \
+		--enable-aci \
+		--enable-shared
 
 	make depend
 	make
-	make DESTDIR=$PKG install	
+	make DESTDIR=$PKG install   
 
 	sed -i -e "s|-L${PKG}/usr/lib||g" $PKG/usr/lib/*.la
 	/sbin/ldconfig -n $PKG/usr/lib
 
-	# compatiblity links
-	( cd $PKG/usr/lib; 
-	ln -s liblber.so liblber.so.2;
-	ln -s libldap.so libldap.so.2;
-	ln -s libldap_r.so libldap_r.so.2 ) || exit 1
-
-	( cd $PKG/usr/sbin; 
-	for binsymlink in slapadd slapcat slapdn slapindex slappasswd slaptest; do
-		rm -f $binsymlink;
-		ln -s slapd $binsymlink;
-	done ) || exit 1
+# compatiblity links
+	(cd $PKG/usr/lib; 
+	 ln -s liblber.so liblber.so.2;
+	 ln -s libldap.so libldap.so.2;
+	 ln -s libldap_r.so libldap_r.so.2) || exit 1
 
 	mkdir -p $PKG/etc/rc.d
 	install -m 755 $SRC/slapd $PKG/etc/rc.d/slapd

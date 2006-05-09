@@ -1,26 +1,21 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/openldap/
+-rw-------	root/root	etc/openldap/DB_CONFIG.example
 -rw-r--r--	root/root	etc/openldap/ldap.conf
 -rw-r--r--	root/root	etc/openldap/ldap.conf.default
 drwxr-xr-x	root/root	etc/openldap/schema/
 -r--r--r--	root/root	etc/openldap/schema/corba.schema
--r--r--r--	root/root	etc/openldap/schema/corba.schema.default
+-r--r--r--	root/root	etc/openldap/schema/core.ldif
 -r--r--r--	root/root	etc/openldap/schema/core.schema
--r--r--r--	root/root	etc/openldap/schema/core.schema.default
 -r--r--r--	root/root	etc/openldap/schema/cosine.schema
--r--r--r--	root/root	etc/openldap/schema/cosine.schema.default
 -r--r--r--	root/root	etc/openldap/schema/dyngroup.schema
--r--r--r--	root/root	etc/openldap/schema/dyngroup.schema.default
 -r--r--r--	root/root	etc/openldap/schema/inetorgperson.schema
--r--r--r--	root/root	etc/openldap/schema/inetorgperson.schema.default
 -r--r--r--	root/root	etc/openldap/schema/java.schema
--r--r--r--	root/root	etc/openldap/schema/java.schema.default
 -r--r--r--	root/root	etc/openldap/schema/misc.schema
--r--r--r--	root/root	etc/openldap/schema/misc.schema.default
 -r--r--r--	root/root	etc/openldap/schema/nis.schema
--r--r--r--	root/root	etc/openldap/schema/nis.schema.default
+-r--r--r--	root/root	etc/openldap/schema/openldap.ldif
 -r--r--r--	root/root	etc/openldap/schema/openldap.schema
--r--r--r--	root/root	etc/openldap/schema/openldap.schema.default
+-r--r--r--	root/root	etc/openldap/schema/ppolicy.schema
 -rw-------	root/root	etc/openldap/slapd.conf
 -rw-------	root/root	etc/openldap/slapd.conf.default
 drwxr-xr-x	root/root	etc/rc.d/
@@ -28,7 +23,7 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/slurpd
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/ldapadd
+lrwxrwxrwx	root/root	usr/bin/ldapadd -> ldapmodify
 -rwxr-xr-x	root/root	usr/bin/ldapcompare
 -rwxr-xr-x	root/root	usr/bin/ldapdelete
 -rwxr-xr-x	root/root	usr/bin/ldapmodify
@@ -46,23 +41,23 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/ldap_utf8.h
 -rw-r--r--	root/root	usr/include/slapi-plugin.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblber-2.2.so.7 -> liblber-2.2.so.7.0.19
--rw-r--r--	root/root	usr/lib/liblber-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/liblber-2.3.so.0 -> liblber-2.3.so.0.2.8
+-rw-r--r--	root/root	usr/lib/liblber-2.3.so.0.2.8
 -rw-r--r--	root/root	usr/lib/liblber.a
 -rw-r--r--	root/root	usr/lib/liblber.la
-lrwxrwxrwx	root/root	usr/lib/liblber.so -> liblber-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/liblber.so -> liblber-2.3.so.0.2.8
 lrwxrwxrwx	root/root	usr/lib/liblber.so.2 -> liblber.so
-lrwxrwxrwx	root/root	usr/lib/libldap-2.2.so.7 -> libldap-2.2.so.7.0.19
--rw-r--r--	root/root	usr/lib/libldap-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/libldap-2.3.so.0 -> libldap-2.3.so.0.2.8
+-rw-r--r--	root/root	usr/lib/libldap-2.3.so.0.2.8
 -rw-r--r--	root/root	usr/lib/libldap.a
 -rw-r--r--	root/root	usr/lib/libldap.la
-lrwxrwxrwx	root/root	usr/lib/libldap.so -> libldap-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/libldap.so -> libldap-2.3.so.0.2.8
 lrwxrwxrwx	root/root	usr/lib/libldap.so.2 -> libldap.so
-lrwxrwxrwx	root/root	usr/lib/libldap_r-2.2.so.7 -> libldap_r-2.2.so.7.0.19
--rw-r--r--	root/root	usr/lib/libldap_r-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/libldap_r-2.3.so.0 -> libldap_r-2.3.so.0.2.8
+-rw-r--r--	root/root	usr/lib/libldap_r-2.3.so.0.2.8
 -rw-r--r--	root/root	usr/lib/libldap_r.a
 -rw-r--r--	root/root	usr/lib/libldap_r.la
-lrwxrwxrwx	root/root	usr/lib/libldap_r.so -> libldap_r-2.2.so.7.0.19
+lrwxrwxrwx	root/root	usr/lib/libldap_r.so -> libldap_r-2.3.so.0.2.8
 lrwxrwxrwx	root/root	usr/lib/libldap_r.so.2 -> libldap_r.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
@@ -160,11 +155,6 @@ lrwxrwxrwx	root/root	usr/man/man3/ldap_free_urldesc.3.gz -> ldap_url.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_get_values_len.3.gz -> ldap_get_values.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_init.3.gz -> ldap_open.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_is_ldap_url.3.gz -> ldap_url.3.gz
-lrwxrwxrwx	root/root	usr/man/man3/ldap_kerberos_bind1.3.gz -> ldap_bind.3.gz
-lrwxrwxrwx	root/root	usr/man/man3/ldap_kerberos_bind1_s.3.gz -> ldap_bind.3.gz
-lrwxrwxrwx	root/root	usr/man/man3/ldap_kerberos_bind2.3.gz -> ldap_bind.3.gz
-lrwxrwxrwx	root/root	usr/man/man3/ldap_kerberos_bind2_s.3.gz -> ldap_bind.3.gz
-lrwxrwxrwx	root/root	usr/man/man3/ldap_kerberos_bind_s.3.gz -> ldap_bind.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_matchingrule2name.3.gz -> ldap_schema.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_matchingrule2str.3.gz -> ldap_schema.3.gz
 lrwxrwxrwx	root/root	usr/man/man3/ldap_matchingrule_free.3.gz -> ldap_schema.3.gz
@@ -234,11 +224,13 @@ drwxr-xr-x	root/root	usr/man/man5/
 lrwxrwxrwx	root/root	usr/man/man5/slapd-hdb.5.gz -> slapd-bdb.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-ldap.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-ldbm.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapd-ldif.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-meta.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-monitor.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-null.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-passwd.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-perl.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapd-relay.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-shell.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-sql.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd-tcl.5.gz
@@ -246,8 +238,24 @@ lrwxrwxrwx	root/root	usr/man/man5/slapd-hdb.5.gz -> slapd-bdb.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd.plugin.5.gz
 -rw-r--r--	root/root	usr/man/man5/slapd.replog.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-accesslog.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-auditlog.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-chain.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-dynlist.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-lastmod.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-pcache.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-ppolicy.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-refint.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-retcode.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-rwm.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-syncprov.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-translucent.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-unique.5.gz
+-rw-r--r--	root/root	usr/man/man5/slapo-valsort.5.gz
 drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/slapacl.8.gz
 -rw-r--r--	root/root	usr/man/man8/slapadd.8.gz
+-rw-r--r--	root/root	usr/man/man8/slapauth.8.gz
 -rw-r--r--	root/root	usr/man/man8/slapcat.8.gz
 -rw-r--r--	root/root	usr/man/man8/slapd.8.gz
 -rw-r--r--	root/root	usr/man/man8/slapdn.8.gz
@@ -256,7 +264,9 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/slaptest.8.gz
 -rw-r--r--	root/root	usr/man/man8/slurpd.8.gz
 drwxr-xr-x	root/root	usr/sbin/
+lrwxrwxrwx	root/root	usr/sbin/slapacl -> slapd
 lrwxrwxrwx	root/root	usr/sbin/slapadd -> slapd
+lrwxrwxrwx	root/root	usr/sbin/slapauth -> slapd
 lrwxrwxrwx	root/root	usr/sbin/slapcat -> slapd
 -rwxr-xr-x	root/root	usr/sbin/slapd
 lrwxrwxrwx	root/root	usr/sbin/slapdn -> slapd
@@ -264,18 +274,9 @@ lrwxrwxrwx	root/root	usr/sbin/slapindex -> slapd
 lrwxrwxrwx	root/root	usr/sbin/slappasswd -> slapd
 lrwxrwxrwx	root/root	usr/sbin/slaptest -> slapd
 -rwxr-xr-x	root/root	usr/sbin/slurpd
-drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/openldap/
-drwxr-xr-x	root/root	usr/share/openldap/ucdata/
--rw-r--r--	root/root	usr/share/openldap/ucdata/case.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/cmbcl.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/comp.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/ctype.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/decomp.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/kdecomp.dat
--rw-r--r--	root/root	usr/share/openldap/ucdata/num.dat
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/openldap/
-drwx------	root/root	var/openldap/openldap-data/
-drwx------	root/root	var/openldap/openldap-slurp/
+drwxr-xr-x	root/root	var/openldap/openldap-data/
+-rw-------	root/root	var/openldap/openldap-data/DB_CONFIG.example
+drwxr-xr-x	root/root	var/openldap/openldap-slurp/
 drwxr-xr-x	root/root	var/openldap/run/

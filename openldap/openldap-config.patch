@@ -23,13 +23,3 @@ Index: servers/slapd/slapd.conf
 +#updatedn        "cn=admin,dc=example,dc=org"
 +#updateref       ldap://master.example.org
 +
-Index: servers/slapd/Makefile.in
---- servers/slapd/Makefile.in.orig	2004-07-26 00:31:04 +0200
-+++ servers/slapd/Makefile.in	2004-07-28 08:38:37 +0200
-@@ -421,6 +421,6 @@
- 	cd $(DESTDIR)$(sbindir); \
- 	rm -f $(SLAPTOOLS); \
- 	for i in $(SLAPTOOLS); do \
--		$(LN_S) $(libexecdir)/slapd$(EXEEXT) $$i$(EXEEXT); \
-+		$(LN_S) $(DESTDIR)$(libexecdir)/slapd$(EXEEXT) $$i$(EXEEXT); \
- 	done
