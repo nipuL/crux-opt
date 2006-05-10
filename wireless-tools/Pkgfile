@@ -4,7 +4,7 @@
 # Depends on:
 
 name=wireless-tools
-version=27
+version=28
 release=1
 source=(http://pcmcia-cs.sf.net/ftp/contrib/${name/-/_}.$version.tar.gz)
 
