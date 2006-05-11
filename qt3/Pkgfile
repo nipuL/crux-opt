@@ -1,37 +1,34 @@
 # Description: Qt Free Edition
 # URL: http://www.trolltech.com
-# Maintainer: Daniel Mueller, daniel at danm dot de
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: x11, freetype, libjpeg, libmng, libpng, fontconfig, expat
 
 name=qt3
-version=3.3.5
-release=2
+version=3.3.6
+release=1
 source=(ftp://ftp.trolltech.com/qt/source/qt-x11-free-$version.tar.bz2 \
-	http://crux.danm.de/files/dist/$name/$version/$name-$version-2-patches.tar.bz2 \
-	$name-$version-gcc4.patch 0999_qt-3.3.5-qlistview.patch)
+    http://crux.danm.de/files/dist/$name/$version/$name-$version-1-patches.tar.bz2 $name-$version-gcc4.patch)
 
-build () {
+build() {
     cd qt-x11-free-$version
 
     # KDE patches (http://websvn.kde.org/branches/qt/3.3/qt-copy/patches/?rev=507267)
-    for i in ../$name-patches/*.*; do
-        patch -p2 < $i
+    for i in $(ls $SRC/$name-patches/* | sort); do
+        patch -p2 -i $i
     done
 
     # gcc4 + 64bit issue
-    patch -p1 < $SRC/$name-$version-gcc4.patch
+    patch -p1 -i $SRC/$name-$version-gcc4.patch
 
     local SQL
     if [ "`pkginfo -i | grep mysql`" ];then
-	SQL="-qt-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
+        SQL="-qt-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
     fi
 
-    # fix serious, crashy bugs in widgets/qlistview.cpp
-    patch -p1 < $SRC/0999_qt-$version-qlistview.patch
-
     if [ -d /usr/include/nvidia ]; then
-	export CFLAGS="$CFLAGS -I/usr/include/nvidia"
-	export CXXFLAGS="$CXXFLAGS -I/usr/include/nvidia"
+        export CFLAGS="$CFLAGS -I/usr/include/nvidia"
+        export CXXFLAGS="$CXXFLAGS -I/usr/include/nvidia"
     fi
 
     # don't link against our currently installed libraries
@@ -44,16 +41,16 @@ build () {
     sed -i "s|-I. |$CXXFLAGS -I. |" qmake/Makefile.unix
 
     ./configure -prefix /usr/share/qt \
-		-bindir /usr/bin \
-		-headerdir /usr/include/qt \
-		-libdir /usr/lib \
-		-plugindir /usr/lib/qt \
-		-platform linux-g++ -release -shared -thread -sm \
-		-tablet -nis -verbose -qt-gif -system-zlib \
-		-{system-lib,plugin-imgfmt-}{png,jpeg,mng} \
-		-no-{cups,fast,exceptions,nas-sound} \
-		-x{cursor,ft,inerama,kb,randr,render} \
-		$SQL
+        -bindir /usr/bin \
+        -headerdir /usr/include/qt \
+        -libdir /usr/lib \
+        -plugindir /usr/lib/qt \
+        -platform linux-g++ -release -shared -thread -sm \
+        -tablet -nis -verbose -qt-gif -system-zlib \
+        -{system-lib,plugin-imgfmt-}{png,jpeg,mng} \
+        -no-{cups,fast,exceptions,nas-sound} \
+        -x{cursor,ft,inerama,kb,randr,render} \
+        $SQL
 
     make src-moc sub-src 
 
@@ -63,7 +60,7 @@ build () {
     make INSTALL_ROOT=$PKG install
 
     for i in mergetr msg2qm qconfig qembed qvfb; do
-	(cd tools/$i/;make SUBLIBS="-lpng -lmng";mv $i $PKG/usr/bin/)
+        (cd tools/$i/;make SUBLIBS="-lpng -lmng";mv $i $PKG/usr/bin/)
     done
     mv bin/{findtr,qtrename140} $PKG/usr/bin/
 
@@ -71,8 +68,8 @@ build () {
     mv doc/man/man1 $PKG/usr/man
 
     rm -rf `find $PKG/usr/share/qt/mkspecs/* | grep -v linux-g++` \
-	   $PKG/usr/share/qt/{phrasebooks,templates,translations} \
-	   $PKG/usr/include/qt/{j,n}*
+        $PKG/usr/share/qt/{phrasebooks,templates,translations} \
+        $PKG/usr/include/qt/{j,n}*
     rm -f $PKG/usr/share/qt/mkspecs/linux-g++/linux-g++
 
     ln -s ../../bin        $PKG/usr/share/qt/bin

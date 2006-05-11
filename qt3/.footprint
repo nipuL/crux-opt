@@ -420,10 +420,10 @@ drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqassistantclient.prl
 -rw-r--r--	root/root	usr/lib/libqt-mt.la
 -rw-r--r--	root/root	usr/lib/libqt-mt.prl
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so -> libqt-mt.so.3.3.5
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3 -> libqt-mt.so.3.3.5
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3.3 -> libqt-mt.so.3.3.5
--rwxr-xr-x	root/root	usr/lib/libqt-mt.so.3.3.5
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so -> libqt-mt.so.3.3.6
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3 -> libqt-mt.so.3.3.6
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3.3 -> libqt-mt.so.3.3.6
+-rwxr-xr-x	root/root	usr/lib/libqt-mt.so.3.3.6
 -rw-r--r--	root/root	usr/lib/libqui.prl
 lrwxrwxrwx	root/root	usr/lib/libqui.so -> libqui.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libqui.so.1 -> libqui.so.1.0.0
@@ -456,6 +456,9 @@ lrwxrwxrwx	root/root	usr/share/qt/include -> ../../include/qt
 lrwxrwxrwx	root/root	usr/share/qt/lib -> ../../lib
 drwxr-xr-x	root/root	usr/share/qt/mkspecs/
 lrwxrwxrwx	root/root	usr/share/qt/mkspecs/default -> linux-g++
+drwxr-xr-x	root/root	usr/share/qt/mkspecs/linux-g++-32/
+-rw-r--r--	root/root	usr/share/qt/mkspecs/linux-g++-32/qmake.conf
+-rw-r--r--	root/root	usr/share/qt/mkspecs/linux-g++-32/qplatformdefs.h
 drwxr-xr-x	root/root	usr/share/qt/mkspecs/linux-g++-64/
 -rw-r--r--	root/root	usr/share/qt/mkspecs/linux-g++-64/qmake.conf
 -rw-r--r--	root/root	usr/share/qt/mkspecs/linux-g++-64/qplatformdefs.h
