@@ -4,7 +4,7 @@
 # Depends on: freetype, x11, gtk, gimp-print, libart_lgpl, p5-xml-parser
 
 name=gimp
-version=2.2.10
+version=2.2.11
 release=1
 source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2)
 
