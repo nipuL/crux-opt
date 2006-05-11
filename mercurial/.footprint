@@ -8,12 +8,16 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/
 drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/hgext/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/bugzilla.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/bugzilla.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/gpg.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/gpg.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/hbisect.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/hbisect.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/mq.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/mq.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/notify.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/notify.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/patchbomb.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/patchbomb.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/hgext/win32text.py
@@ -25,6 +29,8 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/mercurial/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/__version__.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/appendfile.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/appendfile.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/archival.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/archival.pyc
 -rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/mercurial/bdiff.so
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/bundlerepo.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/bundlerepo.pyc
@@ -102,7 +108,6 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/mercurial/templates/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/filelogentry-rss.tmpl
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/filelogentry.tmpl
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/filerevision-gitweb.tmpl
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/filerevision-raw.tmpl
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/filerevision.tmpl
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/footer-gitweb.tmpl
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/templates/footer.tmpl
@@ -139,5 +144,7 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/mercurial/templates/static/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/ui.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/util.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/util.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/util_win32.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/util_win32.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/version.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/mercurial/version.pyc
