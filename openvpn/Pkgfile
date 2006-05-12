@@ -2,7 +2,7 @@
 # URL: http://openvpn.sourceforge.net/
 # Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
-# Depends on: openssl
+# Depends on: lzo, openssl
 
 name=openvpn
 version=2.0.7
@@ -13,7 +13,7 @@ source=(http://$name.net/release/$name-$version.tar.gz \
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-lzo
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
 
