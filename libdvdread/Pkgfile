@@ -1,10 +1,10 @@
 # Description: Add's dvd support to mplayer and Xine
 # URL: http://www.dtek.chalmers.se/groups/dvd
 # Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: Olle Gustafsson, ogg at linux dot se
+# Packager: 
 
 name=libdvdread
-version=0.9.4
+version=0.9.6
 release=1
 source=(http://www.dtek.chalmers.se/groups/dvd/dist/$name-$version.tar.gz)
 
