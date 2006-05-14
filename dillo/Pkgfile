@@ -4,13 +4,15 @@
 # Depends on:  gtk1, libjpeg, libpng
 
 name=dillo
-version=0.8.5
+version=0.8.6
 release=1
 source=(http://www.dillo.org/download/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --enable-ipv6
+    ./configure --prefix=/usr \
+                --enable-ipv6 \
+                --disable-dlgui
     make
     make DESTDIR=$PKG install
 }
