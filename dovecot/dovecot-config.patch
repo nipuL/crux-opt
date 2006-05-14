@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.beta7.orig/dovecot-example.conf dovecot-1.0.beta7/dovecot-example.conf
---- dovecot-1.0.beta7.orig/dovecot-example.conf	2006-04-12 15:32:54.000000000 +0200
-+++ dovecot-1.0.beta7/dovecot-example.conf	2006-04-12 15:33:04.000000000 +0200
+diff -Nru dovecot-1.0.beta8.orig/dovecot-example.conf dovecot-1.0.beta8/dovecot-example.conf
+--- dovecot-1.0.beta8.orig/dovecot-example.conf	2006-04-21 04:01:27.000000000 +0200
++++ dovecot-1.0.beta8/dovecot-example.conf	2006-05-12 15:01:29.000000000 +0200
 @@ -13,11 +13,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -131,7 +131,7 @@ diff -Nru dovecot-1.0.beta7.orig/dovecot-example.conf dovecot-1.0.beta7/dovecot-
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -685,7 +685,7 @@
+@@ -691,7 +691,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work.
@@ -140,7 +140,7 @@ diff -Nru dovecot-1.0.beta7.orig/dovecot-example.conf dovecot-1.0.beta7/dovecot-
      # [session=yes] [cache_key=<key>] [<service name>]
      #
      # session=yes makes Dovecot open and immediately close PAM session. Some
-@@ -709,7 +709,7 @@
+@@ -715,7 +715,7 @@
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -149,7 +149,7 @@ diff -Nru dovecot-1.0.beta7.orig/dovecot-example.conf dovecot-1.0.beta7/dovecot-
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -718,8 +718,8 @@
+@@ -724,8 +724,8 @@
    #}
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
