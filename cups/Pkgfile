@@ -4,16 +4,14 @@
 # Depends on:  libpng, libtiff, openssl
 
 name=cups
-version=1.1.23
-release=3
+version=1.2.0
+release=1
 source=(ftp://ftp3.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
-	cups-CAN-2005-2097.patch cups-CAN-2005-3191.patch cups)
+	cups-config.patch cups)
 
 build () {
     cd $name-$version
-
-    patch -p1 < $SRC/cups-CAN-2005-2097.patch
-    patch -p1 < $SRC/cups-CAN-2005-3191.patch
+    patch -p1 < $SRC/cups-config.patch
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
@@ -21,17 +19,24 @@ build () {
 		--with-docdir=/usr/share/cups/doc \
 		--with-logdir=/var/log/cups \
 		--with-cups-user=daemon \
-		--with-cups-group=daemon \
+		--with-cups-group=lp \
+                --with-languages="" \
+                --without-{jave,perl,php,python} \
+                --enable-threads \
 		--enable-ssl=yes \
 		--enable-pam=no
+
     make
     make BUILDROOT=$PKG install
 
-    rm -r $PKG/usr/man/{fr,cat?,es}
     rm -r $PKG/etc/rc.d/*
-    rm -r $PKG/usr/share/cups/{doc/*.pdf,{doc,templates}/??}
-    rm -r $PKG/usr/share/locale
-    chmod 0755 $PKG/{var/spool,etc/{,cups}}   
+    rm -r $PKG/usr/share/{locale,icons,applications}
+    chmod 0755 $PKG/var/spool   
+
+    install -d $PKG/etc/ssl/{certs,keys}
+    touch $PKG/etc/ssl/certs/cups.crt
+    touch $PKG/etc/ssl/keys/cups.key
+    chmod 0600 $PKG/etc/ssl/{keys/cups.key,certs/cups.crt}
 
     install -m 755 $SRC/cups $PKG/etc/rc.d
 }
