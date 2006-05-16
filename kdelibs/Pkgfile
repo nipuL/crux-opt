@@ -6,12 +6,14 @@
 
 name=kdelibs
 version=3.5.2
-release=3
+release=4
 source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2 \
-    http://www.kde-look.org/content/files/10888-bt.tar.gz)
+    http://www.kde-look.org/content/files/10888-bt.tar.gz \
+    $name-$version-cups-1.2.patch)
 
 build() {
     cd $name-$version
+    patch -d kdeprint/cups < ../$name-$version-cups-1.2.patch
     ./configure	--prefix=/usr \
         --with-distribution="CRUX" \
         --enable-sendfile \
