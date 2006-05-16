@@ -6,10 +6,12 @@
 name=gimp
 version=2.2.11
 release=1
-source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2)
+source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2 \
+	$name-$version-libpng.patch)
 
 build() {
 	cd gimp-$version
+	patch -p1 -i $SRC/$name-$version-libpng.patch
 	sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
 	./configure --prefix=/usr \
 		--disable-static
