@@ -6,9 +6,9 @@
 # accepting the license terms, and place them in this directory.
 
 name=j2sdk
-version=1.5.0
-release=06
-source=(file:///jdk-${version//./_}_${release}-linux-i586.bin)
+version=1.5.0_06
+release=1
+source=(file:///jdk-${version//./_}-linux-i586.bin)
 
 build(){
 	sed -i 's|more <<"EOF"|cat <<"EOF"|' jdk-*.bin
@@ -28,7 +28,7 @@ build(){
 	ln -s jdk* java
 
 	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
-	for j in java javac javah javap jar keytool; do
+	for j in java javac javah javap javaws jar keytool; do
 		ln -s ../lib/java/bin/$j
 	done
 }

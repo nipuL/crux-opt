@@ -5,6 +5,7 @@ lrwxrwxrwx	root/root	usr/bin/java -> ../lib/java/bin/java
 lrwxrwxrwx	root/root	usr/bin/javac -> ../lib/java/bin/javac
 lrwxrwxrwx	root/root	usr/bin/javah -> ../lib/java/bin/javah
 lrwxrwxrwx	root/root	usr/bin/javap -> ../lib/java/bin/javap
+lrwxrwxrwx	root/root	usr/bin/javaws -> ../lib/java/bin/javaws
 lrwxrwxrwx	root/root	usr/bin/keytool -> ../lib/java/bin/keytool
 drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/java -> jdk1.5.0_06
