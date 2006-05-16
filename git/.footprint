@@ -92,6 +92,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-rev-parse
 -rwxr-xr-x	root/root	usr/bin/git-revert
 -rwxr-xr-x	root/root	usr/bin/git-rm
+-rwxr-xr-x	root/root	usr/bin/git-send-email
 -rwxr-xr-x	root/root	usr/bin/git-send-pack
 -rwxr-xr-x	root/root	usr/bin/git-sh-setup
 -rwxr-xr-x	root/root	usr/bin/git-shell
