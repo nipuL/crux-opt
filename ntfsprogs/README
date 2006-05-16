@@ -1,0 +1,23 @@
+PRE-INSTALL
+
+Build FUSE support into your kernel either statically, or as a module.
+If you build it as a module, be sure to load the module before
+building ntfsprogs.
+Install fuse from CRUX ports.
+
+ntfsprogs is now ready to be installed
+
+
+POST-INSTALL
+
+Wiki.linux-ntfs.org suggests adding the following line to fstab:
+/dev/hda1 /mnt/c ntfs-fuse fmask=0111,dmask=0,succeed_chmod 0 0
+
+This is what I use:
+/dev/hda3 /mnt/other ntfs-fuse \
+          user,noauto,gid=10,umask=0007,fmask=0117,succeed_chmod 0 0
+
+
+NOTES
+
+ntfsmount is very CPU intensive!
