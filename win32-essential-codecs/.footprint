@@ -44,8 +44,6 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/tm20dec.ax
 -rw-r--r--	root/root	usr/lib/win32/tokf.so.6.0
 -rw-r--r--	root/root	usr/lib/win32/tokr.so.6.0
--rw-r--r--	root/root	usr/lib/win32/tsd32.dll
--rw-r--r--	root/root	usr/lib/win32/tssoft32.acm
 -rw-r--r--	root/root	usr/lib/win32/tvqdec.dll
 -rw-r--r--	root/root	usr/lib/win32/vdowave.drv
 -rw-r--r--	root/root	usr/lib/win32/vid_3ivX.xa
@@ -58,6 +56,7 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/vssh264.dll
 -rw-r--r--	root/root	usr/lib/win32/vssh264core.dll
 -rw-r--r--	root/root	usr/lib/win32/vssh264dec.dll
+-rw-r--r--	root/root	usr/lib/win32/vsshdsd.dll
 -rw-r--r--	root/root	usr/lib/win32/vsslight.dll
 -rw-r--r--	root/root	usr/lib/win32/vsswlt.dll
 -rw-r--r--	root/root	usr/lib/win32/wma9dmod.dll
