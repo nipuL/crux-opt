@@ -5,8 +5,8 @@
 # Depends on: kdelibs, kdebase, xine-lib, k3b
 
 name=amarok
-version=1.3.9
-release=2
+version=1.4.0
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
