@@ -16,4 +16,4 @@ through a dedicated port to avoid adding unnecessary stuff here.
 
 POST-INSTALL
 Set up your JAVA_HOME environment variable
-pointing to j2sdk installation path
+pointing to j2sdk installation path (ie in /etc/profile)
