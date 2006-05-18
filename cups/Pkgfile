@@ -7,7 +7,7 @@ name=cups
 version=1.2.0
 release=1
 source=(ftp://ftp3.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
-	cups-config.patch cups)
+        cups-config.patch cups)
 
 build () {
     cd $name-$version
@@ -16,21 +16,21 @@ build () {
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --localstatedir=/var \
-		--with-docdir=/usr/share/cups/doc \
-		--with-logdir=/var/log/cups \
-		--with-cups-user=daemon \
-		--with-cups-group=lp \
+                --with-docdir=/usr/share/cups/doc \
+                --with-logdir=/var/log/cups \
+                --with-cups-user=daemon \
+                --with-cups-group=lp \
                 --with-languages="" \
                 --without-{jave,perl,php,python} \
                 --enable-threads \
-		--enable-ssl=yes \
-		--enable-pam=no
+                --enable-ssl=yes \
+                --enable-pam=no
 
     make
     make BUILDROOT=$PKG install
 
-    rm -r $PKG/etc/rc.d/*
-    rm -r $PKG/usr/share/{locale,icons,applications}
+    rm -rf $PKG/etc/{rc*.d,init.d}
+    rm -rf $PKG/usr/share/{locale,icons,applications}
     chmod 0755 $PKG/var/spool   
 
     install -d $PKG/etc/ssl/{certs,keys}
@@ -38,5 +38,5 @@ build () {
     touch $PKG/etc/ssl/keys/cups.key
     chmod 0600 $PKG/etc/ssl/{keys/cups.key,certs/cups.crt}
 
-    install -m 755 $SRC/cups $PKG/etc/rc.d
+    install -D -m 755 $SRC/cups $PKG/etc/rc.d/cups
 }
