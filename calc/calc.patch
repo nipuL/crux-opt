@@ -1,7 +1,6 @@
-diff -ru calc-2.11.10.1.orig/Makefile calc-2.11.10.1/Makefile
---- calc-2.11.10.1.orig/Makefile	2004-07-29 08:18:56.000000000 +0300
-+++ calc-2.11.10.1/Makefile	2005-07-27 13:04:47.000000000 +0300
-@@ -638,7 +638,7 @@
+--- calc-2.12.0.orig/Makefile	2006-05-19 17:00:01.000000000 +0300
++++ calc-2.12.0/Makefile	2006-05-21 11:26:59.000000000 +0300
+@@ -637,7 +637,7 @@
  CUSTOMCALDIR= ${CALC_SHAREDIR}/custom
  CUSTOMHELPDIR= ${CALC_SHAREDIR}/custhelp
  CUSTOMINCDIR= ${CALC_INCDIR}/custom
@@ -10,7 +9,7 @@ diff -ru calc-2.11.10.1.orig/Makefile calc-2.11.10.1/Makefile
  
  # T - top level directory under which calc will be installed
  #
-@@ -786,11 +786,11 @@
+@@ -785,11 +785,11 @@
  #
  # If in doubt, set USE_READLINE, READLINE_LIB and READLINE_INCLUDE to nothing.
  #
@@ -26,20 +25,7 @@ diff -ru calc-2.11.10.1.orig/Makefile calc-2.11.10.1/Makefile
  #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory -lncurses
  #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory -lncurses
  #
-@@ -802,10 +802,10 @@
- #
- # Select CALCPAGER= less.exe -ci for DJGPP.
- #
--CALCPAGER= more
-+#CALCPAGER= more
- #CALCPAGER= pg
- #CALCPAGER= cat
--#CALCPAGER= less
-+CALCPAGER= less
- #CALCPAGER= less.exe -ci
- 
- # Debug/Optimize options for ${CC} and ${LCC}
-@@ -830,7 +830,7 @@
+@@ -834,7 +834,7 @@
  #
  #DEBUG= -O3
  #DEBUG= -O3 -g
@@ -48,4 +34,3 @@ diff -ru calc-2.11.10.1.orig/Makefile calc-2.11.10.1/Makefile
  #DEBUG= -O3 -ipa
  #DEBUG= -O3 -g3 -ipa
  #
-Only in calc-2.11.10.1: Makefile~

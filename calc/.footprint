@@ -102,6 +102,7 @@ drwxr-xr-x	root/root	usr/share/calc/custom/
 -rw-r--r--	root/root	usr/share/calc/custom/pmodm127.cal
 -rw-r--r--	root/root	usr/share/calc/custom/pzasusb8.cal
 -rw-r--r--	root/root	usr/share/calc/deg.cal
+-rw-r--r--	root/root	usr/share/calc/dotest.cal
 -rw-r--r--	root/root	usr/share/calc/ellip.cal
 -rw-r--r--	root/root	usr/share/calc/hello.cal
 drwxr-xr-x	root/root	usr/share/calc/help/
@@ -216,6 +217,7 @@ drwxr-xr-x	root/root	usr/share/calc/help/
 -rw-r--r--	root/root	usr/share/calc/help/floor
 -rw-r--r--	root/root	usr/share/calc/help/fopen
 -rw-r--r--	root/root	usr/share/calc/help/forall
+-rw-r--r--	root/root	usr/share/calc/help/fpathopen
 -rw-r--r--	root/root	usr/share/calc/help/fprintf
 -rw-r--r--	root/root	usr/share/calc/help/fputc
 -rw-r--r--	root/root	usr/share/calc/help/fputs
@@ -297,6 +299,7 @@ drwxr-xr-x	root/root	usr/share/calc/help/
 -rw-r--r--	root/root	usr/share/calc/help/libcalc
 -rw-r--r--	root/root	usr/share/calc/help/list
 -rw-r--r--	root/root	usr/share/calc/help/ln
+-rw-r--r--	root/root	usr/share/calc/help/log
 -rw-r--r--	root/root	usr/share/calc/help/lowbit
 -rw-r--r--	root/root	usr/share/calc/help/ltol
 -rw-r--r--	root/root	usr/share/calc/help/makelist
@@ -401,8 +404,12 @@ drwxr-xr-x	root/root	usr/share/calc/help/
 -rw-r--r--	root/root	usr/share/calc/help/statement
 -rw-r--r--	root/root	usr/share/calc/help/str
 -rw-r--r--	root/root	usr/share/calc/help/strcat
+-rw-r--r--	root/root	usr/share/calc/help/strcmp
+-rw-r--r--	root/root	usr/share/calc/help/strcpy
 -rw-r--r--	root/root	usr/share/calc/help/strerror
 -rw-r--r--	root/root	usr/share/calc/help/strlen
+-rw-r--r--	root/root	usr/share/calc/help/strncmp
+-rw-r--r--	root/root	usr/share/calc/help/strncpy
 -rw-r--r--	root/root	usr/share/calc/help/strpos
 -rw-r--r--	root/root	usr/share/calc/help/strprintf
 -rw-r--r--	root/root	usr/share/calc/help/strscan
@@ -451,7 +458,10 @@ drwxr-xr-x	root/root	usr/share/calc/help/
 -rw-r--r--	root/root	usr/share/calc/randrun.cal
 -rw-r--r--	root/root	usr/share/calc/regress.cal
 -rw-r--r--	root/root	usr/share/calc/repeat.cal
+-rw-r--r--	root/root	usr/share/calc/screen.cal
 -rw-r--r--	root/root	usr/share/calc/seedrandom.cal
+-rw-r--r--	root/root	usr/share/calc/set8700.cal
+-rw-r--r--	root/root	usr/share/calc/set8700.line
 -rw-r--r--	root/root	usr/share/calc/solve.cal
 -rw-r--r--	root/root	usr/share/calc/sumsq.cal
 -rw-r--r--	root/root	usr/share/calc/surd.cal
