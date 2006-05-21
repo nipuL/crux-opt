@@ -5,8 +5,8 @@
 # Depends on: libsdl, liba52, libxvid, libmad, lame, libdivx, freetype, libvorbis
 
 name=libavifile
-version=0.7-0.7.43
-release=2
+version=0.7-0.7.45
+release=1
 source=(http://dl.sourceforge.net/sourceforge/avifile/avifile-$version.tar.bz2)
 
 build() {
