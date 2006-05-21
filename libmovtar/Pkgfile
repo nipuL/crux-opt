@@ -7,12 +7,13 @@
 
 name=libmovtar
 version=0.1.3
-release=4
+release=5
 source=(http://dl.sourceforge.net/sourceforge/mjpeg/$name-$version.tar.gz \
-	jpegint.h)
+	jpegint.h $name-$version-gcc4.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-gcc4.patch
 	# jpegint.h should be from the same version of libjpeg-mmx that's installed
 	cp $SRC/jpegint.h .
 	sed -i -e "s,#include <jinclude.h>,," movtar_play.c
