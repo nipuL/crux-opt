@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/anytovcd.sh
 -rwxr-xr-x	root/root	usr/bin/glav
 -rwxr-xr-x	root/root	usr/bin/jpeg2yuv
 -rwxr-xr-x	root/root	usr/bin/lav2avi.sh
@@ -14,7 +15,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/lavtrans
 -rwxr-xr-x	root/root	usr/bin/lavvideo
 -rwxr-xr-x	root/root	usr/bin/matteblend.flt
--rwxr-xr-x	root/root	usr/bin/mjpegtools-config
+-rwxr-xr-x	root/root	usr/bin/mjpeg_simd_helper
 -rwxr-xr-x	root/root	usr/bin/mp2enc
 -rwxr-xr-x	root/root	usr/bin/mpeg2enc
 -rwxr-xr-x	root/root	usr/bin/mpegtranscode
@@ -22,19 +23,28 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/multiblend.flt
 -rwxr-xr-x	root/root	usr/bin/pgmtoy4m
 -rwxr-xr-x	root/root	usr/bin/png2yuv
+-rwxr-xr-x	root/root	usr/bin/pnmtoy4m
 -rwxr-xr-x	root/root	usr/bin/ppmtoy4m
 -rwxr-xr-x	root/root	usr/bin/testrec
 -rwxr-xr-x	root/root	usr/bin/transist.flt
 -rwxr-xr-x	root/root	usr/bin/y4mblack
 -rwxr-xr-x	root/root	usr/bin/y4mcolorbars
+-rwxr-xr-x	root/root	usr/bin/y4mdenoise
+-rwxr-xr-x	root/root	usr/bin/y4mhist
+-rwxr-xr-x	root/root	usr/bin/y4minterlace
 -rwxr-xr-x	root/root	usr/bin/y4mshift
+-rwxr-xr-x	root/root	usr/bin/y4mspatialfilter
+-rwxr-xr-x	root/root	usr/bin/y4mstabilizer
+-rwxr-xr-x	root/root	usr/bin/y4mtopnm
 -rwxr-xr-x	root/root	usr/bin/y4mtoppm
 -rwxr-xr-x	root/root	usr/bin/y4mtoyuv
+-rwxr-xr-x	root/root	usr/bin/y4munsharp
 -rwxr-xr-x	root/root	usr/bin/ypipe
 -rwxr-xr-x	root/root	usr/bin/yuv2lav
 -rwxr-xr-x	root/root	usr/bin/yuv4mpeg
 -rwxr-xr-x	root/root	usr/bin/yuvcorrect
 -rwxr-xr-x	root/root	usr/bin/yuvcorrect_tune
+-rwxr-xr-x	root/root	usr/bin/yuvdeinterlace
 -rwxr-xr-x	root/root	usr/bin/yuvdenoise
 -rwxr-xr-x	root/root	usr/bin/yuvfps
 -rwxr-xr-x	root/root	usr/bin/yuvinactive
@@ -43,6 +53,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/yuvplay
 -rwxr-xr-x	root/root	usr/bin/yuvscaler
 -rwxr-xr-x	root/root	usr/bin/yuvycsnoise
+-rwxr-xr-x	root/root	usr/bin/yuyvtoy4m
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/mjpegtools/
 -rw-r--r--	root/root	usr/include/mjpegtools/audiolib.h
@@ -59,6 +70,7 @@ drwxr-xr-x	root/root	usr/include/mjpegtools/
 drwxr-xr-x	root/root	usr/include/mjpegtools/mpeg2enc/
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/elemstrmwriter.hh
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/encoderparams.hh
+-rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/encodertypes.h
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/macroblock.hh
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/mpeg2coder.hh
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/mpeg2encoder.hh
@@ -71,6 +83,7 @@ drwxr-xr-x	root/root	usr/include/mjpegtools/mpeg2enc/
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/quantize_ref.h
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/ratectl.hh
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/seqencoder.hh
+-rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/streamstate.h
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/synchrolib.h
 -rw-r--r--	root/root	usr/include/mjpegtools/mpeg2enc/syntaxconsts.h
 -rw-r--r--	root/root	usr/include/mjpegtools/mpegconsts.h
@@ -78,8 +91,9 @@ drwxr-xr-x	root/root	usr/include/mjpegtools/mpeg2enc/
 drwxr-xr-x	root/root	usr/include/mjpegtools/mplex/
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/audiostrm.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/aunit.hpp
+-rw-r--r--	root/root	usr/include/mjpegtools/mplex/aunitbuffer.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/bits.hpp
--rw-r--r--	root/root	usr/include/mjpegtools/mplex/buffer.hpp
+-rw-r--r--	root/root	usr/include/mjpegtools/mplex/decodebufmodel.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/inputstrm.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/interact.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/mplexconsts.hpp
@@ -89,41 +103,44 @@ drwxr-xr-x	root/root	usr/include/mjpegtools/mplex/
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/stillsstream.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/stream_params.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/systems.hpp
--rw-r--r--	root/root	usr/include/mjpegtools/mplex/vector.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/mplex/videostrm.hpp
 -rw-r--r--	root/root	usr/include/mjpegtools/yuv4mpeg.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/liblavfile-1.6.so.0 -> liblavfile-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/liblavfile-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/liblavfile-1.8.so.0 -> liblavfile-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/liblavfile-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/liblavfile.a
 -rwxr-xr-x	root/root	usr/lib/liblavfile.la
-lrwxrwxrwx	root/root	usr/lib/liblavfile.so -> liblavfile-1.6.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/liblavjpeg-1.6.so.0 -> liblavjpeg-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/liblavjpeg-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/liblavfile.so -> liblavfile-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/liblavjpeg-1.8.so.0 -> liblavjpeg-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/liblavjpeg-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/liblavjpeg.a
 -rwxr-xr-x	root/root	usr/lib/liblavjpeg.la
-lrwxrwxrwx	root/root	usr/lib/liblavjpeg.so -> liblavjpeg-1.6.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/liblavplay-1.6.so.0 -> liblavplay-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/liblavplay-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/liblavjpeg.so -> liblavjpeg-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/liblavplay-1.8.so.0 -> liblavplay-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/liblavplay-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/liblavplay.a
 -rwxr-xr-x	root/root	usr/lib/liblavplay.la
-lrwxrwxrwx	root/root	usr/lib/liblavplay.so -> liblavplay-1.6.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/liblavrec-1.6.so.0 -> liblavrec-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/liblavrec-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/liblavplay.so -> liblavplay-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/liblavrec-1.8.so.0 -> liblavrec-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/liblavrec-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/liblavrec.a
 -rwxr-xr-x	root/root	usr/lib/liblavrec.la
-lrwxrwxrwx	root/root	usr/lib/liblavrec.so -> liblavrec-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/liblavrec.so -> liblavrec-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libmjpegutils-1.8.so.0 -> libmjpegutils-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libmjpegutils-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmjpegutils.a
-lrwxrwxrwx	root/root	usr/lib/libmpeg2encpp-1.6.so.0 -> libmpeg2encpp-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/libmpeg2encpp-1.6.so.0.2.2
+-rwxr-xr-x	root/root	usr/lib/libmjpegutils.la
+lrwxrwxrwx	root/root	usr/lib/libmjpegutils.so -> libmjpegutils-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libmpeg2encpp-1.8.so.0 -> libmpeg2encpp-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libmpeg2encpp-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmpeg2encpp.a
 -rwxr-xr-x	root/root	usr/lib/libmpeg2encpp.la
-lrwxrwxrwx	root/root	usr/lib/libmpeg2encpp.so -> libmpeg2encpp-1.6.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/libmplex2-1.6.so.0 -> libmplex2-1.6.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/libmplex2-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/libmpeg2encpp.so -> libmpeg2encpp-1.8.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libmplex2-1.8.so.0 -> libmplex2-1.8.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libmplex2-1.8.so.0.0.0
 -rw-r--r--	root/root	usr/lib/libmplex2.a
 -rwxr-xr-x	root/root	usr/lib/libmplex2.la
-lrwxrwxrwx	root/root	usr/lib/libmplex2.so -> libmplex2-1.6.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/libmplex2.so -> libmplex2-1.8.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/mjpegtools.pc
 drwxr-xr-x	root/root	usr/man/
@@ -141,9 +158,14 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mpeg2enc.1.gz
 -rw-r--r--	root/root	usr/man/man1/mplex.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmtoy4m.1.gz
+-rw-r--r--	root/root	usr/man/man1/png2yuv.1.gz
+-rw-r--r--	root/root	usr/man/man1/pnmtoy4m.1.gz
 -rw-r--r--	root/root	usr/man/man1/ppmtoy4m.1.gz
 -rw-r--r--	root/root	usr/man/man1/y4mcolorbars.1.gz
+-rw-r--r--	root/root	usr/man/man1/y4mdenoise.1.gz
+-rw-r--r--	root/root	usr/man/man1/y4mtopnm.1.gz
 -rw-r--r--	root/root	usr/man/man1/y4mtoppm.1.gz
+-rw-r--r--	root/root	usr/man/man1/y4munsharp.1.gz
 -rw-r--r--	root/root	usr/man/man1/yuv2lav.1.gz
 -rw-r--r--	root/root	usr/man/man1/yuvdenoise.1.gz
 -rw-r--r--	root/root	usr/man/man1/yuvfps.1.gz

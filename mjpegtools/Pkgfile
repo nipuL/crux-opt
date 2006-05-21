@@ -6,14 +6,12 @@
 # Depends on: libmovtar, libdv, libavifile, libjpeg-mmx
 
 name=mjpegtools
-version=1.6.2
-release=2
-source=(http://dl.sourceforge.net/sourceforge/mjpeg/$name-$version.tar.gz \
-	$name-$version-gcc34.patch)
+version=1.8.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/mjpeg/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 < $SRC/$name-$version-gcc34.patch
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
