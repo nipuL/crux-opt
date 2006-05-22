@@ -5,12 +5,12 @@
 # Depends on: kdelibs, kdebase, xine-lib, k3b
 
 name=amarok
-version=1.4.0
+version=1.4.0a
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
-    cd $name-$version
+    cd $name-1.4.0
     ./configure --prefix=/usr \
         --without-gstreamer \
         --without-xmms \
