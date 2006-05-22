@@ -1,22 +1,17 @@
 
 REQUIREMENTS
 
-    The wmii configuration scripts now rely on the 9base package which
-    contains ports of various Plan 9 standard tools, in particular the
-    rc shell. I've created a port of it.
-
 PRE-INSTALL
 
 POST-INSTALL
 
 PRECAUTION
 
-    I've added a patch to stop wmii warping the mouse around. If you
-    like that feature just comment the patch out.
+    The developers of wmii have changed the configuration format again.
+    So wmii doesn't depend on base9 anymore. They switched back to the
+    old sh configuration format. Therefore you have to manually convert
+    your old configuration files (from 2.5) to use it in this new
+    version (3.0).  The configuration paths also have been changed.
 
-    The developer of wmii changed the configuration format again. You
-    have to manually convert your old configuration to use it in this
-    new version. The configuration paths also have been changed.
-
-    ~/.wmii-2.5
-    /etc/wmii-2.5
+    ~/.wmii-3
+    /etc/wmii-3
