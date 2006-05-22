@@ -5,12 +5,12 @@
 
 name=dialog
 version=1.0-20060126
-release=1
+release=2
 source=(ftp://dickey.his.com/dialog/$name-$version.tgz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --with-ncurses
+    ./configure --prefix=/usr --with-ncursesw
     make
     make DESTDIR=$PKG install
 }
