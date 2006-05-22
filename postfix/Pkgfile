@@ -13,7 +13,7 @@ source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.
 build() {
     cd $name-$version
 
-    _CCARGS="$CCARGS -DUSE_SASL_AUTH -I/usr/include/sasl -DUSE_TLS"
+    _CCARGS="$CCARGS -DUSE_SASL_AUTH -I/usr/include/sasl -DUSE_TLS -I/usr/include/openssl"
     _AUXLIBS="-L/usr/lib -lsasl2 -lssl -lcrypto"
 
     make tidy
@@ -45,6 +45,7 @@ build() {
 
     #
     # Add .gz extensions to manpages (pkgmk compresses them)
+    # Remove LICENSE (will be removed)
     #
     ( cd $PKG/etc/postfix
       cp postfix-files temp-files
