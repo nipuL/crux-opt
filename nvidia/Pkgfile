@@ -6,7 +6,7 @@
 # Nice to have: gl-select
 
 name=nvidia
-version=1.0-8756
+version=1.0-8762
 release=1
 source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
 	$name-makefile.patch)
