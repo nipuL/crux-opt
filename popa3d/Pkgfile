@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=popa3d
-version=1.0.1
+version=1.0.2
 release=1
 source=(http://www.openwall.com/popa3d/$name-$version.tar.gz \
         $name-config.patch popa3d)
