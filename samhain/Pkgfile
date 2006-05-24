@@ -3,13 +3,16 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=samhain
-version=2.1.3
+version=2.2.0
 release=1
-source=(http://la-samhna.de/$name/${name}_signed-$version.tar.gz)
+source=(http://la-samhna.de/$name/${name}_signed-$version.tar.gz \
+        $name-khide.patch)
 
 build () {
     tar xfz $name-$version.tar.gz
     cd $name-$version
+    patch -p1 < $SRC/$name-khide.patch
+    autoconf
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --localstatedir=/var \
