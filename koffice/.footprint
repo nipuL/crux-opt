@@ -140,6 +140,7 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kexiutils/tristate.h
 -rw-r--r--	root/root	usr/include/kexiutils/utils.h
 -rw-r--r--	root/root	usr/include/kexiutils/validator.h
+-rw-r--r--	root/root	usr/include/kis_abstract_colorspace.h
 -rw-r--r--	root/root	usr/include/kis_adjustment_layer.h
 -rw-r--r--	root/root	usr/include/kis_alpha_mask.h
 -rw-r--r--	root/root	usr/include/kis_annotation.h
@@ -149,8 +150,12 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kis_basic_histogram_producers.h
 -rw-r--r--	root/root	usr/include/kis_boundary.h
 -rw-r--r--	root/root	usr/include/kis_brush.h
+-rw-r--r--	root/root	usr/include/kis_button_event.h
+-rw-r--r--	root/root	usr/include/kis_button_press_event.h
+-rw-r--r--	root/root	usr/include/kis_button_release_event.h
 -rw-r--r--	root/root	usr/include/kis_canvas_controller.h
 -rw-r--r--	root/root	usr/include/kis_canvas_observer.h
+-rw-r--r--	root/root	usr/include/kis_canvas_painter.h
 -rw-r--r--	root/root	usr/include/kis_canvas_subject.h
 -rw-r--r--	root/root	usr/include/kis_channelinfo.h
 -rw-r--r--	root/root	usr/include/kis_cmb_composite.h
@@ -158,6 +163,7 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kis_color.h
 -rw-r--r--	root/root	usr/include/kis_color_cup.h
 -rw-r--r--	root/root	usr/include/kis_colorspace.h
+-rw-r--r--	root/root	usr/include/kis_colorspace_factory_registry.h
 -rw-r--r--	root/root	usr/include/kis_command.h
 -rw-r--r--	root/root	usr/include/kis_composite_op.h
 -rw-r--r--	root/root	usr/include/kis_config.h
@@ -167,6 +173,7 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kis_doc_iface.h
 -rw-r--r--	root/root	usr/include/kis_double_click_event.h
 -rw-r--r--	root/root	usr/include/kis_double_widget.h
+-rw-r--r--	root/root	usr/include/kis_event.h
 -rw-r--r--	root/root	usr/include/kis_exif_info.h
 -rw-r--r--	root/root	usr/include/kis_exif_value.h
 -rw-r--r--	root/root	usr/include/kis_f16half_base_colorspace.h
@@ -202,6 +209,7 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kis_iterators_pixel.h
 -rw-r--r--	root/root	usr/include/kis_label_zoom.h
 -rw-r--r--	root/root	usr/include/kis_layer.h
+-rw-r--r--	root/root	usr/include/kis_layer_visitor.h
 -rw-r--r--	root/root	usr/include/kis_layerbox.h
 -rw-r--r--	root/root	usr/include/kis_layerlist.h
 -rw-r--r--	root/root	usr/include/kis_matrix_widget.ui.h
@@ -211,8 +219,10 @@ drwxr-xr-x	root/root	usr/include/kexiutils/
 -rw-r--r--	root/root	usr/include/kis_multi_double_filter_widget.h
 -rw-r--r--	root/root	usr/include/kis_multi_integer_filter_widget.h
 -rw-r--r--	root/root	usr/include/kis_nameserver.h
+-rw-r--r--	root/root	usr/include/kis_opengl_image_context.h
 -rw-r--r--	root/root	usr/include/kis_paint_device.h
 -rw-r--r--	root/root	usr/include/kis_paint_device_iface.h
+-rw-r--r--	root/root	usr/include/kis_paint_layer.h
 -rw-r--r--	root/root	usr/include/kis_painter.h
 -rw-r--r--	root/root	usr/include/kis_paintop.h
 -rw-r--r--	root/root	usr/include/kis_paintop_box.h
@@ -415,8 +425,6 @@ drwxr-xr-x	root/root	usr/lib/kde3/
 -rwxr-xr-x	root/root	usr/lib/kde3/kritaimagesize.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kritaoilpaintfilter.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kritaoilpaintfilter.so
--rwxr-xr-x	root/root	usr/lib/kde3/kritaperftest.la
--rwxr-xr-x	root/root	usr/lib/kde3/kritaperftest.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kritapixelizefilter.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kritapixelizefilter.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kritaraindropsfilter.la
@@ -3805,7 +3813,6 @@ drwxr-xr-x	root/root	usr/share/apps/kritaplugins/
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/imagesize.rc
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/kritafiltersgallery.rc
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/kritahistogramdocker.rc
--rw-r--r--	root/root	usr/share/apps/kritaplugins/perftest.rc
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/rotateimage.rc
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/screenshot-krita.rc
 -rw-r--r--	root/root	usr/share/apps/kritaplugins/scripting.rc
@@ -5317,7 +5324,6 @@ drwxr-xr-x	root/root	usr/share/services/kformdesigner/
 -rw-r--r--	root/root	usr/share/services/kritaimagesize.desktop
 -rw-r--r--	root/root	usr/share/services/kritaoilpaintfilter.desktop
 -rw-r--r--	root/root	usr/share/services/kritapart.desktop
--rw-r--r--	root/root	usr/share/services/kritaperftest.desktop
 -rw-r--r--	root/root	usr/share/services/kritapixelizefilter.desktop
 -rw-r--r--	root/root	usr/share/services/kritaraindropsfilter.desktop
 -rw-r--r--	root/root	usr/share/services/kritargbplugin.desktop
