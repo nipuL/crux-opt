@@ -4,7 +4,7 @@
 # Depends on: libpng, sdl_mixer, sdl_net
 
 name=lbreakout2
-version=2.6beta-4
+version=2.6beta-5
 release=1
 source=(http://dl.sourceforge.net/sourceforge/lgames/$name-$version.tar.gz)
 
