@@ -7,12 +7,10 @@
 name=mesa3d
 version=6.4.2
 release=2
-source=(http://dl.sourceforge.net/$name/MesaLib-$version.tar.gz \
-    libGL.la)
+source=(http://dl.sourceforge.net/$name/MesaLib-$version.tar.bz2 libGL.la)
 
 build() {
     cd Mesa-$version
-    cp configs/linux-dri-x86 configs/current
     make linux-dri-x86
     mkdir -p $PKG/usr/{lib,include}
     bin/installmesa $PKG/usr
