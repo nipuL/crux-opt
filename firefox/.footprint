@@ -147,6 +147,7 @@ drwxr-xr-x	root/root	usr/include/firefox/content/
 -rw-r--r--	root/root	usr/include/firefox/content/nsIEventListenerManager.h
 -rw-r--r--	root/root	usr/include/firefox/content/nsIEventStateManager.h
 -rw-r--r--	root/root	usr/include/firefox/content/nsIFIXptr.h
+-rwxr-xr-x	root/root	usr/include/firefox/content/nsIFileControlElement.h
 -rw-r--r--	root/root	usr/include/firefox/content/nsIForm.h
 -rw-r--r--	root/root	usr/include/firefox/content/nsIFormControl.h
 -rw-r--r--	root/root	usr/include/firefox/content/nsIFormProcessor.h
