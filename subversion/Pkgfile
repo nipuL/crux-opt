@@ -5,14 +5,12 @@
 # Depends on:  apr, neon, expat
 
 name=subversion
-version=1.3.1
+version=1.3.2
 release=1
-source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2 \
-        subversion-1.3.1-apr.diff)
+source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    patch -p1 < $SRC/subversion-1.3.1-apr.diff
     LDFLAGS="-L$PKG/usr/lib" \
         ./configure --prefix=/usr \
            --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
