@@ -6,7 +6,7 @@
 name=popt
 version=1.7
 release=1
-source=(ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/$name-$version.tar.gz)
+source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
