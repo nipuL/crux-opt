@@ -6,7 +6,7 @@
 name=vcdimager
 version=0.7.23
 release=1
-source=(http://www.vcdimager.org/pub/$name/$name-0.7/$name-$version.tar.gz)
+source=(ftp://ftp.gnu.org/gnu/vcdimager/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
