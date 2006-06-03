@@ -1118,8 +1118,6 @@ drwxr-xr-x	root/root	usr/share/apps/kppp/Provider/Irland/
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Irland/.directory
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Irland/Eircom
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Irland/IOL
--rw-r--r--	root/root	usr/share/apps/kppp/Provider/Irland/UTV
--rw-r--r--	root/root	usr/share/apps/kppp/Provider/Irland/UVT
 drwxr-xr-x	root/root	usr/share/apps/kppp/Provider/Netherlands/
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Netherlands/.directory
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Netherlands/12Move
@@ -1233,6 +1231,7 @@ drwxr-xr-x	root/root	usr/share/apps/kppp/Provider/United_Kingdom/
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/United_Kingdom/UK%032Free%032Software%032Network%032Modem
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/United_Kingdom/UKPOST%032ISDN
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/United_Kingdom/UKPOST%032Modem
+-rw-r--r--	root/root	usr/share/apps/kppp/Provider/United_Kingdom/UTV
 drwxr-xr-x	root/root	usr/share/apps/kppp/Provider/Yugoslavia/
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Yugoslavia/041Net
 -rw-r--r--	root/root	usr/share/apps/kppp/Provider/Yugoslavia/BeoTelNet

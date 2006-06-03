@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwsr-xr-x	root/root	usr/bin/kcheckpass
 -rwxr-xr-x	root/root	usr/bin/kcheckrunning
 -rwxr-xr-x	root/root	usr/bin/kcminit
+-rwxr-xr-x	root/root	usr/bin/kcminit_startup
 -rwxr-xr-x	root/root	usr/bin/kcontrol
 -rwxr-xr-x	root/root	usr/bin/kcontroledit
 -rwxr-xr-x	root/root	usr/bin/kdcop
@@ -311,6 +312,8 @@ drwxr-xr-x	root/root	usr/lib/kde3/
 -rwxr-xr-x	root/root	usr/lib/kde3/kcm_xinerama.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kcminit.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kcminit.so
+-rwxr-xr-x	root/root	usr/lib/kde3/kcminit_startup.la
+-rwxr-xr-x	root/root	usr/lib/kde3/kcminit_startup.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kcontrol.la
 -rwxr-xr-x	root/root	usr/lib/kde3/kcontrol.so
 -rwxr-xr-x	root/root	usr/lib/kde3/kcontroledit.la
@@ -585,6 +588,8 @@ lrwxrwxrwx	root/root	usr/lib/libkdecorations.so.1 -> libkdecorations.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kate.so
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kcminit.la
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kcminit.so
+-rwxr-xr-x	root/root	usr/lib/libkdeinit_kcminit_startup.la
+-rwxr-xr-x	root/root	usr/lib/libkdeinit_kcminit_startup.so
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kcontrol.la
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kcontrol.so
 -rwxr-xr-x	root/root	usr/lib/libkdeinit_kcontroledit.la
@@ -818,8 +823,6 @@ drwxr-xr-x	root/root	usr/share/applnk/Settings/WebBrowsing/
 -rw-r--r--	root/root	usr/share/applnk/Settings/WebBrowsing/khtml_appearance.desktop
 -rw-r--r--	root/root	usr/share/applnk/Settings/WebBrowsing/nsplugin.desktop
 -rw-r--r--	root/root	usr/share/applnk/Settings/WebBrowsing/smb.desktop
-drwxr-xr-x	root/root	usr/share/applnk/Settingsmenu/
--rw-r--r--	root/root	usr/share/applnk/Settingsmenu/printmgr.desktop
 drwxr-xr-x	root/root	usr/share/applnk/System/
 drwxr-xr-x	root/root	usr/share/applnk/System/ScreenSavers/
 -rw-r--r--	root/root	usr/share/applnk/System/ScreenSavers/KBlankscreen.desktop

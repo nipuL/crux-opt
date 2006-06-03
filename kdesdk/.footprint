@@ -722,6 +722,7 @@ drwxr-xr-x	root/root	usr/share/apps/umbrello/pics/
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/shallow-history.png
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/startlogo.png
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/state-fork.png
+-rw-r--r--	root/root	usr/share/apps/umbrello/pics/subsystem.png
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/template.png
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/text.png
 -rw-r--r--	root/root	usr/share/apps/umbrello/pics/uniassociation.png

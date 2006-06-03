@@ -5,15 +5,13 @@
 # Depends on: sudo, perl, db, libidn, imlib, hicolor-icon-theme, freeglut, libart_lgpl, qt3, audiofile, libxml2, libxslt, libpcre, openssl, aspell, gnupg, gpgme, gamin, cups, openldap, arts
 
 name=kdelibs
-version=3.5.2
-release=4
-source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2 \
-    http://www.kde-look.org/content/files/10888-bt.tar.gz \
-    $name-$version-cups-1.2.patch)
+version=3.5.3
+release=1
+source=(http://download.kde.org/stable/3.5.3/src/$name-$version.tar.bz2 \
+    http://www.kde-look.org/content/files/10888-bt.tar.gz)
 
 build() {
     cd $name-$version
-    patch -d kdeprint/cups < ../$name-$version-cups-1.2.patch
     ./configure	--prefix=/usr \
         --with-distribution="CRUX" \
         --enable-sendfile \

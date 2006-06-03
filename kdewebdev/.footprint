@@ -1242,6 +1242,7 @@ drwxr-xr-x	root/root	usr/share/apps/quanta/templates/text/scripts/
 -rw-r--r--	root/root	usr/share/apps/quanta/tips
 drwxr-xr-x	root/root	usr/share/apps/quanta/toolbar/
 -rw-r--r--	root/root	usr/share/apps/quanta/toolbar/ball.png
+-rw-r--r--	root/root	usr/share/apps/quanta/toolbar/button.png
 -rw-r--r--	root/root	usr/share/apps/quanta/toolbar/check.png
 -rw-r--r--	root/root	usr/share/apps/quanta/toolbar/check_clear.png
 -rw-r--r--	root/root	usr/share/apps/quanta/toolbar/check_grey.png

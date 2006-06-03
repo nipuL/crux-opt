@@ -1902,6 +1902,7 @@ drwxr-xr-x	root/root	usr/share/apps/ksgmltools2/customization/it/entities/
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/underBSDLicense.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/underFDL.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/underGPL.docbook
+-rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/underLGPL.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/underX11License.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/entities/update-doc.docbook
 -rw-r--r--	root/root	usr/share/apps/ksgmltools2/customization/it/lang.entities
@@ -3687,8 +3688,10 @@ drwxr-xr-x	root/root	usr/share/icons/crystalsvg/16x16/actions/
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_breakoff.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_duplicate.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_new.png
+-rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_new_bg.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_new_raised.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_remove.png
+-rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/tab_remove_other.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/text.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/text_block.png
 -rw-r--r--	root/root	usr/share/icons/crystalsvg/16x16/actions/text_bold.png

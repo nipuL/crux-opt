@@ -1398,6 +1398,7 @@ drwxr-xr-x	root/root	usr/share/apps/libical/zoneinfo/America/
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Costa_Rica.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Cuiaba.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Curacao.ics
+-rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Danmarkshavn.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Dawson.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Dawson_Creek.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Denver.ics
@@ -1456,6 +1457,8 @@ drwxr-xr-x	root/root	usr/share/apps/libical/zoneinfo/America/Kentucky/
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Nipigon.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Nome.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Noronha.ics
+drwxr-xr-x	root/root	usr/share/apps/libical/zoneinfo/America/North_Dakota/
+-rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/North_Dakota/Center.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Panama.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Pangnirtung.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/America/Paramaribo.ics
@@ -1519,6 +1522,8 @@ drwxr-xr-x	root/root	usr/share/apps/libical/zoneinfo/Asia/
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Bishkek.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Brunei.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Calcutta.ics
+-rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Choibalsan.ics
+-rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Chongqing.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Chungking.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Colombo.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Damascus.ics
@@ -1558,6 +1563,7 @@ drwxr-xr-x	root/root	usr/share/apps/libical/zoneinfo/Asia/
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Rangoon.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Riyadh.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Saigon.ics
+-rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Sakhalin.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Samarkand.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Seoul.ics
 -rw-r--r--	root/root	usr/share/apps/libical/zoneinfo/Asia/Shanghai.ics
@@ -1875,6 +1881,12 @@ lrwxrwxrwx	root/root	usr/share/doc/HTML/en/karm/common -> /usr/share/doc/HTML/en
 -rw-r--r--	root/root	usr/share/doc/HTML/en/karm/karm.png
 -rw-r--r--	root/root	usr/share/doc/HTML/en/karm/systray.png
 drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/src/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/src/html/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/src/librss/
+drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/akregator/src/librss/html/
 drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/certmanager/
 drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/certmanager/html/
 drwxr-xr-x	root/root	usr/share/doc/HTML/en/kdepim-apidocs/certmanager/lib/

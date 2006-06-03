@@ -5,9 +5,9 @@
 # Depends on: ruby, perl, python
 
 name=kdebindings
-version=3.5.2
-release=2
-source=(http://download.kde.org/stable/3.5.2/src/$name-$version.tar.bz2)
+version=3.5.3
+release=1
+source=(http://download.kde.org/stable/3.5.3/src/$name-$version.tar.bz2)
 
 build() {
     export QTDIR=/usr/share/qt

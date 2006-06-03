@@ -1329,6 +1329,7 @@ drwxr-xr-x	root/root	usr/share/services/kded/
 -rw-r--r--	root/root	usr/share/services/kfile_tiff.desktop
 -rw-r--r--	root/root	usr/share/services/kfile_xbm.desktop
 -rw-r--r--	root/root	usr/share/services/kfile_xpm.desktop
+-rw-r--r--	root/root	usr/share/services/kghostview_part.desktop
 -rw-r--r--	root/root	usr/share/services/kpdf_part.desktop
 -rw-r--r--	root/root	usr/share/services/ksvglibartcanvas.desktop
 -rw-r--r--	root/root	usr/share/services/ksvgplugin.desktop
