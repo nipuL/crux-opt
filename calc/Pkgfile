@@ -5,7 +5,7 @@
 # Depends on:
 
 name=calc
-version=2.12.0.1
+version=2.12.0.2
 release=1
 source=(http://www.isthe.com/chongo/src/calc/$name-$version.tar.gz \
         $name.patch)
