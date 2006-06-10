@@ -5,7 +5,7 @@
 # Depends on:  docbook-xml-entities,libxslt
 
 name=docbook-xsl
-version=1.69.1
+version=1.70.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/docbook/$name-$version.tar.gz)
 
