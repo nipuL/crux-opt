@@ -5,13 +5,20 @@
 # Nice to have: tk
 
 name=git
-version=1.3.3
+version=1.4.0
 release=1
-source=(http://www.kernel.org/pub/software/scm/$name/$name-$version.tar.bz2)
+source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
 	make CFLAGS="$CFLAGS" prefix=/usr
 	make prefix=/usr DESTDIR=$PKG install
+
+	cd $SRC
+
+	for i in man*; do
+		install -d $PKG/usr/man/$i
+		install -m 644 $i/* $PKG/usr/man/$i;
+	done
 }
