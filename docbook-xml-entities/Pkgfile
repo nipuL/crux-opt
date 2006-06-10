@@ -5,7 +5,7 @@
 
 name=docbook-xml-entities
 version=0.3
-release=3
+release=4
 source=(http://www.oasis-open.org/docbook/xmlcharent/$version/xmlcharent-$version.zip)
 
 build() {
@@ -44,30 +44,30 @@ build() {
 	           "$ident_prefix Added Math Symbols: Relations//EN"
 	           "$ident_prefix Non-Russian Cyrillic//EN")
 
-	ENT_FILE=($ENT_PATH/iso-pub.ent
-	          $ENT_PATH/iso-grk1.ent
-	          $ENT_PATH/iso-box.ent
-	          $ENT_PATH/iso-grk3.ent
-	          $ENT_PATH/iso-amsn.ent
-	          $ENT_PATH/iso-num.ent
-	          $ENT_PATH/iso-grk4.ent
-	          $ENT_PATH/iso-dia.ent
-	          $ENT_PATH/iso-grk2.ent
-	          $ENT_PATH/iso-amsa.ent
-	          $ENT_PATH/iso-amso.ent
-	          $ENT_PATH/iso-cyr1.ent
-	          $ENT_PATH/iso-tech.ent
-	          $ENT_PATH/iso-amsc.ent
-	          $ENT_PATH/iso-lat1.ent
-	          $ENT_PATH/iso-amsb.ent
-	          $ENT_PATH/iso-lat2.ent
-	          $ENT_PATH/iso-amsr.ent
-	          $ENT_PATH/iso-cyr2.ent)
+	ENT_FILE=(iso-pub.ent
+	          iso-grk1.ent
+	          iso-box.ent
+	          iso-grk3.ent
+	          iso-amsn.ent
+	          iso-num.ent
+	          iso-grk4.ent
+	          iso-dia.ent
+	          iso-grk2.ent
+	          iso-amsa.ent
+	          iso-amso.ent
+	          iso-cyr1.ent
+	          iso-tech.ent
+	          iso-amsc.ent
+	          iso-lat1.ent
+	          iso-amsb.ent
+	          iso-lat2.ent
+	          iso-amsr.ent
+	          iso-cyr2.ent)
 
-	i=0
-	while test $i -lt 19; do
+	
+        for f in ${ENT_FILE[*]}; do
 		xmlcatalog --noout --add "public" \
-		  "${ENT_IDENT[$i]}" "file://${ENT_FILE[$i]}" $PKG$ENT_CAT
-		i=$(($i + 1))
+		  "$ENT_PATH/$f" "file://$ENT_PATH/$f" $PKG$ENT_CAT
+                (cd $PKG/$ENT_PATH; ln -s $f ${f/-})
 	done
 }
