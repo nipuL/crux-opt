@@ -5,13 +5,12 @@
 # Depends on:  docbook-xml-entities
 
 name=docbook-xml-dtd
-version=4.3
+version=4.4
 release=1
-source=(http://www.docbook.org/xml/$version/docbook-xml-$version.zip \
-        dbcentx.patch)
+source=(http://www.docbook.org/xml/$version/docbook-xml-$version.zip)
 
 build() {
-	patch dbcentx.{mod,patch}
+	sed -i -e 's|^"ent/|"file:///usr/share/xml/ent/docbook/0.3/|' dbcentx.mod
 	install -d -m 0755 $PKG/{etc,usr/share}/xml/dtd/docbook/$version
 	install -m 0644 *.{dtd,mod} $PKG/usr/share/xml/dtd/docbook/$version/
 	xmlcatalog --noout --create $PKG/etc/xml/dtd/docbook/$version/catalog
