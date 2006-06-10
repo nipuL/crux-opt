@@ -118,6 +118,8 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/compat.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/compat.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/compat.pyo
+-rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/glade.la
+-rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/glade.so
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/keysyms.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/keysyms.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/gtk-2.0/gtk/keysyms.pyo
@@ -178,5 +180,6 @@ drwxr-xr-x	root/root	usr/share/pygtk/2.0/defs/
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-extrafuncs.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk-types.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/gtk.defs
+-rw-r--r--	root/root	usr/share/pygtk/2.0/defs/libglade.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/pango-types.defs
 -rw-r--r--	root/root	usr/share/pygtk/2.0/defs/pango.defs
