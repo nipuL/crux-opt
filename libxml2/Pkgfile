@@ -5,7 +5,7 @@
 # Depends on:  zlib
 
 name=libxml2
-version=2.6.24
+version=2.6.26
 release=1
 source=(http://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/$name-$version.tar.bz2)
 
