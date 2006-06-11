@@ -82,6 +82,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/calc/
 -rw-r--r--	root/root	usr/share/calc/README
+-rw-r--r--	root/root	usr/share/calc/alg_config.cal
 -rw-r--r--	root/root	usr/share/calc/beer.cal
 -rw-r--r--	root/root	usr/share/calc/bernoulli.cal
 -rw-r--r--	root/root	usr/share/calc/bigprime.cal
