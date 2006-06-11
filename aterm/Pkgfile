@@ -6,7 +6,7 @@
 name=aterm
 version=1.0.0
 release=1
-source=(ftp://ftp.afterstep.org/apps/$name/$name-$version.tar.gz \
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
         $name-fake_root.patch)
 
 build () {
