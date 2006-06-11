@@ -5,9 +5,9 @@
 # Depends on: gtk, libstdc++-compat
 
 name=acroread
-version=7.0.5
-release=3
-source=(http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.5/enu/AdobeReader_enu-7.0.5-1.i386.tar.gz)
+version=7.0.8
+release=1
+source=(http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.8/enu/AdobeReader_enu-7.0.8-1.i386.tar.gz)
 PKGMK_NO_STRIP="yes"
 
 build() {

@@ -69,6 +69,7 @@ lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libcrypto.so.0 -> li
 lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libcurl.so -> libcurl.so.2.0.2
 lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libcurl.so.2 -> libcurl.so.2.0.2
 -rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libcurl.so.2.0.2
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/librt3d.so
 lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libssl.so -> libssl.so.0.9.6
 lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libssl.so.0 -> libssl.so.0.9.6
 -rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/lib/libssl.so.0.9.6
@@ -99,6 +100,12 @@ drwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins/Annotations/Sta
 -rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins/checkers.api
 -rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins/ewh.api
 -rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins/wwwlink.api
+drwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/2d.x3d
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/3difr.x3d
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/drvOpenGL.x3d
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/drvSOFT.x3d
+-rwxr-xr-x	root/root	usr/lib/Acrobat7/Reader/intellinux/plug_ins3d/tesselate.x3d
 lrwxrwxrwx	root/root	usr/lib/Acrobat7/Reader/intellinux/res -> ../../Resource
 drwxr-xr-x	root/root	usr/lib/Acrobat7/Resource/
 drwxr-xr-x	root/root	usr/lib/Acrobat7/Resource/CMap/
@@ -197,11 +204,12 @@ drwxr-xr-x	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/brt0402.lex
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/brt32.clx
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/brtphon.env
--rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/can112.lex
+-rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/can129.lex
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/can32.clx
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/canphon.env
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/eng32.clx
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/engphon.env
+-rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/usa03.lex
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/usa86.lex
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/usa8601.lex
 -rw-r--r--	root/root	usr/lib/Acrobat7/Resource/Linguistics/Providers/Proximity/usa8602.lex
