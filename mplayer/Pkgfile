@@ -10,25 +10,18 @@
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0pre7try2
-release=2
-source=(http://www2.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
-	http://www2.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
-	mplayer.conf demuxer_h_fix_20060212.diff mplayer-1.0_pre7-gcc4.patch)
+version=1.0pre8
+release=1
+source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+	mplayer.conf)
 
 build() {
 	cd MPlayer-$version
 
-	# ASF demuxer security patch (CAN-2006-0579)
-	patch -p0 -i $SRC/demuxer_h_fix_20060212.diff
-
-	# gcc4 patch
-	patch -p1 -i $SRC/mplayer-1.0_pre7-gcc4.patch
-
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
 	./configure --prefix=/usr \
-		--enable-linux-devfs \
 		--disable-divx4linux \
 		--with-codecsdir=/usr/lib/win32
 
