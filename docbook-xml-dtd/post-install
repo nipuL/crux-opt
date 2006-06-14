@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="4.3"
+version="4.4"
 
 DTD_CAT=/etc/xml/dtd/docbook/$version/catalog
 DTD_URLS="http://www.docbook.org/xml/$version
