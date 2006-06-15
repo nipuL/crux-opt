@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=mod_ruby
-version=1.2.5
+version=1.2.6
 release=1
 source=(http://modruby.net/archive/$name-$version.tar.gz)
 
