@@ -10,6 +10,7 @@ source=(http://dl.sourceforge.net/sourceforge/tcl/tcl${version}-src.tar.gz)
 
 build() {
     cd $SRC/tcl${version}/unix/
+    sed -i "s/relid'/relid/" configure
     ./configure --prefix=/usr
     make
     make MKLINKS_FLAGS="-s" INSTALL_ROOT=$PKG install
