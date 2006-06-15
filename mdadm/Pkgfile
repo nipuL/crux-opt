@@ -1,16 +1,15 @@
 # Description: Multiple device (RAID) admin tool
 # URL:         http://www.cse.unsw.edu.au/~neilb/source/mdadm/
-# Packager:    Gunter Coelle, gunter dot coelle at dbaudio dot com
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on: 
 
 name=mdadm
-version=2.4.1
+version=2.5
 release=1
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz \
+        $name-ssl.patch)
 
 build() {
     cd $name-$version
-    make CXFLAGS="$CFLAGS"   
-    make DESTDIR=$PKG MANDIR=/usr/man install
+    patch -p1 < $SRC/$name-ssl.patch
+    make CXFLAGS="$CFLAGS" USE_SSL=0 DESTDIR=$PKG MANDIR=/usr/man install
 }
