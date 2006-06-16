@@ -3,13 +3,11 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
-version=2.5
+version=2.5.1
 release=1
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz \
-        $name-ssl.patch)
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    patch -p1 < $SRC/$name-ssl.patch
-    make CXFLAGS="$CFLAGS" USE_SSL=0 DESTDIR=$PKG MANDIR=/usr/man install
+    make CXFLAGS="$CFLAGS" DESTDIR=$PKG MANDIR=/usr/man install
 }
