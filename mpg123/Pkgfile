@@ -7,11 +7,12 @@ name=mpg123
 version=0.59s
 release=3
 source=(http://www.mpg123.de/$name/$name-pre$version.tar.gz \
-        $name-$version.patch)
+        $name-$version-security.patch $name-$version.patch)
 
 build() {
     cd $name
-    patch -p1 < ../$name-$version.patch
+    patch -p1 < $SRC/$name-$version-security.patch
+    patch -p1 < $SRC/$name-$version.patch
     make linux-esd 
     make PREFIX=$PKG/usr install
 }
