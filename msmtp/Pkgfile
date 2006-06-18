@@ -5,14 +5,14 @@
 # Depends on:  
 
 name=msmtp
-version=1.4.5
+version=1.4.6
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls
+    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/info
+    rm -rf $PKG/usr/share
 }
