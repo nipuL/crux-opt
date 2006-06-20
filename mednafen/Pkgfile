@@ -4,7 +4,7 @@
 # Depends on: libsdl, libsamplerate, libcdio
 
 name=mednafen
-version=0.6.1
+version=0.6.2
 release=1
 source=(http://mednafen.fobby.net/releases/$name-$version.tar.bz2)
 
