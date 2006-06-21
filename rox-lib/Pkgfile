@@ -5,13 +5,13 @@
 # Depends on: pygtk
 
 name=rox-lib
-version=2.0.2
+version=2.0.3
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/$name-$version.tgz)
+source=(http://dl.sourceforge.net/sourceforge/rox/${name}2-$version.tar.bz2)
 
 build() {
 	mkdir -p $PKG/usr/lib
-	cd $name-$version
+	cd ${name}2-$version
 	rm -rf ROX-Lib2/{Help,Messages}
 	cp -rf ROX-Lib2 $PKG/usr/lib
 }
