@@ -4,7 +4,7 @@
 # Depends on: wxgtk
 
 name=amule
-version=2.1.1
+version=2.1.3
 release=1
 source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
@@ -13,8 +13,9 @@ build() {
 	export CFLAGS="${CFLAGS//-fstack-protector/}"
 	export CXXFLAGS="${CXXFLAGS//-fstack-protector/}"
 	./configure 	--prefix=/usr \
+			--mandir=/usr/man \
 			--disable-nls
 	make
 	make install DESTDIR=$PKG
-	rm -r $PKG/usr/{man/??,share/doc/}
+	rm -r $PKG/usr{/share/doc,/man/??}
 }
