@@ -5,12 +5,12 @@
 # Depends on: qt3
 
 name=opera
-version=8.54-20060330.6
+version=9.0-20060616.6
 release=1
-source=(http://$name.nsc.no/linux/854/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
+source=(http://$name.nsc.no/linux/900/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
 
 build() {
-    cd $name-$version-shared-qt.i386-en
+    cd $name-$version-shared-qt.i386-en-344
 
     sed -i s:share/man:man: install.sh
     yes n | ./install.sh --prefix=$PKG/usr
