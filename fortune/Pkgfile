@@ -6,7 +6,7 @@
 name=fortune
 version=0.2
 release=5
-source=(ftp://sunsite.cnlab-switch.ch/mirror/linux/sunsite/games/amusements/$name/$name-$version.tar.gz \
+source=(http://www.ibiblio.org/pub/Linux/games/amusements/$name/$name-$version.tar.gz \
         $name-$version.patch \
 	http://dl.sourceforge.net/sourceforge/fortune4all/fortune_big.zip \
 	http://www.schwarzvogel.de/pkgs/kernelcookies-8.tar.gz \
