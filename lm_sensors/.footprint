@@ -18,8 +18,8 @@ drwxr-xr-x	root/root	usr/include/sensors/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libsensors.a
 lrwxrwxrwx	root/root	usr/lib/libsensors.so -> libsensors.so.3
-lrwxrwxrwx	root/root	usr/lib/libsensors.so.3 -> libsensors.so.3.0.9
--rwxr-xr-x	root/root	usr/lib/libsensors.so.3.0.9
+lrwxrwxrwx	root/root	usr/lib/libsensors.so.3 -> libsensors.so.3.1.0
+-rwxr-xr-x	root/root	usr/lib/libsensors.so.3.1.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/sensors.1.gz
@@ -31,6 +31,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/fancontrol.8.gz
 -rw-r--r--	root/root	usr/man/man8/i2cdetect.8.gz
 -rw-r--r--	root/root	usr/man/man8/i2cdump.8.gz
+-rw-r--r--	root/root	usr/man/man8/i2cget.8.gz
 -rw-r--r--	root/root	usr/man/man8/i2cset.8.gz
 -rw-r--r--	root/root	usr/man/man8/isadump.8.gz
 -rw-r--r--	root/root	usr/man/man8/isaset.8.gz
@@ -41,6 +42,7 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/fancontrol.pl
 -rwxr-xr-x	root/root	usr/sbin/i2cdetect
 -rwxr-xr-x	root/root	usr/sbin/i2cdump
+-rwxr-xr-x	root/root	usr/sbin/i2cget
 -rwxr-xr-x	root/root	usr/sbin/i2cset
 -rwxr-xr-x	root/root	usr/sbin/isadump
 -rwxr-xr-x	root/root	usr/sbin/isaset
