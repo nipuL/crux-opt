@@ -4,9 +4,9 @@
 # Depends on:  ncurses
 
 name=gdb
-version=6.4
+version=6.5
 release=1
-source=(http://mirrors.sunsite.dk/gnu/$name/$name-$version.tar.bz2)
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
