@@ -5,7 +5,7 @@
 # Depends on:  python
 
 name=getmail
-version=4.6.2
+version=4.6.3
 release=1
 source=(http://pyropus.ca/software/$name/old-versions/$name-$version.tar.gz \
         $name.patch)
