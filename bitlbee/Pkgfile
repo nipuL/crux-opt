@@ -5,7 +5,7 @@
 # Depends on: glib, openssl
 
 name=bitlbee
-version=1.0.2
+version=1.0.3
 release=1
 source=(http://get.$name.org/src/$name-$version.tar.gz)
 
