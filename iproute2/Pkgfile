@@ -1,0 +1,17 @@
+# Description: a collection of utilites for controlling TCP/IP networking and traffic in Linux
+# URL: http://linux-net.osdl.org/index.php/Iproute2
+# Maintainer: sten, nick dot steeves at shaw dot ca
+# Packager: Mikhail Kolesnik, mike at openbunker dot org
+
+name=iproute2
+version=2.6.16-060323
+release=3
+source=(http://developer.osdl.org/dev/iproute2/download/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	sed -i -e "s|MANDIR=/usr/share/man|MANDIR=/usr/man|" Makefile
+	make KERNEL_INCLUDE="/lib/modules/`uname -r`/source/include"
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}
