@@ -1,12 +1,13 @@
 # Description: A Window Maker applet which displays date and time
-# URL: http://www.liquidmeme.net/WindowMaker/wmclock/
-# Maintainer: Per Lidén, core-ports at crux dot nu
+# URL: http://www.jmknoble.net/WindowMaker/wmclock/
+# Packager: Per Lidén, core-ports at crux dot nu
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on:
 
 name=wmclock
 version=1.0.12.2
 release=1
-source=(http://www.jmknoble.net/WindowMaker/wmclock/$name-$version.tar.gz)
+source=(http://www.dockapps.org/download.php/id/328/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
