@@ -465,6 +465,7 @@ drwxr-xr-x	root/root	usr/share/calc/help/
 -rw-r--r--	root/root	usr/share/calc/set8700.line
 -rw-r--r--	root/root	usr/share/calc/solve.cal
 -rw-r--r--	root/root	usr/share/calc/sumsq.cal
+-rw-r--r--	root/root	usr/share/calc/sumtimes.cal
 -rw-r--r--	root/root	usr/share/calc/surd.cal
 -rw-r--r--	root/root	usr/share/calc/test1700.cal
 -rw-r--r--	root/root	usr/share/calc/test2300.cal
