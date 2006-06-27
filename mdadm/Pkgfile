@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
-version=2.5.1
+version=2.5.2
 release=1
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
 
