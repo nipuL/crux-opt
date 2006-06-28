@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.beta9.orig/dovecot-example.conf dovecot-1.0.beta9/dovecot-example.conf
---- dovecot-1.0.beta9.orig/dovecot-example.conf	2006-06-14 07:08:10.000000000 +0200
-+++ dovecot-1.0.beta9/dovecot-example.conf	2006-06-14 07:17:32.000000000 +0200
+diff -Nru dovecot-1.0.rc1.orig/dovecot-example.conf dovecot-1.0.rc1/dovecot-example.conf
+--- dovecot-1.0.rc1.orig/dovecot-example.conf	2006-06-28 07:09:03.000000000 +0200
++++ dovecot-1.0.rc1/dovecot-example.conf	2006-06-28 07:09:21.000000000 +0200
 @@ -13,10 +13,10 @@
  # --with-ssldir=/etc/ssl
  
@@ -122,7 +122,7 @@ diff -Nru dovecot-1.0.beta9.orig/dovecot-example.conf dovecot-1.0.beta9/dovecot-
    # POP3 logout format string:
    #  %t - number of TOP commands
 @@ -621,7 +621,7 @@
-   #mail_plugin_dir = /usr/lib/dovecot/imap
+   #mail_plugin_dir = /usr/lib/dovecot/lda
  
    # Binary to use for sending mails.
 -  #sendmail_path = /usr/lib/sendmail
