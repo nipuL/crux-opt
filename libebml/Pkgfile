@@ -2,10 +2,9 @@
 # URL: http://ebml.sourceforge.net
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
-# Depends on:
 
 name=libebml
-version=0.7.6
+version=0.7.7
 release=1
 source=(http://dl.matroska.org/downloads/$name/$name-$version.tar.bz2)
 
