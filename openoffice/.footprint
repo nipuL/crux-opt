@@ -193,12 +193,13 @@ drwxr-xr-x	root/root	usr/lib/openoffice/presets/uno_packages/
 drwxr-xr-x	root/root	usr/lib/openoffice/presets/uno_packages/cache/
 drwxr-xr-x	root/root	usr/lib/openoffice/presets/wordbook/
 drwxr-xr-x	root/root	usr/lib/openoffice/program/
+-r-xr-xr-x	root/root	usr/lib/openoffice/program/.testtoolrc
 -r--r--r--	root/root	usr/lib/openoffice/program/JREProperties.class
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/acceptor.uno.so -> acceptor.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/acceptor.uno.so.1
 drwxr-xr-x	root/root	usr/lib/openoffice/program/addin/
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/basprov680li.uno.so -> basprov680li.uno.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/basprov680li.uno.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/basprov680li.uno.so -> basprov680li.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/basprov680li.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/behelper.uno.so -> behelper.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/behelper.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/bootstraprc
@@ -336,12 +337,12 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/deployment680li.uno.so -> deploy
 -r--r--r--	root/root	usr/lib/openoffice/program/deployment680li.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/deploymentgui680li.uno.so -> deploymentgui680li.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/deploymentgui680li.uno.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/dlgprov680li.uno.so -> dlgprov680li.uno.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/dlgprov680li.uno.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/dlgprov680li.uno.so -> dlgprov680li.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/dlgprov680li.uno.so.1.1
 drwxr-xr-x	root/root	usr/lib/openoffice/program/filter/
 -r--r--r--	root/root	usr/lib/openoffice/program/filter/libfreetype.so.6
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/fpicker.uno.so -> fpicker.uno.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/fpicker.uno.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/fpicker.uno.so -> fpicker.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/fpicker.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/fps_gnome.uno.so -> fps_gnome.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/fps_gnome.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/fps_office.uno.so -> fps_office.uno.so.1.1
@@ -381,8 +382,6 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/javavm.uno.so -> javavm.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/javavm.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/jvmfwk3rc
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/kde-open-url
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/ldapbe2.uno.so -> ldapbe2.uno.so.1.1
--r--r--r--	root/root	usr/lib/openoffice/program/ldapbe2.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/legacy_binfilters.rdb -> legacy_binfilters.rdb.1
 -r--r--r--	root/root	usr/lib/openoffice/program/legacy_binfilters.rdb.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libabp680li.so
@@ -392,16 +391,16 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libagg680li.so -> libagg680li.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libagg680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libanalysis680li.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libanimcore.so
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libavmedia680li.so -> libavmedia680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libavmedia680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libavmedia680li.so -> libavmedia680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libavmedia680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbasctl680li.so -> libbasctl680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbasctl680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbasegfx680li.so -> libbasegfx680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbasegfx680li.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_frm680li.so -> libbf_frm680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libbf_frm680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_lng680li.so -> libbf_lng680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libbf_lng680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_frm680li.so -> libbf_frm680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libbf_frm680li.so.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_lng680li.so -> libbf_lng680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libbf_lng680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_migratefilter680li.so -> libbf_migratefilter680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_migratefilter680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_ofa680li.so -> libbf_ofa680li.so.1
@@ -409,8 +408,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_ofa680li.so -> libbf_ofa68
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_sc680li.so
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_sch680li.so -> libbf_sch680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_sch680li.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_sd680li.so -> libbf_sd680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libbf_sd680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_sd680li.so -> libbf_sd680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libbf_sd680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_sm680li.so -> libbf_sm680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_sm680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_svx680li.so -> libbf_svx680li.so.1.1
@@ -423,8 +422,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_xo680li.so -> libbf_xo680l
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_xo680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbib680li.so -> libbib680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbib680li.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbindet680li.so -> libbindet680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libbindet680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbindet680li.so -> libbindet680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libbindet680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libcached1.so -> libcached1.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libcached1.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libcalc680li.so
@@ -490,22 +489,22 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libepg680li.so -> libepg680li.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libepg680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libepp680li.so -> libepp680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libepp680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libeps680li.so -> libeps680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libeps680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libeps680li.so -> libeps680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libeps680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libept680li.so -> libept680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libept680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libera680li.so -> libera680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libera680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libeti680li.so -> libeti680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libeti680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libevoab1.so -> libevoab1.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libevoab1.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libevoab1.so -> libevoab1.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libevoab1.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libevtatt.so -> libevtatt.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libevtatt.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libexp680li.so -> libexp680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libexp680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libfile680li.so -> libfile680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libfile680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libfile680li.so -> libfile680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libfile680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libfileacc.so -> libfileacc.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libfileacc.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libfilterconfig1.so -> libfilterconfig1.so.1.1
@@ -538,6 +537,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhunspell.so -> libhunspell.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libhwp.so
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhyphen680li.so -> libhyphen680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libhyphen680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libi18nisolang1gcc3.so -> libi18nisolang1gcc3.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libi18nisolang1gcc3.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libi18nregexpgcc3.so -> libi18nregexpgcc3.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libi18nregexpgcc3.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libi18nutilgcc3.so -> libi18nutilgcc3.so.1.1
@@ -582,8 +583,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libira680li.so -> libira680li.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libira680li.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libitg680li.so -> libitg680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libitg680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libiti680li.so -> libiti680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libiti680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libiti680li.so -> libiti680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libiti680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libj680li_g.so -> libj680li_g.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libj680li_g.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libjava_uno.so -> libjava_uno.so.1.1
@@ -609,9 +610,10 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libkabdrv1.so -> libkabdrv1.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libldap50.so
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblegacy_binfilters680li.so -> liblegacy_binfilters680li.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/liblegacy_binfilters680li.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblng680li.so -> liblng680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/liblng680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/liblnth680li.so
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblng680li.so -> liblng680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/liblng680li.so.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblnth680li.so -> liblnth680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/liblnth680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblocaledata_en.so -> liblocaledata_en.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/liblocaledata_en.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/liblocaledata_es.so -> liblocaledata_es.so.1.1
@@ -676,8 +678,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libreg.so.3 -> libreg.so.3.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libres680li.so -> libres680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libres680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/librmcxt.so -> librmcxt.so.3
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/librmcxt.so.3 -> librmcxt.so.3.1
--r--r--r--	root/root	usr/lib/openoffice/program/librmcxt.so.3.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/librmcxt.so.3 -> librmcxt.so.3.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/librmcxt.so.3.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libsal.so -> libsal.so.3
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libsal.so.3 -> libuno_sal.so.3
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libsalhelper3gcc3.so -> libsalhelpergcc3.so.3
@@ -794,8 +796,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/liburp_uno.so -> liburp_uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/liburp_uno.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libutl680li.so -> libutl680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libutl680li.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libuui680li.so -> libuui680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libuui680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libuui680li.so -> libuui680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libuui680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libvcl680li.so -> libvcl680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libvcl680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libvclplug_gen680li.so -> libvclplug_gen680li.so.1.1
@@ -848,14 +850,15 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libxstor.so -> libxstor.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/localebe1.uno.so -> localebe1.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/localebe1.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/mailmerge.py
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/migrationoo2.uno.so -> migrationoo2.uno.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/migrationoo2.uno.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/migrationoo2.uno.so -> migrationoo2.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/migrationoo2.uno.so.1.1
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/msfontextract
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/namingservice.uno.so -> namingservice.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/namingservice.uno.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/nestedreg.uno.so -> nestedreg.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/nestedreg.uno.so.1
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/nsplugin
+-r--r--r--	root/root	usr/lib/openoffice/program/officehelper.py
 -r--r--r--	root/root	usr/lib/openoffice/program/oo_product.bmp
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/open-url
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/pagein
@@ -864,8 +867,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/nestedreg.uno.so -> nestedreg.un
 -r--r--r--	root/root	usr/lib/openoffice/program/pagein-draw
 -r--r--r--	root/root	usr/lib/openoffice/program/pagein-impress
 -r--r--r--	root/root	usr/lib/openoffice/program/pagein-writer
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/passwordcontainer.uno.so -> passwordcontainer.uno.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/passwordcontainer.uno.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/passwordcontainer.uno.so -> passwordcontainer.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/passwordcontainer.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/pkgchk -> unopkg
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/pkgchk.bin
 drwxr-xr-x	root/root	usr/lib/openoffice/program/plugin/
@@ -1822,6 +1825,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/program/resource/
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/bf_sw680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/bib680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/cal680en-US.res
+-r--r--r--	root/root	usr/lib/openoffice/program/resource/cnr680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/date680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/dba680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/dbp680en-US.res
@@ -1901,8 +1905,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/spadmin -> soffice
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/spadmin.bin
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/streams.uno.so -> streams.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/streams.uno.so.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/sunjavaplugin.so -> sunjavaplugin.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/sunjavaplugin.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/sunjavaplugin.so -> sunjavaplugin.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/sunjavaplugin.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/svtmisc.uno.so -> svtmisc.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/svtmisc.uno.so.1.1
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/swriter
@@ -2742,6 +2746,8 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_nl_NL.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_sw_TZ.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_TH.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_de_CH_v2.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_de_DE_v2.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/WordNet_license.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/de_AT.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/de_AT.dic
@@ -2775,8 +2781,15 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_cs_CZ_license.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_cs_CZ_v2.dat
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_cs_CZ_v2.idx
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_de_CH_v2.dat
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_de_CH_v2.idx
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_de_DE_v2.dat
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_de_DE_v2.idx
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_en_US_v2.dat
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_en_US_v2.idx
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_license.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_v2.dat
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_v2.idx
 drwxr-xr-x	root/root	usr/lib/openoffice/share/dtd/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/dtd/math/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/dtd/math/1_01/
@@ -4000,6 +4013,17 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/nl/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/nl/pri-mail_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/nl/pri-marine_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/nl/pri-redline_l.ott
+drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/bus-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/bus-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/bus-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/off-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/off-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/off-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/pri-bottle_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/pri-mail_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/pri-marine_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pl/pri-redline_l.ott
 drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/bus-elegant_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/bus-modern_l.ott
@@ -4033,6 +4057,17 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/sk/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sk/pri-mail_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sk/pri-marine_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sk/pri-redline_l.ott
+drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/bus-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/bus-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/bus-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/off-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/off-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/off-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/pri-bottle_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/pri-mail_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/pri-marine_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sl/pri-redline_l.ott
 drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/sv/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sv/bus-elegant_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/sv/bus-modern_l.ott
