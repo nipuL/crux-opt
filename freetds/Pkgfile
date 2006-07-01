@@ -4,7 +4,7 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=freetds
-version=0.63
+version=0.64
 release=1
 source=(http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/$name-$version.tar.gz)
 
