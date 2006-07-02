@@ -4,8 +4,8 @@
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=gnupg
-version=1.4.3
-release=3
+version=1.4.4
+release=1
 source=(ftp://ftp.gnupg.org/gcrypt/gnupg/$name-$version.tar.bz2 \
 	ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz)
 
