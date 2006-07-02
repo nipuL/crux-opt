@@ -19,7 +19,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-cherry-pick
 -rwxr-xr-x	root/root	usr/bin/git-clean
 -rwxr-xr-x	root/root	usr/bin/git-clone
--rwxr-xr-x	root/root	usr/bin/git-clone-pack
 -rwxr-xr-x	root/root	usr/bin/git-commit
 -rwxr-xr-x	root/root	usr/bin/git-commit-tree
 -rwxr-xr-x	root/root	usr/bin/git-convert-objects
@@ -143,7 +142,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-cherry-pick.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cherry.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-clean.1.gz
--rw-r--r--	root/root	usr/man/man1/git-clone-pack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-clone.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-commit-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-commit.1.gz
