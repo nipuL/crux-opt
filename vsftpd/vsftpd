@@ -3,14 +3,15 @@
 # /etc/rc.d/vsftpd: start/stop vsftpd daemon
 #
 
-CRT=/etc/ssl/certs/vsftpd.pem
+CRT=/etc/ssl/certs/vsftpd.crt
+KEY=/etc/ssl/keys/vsftpd.key
 
 case $1 in
 start)
 	if [ ! -s $CRT ]; then 
-		/usr/bin/mksslcert $CRT $CRT
+		/usr/bin/mksslcert $KEY $CRT
 	fi
-	setsid /usr/sbin/vsftpd &
+	/usr/sbin/vsftpd
 	;;
 stop)
 	killall -q /usr/sbin/vsftpd

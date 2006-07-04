@@ -3,7 +3,9 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/vsftpd
 drwxr-xr-x	root/root	etc/ssl/
 drwxr-xr-x	root/root	etc/ssl/certs/
--rw-------	root/root	etc/ssl/certs/vsftpd.pem (EMPTY)
+-rw-------	root/root	etc/ssl/certs/vsftpd.crt (EMPTY)
+drwxr-xr-x	root/root	etc/ssl/keys/
+-rw-------	root/root	etc/ssl/keys/vsftpd.key (EMPTY)
 -rw-------	root/root	etc/vsftpd.conf
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/man/
