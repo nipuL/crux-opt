@@ -177,6 +177,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelOutputProc.3
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelSeekProc.3
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelSetOptionProc.3
+-rw-r--r--	root/root	usr/man/man3/Tcl_ChannelThreadActionProc.3
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelVersion.3
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelWatchProc.3
 -rw-r--r--	root/root	usr/man/man3/Tcl_ChannelWideSeekProc.3

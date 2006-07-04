@@ -12,6 +12,7 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/tkColor.h
 -rw-r--r--	root/root	usr/include/tkDecls.h
 -rw-r--r--	root/root	usr/include/tkDefault.h
+-rw-r--r--	root/root	usr/include/tkEntry.h
 -rw-r--r--	root/root	usr/include/tkFileFilter.h
 -rw-r--r--	root/root	usr/include/tkFont.h
 -rw-r--r--	root/root	usr/include/tkInitScript.h
@@ -67,10 +68,12 @@ drwxr-xr-x	root/root	usr/lib/tk8.4/msgs/
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/en_gb.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/eo.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/es.msg
+-rw-r--r--	root/root	usr/lib/tk8.4/msgs/es_ES.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/fr.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/it.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/nl.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/pl.msg
+-rw-r--r--	root/root	usr/lib/tk8.4/msgs/pt.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/msgs/ru.msg
 -rw-r--r--	root/root	usr/lib/tk8.4/obsolete.tcl
 -rw-r--r--	root/root	usr/lib/tk8.4/optMenu.tcl
