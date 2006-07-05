@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=x11-fonts-corefonts
-version=1.2
+version=2.0
 release=1
 source=(http://www.kyz.uklinux.net/downloads/cabextract-1.1.tar.gz \
 	http://dl.sourceforge.net/sourceforge/corefonts/andale32.exe \
@@ -16,7 +16,8 @@ source=(http://www.kyz.uklinux.net/downloads/cabextract-1.1.tar.gz \
 	http://dl.sourceforge.net/sourceforge/corefonts/times32.exe \
 	http://dl.sourceforge.net/sourceforge/corefonts/trebuc32.exe \
 	http://dl.sourceforge.net/sourceforge/corefonts/verdan32.exe \
-	http://dl.sourceforge.net/sourceforge/corefonts/webdin32.exe)
+	http://dl.sourceforge.net/sourceforge/corefonts/webdin32.exe \
+	http://dl.sourceforge.net/sourceforge/corefonts/wd97vwr32.exe)
 
 build() {
 	(cd cabextract-1.1 && ./configure && make)
@@ -24,6 +25,7 @@ build() {
 	do
 		cabextract-1.1/cabextract --lowercase $font
 	done
+	cabextract-1.1/cabextract --lowercase viewer1.cab
 	mkdir -p $PKG/usr/share/fonts/corefonts
 	install -o root -g root -m 0644 *.ttf \
 		$PKG/usr/share/fonts/corefonts/
