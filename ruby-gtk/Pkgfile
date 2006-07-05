@@ -5,15 +5,12 @@
 # Depends on: ruby, gtk
 
 name=ruby-gtk
-version=0.14.1
+version=0.15.0
 release=1
-source=(http://dl.sourceforge.net/ruby-gnome2/ruby-gtk2-$version.tar.gz \
-        $name.diff)
+source=(http://dl.sourceforge.net/ruby-gnome2/ruby-gtk2-$version.tar.gz)
 
 build() {
 	cd ruby-gtk2-$version
-
-	patch -Np1 -i ../$name.diff
 
 	ruby extconf.rb
 
