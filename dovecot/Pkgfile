@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=dovecot
-version=1.0.rc1
+version=1.0.rc2
 release=1
 source=(http://dovecot.procontrol.fi/releases/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
