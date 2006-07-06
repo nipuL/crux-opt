@@ -87,6 +87,12 @@ case "$1" in
 			mv /usr/X11R6/lib/libGL{.so.1.2,_so_1_2}
 			mv /usr/X11R6/lib/libGL{.a,_a}
 			rm /usr/X11R6/lib/libGL.so*
+			# nvidia's library versioning prevents ldconfig from creating
+			# libGL.so and libGLcore.so
+			[ ! -L /usr/lib/libGL.so ] && \
+				ln -sf libGL.so.1.0.$NV_VER /usr/lib/libGL.so
+			[ ! -L /usr/lib/libGLcore.so ] && \
+				ln -sf libGLcore.so.1.0.$NV_VER /usr/lib/libGLcore.so
 		else
 			echo "You appear to already be using a non-x11 gl/glx setup. If the"
 			echo "one selected isn't the correct one, revert to x11 and then select"
@@ -100,6 +106,7 @@ case "$1" in
 esac
 
 /sbin/ldconfig > /dev/null 2>&1
+
 echo "done."
 
 # End of file
