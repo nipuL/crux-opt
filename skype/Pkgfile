@@ -5,9 +5,9 @@
 # Depends on: qt3
 
 name=skype
-version=1.2.0.18
+version=1.3.0.30
 release=1
-source=(http://download.skype.com/linux/$name-$version.tar.bz2)
+source=(http://download.skype.com/linux/$name-beta-$version.tar.bz2)
 
 build() {
 	cd $name-$version
