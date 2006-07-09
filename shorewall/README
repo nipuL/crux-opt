@@ -1,0 +1,11 @@
+POST-UPGRADE
+
+You may wish to periodically:
+
+sudo diff -ur /etc/shorewall /var/lib/pkg/rejected/etc/shorewall
+
+in order to track upstream shorewall configuration changes.  Although
+I have not yet encountered a minor version release of shorewall which
+broke compatibility with my /etc/shorewall configuration, it is
+something worth being aware of.  If shorewall fails to start do to a
+configuration error, DON'T PANIC! ;-)
