@@ -5,7 +5,7 @@
 # Depends on: iptables, iproute2
 
 name=shorewall
-version=3.0.5
+version=3.0.8
 release=1
 source=(ftp://ftp.shorewall.net/pub/shorewall/3.0/shorewall-$version/shorewall-$version.tar.bz2)
 
