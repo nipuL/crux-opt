@@ -4,7 +4,7 @@
 # Packager: 
 
 name=libdrm
-version=2.0.1
+version=2.0.2
 release=1
 source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.gz)
 
