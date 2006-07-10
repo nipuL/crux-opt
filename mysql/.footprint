@@ -27,6 +27,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mysql_tableinfo
 -rwxr-xr-x	root/root	usr/bin/mysql_tzinfo_to_sql
 -rwxr-xr-x	root/root	usr/bin/mysql_upgrade
+-rwxr-xr-x	root/root	usr/bin/mysql_upgrade_shell
 -rwxr-xr-x	root/root	usr/bin/mysql_waitpid
 -rwxr-xr-x	root/root	usr/bin/mysql_zap
 -rwxr-xr-x	root/root	usr/bin/mysqlaccess
