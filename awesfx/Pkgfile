@@ -5,7 +5,7 @@
 # Dependencies: alsa-lib
 
 name=awesfx
-version=0.5.0c
+version=0.5.0d
 release=1
 source=(http://www.alsa-project.org/~iwai/$name-$version.tar.gz)
 
