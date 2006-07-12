@@ -7,10 +7,11 @@ name=aterm
 version=1.0.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
-        $name-fake_root.patch)
+        $name-fake_root.patch $name-configure.patch)
 
 build () {
     cd aterm-$version
+    patch -p1 < $SRC/$name-configure.patch
     patch -p1 < $SRC/$name-fake_root.patch
     cp autoconf/configure.in .
     autoconf 
