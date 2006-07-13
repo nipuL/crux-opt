@@ -4,23 +4,23 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.22
+version=3.0.23
 release=1
 source=(http://us1.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
 
 build () {
     cd $name-$version/source
-    sed -i '31d' script/installbin.sh
     ./configure --prefix=/usr \
                 --with-fhs \
                 --with-smbmount \
                 --with-configdir=/etc/samba \
                 --with-lockdir=/var/run/samba \
                 --with-piddir=/var/run/samba \
+                --with-mandir=/usr/man \
                 --with-logfilebase=/var/log/samba
     make
-    make DATADIR=/usr/share MANDIR=/usr/man DESTDIR=$PKG install
+    make DESTDIR=$PKG install
     
     # nsswitch extensions
     install nsswitch/libnss_win{s,bind}.so $PKG/usr/lib/samba
@@ -28,7 +28,6 @@ build () {
     install -d $PKG/{sbin,var/log/samba}
     
     # symlinks
-    (cd $PKG/sbin; ln -s ../usr/bin/smbmount mount.smbfs)
     (cd $PKG/usr/lib 
      ln -s samba/libsmbclient.so libsmbclient.so
      ln -s samba/libsmbclient.so libsmbclient.so.0
