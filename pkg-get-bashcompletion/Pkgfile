@@ -5,7 +5,7 @@
 # Depends on: bash-completion, pkg-get
 
 name=pkg-get-bashcompletion
-version=0.4.4
+version=0.4.5
 release=1
 source=(http://www.varlock.com/files/pkg-get-$version.tar.gz)
 
