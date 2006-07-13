@@ -6,6 +6,7 @@ drwxr-xr-x	root/root	etc/postfix/
 -rw-r--r--	root/root	etc/postfix/aliases
 -rw-r--r--	root/root	etc/postfix/aliases.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/body_checks (EMPTY)
+-rw-r--r--	root/root	etc/postfix/bounce.cf.default
 -rw-r--r--	root/root	etc/postfix/canonical
 -rw-r--r--	root/root	etc/postfix/canonical.db (EMPTY)
 -rw-r--r--	root/root	etc/postfix/generic
@@ -78,6 +79,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/access.5.gz
 -rw-r--r--	root/root	usr/man/man5/aliases.5.gz
 -rw-r--r--	root/root	usr/man/man5/body_checks.5.gz
+-rw-r--r--	root/root	usr/man/man5/bounce.5.gz
 -rw-r--r--	root/root	usr/man/man5/canonical.5.gz
 -rw-r--r--	root/root	usr/man/man5/cidr_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/generic.5.gz
@@ -91,6 +93,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/postconf.5.gz
 -rw-r--r--	root/root	usr/man/man5/regexp_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/relocated.5.gz
+-rw-r--r--	root/root	usr/man/man5/tcp_table.5.gz
 -rw-r--r--	root/root	usr/man/man5/transport.5.gz
 -rw-r--r--	root/root	usr/man/man5/virtual.5.gz
 drwxr-xr-x	root/root	usr/man/man8/
