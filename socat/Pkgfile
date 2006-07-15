@@ -4,12 +4,12 @@
 # Depends on:  ncurses, openssl, readline
 
 name=socat
-version=1.4.3.1
+version=1.5.0.0
 release=1
 source=(http://www.dest-unreach.org/socat/download/$name-$version.tar.gz)
 
 build () {
-    cd $name-1.4
+    cd $name-$version
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
