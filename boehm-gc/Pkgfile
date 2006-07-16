@@ -5,7 +5,7 @@
 # Depends on:
 
 name=boehm-gc
-version=6.7
+version=6.8
 release=1
 source=(http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc${version}.tar.gz)
 
