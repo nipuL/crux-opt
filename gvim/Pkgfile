@@ -5,7 +5,7 @@
 
 name=gvim
 version=7.0
-release=1
+release=2
 source=(ftp://ftp.vim.org/pub/vim/unix/vim-$version.tar.bz2)
 
 build () {
@@ -14,6 +14,7 @@ build () {
                 --with-vim-name=gvim \
                 --with-x=yes \
                 --enable-gui=gtk2 \
+                --enable-multibyte \
                 --disable-gpm \
                 --disable-nls
     make VIMRTDIR=
