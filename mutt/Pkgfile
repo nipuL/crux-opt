@@ -4,8 +4,8 @@
 # Depends on:  gdbm, ncurses, openssl
 
 name=mutt
-version=1.5.11
-release=2
+version=1.5.12
+release=1
 source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz)
 
 build () {
