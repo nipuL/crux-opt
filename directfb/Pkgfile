@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=directfb
-version=0.9.24
+version=0.9.25.1
 release=1
 source=(http://www.directfb.org/download/DirectFB/DirectFB-$version.tar.gz)
 
