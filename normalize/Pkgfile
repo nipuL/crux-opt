@@ -5,9 +5,9 @@
 # Depends on: libmad
 
 name=normalize
-version=0.7.6
+version=0.7.7
 release=1
-source=(http://www1.cs.columbia.edu/~cvaill/$name/$name-$version.tar.bz2)
+source=(http://savannah.nongnu.org/download/$name/$name-$version.tar.bz2)
 
 build() {
   	cd $name-$version
