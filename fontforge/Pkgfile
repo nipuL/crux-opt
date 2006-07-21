@@ -1,0 +1,19 @@
+# Description: An outline font editor.
+# URL: http://fontforge.sourceforge.net
+# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: freetype, libpng, libtiff, libungif, libxml2
+
+name=fontforge
+version=20060715
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/${name}_full-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure	--prefix=/usr \
+			--disable-nls
+	sed -i 's|^prefix.*|prefix ?= /usr|' Makefile
+	make
+	make install prefix=$PKG/usr
+	rm -r $PKG/usr/share/locale/
+}
