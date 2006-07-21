@@ -1,11 +1,12 @@
 # Description: X implementation of the Multiple Arcade Machine Emulator.
 # URL: http://x.mame.net/
 # Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Packager: sten, nick dot steeves at shaw dot ca
 # Depends on: libsdl
 
 name=xmame
-version=0.104
-release=2
+version=0.106
+release=1
 source=(http://x.mame.net/download/$name-$version.tar.bz2 \
 	http://www.mame.net/roms/robby.zip \
 	http://www.mame.net/roms/polyplay.zip \
@@ -37,7 +38,6 @@ build() {
 
 	# make sdl
 	make \
-		CFLAGS="${CFLAGS}" \
 		PREFIX=/usr \
 		DISPLAY_METHOD=SDL \
 		$ESOUND \
@@ -51,7 +51,6 @@ build() {
 
 	# make x11
 	make \
-		CFLAGS="${CFLAGS}" \
 		PREFIX=/usr \
 		DISPLAY_METHOD=x11 \
 		$ESOUND \
