@@ -4,7 +4,7 @@
 # Depends on: libsdl, libogg, libmad, zlib, mpeg2dec
 
 name=scummvm
-version=0.8.2
+version=0.9.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
@@ -13,5 +13,5 @@ build() {
 	./configure
 	make
 	install -D -m 0755 $name $PKG/usr/bin/$name
-	install -D -m 0644 $name.xpm $PKG/usr/share/icons/$name.xpm
+	install -D -m 0644 icons/$name.xpm $PKG/usr/share/icons/$name.xpm
 }
