@@ -6,6 +6,7 @@ drwxr-xr-x	root/lp	etc/cups/interfaces/
 -rw-r--r--	root/root	etc/cups/mime.convs
 -rw-r--r--	root/root	etc/cups/mime.types
 drwxr-xr-x	root/lp	etc/cups/ppd/
+drwx------	root/lp	etc/cups/ssl/
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/cups
 drwxr-xr-x	root/root	etc/ssl/
@@ -21,7 +22,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cupstestppd
 -rwxr-xr-x	root/root	usr/bin/lp
 -rwxr-xr-x	root/root	usr/bin/lpoptions
--rwsr-xr-x	daemon/lp	usr/bin/lppasswd
+-rwsr-xr-x	root/root	usr/bin/lppasswd
 -rwxr-xr-x	root/root	usr/bin/lpq
 -rwxr-xr-x	root/root	usr/bin/lpr
 -rwxr-xr-x	root/root	usr/bin/lprm
@@ -106,6 +107,7 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/client.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cups-snmp.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/cupsd.conf.5.gz
+-rw-r--r--	root/root	usr/man/man5/mailto.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/mime.convs.5.gz
 -rw-r--r--	root/root	usr/man/man5/mime.types.5.gz
 -rw-r--r--	root/root	usr/man/man5/printers.conf.5.gz
@@ -264,11 +266,13 @@ drwxr-xr-x	root/root	usr/share/cups/doc/help/
 -rw-r--r--	root/root	usr/share/cups/doc/help/network.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/options.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/overview.html
+-rw-r--r--	root/root	usr/share/cups/doc/help/policies.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-access_log.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-classes-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-client-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-cupsd-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-error_log.html
+-rw-r--r--	root/root	usr/share/cups/doc/help/ref-mailto-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-page_log.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-printers-conf.html
 -rw-r--r--	root/root	usr/share/cups/doc/help/ref-snmp-conf.html
