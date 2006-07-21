@@ -1,9 +1,10 @@
 # Description: WINE - Implementation of Windows DLL's and core.
 # URL: http://www.winehq.com/
 # Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: fontforge
 
 name=wine
-version=0.9.12
+version=0.9.17
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
 
