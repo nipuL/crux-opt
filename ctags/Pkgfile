@@ -4,7 +4,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=ctags
-version=5.5.4
+version=5.6
 release=1
 source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz)
 
