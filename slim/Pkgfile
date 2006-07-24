@@ -5,8 +5,8 @@
 # Depends on: x11, libjpeg
 
 name=slim
-version=1.2.4
-release=2
+version=1.2.5
+release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.gz \
         http://jw.tks6.net/files/slim-crux-smooth.tar.gz $name.rc)
 
