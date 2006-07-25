@@ -2,4 +2,4 @@
 88fd85405713717ef7c239acfa4720f0  qemu-0.7.2-dyngen-check-stack-clobbers.patch
 aaa22a7297ac7685cb462e3ec1668e79  qemu-0.7.2-gcc4-opts.patch
 cb2b0532b6eab6f80c14b33cfba70662  qemu-0.8.0-gcc4-hacks.patch
-67d924324a5ab79d017bd97a1e767285  qemu-0.8.1.tar.gz
+5b3a89eb2f256a8a6f3bb07f7b3f1b07  qemu-0.8.2.tar.gz

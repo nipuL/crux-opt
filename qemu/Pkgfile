@@ -6,7 +6,7 @@
 # Nice to have: kqemu
 
 name=qemu
-version=0.8.1
+version=0.8.2
 release=1
 source=(http://fabrice.bellard.free.fr/$name/$name-$version.tar.gz \
 	$name-0.7.0-gcc4.patch \

@@ -42,8 +42,8 @@ drwxr-xr-x	root/root	usr/share/qemu/keymaps/
 -rw-r--r--	root/root	usr/share/qemu/keymaps/th
 -rw-r--r--	root/root	usr/share/qemu/keymaps/tr
 -rw-r--r--	root/root	usr/share/qemu/linux_boot.bin
+-rw-r--r--	root/root	usr/share/qemu/openbios-sparc32
 -rw-r--r--	root/root	usr/share/qemu/ppc_rom.bin
--rw-r--r--	root/root	usr/share/qemu/proll.elf
 -rw-r--r--	root/root	usr/share/qemu/vgabios-cirrus.bin
 -rw-r--r--	root/root	usr/share/qemu/vgabios.bin
 -rw-r--r--	root/root	usr/share/qemu/video.x
