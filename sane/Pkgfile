@@ -4,25 +4,26 @@
 # Depends on:  libusb, libjpeg
 
 name=sane
-version=1.0.17
-release=3
+version=1.0.18
+release=1
 source=(ftp://ftp2.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
 
 build () {
     cd $name-backends-$version
 
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --localstatedir=/var \
                 --disable-translations \
                 --enable-locking \
                 --with-group=scanner
     make
-    make prefix=$PKG/usr install
+    make DESTDIR=$PKG install
 
-    sh tools/udev/convert-usermap.sh tools/hotplug/libsane.usermap
-    install -d $PKG/{etc/udev/rules.d,var/lock}
-    install -d -g scanner -m 775 $PKG/var/lock/sane
-    install -m 644 libsane.rules $PKG/etc/udev/rules.d
+    install -d $PKG/etc/udev/rules.d
+    install -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d
 
+    chown root:root $PKG/{var,var/lock}
+    chmod 755 $PKG/{var,var/lock}
     rm -r $PKG/usr/{doc,share}
 }
