@@ -5,12 +5,13 @@
 # Depends on:
 
 name=whois
-version=4.7.13
+version=4.7.15
 release=1
 source=(http://ftp.debian.org/debian/pool/main/w/$name/$name\_$version.tar.gz)
 
 build() {
     cd $name-$version
+    sed -i '696d' whois.c
     make
     mkdir -p $PKG/usr/bin $PKG/usr/man/man1
     install -m 755 whois $PKG/usr/bin/whois
