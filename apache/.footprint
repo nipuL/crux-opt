@@ -174,7 +174,6 @@ drwxr-xr-x	root/root	var/www/error/
 -rw-r--r--	root/root	var/www/error/HTTP_UNAUTHORIZED.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_UNSUPPORTED_MEDIA_TYPE.html.var
 -rw-r--r--	root/root	var/www/error/HTTP_VARIANT_ALSO_VARIES.html.var
--rw-r--r--	root/root	var/www/error/README
 -rw-r--r--	root/root	var/www/error/contact.html.var
 drwxr-xr-x	root/root	var/www/error/include/
 -rw-r--r--	root/root	var/www/error/include/bottom.html
@@ -182,7 +181,6 @@ drwxr-xr-x	root/root	var/www/error/include/
 -rw-r--r--	root/root	var/www/error/include/top.html
 drwxr-xr-x	root/root	var/www/htdocs/
 drwxr-xr-x	root/root	var/www/icons/
--rw-r--r--	root/root	var/www/icons/README
 -rw-r--r--	root/root	var/www/icons/a.gif
 -rw-r--r--	root/root	var/www/icons/a.png
 -rw-r--r--	root/root	var/www/icons/alert.black.gif
@@ -311,7 +309,6 @@ drwxr-xr-x	root/root	var/www/icons/
 -rw-r--r--	root/root	var/www/icons/script.gif
 -rw-r--r--	root/root	var/www/icons/script.png
 drwxr-xr-x	root/root	var/www/icons/small/
--rw-r--r--	root/root	var/www/icons/small/README.txt
 -rw-r--r--	root/root	var/www/icons/small/back.gif
 -rw-r--r--	root/root	var/www/icons/small/back.png
 -rw-r--r--	root/root	var/www/icons/small/binary.gif
