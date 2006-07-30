@@ -113,6 +113,10 @@ drwxr-xr-x	root/root	usr/lib/kde3/
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3balsaoutputplugin.so
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3bartsoutputplugin.la
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3bartsoutputplugin.so
+-rwxr-xr-x	root/root	usr/lib/kde3/libk3baudiometainforenamerplugin.la
+-rwxr-xr-x	root/root	usr/lib/kde3/libk3baudiometainforenamerplugin.so
+-rwxr-xr-x	root/root	usr/lib/kde3/libk3baudioprojectcddbplugin.la
+-rwxr-xr-x	root/root	usr/lib/kde3/libk3baudioprojectcddbplugin.so
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3bexternalencoder.la
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3bexternalencoder.so
 -rwxr-xr-x	root/root	usr/lib/kde3/libk3bffmpegdecoder.la
@@ -137,10 +141,6 @@ drwxr-xr-x	root/root	usr/lib/kde3/
 lrwxrwxrwx	root/root	usr/lib/libk3b.so -> libk3b.so.2.0.0
 lrwxrwxrwx	root/root	usr/lib/libk3b.so.2 -> libk3b.so.2.0.0
 -rwxr-xr-x	root/root	usr/lib/libk3b.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libk3baudiometainforenamerplugin.la
--rwxr-xr-x	root/root	usr/lib/libk3baudiometainforenamerplugin.so
--rwxr-xr-x	root/root	usr/lib/libk3baudioprojectcddbplugin.la
--rwxr-xr-x	root/root	usr/lib/libk3baudioprojectcddbplugin.so
 -rwxr-xr-x	root/root	usr/lib/libk3bdevice.la
 lrwxrwxrwx	root/root	usr/lib/libk3bdevice.so -> libk3bdevice.so.2.0.1
 lrwxrwxrwx	root/root	usr/lib/libk3bdevice.so.2 -> libk3bdevice.so.2.0.1
