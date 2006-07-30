@@ -5,14 +5,16 @@
 # Depends on: x11, libpng, alsa-lib, libdvdnav, libogg, libvorbis, esound, flac, libsdl, arts, libmng, libmad, liba52, samba, speex, samba, libtheora, faad2
 
 name=xine-lib
-version=1.1.1
-release=1
-source=(http://dl.sourceforge.net/sourceforge/xine/$name-${version}.tar.gz)
+version=1.1.2
+release=2
+source=(http://dl.sourceforge.net/sourceforge/xine/$name-${version}.tar.bz2)
 
 build() {
     unset CFLAGS CXXFLAGS
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls
+    ./configure --prefix=/usr \
+        --disable-nls \
+        --mandir=/usr/man
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/share/doc
