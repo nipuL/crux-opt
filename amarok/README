@@ -10,16 +10,13 @@ kdebase            (recommended)
 
 xine-lib           (recommended)
     * Xine is faster then GStreamer.  Amarok's graphic equalizer, and other
-      visualizations, are tuned to Xine for low-latency.
+      visualizations, are tuned to Xine for low-latency.  As GStreamer
+      isn't part of CRUX anymore, this is the only stable engine
+      available to CRUX users.
 
-AND/OR
-
-gst-plugins        (optional)
-    * Use GStreamer instead of Xine, if desired.  Personally, I find
-      that Xine is faster and more stable.
-
-libvisual-plugins  (optional)
-    * LibVisual provides audio visualization support.  Very nice eye candy!
+ruby               (recommended)
+    * many amaroK scripts are written in Ruby, therefore Ruby is useful
+      for extending amaroK's usefulness
 
 k3b                (optional)
-    * needed for cd-burning integration
+    * needed for integrated cd-burning
