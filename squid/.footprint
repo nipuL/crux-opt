@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	etc/squid/
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/RunCache
+-rwxr-xr-x	root/root	usr/bin/cossdump
 -rwxr-xr-x	root/root	usr/bin/squidclient
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man8/
