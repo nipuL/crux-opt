@@ -4,7 +4,7 @@
 # Packager: 
 
 name=eject
-version=2.1.4
+version=2.1.5
 release=1
 source=(http://ca.geocities.com/jefftranter@rogers.com/$name-$version.tar.gz)
 
