@@ -4,13 +4,14 @@
 # Depends on: openssl
 
 name=lftp
-version=3.5.1
+version=3.5.2
 release=1
 source=(http://ftp.yars.free.net/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --disable-nls --with-openssl=/usr
+	./configure --prefix=/usr --disable-nls --with-openssl=/usr \
+	            --mandir=/usr/man
 
 	make -C src confpaths.h
 
