@@ -4,9 +4,9 @@
 # Depends on: x11, freetype, fontconfig, cairo
 
 name=pango
-version=1.10.4
+version=1.12.3
 release=1
-source=(ftp://ftp.gtk.org/pub/gtk/v2.8/$name-$version.tar.bz2 \
+source=(ftp://ftp.gtk.org/pub/gtk/v2.10/$name-$version.tar.bz2 \
 	pango.modules)
 
 build () {
