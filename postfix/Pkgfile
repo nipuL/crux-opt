@@ -6,14 +6,14 @@
 
 name=postfix
 version=2.3.2
-release=1
+release=2
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc)
 
 build() {
     cd $name-$version
 
-    _CCARGS="$CCARGS -DUSE_SASL_AUTH -I/usr/include/sasl -DUSE_TLS -I/usr/include/openssl"
+    _CCARGS="$CCARGS -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl -DUSE_TLS -I/usr/include/openssl"
     _AUXLIBS="-L/usr/lib -lsasl2 -lssl -lcrypto"
 
     make tidy
