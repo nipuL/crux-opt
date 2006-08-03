@@ -6,12 +6,15 @@
 
 name=freeglut
 version=2.4.0
-release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
+    freeglut-2.4.0.patch)
 
 build() {
+    patch -p0 -i $SRC/freeglut-2.4.0.patch
     cd $name-$version
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr \
+        --disable-warnings
     make
     make DESTDIR=$PKG install
 }
