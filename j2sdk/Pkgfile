@@ -2,9 +2,6 @@
 # Description: Java 2 Software Development Kit
 # URL: http://java.sun.com
 
-# Please download the source files from http://java.sun.com after
-# accepting the license terms, and place them in this directory.
-
 name=j2sdk
 version=1.5.0_07
 release=1
