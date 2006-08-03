@@ -8,12 +8,11 @@
 name=j2sdk
 version=1.5.0_07
 release=1
-source=(file:///jdk-${version//./_}-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-1_5_0_07-distro-linux-i586.bin)
 
 build(){
-	sed -i 's|more <<"EOF"|cat <<"EOF"|' jdk-*.bin
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
-	yes | sh $SRC/jdk-*.bin
+	sh $SRC/jdk-*.bin --accept-license --unpack
 	
 	export GLOBIGNORE="*/man1"
 	rm -rf jdk*/{man/,jre/lib/javaws/messages_,demo,sample}*
@@ -26,6 +25,9 @@ build(){
 	done
 	
 	ln -s jdk* java
+
+	# generate classes.jsa
+ 	(cd java; ./bin/java -Xshare:dump)
 
 	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
 	for j in java javac javah javap javaws jar keytool; do
