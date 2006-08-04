@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-example.conf
---- dovecot-1.0.rc2.orig/dovecot-example.conf	2006-07-04 20:13:50.000000000 +0200
-+++ dovecot-1.0.rc2/dovecot-example.conf	2006-07-04 20:13:59.000000000 +0200
+diff -Nru dovecot-1.0.rc3.orig/dovecot-example.conf dovecot-1.0.rc3/dovecot-example.conf
+--- dovecot-1.0.rc3.orig/dovecot-example.conf	2006-08-02 19:46:43.000000000 +0200
++++ dovecot-1.0.rc3/dovecot-example.conf	2006-08-02 19:46:56.000000000 +0200
 @@ -13,10 +13,10 @@
  # --with-ssldir=/etc/ssl
  
@@ -66,7 +66,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
  # If you need to set multiple mailbox locations or want to change default
  # namespace settings, you can do it by defining namespace sections:
-@@ -294,7 +294,7 @@
+@@ -295,7 +295,7 @@
  # non-valid GID as primary group ID aren't allowed to log in. If user
  # belongs to supplementary groups with non-valid GIDs, those groups are
  # not set.
@@ -75,7 +75,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  #last_valid_gid = 0
  
  # Maximum number of running mail processes. When this limit is reached,
-@@ -467,19 +467,19 @@
+@@ -468,19 +468,19 @@
  
  protocol imap {
    # Login executable location.
@@ -99,7 +99,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -529,10 +529,10 @@
+@@ -530,10 +530,10 @@
  
  protocol pop3 {
    # Login executable location.
@@ -112,7 +112,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -576,7 +576,7 @@
+@@ -577,7 +577,7 @@
    # installations. %08Xu%08Xv will be the new default, so use it for new
    # installations.
    #
@@ -121,7 +121,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # POP3 logout format string:
    #  %t - number of TOP commands
-@@ -622,7 +622,7 @@
+@@ -623,7 +623,7 @@
    #mail_plugin_dir = /usr/lib/dovecot/lda
  
    # Binary to use for sending mails.
@@ -130,7 +130,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -633,7 +633,7 @@
+@@ -634,7 +634,7 @@
  ##
  
  # Executable location
@@ -139,7 +139,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -745,7 +745,7 @@
+@@ -746,7 +746,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work.
@@ -148,7 +148,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
      #  [session=yes] [setcred=yes] [cache_key=<key>] [<service name>]
      #
      # session=yes makes Dovecot open and immediately close PAM session. Some
-@@ -773,7 +773,7 @@
+@@ -774,7 +774,7 @@
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -157,7 +157,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -782,8 +782,8 @@
+@@ -783,8 +783,8 @@
    #}
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
@@ -168,7 +168,7 @@ diff -Nru dovecot-1.0.rc2.orig/dovecot-example.conf dovecot-1.0.rc2/dovecot-exam
  
    # BSD authentication. Used by at least OpenBSD.
    #passdb bsdauth {
-@@ -885,7 +885,7 @@
+@@ -886,7 +886,7 @@
    # authentication with BSDs internally accesses shadow files, which also
    # requires roots. Note that this user is NOT used to access mails.
    # That user is specified by userdb above.
