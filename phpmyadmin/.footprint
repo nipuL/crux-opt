@@ -129,7 +129,6 @@ drwxr-xr-x	root/root	var/www/phpmyadmin/libraries/fpdf/font/
 -rw-r--r--	root/root	var/www/phpmyadmin/libraries/header_printview.inc.php
 -rw-r--r--	root/root	var/www/phpmyadmin/libraries/import.lib.php
 drwxr-xr-x	root/root	var/www/phpmyadmin/libraries/import/
--rw-r--r--	root/root	var/www/phpmyadmin/libraries/import/README
 -rw-r--r--	root/root	var/www/phpmyadmin/libraries/import/csv.php
 -rw-r--r--	root/root	var/www/phpmyadmin/libraries/import/ldi.php
 -rw-r--r--	root/root	var/www/phpmyadmin/libraries/import/sql.php

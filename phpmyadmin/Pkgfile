@@ -5,7 +5,7 @@
 # Depends on:  mod_php
 
 name=phpmyadmin
-version=2.8.2
+version=2.8.2.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/phpMyAdmin-$version.tar.bz2)
 
@@ -14,7 +14,7 @@ build () {
     cp -R phpMyAdmin-$version $PKG/var/www/phpmyadmin
     cd $PKG/var/www/phpmyadmin
     rm -r scripts test
-    rm libraries/{fpdf,transformations}/README 
+    rm libraries/{fpdf,transformations,import}/README 
     find lang/* -path "*/english*.inc.php" -or -exec rm {} \;
     find  -maxdepth 1 -type f | egrep -v '.*php|.*html|.*css' | xargs rm
     find -type f -exec chmod -x {} \;
