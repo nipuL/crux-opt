@@ -4,7 +4,7 @@
 # Depends on:  ncurses, zlib
 
 name=mysql
-version=5.0.23
+version=5.0.24
 release=1
 source=(http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
@@ -26,6 +26,7 @@ build () {
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/mysql-test
+    rm $PKG/usr/share/mysql/charsets/README
     find $PKG/usr/share/mysql/* -prune -type f ! -regex '.*\(cnf\|sql\)$' | xargs rm -f {} \;
     find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
