@@ -5,23 +5,19 @@
 # Depends:     qt3 
 
 name=xxdiff
-version=3.1
+version=3.2
 release=1
-source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz\
-    ftp://ftp.trolltech.com/freebies/tmake/tmake-1.8.tar.gz \
-    xxdiff-nostyleforce.diff
-    xxdiff-cvs-fix.diff) 
+source=(http://dl.sf.net/sourceforge/${name}/${name}-${version}.tar.bz2
+        xxdiff-nostyleforce.diff)
+
 
 build() {
-    export TMAKEPATH=$SRC/tmake-1.8/lib/linux-g++
     export QTDIR=${QTDIR:=/usr/share/qt}
 
     cd $name-$version/src
-    patch -p2 < ../../xxdiff-nostyleforce.diff
-    patch ../bin/xxdiff-cvs-diff $SRC/xxdiff-cvs-fix.diff
+    patch -p2 < $SRC/xxdiff-nostyleforce.diff
 
-    $SRC/tmake-1.8/bin/tmake xxdiff.pro > Makefile
+    make -f Makefile.bootstrap makefile
     make
-    install -m 755 -d $PKG/usr/bin
-    install -m 755 ../bin/xxdiff{,-cvs-diff} $PKG/usr/bin
+    install -m 755 -D ../bin/xxdiff $PKG/usr/bin/xxdiff
 }

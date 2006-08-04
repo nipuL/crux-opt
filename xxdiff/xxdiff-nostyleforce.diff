@@ -1,6 +1,6 @@
---- xxdiff-3.0.2/src/app.cpp.orig	2004-10-28 10:41:20.782609600 +0200
-+++ xxdiff-3.0.2/src/app.cpp	2004-10-28 10:42:00.925506952 +0200
-@@ -261,22 +261,6 @@
+--- xxdiff-3.2/src/app.cpp.orig	2006-08-04 16:40:25.144936920 +0200
++++ xxdiff-3.2/src/app.cpp	2006-08-04 16:40:46.151743400 +0200
+@@ -265,22 +265,6 @@
     // Read in the resources and create resources object.
     _resources = buildResources();
  
@@ -20,6 +20,6 @@
 -   }
 -#endif
 -
-    // Read in the file names.
-    QString filenames[3];
-    QString displayFilenames[3];
+    if ( _cmdline._promptForFiles ) {
+       promptForFiles( _cmdline );
+    }
