@@ -5,12 +5,13 @@
 
 name=gtk
 version=2.10.1
-release=1
+release=2
 source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules)
+	gdk-pixbuf.loaders gtk.immodules $name+-$version-stock-icon.diff)
 
 build () {
-cd gtk+-$version
+	cd gtk+-$version
+	patch -p1 -i $SRC/$name+-$version-stock-icon.diff
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
