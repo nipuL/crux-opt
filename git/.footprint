@@ -46,6 +46,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-imap-send
 -rwxr-xr-x	root/root	usr/bin/git-index-pack
 -rwxr-xr-x	root/root	usr/bin/git-init-db
+-rwxr-xr-x	root/root	usr/bin/git-instaweb
 -rwxr-xr-x	root/root	usr/bin/git-local-fetch
 -rwxr-xr-x	root/root	usr/bin/git-log
 -rwxr-xr-x	root/root	usr/bin/git-lost-found
@@ -106,6 +107,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-ssh-upload
 -rwxr-xr-x	root/root	usr/bin/git-status
 -rwxr-xr-x	root/root	usr/bin/git-stripspace
+-rwxr-xr-x	root/root	usr/bin/git-svn
 -rwxr-xr-x	root/root	usr/bin/git-svnimport
 -rwxr-xr-x	root/root	usr/bin/git-symbolic-ref
 -rwxr-xr-x	root/root	usr/bin/git-tag
@@ -170,6 +172,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-imap-send.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-index-pack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-init-db.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-instaweb.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-local-fetch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-log.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-lost-found.1.gz
@@ -224,6 +227,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-ssh-upload.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-status.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-stripspace.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-svn.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-svnimport.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-symbolic-ref.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-tag.1.gz
