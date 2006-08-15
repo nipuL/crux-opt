@@ -1,12 +1,11 @@
 # Description: Userspace interface to kernel DRM services
 # URL: http://dri.freedesktop.org/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=libdrm
 version=2.0.2
 release=1
-source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.gz)
+source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2)
 
 build() {
     cd $name-$version
