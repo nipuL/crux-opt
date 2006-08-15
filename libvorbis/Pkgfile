@@ -1,6 +1,6 @@
 # Description: Vorbis codec library
 # URL:         http://www.xiph.org/ogg/vorbis/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  libogg
 
 name=libvorbis
