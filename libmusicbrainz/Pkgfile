@@ -1,7 +1,6 @@
 # Description: community music metadatabase
 # URL: http://www.musicbrainz.org/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: expat
 
 name=libmusicbrainz
