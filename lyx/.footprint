@@ -32,14 +32,13 @@ drwxr-xr-x	root/root	usr/share/lyx/bind/
 -rw-r--r--	root/root	usr/share/lyx/chkconfig.ltx
 drwxr-xr-x	root/root	usr/share/lyx/clipart/
 -rw-r--r--	root/root	usr/share/lyx/clipart/platypus.eps
--rwxr-xr-x	root/root	usr/share/lyx/configure
+-rwxr-xr-x	root/root	usr/share/lyx/configure.py
 drwxr-xr-x	root/root	usr/share/lyx/doc/
 -rw-r--r--	root/root	usr/share/lyx/doc/Customization.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/DocStyle.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/Extended.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/FAQ.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/Intro.lyx
--rw-r--r--	root/root	usr/share/lyx/doc/LaTeXConfig.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/LaTeXConfig.lyx.in
 -rw-r--r--	root/root	usr/share/lyx/doc/Reference.lyx
 -rw-r--r--	root/root	usr/share/lyx/doc/TOC.lyx
@@ -476,6 +475,7 @@ drwxr-xr-x	root/root	usr/share/lyx/images/math/
 -rw-r--r--	root/root	usr/share/lyx/images/math/overleftrightarrow.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/overline.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/overrightarrow.xpm
+-rw-r--r--	root/root	usr/share/lyx/images/math/overset.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/parallel.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/partial.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/perp.xpm
@@ -591,6 +591,7 @@ drwxr-xr-x	root/root	usr/share/lyx/images/math/
 -rw-r--r--	root/root	usr/share/lyx/images/math/underline.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/underrightarrow.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/underscore.xpm
+-rw-r--r--	root/root	usr/share/lyx/images/math/underset.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/uparrow.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/uparrow2.xpm
 -rw-r--r--	root/root	usr/share/lyx/images/math/updownarrow.xpm
@@ -780,6 +781,7 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/heb-article.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/heb-letter.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/hollywood.layout
+-rw-r--r--	root/root	usr/share/lyx/layouts/ijmpc.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/ijmpd.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/jgrga.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/kluwer.layout
@@ -870,11 +872,10 @@ drwxr-xr-x	root/root	usr/share/lyx/lyx2lyx/
 -rw-r--r--	root/root	usr/share/lyx/lyx2lyx/profiling.py
 -rw-r--r--	root/root	usr/share/lyx/lyx2lyx/profiling.pyc
 -rw-r--r--	root/root	usr/share/lyx/lyx2lyx/profiling.pyo
--rw-r--r--	root/root	usr/share/lyx/lyxrc.defaults
 -rw-r--r--	root/root	usr/share/lyx/lyxrc.example
--rw-r--r--	root/root	usr/share/lyx/packages.lst
 drwxr-xr-x	root/root	usr/share/lyx/scripts/
--rwxr-xr-x	root/root	usr/share/lyx/scripts/TeXFiles.sh
+-rwxr-xr-x	root/root	usr/share/lyx/scripts/TeXFiles.py
+-rwxr-xr-x	root/root	usr/share/lyx/scripts/clean_dvi.py
 -rwxr-xr-x	root/root	usr/share/lyx/scripts/convertDefault.sh
 -rwxr-xr-x	root/root	usr/share/lyx/scripts/fen2ascii.py
 -rwxr-xr-x	root/root	usr/share/lyx/scripts/fig2pdftex.sh
@@ -900,6 +901,7 @@ drwxr-xr-x	root/root	usr/share/lyx/templates/
 -rw-r--r--	root/root	usr/share/lyx/templates/g-brief-de.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/g-brief-en.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/hollywood.lyx
+-rw-r--r--	root/root	usr/share/lyx/templates/ijmpc.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/ijmpd.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/kluwer.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/koma-letter2.lyx
@@ -916,7 +918,6 @@ drwxr-xr-x	root/root	usr/share/lyx/tex/
 -rw-r--r--	root/root	usr/share/lyx/tex/lyxchess.sty
 -rw-r--r--	root/root	usr/share/lyx/tex/lyxskak.sty
 -rw-r--r--	root/root	usr/share/lyx/tex/revtex.cls
--rw-r--r--	root/root	usr/share/lyx/textclass.lst
 drwxr-xr-x	root/root	usr/share/lyx/ui/
 -rw-r--r--	root/root	usr/share/lyx/ui/classic.ui
 -rw-r--r--	root/root	usr/share/lyx/ui/default.ui
