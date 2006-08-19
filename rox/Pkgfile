@@ -5,12 +5,12 @@
 # Depends on: gtk, shared-mime-info
 
 name=rox
-version=2.4.1
+version=2.5
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/$name-$version.tgz)
+source=(http://heanet.dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
 
 build () {
-	cd $name-$version/ROX-Filer
+	cd $name-filer-$version/ROX-Filer
 	./AppRun --compile \
 		--with-platform="" \
 		--sysconfdir=/usr/ROX/Choices

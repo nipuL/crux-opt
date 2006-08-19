@@ -7,9 +7,11 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/
 -rwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/AppRun
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/Options.xml
 -rwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX-Filer
+-rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX-Filer-src.xml
 drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/
 drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application.png
+-rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:msword.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:pdf.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:pgp.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:postscript.png
@@ -17,7 +19,6 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.ms-excel.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.ms-office.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.ms-powerpoint.png
--rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.ms-word.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.rn-realmedia.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.stardivision.writer.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:vnd.sun.xml.calc.png
@@ -63,6 +64,7 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-troff-man.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-troff.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:xhtml+xml.png
+-rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:xml.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:zip.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-audio.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-audio:midi.png
