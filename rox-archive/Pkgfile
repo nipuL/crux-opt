@@ -5,9 +5,9 @@
 # Depends on: rox-lib
 
 name=rox-archive
-version=2.0
+version=2.1
 release=1
-source=(http://dl.sourceforge.net/sourceforge/rox/archive-$version.tgz)
+source=(http://dl.sourceforge.net/sourceforge/rox/archive-$version.tar.bz2)
 
 build() {
 	cd archive-$version
