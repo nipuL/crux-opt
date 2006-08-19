@@ -30,6 +30,7 @@ drwxr-xr-x	root/root	usr/share/mime/application/
 -rw-r--r--	root/root	usr/share/mime/application/pkcs7-mime.xml
 -rw-r--r--	root/root	usr/share/mime/application/pkcs7-signature.xml
 -rw-r--r--	root/root	usr/share/mime/application/postscript.xml
+-rw-r--r--	root/root	usr/share/mime/application/rss+xml.xml
 -rw-r--r--	root/root	usr/share/mime/application/rtf.xml
 -rw-r--r--	root/root	usr/share/mime/application/smil.xml
 -rw-r--r--	root/root	usr/share/mime/application/stuffit.xml
@@ -246,6 +247,7 @@ drwxr-xr-x	root/root	usr/share/mime/application/
 -rw-r--r--	root/root	usr/share/mime/application/xhtml+xml.xml
 -rw-r--r--	root/root	usr/share/mime/application/xml.xml
 -rw-r--r--	root/root	usr/share/mime/application/xslt+xml.xml
+-rw-r--r--	root/root	usr/share/mime/application/xspf+xml.xml
 -rw-r--r--	root/root	usr/share/mime/application/zip.xml
 drwxr-xr-x	root/root	usr/share/mime/audio/
 -rw-r--r--	root/root	usr/share/mime/audio/ac3.xml
@@ -268,6 +270,7 @@ drwxr-xr-x	root/root	usr/share/mime/audio/
 -rw-r--r--	root/root	usr/share/mime/audio/x-mpeg.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-mpegurl.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-ms-asx.xml
+-rw-r--r--	root/root	usr/share/mime/audio/x-ms-wma.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-riff.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-s3m.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-scpls.xml
@@ -377,7 +380,6 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/rdf.xml
 -rw-r--r--	root/root	usr/share/mime/text/rfc822-headers.xml
 -rw-r--r--	root/root	usr/share/mime/text/richtext.xml
--rw-r--r--	root/root	usr/share/mime/text/rss.xml
 -rw-r--r--	root/root	usr/share/mime/text/sgml.xml
 -rw-r--r--	root/root	usr/share/mime/text/spreadsheet.xml
 -rw-r--r--	root/root	usr/share/mime/text/tab-separated-values.xml
