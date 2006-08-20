@@ -5,7 +5,7 @@
 # Depends on: libxml2, postgresql, sqlite
 
 name=php-fastcgi
-version=5.1.4
+version=5.1.5
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
