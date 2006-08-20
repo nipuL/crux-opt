@@ -5,12 +5,12 @@
 # Depends on: x11
 
 name=opera-static
-version=9.0-20060616.1
+version=9.01-20060728.1
 release=1
-source=(http://opera.nsc.no/linux/900/final/en/i386/static/opera-$version-static-qt.i386-en.tar.bz2)
+source=(http://opera.nsc.no/linux/901/final/en/i386/static/opera-$version-static-qt.i386-en.tar.bz2)
 
 build() {
-    cd opera-$version-static-qt.i386-en-344
+    cd opera-$version-static-qt.i386-en-400
 
     sed -i s:share/man:man: install.sh
     yes n | ./install.sh --prefix=$PKG/usr
