@@ -5,7 +5,7 @@
 
 name=ssmtp
 version=2.61
-release=4
+release=5
 source=(http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}.orig.tar.gz \
         http://ftp.debian.org/debian/pool/main/s/$name/${name}_${version}-7.diff.gz)
 
@@ -15,6 +15,7 @@ build () {
     autoconf
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
+                --mandir=/usr/man \
                 --enable-inet6 \
                 --enable-ssl \
                 --enable-md5auth

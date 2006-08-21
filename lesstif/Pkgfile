@@ -6,7 +6,7 @@
 
 name=lesstif
 version=0.95.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2 \
 	$name-$version-xpm.patch) 
 
@@ -22,7 +22,8 @@ build () {
     		--enable-nonstandard-conversions \
 		--enable-editres --with-xdnd \
 		--enable-build-21 --disable-debug \
-		--enable-production
+		--enable-production \
+		--mandir=/usr/man
     make
     
     mkdir -p $PKG/usr/{lib,X11R6/lib}

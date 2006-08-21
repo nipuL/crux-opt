@@ -5,7 +5,7 @@
 
 name=aterm
 version=1.0.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
         $name-fake_root.patch $name-configure.patch)
 
@@ -16,7 +16,7 @@ build () {
     cp autoconf/configure.in .
     autoconf 
     autoheader 
-    ./configure --prefix=/usr --enable-fake-root
+    ./configure --prefix=/usr --enable-fake-root --mandir=/usr/man
     make
     make DESTDIR=$PKG install
 }

@@ -5,7 +5,7 @@
 
 name=windowmaker
 version=0.92.0
-release=2
+release=3
 source=(ftp://ftp.windowmaker.info/pub/source/release/WindowMaker-$version.tar.bz2 \
         $name-$version-gcc4.patch)
 
@@ -15,7 +15,7 @@ build() {
     aclocal
     autoconf
     automake -a
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/share/WindowMaker/{README*,menu.*,plmenu.*} \
