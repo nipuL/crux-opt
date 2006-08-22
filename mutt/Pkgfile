@@ -4,7 +4,7 @@
 # Depends on:  gdbm, ncurses, openssl
 
 name=mutt
-version=1.5.12
+version=1.5.13
 release=1
 source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz)
 
@@ -19,7 +19,8 @@ build () {
                 --disable-nls
     make
     make DESTDIR=$PKG install
-    find $PKG/usr/share/mutt/* ! -name manual.txt | xargs rm -rf 
+    find $PKG/usr/share/mutt/* ! -name manual.txt | xargs rm -rf
+    rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
     rm $PKG/usr/bin/{flea,muttbug}
     rm $PKG/usr/man/man1/{flea.1,muttbug.1}
 }
