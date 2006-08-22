@@ -43,19 +43,18 @@ diff -Nru dovecot-1.0.rc3.orig/dovecot-example.conf dovecot-1.0.rc3/dovecot-exam
  
  # Set max. process size in megabytes. If you don't use
  # login_process_per_connection you might need to grow this.
-@@ -140,11 +140,11 @@
+@@ -140,10 +140,10 @@
  # login process be allowed to process multiple connections (no)? Yes is more
  # secure, espcially with SSL/TLS enabled. No is faster since there's no need
  # to create processes all the time.
 -#login_process_per_connection = yes
 +login_process_per_connection = no
  
- # Number of login processes to create. If login_process_per_connection is
- # yes, this is the number of extra processes waiting for users to log in.
+ # Number of login processes to keep for listening new connections.
 -#login_processes_count = 3
 +login_processes_count = 1
  
- # Maximum number of extra login processes to create. The extra process count
+ # Maximum number of login processes to create. The listening process count
  # usually stays at login_processes_count, but when multiple users start logging
 @@ -192,7 +192,7 @@
  #   default_mail_env = mbox:~/mail/:INBOX=/var/mail/%u
