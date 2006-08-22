@@ -5,7 +5,7 @@
 name=glib
 version=2.12.1
 release=1
-source=(ftp://ftp.gtk.org/pub/gtk/v2.12/$name-$version.tar.bz2)
+source=(ftp://ftp.gtk.org/pub/$name/2.12/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
