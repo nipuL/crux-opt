@@ -1,0 +1,47 @@
+#!/bin/bash
+# udev network interface starter
+# adapted from 
+#   http://linuxfromscratch.org/pipermail/cross-lfs/2006-January/001042.html
+#
+# Johannes Winkelmann, jw at smts dot ch
+
+version=1.2
+DEBUG=no
+
+log() {
+    logger $*
+}
+debug() {
+    if [ x"$DEBUG" = "xyes" ]; then
+        log $*
+    fi
+}
+
+
+# validate $INTERFACE
+case "$INTERFACE" in
+    "")
+        debug_log "$call: empty device; exiting" 
+        exit 1
+        ;;
+    ppp*|ippp*|isdn*|plip*|lo*|irda*|dummy*|ipsec*|tun*|tap*)
+        debug_log "assuming $INTERFACE is already up"
+        exit 0
+        ;;
+esac
+
+# valid interface, try calling the appropriate handler
+call=`basename $0`
+if [ ! -f /etc/rc.d/net.$INTERFACE ]; then
+    debug_log "$call: not found: /etc/rc.d/net.$INTERFACE"
+    exit 0
+fi
+
+if [ "$ACTION" = "add" ]; then
+    command=start
+else
+    command=stop
+fi
+
+/etc/rc.d/net.$INTERFACE $command
+log "$call $INTERFACE $command"

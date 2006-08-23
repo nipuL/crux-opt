@@ -1,0 +1,15 @@
+# Maintainer:  Johannes Winkelmann, jw at smts dot ch
+# Description: udev network interface hotplug handler
+# URL:         http://crux.nu/
+# Depends on:  udev
+
+name=udev-netif-hotplug-handler
+version=1.2
+release=1
+source=(netif_handler 26-crux-netif.rules)
+
+build() {
+    install -m 755 -D netif_handler $PKG/lib/udev/netif_handler
+    install -m 644 -D 26-crux-netif.rules \
+	$PKG/etc/udev/rules.d/26-crux-netif.rules
+}
