@@ -4,7 +4,7 @@
 # Packager: 
 
 name=rar
-version=3.4.1
+version=3.6.0
 release=1
 source=(http://www.rarlab.com/rar/rarlinux-$version.tar.gz)
 
