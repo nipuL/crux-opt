@@ -5,11 +5,13 @@
 
 name=libtiff
 version=3.8.2
-release=1
-source=(ftp://ftp.remotesensing.org/pub/libtiff/tiff-$version.tar.gz)
+release=2
+source=(ftp://ftp.remotesensing.org/pub/libtiff/tiff-$version.tar.gz \
+        $name-$version.patch)
 
 build() {
     cd tiff-$version
+    patch -p1 < $SRC/$name-$version.patch
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
