@@ -4,9 +4,9 @@
 # Depends on:  ruby
 
 name=ruby-doc
-version=1.8.4
+version=1.8.5
 release=1
-source=(ftp://ftp.ruby-lang.org/pub/ruby/ruby-$version.tar.gz)
+source=(ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-$version.tar.gz)
 
 build () {
     cd ruby-$version
