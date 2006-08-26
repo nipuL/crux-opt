@@ -8,9 +8,9 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/testrb
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libruby-static.a
-lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.4
-lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.4
--rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.4
+lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.5
+lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.5
+-rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.5
 drwxr-xr-x	root/root	usr/lib/ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/English.rb
@@ -366,6 +366,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/rss/maker/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/dublincore.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/image.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/syndication.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/taxonomy.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/trackback.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/parser.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/rexmlparser.rb
