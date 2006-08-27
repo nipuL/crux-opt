@@ -38,9 +38,10 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/obparser-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/obrender-3.0.pc
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/openbox.desktop
 drwxr-xr-x	root/root	usr/share/gnome/
 drwxr-xr-x	root/root	usr/share/gnome/wm-properties/
--rw-r--r--	root/root	usr/share/gnome/wm-properties/openbox.desktop
 drwxr-xr-x	root/root	usr/share/openbox/
 -rw-r--r--	root/root	usr/share/openbox/menu.xsd
 -rw-r--r--	root/root	usr/share/openbox/rc.xsd
