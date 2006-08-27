@@ -4,19 +4,15 @@
 # Depends on: x11, glib, libxml2, pango
 
 name=openbox
-version=3.3-rc2
-release=3
-source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz \
-        pipedsplitgradient.diff)
+version=3.3
+release=1
+source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	sed -i -e 's/pango_font_description_set_size/pango_font_description_set_absolute_size/' render/font.c
 
-	patch -Np0 -i $SRC/pipedsplitgradient.diff
+	./configure --prefix=/usr --disable-nls
 
-	./configure --prefix=/usr \
-		--disable-nls
 	make
 	make DESTDIR=$PKG install
 }
