@@ -6,7 +6,7 @@
 name=windowmaker
 version=0.92.0
 release=3
-source=(ftp://ftp.windowmaker.info/pub/source/release/WindowMaker-$version.tar.bz2 \
+source=(http://windowmaker.info/pub/source/release/WindowMaker-$version.tar.bz2 \
         $name-$version-gcc4.patch)
 
 build() {
