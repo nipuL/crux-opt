@@ -1,18 +1,20 @@
 # Description: Commandline MP3 player 
 # URL:         http://www.mpg123.de
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  esound
+# Depends on:  alsa-lib
 
 name=mpg123
-version=0.59s
-release=3
-source=(http://www.mpg123.de/$name/$name-pre$version.tar.gz \
-        $name-$version-security.patch $name-$version.patch)
+version=0.60
+release=1
+source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
 
 build() {
-    cd $name
-    patch -p1 < $SRC/$name-$version-security.patch
-    patch -p1 < $SRC/$name-$version.patch
-    make linux-esd 
-    make PREFIX=$PKG/usr install
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --with-cpu=i586 \
+                --with-optimization=2 \
+                --with-audio=alsa \
+                --enable-gapless=yes
+    make
+    make DESTDIR=$PKG install
 }
