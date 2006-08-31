@@ -7,7 +7,7 @@
 name=ffmpeg
 version=20050806
 release=1
-source=(http://www2.mplayerhq.hu/MPlayer/cvs/FFMpeg-$version.tar.bz2)
+source=(http://www1.mplayerhq.hu/MPlayer/old_stuff/snapshots/FFmpeg/2005/FFmpeg-$version.tar.bz2)
 
 build() {
 	cd FFMpeg-$version
