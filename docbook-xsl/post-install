@@ -1,6 +1,6 @@
 #!/bin/sh
 
-version=1.69.1
+version=1.70.1
 MASTER_CAT=/etc/xml/catalog
 XSL_PATH=file:///usr/share/xml/xsl/docbook/$version
 XSL_URLS="http://docbook.sourceforge.net/release/xsl/$version
