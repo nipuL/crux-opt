@@ -1,7 +1,7 @@
 # Description: ALSA utils
 # URL: http://www.alsa-project.org
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: gettext, alsa-lib
+# Depends on: gettext, alsa-lib, dialog
 
 name=alsa-utils
 version=1.0.11
