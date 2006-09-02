@@ -50,6 +50,8 @@ drwxr-xr-x	root/root	usr/lib/licq/
 -rwxr-xr-x	root/root	usr/lib/licq/protocol_msn.la
 -rwxr-xr-x	root/root	usr/lib/licq/protocol_msn.so
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/licq.desktop
 drwxr-xr-x	root/root	usr/share/licq/
 drwxr-xr-x	root/root	usr/share/licq/qt-gui/
 drwxr-xr-x	root/root	usr/share/licq/qt-gui/dock.console/
@@ -233,8 +235,6 @@ drwxr-xr-x	root/root	usr/share/licq/qt-gui/emoticons/Mirabelis5/
 -rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/Mirabelis5/Smiley8.png
 -rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/Mirabelis5/Smiley9.png
 -rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/Mirabelis5/emoticons.xml
-drwxr-xr-x	root/root	usr/share/licq/qt-gui/emoticons/None/
--rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/None/emoticons.xml
 drwxr-xr-x	root/root	usr/share/licq/qt-gui/emoticons/bugeyes/
 -rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/bugeyes/README
 -rw-r--r--	root/root	usr/share/licq/qt-gui/emoticons/bugeyes/bug_angel.png
