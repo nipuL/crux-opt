@@ -31,6 +31,7 @@ drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cups/
 -rw-r--r--	root/root	usr/include/cups/adminutil.h
 -rw-r--r--	root/root	usr/include/cups/array.h
+-rw-r--r--	root/root	usr/include/cups/backend.h
 -rw-r--r--	root/root	usr/include/cups/cups.h
 -rw-r--r--	root/root	usr/include/cups/dir.h
 -rw-r--r--	root/root	usr/include/cups/file.h
@@ -421,6 +422,7 @@ drwxr-xr-x	root/root	usr/share/cups/templates/
 -rw-r--r--	root/root	usr/share/cups/templates/maintenance.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/modify-class.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/modify-printer.tmpl
+-rw-r--r--	root/root	usr/share/cups/templates/norestart.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/option-boolean.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/option-conflict.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/option-header.tmpl
