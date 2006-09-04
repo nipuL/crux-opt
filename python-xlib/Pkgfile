@@ -1,6 +1,6 @@
 # Description: python interface to xlib
 # URL:         http://python-xlib.sourceforge.net
-# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
 # Depends on:  python x11
 
 name=python-xlib
