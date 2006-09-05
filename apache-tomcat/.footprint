@@ -16,6 +16,7 @@ drwxr-xr-x	root/root	usr/lib/tomcat/bin/
 -rw-r--r--	root/root	usr/lib/tomcat/bin/jmxaccessor-tasks.xml
 -rw-r--r--	root/root	usr/lib/tomcat/bin/jsvc.tar.gz
 -rwxr-xr-x	root/root	usr/lib/tomcat/bin/setclasspath.sh
+-rwxr-xr-x	root/root	usr/lib/tomcat/bin/setenv.sh
 -rwxr-xr-x	root/root	usr/lib/tomcat/bin/shutdown.sh
 -rwxr-xr-x	root/root	usr/lib/tomcat/bin/startup.sh
 -rw-r--r--	root/root	usr/lib/tomcat/bin/tomcat-juli.jar
@@ -43,17 +44,17 @@ drwxr-xr-x	root/root	usr/lib/tomcat/common/lib/
 drwxr-xr-x	root/root	usr/lib/tomcat/conf/
 drwxr-xr-x	root/root	usr/lib/tomcat/conf/Catalina/
 drwxr-xr-x	root/root	usr/lib/tomcat/conf/Catalina/localhost/
--rw-------	root/root	usr/lib/tomcat/conf/Catalina/localhost/host-manager.xml
--rw-------	root/root	usr/lib/tomcat/conf/Catalina/localhost/manager.xml
--rw-------	root/root	usr/lib/tomcat/conf/catalina.policy
--rw-------	root/root	usr/lib/tomcat/conf/catalina.properties
--rw-------	root/root	usr/lib/tomcat/conf/context.xml
--rw-------	root/root	usr/lib/tomcat/conf/logging.properties
--rw-------	root/root	usr/lib/tomcat/conf/server-minimal.xml
--rw-------	root/root	usr/lib/tomcat/conf/server.xml
--rw-------	root/root	usr/lib/tomcat/conf/tomcat-users.xml
--rw-------	root/root	usr/lib/tomcat/conf/web.xml
-drwxr-xr-x	root/root	usr/lib/tomcat/logs/
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/Catalina/localhost/host-manager.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/Catalina/localhost/manager.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/catalina.policy
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/catalina.properties
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/context.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/logging.properties
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/server-minimal.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/server.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/tomcat-users.xml
+-rw-r-----	root/tomcat	usr/lib/tomcat/conf/web.xml
+drwxr-xr-x	tomcat/tomcat	usr/lib/tomcat/logs/
 drwxr-xr-x	root/root	usr/lib/tomcat/server/
 drwxr-xr-x	root/root	usr/lib/tomcat/server/classes/
 drwxr-xr-x	root/root	usr/lib/tomcat/server/lib/
@@ -117,7 +118,7 @@ drwxr-xr-x	root/root	usr/lib/tomcat/server/webapps/manager/images/
 drwxr-xr-x	root/root	usr/lib/tomcat/shared/
 drwxr-xr-x	root/root	usr/lib/tomcat/shared/classes/
 drwxr-xr-x	root/root	usr/lib/tomcat/shared/lib/
-drwxr-xr-x	root/root	usr/lib/tomcat/temp/
+drwxr-xr-x	tomcat/tomcat	usr/lib/tomcat/temp/
 -rw-r--r--	root/root	usr/lib/tomcat/temp/bugzilla37035-safeToDelete.tmp (EMPTY)
 drwxr-xr-x	root/root	usr/lib/tomcat/webapps/
 drwxr-xr-x	root/root	usr/lib/tomcat/webapps/ROOT/
