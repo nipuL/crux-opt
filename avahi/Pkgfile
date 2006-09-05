@@ -13,6 +13,7 @@ build() {
 	cd $name-$version
 	./configure --prefix=/usr \
 		--localstatedir=/var \
+		--mandir=/usr/man \
 		--disable-qt3 \
 		--disable-qt4 \
 		--disable-doxygen-doc \
