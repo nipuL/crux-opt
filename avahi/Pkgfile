@@ -1,7 +1,7 @@
 # Description: A system that facilitates service discovery on local networks
 # URL: http://avahi.org/
 # Maintainer: Matt Housh, jaeger at crux dot nu
-# Depends on: libdaemon, dbus, pygtk, libglade
+# Depends on: libdaemon, dbus, dbus-python, pygtk, libglade
 
 name=avahi
 version=0.6.13
