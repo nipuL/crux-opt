@@ -1,15 +1,16 @@
 drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/X11/
+drwxr-xr-x	root/root	etc/X11/xinit/
+drwxr-xr-x	root/root	etc/X11/xinit/xinitrc.d/
+-rwxr-xr-x	root/root	etc/X11/xinit/xinitrc.d/30-dbus.launch
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/dbus
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/dbus-binding-tool
 -rwxr-xr-x	root/root	usr/bin/dbus-cleanup-sockets
--rwxr-xr-x	root/root	usr/bin/dbus-daemon
 -rwxr-xr-x	root/root	usr/bin/dbus-launch
 -rwxr-xr-x	root/root	usr/bin/dbus-monitor
 -rwxr-xr-x	root/root	usr/bin/dbus-send
--rwxr-xr-x	root/root	usr/bin/dbus-viewer
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/dbus-1/
 -rw-r--r--	root/root	usr/etc/dbus-1/session.conf
@@ -22,11 +23,6 @@ drwxr-xr-x	root/root	usr/include/dbus-1.0/dbus/
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-bus.h
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-connection.h
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-errors.h
--rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-glib-bindings.h
--rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-glib-error-enum.h
--rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-glib-lowlevel.h
--rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-glib.h
--rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-gtype-specialized.h
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-macros.h
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-memory.h
 -rw-r--r--	root/root	usr/include/dbus-1.0/dbus/dbus-message.h
@@ -43,62 +39,12 @@ drwxr-xr-x	root/root	usr/lib/dbus-1.0/
 drwxr-xr-x	root/root	usr/lib/dbus-1.0/include/
 drwxr-xr-x	root/root	usr/lib/dbus-1.0/include/dbus/
 -rw-r--r--	root/root	usr/lib/dbus-1.0/include/dbus/dbus-arch-deps.h
--rw-r--r--	root/root	usr/lib/libdbus-1.a
 -rwxr-xr-x	root/root	usr/lib/libdbus-1.la
-lrwxrwxrwx	root/root	usr/lib/libdbus-1.so -> libdbus-1.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/libdbus-1.so.2 -> libdbus-1.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libdbus-1.so.2.0.0
--rw-r--r--	root/root	usr/lib/libdbus-glib-1.a
--rwxr-xr-x	root/root	usr/lib/libdbus-glib-1.la
-lrwxrwxrwx	root/root	usr/lib/libdbus-glib-1.so -> libdbus-glib-1.so.2.0.0
-lrwxrwxrwx	root/root	usr/lib/libdbus-glib-1.so.2 -> libdbus-glib-1.so.2.0.0
--rwxr-xr-x	root/root	usr/lib/libdbus-glib-1.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libdbus-1.so -> libdbus-1.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libdbus-1.so.3 -> libdbus-1.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libdbus-1.so.3.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/dbus-1.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/dbus-glib-1.pc
-drwxr-xr-x	root/root	usr/lib/python2.4/
-drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus.pth
-drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/dbus/
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/__init__.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/__init__.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/__init__.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_dbus.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_dbus.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_dbus.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_util.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_util.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/_util.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/dbus_bindings.a
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/dbus/dbus_bindings.la
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/dbus/dbus_bindings.so
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/dbus_glib_bindings.a
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/dbus/dbus_glib_bindings.la
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/dbus/dbus_glib_bindings.so
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/decorators.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/decorators.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/decorators.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/exceptions.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/exceptions.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/exceptions.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/glib.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/glib.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/glib.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/introspect_parser.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/introspect_parser.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/introspect_parser.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/matchrules.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/matchrules.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/matchrules.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/proxies.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/proxies.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/proxies.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/service.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/service.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/service.pyo
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/types.py
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/types.pyc
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/dbus/types.pyo
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dbus-cleanup-sockets.1.gz
@@ -106,6 +52,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dbus-launch.1.gz
 -rw-r--r--	root/root	usr/man/man1/dbus-monitor.1.gz
 -rw-r--r--	root/root	usr/man/man1/dbus-send.1.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/dbus-daemon
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/dbus-1/
 drwxr-xr-x	root/root	usr/share/dbus-1/services/

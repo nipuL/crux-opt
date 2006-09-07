@@ -1,0 +1,12 @@
+README for hal 0.5.7.1
+
+REQUIREMENTS
+
+PRE/POST-INSTALL
+	Create a user/group haldaemon with a unused id < 99:
+
+	'groupadd -g 82 haldaemon'
+	'useradd -n -u 82 -g haldaemon -d /var/empty -s /bin/false haldaemon'
+	'passwd -l haldaemon'
+
+PRECAUTION

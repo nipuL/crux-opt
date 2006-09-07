@@ -5,10 +5,10 @@
 
 case $1 in
 	start)
-		/usr/bin/dbus-daemon --system
+		/usr/sbin/dbus-daemon --system
 		;;
 	stop)
-		killall -q /usr/bin/dbus-daemon
+		killall -q /usr/sbin/dbus-daemon
 		rm -f /var/run/dbus/pid
 		;;
 	restart)

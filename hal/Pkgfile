@@ -4,13 +4,14 @@
 # Depends on: dbus
 
 name=hal
-version=0.5.7
+version=0.5.7.1
 release=1
 source=(http://freedesktop.org/~david/dist/$name-$version.tar.gz \
-	rc.hald)
+	rc.hald $name-$version-dbus-close.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-dbus-close.patch
 	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
 		-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
 	./configure --prefix=/usr \
