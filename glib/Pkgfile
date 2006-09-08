@@ -1,9 +1,9 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL: http://www.gtk.org/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=glib
-version=2.12.1
+version=2.12.3
 release=1
 source=(ftp://ftp.gtk.org/pub/$name/2.12/$name-$version.tar.bz2)
 
