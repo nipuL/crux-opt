@@ -4,14 +4,13 @@
 # Depends on: atk, pango, libtiff, hicolor-icon-theme
 
 name=gtk
-version=2.10.1
-release=2
+version=2.10.3
+release=1
 source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules $name+-$version-stock-icon.diff)
+	gdk-pixbuf.loaders gtk.immodules)
 
 build () {
 	cd gtk+-$version
-	patch -p1 -i $SRC/$name+-$version-stock-icon.diff
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
