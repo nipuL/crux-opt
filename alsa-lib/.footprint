@@ -41,6 +41,7 @@ drwxr-xr-x	root/root	usr/include/alsa/sound/
 -rw-r--r--	root/root	usr/include/alsa/sound/hdsp.h
 -rw-r--r--	root/root	usr/include/alsa/sound/sb16_csp.h
 -rw-r--r--	root/root	usr/include/alsa/sound/sscape_ioctl.h
+-rw-r--r--	root/root	usr/include/alsa/sound/type_compat.h
 -rw-r--r--	root/root	usr/include/alsa/timer.h
 -rw-r--r--	root/root	usr/include/alsa/version.h
 drwxr-xr-x	root/root	usr/include/sys/

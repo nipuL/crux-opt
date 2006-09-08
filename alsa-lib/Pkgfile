@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=alsa-lib
-version=1.0.11
+version=1.0.12
 release=1
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 
