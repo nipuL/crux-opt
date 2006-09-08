@@ -4,14 +4,12 @@
 # Depends on: freetype, x11, gtk, gimp-print, libart_lgpl, p5-xml-parser
 
 name=gimp
-version=2.2.11
+version=2.2.13
 release=1
-source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2 \
-	$name-$version-libpng.patch)
+source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2)
 
 build() {
 	cd gimp-$version
-	patch -p1 -i $SRC/$name-$version-libpng.patch
 	sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
 	./configure --prefix=/usr \
 		--disable-static
