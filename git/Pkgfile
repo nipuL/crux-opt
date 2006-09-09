@@ -1,12 +1,12 @@
 # Description: Directory content manager
 # URL: http://www.kernel.org/pub/software/scm/git/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: openssl, curl, perl, python
+# Depends on: curl, rcs, perl, python
 # Nice to have: tk
 
 name=git
 version=1.4.2
-release=1
+release=2
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
 build() {
