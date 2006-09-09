@@ -1,7 +1,7 @@
 # Description: list open files
 # URL: http://freshmeat.net/projects/lsof/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Antti Nykänen, aon at iki dot fi
+# Packager: sten, nick dot steeves at shaw dot ca
 
 name=lsof
 version=4.77
