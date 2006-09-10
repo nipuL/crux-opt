@@ -53,6 +53,7 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/vp4vfw.dll
 -rw-r--r--	root/root	usr/lib/win32/vp5vfw.dll
 -rw-r--r--	root/root	usr/lib/win32/vp6vfw.dll
+-rw-r--r--	root/root	usr/lib/win32/vp7vfw.dll
 -rw-r--r--	root/root	usr/lib/win32/vssh264.dll
 -rw-r--r--	root/root	usr/lib/win32/vssh264core.dll
 -rw-r--r--	root/root	usr/lib/win32/vssh264dec.dll
@@ -67,3 +68,4 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/wmvadvd.dll
 -rw-r--r--	root/root	usr/lib/win32/wmvdmod.dll
 -rw-r--r--	root/root	usr/lib/win32/wnvwinx.dll
+-rw-r--r--	root/root	usr/lib/win32/wvc1dmod.dll
