@@ -1,0 +1,22 @@
+diff -aur rcairo-1.2.0.orig/setup.rb rcairo-1.2.0/setup.rb
+--- rcairo-1.2.0.orig/setup.rb	2006-09-10 13:24:51.880828750 +0200
++++ rcairo-1.2.0/setup.rb	2006-09-10 13:26:21.978459500 +0200
+@@ -537,7 +537,7 @@
+ module FileOperations
+ 
+   def mkdir_p(dirname, prefix = nil)
+-    dirname = prefix + File.expand_path(dirname) if prefix
++    dirname = ENV["DESTDIR"] + prefix + File.expand_path(dirname) if prefix
+     $stderr.puts "mkdir -p #{dirname}" if verbose?
+     return if no_harm?
+ 
+@@ -624,7 +624,8 @@
+     $stderr.puts "install #{from} #{dest}" if verbose?
+     return if no_harm?
+ 
+-    realdest = prefix ? prefix + File.expand_path(dest) : dest
++	realdest = ENV["DESTDIR"]
++    realdest += prefix ? prefix + File.expand_path(dest) : dest
+     realdest = File.join(realdest, File.basename(from)) if File.dir?(realdest)
+     str = File.binread(from)
+     if diff?(str, realdest)
