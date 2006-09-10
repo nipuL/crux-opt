@@ -3,6 +3,7 @@
 # Packager: Håvard Moen, vanilje at netcom dot no
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: ruby, gtk
+# Nice to have: ruby-cairo
 
 name=ruby-gtk
 version=0.15.0
