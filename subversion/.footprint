@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/svndumpfilter
 -rwxr-xr-x	root/root	usr/bin/svnlook
 -rwxr-xr-x	root/root	usr/bin/svnserve
+-rwxr-xr-x	root/root	usr/bin/svnsync
 -rwxr-xr-x	root/root	usr/bin/svnversion
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/subversion-1/
@@ -18,6 +19,7 @@ drwxr-xr-x	root/root	usr/include/subversion-1/
 -rw-r--r--	root/root	usr/include/subversion-1/svn_dav.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_delta.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_diff.h
+-rw-r--r--	root/root	usr/include/subversion-1/svn_dso.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_error.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_error_codes.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_fs.h
@@ -38,6 +40,7 @@ drwxr-xr-x	root/root	usr/include/subversion-1/
 -rw-r--r--	root/root	usr/include/subversion-1/svn_subst.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_time.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_types.h
+-rw-r--r--	root/root	usr/include/subversion-1/svn_user.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_utf.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_version.h
 -rw-r--r--	root/root	usr/include/subversion-1/svn_wc.h
