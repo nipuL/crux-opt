@@ -5,7 +5,7 @@
 
 name=hal
 version=0.5.7.1
-release=1
+release=2
 source=(http://freedesktop.org/~david/dist/$name-$version.tar.gz \
 	rc.hald $name-$version-dbus-close.patch)
 
@@ -19,7 +19,8 @@ build() {
 		--localstatedir=/var \
 		--with-hal-user=haldaemon \
 		--with-hal-group=haldaemon \
-		--with-dbus-sys=/usr/etc/dbus-1/system.d
+		--with-dbus-sys=/usr/etc/dbus-1/system.d \
+		--with-hwdata=/usr/share
 	sed -i -e '/device-manager/d' tools/Makefile
 	make
 	make DESTDIR=$PKG install
