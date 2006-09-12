@@ -5,9 +5,9 @@
 
 name=hal
 version=0.5.7.1
-release=2
+release=3
 source=(http://freedesktop.org/~david/dist/$name-$version.tar.gz \
-	rc.hald $name-$version-dbus-close.patch)
+	rc.hald $name-$version-dbus-close.patch hal.conf)
 
 build() {
 	cd $name-$version
@@ -27,4 +27,8 @@ build() {
 	install -D -o root -g root -m 0755 $SRC/rc.hald \
 		$PKG/etc/rc.d/hald
 	rm -rf $PKG/usr/share/{doc,locale}
+	install -D -m 0644 -o root -g root tools/linux/90-hal.rules \
+		$PKG/etc/udev/rules.d/90-hal.rules
+	install -m 0644 -o root -g root $SRC/hal.conf \
+		$PKG/usr/etc/dbus-1/system.d/
 }
