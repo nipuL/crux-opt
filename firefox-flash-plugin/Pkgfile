@@ -6,7 +6,7 @@
 
 name=firefox-flash-plugin
 version=7.0r63
-release=1
+release=2
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_7_linux.tar.gz)
 
 build() {
