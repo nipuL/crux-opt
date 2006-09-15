@@ -88,6 +88,7 @@ drwxr-xr-x	root/root	usr/lib/thunderbird/components/
 -rw-r--r--	root/root	usr/lib/thunderbird/components/gfx.xpt
 -rw-r--r--	root/root	usr/lib/thunderbird/components/history.xpt
 -rw-r--r--	root/root	usr/lib/thunderbird/components/htmlparser.xpt
+-rw-r--r--	root/root	usr/lib/thunderbird/components/imgicon.xpt
 -rw-r--r--	root/root	usr/lib/thunderbird/components/imglib2.xpt
 -rw-r--r--	root/root	usr/lib/thunderbird/components/impComm4xMail.xpt
 -rw-r--r--	root/root	usr/lib/thunderbird/components/import.xpt
@@ -117,6 +118,7 @@ drwxr-xr-x	root/root	usr/lib/thunderbird/components/
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libgklayout.so
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libhtmlpars.so
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libi18n.so
+-rwxr-xr-x	root/root	usr/lib/thunderbird/components/libimgicon.so
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libimglib2.so
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libimport.so
 -rwxr-xr-x	root/root	usr/lib/thunderbird/components/libjar50.so
