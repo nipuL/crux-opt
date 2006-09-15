@@ -6,7 +6,7 @@
 name=libc-client
 version=2004g
 release=1
-source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.Z)
+source=(ftp://ftp.cac.washington.edu/imap/old/imap-$version.tar.Z)
 
 build () {
     cd imap-$version
