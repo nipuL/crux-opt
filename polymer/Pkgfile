@@ -7,7 +7,7 @@
 name=polymer
 version=0.3.2
 release=1
-source=(http://static.int.pl/~mig21/dev/releases/${name}/${name}-${version}.tar.bz2)
+source=(http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/$name-$version.tar.bz2)
 
 build() {
     export QTDIR=/usr/share/qt
