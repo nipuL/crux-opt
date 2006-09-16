@@ -1,0 +1,19 @@
+# Description: A system-wide profiler for Linux
+# URL: http://oprofile.sourceforge.net
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=oprofile
+version=0.9.2
+release=1
+source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --with-kernel-support
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+}
