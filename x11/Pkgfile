@@ -8,11 +8,12 @@
 
 name=x11
 version=6.9.0
-release=4
+release=5
 source=(http://ftp.x.org/pub/X11R${version}/src-single/X11R${version}-src.tar.bz2 \
 	$name-$version-xterm256.patch $name-$version-linux_config.patch \
         http://xorg.freedesktop.org/releases/X11R${version}/patches/${name}r${version}-geteuid.diff \
         http://xorg.freedesktop.org/releases/X11R${version}/patches/${name}r${version}-mitri.diff \
+        http://xorg.freedesktop.org/releases/X11R${version}/patches/${name}r${version}-cidfonts.diff \
         xdm host.def)
 
 build() {
@@ -21,7 +22,8 @@ build() {
     patch -p1 < $SRC/$name-$version-linux_config.patch
     patch -p0 < $SRC/${name}r${version}-geteuid.diff
     patch -p0 < $SRC/${name}r${version}-mitri.diff
-
+    patch -p0 < $SRC/${name}r${version}-cidfonts.diff
+    
     sed "s/#CFLAGS#/$CFLAGS/" $SRC/host.def > config/cf/host.def
     make World
     make DESTDIR=$PKG install

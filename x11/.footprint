@@ -5997,7 +5997,6 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/TTF/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/VeraSe.ttf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/VeraSeBd.ttf
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/encodings.dir
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/fonts.cache-1
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/fonts.dir
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/fonts.scale
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/TTF/luximb.ttf
@@ -6047,7 +6046,6 @@ drwxr-xr-x	root/root	usr/X11R6/lib/X11/fonts/Type1/
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/couri.pfa
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/cursor.pfa
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/encodings.dir
--rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/fonts.cache-1
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/fonts.dir
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/fonts.scale
 -rw-r--r--	root/root	usr/X11R6/lib/X11/fonts/Type1/l047013t.afm
