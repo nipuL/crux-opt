@@ -1,6 +1,6 @@
 # Description: Small, easy-to-configure FTP server
 # URL:         http://bftpd.sourceforge.net/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Simone Rota, sip at crux dot nu
 
 name=bftpd
 version=1.5
