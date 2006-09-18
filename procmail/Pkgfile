@@ -1,6 +1,6 @@
-# Description: Versatile e-mail processor
+# Description: Versatile mail delivery agent/filter
 # URL:         http://www.procmail.org/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=procmail
 version=3.22
