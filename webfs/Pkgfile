@@ -1,12 +1,13 @@
 # Description: A simple HTTP server for static content
 # URL:         http://linux.bytesex.org/misc/webfs.html
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=webfs
 version=1.21
 release=2
-source=(http://dl.bytesex.org/releases/webfs/webfs-$version.tar.gz httpd)
+source=(http://dl.bytesex.org/releases/webfs/webfs-$version.tar.gz \
+        httpd)
 
 build() {
     cd $name-$version
