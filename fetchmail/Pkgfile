@@ -1,12 +1,12 @@
 # Description: A remote-mail retrieval utility
 # URL:         http://fetchmail.berlios.de/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=fetchmail
 version=6.3.4
 release=1
-source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
+source=(http://download2.berlios.de/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
