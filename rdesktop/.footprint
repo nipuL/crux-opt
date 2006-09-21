@@ -9,9 +9,11 @@ drwxr-xr-x	root/root	usr/share/rdesktop/
 drwxr-xr-x	root/root	usr/share/rdesktop/keymaps/
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/ar
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/common
+-rw-r--r--	root/root	usr/share/rdesktop/keymaps/cs
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/da
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/de
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/de-ch
+-rw-r--r--	root/root	usr/share/rdesktop/keymaps/en-dv
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/en-gb
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/en-us
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/es
@@ -22,6 +24,7 @@ drwxr-xr-x	root/root	usr/share/rdesktop/keymaps/
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/fr-be
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/fr-ca
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/fr-ch
+-rw-r--r--	root/root	usr/share/rdesktop/keymaps/he
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/hr
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/hu
 -rw-r--r--	root/root	usr/share/rdesktop/keymaps/is

@@ -4,7 +4,7 @@
 # Depends on: openssl, x11
 
 name=rdesktop
-version=1.4.1
+version=1.5.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/rdesktop/$name-$version.tar.gz)
 build(){
