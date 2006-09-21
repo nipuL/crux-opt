@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=libpcap
-version=0.9.4
+version=0.9.5
 release=1
 source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
 
