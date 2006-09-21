@@ -4,7 +4,7 @@
 # Depends on:  libpcap, openssl
 
 name=tcpdump
-version=3.9.4
+version=3.9.5
 release=1
 source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
 
