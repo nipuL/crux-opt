@@ -1,6 +1,6 @@
 # Description: a collection of utilites for controlling TCP/IP networking and traffic in Linux
 # URL: http://linux-net.osdl.org/index.php/Iproute2
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Mikhail Kolesnik, mike at openbunker dot org
 
 name=iproute2
