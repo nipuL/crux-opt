@@ -1,12 +1,12 @@
 # Description: GTK+ email client and news reader
-# URL:         http://sylpheed.good-day.net
+# URL:         http://sylpheed.sraoss.jp/en/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=2.2.7
+version=2.2.9
 release=1
-source=(http://sylpheed.good-day.net/sylpheed/v2.2/$name-$version.tar.bz2)
+source=(http://sylpheed.sraoss.jp/sylpheed/v2.2/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
