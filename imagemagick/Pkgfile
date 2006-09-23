@@ -7,7 +7,7 @@
 name=imagemagick
 version=6.2.9-6
 release=1
-source=(ftp://gd.tuwien.ac.at/pub/graphics/ImageMagick/ImageMagick-$version.tar.bz2)
+source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version.tar.bz2)
 
 build () {
     cd ImageMagick-${version/-*/}
