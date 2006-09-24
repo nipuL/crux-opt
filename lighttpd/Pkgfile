@@ -1,11 +1,11 @@
 # Description: Secure, fast, compliant and very flexible web server
 # URL: http://www.lighttpd.net/
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: 
 
 name=lighttpd
-version=1.4.11
+version=1.4.12
 release=1
 source=(http://www.$name.net/download/$name-$version.tar.gz \
         $name.conf \

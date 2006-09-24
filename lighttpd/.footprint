@@ -38,6 +38,8 @@ drwxr-xr-x	root/root	usr/lib/lighttpd/
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_flv_streaming.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_indexfile.la
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_indexfile.so
+-rwxr-xr-x	root/root	usr/lib/lighttpd/mod_magnet.la
+-rwxr-xr-x	root/root	usr/lib/lighttpd/mod_magnet.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_mysql_vhost.la
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_mysql_vhost.so
 -rwxr-xr-x	root/root	usr/lib/lighttpd/mod_proxy.la
