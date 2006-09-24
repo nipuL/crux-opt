@@ -6,7 +6,7 @@
 name=aspell
 version=0.60.4
 release=1
-source=(http://mirrors.sunsite.dk/gnu/$name/$name-$version.tar.gz)
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
