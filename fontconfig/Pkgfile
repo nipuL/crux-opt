@@ -4,15 +4,26 @@
 # Depends on:  freetype, expat
 
 name=fontconfig
-version=2.3.2
+version=2.4.1
 release=1
 source=(http://fontconfig.org/release/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
+
     ./configure --prefix=/usr \
-		--sysconfdir=/etc
+                --sysconfdir=/etc \
+                --mandir=/usr/man \
+                --localstatedir=/var
+
     make
     make DESTDIR=$PKG install
+
+    # Enabling autohinting by default
+    pushd $PKG/etc/fonts/conf.d
+    ln -s ../conf.avail/10-autohint.conf
+    popd
+
+    rm -f $PKG/etc/fonts/conf.avail/README
     rm -rf $PKG/usr/share
 }
