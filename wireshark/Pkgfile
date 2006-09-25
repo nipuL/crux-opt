@@ -1,0 +1,32 @@
+# Description: Network Sniffer with nice GTK+ UI
+# URL: http://www.ethereal.com
+# Packager: Martin Opel, mo at obbl-net dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: gtk libpcap
+# Nice to have: libpcre
+
+name=wireshark
+version=0.99.3a
+release=1
+source=(http://www.$name.org/download/src/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr \
+	            --disable-nls \
+	            --enable-snmp \
+	            --enable-gtk2 \
+	            --disable-gcry
+
+	make
+	make DESTDIR=$PKG install
+
+	# install some icons
+	install -d $PKG/usr/share/$name/pixmaps
+	install -m 644 \
+		image/{hi,lo}{16,32,48}-app-$name.png \
+		$PKG/usr/share/$name/pixmaps
+
+	rm -f $PKG/usr/share/$name/AUTHORS-SHORT
+}
