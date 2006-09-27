@@ -1,17 +1,3 @@
-drwxr-xr-x	root/root	man/
-drwxr-xr-x	root/root	man/man1/
--rw-r--r--	root/root	man/man1/widl.1.gz
--rw-r--r--	root/root	man/man1/wine.1.gz
--rw-r--r--	root/root	man/man1/winebuild.1.gz
--rw-r--r--	root/root	man/man1/winedbg.1.gz
--rw-r--r--	root/root	man/man1/winedump.1.gz
-lrwxrwxrwx	root/root	man/man1/wineg++.1.gz -> winegcc.1.gz
--rw-r--r--	root/root	man/man1/winegcc.1.gz
--rw-r--r--	root/root	man/man1/winemaker.1.gz
--rw-r--r--	root/root	man/man1/wineprefixcreate.1.gz
--rw-r--r--	root/root	man/man1/wineserver.1.gz
--rw-r--r--	root/root	man/man1/wmc.1.gz
--rw-r--r--	root/root	man/man1/wrc.1.gz
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/function_grep.pl
@@ -851,6 +837,20 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ws2_32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wsock32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wtsapi32.dll.so
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/widl.1.gz
+-rw-r--r--	root/root	usr/man/man1/wine.1.gz
+-rw-r--r--	root/root	usr/man/man1/winebuild.1.gz
+-rw-r--r--	root/root	usr/man/man1/winedbg.1.gz
+-rw-r--r--	root/root	usr/man/man1/winedump.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/wineg++.1.gz -> winegcc.1.gz
+-rw-r--r--	root/root	usr/man/man1/winegcc.1.gz
+-rw-r--r--	root/root	usr/man/man1/winemaker.1.gz
+-rw-r--r--	root/root	usr/man/man1/wineprefixcreate.1.gz
+-rw-r--r--	root/root	usr/man/man1/wineserver.1.gz
+-rw-r--r--	root/root	usr/man/man1/wmc.1.gz
+-rw-r--r--	root/root	usr/man/man1/wrc.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/wine.m4
