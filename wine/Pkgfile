@@ -1,16 +1,18 @@
 # Description: WINE - Implementation of Windows DLL's and core.
 # URL: http://www.winehq.com/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Packager: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Antti Nykänen, aon at iki dot fi
 # Depends on: fontforge
 
 name=wine
-version=0.9.17
+version=0.9.21
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 	./configure 	--prefix=/usr \
+			--mandir=$PKG/man \
 			--disable-nls
 	make depend
 	make
