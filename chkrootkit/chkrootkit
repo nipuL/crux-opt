@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# /usr/sbin/chkrootkit: chkrootkit execution script
-#
-
-cd /usr/sbin
-exec ./chkrootkit.scr "$@"
-
-# End of file
