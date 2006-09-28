@@ -1,6 +1,6 @@
 # Description: a GUI toolkit for TCL
 # URL: http://tcl.sourceforge.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Sven Dahl, dahl at c64 dot org
 # Depends on: x11, tcl
 
