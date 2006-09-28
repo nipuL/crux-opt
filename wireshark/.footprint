@@ -92,6 +92,7 @@ drwxr-xr-x	root/root	usr/man/man4/
 -rw-r--r--	root/root	usr/man/man4/wireshark-filter.4.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/wireshark/
+-rw-r--r--	root/root	usr/share/wireshark/AUTHORS-SHORT
 -rw-r--r--	root/root	usr/share/wireshark/capinfos.html
 -rw-r--r--	root/root	usr/share/wireshark/cfilters
 -rw-r--r--	root/root	usr/share/wireshark/colorfilters
