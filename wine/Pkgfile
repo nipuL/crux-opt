@@ -6,7 +6,7 @@
 
 name=wine
 version=0.9.22
-release=2
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
 
 build() {
