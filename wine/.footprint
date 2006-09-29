@@ -458,6 +458,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/cards.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cfgmgr32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/clock.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/clusapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cmd.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/comcat.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/comctl32.dll.so
@@ -544,6 +545,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libcapi2032.def
 -rw-r--r--	root/root	usr/lib/wine/libcards.def
 -rw-r--r--	root/root	usr/lib/wine/libcfgmgr32.def
+-rw-r--r--	root/root	usr/lib/wine/libclusapi.def
 -rw-r--r--	root/root	usr/lib/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib/wine/libcompstui.def
@@ -598,6 +600,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libmsvcrtd.def
 -rw-r--r--	root/root	usr/lib/wine/libmsvfw32.def
 -rw-r--r--	root/root	usr/lib/wine/libmswsock.def
+-rw-r--r--	root/root	usr/lib/wine/libnddeapi.def
 -rw-r--r--	root/root	usr/lib/wine/libnetapi32.def
 -rw-r--r--	root/root	usr/lib/wine/libnewdev.def
 -rw-r--r--	root/root	usr/lib/wine/libntdll.def
@@ -696,6 +699,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/msvideo.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/mswsock.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msxml3.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/nddeapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/netapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/newdev.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/notepad.exe.so
