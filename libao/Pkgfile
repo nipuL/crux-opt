@@ -1,18 +1,21 @@
 # Description: Cross-platform audio output library and plugins
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
-# Packager: Olle Gustafsson, ogg at linux dot se
 # URL: http://www.xiph.org/ao/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: Olle Gustafsson, ogg at linux dot se
 
 name=libao
 version=0.8.6
 release=1
-source=(http://downloads.xiph.org/releases/ao/$name-$version.tar.gz)
+source=(http://downloads.xiph.org/releases/ao/${name}-${version}.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+
+    sed -i 's|MANDIR=.*|MANDIR=/usr/man|' configure
+
+    ./configure --prefix=/usr 
     make
     make DESTDIR=$PKG install
+
     rm -rf $PKG/usr/share/doc
-    mv $PKG/usr/share/man $PKG/usr
 }
