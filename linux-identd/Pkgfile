@@ -1,6 +1,6 @@
 # Description: An RFC 1413 identification daemon for Linux
 # URL:         http://www.fukt.bsnet.se/~per/identd/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 
 name=linux-identd
 version=1.3
