@@ -1,6 +1,6 @@
 # Description: Sync local time against a time server.
 # URL: N/A
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer:
 
 name=netdate
 version=1.2
