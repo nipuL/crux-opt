@@ -1,21 +1,28 @@
 # Description: Tools to write DVDs
 # URL: http://fy.chalmers.se/~appro/linux/DVD+RW/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: sten, nick dot steeves at shaw dot ca
 # Depends on: cdrtools
 
 name=dvd+rw-tools
-version=6.1
+version=7.0
 release=1
 source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
+
     make
+
     mkdir -p $PKG/usr/bin $PKG/usr/man/man1
-    for exec in dvd+rw-booktype dvd+rw-format dvd+rw-mediainfo dvd-ram-control\
-        growisofs; do
-      install -m 755 $exec $PKG/usr/bin/
+    for exec in \
+	dvd+rw-booktype \
+	dvd+rw-format \
+	dvd+rw-mediainfo \
+	dvd-ram-control \
+	growisofs
+    do
+	install -m 755 $exec $PKG/usr/bin/
     done
     install -m 644 growisofs.1 $PKG/usr/man/man1/
 }
