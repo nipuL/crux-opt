@@ -3,7 +3,6 @@
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 # Packager: Daniel K. Gebhart, dkg at con-fuse dot org
 # Depends on: glib
-# Group: ipv6
 
 name=irssi
 version=0.8.10
