@@ -1,14 +1,14 @@
 # Description: Qt Free Edition
 # URL: http://www.trolltech.com
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
-# Depends on: x11, freetype, libjpeg, libmng, libpng, fontconfig, expat
+# Depends on: x11, libmng
 
 name=qt3
 version=3.3.6
 release=2
 source=(ftp://ftp.trolltech.com/qt/source/qt-x11-free-$version.tar.bz2 \
-    http://crux.danm.de/files/dist/$name/$version/$name-$version-1-patches.tar.bz2
+    http://crux.nu/patches/$name-$version-1-patches.tar.bz2
     $name-$version-gcc4.patch 
     qt-x11-free-3.3.5-no-rpath.patch)
 
