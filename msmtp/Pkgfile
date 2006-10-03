@@ -1,8 +1,8 @@
 # Description: An SMTP client suitable for use with mutt etc.
 # URL:         http://msmtp.sourceforge.net/
-# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
-# Depends on:  
+# Depends on:  openssl
 
 name=msmtp
 version=1.4.7
