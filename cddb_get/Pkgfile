@@ -5,7 +5,7 @@
 # Depends on: perl
 
 name=cddb_get
-version=2.25
+version=2.27
 release=1
 source=(http://armin.emx.at/cddb/CDDB_get-$version.tar.gz)
 
@@ -14,5 +14,6 @@ build(){
 	perl Makefile.PL
 	make
 	make DESTDIR=$PKG install
-	rm -f $PKG/usr/lib/perl5/5.8.2/linux/perllocal.pod
+	find $PKG -name "perllocal.pod" -exec rm -f '{}' \;
+	find $PKG -name ".packlist" -exec rm -f '{}' \;
 }
