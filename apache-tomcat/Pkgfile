@@ -5,9 +5,9 @@
 # Depends on: j2sdk
 
 name=apache-tomcat
-version=5.5.17
-release=2
-source=(http://apache.markoer.org/tomcat/tomcat-5/v$version/bin/$name-$version.tar.gz \
+version=5.5.20
+release=1
+source=(http://www.eu.apache.org/dist/tomcat/tomcat-5/v$version/bin/$name-$version.tar.gz \
 	tomcat)
 
 build() {
