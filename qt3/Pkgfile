@@ -8,7 +8,7 @@ name=qt3
 version=3.3.6
 release=2
 source=(ftp://ftp.trolltech.com/qt/source/qt-x11-free-$version.tar.bz2 \
-    http://crux.nu/patches/$name-$version-1-patches.tar.bz2
+    http://crux.nu/files/patches/$name-$version-1-patches.tar.bz2
     $name-$version-gcc4.patch 
     qt-x11-free-3.3.5-no-rpath.patch)
 
