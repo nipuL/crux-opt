@@ -482,3 +482,4 @@ drwxr-xr-x	root/root	usr/share/ImageMagick-6.2.9/config/
 -rw-r--r--	root/root	usr/share/ImageMagick-6.2.9/config/coder.xml
 -rw-r--r--	root/root	usr/share/ImageMagick-6.2.9/config/log.xml
 -rw-r--r--	root/root	usr/share/ImageMagick-6.2.9/config/magic.xml
+-rw-r--r--	root/root	usr/share/ImageMagick-6.2.9/config/thresholds.xml
