@@ -2,7 +2,7 @@
 # URL: http://www.gnu.org/software/libcdio
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
-# Dependencies: popt, cdparanoia, libcddb
+# Depends on: popt, cdparanoia, libcddb
 
 name=libcdio
 version=0.76

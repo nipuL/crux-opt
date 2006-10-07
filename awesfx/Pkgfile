@@ -2,7 +2,7 @@
 # URL: http://www.alsa-project.org/~iwai/awedrv.html
 # Maintainer: sten, nick dot steeves at shaw dot ca
 # Packager: 
-# Dependencies: alsa-lib
+# Depends on: alsa-lib
 
 name=awesfx
 version=0.5.0d

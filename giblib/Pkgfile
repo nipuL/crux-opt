@@ -2,7 +2,7 @@
 # URL: http://www.linuxbrit.co.uk/giblib/
 # Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Eduardo Lopes, eduol at gmx dot net
-# Dependencies: imlib2
+# Depends on: imlib2
 
 name=giblib
 version=1.2.4
