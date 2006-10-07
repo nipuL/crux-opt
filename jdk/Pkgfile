@@ -2,10 +2,10 @@
 # Description: Java 2 Software Development Kit
 # URL: http://java.sun.com
 
-name=j2sdk
-version=1.5.0_07
+name=jdk
+version=1.5.0_08
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-1_5_0_07-distro-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-1_5_0_08-dlj-linux-i586.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
