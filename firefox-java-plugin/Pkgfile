@@ -1,11 +1,11 @@
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Description: Java plugin for Mozilla Firefox
 # URL: http://java.sun.com
-# Depends on: j2re,firefox
+# Depends on: jre,firefox
 
 name=firefox-java-plugin
 version=1.5.0
-release=07
+release=08
 source=()
 
 build(){
