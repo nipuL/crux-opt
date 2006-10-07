@@ -4,18 +4,21 @@
 # Depends on:  openssl
 
 name=uw-imap
-version=2004g
+version=2006b
 release=1
-source=(ftp://ftp.cac.washington.edu/imap/old/imap-$version.tar.Z)
+source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.Z)
 
 build () {
     cd imap-$version
-    echo y | make slx EXTRACFLAGS="$CFLAGS" \
-                      SSLTYPE=unix \
-                      SSLDIR=/usr \
-                      SSLCERTS=/etc/ssl/certs \
-                      IP=6
-    
+
+    sed -i 's/read x/x=y/' Makefile
+    make slx \
+        EXTRACFLAGS="$CFLAGS" \
+        SSLTYPE=unix \
+        SSLDIR=/usr \
+        SSLCERTS=/etc/ssl/certs \
+        IP=6
+
     install -D -m 755 imapd/imapd $PKG/usr/sbin/imapd
     install -m 755 ipopd/{ipop2d,ipop3d} $PKG/usr/sbin
     install -D -m 644 src/imapd/imapd.8 $PKG/usr/man/man8/imapd.8
