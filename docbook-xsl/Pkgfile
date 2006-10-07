@@ -1,7 +1,7 @@
 # Description: XSL stylesheets for the DocBook DTD and its derivatives
 # URL:         http://docbook.sourceforge.net/projects/xsl/
 # Packager:    Robert McMeekin, rrm3 at rrm3 dot org
-# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
 # Depends on:  docbook-xml-entities,libxslt
 
 name=docbook-xsl
