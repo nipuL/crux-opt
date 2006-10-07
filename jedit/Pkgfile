@@ -2,7 +2,7 @@
 # URL: http://www.jedit.org
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: j2re, unzip
+# Depends on: jre, unzip
 
 name=jedit
 version=4.2
