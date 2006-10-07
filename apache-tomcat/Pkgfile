@@ -2,7 +2,7 @@
 # URL: http://jakarta.apache.org/tomcat/index.html
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: j2sdk
+# Depends on: jdk
 
 name=apache-tomcat
 version=5.5.20

@@ -2,7 +2,7 @@
 # Maintainer: Simone Rota, sip at crux dot nu
 # Description: Ant is a Java-based build tool.
 # URL: http://ant.apache.org
-# Depends on: j2sdk
+# Depends on: jdk
 
 name=ant
 version=1.6.5
