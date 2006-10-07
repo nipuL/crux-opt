@@ -1,5 +1,5 @@
 # Description: Coldplugging script for boot-time hotplug functionality
-# URL http://linux-hotplug.sourceforge.net/
+# URL: http://linux-hotplug.sourceforge.net/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: hotplug
 

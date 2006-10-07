@@ -1,6 +1,6 @@
 # Description: GNU shar (encoding/decoding) utilities
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
-# Url: http://www.gnu.org/software/sharutils/sharutils.html
+# URL: http://www.gnu.org/software/sharutils/sharutils.html
 # Depends on: 
 
 name=sharutils

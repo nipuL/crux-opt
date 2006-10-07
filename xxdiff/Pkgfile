@@ -2,7 +2,7 @@
 # Maintainer:  Johannes Winkelmann, jw at tks6 dot net
 # Description: graphical file and directories comparator and merge tool
 # URL:         http://xxdiff.sourceforge.net/ 
-# Depends:     qt3 
+# Depends on:  qt3 
 
 name=xxdiff
 version=3.2

@@ -1,4 +1,5 @@
 # Description: A selector for gl/glx libraries and extensions
+# URL: N/A
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=gl-select

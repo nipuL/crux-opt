@@ -1,5 +1,5 @@
 # Description: Minimalistic program for locking down X
-# URL:
+# URL: http://packages.debian.org/unstable/x11/xtrlock
 # Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: x11

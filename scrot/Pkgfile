@@ -2,7 +2,7 @@
 # URL: http://www.linuxbrit.co.uk/scrot/
 # Maintainer: Jukka Heino, jukka dot heino at gmail dot com
 # Packager: Justin Rebelo, justin at pfusch dot ca
-# Dependencies: giblib
+# Depends on: giblib
 
 name=scrot
 version=0.8

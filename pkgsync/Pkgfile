@@ -1,6 +1,6 @@
 # Description: Distributed package management for CRUX linux
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
-# Url: http://jaydolan.com/pkgsync.html
+# URL: http://jaydolan.com/pkgsync.html
 # Depends on: 
 
 name=pkgsync

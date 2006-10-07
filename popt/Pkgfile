@@ -1,4 +1,5 @@
 # Description: commandline option parser 
+# URL: http://freshmeat.net/projects/popt/
 # Packager:   Robert McMeekin, viper at mcmeekin dot info
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: gettext
