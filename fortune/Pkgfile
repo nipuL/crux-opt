@@ -12,7 +12,7 @@ source=(http://www.ibiblio.org/pub/Linux/games/amusements/$name/$name-$version.t
 	http://www.schwarzvogel.de/pkgs/kernelcookies-8.tar.gz \
 	http://www.splitbrain.org/_media/projects/fortunes/fortune-simpsons-chalkboard.tgz \
 	http://www.splitbrain.org/_media/projects/fortunes/fortune-discworld.tgz \
-	http://db.ilug-bom.org.in/lug-authors/philip/misc/fortune-mod-prog-style.tar.gz)
+	http://crux.nu/files/distfiles/fortune-mod-prog-style.tar.gz)
 
 build(){
 	local cookie
