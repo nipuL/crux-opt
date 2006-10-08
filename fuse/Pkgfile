@@ -4,16 +4,14 @@
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 
 name=fuse
-version=2.5.3
-release=2
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
-        udev-rules.patch)
+version=2.6.0-rc2
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    patch -p1 < $SRC/udev-rules.patch
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/dev
+    rm -r $PKG/{dev,etc/init.d}
 }
