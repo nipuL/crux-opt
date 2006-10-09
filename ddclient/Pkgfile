@@ -4,7 +4,7 @@
 # Depends on: 
 
 name=ddclient
-version=3.6.7
+version=3.7.0
 release=1
 source=(http://dl.sf.net/$name/$name-$version.tar.bz2 ddclient)
 
