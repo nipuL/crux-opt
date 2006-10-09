@@ -1,10 +1,10 @@
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Description:  C library for manipulating sound files
-# URL: http://www.mega-nerd.com/libsndfile
+# Url: http://www.mega-nerd.com/libsndfile
 # Depends on: 
 
 name=libsndfile
-version=1.0.16
+version=1.0.17
 release=1
 source=(http://www.mega-nerd.com/$name/$name-$version.tar.gz)
 
