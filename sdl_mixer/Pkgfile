@@ -1,6 +1,6 @@
 # Description: A sample multi-channel audio mixer library.
 # URL: http://www.libsdl.org/projects/SDL_mixer/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on: libvorbis, libmikmod, smpeg
 
 name=sdl_mixer

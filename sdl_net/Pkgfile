@@ -1,6 +1,6 @@
 # Description: A cross-platform networking library for SDL.
 # URL: http://www.libsdl.org/projects/SDL_net/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on: libsdl
 
 name=sdl_net

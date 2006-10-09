@@ -1,6 +1,6 @@
 # Description: SDL graphics drawing primitives and other support functions.
 # URL: http://www.ferzkopp.net/Software/SDL_gfx-2.0/index.html
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Simone Rota, sip at crux dot nu
 # Depends on: libsdl
 
 name=sdl_gfx
