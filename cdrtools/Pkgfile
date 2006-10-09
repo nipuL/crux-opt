@@ -1,6 +1,6 @@
 # Description: A tool to create disk-at-once and track-at-once CDs
 # URL:         http://cdrecord.berlios.de/old/private/cdrecord.html
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Simon Gloßner, viper at hometux dot de
 
 name=cdrtools
 version=2.01
