@@ -1,12 +1,12 @@
 # Description: IMAP and POP3 server with ssl/ipv6 support, written with security primarily in mind
-# URL:         http://dovecot.procontrol.fi
+# URL:         http://dovecot.org
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=dovecot
 version=1.0.rc7
 release=1
-source=(http://dovecot.procontrol.fi/releases/$name-$version.tar.gz \
+source=(http://dovecot.org/releases/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
 
 build () {
