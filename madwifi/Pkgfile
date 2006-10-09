@@ -1,12 +1,12 @@
 # Description: Kernel module for Atheros based 802.11a/b/g cards
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
-# URL: http://madwifi.org
+# Url: http://madwifi.org
 # Depends on: sharutils
 
 name=madwifi
-version=current
+version=0.9.2
 release=1
-source=(http://snapshots.madwifi.org/$name-ng-$version.tar.gz)
+source=(http://dl.sf.net/$name/$name-$version.tar.bz2)
 
 build(){
 	cd $name* && make KERNELPATH=/usr/src/linux-$(uname -r)
