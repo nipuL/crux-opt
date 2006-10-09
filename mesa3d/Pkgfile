@@ -1,7 +1,7 @@
 # Description: Mesa 3D Graphics Library
 # URL: http://www.mesa3d.org/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Jürgen Daubert, juergen dot daubert at t-online de
+# Packager: sten, nick dot steeves at shaw dot ca
 # Depends on: x11, libdrm, freeglut
 
 name=mesa3d
