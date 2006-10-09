@@ -2,9 +2,6 @@ PRE-INSTALL
 
 	Kernel sources must exist in /usr/src/linux[-version]
 
-	Note that this port does not provide a .md5sum, as it is built from
-	a daily svn snapshot of madwifi-ng.
-
 POST-INSTALL
 
 	Run depmod -a, edit /etc/modprobe.conf and /etc/rc.d/net.  The module 
