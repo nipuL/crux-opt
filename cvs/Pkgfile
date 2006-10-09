@@ -1,15 +1,15 @@
 # Description: Concurrent Versions System
 # URL:         https://www.cvshome.org/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Antti Nykänen, aon at iki dot fi
 
 name=cvs
-version=1.11.20
+version=1.11.22
 release=1
-source=(http://mirrors.sunsite.dk/gnu/non-gnu/cvs/$name-$version.tar.bz2)
+source=(http://ftp.gnu.org/gnu/non-gnu/cvs/source/stable/$version/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --disable-server
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/{share,info,man/man8} \
