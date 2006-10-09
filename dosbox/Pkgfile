@@ -1,6 +1,6 @@
 # Description: SDL-based DOS emulator for classic games
 # URL: http://dosbox.sourceforge.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer: Simone Rota, sip at crux dot nu
 # Packager: 
 # Depends on: libsdl
 
