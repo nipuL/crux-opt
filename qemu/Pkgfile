@@ -1,6 +1,6 @@
 # Description:  Fast CPU emulator and virtualizer
 # URL:          http://fabrice.bellard.free.fr/qemu/
-# Maintainer:   Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:   Simone Rota, sip at crux dot nu
 # Packager:     Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:   libsdl
 # Nice to have: kqemu

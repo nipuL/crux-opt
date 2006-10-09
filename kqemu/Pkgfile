@@ -1,6 +1,6 @@
 # Description: QEMU Accelerator Module
 # URL:         http://fabrice.bellard.free.fr/qemu/qemu-accel.html
-# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:  Simone Rota, sip at crux dot nu
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:  
 
