@@ -1,7 +1,6 @@
 # Description: Complete solution to record, convert and stream audio and video
-# URL: http://ffmpeg.sf.net/
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# URL: http://ffmpeg.mplayerhq.hu/
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: imlib2, lame, libsdl, libvorbis, libogg, libxvid, faac
 
 name=ffmpeg
@@ -25,7 +24,8 @@ build() {
 		--enable-gpl \
 		--enable-shared \
 		--enable-pp \
-		--enable-shared-pp
+		--enable-shared-pp \
+		--extra-ldflags="-L/usr/X11R6/lib -L/usr/lib/X11 -lX11"
 	make
 	( cd doc; make ffmpeg.1 ffserver.1 ffplay.1 )
 	make  install installlib \
