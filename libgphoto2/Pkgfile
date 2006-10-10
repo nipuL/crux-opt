@@ -1,7 +1,6 @@
-# Description: libgphoto2 is a library which is used to access digital cameras
-# URL: http://gphoto.sourceforge.net
-# Packager: 
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Description: A library designed to allow access to digital cameras to external programs
+# URL: http://www.gphoto.org/proj/libgphoto2/
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: libusb, libexif
 
 name=libgphoto2
@@ -10,11 +9,11 @@ release=2
 source=(http://dl.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
 
 build () {
-    cd $name-$version
-    ./configure --prefix=/usr \
-        --disable-nls \
-        --disable-static
-    make EXIF_CFLAGS="-DHAVE_EXIF_0_5_4"
-    make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/doc
+	cd $name-$version
+	./configure --prefix=/usr \
+		--disable-nls \
+		--disable-static
+	make EXIF_CFLAGS="-DHAVE_EXIF_0_5_4"
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/doc
 }
