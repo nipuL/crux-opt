@@ -1,11 +1,10 @@
 # Description: SDL_image
-# Packager: Antonio Musumeci bile at landofbile dot com
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # URL: http://www.libsdl.org/projects/SDL_image
 # Depends on: libjpeg,libpng,libsdl
 
 name=sdl_image
-version=1.2.4
+version=1.2.5
 release=1
 source=(http://www.libsdl.org/projects/SDL_image/release/SDL_image-$version.tar.gz)
 
