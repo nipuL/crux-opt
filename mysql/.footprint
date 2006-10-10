@@ -133,6 +133,9 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/perror.1.gz
 -rw-r--r--	root/root	usr/man/man1/replace.1.gz
 -rw-r--r--	root/root	usr/man/man1/safe_mysqld.1.gz
+drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/mysqld.8.gz
+-rw-r--r--	root/root	usr/man/man8/mysqlmanager.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/mysqld
 -rwxr-xr-x	root/root	usr/sbin/mysqlmanager
