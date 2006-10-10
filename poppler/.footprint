@@ -14,21 +14,15 @@ drwxr-xr-x	root/root	usr/include/poppler/glib/
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-attachment.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-document.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-enums.h
+-rw-r--r--	root/root	usr/include/poppler/glib/poppler-features.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-page.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler.h
--rw-r--r--	root/root	usr/include/poppler/poppler-page-transition.h
--rw-r--r--	root/root	usr/include/poppler/poppler-qt.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpoppler-glib.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler-glib.la
 lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so -> libpoppler-glib.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so.1 -> libpoppler-glib.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libpoppler-glib.so.1.0.0
--rw-r--r--	root/root	usr/lib/libpoppler-qt.a
--rwxr-xr-x	root/root	usr/lib/libpoppler-qt.la
-lrwxrwxrwx	root/root	usr/lib/libpoppler-qt.so -> libpoppler-qt.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler-qt.so.1 -> libpoppler-qt.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler-qt.so.1.0.0
 -rw-r--r--	root/root	usr/lib/libpoppler.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler.la
 lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.1.0.0
@@ -37,7 +31,6 @@ lrwxrwxrwx	root/root	usr/lib/libpoppler.so.1 -> libpoppler.so.1.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-glib.pc
--rw-r--r--	root/root	usr/lib/pkgconfig/poppler-qt.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-splash.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler.pc
 drwxr-xr-x	root/root	usr/man/
