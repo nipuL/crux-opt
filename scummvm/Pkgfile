@@ -1,7 +1,7 @@
-# Description: A 'virtual machine' for several classic graphical point-and-click adventure games.
+# Description: Script Creation Utility for Maniac Mansion Virtual Machine
 # URL: http://www.scummvm.org/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
-# Depends on: libsdl, libogg, libmad, zlib, mpeg2dec
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: libsdl, libogg, libmad, zlib, mpeg2dec, flac
 
 name=scummvm
 version=0.9.0
