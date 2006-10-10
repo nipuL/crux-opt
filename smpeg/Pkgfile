@@ -1,6 +1,6 @@
 # Description: A SDL MPEG player library.
 # URL: http://www.lokigames.com/development/smpeg.php3
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: libsdl
 
 name=smpeg
@@ -10,8 +10,9 @@ source=(ftp://sunsite.dk/pub/os/linux/loki/open-source/$name/$name-$version.tar.
 
 build() {
 	cd $name-$version
-	./configure 	--prefix=/usr \
-			--disable-nls
+	./configure --prefix=/usr
+	sed -i -e 's|\(libsmpeg_la_LDFLAGS = .*\)|\1 -lstdc++|' Makefile
+	read blah
 	make
 	make install DESTDIR=$PKG
 }
