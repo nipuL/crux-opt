@@ -1,18 +1,18 @@
-# Description: A 3D recreation of the classic DOS game Scorched Earth.
+# Description: A 3D recreation of the classic DOS game Scorched Earth
 # URL: http://www.scorched3d.co.uk/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
-# Depends on: sdl_mixer, sdl_net, wxgtk
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: sdl_mixer, sdl_net, wxgtk, freealut
 
 name=scorched3d
-version=39.1
+version=40
 release=1
 source=(http://dl.sourceforge.net/$name/Scorched3D-$version-src.tar.gz)
 
 build() {
 	cd scorched
 	./configure	--prefix=/usr \
-			--datadir=/usr/share/$name \
-			--disable-openaltest
+		--datadir=/usr/share/$name
+	sed -i -e 's/\(^LIBS = .*\)/\1 -lalut/' src/scorched/Makefile
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/$name/documentation
