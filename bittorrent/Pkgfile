@@ -1,19 +1,17 @@
 # Description: Swarming peer-to-peer download tool
 # URL: http://www.bittorrent.com/
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
-# Packager: Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: python
 # Nice to have: pygtk
 
 name=bittorrent
-version=4.4.0
+version=4.20.6
 release=1
-source=(http://ftp.fi.debian.org/gentoo/distfiles/BitTorrent-$version.tar.gz)
+source=(http://download.bittorrent.com/dl/BitTorrent-$version.tar.gz)
 
 build() {
-    cd BitTorrent-$version
-    rm makei18n.sh
-    touch makei18n.sh
-    python setup.py install --root=$PKG
-    rm -rf $PKG/usr/share/doc
+	cd BitTorrent-$version
+	:> makei18n.sh
+	python setup.py install --root=$PKG
+	rm -rf $PKG/usr/share/doc $PKG/usr/share/locale
 }
