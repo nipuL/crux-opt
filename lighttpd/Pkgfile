@@ -5,7 +5,7 @@
 # Depends on: 
 
 name=lighttpd
-version=1.4.12
+version=1.4.13
 release=1
 source=(http://www.$name.net/download/$name-$version.tar.gz \
         $name.conf \
