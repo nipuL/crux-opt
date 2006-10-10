@@ -1,16 +1,15 @@
-# Description: Add's dvd support to mplayer and Xine
+# Description: A simple foundation for reading DVD discs
 # URL: http://www.dtek.chalmers.se/groups/dvd
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=libdvdread
-version=0.9.6
+version=0.9.7
 release=1
 source=(http://www.dtek.chalmers.se/groups/dvd/dist/$name-$version.tar.gz)
 
 build() {
-    cd $name-$version
-    ./configure --prefix=/usr
-    make
-    make DESTDIR=$PKG install
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
 }
