@@ -1,6 +1,6 @@
 # Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Description:  Jack Audio Connection Kit
-# Url: http://jackaudio.org
+# URL: http://jackaudio.org
 # Depends on: alsa-lib,libsndfile
 
 name=jack
