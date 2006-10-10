@@ -1,7 +1,7 @@
 # Description: Swarming peer-to-peer download tool
 # URL: http://www.bittorrent.com/
 # Maintainer: Matt Housh, jaeger at crux dot nu
-# Depends on: python
+# Depends on: python, twisted-core, pycrypto
 # Nice to have: pygtk
 
 name=bittorrent
