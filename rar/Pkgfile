@@ -1,7 +1,6 @@
 # Description: The RAR Archiver
-# URL: http://www.rarlab.com
-# Maintainer: sten, nick dot steeves at shaw dot ca
-# Packager: 
+# URL: http://www.rarlab.com/
+# Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=rar
 version=3.6.0
