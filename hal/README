@@ -6,7 +6,7 @@ PRE/POST-INSTALL
 	Create a user/group haldaemon with a unused id < 99:
 
 	'groupadd -g 82 haldaemon'
-	'useradd -n -u 82 -g haldaemon -d /var/empty -s /bin/false haldaemon'
+	'useradd -u 82 -g haldaemon -d /var/empty -s /bin/false haldaemon'
 	'passwd -l haldaemon'
 
 	If you wish to take advantage of the hotplug and automount-style features
