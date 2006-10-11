@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/lib/python2.4/
 drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/
 drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/zope/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/PUBLICATION.cfg
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/README.txt
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/__init__.pyo
@@ -35,8 +34,6 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/zope/exceptions/tests/
 drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/zope/interface/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/DEPENDENCIES.cfg
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/PUBLICATION.cfg
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/README.ru.txt
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/README.txt
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/SETUP.cfg
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/zope/interface/__init__.pyc

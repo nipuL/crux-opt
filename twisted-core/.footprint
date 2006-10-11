@@ -433,7 +433,6 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/twisted/python/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zipstream.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zipstream.pyc
 drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/twisted/python/zsh/
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zsh/README
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zsh/_cftp
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zsh/_ckeygen
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/twisted/python/zsh/_conch

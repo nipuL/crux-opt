@@ -12,4 +12,5 @@ build() {
 	cd ZopeInterface-$version
 	python setup.py build
 	python setup.py install --root=$PKG
+	find $PKG -name "README*txt" -exec rm -f '{}' \;
 }
