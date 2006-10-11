@@ -12,7 +12,6 @@ build() {
 	cd $name-$version
 	./configure --prefix=/usr
 	sed -i -e 's|\(libsmpeg_la_LDFLAGS = .*\)|\1 -lstdc++|' Makefile
-	read blah
 	make
 	make install DESTDIR=$PKG
 }
