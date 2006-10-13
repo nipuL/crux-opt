@@ -5,7 +5,7 @@
 # Depends on: x11, rpm2targz
 
 name=openoffice
-version=2.0.3
+version=2.0.4
 release=1
 source=(http://ftp-atl.osuosl.org/pub/openoffice/stable/$version/OOo_${version}_LinuxIntel_install.tar.gz)
 
