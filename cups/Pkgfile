@@ -6,7 +6,7 @@
 name=cups
 version=1.2.4
 release=1
-source=(ftp://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
+source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
 
 build () {
