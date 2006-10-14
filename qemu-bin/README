@@ -1,0 +1,11 @@
+README file for qemu-bin port
+
+WHY?
+  Qemu currently does not correctly work well if compiled with
+  gcc 4. There are patches around (see the qemu port) but some
+  things are still broken (ie: tun-tap networking).
+
+NOTE
+  This binary port install support files in /usr/local,
+  a small price to pay until qemu get official support
+  for gcc 4.
