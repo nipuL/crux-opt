@@ -4,13 +4,13 @@
 # Depends on: libsdl
 
 name=sdl_net
-version=1.2.5
+version=1.2.6
 release=1
 source=(http://www.libsdl.org/projects/SDL_net/release/SDL_net-$version.tar.gz)
 
 build() {
 	cd SDL_net-$version
-	./configure 	--prefix=/usr
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 }
