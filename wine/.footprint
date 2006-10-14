@@ -619,6 +619,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libpsapi.def
 -rw-r--r--	root/root	usr/lib/wine/libquartz.def
 -rw-r--r--	root/root	usr/lib/wine/librasapi32.def
+-rw-r--r--	root/root	usr/lib/wine/libresutils.def
 -rw-r--r--	root/root	usr/lib/wine/libriched20.def
 -rw-r--r--	root/root	usr/lib/wine/librpcrt4.def
 -rw-r--r--	root/root	usr/lib/wine/librsaenh.def
@@ -680,6 +681,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/msacm32.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/msadp32.acm.so
 -rwxr-xr-x	root/root	usr/lib/wine/mscms.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mscoree.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msdmo.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msftedit.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msg711.acm.so
@@ -736,6 +738,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/rasapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/regedit.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/regsvr32.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/resutils.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/riched20.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/riched32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/rpcrt4.dll.so
