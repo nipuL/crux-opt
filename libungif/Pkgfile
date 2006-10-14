@@ -1,6 +1,6 @@
 # Description: An uncompressed GIF library compatible with giflib
 # URL:         http://libungif.sourceforge.net/doc/
-# Maintainer:  Per Lidén, core-ports at crux dot nu
+# Maintainer:  Simone Rota, sip at crux dot nu
 
 name=libungif
 version=4.1.4
