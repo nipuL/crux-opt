@@ -454,7 +454,7 @@ drwxr-xr-x	root/root	usr/share/cups/templates/
 -rw-r--r--	root/root	usr/share/cups/templates/trailer.tmpl
 -rw-r--r--	root/root	usr/share/cups/templates/users.tmpl
 drwxr-xr-x	root/root	var/
-drwxrwxr-x	root/root	var/cache/
+drwxr-xr-x	root/root	var/cache/
 drwxrwxr-x	root/lp	var/cache/cups/
 drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	root/root	var/log/cups/

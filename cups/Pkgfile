@@ -5,7 +5,7 @@
 
 name=cups
 version=1.2.4
-release=1
+release=2
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
 
@@ -31,7 +31,7 @@ build () {
 
     rm -rf $PKG/etc/{rc*.d,init.d}
     rm -rf $PKG/usr/share/{locale,icons,applications}
-    chmod 0755 $PKG/var/spool   
+    chmod 0755 $PKG/var/{cache,spool}   
 
     install -d $PKG/etc/ssl/{certs,keys}
     touch $PKG/etc/ssl/certs/cups.crt
