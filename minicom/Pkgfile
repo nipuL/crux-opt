@@ -5,14 +5,12 @@
 # Depends on:
 
 name=minicom
-version=2.1
-release=2
-source=(http://alioth.debian.org/download.php/123/minicom-$version.tar.gz \
-	$name-$version-gcc4.patch)
+version=2.2
+release=1
+source=(http://alioth.debian.org/download.php/1806/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 < ../$name-$version-gcc4.patch
 	./configure --prefix=/usr --disable-nls
 	make
 	make DESTDIR=$PKG install
