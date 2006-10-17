@@ -1,7 +1,7 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/udev/
 drwxr-xr-x	root/root	etc/udev/rules.d/
--rw-r--r--	root/root	etc/udev/rules.d/60-fuse.rules
+-rw-r--r--	root/root	etc/udev/rules.d/99-fuse.rules
 drwxr-xr-x	root/root	lib/
 drwxr-xr-x	root/root	lib/modules/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/
