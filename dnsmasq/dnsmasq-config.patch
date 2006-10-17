@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.32.orig/Makefile dnsmasq-2.32/Makefile
---- dnsmasq-2.32.orig/Makefile	2006-06-11 11:09:31.000000000 +0200
-+++ dnsmasq-2.32/Makefile	2006-06-11 11:09:42.000000000 +0200
+diff -Nru dnsmasq-2.34.orig/Makefile dnsmasq-2.34/Makefile
+--- dnsmasq-2.34.orig/Makefile	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/Makefile	2006-10-17 06:46:03.000000000 +0200
 @@ -1,6 +1,6 @@
  PREFIX?=/usr/local
  BINDIR = ${PREFIX}/sbin
@@ -9,9 +9,9 @@ diff -Nru dnsmasq-2.32.orig/Makefile dnsmasq-2.32/Makefile
  LOCALEDIR = ${PREFIX}/share/locale
  
  SRC = src
-diff -Nru dnsmasq-2.32.orig/dnsmasq.conf.example dnsmasq-2.32/dnsmasq.conf.example
---- dnsmasq-2.32.orig/dnsmasq.conf.example	2006-06-11 11:09:31.000000000 +0200
-+++ dnsmasq-2.32/dnsmasq.conf.example	2006-06-11 11:09:42.000000000 +0200
+diff -Nru dnsmasq-2.34.orig/dnsmasq.conf.example dnsmasq-2.34/dnsmasq.conf.example
+--- dnsmasq-2.34.orig/dnsmasq.conf.example	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/dnsmasq.conf.example	2006-10-17 06:46:03.000000000 +0200
 @@ -59,8 +59,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -32,10 +32,10 @@ diff -Nru dnsmasq-2.32.orig/dnsmasq.conf.example dnsmasq-2.32/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.32.orig/src/config.h dnsmasq-2.32/src/config.h
---- dnsmasq-2.32.orig/src/config.h	2006-06-11 11:09:31.000000000 +0200
-+++ dnsmasq-2.32/src/config.h	2006-06-11 11:09:42.000000000 +0200
-@@ -37,7 +37,7 @@
+diff -Nru dnsmasq-2.34.orig/src/config.h dnsmasq-2.34/src/config.h
+--- dnsmasq-2.34.orig/src/config.h	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/src/config.h	2006-10-17 06:46:03.000000000 +0200
+@@ -36,7 +36,7 @@
  #if defined(__FreeBSD__) || defined (__OpenBSD__)
  #   define LEASEFILE "/var/db/dnsmasq.leases"
  #else
@@ -44,7 +44,7 @@ diff -Nru dnsmasq-2.32.orig/src/config.h dnsmasq-2.32/src/config.h
  #endif
  #if defined(__FreeBSD__)
  #   define CONFFILE "/usr/local/etc/dnsmasq.conf"
-@@ -46,7 +46,7 @@
+@@ -45,7 +45,7 @@
  #endif
  #define DEFLEASE 3600 /* default lease time, 1 hour */
  #define CHUSER "nobody"
