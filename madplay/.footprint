@@ -1,8 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/abxtest
--rwxr-xr-x	root/root	usr/bin/madplay
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/abxtest.1.gz
--rw-r--r--	root/root	usr/man/man1/madplay.1.gz
