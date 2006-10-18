@@ -1,6 +1,6 @@
 # Description: Network-related programs and modules for KDE
 # URL: http://www.kde.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: ppp, openldap, kdebase, wireless-tools
 
