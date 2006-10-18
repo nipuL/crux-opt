@@ -1,6 +1,6 @@
 # Description: GNU Portable Threads library
 # URL: ftp://ftp.gnu.org/gnu/pth
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=libpth
