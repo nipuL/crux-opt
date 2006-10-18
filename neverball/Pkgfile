@@ -1,6 +1,6 @@
 # Description: Tilt the floor to roll a ball through an obstacle course before time runs out.
 # URL: http://icculus.org/neverball/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: sdl_mixer, sdl_image, sdl_ttf
 
 name=neverball
