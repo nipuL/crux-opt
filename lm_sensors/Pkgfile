@@ -1,6 +1,6 @@
 # Description: Tools for monitoring system health (temperatures, voltages, fan speed, etc)
 # URL: http://www2.lm-sensors.nu/~lm78
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 
 name=lm_sensors
