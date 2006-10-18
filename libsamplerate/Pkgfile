@@ -1,6 +1,6 @@
 # Description: A sample rate converter for audio.
 # URL: http://www.mega-nerd.com/SRC/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 
 name=libsamplerate
 version=0.1.2
