@@ -1,6 +1,6 @@
 # Description: An SDL/OpenGL space shoot'em up game.
 # URL: http://criticalmass.sourceforge.net/critter.php
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au 
+# Maintainer:
 # Depends on: sdl_image, sdl_mixer, zlib
 
 name=criticalmass
