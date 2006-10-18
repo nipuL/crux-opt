@@ -1,6 +1,6 @@
 # Description: provides support for IETF Internationalized Domain Names (IDN)
 # URL: http://www.gnu.org/software/libidn/
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=libidn
