@@ -1,6 +1,6 @@
 # Description: Turn on / off X11 numlock from .xinitrc or .xsession
 # URL: http://ktown.kde.org/~seli/numlockx
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: x11
 
