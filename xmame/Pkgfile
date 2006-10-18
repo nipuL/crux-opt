@@ -1,6 +1,6 @@
 # Description: X implementation of the Multiple Arcade Machine Emulator.
 # URL: http://x.mame.net/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Packager: sten, nick dot steeves at shaw dot ca
 # Depends on: libsdl
 
