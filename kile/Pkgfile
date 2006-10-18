@@ -1,6 +1,6 @@
 # Description: an integrated LaTeX environment for the KDE desktop (LaTeX source editor, TeX shell, and GnuPlot frontend)
 # URL: http://kile.sourceforge.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: tetex, kdegraphics, gv, acroread, gnuplot, xfig
 
