@@ -1,7 +1,7 @@
 # Description: a very polished Tetris clone which is highly configurable
 # URL: http://lgames.sourceforge.net
 # Packager: 
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Depends on: libpng, libsdl, sdl_mixer
 
 name=ltris
