@@ -1,6 +1,6 @@
 # Description: MIDI utilities for the AWE32/64, and Live! soundcards
 # URL: http://www.alsa-project.org/~iwai/awedrv.html
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: alsa-lib
 
