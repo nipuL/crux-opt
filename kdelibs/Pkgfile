@@ -1,6 +1,6 @@
 # Description: Base set of libraries needed by KDE programs
 # URL: http://www.kde.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: sudo, perl, db, libidn, imlib, hicolor-icon-theme, freeglut, libart_lgpl, qt3, audiofile, libxml2, libxslt, libpcre, openssl, aspell, gnupg, gpgme, gamin, cups, openldap, arts
 
