@@ -1,6 +1,6 @@
 # Description: OpenGL billard game for linux.
 # URL: http://foobillard.sunsite.dk/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: libpng, libsdl, freetype
 
 name=foobillard
