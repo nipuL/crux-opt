@@ -1,6 +1,6 @@
 # Description: Libassuan is the IPC library used by some GnuPG related software
 # URL: http://www.gnupg.org/(en)/related_software/libassuan/index.html
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 
 name=libassuan
