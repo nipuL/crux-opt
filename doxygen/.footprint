@@ -1,9 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/doxygen
--rwxr-xr-x	root/root	usr/bin/doxytag
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/doxygen.1.gz
--rw-r--r--	root/root	usr/man/man1/doxytag.1.gz
--rw-r--r--	root/root	usr/man/man1/doxywizard.1.gz
