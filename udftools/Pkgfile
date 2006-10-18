@@ -1,6 +1,6 @@
 # Description: Tools for managing UDF filesystems
 # URL: http://linux-udf.sourceforge.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 
 name=udftools
