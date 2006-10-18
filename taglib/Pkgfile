@@ -1,6 +1,6 @@
 # Description: a library for reading and editing the meta-data of several popular audio formats.
 # URL: http://ktown.kde.org/~wheeler/taglib.html
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 
 name=taglib
