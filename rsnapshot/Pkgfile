@@ -1,6 +1,6 @@
 # Description: a filesystem snapshot utility based on rsync
 # URL: http://www.rsnapshot.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: perl
 
