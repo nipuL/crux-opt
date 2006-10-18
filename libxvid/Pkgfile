@@ -1,6 +1,6 @@
 # Description: XviD is an ISO MPEG-4 compliant video codec.
 # URL: http://www.xvid.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 
 name=libxvid
