@@ -1,6 +1,6 @@
 # Description: a library which elegantly, and robustly handles Microsoft Word files
 # URL: http://wvware.sourceforge.net/
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: libgsf, imagemagick
 
