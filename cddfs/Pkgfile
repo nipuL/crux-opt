@@ -1,6 +1,6 @@
 # Description: Mount audio CDs as filesystems with WAV files
 # URL: http://castet.matthieu.free.fr/cddfs/
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: cdparanoia, fuse
 
