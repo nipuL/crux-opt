@@ -1,6 +1,6 @@
 # Description: Libksba provides an easy API to create and parse X.509 and CMS related objects
 # URL: http://www.gnupg.org/(en)/related_software/libksba/index.html
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: libgpg-error
 
