@@ -1,6 +1,6 @@
 # Description: Secret key management for GnuPG 
 # URL: http://www.gnupg.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: libgpg-error, libassuan, libgcrypt, libpth, libksba
 
