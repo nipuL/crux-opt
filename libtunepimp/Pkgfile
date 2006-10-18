@@ -1,6 +1,6 @@
 # Description: the musicbrainz client library, and simple tagger
 # URL: http://www.musicbrainz.org/products/tunepimp/download.html
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: libvorbis, flac, libmad, libogg, expat, libmusicbrainz, libid3tag
 
