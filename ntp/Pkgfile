@@ -1,6 +1,6 @@
 # Description: Network Time Protocol software
 # URL: http://ntp.isc.org/bin/view/Main/DocumentationIndex
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: openssl
 
