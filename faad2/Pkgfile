@@ -1,6 +1,6 @@
 # Description: ISO AAC audio decoder
 # URL: http://www.audiocoding.com
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: libsndfile, id3lib
 
