@@ -1,6 +1,6 @@
 # Description: DVD Navigation library needed by the xine-dvdnav plugin
 # URL: http://dvd.sourceforge.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Younès Hafri <ycrux@club-internet.fr>
 # Depends on: libdvdcss, libdvdread
 
