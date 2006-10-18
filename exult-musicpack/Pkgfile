@@ -1,6 +1,6 @@
 # Description: OGG encoded music files for the Exult engine.
 # URL: http://exult.sourceforge.net/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: exult
 
 name=exult-musicpack
