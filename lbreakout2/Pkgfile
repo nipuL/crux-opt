@@ -1,6 +1,6 @@
 # Description: A popular Breakout clone for SDL.
 # URL: http://lgames.sourceforge.net/index.php?project=LBreakout2
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: libpng, sdl_mixer, sdl_net
 
 name=lbreakout2
