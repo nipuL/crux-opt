@@ -1,6 +1,6 @@
 # Description: Advanced Configuration and Power Interface event management daemon
 # URL: http://acpid.sf.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 
 name=acpid
