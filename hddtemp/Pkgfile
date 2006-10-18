@@ -1,6 +1,6 @@
 # Description: reads your hdd temperature using S.M.A.R.T values
 # URL: http://www.guzu.net/linux/hddtemp.php
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: gettext
 
