@@ -1,6 +1,6 @@
 # Description: a QT SIP user agent (VOIP)
 # URL: http://www.wirlab.net/kphone
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: qt3, openssl
 
