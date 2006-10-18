@@ -1,6 +1,6 @@
 # Description: aRts Sound system
 # URL: http://www.kde.org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: glib, qt3, libvorbis, libogg, esound, audiofile, alsa-utils, alsa-oss
 
