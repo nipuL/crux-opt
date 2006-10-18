@@ -5,7 +5,7 @@
 # Depends on:
 
 name=txt2man
-version=1.4.8
+version=1.5
 release=1
 source=(http://mvertes.free.fr/$name/$name \
 	http://mvertes.free.fr/$name/$name.man)
