@@ -1,6 +1,6 @@
 # Description: a Mplayer & Xine frontend for KDE; it has a kpart for konqueror integration
 # URL: http://kmplayer.kde.org/
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: kdelibs, mplayer
 
