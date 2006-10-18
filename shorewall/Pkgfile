@@ -1,6 +1,6 @@
 # Description: a high-level tool for configuring Netfilter via simple textfiles
 # URL: http://www.shorewall.net
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 # Depends on: iptables, iproute2
 
