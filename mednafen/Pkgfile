@@ -1,6 +1,6 @@
 # Description: A portable emulator for Atari Lynx, GameBoy, GameBoy Color, GameBoy Advance, NES, PC Engine(TurboGrafx 16), and SuperGrafx.
 # URL: http://mednafen.fobby.net/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: libsdl, libsamplerate, libcdio
 
 name=mednafen
