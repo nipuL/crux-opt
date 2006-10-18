@@ -1,6 +1,6 @@
 # Description: Fast, lightweight, distributed Source Control Management system
 # URL:         http://www.selenic.com/mercurial/
-# Maintainer:  Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:  python
 
