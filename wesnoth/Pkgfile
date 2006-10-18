@@ -1,6 +1,6 @@
 # Description: A turn-based strategy game with a fantasy theme.
 # URL: http://www.wesnoth.org/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au 
+# Maintainer:
 # Depends on: sdl_image, sdl_mixer, sdl_net, sdl_ttf
 
 name=wesnoth
