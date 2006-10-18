@@ -1,6 +1,6 @@
 # Description: A library of simple functions that are optimized for various CPUs.
 # URL: http://liboil.freedesktop.org/wiki/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 
 name=liboil
 version=0.3.9
