@@ -1,6 +1,6 @@
 # Description: a free implementation of the Unicode Bidirectional (BiDi) Algorithm
 # URL: http://fribidi.sourceforge.net/
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: 
 
 name=fribidi
