@@ -1,6 +1,6 @@
 # Description: Full-featured SSL VPN solution
 # URL: http://openvpn.sourceforge.net/
-# Maintainer: Jukka Heino, jukka dot heino at gmail dot com
+# Maintainer:
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: lzo, openssl
 
