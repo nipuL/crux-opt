@@ -1,6 +1,6 @@
 # Description: controls magnetic tape drive operation (SCSI & QIC-02)
 # URL: ftp://ftp.ibiblio.org/pub/linux/system/backup/
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 # Packager: Martin Opel, mo at obbl-net dot de
 
 name=mt-st
