@@ -1,6 +1,6 @@
 # Description: A fast, 3D multiplayer tank battle game.
 # URL: http://bzflag.org/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 
 name=bzflag
 version=2.0.8
