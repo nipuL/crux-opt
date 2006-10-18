@@ -1,7 +1,0 @@
-POST-INSTALL
-
-
-Copy /usr/etc/rsnapshot.conf.default to /usr/etc/rsnapshot.conf, and configure.
-
-For help with configuration, please see the HOWTO at:
-http://www.rsnapshot.org/howto
