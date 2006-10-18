@@ -1,7 +1,7 @@
 # Description: Lynx, a text WWW browser
 # URL: http://lynx.browser.org
 # Packager: Jussi Mäki, valen at ihanaa dot org
-# Maintainer: sten, nick dot steeves at shaw dot ca
+# Maintainer:
 
 name=lynx
 version=2.8.5
