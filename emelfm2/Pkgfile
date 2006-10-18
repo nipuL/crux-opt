@@ -1,6 +1,6 @@
 # Description: A lightweight gtk file manager that implements the two-pane design.
 # URL: http://www.emelfm2.net/
-# Maintainer: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer:
 # Depends on: gtk
 
 name=emelfm2
