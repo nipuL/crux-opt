@@ -1,11 +1,11 @@
 # Description: Directory content manager
 # URL: http://www.kernel.org/pub/software/scm/git/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: curl, rcs, perl, python
+# Depends on: curl, rcs, perl
 # Nice to have: tk
 
 name=git
-version=1.4.2.4
+version=1.4.3
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
@@ -20,4 +20,7 @@ build() {
 		install -d $PKG/usr/man/$i
 		install -m 644 $i/* $PKG/usr/man/$i;
 	done
+
+	find $PKG -name perllocal.pod -delete
+	find $PKG -name .packlist -delete
 }
