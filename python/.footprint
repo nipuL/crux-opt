@@ -8,6 +8,7 @@ lrwxrwxrwx	root/root	usr/bin/python -> python2.4
 drwxr-xr-x	root/root	usr/include/
 lrwxrwxrwx	root/root	usr/include/python -> python2.4
 drwxr-xr-x	root/root	usr/include/python2.4/
+-rw-r--r--	root/root	usr/include/python2.4/Python-ast.h (EMPTY)
 -rw-r--r--	root/root	usr/include/python2.4/Python.h
 -rw-r--r--	root/root	usr/include/python2.4/abstract.h
 -rw-r--r--	root/root	usr/include/python2.4/bitset.h
@@ -1723,6 +1724,7 @@ drwxr-xr-x	root/root	usr/lib/python2.4/test/output/
 -rw-r--r--	root/root	usr/lib/python2.4/test/seq_tests.py
 -rw-r--r--	root/root	usr/lib/python2.4/test/seq_tests.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/test/seq_tests.pyo
+-rw-r--r--	root/root	usr/lib/python2.4/test/sgml_input.html
 -rw-r--r--	root/root	usr/lib/python2.4/test/sortperf.py
 -rw-r--r--	root/root	usr/lib/python2.4/test/sortperf.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/test/sortperf.pyo
@@ -2632,6 +2634,9 @@ drwxr-xr-x	root/root	usr/lib/python2.4/test/output/
 -rw-r--r--	root/root	usr/lib/python2.4/test/tf_inherit_check.py
 -rw-r--r--	root/root	usr/lib/python2.4/test/tf_inherit_check.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/test/tf_inherit_check.pyo
+-rw-r--r--	root/root	usr/lib/python2.4/test/threaded_import_hangers.py
+-rw-r--r--	root/root	usr/lib/python2.4/test/threaded_import_hangers.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/test/threaded_import_hangers.pyo
 -rw-r--r--	root/root	usr/lib/python2.4/test/tokenize_tests.txt
 -rw-r--r--	root/root	usr/lib/python2.4/test/xmltests.py
 -rw-r--r--	root/root	usr/lib/python2.4/test/xmltests.pyc
