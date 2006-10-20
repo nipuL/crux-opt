@@ -4,7 +4,7 @@
 # Depends on: t1lib, gtk, cairo, freetype, fontconfig, ghostscript, pkg-config
 
 name=poppler
-version=0.5.3
+version=0.5.4
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
