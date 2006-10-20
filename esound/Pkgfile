@@ -1,0 +1,18 @@
+# Description: The Enlightened Sound Daemon
+# URL: http://www.tux.org/~ricdude/EsounD.html
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: audiofile
+
+name=esound
+version=0.2.36
+release=1
+source=(http://download.gnome.org/sources/$name/0.2/$name-$version.tar.gz \
+	$name)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr --with-audiofile
+	make
+	make DESTDIR=$PKG install
+	install -D -m 755 $SRC/$name $PKG/etc/rc.d/$name
+}
