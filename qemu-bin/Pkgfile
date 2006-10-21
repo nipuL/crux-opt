@@ -1,0 +1,18 @@
+# Description: Fast CPU emulator and virtualizer
+# URL: http://fabrice.bellard.free.fr/qemu/
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: libsdl
+# Nice to have: kqemu
+
+name=qemu-bin
+version=0.8.2
+release=1
+source=(http://fabrice.bellard.free.fr/qemu/qemu-$version-i386.tar.gz)
+
+build() {
+	cp -r $SRC/* $PKG
+	mv $PKG/usr/local/share/man $PKG/usr/man
+	mv $PKG/usr/local/bin $PKG/usr/bin
+	rm -rf $PKG/usr/local/share/doc
+}

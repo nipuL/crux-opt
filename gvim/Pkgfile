@@ -1,0 +1,28 @@
+# Description: GTK version of the vim editor
+# URL:         http://www.vim.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  vim, gtk
+
+name=gvim
+version=7.0
+release=3
+source=(ftp://ftp.vim.org/pub/vim/unix/vim-$version.tar.bz2 \
+        http://jue.li/crux/files/vim-7.0.001-109.tar.gz)
+
+build () {
+    cd vim70
+    for p in $SRC/vim-7.0.001-109/*; do
+       patch -p0 -i $p
+    done
+
+    cd src
+    ./configure --prefix=/usr \
+                --with-vim-name=gvim \
+                --with-x=yes \
+                --enable-gui=gtk2 \
+                --enable-multibyte \
+                --disable-gpm \
+                --disable-nls
+    make VIMRTDIR=
+    make VIMRTDIR= DESTDIR=$PKG installvimbin
+}

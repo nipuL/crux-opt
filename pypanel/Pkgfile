@@ -1,0 +1,15 @@
+# Description: A lightweight panel/taskbar for X11
+# URL:         http://pypanel.sourceforge.net
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer: Johannes Winkelmann, jw at tks6 dot net
+# Depends on:  python-xlib
+
+name=pypanel
+version=2.4
+release=1
+source=(http://dl.sourceforge.net/sourceforge/pypanel/PyPanel-$version.tar.gz)
+
+build() {
+    cd PyPanel-$version
+    python setup.py install --root=$PKG --prefix=/usr
+}

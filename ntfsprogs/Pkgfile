@@ -1,0 +1,17 @@
+# Description: Uses FUSE to mount NTFS filesystem with write support; contains misc ntfs-related utilities
+# URL: http://www.linux-ntfs.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: fuse
+
+name=ntfsprogs
+version=1.13.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/linux-ntfs/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--enable-fuse-module
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# /etc/rc.d/ypbind: start/stop NIS client services
+#
+
+. /etc/rc.conf
+
+case $1 in
+start)
+	test "$YPDOMAIN" || {
+		echo "YPDOMAIN not defined in /etc/rc.conf"
+		exit 1
+	}
+	
+	/bin/domainname $YPDOMAIN
+	/usr/sbin/ypbind $YPBIND
+	;;
+stop)
+	killall -q /usr/sbin/ypbind
+	;;
+restart)
+	$0 stop
+	$0 start
+	;;
+*)
+	echo "Usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

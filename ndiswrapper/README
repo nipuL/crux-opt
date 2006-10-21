@@ -1,0 +1,25 @@
+README for ndiswrapper
+
+REQUIREMENTS
+Kernel with Wireless LAN support
+
+PRE-INSTALL
+
+POST-INSTALL
+1. Run 'depmod -a' to register the new kernel driver
+2. Download the Windows XP driver, upack it and locate the .inf
+   file for your card. Run ndiswrapper to install the driver
+
+     ndiswrapper -i <path/to/inffile.inf>
+
+3. Edit /etc/rc.d/wlan and add ip-addresses, ESSID etc.
+
+
+PRECAUTION
+1. If you upgrade from ndiswrapper 0.12 re-install the windows 
+   driver with the above command. This is necessary because of
+   changes in the configuration file format.  
+2. To prevent overwriting your seetings add the following line
+   to /etc/pkgadd.conf
+
+     UPGRADE   ^etc/rc\.d/wlan$   NO

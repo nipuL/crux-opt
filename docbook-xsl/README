@@ -1,0 +1,4 @@
+POST-INSTALL:
+
+    * Update catalog information.  See the post-install script.
+      This may modify configuration files not owned by this package.

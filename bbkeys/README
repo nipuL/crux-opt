@@ -1,0 +1,4 @@
+Some notes on the new bbkeys for blackbox 0.70:
+- the config format has changes, have a look at
+  /usr/share/bbkeys/bbkeysrc to see the new syntax
+- there's no icon anymore

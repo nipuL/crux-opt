@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/tomcat: start/stop jakarta tomcat servlet container
+#
+
+case "$1" in
+    start)
+        su - tomcat -c /usr/lib/tomcat/bin/startup.sh
+        ;;
+    stop)
+        su - tomcat -c /usr/lib/tomcat/bin/shutdown.sh
+        ;;
+    restart)
+        su - tomcat -c /usr/lib/tomcat/bin/shutdown.sh
+	sleep 4
+        su - tomcat -c /usr/lib/tomcat/bin/startup.sh
+        ;;
+    *)
+        echo "usage: $0 start|stop|restart"
+        ;;
+esac
+
+# End of file

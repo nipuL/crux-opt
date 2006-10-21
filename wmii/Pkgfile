@@ -1,0 +1,19 @@
+# Description: The next generation of WMI
+# URL: http://wmii.de/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+
+name=wmii
+version=3.1
+release=1
+source=(http://wmii.de/download/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    sed -i 's|^PREFIX.*|PREFIX=/usr|' config.mk
+    sed -i 's|^MANPREFIX.*|MANPREFIX=/usr/man|' config.mk
+
+    make DESTDIR=$PKG clean install
+
+    chmod 644 $PKG/usr/man/man?/*
+}

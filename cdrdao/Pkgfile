@@ -1,0 +1,18 @@
+# Description: CD recording in DAO mode, for example VCDs  
+# URL: http://cdrdao.sourceforge.net
+# Packager: Michael Ablassmeier, michael.ablassmeier at holzkirchen dot by dot aok dot de 
+# Maintainer: Simone Rota, sip at crux dot nu
+# Depends on: 
+
+name=cdrdao
+version=1.2.2
+release=1
+source=(http://dl.sourceforge.net/sourceforge/cdrdao/cdrdao-$version.tar.bz2)
+
+build() {
+ 	cd $name-$version
+	./configure --prefix=/usr --without-lame
+	make
+	mkdir -p $PKG/usr
+	make prefix=$PKG/usr install
+}

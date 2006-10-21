@@ -1,0 +1,12 @@
+#!/bin/sh
+
+gr=`grep tomcat /etc/group`
+if [ "$gr" = "" ]; then
+  groupadd tomcat
+fi
+
+us=`grep tomcat /etc/passwd`
+if [ "$us" = "" ]; then
+  useradd -s /bin/bash -g tomcat tomcat
+  passwd -l tomcat
+fi

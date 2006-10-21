@@ -1,0 +1,8 @@
+drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/rarfiles.lst
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/rar
+-rwxr-xr-x	root/root	usr/bin/unrar
+drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/default.sfx

@@ -1,0 +1,21 @@
+# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
+# Description: NIS Yellow Pages Server
+# URL: http://www.linux-nis.org/nis/ypserv
+# Depends on:
+
+name=ypserv
+version=2.19
+release=1
+source=(ftp://ftp.kernel.org/pub/linux/utils/net/NIS/$name-$version.tar.bz2 ypserv ypserv.conf securenets)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --mandir=/usr/man
+	make && make DESTDIR=$PKG install
+
+	install -d $PKG/etc/rc.d/
+	install -m 755 ../ypserv $PKG/etc/rc.d/
+	install -m 644 ../securenets $PKG/var/yp/
+	install -m 644 ../ypserv.conf $PKG/etc/
+}
+

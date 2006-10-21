@@ -1,0 +1,20 @@
+# Description: The GIMP
+# URL: http://www.gimp.org/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: freetype, x11, gtk, gimp-print, libart_lgpl, p5-xml-parser
+
+name=gimp
+version=2.2.13
+release=2
+source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2)
+
+build() {
+	cd gimp-$version
+	sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
+	./configure --prefix=/usr \
+		--mandir=/usr/man \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/{gtk-doc,locale}
+}

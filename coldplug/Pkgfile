@@ -1,0 +1,13 @@
+# Description: Coldplugging script for boot-time hotplug functionality
+# URL: http://linux-hotplug.sourceforge.net/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: hotplug
+
+name=coldplug
+version=2004_09_23
+release=1
+source=($name.rc)
+
+build() {
+	install -D -m 0755 $SRC/$name.rc $PKG/etc/rc.d/$name
+}

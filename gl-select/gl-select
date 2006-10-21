@@ -1,0 +1,112 @@
+#!/bin/bash
+#
+# gl-select: select active gl/glx libraries/extensions
+#
+# Matt Housh <jaeger@morpheus.net>
+#
+
+usage() {
+	echo "Usage: $0 [x11|nvidia]"
+	exit
+}
+
+# if other than a single argument is passed, spit out some help
+if [ $# -ne 1 ]
+then
+	usage
+	exit 1
+fi
+
+# check for the x11 port; if it's not installed, why is this script even run?
+if [ -z "`pkginfo -i | awk '{ print $1 }' | grep ^x11$`" ]
+then
+	echo "x11 isn't installed!"
+	exit 1
+fi
+
+# perform the selection for the following supported gl/glx setups
+case "$1" in
+	"x11")
+		echo "* x11 gl/glx selected"
+
+		# check for the existence of libglx_so, libGL_so_1_2 and friends
+		# if none, nothing is necessary or the backups have been erased
+		BACKUPS="/usr/X11R6/lib/modules/extensions/libglx_so \
+			/usr/X11R6/lib/modules/extensions/libGLcore_so \
+			/usr/X11R6/lib/libGL_so_1_2 \
+			/usr/X11R6/lib/libGL_a"
+		for F in $BACKUPS
+		do
+			if [ ! -e $F ]
+			then
+				echo "One or more of the non-x11 gl/glx backup files are missing. This means"
+				echo "either you're not using a non-x11 gl/glx setup, in which case nothing"
+				echo "needs to be changed, OR your x11 backups are missing, which can be"
+				echo "solved by reinstalling the x11 package from the CRUX CD or ports."
+				exit 1
+			fi
+		done
+		# move the x11 backups back into place
+		echo -n "libglx "
+		rm -f /usr/X11R6/lib/modules/extensions/libglx.so
+		mv /usr/X11R6/lib/modules/extensions/libglx{_so,.so}
+		echo -n "libGLcore "
+		rm -f /usr/X11R6/lib/modules/extensions/libGLcore.so
+		mv /usr/X11R6/lib/modules/extensions/libGLcore{_so,.so}
+		echo -n "libGL "
+		mv /usr/X11R6/lib/libGL{_so_1_2,.so.1.2}
+		mv /usr/X11R6/lib/libGL{_a,.a}
+		;;
+	"nvidia")
+		echo "* nvidia gl/glx selected"
+
+		# is the nvidia port installed?
+		if [ -z "`pkginfo -i | awk '{ print $1 }' | grep ^nvidia$`" ]
+		then
+			echo "nvidia port isn't installed!"
+			exit 1
+		fi
+
+		# get the .so version number
+		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | cut -d- -f2`"
+
+		# check for the existence of libglx_so and libGL_so_1_2
+		# if none, move the x11 stuff out of the way for nvidia's
+		if [ ! -e /usr/X11R6/lib/modules/extensions/libglx_so -a ! -e \
+			/usr/X11R6/lib/libGL_so_1_2 ]
+		then
+			echo -n "libglx "
+			mv /usr/X11R6/lib/modules/extensions/libglx{.so,_so}
+			ln -s libglx.so.1.0.$NV_VER \
+				/usr/X11R6/lib/modules/extensions/libglx.so
+			echo -n "libGLcore "
+			mv /usr/X11R6/lib/modules/extensions/libGLcore{.so,_so}
+			ln -s /usr/lib/libGLcore.so.1.0.$NV_VER \
+				/usr/X11R6/lib/modules/extensions/libGLcore.so
+			echo -n "libGL "
+			mv /usr/X11R6/lib/libGL{.so.1.2,_so_1_2}
+			mv /usr/X11R6/lib/libGL{.a,_a}
+			rm /usr/X11R6/lib/libGL.so*
+			# nvidia's library versioning prevents ldconfig from creating
+			# libGL.so and libGLcore.so
+			[ ! -L /usr/lib/libGL.so ] && \
+				ln -sf libGL.so.1.0.$NV_VER /usr/lib/libGL.so
+			[ ! -L /usr/lib/libGLcore.so ] && \
+				ln -sf libGLcore.so.1.0.$NV_VER /usr/lib/libGLcore.so
+		else
+			echo "You appear to already be using a non-x11 gl/glx setup. If the"
+			echo "one selected isn't the correct one, revert to x11 and then select"
+			echo "the correct new setup using 'gl-select x11; gl-select <new gl/glx>'."
+			exit 1
+		fi
+		;;
+	*)
+		usage
+		;;
+esac
+
+/sbin/ldconfig > /dev/null 2>&1
+
+echo "done."
+
+# End of file

@@ -1,0 +1,22 @@
+# Description: LaTeX enabled word processor 
+# URL: http://www.lyx.org
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: tetex, qt3, imagemagick
+
+name=lyx
+version=1.4.2
+release=1
+source=(ftp://ftp.lyx.org/pub/$name/stable/$name-$version.tar.bz2)
+
+build(){
+  cd $name-$version
+  export QTDIR=/usr/share/qt
+  ./configure --prefix=/usr --with-frontend=qt --disable-nls
+  make
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/info
+  rm -rf $PKG/usr/share/lyx/examples
+}
+  

@@ -1,0 +1,22 @@
+# Description: A sophisticated Object-Relational DBMS
+# URL: http://www.postgresql.org
+# Packager: Markus Heinz, su1690 at studserver.uni-dortmund dot de
+# Maintainer: Simone Rota, sip at crux dot nu
+# Depends on:
+
+name=postgresql
+version=8.1.5
+release=1
+source=(ftp://ftp2.de.postgresql.org/pub/postgresql/v$version/$name-$version.tar.bz2 postgresql)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/doc
+
+	mkdir -p $PKG/etc/rc.d/
+	install -D -m 755 ../postgresql $PKG/etc/rc.d/postgresql
+}

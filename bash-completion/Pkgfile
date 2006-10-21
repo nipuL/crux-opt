@@ -1,0 +1,15 @@
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# URL:         http://www.caliban.org/bash/index.shtml#completion
+# Description: Bash completion functions
+
+name=bash-completion
+version=20060301
+release=1
+source=(http://www.caliban.org/files/bash/$name-$version.tar.gz init_bc)
+
+build() {
+    mkdir -p $PKG/usr/share/bash-completion
+    cp bash_completion/bash_completion $PKG/usr/share/bash-completion
+    install -m 0755 init_bc $PKG/usr/share/bash-completion
+    install -d -m 0755 $PKG/usr/lib/bash-completion
+}

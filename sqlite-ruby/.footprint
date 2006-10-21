@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/ruby/
+drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/
+drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/
+drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/
+-rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/sqlite_api.so
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite.rb
+drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/database.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/parsed_statement.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/pragmas.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/resultset.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/statement.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/translator.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/sqlite/version.rb

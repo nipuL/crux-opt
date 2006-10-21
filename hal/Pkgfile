@@ -1,0 +1,34 @@
+# Description: Hardware Abstraction Layer
+# URL: http://freedesktop.org/wiki/Software_2fhal
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: dbus, dbus-glib
+
+name=hal
+version=0.5.7.1
+release=3
+source=(http://freedesktop.org/~david/dist/$name-$version.tar.gz \
+	rc.hald $name-$version-dbus-close.patch)
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-dbus-close.patch
+	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
+		-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
+	./configure --prefix=/usr \
+		--libexecdir=/usr/lib/$name \
+		--localstatedir=/var \
+		--with-hal-user=haldaemon \
+		--with-hal-group=haldaemon \
+		--with-dbus-sys=/usr/etc/dbus-1/system.d \
+		--with-hwdata=/usr/share
+	sed -i -e '/device-manager/d' tools/Makefile
+	make
+	make DESTDIR=$PKG install
+	install -D -o root -g root -m 0755 $SRC/rc.hald \
+		$PKG/etc/rc.d/hald
+	rm -rf $PKG/usr/share/{doc,locale}
+	install -D -m 0644 -o root -g root tools/linux/90-hal.rules \
+		$PKG/etc/udev/rules.d/90-hal.rules
+	sed -i -e '36,43d' -e 's/user="0"/group="plugdev"/' \
+		$PKG/usr/etc/dbus-1/system.d/hal.conf
+}

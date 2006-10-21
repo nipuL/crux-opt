@@ -1,0 +1,19 @@
+# Packager:     Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:   Johannes Winkelmann, jw at tks6 dot net
+# Description:  an interactive process viewer
+# URL:          http://htop.sourceforge.net/
+# Depends:      ncurses
+
+name=htop
+version=0.6.4
+release=1
+source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+   
+    rm -rf $PKG/usr/share/{applications,pixmaps,}
+}

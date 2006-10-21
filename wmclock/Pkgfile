@@ -1,0 +1,19 @@
+# Description: A Window Maker applet which displays date and time
+# URL: http://www.jmknoble.net/WindowMaker/wmclock/
+# Packager: Per Lidén, core-ports at crux dot nu
+# Maintainer: Simone Rota, sip at crux dot nu
+# Depends on:
+
+name=wmclock
+version=1.0.12.2
+release=1
+source=(http://www.dockapps.org/download.php/id/328/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --lang english
+	make
+	make DESTDIR=$PKG install install.man
+	mv $PKG/usr/X11R6/bin $PKG/usr/X11R6/man $PKG/usr
+	rm -rf $PKG/usr/X11R6
+}

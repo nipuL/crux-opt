@@ -1,0 +1,23 @@
+# Packager: Eduardo Lopes, eduol at gmx dot net
+# Maintainer: Simone Rota, sip at crux dot nu 
+# Description: A GUI text editor for programmers 
+# URL: http://nedit.org/
+# Depends on: lesstif
+
+name=nedit
+version=5.5
+release=1
+source=(ftp://nl.nedit.org/pub/NEdit/v5_5/$name-$version-src.tar.bz2)
+
+build () {
+    cd $name-$version
+    sed -i "s|-O|$CFLAGS|" makefiles/Makefile.linux
+    sed -i 's/^CFLAGS=.*/& -DBUILD_UNTESTED_NEDIT/' makefiles/Makefile.linux
+    sed -i "/^LIBS=/s|-Wl,|-Wl,-L/usr/lib |" makefiles/Makefile.linux
+    echo "" | make linux
+    mkdir -p $PKG/usr/bin/
+    mkdir -p $PKG/usr/man/man1
+    cp source/nc source/nedit $PKG/usr/bin
+    cp doc/nc.man $PKG/usr/man/man1/nc.1
+    cp doc/nedit.man $PKG/usr/man/man1/nedit.1
+}

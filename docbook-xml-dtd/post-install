@@ -1,0 +1,26 @@
+#!/bin/bash
+
+version="4.4"
+
+DTD_CAT=/etc/xml/dtd/docbook/$version/catalog
+DTD_URLS="http://www.docbook.org/xml/$version
+          http://www.oasis-open.org/docbook/xml/$version"
+MASTER_CAT=/etc/xml/catalog
+
+for url in $DTD_URLS; do
+	xmlcatalog --noout --add "delegateSystem" \
+	  "$url" "file://$DTD_CAT" $MASTER_CAT
+done
+
+DTD_IDENT=("-//OASIS//DTD DocBook XML V$version//EN"
+           "-//OASIS//DTD DocBook CALS Table Model V$version//EN"
+           "-//OASIS//DTD XML Exchange Table Model 19990315//EN")
+
+i=0
+while test $i -lt 3; do
+	xmlcatalog --noout --add "delegatePublic" \
+	  "${DTD_IDENT[$i]}" "file://$DTD_CAT" $MASTER_CAT
+	i=$(($i + 1))
+done
+
+# End of file

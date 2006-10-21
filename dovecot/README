@@ -1,0 +1,17 @@
+README for dovecot 1.0.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+   Create a user/group dovecot with a unused id < 99:
+   'groupadd -g 26 dovecot'
+   'useradd -g dovecot -u 26 -d /var/run/dovecot -s /bin/false dovecot'
+   'passwd -l dovecot'
+   
+POST-INSTALL
+
+PRECAUTION
+   The configuration file has had a lot of changes between 0.99 and 1.0, 
+   so it's better to just modify the included dovecot.conf file manually
+   than to update the existing one.
+   See http://wiki.dovecot.org/moin.cgi/UpgradingDovecot

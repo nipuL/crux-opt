@@ -1,0 +1,7 @@
+#
+# /etc/masqmail/masqmail.alias
+#
+
+postmaster:  root@localhost
+
+# End of file

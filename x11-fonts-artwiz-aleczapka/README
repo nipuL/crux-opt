@@ -1,0 +1,34 @@
+
+REQUIREMENTS
+	
+	x11
+
+PRE-INSTALL
+
+POST-INSTALL
+	
+	1. add the artwiz-aleczapka directory to your fontpath
+		in the xorg.conf file:
+
+	---snip---
+
+	..
+	Section "Files"
+	..
+		FontPath   "/usr/share/fonts/artwiz-aleczapka/"
+	EndSection
+	..
+
+	---snip---
+
+	2. create a font info database for the new fonts
+
+	# cd /usr/share/fonts/artwiz-aleczapka/
+	# mkfontdir
+	# fc-cache -f
+
+	3. restart X or rehash the font path like so:
+	
+	# xset fp rehash
+   
+PRECAUTION

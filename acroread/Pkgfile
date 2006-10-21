@@ -1,0 +1,29 @@
+# Description: Portable Document Format Viewer with Search
+# Packager: Markus Ackermann, maol at symlink dot ch
+# Maintainer: Simone Rota, sip at crux dot nu
+# URL: http://www.adobe.com/
+# Depends on: gtk, libstdc++-compat
+
+name=acroread
+version=7.0.8
+release=2
+source=(http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.8/enu/AdobeReader_enu-7.0.8-1.i386.tar.gz \
+	$name-expr.patch)
+PKGMK_NO_STRIP="yes"
+
+build() {
+	mkdir -p $PKG/usr/lib/Acrobat7 $PKG/usr/bin
+	cd $PKG/usr/lib/Acrobat7
+	tar -xf $SRC/AdobeReader/COMMON.TAR
+	tar -xf $SRC/AdobeReader/ILINXR.TAR
+	rm -rf Reader/{help,HowTo}
+	rm -r Browser/{HowTo,install_browser_plugin}
+	find . -name PPKLite.api -exec rm {} \;
+	
+	sed -i 's|REPLACE_ME|/usr/lib/Acrobat7/Reader|g' bin/acroread
+	ln -sf /usr/lib/Acrobat7/bin/acroread  $PKG/usr/bin/acroread
+	find . -type d | xargs chmod 755
+
+	cd $PKG/usr/lib/Acrobat7/bin
+	patch < $SRC/$name-expr.patch
+}

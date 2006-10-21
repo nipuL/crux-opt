@@ -1,0 +1,55 @@
+diff -Nru dnsmasq-2.34.orig/Makefile dnsmasq-2.34/Makefile
+--- dnsmasq-2.34.orig/Makefile	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/Makefile	2006-10-17 06:46:03.000000000 +0200
+@@ -1,6 +1,6 @@
+ PREFIX?=/usr/local
+ BINDIR = ${PREFIX}/sbin
+-MANDIR = ${PREFIX}/share/man
++MANDIR = ${PREFIX}/man
+ LOCALEDIR = ${PREFIX}/share/locale
+ 
+ SRC = src
+diff -Nru dnsmasq-2.34.orig/dnsmasq.conf.example dnsmasq-2.34/dnsmasq.conf.example
+--- dnsmasq-2.34.orig/dnsmasq.conf.example	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/dnsmasq.conf.example	2006-10-17 06:46:03.000000000 +0200
+@@ -59,8 +59,8 @@
+ 
+ # If you want dnsmasq to change uid and gid to something other
+ # than the default, edit the following lines.
+-#user=
+-#group=
++user=nobody
++group=nobody
+ 
+ # If you want dnsmasq to listen for DHCP and DNS requests only on
+ # specified interfaces (and the loopback) give the name of the
+@@ -273,7 +273,7 @@
+ # The DHCP server needs somewhere on disk to keep its lease database.
+ # This defaults to a sane location, but if you want to change it, use
+ # the line below.
+-#dhcp-leasefile=/var/lib/misc/dnsmasq.leases
++# dhcp-leasefile=/var/lib/dhcp/dnsmasq.leases
+ 
+ # Set the DHCP server to authoritative mode. In this mode it will barge in
+ # and take over the lease for any client which broadcasts on the network,
+diff -Nru dnsmasq-2.34.orig/src/config.h dnsmasq-2.34/src/config.h
+--- dnsmasq-2.34.orig/src/config.h	2006-10-17 06:45:53.000000000 +0200
++++ dnsmasq-2.34/src/config.h	2006-10-17 06:46:03.000000000 +0200
+@@ -36,7 +36,7 @@
+ #if defined(__FreeBSD__) || defined (__OpenBSD__)
+ #   define LEASEFILE "/var/db/dnsmasq.leases"
+ #else
+-#   define LEASEFILE "/var/lib/misc/dnsmasq.leases"
++#   define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
+ #endif
+ #if defined(__FreeBSD__)
+ #   define CONFFILE "/usr/local/etc/dnsmasq.conf"
+@@ -45,7 +45,7 @@
+ #endif
+ #define DEFLEASE 3600 /* default lease time, 1 hour */
+ #define CHUSER "nobody"
+-#define CHGRP "dip"
++#define CHGRP "nobody"
+ #define DHCP_SERVER_PORT 67
+ #define DHCP_CLIENT_PORT 68
+ 

@@ -1,0 +1,16 @@
+# Description: Acrobat Reader plugin for Firefox
+# URL: http://www.adobe.com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: acroread, firefox
+
+name=firefox-acroread-plugin
+version=7.0.0
+release=1
+source=()
+
+build() {
+	mkdir -p $PKG/usr/lib/firefox/plugins
+	 ln -s /usr/lib/Acrobat7/Browser/intellinux/nppdf.so \
+		$PKG/usr/lib/firefox/plugins
+}

@@ -1,0 +1,17 @@
+# Description: Theme changer for GTK2
+# URL: http://plasmasturm.org/programs/gtk-chtheme
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: gtk
+
+name=gtk-chtheme
+version=0.3.1
+release=2
+source=(http://plasmasturm.org/programs/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	make
+	mkdir -p $PKG/usr/bin
+	install -m 755 $name $PKG/usr/bin
+}

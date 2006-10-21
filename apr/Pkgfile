@@ -1,0 +1,33 @@
+# Description: Apache Portable Runtime library
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# URL:         http://apr.apache.org/
+# Depends on:  expat, db, gdbm
+
+name=apr
+version=0.9.12
+release=1
+source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
+        http://www.apache.org/dist/$name/$name-util-$version.tar.bz2)
+
+build(){
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --with-installbuilddir=/usr/share/apr-0 
+    make 
+    make DESTDIR=$PKG install
+
+    cd $SRC/$name-util-$version
+    ./configure --prefix=/usr \
+                --with-apr=$SRC/$name-$version \
+                --with-expat=/usr \
+                --with-berkeley-db=/usr
+    make
+    make DESTDIR=$PKG install
+
+    sed -i -r "/^APR_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apr-config
+    sed -i -r "/^APU_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apu-config
+    sed -i "/^apr_/s|$SRC|/usr/share/apr-0|"  $PKG/usr/share/apr-0/apr_rules.mk
+    
+    rm -r $PKG/usr/lib/*.exp
+    chown -R root:root $PKG
+}

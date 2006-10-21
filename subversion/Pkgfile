@@ -1,0 +1,25 @@
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: A version control system (CVS replacement)
+# URL:         http://subversion.tigris.org
+# Depends on:  apr, neon, expat
+
+name=subversion
+version=1.4.0
+release=1
+source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    LDFLAGS="-L$PKG/usr/lib" \
+        ./configure --prefix=/usr \
+           --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
+           --disable-mod-activation --without-swig --disable-nls
+
+    make
+    make DESTDIR=$PKG external-install local-install 
+    sed -i -e "s|-L$PKG/usr/lib||g" $PKG/usr/lib/*.la
+
+    # info pages seem to get generated when makeinfo is available
+    rm -rf $PKG/usr/info
+}

@@ -1,0 +1,23 @@
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: graphical file and directories comparator and merge tool
+# URL:         http://xxdiff.sourceforge.net/ 
+# Depends on:  qt3 
+
+name=xxdiff
+version=3.2
+release=1
+source=(http://dl.sf.net/sourceforge/${name}/${name}-${version}.tar.bz2
+        xxdiff-nostyleforce.diff)
+
+
+build() {
+    export QTDIR=${QTDIR:=/usr/share/qt}
+
+    cd $name-$version/src
+    patch -p2 < $SRC/xxdiff-nostyleforce.diff
+
+    make -f Makefile.bootstrap makefile
+    make
+    install -m 755 -D ../bin/xxdiff $PKG/usr/bin/xxdiff
+}

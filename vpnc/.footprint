@@ -1,0 +1,10 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/vpnc/
+-rwxr-xr-x	root/root	etc/vpnc/vpnc-script
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man8/
+-rwxr-xr-x	root/root	usr/man/man8/vpnc.8.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/vpnc
+-rwxr-xr-x	root/root	usr/sbin/vpnc-disconnect

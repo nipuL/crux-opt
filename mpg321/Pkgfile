@@ -1,0 +1,17 @@
+# Description: free drop-in replacement for mpg123
+# URL: http://mpg321.sourceforge.net/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: libao, libmad, libid3tag
+
+name=mpg321
+version=0.2.10
+release=1
+source=(http://dl.sourceforge.net/mpg321/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure -prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

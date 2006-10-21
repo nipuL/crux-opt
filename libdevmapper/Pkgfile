@@ -1,0 +1,20 @@
+# Description: Device Mapper for LVM
+# URL: http://sources.redhat.com/dm/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+
+name=libdevmapper
+version=1.01.05
+release=1
+source=(ftp://sources.redhat.com/pub/dm/device-mapper.${version}.tgz)
+
+build() {
+    cd device-mapper.$version
+
+    ./configure \
+	--prefix=/usr \
+	--disable-nls \
+	--disable-debug \
+	--enable-static_link
+    make
+    make DESTDIR=$PKG install
+}

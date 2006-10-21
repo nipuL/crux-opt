@@ -1,0 +1,17 @@
+# Description: Multithreaded FTP client with GTK+2 user interface
+# URL:         http://gftp.seul.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gtk, openssl, readline
+
+name=gftp
+version=2.0.18
+release=1
+source=(http://gftp.seul.org/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+    rm $PKG/usr/share/gftp/COPYING
+}

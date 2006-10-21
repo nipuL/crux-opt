@@ -1,0 +1,19 @@
+# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
+# Description: A toolkit for manipulation of graphic images
+# URL: http://netpbm.sf.net
+# Depends on: libjpeg, libpng, libtiff, ghostscript
+
+name=netpbm
+version=10.33
+release=1
+source=(http://dl.sf.net/$name/$name-$version.tgz Makefile.config)
+
+build() {
+	cd $name-$version
+	sed -e "s|#CFLAGS#|$CFLAGS|" ../Makefile.config > Makefile.config
+	make && make pkgdir=$PKG/usr package
+	mkdir $PKG/usr/share
+	mv $PKG/usr/misc $PKG/usr/share/$name
+	rm -rf $PKG/usr/{README,VERSION,link,man/web}
+	rm -rf $PKG/usr/{config_template,pkginfo,bin/doc.url}
+}

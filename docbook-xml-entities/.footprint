@@ -1,0 +1,51 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/xml/
+-rw-r--r--	root/root	etc/xml/catalog
+drwxr-xr-x	root/root	etc/xml/ent/
+drwxr-xr-x	root/root	etc/xml/ent/docbook/
+drwxr-xr-x	root/root	etc/xml/ent/docbook/0.3/
+-rw-r--r--	root/root	etc/xml/ent/docbook/0.3/catalog
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/xml/
+drwxr-xr-x	root/root	usr/share/xml/ent/
+drwxr-xr-x	root/root	usr/share/xml/ent/docbook/
+drwxr-xr-x	root/root	usr/share/xml/ent/docbook/0.3/
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amsa.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amsb.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amsc.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amsn.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amso.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-amsr.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-box.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-cyr1.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-cyr2.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-dia.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-grk1.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-grk2.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-grk3.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-grk4.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-lat1.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-lat2.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-num.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-pub.ent
+-rw-r--r--	root/root	usr/share/xml/ent/docbook/0.3/iso-tech.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamsa.ent -> iso-amsa.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamsb.ent -> iso-amsb.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamsc.ent -> iso-amsc.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamsn.ent -> iso-amsn.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamso.ent -> iso-amso.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isoamsr.ent -> iso-amsr.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isobox.ent -> iso-box.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isocyr1.ent -> iso-cyr1.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isocyr2.ent -> iso-cyr2.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isodia.ent -> iso-dia.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isogrk1.ent -> iso-grk1.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isogrk2.ent -> iso-grk2.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isogrk3.ent -> iso-grk3.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isogrk4.ent -> iso-grk4.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isolat1.ent -> iso-lat1.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isolat2.ent -> iso-lat2.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isonum.ent -> iso-num.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isopub.ent -> iso-pub.ent
+lrwxrwxrwx	root/root	usr/share/xml/ent/docbook/0.3/isotech.ent -> iso-tech.ent

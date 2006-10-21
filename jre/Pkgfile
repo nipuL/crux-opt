@@ -1,0 +1,33 @@
+# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
+# Description: Java 2 Software Development Kit
+# URL: http://java.sun.com
+
+name=jre
+version=1.5.0_08
+release=1
+source=(http://download.java.net/dlj/binaries/jdk-1_5_0_08-dlj-linux-i586.bin)
+
+build(){
+	sh $SRC/jdk-*.bin --accept-license --unpack
+
+	cd jdk$version
+	rm jre/lib/*/libsaproc.so
+
+	mkdir -p jre/man/man1	
+	man=(java javaws keytool kinit klist ktab orbd pack200 policytool \
+		rmid rmiregistry servertool tnameserv unpack200)
+	for f in ${man[@]}; do
+		cp man/man1/$f.1 jre/man/man1
+	done
+
+	mkdir -p $PKG/usr/lib
+	mv jre $PKG/usr/lib/jre$version
+	cd $PKG/usr/lib
+	ln -s jre* java
+
+	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
+	for j in java javaws keytool; do
+		ln -s ../lib/java/bin/$j
+	done
+}
+

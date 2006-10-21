@@ -1,0 +1,13 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/pcap-bpf.h
+-rw-r--r--	root/root	usr/include/pcap-namedb.h
+-rw-r--r--	root/root	usr/include/pcap.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libpcap.a
+lrwxrwxrwx	root/root	usr/lib/libpcap.so -> libpcap.so.0.9.5
+lrwxrwxrwx	root/root	usr/lib/libpcap.so.0 -> libpcap.so.0.9.5
+-rwxr-xr-x	root/root	usr/lib/libpcap.so.0.9.5
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man3/
+-rw-r--r--	root/root	usr/man/man3/pcap.3.gz

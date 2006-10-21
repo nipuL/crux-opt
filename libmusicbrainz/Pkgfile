@@ -1,0 +1,16 @@
+# Description: community music metadatabase
+# URL: http://www.musicbrainz.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: expat
+
+name=libmusicbrainz
+version=2.1.4
+release=1
+source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

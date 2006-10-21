@@ -1,0 +1,14 @@
+# Description: ck4up - Check for Updates, a utility to monitor web pages for updates
+# URL:         http://jue.li/crux/ck4up
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ruby
+
+name=ck4up
+version=0.2.3
+release=1
+source=(http://jue.li/crux/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    make DESTDIR=$PKG install
+}

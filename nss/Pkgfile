@@ -1,0 +1,28 @@
+# Description: Mozilla Network Security Services (NSS)
+# URL: http://www.mozilla.org/projects/security/pki/nss/
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: zip
+
+name=nss
+version=3.9.2
+release=1
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/src/$name-$version.tar.gz \
+	$name-$version-gcc4.patch)
+
+build() {
+        cd $name-$version
+	patch -p0 < ../$name-$version-gcc4.patch
+	cd mozilla/security/nss
+	export BUILD_OPT=1
+	make nss_build_all
+	make install
+
+	mkdir -p $PKG/usr/lib	
+	mkdir -p $PKG/usr/include/nspr
+	find ../../dist/*/lib -type l \
+                \( -name "*.so" -o -name "*.chk" \) \
+                -exec cp -L {} $PKG/usr/lib \;
+	cp -Lr ../../dist/public/* $PKG/usr/include
+	cp -Lr ../../dist/*/include/* $PKG/usr/include/nspr		
+}

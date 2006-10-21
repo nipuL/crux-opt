@@ -1,0 +1,18 @@
+# Description: Fast, lightweight, standards-compliant window manager
+# URL: http://www.icculus.org/openbox/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: x11, glib, libxml2, pango
+
+name=openbox
+version=3.3.1
+release=1
+source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --disable-nls
+
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,28 @@
+# Description: Secure, fast, compliant and very flexible web server
+# URL: http://www.lighttpd.net/
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
+# Depends on: 
+
+name=lighttpd
+version=1.4.13
+release=1
+source=(http://www.$name.net/download/$name-$version.tar.gz \
+        $name.conf \
+        $name.rc)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --libdir=/usr/lib/$name --with-openssl
+    make
+    make DESTDIR=$PKG install
+
+    install -D -m 644 $SRC/$name.conf $PKG/etc/$name.conf
+    install -D -m 755 $SRC/$name.rc $PKG/etc/rc.d/$name
+    install -d $PKG/var/www/{htdocs,logs}
+    install -d $PKG/var/run
+    install -d $PKG/etc/ssl/certs
+    touch $PKG/var/run/lighttpd.pid
+    touch $PKG/etc/ssl/certs/lighttpd.pem
+    chmod 0600 $PKG/etc/ssl/certs/lighttpd.pem
+}

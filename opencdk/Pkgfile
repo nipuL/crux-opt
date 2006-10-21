@@ -1,0 +1,16 @@
+# Description: Open Crypto Development Kit
+# URL: http://www.gnu.org/software/gnutls/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: libgcrypt
+
+name=opencdk
+version=0.5.7
+release=1
+source=(http://ftp.gnupg.org/gcrypt/alpha/gnutls/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

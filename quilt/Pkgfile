@@ -1,0 +1,23 @@
+# Description: Patch management tool
+# URL: http://savannah.nongnu.org/projects/quilt
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: diffstat
+
+name=quilt
+version=0.45
+release=1
+source=(http://download.savannah.nongnu.org/releases/$name/$name-$version.tar.gz \
+        $name.diff)
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i ../$name.diff
+
+	./configure --prefix=/usr --disable-nls
+
+	make
+	make BUILD_ROOT=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+}

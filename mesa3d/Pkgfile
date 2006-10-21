@@ -1,0 +1,24 @@
+# Description: Mesa 3D Graphics Library
+# URL: http://www.mesa3d.org/
+# Maintainer: Jürgen Daubert, juergen dot daubert at t-online de
+# Packager: sten, nick dot steeves at shaw dot ca
+# Depends on: x11, libdrm, freeglut
+
+name=mesa3d
+version=6.4.2
+release=2
+source=(http://dl.sourceforge.net/$name/MesaLib-$version.tar.bz2 libGL.la)
+
+build() {
+    cd Mesa-$version
+    make linux-dri-x86
+    mkdir -p $PKG/usr/{lib,include}
+    bin/installmesa $PKG/usr
+ 
+    # provided by x11 / freeglut
+    for f in gl.h glext.h glu.h glx.h glxext.h osmesa.h GLwDrawA.h GLwDrawAP.h\
+        GLwMDrawA.h GLwMDrawAP.h; do
+        rm $PKG/usr/include/GL/$f
+    done
+    cp $SRC/libGL.la $PKG/usr/lib
+}

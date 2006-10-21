@@ -1,0 +1,25 @@
+# Description: Scanner frontend and GIMP plugin for sane
+# URL:         http://www.xsane.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gimp, sane
+
+name=xsane
+version=0.991
+release=1
+source=(http://www.xsane.org/download/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --disable-nls \
+                --enable-gtk2 \
+                --enable-gimp2
+    make
+    make prefix=$PKG/usr install
+
+    rm -r $PKG/usr/sbin $PKG/usr/share/sane/xsane/doc
+    rm $PKG/usr/share/sane/xsane/xsane-gpl.txt
+
+    mkdir -p $PKG/usr/lib/gimp/2.0/plug-ins
+    ln -s /usr/bin/xsane $PKG/usr/lib/gimp/2.0/plug-ins
+}

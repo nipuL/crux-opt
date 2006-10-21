@@ -1,0 +1,20 @@
+# Description: Free Lossless Audio Codec
+# URL: http://flac.sourceforge.net/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libogg
+
+name=flac
+version=1.1.2
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
+        fix-xmms-crash.patch)
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/fix-xmms-crash.patch
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/doc
+}

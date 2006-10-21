@@ -1,0 +1,17 @@
+# Description: VCD (VideoCD) BIN/CUE CD image creation and ripping tool
+# URL: http://www.vcdimager.org/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: popt, libxml2, libcdio
+
+name=vcdimager
+version=0.7.23
+release=1
+source=(ftp://ftp.gnu.org/gnu/vcdimager/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/info
+}

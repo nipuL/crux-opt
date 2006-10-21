@@ -1,0 +1,13 @@
+README for apache 2.0.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+   
+POST-INSTALL
+   As of version 2.0.55 the location of the apache SSL certificates 
+   changed to /etc/ssl/certs/apache.crt and /etc/ssl/keys/apache.key
+   
+   Don't reject the configuration file /etc/apache/ssl.conf !
+
+PRECAUTION

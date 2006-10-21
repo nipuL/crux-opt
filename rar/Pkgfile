@@ -1,0 +1,18 @@
+# Description: The RAR Archiver
+# URL: http://www.rarlab.com/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+
+name=rar
+version=3.6.0
+release=1
+source=(http://www.rarlab.com/rar/rarlinux-$version.tar.gz)
+
+build() {
+	cd $name
+	mkdir -p $PKG/usr/{bin,lib}
+	mkdir $PKG/etc
+	cp unrar $PKG/usr/bin
+	cp rar_static $PKG/usr/bin/rar
+	cp rarfiles.lst $PKG/etc
+	cp default.sfx $PKG/usr/lib
+}

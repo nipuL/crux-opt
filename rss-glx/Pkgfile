@@ -1,0 +1,23 @@
+# Description: Linux GLX port of the Really Slick Screensavers
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# URL: http://rss-glx.sourceforge.net/
+# Depends on: xscreensaver
+
+name=rss-glx
+version=0.8.0
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/${name}_source_${version}.tar.bz2 \
+        http://dl.sourceforge.net/sourceforge/$name/${name}_textures_${version}.tar.bz2)
+
+build() {
+	cd ${name}_${version}
+	cp -a $SRC/oglc_src .
+	cp -a $SRC/reallyslick .
+	cp -a $SRC/other_src .
+	./configure --prefix=/usr \
+		--with-configdir=/usr/share/control-center/screensavers \
+		--disable-sound
+	make
+	make DESTDIR=$PKG install
+	rm -f $PKG/*.desktop $PKG/hyperspace.xml
+}

@@ -1,0 +1,24 @@
+diff -Nru ruby-1.8.5.orig/configure ruby-1.8.5/configure
+--- ruby-1.8.5.orig/configure	2006-08-26 15:03:23.000000000 +0200
++++ ruby-1.8.5/configure	2006-08-26 15:03:53.000000000 +0200
+@@ -19254,7 +19254,7 @@
+ _ACEOF
+ 
+ else
+-    arch="${target_cpu}-${target_os}"
++    arch="${target_os}"
+     cat >>confdefs.h <<_ACEOF
+ #define RUBY_PLATFORM "${arch}"
+ _ACEOF
+diff -Nru ruby-1.8.5.orig/ext/dbm/extconf.rb ruby-1.8.5/ext/dbm/extconf.rb
+--- ruby-1.8.5.orig/ext/dbm/extconf.rb	2006-08-26 15:03:23.000000000 +0200
++++ ruby-1.8.5/ext/dbm/extconf.rb	2006-08-26 15:04:19.000000000 +0200
+@@ -55,7 +55,7 @@
+ 
+ have_header("cdefs.h") 
+ have_header("sys/cdefs.h") 
+-if /DBM_HDR/ =~ $CFLAGS and have_func(db_prefix("dbm_open"))
++if have_func(db_prefix("dbm_open"))
+   have_func(db_prefix("dbm_clearerr")) unless $dbm_conf_have_gdbm
+   create_makefile("dbm")
+ end

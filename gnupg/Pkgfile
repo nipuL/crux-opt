@@ -1,0 +1,34 @@
+# Description: GNU privacy guard
+# URL: http://www.gnupg.org
+# Maintainer: Simon Gloßner, viper at hometux dot de
+# Packager: Daniel Mueller, daniel at danm dot de
+
+name=gnupg
+version=1.4.5
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/gnupg/$name-$version.tar.bz2 \
+	ftp://ftp.gnupg.dk/pub/contrib-dk/idea.c.gz)
+
+build () {
+    cd $name-$version
+
+    zcat ../idea.c.gz > cipher/idea.c
+
+    ./configure \
+	--prefix=/usr \
+	--libexecdir=/usr/lib \
+	--enable-static-rnd=linux \
+        --enable-dev-random \
+        --disable-nls \
+        --disable-ldap \
+	--enable-mailto
+
+    make
+    make DESTDIR=$PKG install
+
+    chmod u+s $PKG/usr/bin/gpg
+
+    rm -rf $PKG/usr/info
+    rm -f $PKG/usr/share/gnupg/{FAQ,faq.html}
+    rm -f $PKG/usr/man/man?/gpg.ru.*
+}

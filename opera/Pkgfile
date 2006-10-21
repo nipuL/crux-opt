@@ -1,0 +1,22 @@
+# Description: Lightweight web browser with news, e-mail and IRC
+# URL: http://www.opera.com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Olle Gustafsson, ogg at linux dot se
+# Depends on: qt3
+
+name=opera
+version=9.02-20060919.6
+release=1
+source=(http://$name.nsc.no/linux/902/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
+
+build() {
+    cd $name-$version-shared-qt.i386-en-434
+
+    sed -i s:share/man:man: install.sh
+    yes n | ./install.sh --prefix=$PKG/usr
+    install -D -m 644 config/opera6rc $PKG/etc/opera6rc
+    install -D -m 644 config/opera6rc.fixed $PKG/etc/opera6rc.fixed
+
+    sed -i -e "s|$PKG||g" $PKG/usr/bin/opera
+    rm -rf $PKG/usr/share/doc
+}

@@ -1,0 +1,18 @@
+# Description: A graphical web browser in less than 400KB
+# URL:         http://www.dillo.org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gtk1, libjpeg, libpng
+
+name=dillo
+version=0.8.6
+release=1
+source=(http://www.dillo.org/download/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-ipv6 \
+                --disable-dlgui
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,11 @@
+NIS Yellow Pages Services
+
+POST-INSTALL
+
+Ensure YPDOMAIN is defined in /etc/rc.conf, and run
+make in /var/yp after adjusting any targets.  You'll 
+also want to add ypserv to SERVICES in /etc/rc.conf, 
+after a network device has been configured.
+
+It would be wise to also install yp-tools.
+

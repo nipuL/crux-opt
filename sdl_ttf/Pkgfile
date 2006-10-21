@@ -1,0 +1,16 @@
+# Description: TrueType library for libsdl.
+# URL: http://www.libsdl.org/projects/SDL_ttf/
+# Maintainer: Simone Rota, sip at crux dot nu
+# Depends on: freetype, libsdl
+
+name=sdl_ttf
+version=2.0.8
+release=1
+source=(http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-$version.tar.gz)
+
+build() {
+	cd SDL_ttf-$version
+	./configure	--prefix=/usr
+	make 
+	make DESTDIR=$PKG install
+}

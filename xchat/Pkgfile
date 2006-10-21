@@ -1,0 +1,25 @@
+# Description: GTK+ based IRC client
+# URL: http://www.xchat.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: openssl, gtk, perl
+
+name=xchat
+version=2.6.6
+release=1
+source=(http://www.xchat.org/files/source/2.6/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--enable-openssl \
+		--enable-perl \
+		--enable-ipv6 \
+		--disable-gnome \
+		--disable-textfe \
+		--disable-python \
+		--disable-tcl \
+		--disable-nls
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{etc,share}
+}

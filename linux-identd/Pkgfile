@@ -1,0 +1,15 @@
+# Description: An RFC 1413 identification daemon for Linux
+# URL:         http://www.fukt.bsnet.se/~per/identd/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+
+name=linux-identd
+version=1.3
+release=3
+source=(http://www.fukt.bsnet.se/~per/identd/$name-$version.tar.gz identd)
+
+build () {
+    cd $name-$version
+    make CEXTRAS="$CFLAGS"
+    make DESTDIR=$PKG install
+    install -D -m 755 ../identd $PKG/etc/rc.d/identd
+}

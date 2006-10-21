@@ -1,0 +1,22 @@
+# Description: Small, easy-to-configure FTP server
+# URL:         http://bftpd.sourceforge.net/
+# Maintainer:  Simone Rota, sip at crux dot nu
+
+name=bftpd
+version=1.5
+release=1
+source=(http://bftpd.sourceforge.net/downloads/src/bftpd-$version.tar.gz \
+	bftpd-$version-config.patch bftpd-$version-destdir.patch ftpd)
+
+build () {
+    cd $name-$version
+    patch -p1 -i ../bftpd-$version-config.patch
+    patch -p1 -i ../bftpd-$version-destdir.patch
+    ./configure --prefix=/usr --enable-libz
+    make
+    mkdir -p $PKG/usr/sbin $PKG/usr/man/man8 $PKG/etc $PKG/etc/rc.d
+    make DESTDIR=$PKG install
+    install -D -m 755 ../ftpd $PKG/etc/rc.d/ftpd
+    chmod 600 $PKG/etc/bftpd.conf
+    ln -sf bftpd $PKG/usr/sbin/in.ftpd
+}

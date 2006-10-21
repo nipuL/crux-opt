@@ -1,0 +1,17 @@
+# Description: A set of interfaces for accessibility
+# URL: http://www.gtk.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: glib
+
+name=atk
+version=1.12.2
+release=1
+source=(http://download.gnome.org/sources/$name/1.12/$name-$version.tar.bz2)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr 
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/share
+}

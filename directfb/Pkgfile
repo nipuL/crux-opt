@@ -1,0 +1,26 @@
+# Description: Graphics library for the Linux framebuffer device
+# URL: http://www.directfb.org
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=directfb
+version=0.9.25.1
+release=1
+source=(http://www.directfb.org/download/DirectFB/DirectFB-$version.tar.gz)
+
+build() {
+	local EXTRA_ARGS
+
+	# uncomment the following line to build with support for the multi
+	# app core:
+	# EXTRA_ARGS="--enable-multi"
+
+	cd DirectFB-$version
+
+	./configure --prefix=/usr --enable-zlib $EXTRA_ARGS
+
+	make
+	make DESTDIR=$PKG install
+
+	ln -sf $name-$version $PKG/usr/lib/$name
+	ln -sf $name-$version $PKG/usr/share/$name
+}

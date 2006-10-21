@@ -1,0 +1,23 @@
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: Port of KDE's Plastik style to pure Qt
+# URL:         http://static.int.pl/~mig21/dev/releases/polymer
+# Deoends on:  qt3
+
+name=polymer
+version=0.3.2
+release=1
+source=(http://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/$name-$version.tar.bz2)
+
+build() {
+    export QTDIR=/usr/share/qt
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+   
+    mkdir -p $PKG/usr/bin
+    cp config/polymer-config $PKG/usr/bin
+    mkdir -p $PKG/$QTDIR/plugins/styles
+    cp style/libpolymer* $PKG/$QTDIR/plugins/styles
+ 
+}

@@ -1,0 +1,73 @@
+# Description: XML entity set corresponding to ISO 8879 SGML character entities
+# URL: http://www.oasis-open.org/docbook/xmlcharent/
+# Maintainer: Johannes Winkelmann, jw at tks6 dot net
+# Depends on: libxml2
+
+name=docbook-xml-entities
+version=0.3
+release=4
+source=(http://www.oasis-open.org/docbook/xmlcharent/$version/xmlcharent-$version.zip)
+
+build() {
+	install -d -m 0755 $PKG/{etc,usr/share}/xml/ent/docbook/$version
+	install -m 0644 *.ent $PKG/usr/share/xml/ent/docbook/$version
+	xmlcatalog --noout --create $PKG/etc/xml/catalog
+	xmlcatalog --noout --create $PKG/etc/xml/ent/docbook/$version/catalog
+
+	ENT_CAT=/etc/xml/ent/docbook/$version/catalog
+	ENT_PATH=/usr/share/xml/ent/docbook/$version
+	MASTER_CAT=/etc/xml/catalog
+
+	xmlcatalog --noout --add "delegatePublic" \
+	  "-//OASIS//ENTITIES DocBook XML" $ENT_CAT $PKG$MASTER_CAT
+	xmlcatalog --noout --add "delegatePublic" \
+	  "ISO 8879:1986" $ENT_CAT $PKG$MASTER_CAT
+
+	ident_prefix="ISO 8879:1986//ENTITIES"
+	ENT_IDENT=("$ident_prefix Publishing//EN"
+	           "$ident_prefix Greek Letters//EN"
+	           "$ident_prefix Box and Line Drawing//EN"
+	           "$ident_prefix Greek Symbols//EN"
+	           "$ident_prefix Added Math Symbols: Negated Relations//EN"
+	           "$ident_prefix Numeric and Special Graphic//EN"
+	           "$ident_prefix Alternative Greek Symbols//EN"
+	           "$ident_prefix Diacritical Marks//EN"
+	           "$ident_prefix Monotoniko Greek//EN"
+	           "$ident_prefix Added Math Symbols: Arrow Relations//EN"
+	           "$ident_prefix Added Math Symbols: Ordinary//EN"
+	           "$ident_prefix Russian Cyrillic//EN"
+	           "$ident_prefix General Technical//EN"
+	           "$ident_prefix Added Math Symbols: Delimiters//EN"
+	           "$ident_prefix Added Latin 1//EN"
+	           "$ident_prefix Added Math Symbols: Binary Operators//EN"
+	           "$ident_prefix Added Latin 2//EN"
+	           "$ident_prefix Added Math Symbols: Relations//EN"
+	           "$ident_prefix Non-Russian Cyrillic//EN")
+
+	ENT_FILE=(iso-pub.ent
+	          iso-grk1.ent
+	          iso-box.ent
+	          iso-grk3.ent
+	          iso-amsn.ent
+	          iso-num.ent
+	          iso-grk4.ent
+	          iso-dia.ent
+	          iso-grk2.ent
+	          iso-amsa.ent
+	          iso-amso.ent
+	          iso-cyr1.ent
+	          iso-tech.ent
+	          iso-amsc.ent
+	          iso-lat1.ent
+	          iso-amsb.ent
+	          iso-lat2.ent
+	          iso-amsr.ent
+	          iso-cyr2.ent)
+
+	
+        for f in ${ENT_FILE[*]}; do
+		xmlcatalog --noout --add "public" \
+		  "$ENT_PATH/$f" "file://$ENT_PATH/$f" $PKG$ENT_CAT
+                (cd $PKG/$ENT_PATH; ln -s $f ${f/-})
+	done
+}

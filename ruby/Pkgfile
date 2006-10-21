@@ -1,0 +1,21 @@
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Description: Ruby interpreter
+# URL:         http://www.ruby-lang.org
+# Depends on:  db, gdbm, ncurses, openssl, readline, zlib
+
+name=ruby
+version=1.8.5
+release=1
+source=(ftp://ftp.ruby-lang.org/pub/$name/1.8/$name-$version.tar.gz \
+        $name-$version.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 < $SRC/$name-$version.patch
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-shared \
+                --enable-pthread
+    make 
+    make DESTDIR=$PKG install
+}

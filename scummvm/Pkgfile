@@ -1,0 +1,17 @@
+# Description: Script Creation Utility for Maniac Mansion Virtual Machine
+# URL: http://www.scummvm.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: libsdl, libogg, libmad, zlib, mpeg2dec, flac
+
+name=scummvm
+version=0.9.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure
+	make
+	install -D -m 0755 $name $PKG/usr/bin/$name
+	install -D -m 0644 icons/$name.xpm $PKG/usr/share/icons/$name.xpm
+}

@@ -1,0 +1,15 @@
+
+
+README for openntpd
+
+openntpd expects to have a user and group dedicated to it. By default, _ntp. To
+create them, use the following or similar commands, edited to your needs.
+
+	# groupadd -g 83 _ntp
+	# useradd -g _ntp -u 83 -c "NTP Daemon" -d /var/empty -s /bin/false _ntp
+
+*NOTE*
+
+	A post-install script has been added to the port which takes care of the
+	above.
+

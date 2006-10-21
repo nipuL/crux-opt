@@ -1,0 +1,20 @@
+# Description: Python bindings for the XML library version 2
+# URL:         http://xmlsoft.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  python, libxml2
+
+name=libxml2-python
+version=2.6.26
+release=1
+source=(http://ftp.gnome.org/pub/GNOME/sources/libxml2/2.6/libxml2-$version.tar.bz2 \
+        $name-config.patch)
+
+build () {
+    cd libxml2-$version
+    patch -p1 < $SRC/$name-config.patch
+    ./configure --prefix=/usr
+    cd python
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}

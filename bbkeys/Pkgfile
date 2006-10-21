@@ -1,0 +1,18 @@
+# Description: bbkeys, keybinding software for blackbox 
+# URL: 	       http://bbkeys.sourceforge.net
+# Packager:    Jussi Mäki, valen at ihanaa.org
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Depends:     blackbox
+
+name=bbkeys
+version=0.9.0
+release=1
+source=(http://dl.sourceforge.net/sourceforge/bbkeys/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version 
+    ./configure --prefix=/usr 
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/doc
+}

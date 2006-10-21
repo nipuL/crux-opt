@@ -1,0 +1,12 @@
+README for exim 4.x
+
+REQUIREMENTS
+
+PRE-INSTALL
+Remove sendmail. Exim and sendmail can not coexist.
+      
+POST-INSTALL
+  
+PRECAUTION
+As of version 4.24 the default location of the exim alias
+file has changed from /etc/aliases to /etc/exim/aliases.

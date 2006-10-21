@@ -1,0 +1,27 @@
+# Description: GNUPlot, a graph plotting software
+# URL:         http://www.gnuplot.info/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Martin Opel, mo at obbl-net dot de
+# Depends on:  readline, x11
+
+name=gnuplot
+version=4.0.0
+release=2
+source=(http://dl.sourceforge.net/sourceforge/gnuplot/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    sed -i -e '/^install:/s/install-info//' \
+           -e '/^all:/s/gnuplot\.info//' \
+           docs/Makefile.in
+    ./configure --prefix=/usr \
+                --with-png \
+                --with-x \
+                --x-include=/usr/X11R6/include \
+                --x-libraries=/usr/X11R6/lib \
+                --with-readline=gnu \
+                --libexecdir=/usr/lib
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{info,share/emacs}
+}

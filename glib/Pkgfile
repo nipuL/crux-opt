@@ -1,0 +1,17 @@
+# Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
+# URL: http://www.gtk.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+
+name=glib
+version=2.12.3
+release=1
+source=(ftp://ftp.gtk.org/pub/$name/2.12/$name-$version.tar.bz2)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--enable-debug=no
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/{gtk-doc,locale}
+}

@@ -1,0 +1,16 @@
+
+README for rss-glx 0.8.0
+
+REQUIREMENTS
+
+1. xscreensaver
+
+PRE-INSTALL
+
+POST-INSTALL
+
+1. Run /usr/bin/rss-glx_install.pl to add the new screensavers to your
+   .xscreensaver file (disable xscreensaver before running this.)
+
+PRECAUTION
+

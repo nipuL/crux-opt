@@ -1,0 +1,48 @@
+#
+# /etc/darrc
+#
+
+default:
+
+# list dar version if no command is given
+-V
+
+
+create:
+
+# files we we don't want to save 
+-X "*.*.dar"
+-X "*.iso"
+
+# create empty dir for excluded directories
+-D
+
+# don't save theses directories
+-P tmp
+-P var/tmp
+-P mnt
+-P proc
+-P dev
+-P sys
+
+# use gzip compression
+-z
+
+# list of files to not try to compress
+-Z "*.mpg"
+-Z "*.MPG"
+-Z "*.jpg"
+-Z "*.JPG"
+-Z "*.gz"
+-Z "*.tgz"
+-Z "*.bz2"
+-Z "*.tbz"
+-Z "*.mp3"
+-Z "*.mpeg"
+-Z "*.zip"
+-Z "*.Z"
+
+# create slices of 700MB to fit on one CD-ROM
+-s 700M
+
+# End of file

@@ -1,0 +1,24 @@
+# Name: libmovtar
+# Description: library to playback movtar files (movie archive files)
+# URL: http://mjpeg.sourceforge.net/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on: libsdl, libjpeg-mmx, glib1
+
+name=libmovtar
+version=0.1.3
+release=5
+source=(http://dl.sourceforge.net/sourceforge/mjpeg/$name-$version.tar.gz \
+	jpegint.h $name-$version-gcc4.patch)
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-gcc4.patch
+	# jpegint.h should be from the same version of libjpeg-mmx that's installed
+	cp $SRC/jpegint.h .
+	sed -i -e "s,#include <jinclude.h>,," movtar_play.c
+	./configure --prefix=/usr \
+		--disable-dependency-tracking
+	make
+	make DESTDIR=$PKG install
+}

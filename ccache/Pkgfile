@@ -1,0 +1,23 @@
+# Maintainer: Johannes Winkelmann, jw at tks6 dot net 
+# Packager: 
+# Description: A compiler cache
+# URL: http://ccache.samba.org
+
+name=ccache
+version=2.4
+release=2
+source=(http://samba.org/ftp/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+
+    mkdir -p $PKG/usr/lib/$name
+    for c in cc c++ gcc g++; do
+        cd $PKG/usr/lib/$name && ln -s ../../bin/ccache $c
+    done
+   
+    rm -rf $PKG/usr/info
+}

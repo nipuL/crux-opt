@@ -1,0 +1,16 @@
+# Description: A language for writing python extension modules
+# URL: http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: python
+
+name=pyrex
+version=0.9.4.1
+release=1
+source=(http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/Pyrex-$version.tar.gz)
+
+build() {
+	cd Pyrex-$version
+	python setup.py install --root=$PKG
+	rm -rf $PKG/usr/lib/python2.4/site-packages/Pyrex/Mac
+	chown -R root:root $PKG
+}

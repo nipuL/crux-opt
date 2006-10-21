@@ -1,0 +1,20 @@
+# Description: Mail Delivery Agent with filtering abilities
+# URL:         http://www.courier-mta.org/maildrop/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gdbm
+
+name=maildrop
+version=1.8.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --with-db=gdbm \
+                --disable-tempdir
+    make 
+    make DESTDIR=$PKG install
+    chmod u+s $PKG/usr/bin/maildrop
+    rm -r $PKG/usr/{include,lib,man/man3,share}
+}

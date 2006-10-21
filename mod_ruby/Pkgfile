@@ -1,0 +1,18 @@
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Description: Module to integrate Ruby into Apache
+# URL:         http://www.modruby.net
+# Depends on:  apache, ruby
+# Group:       apache
+
+name=mod_ruby
+version=1.2.6
+release=1
+source=(http://modruby.net/archive/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure.rb --prefix=/usr  \
+                   --with-apxs=/usr/sbin/apxs
+    make
+    make DESTDIR=$PKG install
+}

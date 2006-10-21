@@ -1,0 +1,37 @@
+
+README for nvidia 1.0-8178+
+
+
+*** NOTE for nvidia with udev ***
+
+If using udev, add your user to the "video" group to be able to
+use the nvidia devices required for 3d to function properly.
+
+
+POST-INSTALL
+
+Use opt/gl-select from ports to select the correct gl/glx
+libraries and extensions like so:
+
+	# gl-select nvidia
+
+
+POST-REMOVE
+
+Use opt/gl-select from ports to revert to the x11 gl/glx libraries
+and extensions like so:
+
+	# gl-select x11
+
+
+When UPGRADING/DOWNGRADING the nvidia port (where the version changes),
+use gl-select to revert to x11 and then re-select nvidia in order to
+refresh the libGLcore and libGL symlinks, like so:
+
+	# prt-get update nvidia
+	# gl-select x11; gl-select nvidia
+
+
+nvhelper.sh is still included in the port for the time being but
+gl-select is the preferred method.
+

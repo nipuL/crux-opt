@@ -1,0 +1,12 @@
+diff -ruN rcs-5.7.orig/src/conf.sh rcs-5.7/src/conf.sh
+--- rcs-5.7.orig/src/conf.sh	1995-06-16 08:19:24.000000000 +0200
++++ rcs-5.7/src/conf.sh	2002-07-01 13:24:00.000000000 +0200
+@@ -79,7 +79,6 @@
+ chmod 0 a.d &&
+ { test -w a.d || cp /dev/null a.d 2>/dev/null; } && {
+ 	echo >&3 "$n$0: This command should not be run with superuser permissions."
+-	exit 1
+ }
+ echo >&3 OK
+ rm -f a.d || exit
+

@@ -1,0 +1,25 @@
+# Description: XSL stylesheets for the DocBook DTD and its derivatives
+# URL:         http://docbook.sourceforge.net/projects/xsl/
+# Packager:    Robert McMeekin, rrm3 at rrm3 dot org
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Depends on:  docbook-xml-entities,libxslt
+
+name=docbook-xsl
+version=1.70.1
+release=2
+source=(http://dl.sourceforge.net/sourceforge/docbook/$name-$version.tar.gz)
+
+build() {
+	XSL_PATH=/usr/share/xml/xsl/docbook/$version
+	install -d -m 0755 $PKG$XSL_PATH
+	cd $name-$version
+	rm -fr {doc{,src},extensions}/ RELEASE-NOTES.xml
+	find . -type d -exec install -d -m 0755 $PKG$XSL_PATH/{} \;
+	install -m 0644 VERSION $PKG$XSL_PATH/
+
+	# dtd gif png xsl xml
+ 	find . -name '*.[dgpx][imnst][dfgl]' \
+ 	       -exec install -m 0644 {} $PKG$XSL_PATH/{} \;
+
+        cd $PKG$XSL_PATH/..; ln -s $version current
+}

@@ -1,0 +1,24 @@
+diff -Nru libxml2-2.6.24.orig/python/Makefile.in libxml2-2.6.24/python/Makefile.in
+--- libxml2-2.6.24.orig/python/Makefile.in	2006-05-02 07:21:55.000000000 +0200
++++ libxml2-2.6.24/python/Makefile.in	2006-05-02 07:22:18.000000000 +0200
+@@ -56,7 +56,7 @@
+ am__installdirs = "$(DESTDIR)$(pythondir)"
+ pythonLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(python_LTLIBRARIES)
+-@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(top_builddir)/libxml2.la
++@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(libdir)/libxml2.la
+ @WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+ am__libxml2mod_la_SOURCES_DIST = libxml.c types.c libxml2-py.c
+ @WITH_PYTHON_TRUE@am_libxml2mod_la_OBJECTS = libxml.lo types.lo \
+@@ -321,9 +321,9 @@
+ 	libxml2-python-api.xml	\
+ 	$(DOCS)
+ 
+-libxml2mod_la_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@ @WIN32_EXTRA_LDFLAGS@ -module -avoid-version -L$(top_builddir)/.libs
++libxml2mod_la_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@ @WIN32_EXTRA_LDFLAGS@ -module -avoid-version
+ @WITH_PYTHON_TRUE@mylibs = \
+-@WITH_PYTHON_TRUE@	$(top_builddir)/libxml2.la
++@WITH_PYTHON_TRUE@	$(libdir)/libxml2.la
+ 
+ @WITH_PYTHON_TRUE@python_LTLIBRARIES = libxml2mod.la
+ @WITH_PYTHON_TRUE@libxml2mod_la_SOURCES = libxml.c types.c libxml2-py.c

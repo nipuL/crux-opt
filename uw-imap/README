@@ -1,0 +1,28 @@
+README for uw-imap 2006
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+1. To activate the required services add some of the following lines to 
+   /etc/inetd.conf:
+
+    pop2   stream  tcp  nowait  root  /usr/sbin/tcpd  ipop2d
+    pop3   stream  tcp  nowait  root  /usr/sbin/tcpd  ipop3d
+    imap   stream  tcp  nowait  root  /usr/sbin/tcpd  imapd
+    pop3s  stream  tcp  nowait  root  /usr/sbin/tcpd  ipop3d
+    imaps  stream  tcp  nowait  root  /usr/sbin/tcpd  imapd
+
+   For security reasons it's highly recommended to use the ssl encrypted 
+   services pop3s and imaps whenever possible.
+
+2. Create two self-signed certificates for the imap and pop3 daemons:
+
+   openssl req -new -x509 -days 365 -nodes -out imapd.pem -keyout imapd.pem
+   openssl req -new -x509 -days 365 -nodes -out ipop3d.pem -keyout ipop3d.pem
+   mv imapd.pem ipop3d.pem /etc/ssl/certs
+   chmod 0600 /etc/ssl/certs/{imapd.pem,ipop3d.pem}
+
+PRECAUTION
+

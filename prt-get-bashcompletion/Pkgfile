@@ -1,0 +1,16 @@
+# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Description: programmable bash completion for prt-get
+# URL:         http://www.hta-bi.bfh.ch/~winkj/software_prt-get.html
+# Depends on:  bash-completion
+
+name=prt-get-bashcompletion
+version=0.5.5
+release=1
+source=(http://jw.tks6.net/files/crux/prt-get-$version.tar.gz)
+
+build() {
+    cd prt-get-$version/misc
+    install -D -m 755 prt-get_complete \
+        $PKG/usr/lib/bash-completion/prt-get_complete
+    
+}
