@@ -3,17 +3,17 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 # Depends on: x11
 
-# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, \
-# cdparanoia, win32-essential-codecs
+# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis,
+# cdparanoia, win32-essential-codecs, faac, x264
 
 # More information can be found at http://www.mplayerhq.hu/DOCS/codecs.html and
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0pre8
+version=1.0rc1
 release=1
-source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
-	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+source=(http://www3.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+	http://www3.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
 
 build() {
@@ -22,7 +22,6 @@ build() {
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
 	./configure --prefix=/usr \
-		--disable-divx4linux \
 		--with-codecsdir=/usr/lib/win32
 
 	make
