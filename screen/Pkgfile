@@ -4,15 +4,14 @@
 # Depends on:  ncurses
 
 name=screen
-version=4.0.2
-release=2
+version=4.0.3
+release=1
 source=(ftp://ftp.uni-erlangen.de/pub/utilities/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    export TERMINFO=$PKG/usr/share/terminfo
     ./configure --prefix=/usr --enable-colors256
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/{info,share/terminfo}
+    rm -rf $PKG/usr/info
 }
