@@ -3,9 +3,9 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=win32-essential-codecs
-version=20060611
+version=20061022
 release=1
-source=(http://www4.mplayerhq.hu/MPlayer/releases/codecs/essential-$version.tar.bz2)
+source=(http://www3.mplayerhq.hu/MPlayer/releases/codecs/essential-$version.tar.bz2)
 
 build() {
 	cd essential-$version
