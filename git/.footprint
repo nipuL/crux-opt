@@ -135,6 +135,7 @@ drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/
 drwxr-xr-x	root/root	usr/lib/perl5/5.8.8/linux/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/Error.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/Git.pm
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/
@@ -262,6 +263,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gitk.1.gz
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Git.3pm.gz
+-r--r--r--	root/root	usr/man/man3/private-Error.3pm.gz
 drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/git.7.gz
 drwxr-xr-x	root/root	usr/share/
