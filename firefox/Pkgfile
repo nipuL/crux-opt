@@ -1,12 +1,14 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: libidl, gtk
+# Depends on: libidl, gtk, libpng, libjpeg, zlib
 
 name=firefox
-version=1.5.0.7
+version=2.0
 release=1
 source=(http://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
+	http://crux.nu/files/$name/$name.desktop \
+	http://crux.nu/files/$name/$name.png \
 	mozconfig)
 
 build() {
@@ -40,4 +42,11 @@ build() {
 		$PKG/usr/lib/pkgconfig/*.pc
 
 	chmod 644 $PKG/usr/lib/pkgconfig/$name-*.pc
+
+	rm -f $PKG/usr/lib/$name/README.txt $PKG/usr/lib/$name/init.d/README
+
+	# desktop entry/icon
+	install -D -m 0644 $SRC/$name.desktop \
+		$PKG/usr/share/applications/$name.desktop
+	install -D -m 0644 $SRC/$name.png $PKG/usr/share/pixmaps/$name.png
 }

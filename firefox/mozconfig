@@ -22,3 +22,6 @@ ac_add_options --disable-gnomeui
 ac_add_options --disable-tests
 ac_add_options --enable-crypto
 ac_add_options --enable-svg
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-png
+ac_add_options --with-system-zlib
