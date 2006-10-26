@@ -1,19 +1,16 @@
-diff -aur quilt-0.43.orig/Makefile.in quilt-0.43/Makefile.in
---- quilt-0.43.orig/Makefile.in	2006-02-01 19:17:08.000000000 +0100
-+++ quilt-0.43/Makefile.in	2006-02-03 22:59:52.000000000 +0100
-@@ -9,9 +9,9 @@
- libdir :=	@libdir@
- datadir :=	@datadir@
+diff -aur quilt-0.46.orig/Makefile.in quilt-0.46/Makefile.in
+--- quilt-0.46.orig/Makefile.in	2006-10-11 14:36:10.000000000 +0200
++++ quilt-0.46/Makefile.in	2006-10-26 17:57:47.322105535 +0200
+@@ -12,7 +12,7 @@
  docdir :=	@docdir@
--mandir :=	$(datadir)/man
-+mandir :=	$(prefix)/man
+ mandir :=	@mandir@
  localedir :=	$(datadir)/locale
 -etcdir :=	$(subst /usr/etc,/etc,$(prefix)/etc)
 +etcdir :=	$(prefix)/etc
  
  INSTALL :=	@INSTALL@
  POD2MAN :=	@POD2MAN@
-@@ -321,10 +321,10 @@
+@@ -325,10 +325,10 @@
  	$(INSTALL) -d $(BUILD_ROOT)$(mandir)/man1
  	$(INSTALL) -m 644 $(MAN1) $(BUILD_ROOT)$(mandir)/man1/
  
