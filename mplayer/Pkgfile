@@ -12,8 +12,8 @@
 name=mplayer
 version=1.0rc1
 release=1
-source=(http://www3.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
-	http://www3.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
 
 build() {
