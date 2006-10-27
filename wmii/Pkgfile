@@ -1,11 +1,11 @@
 # Description: The next generation of WMI
-# URL: http://wmii.de/
+# URL: http://suckless.org
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 
 name=wmii
 version=3.1
 release=1
-source=(http://wmii.de/download/$name-$version.tar.gz)
+source=(http://suckless.org/download/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
