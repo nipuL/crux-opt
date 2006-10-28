@@ -5,15 +5,16 @@
 # Depends on: fontforge
 
 name=wine
-version=0.9.23
+version=0.9.24
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure 	--prefix=/usr \
-			--mandir=$PKG/usr/man \
-			--disable-nls
+	./configure \
+		--prefix=/usr \
+		--mandir=$PKG/usr/man \
+		--disable-nls
 	make depend
 	make
 	make prefix=$PKG/usr install
