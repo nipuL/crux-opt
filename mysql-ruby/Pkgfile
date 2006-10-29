@@ -4,7 +4,7 @@
 # Depends on:  ruby, mysql
 
 name=mysql-ruby
-version=2.7.1
+version=2.7.2
 release=1
 source=(http://tmtm.org/downloads/mysql/ruby/$name-$version.tar.gz)
 
