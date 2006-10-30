@@ -4,7 +4,7 @@
 # Depends on: expat
 
 name=dbus
-version=0.93
+version=0.94
 release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 	rc.dbus 30-dbus.launch)
