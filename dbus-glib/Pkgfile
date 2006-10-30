@@ -4,7 +4,7 @@
 # Depends on: dbus, glib
 
 name=dbus-glib
-version=0.71
+version=0.72
 release=1
 source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz \
 	$name-$version.patch)
@@ -17,4 +17,5 @@ build() {
 		--with-xml=expat
 	make
 	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
 }
