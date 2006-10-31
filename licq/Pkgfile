@@ -5,8 +5,8 @@
 # Depends on:  qt3 
 
 name=licq
-version=1.3.4-RC1
-release=2
+version=1.3.4
+release=1
 source=(http://www.fanfic.org/~jon/licq-$version.tar.bz2)
 
 build () {
