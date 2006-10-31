@@ -1,6 +1,6 @@
 # Description: Ruby bindings for libmusicbrainz
 # URL: http://www.pablotron.org/software/mb-ruby/
-# Maintainer: Tilman Sauerbeck, tilman at crux nu
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: ruby, libmusicbrainz
 
 name=ruby-musicbrainz
