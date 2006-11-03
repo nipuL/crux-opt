@@ -6,18 +6,19 @@
 # Nice to have: libpcre
 
 name=wireshark
-version=0.99.3a
-release=2
+version=0.99.4
+release=1
 source=(http://www.$name.org/download/src/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
 	./configure --prefix=/usr \
+	            --with-plugins=/usr/lib/$name/plugins \
 	            --disable-nls \
 	            --enable-snmp \
 	            --enable-gtk2 \
-	            --disable-gcry
+	            --disable-gcry \
 
 	make
 	make DESTDIR=$PKG install
@@ -28,7 +29,6 @@ build() {
 		image/{hi,lo}{16,32,48}-app-$name.png \
 		$PKG/usr/share/$name/pixmaps
 
-	# Don't remove AUTHORS-SHORT here, it's read by wireshark's
-	# about box.
-	#rm -f $PKG/usr/share/$name/AUTHORS-SHORT
+	# Don't remove these files, they are read by wireshark's about box.
+	#rm -f $PKG/usr/share/$name/{AUTHORS-SHORT,COPYING}
 }
