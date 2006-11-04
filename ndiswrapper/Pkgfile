@@ -4,7 +4,7 @@
 # Depends on:  wireless-tools, pciutils
 
 name=ndiswrapper
-version=1.16
+version=1.28
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
         wlan)
