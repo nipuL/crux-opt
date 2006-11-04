@@ -5,8 +5,8 @@
 # Depends on: x11, libmng
 
 name=qt3
-version=3.3.6
-release=2
+version=3.3.7
+release=1
 source=(ftp://ftp.trolltech.com/qt/source/qt-x11-free-$version.tar.bz2 \
     http://crux.nu/files/patches/$name-$version-1-patches.tar.bz2
     $name-$version-gcc4.patch 

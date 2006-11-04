@@ -420,10 +420,10 @@ drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libqassistantclient.prl
 -rw-r--r--	root/root	usr/lib/libqt-mt.la
 -rw-r--r--	root/root	usr/lib/libqt-mt.prl
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so -> libqt-mt.so.3.3.6
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3 -> libqt-mt.so.3.3.6
-lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3.3 -> libqt-mt.so.3.3.6
--rwxr-xr-x	root/root	usr/lib/libqt-mt.so.3.3.6
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so -> libqt-mt.so.3.3.7
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3 -> libqt-mt.so.3.3.7
+lrwxrwxrwx	root/root	usr/lib/libqt-mt.so.3.3 -> libqt-mt.so.3.3.7
+-rwxr-xr-x	root/root	usr/lib/libqt-mt.so.3.3.7
 -rw-r--r--	root/root	usr/lib/libqui.prl
 lrwxrwxrwx	root/root	usr/lib/libqui.so -> libqui.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libqui.so.1 -> libqui.so.1.0.0
