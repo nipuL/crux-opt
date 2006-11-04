@@ -5,12 +5,14 @@
 # Group:       apache
 
 name=mod_php
-version=5.1.6
+version=5.2.0
 release=1
-source=(http://www.php.net/distributions/php-$version.tar.bz2) 
+source=(http://www.php.net/distributions/php-$version.tar.bz2 \
+        php-$version.patch) 
 
 build () {
     cd php-$version
+    patch -p1 -i $SRC/php-$version.patch
     sed -i "s/-i -a/-i/" configure
     ./configure --prefix=/usr \
                 --with-apxs2=/usr/sbin/apxs \

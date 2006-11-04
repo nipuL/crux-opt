@@ -1,0 +1,12 @@
+diff -Nru php-5.2.0.orig/configure php-5.2.0/configure
+--- php-5.2.0.orig/configure	2006-11-03 19:26:01.000000000 +0100
++++ php-5.2.0/configure	2006-11-03 19:41:16.000000000 +0100
+@@ -32679,7 +32679,7 @@
+ 
+   
+   
+-    for header_file in $ext_srcdir/php_filter.h; do
++    for header_file in ext/filter/php_filter.h; do
+       
+   
+   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
