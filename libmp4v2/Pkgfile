@@ -1,0 +1,36 @@
+# Description: libmp4v2 from mpeg4ip
+# URL: http://mpeg4ip.sourceforge.net/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+
+name=libmp4v2
+version=1.5.0.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/mpeg4ip/mpeg4ip-$version.tar.gz)
+
+build() {
+	cd mpeg4ip-$version
+	libtoolize
+	touch bootstrapped
+	./configure --prefix=/usr \
+		--disable-warns-as-err \
+		--disable-server \
+		--disable-player \
+		--disable-mp4live \
+		--disable-id3tags \
+		--disable-xvid \
+		--disable-a52dec \
+		--disable-mad \
+		--disable-mpeg2dec \
+		--disable-srtp \
+		--disable-mp3lame \
+		--disable-faac \
+		--disable-ffmpeg \
+		--disable-x264
+	cd lib/mp4v2
+	sed -i -e 's/SUBDIRS = . test util/SUBDIRS = ./' Makefile
+	make
+	make DESTDIR=$PKG install
+	cd ../..
+	cp include/mpeg4ip{,_version}.h $PKG/usr/include/
+	cp mpeg4ip_config.h $PKG/usr/include/
+}
