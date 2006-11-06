@@ -1,0 +1,22 @@
+# Description: An HE, LC, MAIN and LTP profile MPEG2 and MPEG-4 AAC decoder
+# URL: http://www.audiocoding.com/
+# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Depends on: libsndfile, id3lib, libmp4v2
+
+name=faad2
+version=2.0
+release=2
+source=(http://dl.sourceforge.net/sourceforge/faac/${name}-${version}.tar.gz \
+	$name-$version-gcc4.patch)
+
+build() {
+	cd $name
+	patch -p1 -i $SRC/$name-$version-gcc4.patch
+	touch INSTALL
+	chmod +x bootstrap
+	./bootstrap
+	./configure --prefix=/usr \
+		--enable-mp4v2
+	(cd libfaad && make DESTDIR=$PKG install)
+	(cd common && make DESTDIR=$PKG install)
+}
