@@ -12,6 +12,10 @@ source=(http://download.bittorrent.com/dl/BitTorrent-$version.tar.gz)
 build() {
 	cd BitTorrent-$version
 	:> makei18n.sh
+	cp BitTorrent/__init__.py{,.orig}
+	sed -i -e '94,95d' BitTorrent/__init__.py
 	python setup.py install --root=$PKG
 	rm -rf $PKG/usr/share/doc $PKG/usr/share/locale
+	cp -f BitTorrent/__init__.py.orig \
+		$PKG/usr/lib/python2.4/site-packages/BitTorrent/__init__.py
 }
