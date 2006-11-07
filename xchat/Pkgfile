@@ -4,7 +4,7 @@
 # Depends on: openssl, gtk, perl
 
 name=xchat
-version=2.6.6
+version=2.6.8
 release=1
 source=(http://www.xchat.org/files/source/2.6/$name-$version.tar.bz2)
 
