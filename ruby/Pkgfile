@@ -5,13 +5,14 @@
 
 name=ruby
 version=1.8.5
-release=1
+release=2
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.8/$name-$version.tar.gz \
-        $name-$version.patch)
+        $name-$version.patch $name-$version-cgi-dos-1.patch)
 
 build () {
     cd $name-$version
     patch -p1 < $SRC/$name-$version.patch
+    patch -p0 < $SRC/$name-$version-cgi-dos-1.patch
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
