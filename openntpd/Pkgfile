@@ -1,4 +1,3 @@
-# $Id: Pkgfile,v 1.5 2005/11/18 18:54:49 jaeger Exp $
 # Description: portable version of openbsd's ntpd implementation
 # URL: http://www.openntpd.org/
 # Maintainer: Matt Housh, jaeger at morpheus dot net

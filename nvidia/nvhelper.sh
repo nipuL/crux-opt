@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# $Id: nvhelper.sh,v 1.1.1.1 2004/08/17 20:01:42 crux Exp $
 
 echo ""
 echo "nvhelper.sh - facilitate renaming/restoring of libGL.so.1.2"
