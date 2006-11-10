@@ -4,7 +4,7 @@
 # Depends on: atk, pango, libtiff, hicolor-icon-theme
 
 name=gtk
-version=2.10.3
+version=2.10.6
 release=1
 source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules)
