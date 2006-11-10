@@ -1,0 +1,19 @@
+# Description: SQL database engine
+# URL:         http://www.sqlite.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ncurses, readline
+
+name=sqlite3
+version=3.3.8
+release=1
+
+source=(http://www.sqlite.org/sqlite-$version.tar.gz)
+
+build () {
+    cd sqlite-$version
+    ./configure --prefix=/usr \
+                --enable-threadsafe \
+                --disable-tcl
+    make
+    make DESTDIR=$PKG install
+}
