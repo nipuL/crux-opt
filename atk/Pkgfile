@@ -4,7 +4,7 @@
 # Depends on: glib
 
 name=atk
-version=1.12.2
+version=1.12.3
 release=1
 source=(http://download.gnome.org/sources/$name/1.12/$name-$version.tar.bz2)
 
