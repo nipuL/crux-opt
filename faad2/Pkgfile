@@ -5,7 +5,7 @@
 
 name=faad2
 version=2.0
-release=2
+release=3
 source=(http://dl.sourceforge.net/sourceforge/faac/${name}-${version}.tar.gz \
 	$name-$version-gcc4.patch)
 
@@ -19,4 +19,5 @@ build() {
 		--enable-mp4v2
 	(cd libfaad && make DESTDIR=$PKG install)
 	(cd common && make DESTDIR=$PKG install)
+	install -m 0644 common/mp4ff/mp4ff_int_types.h $PKG/usr/include
 }
