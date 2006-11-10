@@ -40,30 +40,32 @@ drwxr-xr-x	root/root	usr/include/pango-1.0/pango/
 -rw-r--r--	root/root	usr/include/pango-1.0/pango/pangoxft.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libpango-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libpango-1.0.so -> libpango-1.0.so.0.1400.3
-lrwxrwxrwx	root/root	usr/lib/libpango-1.0.so.0 -> libpango-1.0.so.0.1400.3
--rwxr-xr-x	root/root	usr/lib/libpango-1.0.so.0.1400.3
+lrwxrwxrwx	root/root	usr/lib/libpango-1.0.so -> libpango-1.0.so.0.1400.7
+lrwxrwxrwx	root/root	usr/lib/libpango-1.0.so.0 -> libpango-1.0.so.0.1400.7
+-rwxr-xr-x	root/root	usr/lib/libpango-1.0.so.0.1400.7
 -rwxr-xr-x	root/root	usr/lib/libpangocairo-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libpangocairo-1.0.so -> libpangocairo-1.0.so.0.1400.3
-lrwxrwxrwx	root/root	usr/lib/libpangocairo-1.0.so.0 -> libpangocairo-1.0.so.0.1400.3
--rwxr-xr-x	root/root	usr/lib/libpangocairo-1.0.so.0.1400.3
+lrwxrwxrwx	root/root	usr/lib/libpangocairo-1.0.so -> libpangocairo-1.0.so.0.1400.7
+lrwxrwxrwx	root/root	usr/lib/libpangocairo-1.0.so.0 -> libpangocairo-1.0.so.0.1400.7
+-rwxr-xr-x	root/root	usr/lib/libpangocairo-1.0.so.0.1400.7
 -rw-r--r--	root/root	usr/lib/libpangoft2-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libpangoft2-1.0.so -> libpangoft2-1.0.so.0.1400.3
-lrwxrwxrwx	root/root	usr/lib/libpangoft2-1.0.so.0 -> libpangoft2-1.0.so.0.1400.3
--rwxr-xr-x	root/root	usr/lib/libpangoft2-1.0.so.0.1400.3
+lrwxrwxrwx	root/root	usr/lib/libpangoft2-1.0.so -> libpangoft2-1.0.so.0.1400.7
+lrwxrwxrwx	root/root	usr/lib/libpangoft2-1.0.so.0 -> libpangoft2-1.0.so.0.1400.7
+-rwxr-xr-x	root/root	usr/lib/libpangoft2-1.0.so.0.1400.7
 -rw-r--r--	root/root	usr/lib/libpangox-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libpangox-1.0.so -> libpangox-1.0.so.0.1400.3
-lrwxrwxrwx	root/root	usr/lib/libpangox-1.0.so.0 -> libpangox-1.0.so.0.1400.3
--rwxr-xr-x	root/root	usr/lib/libpangox-1.0.so.0.1400.3
+lrwxrwxrwx	root/root	usr/lib/libpangox-1.0.so -> libpangox-1.0.so.0.1400.7
+lrwxrwxrwx	root/root	usr/lib/libpangox-1.0.so.0 -> libpangox-1.0.so.0.1400.7
+-rwxr-xr-x	root/root	usr/lib/libpangox-1.0.so.0.1400.7
 -rw-r--r--	root/root	usr/lib/libpangoxft-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libpangoxft-1.0.so -> libpangoxft-1.0.so.0.1400.3
-lrwxrwxrwx	root/root	usr/lib/libpangoxft-1.0.so.0 -> libpangoxft-1.0.so.0.1400.3
--rwxr-xr-x	root/root	usr/lib/libpangoxft-1.0.so.0.1400.3
+lrwxrwxrwx	root/root	usr/lib/libpangoxft-1.0.so -> libpangoxft-1.0.so.0.1400.7
+lrwxrwxrwx	root/root	usr/lib/libpangoxft-1.0.so.0 -> libpangoxft-1.0.so.0.1400.7
+-rwxr-xr-x	root/root	usr/lib/libpangoxft-1.0.so.0.1400.7
 drwxr-xr-x	root/root	usr/lib/pango/
 drwxr-xr-x	root/root	usr/lib/pango/1.5.0/
 drwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-arabic-fc.la
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-arabic-fc.so
+-rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-arabic-lang.la
+-rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-arabic-lang.so
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-basic-fc.la
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-basic-fc.so
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-basic-x.la
@@ -74,6 +76,8 @@ drwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-hebrew-fc.so
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-indic-fc.la
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-indic-fc.so
+-rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-indic-lang.la
+-rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-indic-lang.so
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-khmer-fc.la
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-khmer-fc.so
 -rwxr-xr-x	root/root	usr/lib/pango/1.5.0/modules/pango-syriac-fc.la
