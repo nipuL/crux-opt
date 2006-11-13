@@ -1,0 +1,32 @@
+# Description: Cross-platform 3D audio
+# URL: http://www.openal.org/
+# Maintainer: Matt Housh, jaeger at crux dot nu
+# Depends on: subversion, alsa-lib, libvorbis, libsdl
+
+name=openal
+version=svn
+release=2
+source=()
+
+build() {
+	if [ -d $PKGMK_SOURCE_DIR/$name ]
+	then
+		svn update --config-dir . $PKGMK_SOURCE_DIR/$name
+	else
+		svn co --config-dir . \
+			http://www.openal.org/repos/openal/trunk/OpenAL-Sample \
+			$PKGMK_SOURCE_DIR/$name
+	fi
+	cp -a $PKGMK_SOURCE_DIR/$name $SRC/
+
+	cd $name
+	./autogen.sh
+	./configure --prefix=/usr \
+		--exec-prefix=/usr \
+		--enable-optimization \
+		--enable-alsa \
+		--enable-vorbis \
+		--enable-sdl
+	make
+	make DESTDIR=$PKG install
+}
