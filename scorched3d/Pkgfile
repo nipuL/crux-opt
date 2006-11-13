@@ -4,15 +4,17 @@
 # Depends on: sdl_mixer, sdl_net, wxgtk, freealut
 
 name=scorched3d
-version=40
+version=40.1c
 release=1
-source=(http://dl.sourceforge.net/$name/Scorched3D-$version-src.tar.gz)
+source=(http://dl.sourceforge.net/$name/Scorched3D-$version-src.tar.gz \
+	$name-freealut.patch)
 
 build() {
 	cd scorched
+	patch -p0 -i $SRC/$name-freealut.patch
 	./configure	--prefix=/usr \
 		--datadir=/usr/share/$name
-	sed -i -e 's/\(^LIBS = .*\)/\1 -lalut/' src/scorched/Makefile
+	#sed -i -e 's/\(^LIBS = .*\)/\1 -lalut/' src/scorched/Makefile
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/$name/documentation
