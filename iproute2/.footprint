@@ -6,6 +6,23 @@ drwxr-xr-x	root/root	etc/iproute2/
 -rw-r--r--	root/root	etc/iproute2/rt_realms
 -rw-r--r--	root/root	etc/iproute2/rt_scopes
 -rw-r--r--	root/root	etc/iproute2/rt_tables
+drwxr-xr-x	root/root	sbin/
+-rwxr-xr-x	root/root	sbin/arpd
+lrwxrwxrwx	root/root	sbin/ctstat -> lnstat
+-rwxr-xr-x	root/root	sbin/genl
+-rwxr-xr-x	root/root	sbin/ifcfg
+-rwxr-xr-x	root/root	sbin/ifstat
+-rwxr-xr-x	root/root	sbin/ip
+-rwxr-xr-x	root/root	sbin/lnstat
+-rwxr-xr-x	root/root	sbin/nstat
+-rwxr-xr-x	root/root	sbin/routef
+-rwxr-xr-x	root/root	sbin/routel
+-rwxr-xr-x	root/root	sbin/rtacct
+-rwxr-xr-x	root/root	sbin/rtmon
+-rwxr-xr-x	root/root	sbin/rtpr
+lrwxrwxrwx	root/root	sbin/rtstat -> lnstat
+-rwxr-xr-x	root/root	sbin/ss
+-rwxr-xr-x	root/root	sbin/tc
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/tc/
@@ -31,19 +48,3 @@ lrwxrwxrwx	root/root	usr/man/man8/tc-pfifo.8.gz -> tc-pbfifo.8.gz
 -rw-r--r--	root/root	usr/man/man8/tc-sfq.8.gz
 -rw-r--r--	root/root	usr/man/man8/tc-tbf.8.gz
 -rw-r--r--	root/root	usr/man/man8/tc.8.gz
-drwxr-xr-x	root/root	usr/sbin/
--rwxr-xr-x	root/root	usr/sbin/arpd
-lrwxrwxrwx	root/root	usr/sbin/ctstat -> lnstat
--rwxr-xr-x	root/root	usr/sbin/ifcfg
--rwxr-xr-x	root/root	usr/sbin/ifstat
--rwxr-xr-x	root/root	usr/sbin/ip
--rwxr-xr-x	root/root	usr/sbin/lnstat
--rwxr-xr-x	root/root	usr/sbin/nstat
--rwxr-xr-x	root/root	usr/sbin/routef
--rwxr-xr-x	root/root	usr/sbin/routel
--rwxr-xr-x	root/root	usr/sbin/rtacct
--rwxr-xr-x	root/root	usr/sbin/rtmon
--rwxr-xr-x	root/root	usr/sbin/rtpr
-lrwxrwxrwx	root/root	usr/sbin/rtstat -> lnstat
--rwxr-xr-x	root/root	usr/sbin/ss
--rwxr-xr-x	root/root	usr/sbin/tc
