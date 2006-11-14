@@ -5,7 +5,7 @@
 
 name=screen
 version=4.0.3
-release=1
+release=2
 source=(ftp://ftp.uni-erlangen.de/pub/utilities/$name/$name-$version.tar.gz)
 
 build () {
@@ -14,4 +14,5 @@ build () {
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/info
+    chmod -s $PKG/usr/bin/$name-$version
 }
