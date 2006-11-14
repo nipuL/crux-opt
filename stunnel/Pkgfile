@@ -4,9 +4,9 @@
 # Depends on:  openssl, zlib, tcp_wrappers
 
 name=stunnel
-version=4.16
+version=4.19
 release=1
-source=(http://www.stunnel.org/download/stunnel/src/$name-$version.tar.gz \
+source=(ftp://stunnel.mirt.net/stunnel/$name-$version.tar.gz \
         $name-config.patch $name)
 
 build () {
