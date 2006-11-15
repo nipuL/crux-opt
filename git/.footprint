@@ -37,6 +37,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-fetch
 -rwxr-xr-x	root/root	usr/bin/git-fetch-pack
 -rwxr-xr-x	root/root	usr/bin/git-fmt-merge-msg
+-rwxr-xr-x	root/root	usr/bin/git-for-each-ref
 -rwxr-xr-x	root/root	usr/bin/git-format-patch
 -rwxr-xr-x	root/root	usr/bin/git-fsck-objects
 -rwxr-xr-x	root/root	usr/bin/git-get-tar-commit-id
@@ -74,6 +75,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-name-rev
 -rwxr-xr-x	root/root	usr/bin/git-pack-objects
 -rwxr-xr-x	root/root	usr/bin/git-pack-redundant
+-rwxr-xr-x	root/root	usr/bin/git-pack-refs
 -rwxr-xr-x	root/root	usr/bin/git-parse-remote
 -rwxr-xr-x	root/root	usr/bin/git-patch-id
 -rwxr-xr-x	root/root	usr/bin/git-peek-remote
@@ -105,6 +107,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-show
 -rwxr-xr-x	root/root	usr/bin/git-show-branch
 -rwxr-xr-x	root/root	usr/bin/git-show-index
+-rwxr-xr-x	root/root	usr/bin/git-show-ref
 -rwxr-xr-x	root/root	usr/bin/git-ssh-fetch
 -rwxr-xr-x	root/root	usr/bin/git-ssh-pull
 -rwxr-xr-x	root/root	usr/bin/git-ssh-push
@@ -178,6 +181,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-fetch-pack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fetch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fmt-merge-msg.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-for-each-ref.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-format-patch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fsck-objects.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-get-tar-commit-id.1.gz
@@ -209,6 +213,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-p4import.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-pack-objects.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-pack-redundant.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-pack-refs.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-parse-remote.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-patch-id.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-peek-remote.1.gz
@@ -238,6 +243,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-shortlog.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-show-branch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-show-index.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-show-ref.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-show.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-ssh-fetch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-ssh-upload.1.gz
