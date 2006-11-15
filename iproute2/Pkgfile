@@ -1,4 +1,4 @@
-x# Description: a collection of utilites for controlling TCP/IP networking and traffic in Linux
+# Description: a collection of utilites for controlling TCP/IP networking and traffic in Linux
 # URL: http://linux-net.osdl.org/index.php/Iproute2
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Mikhail Kolesnik, mike at openbunker dot org
