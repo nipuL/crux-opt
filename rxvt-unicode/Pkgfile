@@ -1,7 +1,7 @@
 # Description: rxvt fork with unicode and xft support
 # URL: http://software.schmorp.de/#rxvt-unicode
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: x11, perl
+# Depends on: xorg-libxft, xorg-libxpm, perl
 
 name=rxvt-unicode
 version=8.0
