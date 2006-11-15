@@ -1,8 +1,0 @@
-52ad69832db5c36c7041f90625ed4598  X11R6.9.0-src.tar.bz2
-350fcd02934035da94f73f2b39e24fc9  host.def
-3196b65d8c4416cad412a0c49d75c461  x11-6.9.0-linux_config.patch
-5527ad8177942a919981d4fba690879a  x11-6.9.0-xterm256.patch
-7c0c53f1c7ffd97b429eda1eefdff9cb  x11r6.9.0-cidfonts.diff
-de85e59b8906f76a52ec9162ec6c0b63  x11r6.9.0-geteuid.diff
-d666925bfe3d76156c399091578579ae  x11r6.9.0-mitri.diff
-05f76e7c05dcda1dcb065e2f1eeaa88f  xdm
