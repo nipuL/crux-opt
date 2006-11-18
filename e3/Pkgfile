@@ -1,0 +1,23 @@
+# Description: Tiny text editor written in assembler
+# URL: http://www.sax.de/~adlibit/
+# Maintainer: Simone Rota, sip at varlock dot com
+# Packager: Simone Rota, sip at varlock dot com
+# Depends on:
+
+name=e3
+version=2.7.0
+release=2
+source=(http://www.sax.de/~adlibit/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	sed -i 's|DEFAULT_MODE WS|DEFAULT_MODE PI|g' e3.h
+	sed -i 's|%define UTF8||g' e3.h
+	make
+	make PREFIX=$PKG/usr install
+	
+	rm $PKG/usr/bin/e3{em,ne,pi,vi,ws}
+	ln -sf /usr/bin/e3 $PKG/usr/bin/e3em
+	ln -sf /usr/bin/e3 $PKG/usr/bin/e3pi
+	ln -sf /usr/bin/e3 $PKG/usr/bin/e3vi
+}
