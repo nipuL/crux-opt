@@ -4,7 +4,7 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=2.2.9
+version=2.2.10
 release=1
 source=(http://sylpheed.sraoss.jp/sylpheed/v2.2/$name-$version.tar.bz2)
 
@@ -17,5 +17,10 @@ build () {
                 --enable-gpgme
     make
     make DESTDIR=$PKG install
-    rm -r $PKG/usr/share
+    
+    install -d $PKG/usr/share/{applications,pixmaps}
+    install -m 0644 sylpheed.desktop $PKG/usr/share/applications
+    install -m 0644 sylpheed.png $PKG/usr/share/pixmaps
+    
+    rm -r $PKG/usr/share/{locale,sylpheed}
 }

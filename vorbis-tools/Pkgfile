@@ -6,11 +6,15 @@
 
 name=vorbis-tools
 version=1.1.1
-release=1
-source=(http://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz)
+release=2
+source=(http://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz \
+        $name.diff)
 
 build() {
 	cd $name-$version
+
+	patch -p0 -i $SRC/$name.diff
+
 	./configure --prefix=/usr --disable-nls --enable-vcut
 	make
 	make DESTDIR=$PKG install
