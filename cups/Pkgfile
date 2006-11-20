@@ -4,7 +4,7 @@
 # Depends on:  libpng, libtiff, openssl
 
 name=cups
-version=1.2.6
+version=1.2.7
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
@@ -21,7 +21,7 @@ build () {
                 --with-cups-user=daemon \
                 --with-cups-group=lp \
                 --with-languages="" \
-                --without-{jave,perl,php,python} \
+                --without-{java,perl,php,python} \
                 --enable-threads \
                 --enable-ssl=yes \
                 --enable-pam=no
