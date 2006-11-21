@@ -5,14 +5,16 @@
 
 name=mc
 version=4.6.1
-release=1
-source=(http://www.ibiblio.org/pub/Linux/utils/file/managers/$name/$name-$version.tar.gz)
+release=2
+source=(http://www.ibiblio.org/pub/Linux/utils/file/managers/$name/$name-$version.tar.gz \
+       $name-$version-bash_3_2.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version-bash_3_2.patch
     ./configure --prefix=/usr --disable-nls 
     make
     make DESTDIR=$PKG install
-    rm $PKG/usr/share/mc/mc.hint.*
+    rm $PKG/usr/share/mc/{mc.hint.*,extfs/README}
     rm -r $PKG/usr/{sbin,man/man8}
 }
