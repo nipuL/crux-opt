@@ -13,6 +13,7 @@ build() {
 	cd $name-$version
 	sed -i 's|DEFAULT_MODE WS|DEFAULT_MODE PI|g' e3.h
 	sed -i 's|%define UTF8||g' e3.h
+	sed -i 's|%define MAKE_BACKUP||g' e3.h
 	make
 	make PREFIX=$PKG/usr install
 	

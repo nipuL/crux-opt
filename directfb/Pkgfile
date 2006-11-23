@@ -5,7 +5,7 @@
 name=directfb
 version=0.9.25.1
 release=1
-source=(http://www.directfb.org/download/DirectFB/DirectFB-$version.tar.gz)
+source=(http://www.directfb.org/downloads/Old/DirectFB-$version.tar.gz)
 
 build() {
 	local EXTRA_ARGS
