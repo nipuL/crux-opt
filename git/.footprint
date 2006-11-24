@@ -236,6 +236,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-rev-parse.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-revert.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-rm.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-runstatus.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-send-email.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-send-pack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-sh-setup.1.gz
