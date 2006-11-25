@@ -1,10 +1,10 @@
-# Description: Python interpreter
+# Description: Python interpreter, version 2.5
 # URL:         http://www.python.org
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=python
-version=2.4.4
+version=2.5
 release=1
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
         $name-$version.patch)
@@ -13,7 +13,6 @@ build () {
     cd Python-$version
     
     patch -p1 < $SRC/$name-$version.patch
-    
     ./configure --prefix=/usr \
                 --enable-shared \
                 --with-threads \
@@ -21,12 +20,13 @@ build () {
     make 
     make DESTDIR=$PKG install
     
-    ln -sf python2.4 $PKG/usr/bin/python
-    ln -sf python2.4 $PKG/usr/lib/python
-    ln -sf python2.4 $PKG/usr/include/python
+    ln -sf python2.5 $PKG/usr/bin/python
+    ln -sf python2.5 $PKG/usr/lib/python
+    ln -sf python2.5 $PKG/usr/include/python
     
-    rm -r $PKG/usr/lib/python/{email,bsddb}/test
+    rm -r $PKG/usr/lib/python/{bsddb,ctypes,email,sqlite3}/test
     rm -r $PKG/usr/lib/python/distutils/tests
     rm $PKG/usr/lib/python/{distutils,site-packages,test}/README
     rm $PKG/usr/lib/python/idlelib/{ChangeLog,{NEWS,README,TODO}.txt}
+    rm $PKG/usr/lib/python/ctypes/macholib/README.ctypes
 }
