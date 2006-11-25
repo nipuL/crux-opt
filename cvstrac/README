@@ -1,9 +1,0 @@
-README for cvstrac 1.2.x
-
-As of version 1.2 cvstrac supports subversion and cvs as 
-SCM backends. Git is possible as well, but untested by me. 
-
-To use cvstrac for a subversion repository just call it as 
-/usr/bin/svntrac, which is a symlink to cvstrac. See also 
-/etc/rc.d/cvstrac and /var/www/cgi-bin/cvstrac.cgi.
- 
