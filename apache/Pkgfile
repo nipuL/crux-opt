@@ -1,19 +1,21 @@
 # Description: Apache HTTP server version 2.0.x
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # URL:         http://httpd.apache.org/
-# Depends on:  apr, db, expat, gdbm, openssl, zlib
+# Depends on:  apr, openssl, zlib
 # Group:       apache
 
 name=apache
-version=2.0.59
+version=2.2.3
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         $name-ssl_cert.patch crux.layout apache)
 
 build(){
    cd httpd-$version
+
    patch -p1 < $SRC/$name-ssl_cert.patch
    cat $SRC/crux.layout >> config.layout
+
    ./configure --enable-layout=CRUX \
                --with-apr=/usr \
                --with-apr-util=/usr \
@@ -21,9 +23,6 @@ build(){
                --enable-modules=all \
                --enable-mods-shared=all \
                --enable-ssl \
-               --enable-deflate \
-               --with-gdbm \
-               --with-expat=/usr \
                --with-mpm=prefork
    make 
    make DESTDIR=$PKG install
@@ -33,7 +32,8 @@ build(){
    touch $PKG/etc/ssl/certs/apache.crt
    install -D -m 755 $SRC/apache $PKG/etc/rc.d/apache
 
-   rm -R $PKG/var/www/htdocs/*
+   sed -ri '/^(User|Group)/s/daemon/www/' $PKG/etc/apache/httpd.conf
+   sed -i '1s|local/||' $PKG/var/www/cgi-bin/printenv
+   rm -R $PKG/{var/www/htdocs/*,usr/bin}
    rm $PKG/var/www/{error,icons,icons/small}/README*
-   chown -R root:root $PKG
 }
