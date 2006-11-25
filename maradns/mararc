@@ -44,26 +44,19 @@ ipv4_alias["icann"] += "192.203.230.10,192.5.5.241,192.112.36.4,"
 ipv4_alias["icann"] += "128.63.2.53,192.36.148.17,192.58.128.30,"
 ipv4_alias["icann"] += "193.0.14.129,198.32.64.12,202.12.27.33"
 
-# OSRC: http://www.open-rsc.org/
-ipv4_alias["osrc"]  = "199.166.24.1,205.189.73.102,199.166.24.3,"
-ipv4_alias["osrc"] += "207.126.103.16,195.117.6.10,205.189.73.10,"
-ipv4_alias["osrc"] += "204.57.55.100,213.196.2.97"
-
-# AlterNIC: http://www.alternic.org/
-ipv4_alias["alternic"]  = "160.79.129.192,24.6.78.12,160.79.133.70,"
-ipv4_alias["alternic"] += "65.15.8.202,216.162.42.240,195.224.64.190,"
-ipv4_alias["alternic"] += "160.79.133.66,216.162.42.185"
-
-# OpenNIC: http://www.opennic.unrated.net/
-ipv4_alias["opennic"]  = "131.161.247.226,209.151.84.102,64.247.218.140,"
-ipv4_alias["opennic"] += "64.247.218.149,209.104.33.250,209.104.63.249,"
-ipv4_alias["opennic"] += "209.151.84.103,199.175.137.211,207.6.128.246,"
-ipv4_alias["opennic"] += "65.243.92.254"
+# ORSN, Open Root Server Network (http://www.orsn.org)
+ipv4_alias["orsn"]  = "217.146.128.77,193.238.157.7,212.7.160.13,195.226.7.66,"
+ipv4_alias["orsn"] += "213.161.0.90,193.138.173.218,82.102.0.9,213.144.148.130,"
+ipv4_alias["orsn"] += "194.116.123.194,193.93.167.222,217.173.157.225,"
+ipv4_alias["orsn"] += "192.83.249.100,213.145.82.34"
 
 root_servers = {}
-root_servers["."] = "icann"
+root_servers["."] = "orsn"
 
 # upstream_servers = {}
 # upstream_servers["."] = "usually_your_isps_dns_servers"
+# ORSN, puplic nameservers
+# upstream_servers["."] = "217.146.139.5,62.157.101.211"
+
 
 # End of file
