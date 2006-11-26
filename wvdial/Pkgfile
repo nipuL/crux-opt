@@ -5,13 +5,14 @@
 
 name=wvdial
 version=1.56
-release=1
+release=2
 source=(http://open.nit.ca/download/$name-$version.tar.gz \
         http://open.nit.ca/download/wvstreams-4.2.2.tar.gz \
-        $name-$version.patch)
+        wvstreams-4.2.2-gcc41.patch $name-$version.patch)
 
 build() {
     cd wvstreams-4.2.2
+    patch -p1 -i $SRC/wvstreams-4.2.2-gcc41.patch
     ./configure --prefix=/usr \
                 --enable-verbose \
                 --without-{bdb,qdbm,pam,tcl,telephony,swig,qt,openslp}
