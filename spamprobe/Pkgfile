@@ -4,9 +4,10 @@
 
 name=spamprobe
 version=1.4b
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
-        http://www.mission-base.com/peter/source/pbl_1_03.tar.gz)
+        http://www.mission-base.com/peter/source/pbl_1_03.tar.gz \
+        $name-$version-gcc41.patch)
 
 build () {
     cd pbl_1_03
@@ -14,6 +15,7 @@ build () {
     make
  
     cd $SRC/$name-$version
+    patch -p1 -i $SRC/$name-$version-gcc41.patch
     ./configure --prefix=/usr \
                 --with-pbl=$SRC/pbl_1_03 \
                 --enable-default-8-bit
