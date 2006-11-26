@@ -5,13 +5,14 @@
 
 name=vsftpd
 version=2.0.5
-release=1
+release=2
 source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
-        $name-config.patch vsftpd)
+        $name-config.patch $name-$version-syscall.patch vsftpd)
 
 build () {
     cd $name-$version
-    patch -p1 < $SRC/$name-config.patch    
+    patch -p1 -i $SRC/$name-$version-syscall.patch
+    patch -p1 -i $SRC/$name-config.patch
     make
     make DESTDIR=$PKG install
 
