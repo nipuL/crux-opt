@@ -1,11 +1,11 @@
 # Description: 3D-style graphics library for X 
 # URL:         http://freshmeat.net/projects/xaw3d
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  x11
+# Depends on:  xorg, xorg-imake
 
 name=xaw3d
 version=1.5
-release=3
+release=4
 source=(ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/Xaw3d-$version.tar.gz \
         $name-$version.patch)
 
