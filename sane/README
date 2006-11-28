@@ -3,8 +3,9 @@ README for sane 1.0.x
 REQUIREMENTS
 
 PRE-INSTALL
-  1. If you're using an USB scanner, create the group 'scanner' and 
-     add all users which need access to your device.
+  1. Create the group 'scanner' and add all users which need access to your device.
+ 
+     # groupadd scanner
 
 POST-INSTALL
   1. To find the vendor/product id of your scanner, run the command:
