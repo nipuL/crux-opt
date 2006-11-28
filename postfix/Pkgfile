@@ -19,8 +19,8 @@ build() {
     make tidy
     make makefiles DEBUG="" OPT="$CFLAGS" CCARGS="$_CCARGS" AUXLIBS="$_AUXLIBS"
     make           DEBUG="" OPT="$CFLAGS" CCARGS="$_CCARGS" AUXLIBS="$_AUXLIBS"
-
-    sh ./postfix-install -non-interactive install_root=$PKG \
+    
+    make non-interactive-package install_root=$PKG \
 	mail_owner=mail \
 	setgid_group=postdrop \
 	config_directory=/etc/postfix \
