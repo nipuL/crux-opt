@@ -1,0 +1,20 @@
+# Description: IPC library for the GnuPG components
+# URL: http://www.gnupg.org/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: Simon Gloﬂner, viper at hometux dot de
+# Depends on: libpth
+
+name=libassuan
+version=1.0.1
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share/info
+}
