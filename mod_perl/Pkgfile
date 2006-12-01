@@ -1,12 +1,12 @@
 # Description: Persistent Perl interpreter for the Apache HTTP server
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # URL:         http://perl.apache.org
-# Depends on:  apache
+# Depends on:  apache, perl
 # Group:       apache
 
 name=mod_perl
-version=2.0.2
-release=3
+version=2.0.3
+release=1
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
 build(){
