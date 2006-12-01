@@ -91,6 +91,7 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/CmdParms.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/Command.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/Connection.pm
+-r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/ConnectionUtil.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/Const.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/Directive.pm
 -r--r--r--	root/root	usr/lib/perl5/site_perl/5.8.8/linux/Apache2/Filter.pm
@@ -207,6 +208,8 @@ drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Command/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Command/Command.so
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Connection/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Connection/Connection.so
+drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/ConnectionUtil/
+-r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/ConnectionUtil/ConnectionUtil.so
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Const/
 -r-xr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Const/Const.so
 drwxr-xr-x	root/root	usr/lib/perl5/site_perl/5.8.8/linux/auto/Apache2/Directive/
@@ -284,6 +287,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Apache2::CmdParms.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Command.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Connection.3pm.gz
+-r--r--r--	root/root	usr/man/man3/Apache2::ConnectionUtil.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Const.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Directive.3pm.gz
 -r--r--r--	root/root	usr/man/man3/Apache2::Filter.3pm.gz

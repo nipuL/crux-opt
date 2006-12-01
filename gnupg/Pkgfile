@@ -6,7 +6,7 @@
 
 name=gnupg
 version=2.0.1
-release=1
+release=2
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
 
 build () {
@@ -26,6 +26,7 @@ build () {
 
     chmod u+s $PKG/usr/bin/gpg2
     ln -s /usr/bin/gpg2 $PKG/usr/bin/gpg
+    ln -s /usr/man/man1/gpg2.1.gz $PKG/usr/man/man1/gpg.1.gz
 
     rm -rf $PKG/usr/share/info
     rm -f $PKG/usr/share/gnupg/{FAQ,faq.html,qualified.txt}
