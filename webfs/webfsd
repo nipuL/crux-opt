@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# /etc/rc.d/httpd: start/stop http daemon
+# /etc/rc.d/httpd: start/stop webfs http daemon
 #
 
 case $1 in
 start)
-	/usr/bin/webfsd -u nobody -g nobody -r /var/www -p 80 -f index.html
+	/usr/bin/webfsd -u www -g www -r /var/www -p 80 -f index.html
 	;;
 stop)
 	killall -q /usr/bin/webfsd
