@@ -1,0 +1,24 @@
+Index: sink.c
+===================================================================
+--- sink.c	(revision 4923)
++++ sink.c	(working copy)
+@@ -1317,14 +1317,14 @@
+     {
+ 	int rc,e,e2,err = 0;
+ 
+-	if (ferror(sinkfp))
+-	    err = 1, e2 = errno;
+-	if ((fflush(sinkfp)))
+-	    err = 1, e2 = errno;
+-
+ 	/* close the delivery pipe, we'll reopen before next message */
+ 	if (sinkfp)
+ 	{
++	    if (ferror(sinkfp))
++		err = 1, e2 = errno;
++	    if ((fflush(sinkfp)))
++		err = 1, e2 = errno;
++
+ 	    errno = 0;
+ 	    rc = pclose(sinkfp);
+ 	    e = errno;

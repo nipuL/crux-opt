@@ -4,12 +4,19 @@
 # Depends on:  gdbm
 
 name=maildrop
-version=1.8.1
+version=2.0.2
 release=1
-source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2)
+source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2 \
+        ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-6.7.tar.bz2)
 
 build () {
-    cd $name-$version
+    cd pcre-6.7 
+    ./configure --prefix=/ --enable-shared=no
+    make
+    make DESTDIR=$SRC install
+
+    cd $SRC/$name-$version
+    CPPFLAGS="-I$SRC/include" LDFLAGS="-L$SRC/lib" \
     ./configure --prefix=/usr \
                 --with-db=gdbm \
                 --disable-tempdir
