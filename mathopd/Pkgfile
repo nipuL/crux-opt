@@ -4,9 +4,9 @@
 
 name=mathopd
 version=1.5p5
-release=2
+release=3
 source=(http://www.mathopd.org/dist/$name-$version.tar.gz \
-        http://jue.li/misc/dir_cgi/dir_cgi-1.0.tar.gz \        
+        http://jue.li/misc/dir_cgi/dir_cgi-1.1.tar.gz \        
         http://www.mathopd.org/doc/mathopd.8.gz \
         http://www.mathopd.org/doc/mathopd.conf.5.gz \
         mathopd.conf mathopd)
@@ -22,8 +22,8 @@ build () {
     install -m 755 $SRC/mathopd $PKG/etc/rc.d
     install -m 644 $SRC/mathopd.8.gz $PKG/usr/man/man8
     install -m 644 $SRC/mathopd.conf.5.gz $PKG/usr/man/man5
-    install -d -o nobody -g nobody $PKG/var/log/mathopd
+    install -d -o www -g www $PKG/var/log/mathopd
 
-    cd $SRC/dir_cgi-1.0
+    cd $SRC/dir_cgi-1.1
     make DESTDIR=$PKG install
 }
