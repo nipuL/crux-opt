@@ -58,9 +58,9 @@ drwxr-xr-x	root/root	usr/include/fontconfig/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfontconfig.a
 -rwxr-xr-x	root/root	usr/lib/libfontconfig.la
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.1.0
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.1.0
--rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.1.0
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.2.0
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.2.0
+-rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.2.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x	root/root	usr/man/
@@ -108,7 +108,6 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcConfigGetFontDirs.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigGetFonts.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigGetRescanInverval.3.gz
--rw-r--r--	root/root	usr/man/man3/FcConfigNormalizeFontDir.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigParseAndLoad.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigSetCurrent.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigSetRescanInverval.3.gz
@@ -131,6 +130,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcFreeTypeCharIndex.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcFreeTypeCharSet.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcFreeTypeQuery.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcFreeTypeQueryFace.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcGetVersion.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcInit.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcInitBringUptoDate.3.gz
