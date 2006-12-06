@@ -4,15 +4,14 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.8.5
-release=2
+version=1.8.5-p2
+release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.8/$name-$version.tar.gz \
-        $name-$version.patch $name-$version-cgi-dos-1.patch)
+        $name-1.8.5.patch)
 
 build () {
     cd $name-$version
-    patch -p1 < $SRC/$name-$version.patch
-    patch -p0 < $SRC/$name-$version-cgi-dos-1.patch
+    patch -p1 < $SRC/$name-1.8.5.patch
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
