@@ -4,13 +4,14 @@
 # Depends on: libdaemon, dbus, dbus-python, pygtk, libglade
 
 name=avahi
-version=0.6.13
+version=0.6.15
 release=1
 source=(http://avahi.org/download/$name-$version.tar.gz \
-	rc.$name)
+	rc.$name $name-dbus-major-version.patch)
 
 build() {
 	cd $name-$version
+	patch avahi-daemon/dbus-protocol.c -i $SRC/$name-dbus-major-version.patch
 	./configure --prefix=/usr \
 		--localstatedir=/var \
 		--mandir=/usr/man \
