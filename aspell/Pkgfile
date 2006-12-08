@@ -5,7 +5,7 @@
 
 name=aspell
 version=0.60.4
-release=1
+release=2
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz \
         $name-$version-gcc41.patch)
 
