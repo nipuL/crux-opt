@@ -3,9 +3,9 @@
 # URL: http://java.sun.com
 
 name=jdk
-version=1.5.0_09
+version=1.5.0_10
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-1_5_0_09-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-1_5_0_10-dlj-linux-i586.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib

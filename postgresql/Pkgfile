@@ -5,9 +5,9 @@
 # Depends on:
 
 name=postgresql
-version=8.1.5
+version=8.2.0
 release=1
-source=(ftp://ftp7.de.postgresql.org/pub/ftp.postgresql.org/source/v$version/$name-$version.tar.bz2 postgresql)
+source=(ftp://ftp7.de.postgresql.org/pub/ftp.postgresql.org/source/v8.2/$name-$version.tar.bz2 postgresql)
 
 build() {
 	cd $name-$version

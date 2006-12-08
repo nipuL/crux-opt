@@ -17,10 +17,12 @@ lrwxrwxrwx	root/root	usr/bin/avahi-resolve-host-name -> avahi-resolve
 -rwxr-xr-x	root/root	usr/bin/avahi-set-host-name
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/avahi/
+-rwxr-xr-x	root/root	usr/etc/avahi/avahi-autoipd.action
 -rw-r--r--	root/root	usr/etc/avahi/avahi-daemon.conf
 -rwxr-xr-x	root/root	usr/etc/avahi/avahi-dnsconfd.action
 -rw-r--r--	root/root	usr/etc/avahi/hosts
 drwxr-xr-x	root/root	usr/etc/avahi/services/
+-rw-r--r--	root/root	usr/etc/avahi/services/sftp-ssh.service
 -rw-r--r--	root/root	usr/etc/avahi/services/ssh.service
 drwxr-xr-x	root/root	usr/etc/dbus-1/
 drwxr-xr-x	root/root	usr/etc/dbus-1/system.d/
@@ -84,14 +86,14 @@ drwxr-xr-x	root/root	usr/include/avahi-glib/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libavahi-client.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-client.la
-lrwxrwxrwx	root/root	usr/lib/libavahi-client.so -> libavahi-client.so.3.2.0
-lrwxrwxrwx	root/root	usr/lib/libavahi-client.so.3 -> libavahi-client.so.3.2.0
--rwxr-xr-x	root/root	usr/lib/libavahi-client.so.3.2.0
+lrwxrwxrwx	root/root	usr/lib/libavahi-client.so -> libavahi-client.so.3.2.1
+lrwxrwxrwx	root/root	usr/lib/libavahi-client.so.3 -> libavahi-client.so.3.2.1
+-rwxr-xr-x	root/root	usr/lib/libavahi-client.so.3.2.1
 -rw-r--r--	root/root	usr/lib/libavahi-common.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-common.la
-lrwxrwxrwx	root/root	usr/lib/libavahi-common.so -> libavahi-common.so.3.4.2
-lrwxrwxrwx	root/root	usr/lib/libavahi-common.so.3 -> libavahi-common.so.3.4.2
--rwxr-xr-x	root/root	usr/lib/libavahi-common.so.3.4.2
+lrwxrwxrwx	root/root	usr/lib/libavahi-common.so -> libavahi-common.so.3.4.3
+lrwxrwxrwx	root/root	usr/lib/libavahi-common.so.3 -> libavahi-common.so.3.4.3
+-rwxr-xr-x	root/root	usr/lib/libavahi-common.so.3.4.3
 -rw-r--r--	root/root	usr/lib/libavahi-core.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-core.la
 lrwxrwxrwx	root/root	usr/lib/libavahi-core.so -> libavahi-core.so.4.0.4
@@ -146,10 +148,13 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/avahi.hosts.5.gz
 -rw-r--r--	root/root	usr/man/man5/avahi.service.5.gz
 drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/avahi-autoipd.8.gz
+-rw-r--r--	root/root	usr/man/man8/avahi-autoipd.action.8.gz
 -rw-r--r--	root/root	usr/man/man8/avahi-daemon.8.gz
 -rw-r--r--	root/root	usr/man/man8/avahi-dnsconfd.8.gz
 -rw-r--r--	root/root	usr/man/man8/avahi-dnsconfd.action.8.gz
 drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/avahi-autoipd
 -rwxr-xr-x	root/root	usr/sbin/avahi-daemon
 -rwxr-xr-x	root/root	usr/sbin/avahi-dnsconfd
 drwxr-xr-x	root/root	usr/share/

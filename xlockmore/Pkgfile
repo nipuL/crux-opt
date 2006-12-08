@@ -5,9 +5,9 @@
 # Depends on: x11, fortune
 
 name=xlockmore
-version=5.20.1
+version=5.23
 release=1
-source=(ftp://ftp.tux.org/pub/tux/bagleyd/$name/$name-$version.tar.bz2)
+source=(http://www.tux.org/pub/tux/xlockmore/$name-$version.tar.bz2)
 
 build(){
 	cd $name-$version
