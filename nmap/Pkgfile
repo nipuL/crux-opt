@@ -4,7 +4,7 @@
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=nmap
-version=4.11
+version=4.20
 release=1
 source=(http://download.insecure.org/$name/dist/$name-$version.tar.bz2)
 

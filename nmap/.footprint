@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/nmap/
 -rw-r--r--	root/root	usr/share/nmap/nmap-mac-prefixes
+-rw-r--r--	root/root	usr/share/nmap/nmap-os-db
 -rw-r--r--	root/root	usr/share/nmap/nmap-os-fingerprints
 -rw-r--r--	root/root	usr/share/nmap/nmap-protocols
 -rw-r--r--	root/root	usr/share/nmap/nmap-rpc
