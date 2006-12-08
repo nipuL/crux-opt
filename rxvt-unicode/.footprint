@@ -11,6 +11,7 @@ drwxr-xr-x	root/root	usr/lib/urxvt/perl/
 -rw-r--r--	root/root	usr/lib/urxvt/perl/digital-clock
 -rw-r--r--	root/root	usr/lib/urxvt/perl/example-refresh-hooks
 -rw-r--r--	root/root	usr/lib/urxvt/perl/kuake
+-rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard
 -rw-r--r--	root/root	usr/lib/urxvt/perl/matcher
 -rw-r--r--	root/root	usr/lib/urxvt/perl/option-popup
 -rw-r--r--	root/root	usr/lib/urxvt/perl/readline
