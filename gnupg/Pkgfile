@@ -13,10 +13,7 @@ source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 \
 build () {
     cd $name-$version
 
-    ( 
-	cd g10
-	patch -p0 < $SRC/filter-context-20-small.diff 
-    )
+    patch -p0 -d g10 -i $SRC/filter-context-20-small.diff
 
     ./configure \
 	--prefix=/usr \
