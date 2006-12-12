@@ -5,9 +5,9 @@
 # Depends on: x11, rpm2targz
 
 name=openoffice
-version=2.0.4
+version=2.1.0
 release=1
-source=(http://ftp-atl.osuosl.org/pub/openoffice/stable/$version/OOo_${version}_LinuxIntel_install.tar.gz)
+source=(http://ftp.plusline.de/OpenOffice/stable/$version/OOo_${version}_LinuxIntel_install_en-US.tar.gz)
 
 build() {
 	cd OO*/RPMS
