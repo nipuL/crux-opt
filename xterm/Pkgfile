@@ -7,10 +7,8 @@
 name=xterm
 version=223
 release=1
-source="
-    ftp://invisible-island.net/xterm/xterm-$version.tgz
-    configure.diff
-"
+source=(ftp://invisible-island.net/xterm/xterm-$version.tgz \
+    configure.diff)
 
 build()
 {
