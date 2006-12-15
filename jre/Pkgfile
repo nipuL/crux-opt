@@ -3,9 +3,9 @@
 # URL: http://java.sun.com
 
 name=jre
-version=1.5.0_10
+version=1.6.0
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-1_5_0_10-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6-dlj-linux-i586.bin)
 
 build(){
 	sh $SRC/jdk-*.bin --accept-license --unpack
@@ -14,8 +14,8 @@ build(){
 	rm jre/lib/*/libsaproc.so
 
 	mkdir -p jre/man/man1	
-	man=(java javaws keytool kinit klist ktab orbd pack200 policytool \
-		rmid rmiregistry servertool tnameserv unpack200)
+	man=(java javaws keytool orbd policytool \
+		rmid rmiregistry servertool tnameserv)
 	for f in ${man[@]}; do
 		cp man/man1/$f.1 jre/man/man1
 	done

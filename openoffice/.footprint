@@ -267,6 +267,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/sandbox.jar -> sandbox.j
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/sandbox.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/sdbc_hsqldb.jar -> sdbc_hsqldb.jar.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/sdbc_hsqldb.jar.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/serializer.jar -> serializer.jar.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/classes/serializer.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/table.jar -> table.jar.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/table.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/unoil.jar -> unoil.jar.1.1
@@ -276,14 +278,14 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/unoloader.jar -> unoload
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/web.jar -> web.jar.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/web.jar.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/writer2latex.jar
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xalan.jar -> xalan.jar.1
--r--r--r--	root/root	usr/lib/openoffice/program/classes/xalan.jar.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xercesImpl.jar -> xercesImpl.jar.1
--r--r--r--	root/root	usr/lib/openoffice/program/classes/xercesImpl.jar.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xalan.jar -> xalan.jar.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/classes/xalan.jar.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xercesImpl.jar -> xercesImpl.jar.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/classes/xercesImpl.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xmerge.jar -> xmerge.jar.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/xmerge.jar.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xml-apis.jar -> xml-apis.jar.1
--r--r--r--	root/root	usr/lib/openoffice/program/classes/xml-apis.jar.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xml-apis.jar -> xml-apis.jar.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/classes/xml-apis.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xt.jar -> xt.jar.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/xt.jar.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/cmdmail.uno.so -> cmdmail.uno.so.1.1
@@ -864,7 +866,6 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/nestedreg.uno.so -> nestedreg.un
 -r--r--r--	root/root	usr/lib/openoffice/program/nestedreg.uno.so.1.1
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/nsplugin
 -r--r--r--	root/root	usr/lib/openoffice/program/officehelper.py
--r--r--r--	root/root	usr/lib/openoffice/program/oo_product.bmp
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/open-url
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/pagein
 -r--r--r--	root/root	usr/lib/openoffice/program/pagein-calc
@@ -2191,6 +2192,17 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartMo
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartModule/toolbar/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartModule/toolbar/standardbar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/de/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/de/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/en-GB/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/en-GB/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/en-US/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/en-US/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/es/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/es/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/fr/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/accelerator/fr/default.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/menubar/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/menubar/menubar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/statusbar/
@@ -2202,6 +2214,17 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/t
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/toolbar/tableobjectbar.xml
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbapp/toolbar/toolbar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/de/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/de/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/en-GB/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/en-GB/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/en-US/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/en-US/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/es/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/es/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/fr/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/accelerator/fr/default.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/menubar/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/menubar/menubar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/toolbar/
@@ -2209,6 +2232,11 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrows
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/toolbar/copyobjectbar.xml
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbbrowser/toolbar/toolbar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/accelerator/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/accelerator/de/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/accelerator/de/default.xml
+drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/accelerator/en-US/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/accelerator/en-US/default.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/menubar/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/menubar/menubar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/dbquery/toolbar/
@@ -2747,8 +2775,10 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_de_CH.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_de_DE.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_en_GB.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_et_EE.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hu_HU.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_de_DE.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_et_EE.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_hu_HU.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_it_IT.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_nl_NL.txt
@@ -2768,12 +2798,15 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/en_GB.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/en_US.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/en_US.dic
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/et_EE.aff
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/et_EE.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hu_HU.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hu_HU.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_da_DK.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_de_DE.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_en_GB.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_en_US.dic
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_et_EE.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_hu_HU.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_it_IT.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_nl_NL.dic
@@ -3662,6 +3695,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Off
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/Scripting.xcs
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/Security.xcs
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/Substitution.xcs
+-r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/TabBrowse.xcs
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/TableWizard.xcs
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/TypeDetection.xcs
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/schema/org/openoffice/Office/UI.xcs
@@ -4051,6 +4085,17 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/pri-mail_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/pri-marine_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt-BR/pri-redline_l.ott
+drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/bus-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/bus-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/bus-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/off-elegant_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/off-modern_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/off-office_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/pri-bottle_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/pri-mail_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/pri-marine_l.ott
+-r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/pt/pri-redline_l.ott
 drwxr-xr-x	root/root	usr/lib/openoffice/share/template/wizard/letter/ru/
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/ru/bus-elegant_l.ott
 -r--r--r--	root/root	usr/lib/openoffice/share/template/wizard/letter/ru/bus-modern_l.ott
@@ -4141,6 +4186,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/xdg/
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/impress.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/math.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/printeradmin.desktop
+-r--r--r--	root/root	usr/lib/openoffice/share/xdg/qstart.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/writer.desktop
 drwxr-xr-x	root/root	usr/lib/openoffice/share/xslt/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/xslt/common/
