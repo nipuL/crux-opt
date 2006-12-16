@@ -6,7 +6,7 @@
 
 name=cyrus-sasl
 version=2.1.22
-release=1
+release=2
 source=(http://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
 	$name-$version-crypt.patch \
         saslauthd)
@@ -37,8 +37,8 @@ build(){
 	mkdir -p \
 	    $PKG/usr/lib/sasl2 \
 	    $PKG/var/sasl/saslauthd \
-	    $PKG/etc/rc.d \
-	    $PKG/usr/man/man8 
+	    $PKG/etc/rc.d
 	
+	install -m 644 saslauthd/saslauthd.mdoc $PKG/usr/man/man8/saslauthd.8
 	install -m 755 $SRC/saslauthd $PKG/etc/rc.d
 }
