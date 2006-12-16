@@ -4,7 +4,7 @@
 # Depends on: libgmp
 
 name=guile
-version=1.8.0
+version=1.8.1
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
@@ -16,5 +16,5 @@ build() {
 		--enable-deprecation=no
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/info
+    rm -rf $PKG/usr/share/info
 }
