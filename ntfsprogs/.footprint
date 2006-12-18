@@ -10,10 +10,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ntfsinfo
 -rwxr-xr-x	root/root	usr/bin/ntfsls
 -rwxr-xr-x	root/root	usr/bin/ntfsmount
-drwxr-xr-x	root/root	usr/etc/
-drwxr-xr-x	root/root	usr/etc/gnome-vfs-2.0/
-drwxr-xr-x	root/root	usr/etc/gnome-vfs-2.0/modules/
--rw-r--r--	root/root	usr/etc/gnome-vfs-2.0/modules/libntfs.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/ntfs/
 -rw-r--r--	root/root	usr/include/ntfs/attrib.h
@@ -50,13 +46,6 @@ drwxr-xr-x	root/root	usr/include/ntfs/
 -rw-r--r--	root/root	usr/include/ntfs/version.h
 -rw-r--r--	root/root	usr/include/ntfs/volume.h
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/gnome-vfs-2.0/
-drwxr-xr-x	root/root	usr/lib/gnome-vfs-2.0/modules/
--rw-r--r--	root/root	usr/lib/gnome-vfs-2.0/modules/libntfs-gnomevfs.a
--rwxr-xr-x	root/root	usr/lib/gnome-vfs-2.0/modules/libntfs-gnomevfs.la
-lrwxrwxrwx	root/root	usr/lib/gnome-vfs-2.0/modules/libntfs-gnomevfs.so -> libntfs-gnomevfs.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/gnome-vfs-2.0/modules/libntfs-gnomevfs.so.1 -> libntfs-gnomevfs.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/gnome-vfs-2.0/modules/libntfs-gnomevfs.so.1.0.0
 -rw-r--r--	root/root	usr/lib/libntfs.a
 -rwxr-xr-x	root/root	usr/lib/libntfs.la
 lrwxrwxrwx	root/root	usr/lib/libntfs.so -> libntfs.so.9.0.0
