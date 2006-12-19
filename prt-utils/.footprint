@@ -32,6 +32,7 @@ drwxr-xr-x	root/root	usr/lib/prtverify/
 -rw-r--r--	root/root	usr/lib/prtverify/20_release_number.awk
 -rw-r--r--	root/root	usr/lib/prtverify/30_file_conflict.awk
 -rw-r--r--	root/root	usr/lib/prtverify/30_file_permissions.awk
+-rw-r--r--	root/root	usr/lib/prtverify/30_filesystem_collisions.awk
 -rw-r--r--	root/root	usr/lib/prtverify/30_invalid_dirs.awk
 -rw-r--r--	root/root	usr/lib/prtverify/30_junk_files.awk
 -rw-r--r--	root/root	usr/lib/prtverify/30_suid_sgid.awk
@@ -49,6 +50,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pkgfoster.1.gz
 -rw-r--r--	root/root	usr/man/man1/pkgsize.1.gz
 -rw-r--r--	root/root	usr/man/man1/portspage.1.gz
+-rw-r--r--	root/root	usr/man/man1/prt-utils.1.gz
 -rw-r--r--	root/root	usr/man/man1/prtcheck.1.gz
 -rw-r--r--	root/root	usr/man/man1/prtcheckmissing.1.gz
 -rw-r--r--	root/root	usr/man/man1/prtcreate.1.gz
