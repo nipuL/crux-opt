@@ -4,7 +4,7 @@
 # Depends on: expat
 
 name=dbus
-version=1.0.1
+version=1.0.2
 release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 	rc.dbus 30-dbus.launch)
@@ -16,7 +16,7 @@ build() {
 		--localstatedir=/var \
 		--disable-static \
 		--with-dbus-user=messagebus \
-		--with-xml=expat 
+		--with-xml=expat
 	make
 	make DESTDIR=$PKG install
 	install -D -m 0755 $SRC/rc.dbus $PKG/etc/rc.d/dbus
