@@ -6,11 +6,11 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/opera
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/opera/
-drwxr-xr-x	root/root	usr/lib/opera/9.02-20060919.6/
--rwxr-xr-x	root/root	usr/lib/opera/9.02-20060919.6/missingsyms.so
--rwxr-xr-x	root/root	usr/lib/opera/9.02-20060919.6/opera
--rwxr-xr-x	root/root	usr/lib/opera/9.02-20060919.6/spellcheck.so
--rwxr-xr-x	root/root	usr/lib/opera/9.02-20060919.6/works
+drwxr-xr-x	root/root	usr/lib/opera/9.10-20061214.6/
+-rwxr-xr-x	root/root	usr/lib/opera/9.10-20061214.6/missingsyms.so
+-rwxr-xr-x	root/root	usr/lib/opera/9.10-20061214.6/opera
+-rwxr-xr-x	root/root	usr/lib/opera/9.10-20061214.6/spellcheck.so
+-rwxr-xr-x	root/root	usr/lib/opera/9.10-20061214.6/works
 drwxr-xr-x	root/root	usr/lib/opera/plugins/
 -rwxr-xr-x	root/root	usr/lib/opera/plugins/libnpp.so
 -rwxr-xr-x	root/root	usr/lib/opera/plugins/operaplugincleaner
@@ -73,6 +73,9 @@ drwxr-xr-x	root/root	usr/share/opera/styles/images/
 -rw-r--r--	root/root	usr/share/opera/styles/images/bar.png
 -rw-r--r--	root/root	usr/share/opera/styles/images/center.png
 -rw-r--r--	root/root	usr/share/opera/styles/images/opera.png
+-rw-r--r--	root/root	usr/share/opera/styles/images/red_center.png
+-rw-r--r--	root/root	usr/share/opera/styles/images/red_left.png
+-rw-r--r--	root/root	usr/share/opera/styles/images/red_right.png
 -rw-r--r--	root/root	usr/share/opera/styles/images/root.png
 -rw-r--r--	root/root	usr/share/opera/styles/images/top.png
 -rw-r--r--	root/root	usr/share/opera/styles/info.css
@@ -89,6 +92,7 @@ drwxr-xr-x	root/root	usr/share/opera/styles/user/
 -rw-r--r--	root/root	usr/share/opera/styles/user/nostalgia.css
 -rw-r--r--	root/root	usr/share/opera/styles/user/showstructure.css
 -rw-r--r--	root/root	usr/share/opera/styles/user/textonly.css
+-rw-r--r--	root/root	usr/share/opera/styles/warning.css
 -rw-r--r--	root/root	usr/share/opera/styles/wml.css
 -rw-r--r--	root/root	usr/share/opera/svg-mo.dat
 -rw-r--r--	root/root	usr/share/opera/svg-mobd.dat
