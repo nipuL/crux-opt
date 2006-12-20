@@ -11,8 +11,8 @@ REQUIREMENTS
 	  - faac
 	  - liba52
 
-	You should then recompile and upgrade mplayer, so that is built
-	with support for these codecs.
+	You should then recompile and upgrade mplayer, so that it is
+	built with support for these codecs.
 
 	To watch videos on sites that only support IE you need to
 	install the following Firefox extension:
