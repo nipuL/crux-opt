@@ -4,7 +4,7 @@
 # Packager: Han Boetes, han at mijncomputer dot nl
 
 name=libpcre
-version=6.7
+version=7.0
 release=1
 source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar.bz2)
 
@@ -13,6 +13,7 @@ build() {
 
     ./configure \
 	--prefix=/usr \
+	--mandir=/usr/man \
         --enable-utf8 \
         --enable-unicode-properties
     make
