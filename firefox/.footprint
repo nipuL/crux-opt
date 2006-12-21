@@ -1980,6 +1980,18 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/bsd/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/builtin.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/byteswap.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/c_asm.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-atsui.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-beos.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-ft.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-glitz.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-nquartz.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-os2.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-pdf.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-ps.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-quartz.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-win32.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-xlib-xrender.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo-xlib.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/cairo.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/callconv.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/cderr.h
@@ -2050,7 +2062,7 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/freetype/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/freetype.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/ftcache.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/ftglyph.h
--rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/ftoutlin.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/ftoutln.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/ttnameid.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/freetype/tttables.h
 drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/fribidi/
@@ -2091,6 +2103,9 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/gtk/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkcontainer.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkdialog.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkentry.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkfixed.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkiconfactory.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkimage.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkimmulticontext.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkinvisible.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkmain.h
@@ -2103,6 +2118,7 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/gtk/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkstock.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkstyle.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtktextview.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkversion.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkvscrollbar.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkwidget.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gtk/gtkwindow.h
@@ -2274,10 +2290,12 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/photon/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/photon/PxImage.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pk11func.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pk11pqg.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/pk11pub.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pk11sdr.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pkcs11t.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pkcs12.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/pmddim.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/png.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/poll.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/portable.h
 drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/private/
@@ -2557,6 +2575,7 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/wx/xrc/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/wx/xrc/xmlres.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/xpt_struct.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/xpt_xdr.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/zlib.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/zmouse.h
 drwxr-xr-x	root/root	usr/include/firefox/toolkitcomps/
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsICommandLine.h

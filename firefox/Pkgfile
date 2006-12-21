@@ -4,7 +4,7 @@
 # Depends on: libidl, gtk, libpng, libjpeg, zlib
 
 name=firefox
-version=2.0
+version=2.0.0.1
 release=1
 source=(http://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
 	http://crux.nu/files/$name/$name.desktop \
