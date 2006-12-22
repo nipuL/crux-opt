@@ -5,7 +5,7 @@
 
 name=sc
 version=7.16
-release=2
+release=3
 source=(http://www.ibiblio.org/pub/Linux/apps/financial/spreadsheet/$name-$version.tar.gz \
         $name-$version.patch)
 
@@ -14,7 +14,7 @@ build () {
     patch -p1 < $SRC/$name-$version.patch
     sed -i "/^CFLAGS/s/-O2 -pipe/$CFLAGS/" Makefile
     make 
-    mkdir -p $PKG/usr/{bin,man/man1,lib/sc}
+    mkdir -p $PKG/usr/{bin,man/man1,share/sc}
     make prefix=$PKG/usr install
     sed -i "s|$PKG||g" $PKG/usr/man/man1/sc.1
 }
