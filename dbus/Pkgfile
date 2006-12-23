@@ -5,7 +5,7 @@
 
 name=dbus
 version=1.0.2
-release=2
+release=3
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 	rc.dbus 30-dbus.launch)
 
