@@ -5,17 +5,14 @@
 # Depends on: jdk
 
 name=ant
-version=1.6.5
+version=1.7.0
 release=1
-source=(http://mirrors.publicshout.org/apache/ant/source/apache-${name}-${version}-src.tar.gz)
+source=(http://mirrors.publicshout.org/apache/ant/binaries/apache-${name}-${version}-bin.tar.bz2)
 
 build() {
 	cd apache-$name-$version
-	export ANT_HOME="/usr/lib/ant"
-	export JAVA_HOME="/usr/lib/java"
-	export PATH=${PATH}:${ANT_HOME}/bin
-	./build.sh -Ddist.dir=$PKG/usr/lib/ant dist
-	mkdir $PKG/usr/bin
+	mkdir -p $PKG/usr/{bin,lib/ant}
+	cp -rf * $PKG/usr/lib/ant
 	ln -sf /usr/lib/ant/bin/ant $PKG/usr/bin/ant
 	rm -rf $PKG/usr/lib/ant/bin/*.bat
 	rm -rf $PKG/usr/lib/ant/docs
