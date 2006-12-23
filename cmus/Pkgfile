@@ -6,7 +6,7 @@
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
 
 name=cmus
-version=2.0.4
+version=2.1.0
 release=1
 source=(http://onion.dynserv.net/~timo/files/$name-$version.tar.bz2)
 
