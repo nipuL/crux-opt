@@ -4,16 +4,14 @@
 # Depends on:  ncurses
 
 name=aspell
-version=0.60.4
-release=2
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz \
-        $name-$version-gcc41.patch)
+version=0.60.5
+release=1
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version-gcc41.patch
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
-    rm -R $PKG/usr/{info,share}
+    rm -R $PKG/usr/share
 }
