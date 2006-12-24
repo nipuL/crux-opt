@@ -492,6 +492,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dciman32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/ddeml.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/ddraw.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/ddrawex.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/devenum.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dinput8.dll.so
