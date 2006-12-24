@@ -4,17 +4,13 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=2.2.10
+version=2.3.0
 release=1
-source=(http://sylpheed.sraoss.jp/sylpheed/v2.2/$name-$version.tar.bz2)
+source=(http://sylpheed.sraoss.jp/sylpheed/v2.3/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr \
-                --disable-nls \
-                --enable-ssl \
-                --enable-ipv6 \
-                --enable-gpgme
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     
