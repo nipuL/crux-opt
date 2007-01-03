@@ -5,11 +5,13 @@
 
 name=sdl_ttf
 version=2.0.8
-release=1
-source=(http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-$version.tar.gz)
+release=2
+source=(http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-$version.tar.gz \
+	$name-noftinternals.patch)
 
 build() {
 	cd SDL_ttf-$version
+	patch  < ../$name-noftinternals.patch
 	./configure	--prefix=/usr
 	make 
 	make DESTDIR=$PKG install
