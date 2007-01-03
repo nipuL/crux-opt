@@ -6,7 +6,7 @@
 
 name=wmclock
 version=1.0.12.2
-release=1
+release=2
 source=(http://www.dockapps.org/download.php/id/328/$name-$version.tar.gz)
 
 build() {
@@ -14,6 +14,4 @@ build() {
 	./configure --lang english
 	make
 	make DESTDIR=$PKG install install.man
-	mv $PKG/usr/X11R6/bin $PKG/usr/X11R6/man $PKG/usr
-	rm -rf $PKG/usr/X11R6
 }
