@@ -5,14 +5,12 @@
 # Depends on:
 
 name=dosfstools
-version=2.10
+version=2.11
 release=1
-source=(http://mirror1.pdaxrom.org/source/src/$name-$version.src.tar.gz \
-	$name-$version-kernel-2.6.patch)
+source=(http://fresh.t-systems-sfr.com/linux/src/$name-$version.src.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 < ../$name-$version-kernel-2.6.patch
 	make
 	mkdir -p $PKG/sbin
 	mkdir -p $PKG/usr/man/man8
