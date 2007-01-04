@@ -4,7 +4,7 @@
 # Depends on:  bash-completion
 
 name=prt-get-bashcompletion
-version=0.5.5
+version=5.15
 release=1
 source=(http://jw.tks6.net/files/crux/prt-get-$version.tar.gz)
 
