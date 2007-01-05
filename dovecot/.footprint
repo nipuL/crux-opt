@@ -20,35 +20,40 @@ drwxr-xr-x	root/root	usr/lib/dovecot/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib01_acl_plugin.so -> ../lib01_acl_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib01_convert_plugin.so -> ../lib01_convert_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib01_quota_plugin.so -> ../lib01_quota_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib01_zlib_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib01_zlib_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib01_zlib_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib02_imap_quota_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib02_imap_quota_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib02_imap_quota_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib02_trash_plugin.so -> ../lib02_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib02_lazy_expunge_plugin.so -> ../lib02_lazy_expunge_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib11_trash_plugin.so -> ../lib11_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.so
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/lda/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib01_acl_plugin.so -> ../lib01_acl_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib01_convert_plugin.so -> ../lib01_convert_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib01_quota_plugin.so -> ../lib01_quota_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib02_trash_plugin.so -> ../lib02_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib11_trash_plugin.so -> ../lib11_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib01_acl_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_acl_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_acl_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib01_convert_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_convert_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_convert_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib01_quota_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_quota_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_quota_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/lib02_trash_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_trash_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_trash_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib02_lazy_expunge_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib10_quota_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.so
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/pop3/
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib01_convert_plugin.so -> ../lib01_convert_plugin.so
-lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib01_quota_plugin.so -> ../lib01_quota_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib02_lazy_expunge_plugin.so -> ../lib02_lazy_expunge_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/rawlog
