@@ -1,7 +1,7 @@
 # Description: Xlib based interactive 2-D drawing tool
 # URL:         http://bourbon.usc.edu/tgif
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  x11
+# Depends on:  xorg-libxmu
 
 name=tgif
 version=4.1.45
