@@ -1,7 +1,7 @@
 # Description: Postscript interpreter
 # URL:         http://www.cs.wisc.edu/~ghost/doc/gnu/index.htm
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  cups, xorg-libxt
+# Depends on:  cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
 version=8.15.3
