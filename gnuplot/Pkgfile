@@ -2,7 +2,7 @@
 # URL:         http://www.gnuplot.info/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Martin Opel, mo at obbl-net dot de
-# Depends on:  readline, x11
+# Depends on:  ncurses, readline, libpng, xorg-libx11, xorg-libxau
 
 name=gnuplot
 version=4.0.0
