@@ -1,7 +1,7 @@
 # Description: xterm replacement with transparency and fading
 # URL:         http://aterm.sourceforge.net
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  x11
+# Depends on:  xorg-libxext, xorg-libsm
 
 name=aterm
 version=1.0.0
