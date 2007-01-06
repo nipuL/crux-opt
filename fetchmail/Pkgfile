@@ -4,15 +4,16 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.5
-release=2
-source=(http://download2.berlios.de/$name/$name-$version.tar.bz2 \
-	$name-brokenheaders.patch)
+version=6.3.6
+release=1
+source=(http://download2.berlios.de/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    patch -p0 < ../$name-brokenheaders.patch
-    ./configure --prefix=/usr --with-ssl=/usr --disable-nls
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-ssl=/usr \
+                --disable-nls
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/bin/fetchmailconf \
