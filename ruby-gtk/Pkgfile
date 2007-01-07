@@ -6,7 +6,7 @@
 # Nice to have: ruby-cairo
 
 name=ruby-gtk
-version=0.15.0
+version=0.16.0
 release=1
 source=(http://dl.sourceforge.net/ruby-gnome2/ruby-gtk2-$version.tar.gz)
 
