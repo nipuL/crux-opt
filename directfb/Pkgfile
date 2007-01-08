@@ -4,7 +4,7 @@
 
 name=directfb
 version=0.9.25.1
-release=1
+release=2
 source=(http://www.directfb.org/downloads/Old/DirectFB-$version.tar.gz)
 
 build() {
@@ -20,7 +20,4 @@ build() {
 
 	make
 	make DESTDIR=$PKG install
-
-	ln -sf $name-$version $PKG/usr/lib/$name
-	ln -sf $name-$version $PKG/usr/share/$name
 }
