@@ -5,6 +5,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/atk.rb
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/gdk_pixbuf2.rb
+-rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/glib-mkenums.rb
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/glib2.rb
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/gtk2.rb
 drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/gtk2/
@@ -14,8 +15,6 @@ drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/
 -rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/gdk_pixbuf2.so
 -rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/glib2.so
 -rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/gtk2.so
--rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/gtk20.so
--rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/gtk22.so
 -rwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/pango.so
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/linux/rbatk.h
 -rw-r--r--	root/root	usr/lib/ruby/site_ruby/1.8/linux/rbatkversion.h

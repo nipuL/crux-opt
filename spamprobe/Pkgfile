@@ -3,11 +3,10 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=spamprobe
-version=1.4c
+version=1.4d
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
-        http://www.mission-base.com/peter/source/pbl_1_03.tar.gz \
-        $name-$version-gcc41.patch)
+        http://www.mission-base.com/peter/source/pbl_1_03.tar.gz)
 
 build () {
     cd pbl_1_03
@@ -15,7 +14,6 @@ build () {
     make
  
     cd $SRC/$name-$version
-    patch -p1 -i $SRC/$name-$version-gcc41.patch
     ./configure --prefix=/usr \
                 --with-pbl=$SRC/pbl_1_03 \
                 --enable-default-8-bit
