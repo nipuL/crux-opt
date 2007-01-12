@@ -81,6 +81,7 @@ drwxr-xr-x	root/root	usr/include/magick/
 -rw-r--r--	root/root	usr/include/magick/pixel.h
 -rw-r--r--	root/root	usr/include/magick/prepress.h
 -rw-r--r--	root/root	usr/include/magick/profile.h
+-rw-r--r--	root/root	usr/include/magick/property.h
 -rw-r--r--	root/root	usr/include/magick/quantize.h
 -rw-r--r--	root/root	usr/include/magick/quantum.h
 -rw-r--r--	root/root	usr/include/magick/random_.h
