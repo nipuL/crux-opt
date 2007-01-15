@@ -4,7 +4,7 @@
 # Packager: Sven Dahl, dahl at c64 dot org
 
 name=tcl
-version=8.4.13
+version=8.4.14
 release=1
 source=(http://dl.sourceforge.net/sourceforge/tcl/tcl${version}-src.tar.gz)
 
