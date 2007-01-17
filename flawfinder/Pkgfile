@@ -4,7 +4,7 @@
 # Depends on: python
 
 name=flawfinder
-version=1.26
+version=1.27
 release=1
 source=(http://www.dwheeler.com/flawfinder/flawfinder-$version.tar.gz)
 
