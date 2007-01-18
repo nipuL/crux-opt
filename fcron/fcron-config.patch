@@ -1,7 +1,7 @@
-diff -Nru fcron-3.0.1.orig/configure.in fcron-3.0.1/configure.in
---- fcron-3.0.1.orig/configure.in	2006-02-07 18:02:49.000000000 +0100
-+++ fcron-3.0.1/configure.in	2006-02-07 18:03:02.000000000 +0100
-@@ -268,13 +268,8 @@
+diff -Nru fcron-3.0.2.orig/configure.in fcron-3.0.2/configure.in
+--- fcron-3.0.2.orig/configure.in	2007-01-17 08:54:11.000000000 +0100
++++ fcron-3.0.2/configure.in	2007-01-17 08:54:23.000000000 +0100
+@@ -278,13 +278,8 @@
      fi
      ;;
    *)
