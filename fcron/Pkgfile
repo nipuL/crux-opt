@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=fcron
-version=3.0.1
+version=3.0.2
 release=1
 source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz \
         $name-config.patch fcron root.orig)
@@ -15,13 +15,15 @@ build () {
     ./configure --prefix=/usr \
                 --with-etcdir=/etc/fcron \
                 --mandir=/usr/man \
-		--with-docdir=/usr/doc \
-		--with-spooldir=/var/spool/fcron \
-		--with-fifodir=/var/run \
-		--with-boot-install=no \
-		--with-username=daemon \
+                --with-docdir=/usr/doc \
+                --with-spooldir=/var/spool/fcron \
+                --with-fifodir=/var/run \
+                --with-boot-install=no \
+                --with-username=daemon \
                 --with-groupname=daemon \
-		--with-pam=no 
+                --with-pam=no \
+                --with-sendmail=/usr/sbin/sendmail
+
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/{doc,man/{fr,man3}}

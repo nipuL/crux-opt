@@ -1,14 +1,13 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
--r--r--r--	root/root	usr/include/libdevmapper.h
+-rw-r--r--	root/root	usr/include/libdevmapper.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libdevmapper.a -> libdevmapper.a.1.01
--r-xr-xr-x	root/root	usr/lib/libdevmapper.a.1.01
-lrwxrwxrwx	root/root	usr/lib/libdevmapper.so -> libdevmapper.so.1.01
--r-xr-xr-x	root/root	usr/lib/libdevmapper.so.1.01
+lrwxrwxrwx	root/root	usr/lib/libdevmapper.so -> libdevmapper.so.1.02
+-rwxr-xr-x	root/root	usr/lib/libdevmapper.so.1.02
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/devmapper.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man8/
--r--r--r--	root/root	usr/man/man8/dmsetup.8.gz
+-rw-r--r--	root/root	usr/man/man8/dmsetup.8.gz
 drwxr-xr-x	root/root	usr/sbin/
--r-xr-xr-x	root/root	usr/sbin/dmsetup
--r-xr-xr-x	root/root	usr/sbin/dmsetup.static
+-rwxr-xr-x	root/root	usr/sbin/dmsetup
