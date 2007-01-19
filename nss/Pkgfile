@@ -1,28 +1,42 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL: http://www.mozilla.org/projects/security/pki/nss/
-# Maintainer: Simone Rota, sip at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Packager: Simone Rota, sip at varlock dot com
 # Depends on: zip
 
 name=nss
-version=3.9.2
+version=3.11.4
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/src/$name-$version.tar.gz \
-	$name-$version-gcc4.patch)
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_RTM/src/$name-3.11.tar.gz \
+	ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_4_RTM/src/$name-$version.tar.gz \
+	$name-fixes.patch)
 
 build() {
-        cd $name-$version
-	patch -p0 < ../$name-$version-gcc4.patch
-	cd mozilla/security/nss
 	export BUILD_OPT=1
+	cp -rp $name-$version/* $name-3.11
+	cd $name-3.11
+	patch -p1 < $SRC/$name-fixes.patch
+	#patch -p0 < $SRC/$name-$version-gcc-visibility.patch
+	cd mozilla/security/nss
 	make nss_build_all
 	make install
 
-	mkdir -p $PKG/usr/lib	
+	mkdir -p $PKG/usr/lib/pkgconfig
+	mkdir -p $PKG/usr/bin/
 	mkdir -p $PKG/usr/include/nspr
+	mkdir -p $PKG/usr/include/nss
 	find ../../dist/*/lib -type l \
-                \( -name "*.so" -o -name "*.chk" \) \
-                -exec cp -L {} $PKG/usr/lib \;
-	cp -Lr ../../dist/public/* $PKG/usr/include
-	cp -Lr ../../dist/*/include/* $PKG/usr/include/nspr		
+		\( -name "*.so" -o -name "*.chk" \) \
+		-exec cp -L {} $PKG/usr/lib \;
+	cp -Lr ../../dist/public/* $PKG/usr/include/
+	cp -Lr ../../dist/*/include/* $PKG/usr/include/nspr
+	cp -Lr ../../nsprpub/Linux*/config/nspr-config $PKG/usr/bin/
+	cp -Lr ../../nsprpub/lib/pkgconfig/nspr.pc $PKG/usr/lib/pkgconfig/
+	cp -Lr lib/pkgconfig/nss.pc $PKG/usr/lib/pkgconfig/
+	cp -Lr cmd/config/nss-config $PKG/usr/bin/
+	cp -Lr ../../dist/*/lib/libcrmf.a $PKG/usr/lib/
+	rm -rf $PKG/usr/include/nspr/md/
+	chmod 644 $PKG/usr/include/nspr/prvrsion.h
+	chmod +x $PKG/usr/bin/nss-config
+	chmod +x $PKG/usr/bin/nspr-config
 }
