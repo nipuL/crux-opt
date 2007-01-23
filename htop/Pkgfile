@@ -1,5 +1,4 @@
-# Packager:     Johannes Winkelmann, jw at tks6 dot net
-# Maintainer:   Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:   Simone Rota, sip at crux dot nu
 # Description:  an interactive process viewer
 # URL:          http://htop.sourceforge.net/
 # Depends:      ncurses
