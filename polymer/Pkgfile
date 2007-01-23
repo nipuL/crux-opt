@@ -1,5 +1,4 @@
-# Packager:    Johannes Winkelmann, jw at tks6 dot net
-# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Simone Rota, sip at crux dot nu
 # Description: Port of KDE's Plastik style to pure Qt
 # URL:         http://static.int.pl/~mig21/dev/releases/polymer
 # Deoends on:  qt3
