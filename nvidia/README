@@ -2,12 +2,6 @@
 README for nvidia 1.0-8178+
 
 
-***** NOTE for users of NV2X chipsets!!! *****
-1.0-9629 is confirmed broken for cards with NV2X chipsets, see:
-http://www.nvnews.net/vbulletin/showthread.php?t=79703. Until a new version
-is released, use 1.0-9626 or 1.0-8776.
-**********************************************
-
 
 *** NOTE for nvidia with udev ***
 
@@ -37,8 +31,4 @@ refresh the libGLcore and libGL symlinks, like so:
 
 	# prt-get update nvidia
 	# gl-select x11; gl-select nvidia
-
-
-nvhelper.sh is still included in the port for the time being but
-gl-select is the preferred method.
 

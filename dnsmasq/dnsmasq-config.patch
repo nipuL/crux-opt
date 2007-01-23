@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.35.orig/Makefile dnsmasq-2.35/Makefile
---- dnsmasq-2.35.orig/Makefile	2006-10-28 21:54:12.000000000 +0200
-+++ dnsmasq-2.35/Makefile	2006-10-28 21:54:22.000000000 +0200
+diff -Nru dnsmasq-2.36.orig/Makefile dnsmasq-2.36/Makefile
+--- dnsmasq-2.36.orig/Makefile	2007-01-22 15:04:04.000000000 +0100
++++ dnsmasq-2.36/Makefile	2007-01-22 15:04:19.000000000 +0100
 @@ -1,6 +1,6 @@
  PREFIX?=/usr/local
  BINDIR = ${PREFIX}/sbin
@@ -9,9 +9,9 @@ diff -Nru dnsmasq-2.35.orig/Makefile dnsmasq-2.35/Makefile
  LOCALEDIR = ${PREFIX}/share/locale
  
  SRC = src
-diff -Nru dnsmasq-2.35.orig/dnsmasq.conf.example dnsmasq-2.35/dnsmasq.conf.example
---- dnsmasq-2.35.orig/dnsmasq.conf.example	2006-10-28 21:54:12.000000000 +0200
-+++ dnsmasq-2.35/dnsmasq.conf.example	2006-10-28 21:54:22.000000000 +0200
+diff -Nru dnsmasq-2.36.orig/dnsmasq.conf.example dnsmasq-2.36/dnsmasq.conf.example
+--- dnsmasq-2.36.orig/dnsmasq.conf.example	2007-01-22 15:04:04.000000000 +0100
++++ dnsmasq-2.36/dnsmasq.conf.example	2007-01-22 15:04:19.000000000 +0100
 @@ -59,8 +59,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -23,7 +23,7 @@ diff -Nru dnsmasq-2.35.orig/dnsmasq.conf.example dnsmasq-2.35/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -273,7 +273,7 @@
+@@ -298,7 +298,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -32,9 +32,9 @@ diff -Nru dnsmasq-2.35.orig/dnsmasq.conf.example dnsmasq-2.35/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.35.orig/src/config.h dnsmasq-2.35/src/config.h
---- dnsmasq-2.35.orig/src/config.h	2006-10-28 21:54:12.000000000 +0200
-+++ dnsmasq-2.35/src/config.h	2006-10-28 21:54:22.000000000 +0200
+diff -Nru dnsmasq-2.36.orig/src/config.h dnsmasq-2.36/src/config.h
+--- dnsmasq-2.36.orig/src/config.h	2007-01-22 15:04:04.000000000 +0100
++++ dnsmasq-2.36/src/config.h	2007-01-22 15:04:19.000000000 +0100
 @@ -36,7 +36,7 @@
  #if defined(__FreeBSD__) || defined (__OpenBSD__) || defined(__DragonFly__)
  #   define LEASEFILE "/var/db/dnsmasq.leases"
@@ -52,4 +52,4 @@ diff -Nru dnsmasq-2.35.orig/src/config.h dnsmasq-2.35/src/config.h
 +#define CHGRP "nobody"
  #define DHCP_SERVER_PORT 67
  #define DHCP_CLIENT_PORT 68
- 
+ #define TFTP_PORT 69
