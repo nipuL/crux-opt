@@ -1,8 +1,7 @@
 # Description: a light-weight system monitor
 # URL:         http://conky.sourceforge.net/
-# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
-# Packager:    Johannes Winkelmann, jw at tks6 dot net
-# Depends on:  x11
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xorg-libxdamage, xorg-libxext, xorg-libxf
 
 name=conky
 version=1.4.5
