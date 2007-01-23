@@ -443,12 +443,6 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/etc/ediff/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/emerge.txt
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/enriched.doc
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/AUTHORS
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/CREDITS
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/HISTORY
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/NEWS
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/README
--rwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/etc/erc/servers.pl
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/forms-d2.dat
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/etc/frame-icon/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/etc/frame-icon/RIP.xbm
@@ -2244,8 +2238,12 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/appt.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/auto-autoloads.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/auto-autoloads.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-bahai.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-bahai.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-china.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-china.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-compat.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-compat.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-coptic.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-coptic.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-dst.el
@@ -2254,6 +2252,8 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-french.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-hebrew.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-hebrew.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-html.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-html.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-islam.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-islam.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/cal-iso.el
@@ -2282,10 +2282,16 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/diary-lib.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/holidays.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/holidays.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/icalendar.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/icalendar.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/lunar.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/lunar.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/solar.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/solar.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/timeclock.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/timeclock.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/todo-mode.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/calendar/todo-mode.elc
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/cc-mode/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/cc-mode/ChangeLog
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/cc-mode/_pkg.el
@@ -2648,7 +2654,7 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/compare-w.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/completion.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/completion.elc
--rwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/crm.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/crm.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/crm.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/custom-load.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/custom-load.elc
@@ -2933,7 +2939,6 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/ChangeLog.2003.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/ChangeLog.2004.upstream
 -rwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/ChangeLog.2005.upstream
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/ChangeLog.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/FOR-RELEASE.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/HACKING.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/erc/Makefile.upstream
@@ -6302,7 +6307,6 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/man/elib/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/man/elib/elib.texi
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/man/elib/gpl.texi
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/man/erc/
--rwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/man/erc/erc.texi
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/man/eshell/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/man/eshell/eshell.texi
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/man/eudc/
@@ -6459,7 +6463,6 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eieio
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.elib
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.emerge
--rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.erc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.escreen
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eshell
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eterm

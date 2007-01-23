@@ -9,7 +9,7 @@
 # I know.. it's not lightweight - but who said (x)emacs is ? ;-)
 
 name=xemacs-sumo
-version=2006-05-10
+version=2006-12-21
 release=1
 source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
 build(){
