@@ -1,5 +1,4 @@
-# Packager:    Johannes Winkelmann, jw at tks6 dot net
-# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Simone Rota, sip at crux dot nu
 # Description: graphical file and directories comparator and merge tool
 # URL:         http://xxdiff.sourceforge.net/ 
 # Depends on:  qt3 
