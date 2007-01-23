@@ -65,6 +65,7 @@ drwxr-xr-x	root/root	usr/lib/valgrind/
 -rw-r--r--	root/root	usr/lib/valgrind/glibc-2.2.supp
 -rw-r--r--	root/root	usr/lib/valgrind/glibc-2.3.supp
 -rw-r--r--	root/root	usr/lib/valgrind/glibc-2.4.supp
+-rw-r--r--	root/root	usr/lib/valgrind/glibc-2.5.supp
 -rwxr-xr-x	root/root	usr/lib/valgrind/hp2ps
 drwxr-xr-x	root/root	usr/lib/valgrind/x86-linux/
 -rwxr-xr-x	root/root	usr/lib/valgrind/x86-linux/cachegrind
