@@ -31,8 +31,8 @@ drwxr-xr-x	root/root	usr/include/atk-1.0/atk/
 -rw-r--r--	root/root	usr/include/atk-1.0/atk/atkvalue.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libatk-1.0.la
-lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so -> libatk-1.0.so.0.1213.0
-lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.1213.0
--rwxr-xr-x	root/root	usr/lib/libatk-1.0.so.0.1213.0
+lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so -> libatk-1.0.so.0.1214.0
+lrwxrwxrwx	root/root	usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.1214.0
+-rwxr-xr-x	root/root	usr/lib/libatk-1.0.so.0.1214.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/atk.pc
