@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-example.conf
---- dovecot-1.0.rc16.orig/dovecot-example.conf	2007-01-05 17:10:35.000000000 +0100
-+++ dovecot-1.0.rc16/dovecot-example.conf	2007-01-05 17:10:49.000000000 +0100
+diff -Nru dovecot-1.0.rc18.orig/dovecot-example.conf dovecot-1.0.rc18/dovecot-example.conf
+--- dovecot-1.0.rc18.orig/dovecot-example.conf	2007-01-22 20:27:54.000000000 +0100
++++ dovecot-1.0.rc18/dovecot-example.conf	2007-01-22 20:28:06.000000000 +0100
 @@ -13,11 +13,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -66,7 +66,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
  # If you need to set multiple mailbox locations or want to change default
  # namespace settings, you can do it by defining namespace sections:
-@@ -312,7 +312,7 @@
+@@ -307,7 +307,7 @@
  # non-valid GID as primary group ID aren't allowed to log in. If user
  # belongs to supplementary groups with non-valid GIDs, those groups are
  # not set.
@@ -75,7 +75,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  #last_valid_gid = 0
  
  # Maximum number of running mail processes. When this limit is reached,
-@@ -489,19 +489,19 @@
+@@ -481,19 +481,19 @@
  
  protocol imap {
    # Login executable location.
@@ -99,7 +99,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -554,11 +554,11 @@
+@@ -546,11 +546,11 @@
  
  protocol pop3 {
    # Login executable location.
@@ -113,7 +113,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -603,7 +603,7 @@
+@@ -595,7 +595,7 @@
    # installations. %08Xu%08Xv will be the new default, so use it for new
    # installations.
    #
@@ -122,7 +122,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
    # POP3 logout format string:
    #  %t - number of TOP commands
-@@ -649,7 +649,7 @@
+@@ -641,7 +641,7 @@
    #mail_plugin_dir = /usr/lib/dovecot/lda
  
    # Binary to use for sending mails.
@@ -131,7 +131,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -660,7 +660,7 @@
+@@ -652,7 +652,7 @@
  ##
  
  # Executable location
@@ -140,7 +140,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -774,7 +774,7 @@
+@@ -766,7 +766,7 @@
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work.
    # http://wiki.dovecot.org/PasswordDatabase/PAM
@@ -149,7 +149,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
      #  [session=yes] [setcred=yes] [cache_key=<key>] [<service name>]
      #
      # session=yes makes Dovecot open and immediately close PAM session. Some
-@@ -802,7 +802,7 @@
+@@ -794,7 +794,7 @@
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -158,7 +158,7 @@ diff -Nru dovecot-1.0.rc16.orig/dovecot-example.conf dovecot-1.0.rc16/dovecot-ex
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -813,8 +813,8 @@
+@@ -805,8 +805,8 @@
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
    # http://wiki.dovecot.org/PasswordDatabase/Shadow
