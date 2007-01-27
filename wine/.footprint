@@ -476,6 +476,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/compobj.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/compstui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/control.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/credui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/crtdll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/crypt32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/cryptdll.dll.so
@@ -636,6 +637,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libserialui.def
 -rw-r--r--	root/root	usr/lib/wine/libsetupapi.def
 -rw-r--r--	root/root	usr/lib/wine/libsfc.def
+-rw-r--r--	root/root	usr/lib/wine/libsfc_os.def
 -rw-r--r--	root/root	usr/lib/wine/libshdocvw.def
 -rw-r--r--	root/root	usr/lib/wine/libshell32.def
 -rw-r--r--	root/root	usr/lib/wine/libshfolder.def
@@ -762,6 +764,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/setupapi.dll.so
 -rw-r--r--	root/root	usr/lib/wine/setupx.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/sfc.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/sfc_os.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shdoclc.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/shdocvw.dll.so
 -rw-r--r--	root/root	usr/lib/wine/shell.dll16
