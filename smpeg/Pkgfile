@@ -6,10 +6,12 @@
 name=smpeg
 version=0.4.4
 release=1
-source=(ftp://sunsite.dk/pub/os/linux/loki/open-source/$name/$name-$version.tar.gz)
+source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.gz \
+	$name-mpegaudiosdl.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-mpegaudiosdl.patch
 	./configure --prefix=/usr
 	sed -i -e 's|\(libsmpeg_la_LDFLAGS = .*\)|\1 -lstdc++|' Makefile
 	make
