@@ -4,9 +4,9 @@
 # Depends on:  ruby, swig, sqlite3
 
 name=sqlite3-ruby
-version=1.1.0
+version=1.2.0
 release=1
-source=(http://rubyforge.org/frs/download.php/3089/$name-$version.tar.bz2)
+source=(http://rubyforge.org/frs/download.php/16340/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
