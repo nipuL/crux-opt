@@ -5,7 +5,7 @@
 # Depends on: fontforge
 
 name=wine
-version=0.9.29
+version=0.9.30
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
 
