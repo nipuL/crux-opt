@@ -5,15 +5,12 @@
 # Depends on: libgcrypt, libassuan, libksba, pinentry
 
 name=gnupg
-version=2.0.1
-release=3
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2 \
-	filter-context-20-small.diff)
+version=2.0.2
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-
-    patch -p0 -d g10 -i $SRC/filter-context-20-small.diff
 
     ./configure \
 	--prefix=/usr \

@@ -4,7 +4,7 @@
 # Packager: Mark Rosenstand, mark at borkware dot net
 
 name=libdevmapper
-version=1.02.16
+version=1.02.17
 release=1
 source=(ftp://sources.redhat.com/pub/dm/device-mapper.${version}.tgz)
 
