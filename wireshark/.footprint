@@ -21,8 +21,6 @@ lrwxrwxrwx	root/root	usr/lib/libwiretap.so.0 -> libwiretap.so.0.0.1
 -rwxr-xr-x	root/root	usr/lib/libwiretap.so.0.0.1
 drwxr-xr-x	root/root	usr/lib/wireshark/
 drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/acn.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/acn.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/agentx.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/agentx.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/artnet.la
@@ -103,10 +101,12 @@ drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/imscxdx.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/mobileipv4.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/nasreq.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/sip.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/sunping.xml
 drwxr-xr-x	root/root	usr/share/wireshark/dtds/
 -rw-r--r--	root/root	usr/share/wireshark/dtds/dc.dtd
 -rw-r--r--	root/root	usr/share/wireshark/dtds/itunes.dtd
+-rw-r--r--	root/root	usr/share/wireshark/dtds/mscml.dtd
 -rw-r--r--	root/root	usr/share/wireshark/dtds/pocsettings.dtd
 -rw-r--r--	root/root	usr/share/wireshark/dtds/presence.dtd
 -rw-r--r--	root/root	usr/share/wireshark/dtds/reginfo.dtd

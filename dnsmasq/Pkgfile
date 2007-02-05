@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=dnsmasq
-version=2.36
+version=2.37
 release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.gz \
         $name-config.patch dnsmasq)
