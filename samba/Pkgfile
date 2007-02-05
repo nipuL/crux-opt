@@ -4,7 +4,7 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.23d
+version=3.0.24
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
