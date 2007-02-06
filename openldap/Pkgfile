@@ -5,8 +5,8 @@
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap
-version=2.3.20
-distversion=stable-20060227
+version=2.3.32
+distversion=stable-20070110
 release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-stable/$name-$distversion.tgz \
 	$name-config.patch slurpd slapd)
