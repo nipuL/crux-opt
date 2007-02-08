@@ -6,7 +6,7 @@
 
 name=tightvnc
 version=1.2.9
-release=4
+release=5
 source=(http://download.sourceforge.net/sourceforge/vnc-tight/${name}-${version}_unixsrc.tar.bz2  \
 	$name-config.patch $name-gcc3.4.patch )
 
@@ -32,6 +32,10 @@ build() {
 	cp Xvnc/programs/Xserver/Xvnc vncviewer/vncviewer vncpasswd/vncpasswd vncconnect/vncconnect $PKG/usr/bin
 	cp vncserver $PKG/usr/bin
 	cp classes/* $PKG/usr/share/vnc/classes
+	
 	cp Xvnc/programs/Xserver/Xvnc.man $PKG/usr/man/man1/Xvnc.1
 	cp vncserver.man $PKG/usr/man/man1/vncserver.1
+	cp vncviewer/vncviewer.man $PKG/usr/man/man1/vncviewer.1
+        cp vncpasswd/vncpasswd.man $PKG/usr/man/man1/vncpasswd.1                                                                                             
+	cp vncconnect/vncconnect.man $PKG/usr/man/man1/vncconnect.1  
 }
