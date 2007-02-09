@@ -21,6 +21,8 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Lexicon.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Main.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Main.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/ModuleNode.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/ModuleNode.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Naming.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Naming.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Compiler/Nodes.py
@@ -73,6 +75,11 @@ drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/Pyrex/Plex/
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Plex/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Plex/test_tm.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Plex/test_tm.pyc
+drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/Pyrex/Unix/
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Unix/LinuxSystem.py
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Unix/LinuxSystem.pyc
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Unix/__init__.py (EMPTY)
+-rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Unix/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Utils.py
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/Utils.pyc
 -rw-r--r--	root/root	usr/lib/python2.4/site-packages/Pyrex/__init__.py (EMPTY)

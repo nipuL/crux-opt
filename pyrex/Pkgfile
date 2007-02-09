@@ -4,7 +4,7 @@
 # Depends on: python
 
 name=pyrex
-version=0.9.4.1
+version=0.9.5.1a
 release=1
 source=(http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/Pyrex-$version.tar.gz)
 
