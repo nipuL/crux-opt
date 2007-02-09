@@ -51,7 +51,6 @@ drwxr-xr-x	root/root	usr/include/php/Zend/
 -rw-r--r--	root/root	usr/include/php/Zend/zend_language_scanner.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_list.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_llist.h
--rw-r--r--	root/root	usr/include/php/Zend/zend_mm.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_modules.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_multibyte.h
 -rw-r--r--	root/root	usr/include/php/Zend/zend_multiply.h
@@ -109,7 +108,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/libxml/
 -rw-r--r--	root/root	usr/include/php/ext/libxml/php_libxml.h
 drwxr-xr-x	root/root	usr/include/php/ext/pcre/
 drwxr-xr-x	root/root	usr/include/php/ext/pcre/pcrelib/
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/internal.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_internal.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_scanner.h
@@ -124,6 +122,16 @@ drwxr-xr-x	root/root	usr/include/php/ext/session/
 -rw-r--r--	root/root	usr/include/php/ext/session/mod_files.h
 -rw-r--r--	root/root	usr/include/php/ext/session/mod_user.h
 -rw-r--r--	root/root	usr/include/php/ext/session/php_session.h
+drwxr-xr-x	root/root	usr/include/php/ext/spl/
+-rw-r--r--	root/root	usr/include/php/ext/spl/php_spl.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_array.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_directory.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_engine.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_exceptions.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_functions.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_iterators.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_observer.h
+-rw-r--r--	root/root	usr/include/php/ext/spl/spl_sxe.h
 drwxr-xr-x	root/root	usr/include/php/ext/sqlite/
 drwxr-xr-x	root/root	usr/include/php/ext/sqlite/libsqlite/
 drwxr-xr-x	root/root	usr/include/php/ext/sqlite/libsqlite/src/
