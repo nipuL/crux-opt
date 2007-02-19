@@ -5,16 +5,18 @@
 
 name=guile
 version=1.8.1
-release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+release=2
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz \
+	$name-1.8-rational.patch)
 
 build() {
-    cd $name-$version
-    ./configure --prefix=/usr \
+	cd $name-$version
+	patch -p0 -i $SRC/$name-1.8-rational.patch
+	./configure --prefix=/usr \
 		--with-threads \
 		--with-modules \
 		--enable-deprecation=no
-    make
-    make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/info
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/info
 }
