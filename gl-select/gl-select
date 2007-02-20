@@ -2,27 +2,50 @@
 #
 # gl-select: select active gl/glx libraries/extensions
 #
-# Matt Housh <jaeger@morpheus.net>
+# Matt Housh, jaeger at morpheus dot net
+# Jose V Beneyto, joberui at ei dot upv dot es
 #
 
-usage() {
+##### CHANGELOG #####
+Feb 20, 2007 - version 1.1
+	changelog was not kept prior to this date
+	added abstractions and ati support contributed by Jose V Beneyto (sepen)
+#####################
+
+infoUsage() {
 	echo "Usage: $0 [x11|nvidia]"
-	exit
+}
+
+infoMissing() {
+	echo "One or more of the non-x11 gl/glx backup files are missing. This means"
+	echo "either you're not using a non-x11 gl/glx setup, in which case nothing"
+	echo "needs to be changed, OR your x11 backups are missing, which can be"
+	echo "solved by reinstalling the x11 package from the CRUX CD or ports."
+}
+
+infoRevert() {
+	echo "You appear to already be using a non-x11 gl/glx setup. If the"
+	echo "one selected isn't the correct one, revert to x11 and then select"
+	echo "the correct new setup using 'gl-select x11; gl-select <new gl/glx>'."
+}
+
+checkInstalled() {
+	if [ -z "`pkginfo -i | awk '{ print $1 }' | grep -e ^$1$`" ]
+	then
+		echo "$1 isn't installed!"
+		exit 1
+	fi
 }
 
 # if other than a single argument is passed, spit out some help
 if [ $# -ne 1 ]
 then
-	usage
+	infoUsage
 	exit 1
 fi
 
 # check for the x11 port; if it's not installed, why is this script even run?
-if [ -z "`pkginfo -i | awk '{ print $1 }' | grep ^x11$`" ]
-then
-	echo "x11 isn't installed!"
-	exit 1
-fi
+checkInstalled x11
 
 # perform the selection for the following supported gl/glx setups
 case "$1" in
@@ -35,17 +58,16 @@ case "$1" in
 			/usr/X11R6/lib/modules/extensions/libGLcore_so \
 			/usr/X11R6/lib/libGL_so_1_2 \
 			/usr/X11R6/lib/libGL_a"
+
 		for F in $BACKUPS
 		do
 			if [ ! -e $F ]
 			then
-				echo "One or more of the non-x11 gl/glx backup files are missing. This means"
-				echo "either you're not using a non-x11 gl/glx setup, in which case nothing"
-				echo "needs to be changed, OR your x11 backups are missing, which can be"
-				echo "solved by reinstalling the x11 package from the CRUX CD or ports."
+				infoMissing
 				exit 1
 			fi
 		done
+
 		# move the x11 backups back into place
 		echo -n "libglx "
 		rm -f /usr/X11R6/lib/modules/extensions/libglx.so
@@ -57,15 +79,12 @@ case "$1" in
 		mv /usr/X11R6/lib/libGL{_so_1_2,.so.1.2}
 		mv /usr/X11R6/lib/libGL{_a,.a}
 		;;
+
 	"nvidia")
 		echo "* nvidia gl/glx selected"
 
 		# is the nvidia port installed?
-		if [ -z "`pkginfo -i | awk '{ print $1 }' | grep ^nvidia$`" ]
-		then
-			echo "nvidia port isn't installed!"
-			exit 1
-		fi
+		checkInstalled nvidia
 
 		# get the .so version number
 		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | cut -d- -f2`"
@@ -94,14 +113,46 @@ case "$1" in
 			[ ! -L /usr/lib/libGLcore.so ] && \
 				ln -sf libGLcore.so.1.0.$NV_VER /usr/lib/libGLcore.so
 		else
-			echo "You appear to already be using a non-x11 gl/glx setup. If the"
-			echo "one selected isn't the correct one, revert to x11 and then select"
-			echo "the correct new setup using 'gl-select x11; gl-select <new gl/glx>'."
+			infoRevert
 			exit 1
 		fi
 		;;
+
+	"ati")
+		echo "* ati gl/glx selected"
+
+		# is the ati port installed?
+		checkInstalled ati
+
+		# check for the existence of libGL_so_1_2
+		# if none, copy/move the x11 stuff out of the way for ati's
+		if [ ! -e /usr/X11R6/lib/libGL_so_1_2 ]
+		then
+			# we only need to move one library because it's the unique
+			# that overwrites the x11 libGL, the other must be copied to be 
+			# possible the revertion of the driver
+			echo -n "libglx "
+			cp /usr/X11R6/lib/modules/extensions/libglx{.so,_so}
+			echo -n "libGLcore "
+			cp /usr/X11R6/lib/modules/extensions/libGLcore{.so,_so}
+			echo -n "libGL "
+			cp /usr/X11R6/lib/libGL{.a,_a}
+			mv /usr/X11R6/lib/libGL{.so.1.2,_so_1_2}
+			# according to ati port
+			[ ! -L /usr/lib/libGL.so ] && \
+				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so
+			[ ! -L /usr/X11R6/lib/libGL.so.1 ] && \
+				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so.1
+			[ ! -L /usr/X11R6/lib/libGL.so.1.2 ] && \
+				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so.1.2
+		else
+			infoRevert
+			exit 1
+		fi
+		;;
+
 	*)
-		usage
+		infoUsage
 		;;
 esac
 
