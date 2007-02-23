@@ -86,6 +86,7 @@ drwxr-xr-x	root/root	usr/include/firefox/browsersearch/
 drwxr-xr-x	root/root	usr/include/firefox/cairo/
 -rw-r--r--	root/root	usr/include/firefox/cairo/cairo-features.h
 -rw-r--r--	root/root	usr/include/firefox/cairo/cairo-ft.h
+-rw-r--r--	root/root	usr/include/firefox/cairo/cairo-rename.h
 -rw-r--r--	root/root	usr/include/firefox/cairo/cairo-xlib-xrender.h
 -rw-r--r--	root/root	usr/include/firefox/cairo/cairo-xlib.h
 -rw-r--r--	root/root	usr/include/firefox/cairo/cairo.h
@@ -2149,6 +2150,7 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/kernel/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/keyhi.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/keyt.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/langinfo.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/lber.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/lcache.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/ldap.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/ldap_ssl.h
@@ -3176,7 +3178,6 @@ drwxr-xr-x	root/root	usr/lib/firefox/components/
 -rw-r--r--	root/root	usr/lib/firefox/components/find.xpt
 -rw-r--r--	root/root	usr/lib/firefox/components/gfx.xpt
 -rw-r--r--	root/root	usr/lib/firefox/components/gksvgrenderer.xpt
--rw-r--r--	root/root	usr/lib/firefox/components/globalstore.js
 -rw-r--r--	root/root	usr/lib/firefox/components/history.xpt
 -rw-r--r--	root/root	usr/lib/firefox/components/htmlparser.xpt
 -rw-r--r--	root/root	usr/lib/firefox/components/imglib2.xpt
@@ -3421,6 +3422,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/init.d/
 -rwxr-xr-x	root/root	usr/lib/firefox/mozilla-installer-bin
 -rwxr-xr-x	root/root	usr/lib/firefox/mozilla-xremote-client
 -rwxr-xr-x	root/root	usr/lib/firefox/nsinstall
+-rw-r--r--	root/root	usr/lib/firefox/old-homepage-default.properties
 drwxr-xr-x	root/root	usr/lib/firefox/plugins/
 -rwxr-xr-x	root/root	usr/lib/firefox/plugins/libnullplugin.so
 -rwxr-xr-x	root/root	usr/lib/firefox/plugins/libunixprintplugin.so
@@ -3589,12 +3591,12 @@ drwxr-xr-x	root/root	usr/lib/firefox/res/throbber/
 -rw-r--r--	root/root	usr/lib/firefox/res/viewsource.css
 -rwxr-xr-x	root/root	usr/lib/firefox/run-mozilla.sh
 drwxr-xr-x	root/root	usr/lib/firefox/searchplugins/
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/amazondotcom.xml
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/answers.xml
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/creativecommons.xml
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/eBay.xml
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/google.xml
--rwxr-xr-x	root/root	usr/lib/firefox/searchplugins/yahoo.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/amazondotcom.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/answers.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/creativecommons.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/eBay.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/google.xml
+-rw-r--r--	root/root	usr/lib/firefox/searchplugins/yahoo.xml
 -rwxr-xr-x	root/root	usr/lib/firefox/shlibsign
 -rwxr-xr-x	root/root	usr/lib/firefox/updater
 -rw-r--r--	root/root	usr/lib/firefox/updater.ini
