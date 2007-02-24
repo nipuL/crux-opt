@@ -76,6 +76,7 @@ drwxr-xr-x	root/root	usr/lib/apache/build/
 -rw-r--r--	root/root	usr/lib/apache/build/config_vars.mk
 -rwxr-xr-x	root/root	usr/lib/apache/build/instdso.sh
 -rw-r--r--	root/root	usr/lib/apache/build/library.mk
+lrwxrwxrwx	root/root	usr/lib/apache/build/libtool -> /usr/share/apr-0/libtool
 -rw-r--r--	root/root	usr/lib/apache/build/ltlib.mk
 -rw-r--r--	root/root	usr/lib/apache/build/program.mk
 -rw-r--r--	root/root	usr/lib/apache/build/rules.mk

@@ -6,7 +6,7 @@
 
 name=apache
 version=2.0.59
-release=1
+release=2
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         $name-ssl_cert.patch crux.layout apache)
 
@@ -32,6 +32,9 @@ build(){
    touch $PKG/etc/ssl/keys/apache.key
    touch $PKG/etc/ssl/certs/apache.crt
    install -D -m 755 $SRC/apache $PKG/etc/rc.d/apache
+
+   cd $PKG/usr/lib/apache/build
+   ln -s $(apr-config --apr-libtool) libtool
 
    rm -R $PKG/var/www/htdocs/*
    rm $PKG/var/www/{error,icons,icons/small}/README*
