@@ -4,14 +4,16 @@
 # Depends on:  gdbm, ncurses, openssl
 
 name=mutt
-version=1.5.13
+version=1.5.14
 release=1
 source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --with-docdir=/usr/share/mutt \
+                --with-mailpath=/var/spool/mail \
                 --enable-pop \
                 --enable-imap \
                 --with-ssl \
@@ -22,5 +24,6 @@ build () {
     find $PKG/usr/share/mutt/* ! -name manual.txt | xargs rm -rf
     rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
     rm $PKG/usr/bin/{flea,muttbug}
-    rm $PKG/usr/man/man1/{flea.1,muttbug.1}
+    rm $PKG/usr/man/man1/{flea.1,muttbug.1,mutt_dotlock.1}
+    rm $PKG/usr/man/man5/{mmdf.5,mbox.5}
 }
