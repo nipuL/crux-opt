@@ -22,6 +22,9 @@ drwxr-xr-x	root/root	usr/local/share/qemu/
 -rw-r--r--	root/root	usr/local/share/qemu/linux_boot.bin
 -rw-r--r--	root/root	usr/local/share/qemu/openbios-sparc32
 -rw-r--r--	root/root	usr/local/share/qemu/ppc_rom.bin
+-rw-r--r--	root/root	usr/local/share/qemu/pxe-ne2k_pci.bin
+-rw-r--r--	root/root	usr/local/share/qemu/pxe-pcnet.bin
+-rw-r--r--	root/root	usr/local/share/qemu/pxe-rtl8139.bin
 -rw-r--r--	root/root	usr/local/share/qemu/vgabios-cirrus.bin
 -rw-r--r--	root/root	usr/local/share/qemu/vgabios.bin
 -rw-r--r--	root/root	usr/local/share/qemu/video.x
