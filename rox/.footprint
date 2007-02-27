@@ -50,6 +50,7 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-gzip.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-gzpostscript.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-jar.png
+lrwxrwxrwx	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-java-archive.png -> mime-application:x-jar.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-java.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-lyx.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/mime-application:x-object.png
@@ -110,6 +111,7 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/images/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/images/rox-select.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/images/rox-show-details.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/images/rox-show-hidden.png
+lrwxrwxrwx	root/root	usr/ROX/Apps/ROX-Filer/images/rox-symlink.png -> symlink.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/images/rox-xattr.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/images/symlink.png
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/style.css
