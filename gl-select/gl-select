@@ -6,11 +6,11 @@
 # Jose V Beneyto, joberui at ei dot upv dot es
 #
 
-##### CHANGELOG #####
-Feb 20, 2007 - version 1.1
-	changelog was not kept prior to this date
-	added abstractions and ati support contributed by Jose V Beneyto (sepen)
-#####################
+##### CHANGELOG ##############################################################
+#	Feb 20, 2007 - version 1.1
+#		changelog was not kept prior to this date
+#		added abstractions and ati support contributed by Jose V Beneyto (sepen)
+##############################################################################
 
 infoUsage() {
 	echo "Usage: $0 [x11|nvidia|ati]"
