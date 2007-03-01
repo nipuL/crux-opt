@@ -1,7 +1,7 @@
 # Description: A library for layout and rendering of text
 # URL: http://www.gtk.org/
 # Maintainer: Matt Housh, jaeger at crux dot nu
-# Depends on: x11, freetype, fontconfig, cairo
+# Depends on: cairo, glib, xorg-libsm, xorg-libxext, xorg-libxft
 
 name=pango
 version=1.14.8
