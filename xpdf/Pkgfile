@@ -5,15 +5,13 @@
 # Depends on: lesstif, t1lib
 
 name=xpdf
-version=3.01pl2
+version=3.02
 release=1
-source=(ftp://ftp.foolabs.com/pub/xpdf/$name-3.01.tar.gz \
-	$name-$version.patch)
+source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
 
 build()
 {
-    cd $name-3.01
-    patch -p1 < ../$name-$version.patch
+    cd $name-$version
     ./configure \
 	--prefix=/usr \
         --with-Xm-library=/usr/lib \
