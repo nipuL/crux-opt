@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=dovecot
-version=1.0.rc24
+version=1.0.rc25
 release=1
 source=(http://dovecot.org/releases/$name-$version.tar.gz \
         dovecot-config.patch dovecot)
@@ -25,7 +25,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/{share,include}
     mv $PKG/etc/dovecot-example.conf $PKG/etc/dovecot.conf
     install -D -m 755 $SRC/dovecot $PKG/etc/rc.d/dovecot
 
