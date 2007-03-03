@@ -10,7 +10,7 @@ source=(ftp://ftp.alsa-project.org/pub/utils/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr --disable-nls
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share $PKG/usr/man/fr
