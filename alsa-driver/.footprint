@@ -51,6 +51,7 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-ak4114.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-ak4xxx-adda.ko
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/other/snd-pt2258.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-cs8427.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-i2c.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/i2c/snd-tea6330t.ko
@@ -105,9 +106,10 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/sb/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/snd-sscape.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/isa/wavefront/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/isa/wavefront/snd-wavefront.ko
+drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/misc/
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/misc/ac97_bus.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ac97/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ac97/snd-ac97-bus.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ac97/snd-ac97-codec.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ac97/snd-ak4531-codec.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ali5451/
@@ -193,6 +195,8 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/vx222/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/vx222/snd-vx222.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ymfpci/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/pci/ymfpci/snd-ymfpci.ko
+drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/soc/
+-rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/soc/snd-soc-core.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/synth/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/sound/synth/emux/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/sound/synth/emux/snd-emux-synth.ko
@@ -254,6 +258,7 @@ drwxr-xr-x	root/root	usr/include/sound/
 -rw-r--r--	root/root	usr/include/sound/pcm.h
 -rw-r--r--	root/root	usr/include/sound/pcm_oss.h
 -rw-r--r--	root/root	usr/include/sound/pcm_params.h
+-rw-r--r--	root/root	usr/include/sound/pt2258.h
 -rw-r--r--	root/root	usr/include/sound/rawmidi.h
 -rw-r--r--	root/root	usr/include/sound/sb.h
 -rw-r--r--	root/root	usr/include/sound/sb16_csp.h
@@ -267,6 +272,8 @@ drwxr-xr-x	root/root	usr/include/sound/
 -rw-r--r--	root/root	usr/include/sound/seq_virmidi.h
 -rw-r--r--	root/root	usr/include/sound/sfnt_info.h
 -rw-r--r--	root/root	usr/include/sound/snd_wavefront.h
+-rw-r--r--	root/root	usr/include/sound/soc-dapm.h
+-rw-r--r--	root/root	usr/include/sound/soc.h
 -rw-r--r--	root/root	usr/include/sound/soundfont.h
 -rw-r--r--	root/root	usr/include/sound/sscape_ioctl.h
 -rw-r--r--	root/root	usr/include/sound/tea575x-tuner.h
@@ -274,7 +281,6 @@ drwxr-xr-x	root/root	usr/include/sound/
 -rw-r--r--	root/root	usr/include/sound/timer.h
 -rw-r--r--	root/root	usr/include/sound/tlv.h
 -rw-r--r--	root/root	usr/include/sound/trident.h
--rw-r--r--	root/root	usr/include/sound/typedefs.h
 -rw-r--r--	root/root	usr/include/sound/uda1341.h
 -rw-r--r--	root/root	usr/include/sound/util_mem.h
 -rw-r--r--	root/root	usr/include/sound/version.h
