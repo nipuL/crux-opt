@@ -11,13 +11,17 @@
 
 name=mplayer
 version=1.0rc1
-release=1
+release=2
 source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+	http://www1.mplayerhq.hu/MPlayer/patches/asmrules_fix_20061231.diff \
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
 
 build() {
 	cd MPlayer-$version
+
+	# fix for asmrp buffer overflow
+	patch -p0 -i $SRC/asmrules_fix_20061231.diff
 
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
