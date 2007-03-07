@@ -5,17 +5,12 @@
 # Depends on: lesstif, t1lib
 
 name=xpdf
-version=3.01pl2
-release=2
-source=(ftp://ftp.foolabs.com/pub/xpdf/$name-3.01.tar.gz \
-	$name-$version.patch
-	$name-3.01-noftinternals.patch)
+version=3.02
+release=1
+source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz)
 
-build()
-{
-    cd $name-3.01
-    patch -p1 < ../$name-$version.patch
-    patch -p1 < ../$name-3.01-noftinternals.patch
+build() {
+    cd $name-$version
     ./configure \
 	--prefix=/usr \
         --with-Xm-library=/usr/lib \

@@ -759,6 +759,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/rsaenh.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/rundll32.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/sane.ds.so
+-rwxr-xr-x	root/root	usr/lib/wine/schannel.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/secur32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/security.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/sensapi.dll.so
@@ -840,6 +841,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/winevdm.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winex11.drv.so
 -rw-r--r--	root/root	usr/lib/wine/wing.dll16
+-rwxr-xr-x	root/root	usr/lib/wine/wing32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winhelp.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wininet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winmm.dll.so
