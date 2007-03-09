@@ -1,7 +1,7 @@
 # Description: A 2D graphics library with support for multiple output devices
 # URL: http://www.cairographics.org/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: glitz
+# Depends on: fontconfig, glitz, libpng, xorg-libxrender
 
 name=cairo
 version=1.2.6
