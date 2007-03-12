@@ -1,0 +1,21 @@
+# Description: A high level IPC implementation
+# URL: http://www.directfb.org
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=linux-fusion
+version=3.2.3
+release=1
+source=(http://www.directfb.org/downloads/Core/$name-$version.tar.gz \
+        40-fusion.rules)
+
+build() {
+	cd $name-$version
+
+	sed -i -e '/depmod/d' Makefile
+
+	make
+	make DESTDIR=$PKG install
+
+	install -d $PKG/etc/udev/rules.d
+	install -m 644 $SRC/40-fusion.rules $PKG/etc/udev/rules.d
+}
