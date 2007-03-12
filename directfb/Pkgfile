@@ -3,9 +3,9 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=directfb
-version=0.9.25.1
-release=2
-source=(http://www.directfb.org/downloads/Old/DirectFB-$version.tar.gz)
+version=1.0.0
+release=1
+source=(http://www.directfb.org/downloads/Core/DirectFB-$version.tar.gz)
 
 build() {
 	local EXTRA_ARGS
@@ -16,7 +16,8 @@ build() {
 
 	cd DirectFB-$version
 
-	./configure --prefix=/usr --enable-zlib $EXTRA_ARGS
+	./configure --prefix=/usr --mandir=/usr/man \
+	            --enable-zlib $EXTRA_ARGS
 
 	make
 	make DESTDIR=$PKG install
