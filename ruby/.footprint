@@ -8,9 +8,9 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/testrb
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libruby-static.a
-lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.5
-lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.5
--rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.5
+lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.6
+lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.6
+-rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.6
 drwxr-xr-x	root/root	usr/lib/ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/English.rb
@@ -38,6 +38,9 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/date/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/date2.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/debug.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/delegate.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/digest.rb
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/digest/
+-rw-r--r--	root/root	usr/lib/ruby/1.8/digest/sha2.rb
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/dl/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/dl/import.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/dl/struct.rb
@@ -124,8 +127,10 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/curses.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/dbm.so
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/defines.h
+-rw-r--r--	root/root	usr/lib/ruby/1.8/linux/digest.h
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest.so
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/
+-rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/bubblebabble.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/md5.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/rmd160.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/sha1.so
@@ -164,6 +169,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/racc/
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/strscan.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/syck.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/syslog.so
+-rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/thread.so
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/util.h
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/version.h
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/zlib.so
