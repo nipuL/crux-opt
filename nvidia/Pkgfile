@@ -5,7 +5,7 @@
 
 name=nvidia
 version=1.0-9755
-release=1
+release=2
 source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
 	$name-makefile.patch)
 
@@ -23,7 +23,7 @@ build() {
 		$PKG/usr/bin $PKG/usr/man/man1
 
 	# install libraries
-	cp -a usr/X11R6/lib $PKG/usr/lib/xorg/
+	cp -a usr/X11R6/lib/* $PKG/usr/lib/xorg/
 	cp -a usr/lib/* $PKG/usr/lib/
 	sed -i -e 's|__LIBGL_PATH__|/usr/lib|' $PKG/usr/lib/libGL.la
 
