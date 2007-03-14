@@ -64,8 +64,7 @@ case "$1" in
 		# if none, nothing is necessary or the backups have been erased
 		BACKUPS="/usr/lib/xorg/modules/extensions/libglx_so \
 			/usr/lib/xorg/modules/extensions/libGLcore_so \
-			/usr/lib/libGL_so_1_2 \
-			/usr/lib/libGL_a"
+			/usr/lib/libGL_so_1_2"
 
 		for F in $BACKUPS
 		do
