@@ -1,10 +1,10 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: x11, gl-select
+# Depends on: xorg, gl-select
 
 name=nvidia
-version=1.0-9746
+version=1.0-9755
 release=1
 source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
 	$name-makefile.patch)
@@ -18,12 +18,12 @@ build() {
 
 	# create directories the Makefile expects
 	mkdir -p $PKG/usr/lib \
-		$PKG/usr/X11R6/lib/modules/drivers \
-		$PKG/usr/X11R6/lib/modules/extensions \
+		$PKG/usr/lib/xorg/modules/drivers \
+		$PKG/usr/lib/xorg/modules/extensions \
 		$PKG/usr/bin $PKG/usr/man/man1
 
 	# install libraries
-	cp -a usr/X11R6/lib $PKG/usr/X11R6/
+	cp -a usr/X11R6/lib $PKG/usr/lib/xorg/
 	cp -a usr/lib/* $PKG/usr/lib/
 	sed -i -e 's|__LIBGL_PATH__|/usr/lib|' $PKG/usr/lib/libGL.la
 
