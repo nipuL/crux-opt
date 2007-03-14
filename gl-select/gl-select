@@ -7,26 +7,31 @@
 #
 
 ##### CHANGELOG ##############################################################
+#
+#	Mar 14, 2007 - version 1.1.1
+#		updated all sections for xorg 7.x
+#
 #	Feb 20, 2007 - version 1.1
 #		changelog was not kept prior to this date
 #		added abstractions and ati support contributed by Jose V Beneyto (sepen)
+#
 ##############################################################################
 
 infoUsage() {
-	echo "Usage: $0 [x11|nvidia|ati]"
+	echo "Usage: $0 [xorg|nvidia|ati]"
 }
 
 infoMissing() {
-	echo "One or more of the non-x11 gl/glx backup files are missing. This means"
-	echo "either you're not using a non-x11 gl/glx setup, in which case nothing"
-	echo "needs to be changed, OR your x11 backups are missing, which can be"
-	echo "solved by reinstalling the x11 package from the CRUX CD or ports."
+	echo "One or more of the non-xorg gl/glx backup files are missing. This means"
+	echo "either you're not using a non-xorg gl/glx setup, in which case nothing"
+	echo "needs to be changed, OR your xorg backups are missing, which can be"
+	echo "solved by reinstalling the xorg packages from the CRUX CD or ports."
 }
 
 infoRevert() {
-	echo "You appear to already be using a non-x11 gl/glx setup. If the"
-	echo "one selected isn't the correct one, revert to x11 and then select"
-	echo "the correct new setup using 'gl-select x11; gl-select <new gl/glx>'."
+	echo "You appear to already be using a non-xorg gl/glx setup. If the"
+	echo "one selected isn't the correct one, revert to xorg and then select"
+	echo "the correct new setup using 'gl-select xorg; gl-select <new gl/glx>'."
 }
 
 checkInstalled() {
@@ -44,20 +49,22 @@ then
 	exit 1
 fi
 
-# check for the x11 port; if it's not installed, why is this script even run?
-checkInstalled x11
+# check for the xorg port; if it's not installed, why is this script even run?
+# xorg is a metaport and it's possible that the proper deps might not all be
+# installed; more strict error checking may be implemented at a later date
+checkInstalled xorg
 
 # perform the selection for the following supported gl/glx setups
 case "$1" in
-	"x11")
-		echo "* x11 gl/glx selected"
+	"xorg")
+		echo "* xorg gl/glx selected"
 
 		# check for the existence of libglx_so, libGL_so_1_2 and friends
 		# if none, nothing is necessary or the backups have been erased
-		BACKUPS="/usr/X11R6/lib/modules/extensions/libglx_so \
-			/usr/X11R6/lib/modules/extensions/libGLcore_so \
-			/usr/X11R6/lib/libGL_so_1_2 \
-			/usr/X11R6/lib/libGL_a"
+		BACKUPS="/usr/lib/xorg/modules/extensions/libglx_so \
+			/usr/lib/xorg/modules/extensions/libGLcore_so \
+			/usr/lib/libGL_so_1_2 \
+			/usr/lib/libGL_a"
 
 		for F in $BACKUPS
 		do
@@ -68,16 +75,16 @@ case "$1" in
 			fi
 		done
 
-		# move the x11 backups back into place
+		# move the xorg backups back into place
 		echo -n "libglx "
-		rm -f /usr/X11R6/lib/modules/extensions/libglx.so
-		mv /usr/X11R6/lib/modules/extensions/libglx{_so,.so}
+		rm -f /usr/lib/xorg/modules/extensions/libglx.so
+		mv /usr/lib/xorg/modules/extensions/libglx{_so,.so}
 		echo -n "libGLcore "
-		rm -f /usr/X11R6/lib/modules/extensions/libGLcore.so
-		mv /usr/X11R6/lib/modules/extensions/libGLcore{_so,.so}
+		rm -f /usr/lib/xorg/modules/extensions/libGLcore.so
+		mv /usr/lib/xorg/modules/extensions/libGLcore{_so,.so}
 		echo -n "libGL "
-		mv /usr/X11R6/lib/libGL{_so_1_2,.so.1.2}
-		mv /usr/X11R6/lib/libGL{_a,.a}
+		mv /usr/lib/libGL{_so_1_2,.so.1.2}
+		mv /usr/lib/libGL{_a,.a}
 		;;
 
 	"nvidia")
@@ -90,22 +97,22 @@ case "$1" in
 		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | cut -d- -f2`"
 
 		# check for the existence of libglx_so and libGL_so_1_2
-		# if none, move the x11 stuff out of the way for nvidia's
-		if [ ! -e /usr/X11R6/lib/modules/extensions/libglx_so -a ! -e \
-			/usr/X11R6/lib/libGL_so_1_2 ]
+		# if none, move the xorg stuff out of the way for nvidia's
+		if [ ! -e /usr/lib/xorg/modules/extensions/libglx_so -a ! -e \
+			/usr/lib/libGL_so_1_2 ]
 		then
 			echo -n "libglx "
-			mv /usr/X11R6/lib/modules/extensions/libglx{.so,_so}
+			mv /usr/lib/xorg/modules/extensions/libglx{.so,_so}
 			ln -s libglx.so.1.0.$NV_VER \
-				/usr/X11R6/lib/modules/extensions/libglx.so
+				/usr/lib/xorg/modules/extensions/libglx.so
 			echo -n "libGLcore "
-			mv /usr/X11R6/lib/modules/extensions/libGLcore{.so,_so}
+			mv /usr/lib/xorg/modules/extensions/libGLcore{.so,_so}
 			ln -s /usr/lib/libGLcore.so.1.0.$NV_VER \
-				/usr/X11R6/lib/modules/extensions/libGLcore.so
+				/usr/lib/xorg/modules/extensions/libGLcore.so
 			echo -n "libGL "
-			mv /usr/X11R6/lib/libGL{.so.1.2,_so_1_2}
-			mv /usr/X11R6/lib/libGL{.a,_a}
-			rm /usr/X11R6/lib/libGL.so*
+			mv /usr/lib/libGL{.so.1.2,_so_1_2}
+			mv /usr/lib/libGL{.a,_a}
+			rm /usr/lib/libGL.so*
 			# nvidia's library versioning prevents ldconfig from creating
 			# libGL.so and libGLcore.so
 			[ ! -L /usr/lib/libGL.so ] && \
@@ -125,26 +132,26 @@ case "$1" in
 		checkInstalled ati
 
 		# check for the existence of libGL_so_1_2
-		# if none, copy/move the x11 stuff out of the way for ati's
-		if [ ! -e /usr/X11R6/lib/libGL_so_1_2 ]
+		# if none, copy/move the xorg stuff out of the way for ati's
+		if [ ! -e /usr/lib/libGL_so_1_2 ]
 		then
 			# we only need to move one library because it's the unique
-			# that overwrites the x11 libGL, the other must be copied to be 
+			# that overwrites the xorg libGL, the other must be copied to be 
 			# possible the revertion of the driver
 			echo -n "libglx "
-			cp /usr/X11R6/lib/modules/extensions/libglx{.so,_so}
+			cp /usr/lib/xorg/modules/extensions/libglx{.so,_so}
 			echo -n "libGLcore "
-			cp /usr/X11R6/lib/modules/extensions/libGLcore{.so,_so}
+			cp /usr/lib/xorg/modules/extensions/libGLcore{.so,_so}
 			echo -n "libGL "
-			cp /usr/X11R6/lib/libGL{.a,_a}
-			mv /usr/X11R6/lib/libGL{.so.1.2,_so_1_2}
+			cp /usr/lib/libGL{.a,_a}
+			mv /usr/lib/libGL{.so.1.2,_so_1_2}
 			# according to ati port
 			[ ! -L /usr/lib/libGL.so ] && \
-				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so
-			[ ! -L /usr/X11R6/lib/libGL.so.1 ] && \
-				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so.1
-			[ ! -L /usr/X11R6/lib/libGL.so.1.2 ] && \
-				ln -sf libGL_so_1_2_ati /usr/X11R6/lib/libGL.so.1.2
+				ln -sf libGL_so_1_2_ati /usr/lib/libGL.so
+			[ ! -L /usr/lib/libGL.so.1 ] && \
+				ln -sf libGL_so_1_2_ati /usr/lib/libGL.so.1
+			[ ! -L /usr/lib/libGL.so.1.2 ] && \
+				ln -sf libGL_so_1_2_ati /usr/lib/libGL.so.1.2
 		else
 			infoRevert
 			exit 1
