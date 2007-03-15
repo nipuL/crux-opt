@@ -4,9 +4,9 @@
 # Depends on:  cups, x11
 
 name=ghostscript
-version=8.15.3
-release=2
-source=(ftp://ftp3.easysw.com/pub/$name/$version/espgs-$version-source.tar.bz2 \
+version=8.15.4
+release=1
+source=(http://ftp.easysw.com/pub/$name/$version/espgs-$version-source.tar.bz2 \
         http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz) 
 
 build () {
