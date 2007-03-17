@@ -5,9 +5,9 @@
 # Depends on: fontforge
 
 name=wine
-version=0.9.32
+version=0.9.33
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/wine-$version.tar.bz2)
+source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2)
 
 build() {
 	cd $name-$version
