@@ -1,13 +1,13 @@
 # Description: gd libraries
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Jeremy Jones, jeremy at samnjack dot com
-# URL: http://www.boutell.com/gd/
-# Depends on: x11, libpng, libjpeg, freetype
+# URL: http://www.libgd.org
+# Depends on: xorg-libxpm, libpng, libjpeg, freetype
 
 name=libgd
-version=2.0.33
+version=2.0.34
 release=1
-source=(http://www.boutell.com/gd/http/gd-$version.tar.gz)
+source=(http://www.libgd.org/releases/gd-$version.tar.gz)
 
 build () {
 	cd gd-$version
