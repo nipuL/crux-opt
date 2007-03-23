@@ -5,7 +5,7 @@
 
 name=subversion
 version=1.4.3
-release=1
+release=2
 source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
 
 build() {
@@ -15,7 +15,8 @@ build() {
     LDFLAGS="-L$PKG/usr/lib" \
         ./configure --prefix=/usr \
            --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
-           --disable-mod-activation --without-swig --disable-nls
+           --disable-mod-activation --without-swig --disable-nls \
+           --disable-neon-version-check
 
     make
     make DESTDIR=$PKG external-install local-install 
