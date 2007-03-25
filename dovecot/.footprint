@@ -15,8 +15,10 @@ drwxr-xr-x	root/root	usr/lib/dovecot/
 -rwxr-xr-x	root/root	usr/lib/dovecot/dict
 -rwxr-xr-x	root/root	usr/lib/dovecot/dovecot-auth
 -rwxr-xr-x	root/root	usr/lib/dovecot/gdbhelper
+-rwxr-xr-x	root/root	usr/lib/dovecot/idxview
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-login
+-rwxr-xr-x	root/root	usr/lib/dovecot/logview
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib01_acl_plugin.so -> ../lib01_acl_plugin.so

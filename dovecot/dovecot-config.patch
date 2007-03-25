@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.rc27.orig/dovecot-example.conf dovecot-1.0.rc27/dovecot-example.conf
---- dovecot-1.0.rc27.orig/dovecot-example.conf	2007-03-13 21:58:31.000000000 +0100
-+++ dovecot-1.0.rc27/dovecot-example.conf	2007-03-13 21:59:01.000000000 +0100
+diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-example.conf
+--- dovecot-1.0.rc28.orig/dovecot-example.conf	2007-03-24 09:43:35.000000000 +0100
++++ dovecot-1.0.rc28/dovecot-example.conf	2007-03-24 09:45:34.000000000 +0100
 @@ -13,11 +13,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -158,13 +158,15 @@ diff -Nru dovecot-1.0.rc27.orig/dovecot-example.conf dovecot-1.0.rc27/dovecot-ex
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -830,8 +830,8 @@
+@@ -828,10 +828,10 @@
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
    # http://wiki.dovecot.org/PasswordDatabase/Shadow
 -  #passdb shadow {
--  #}
 +  passdb shadow {
+     # [blocking=yes] - See userdb passwd for explanation
+     #args = 
+-  #}
 +  }
  
    # PAM-like authentication for OpenBSD.
