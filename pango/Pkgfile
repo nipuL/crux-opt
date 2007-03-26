@@ -4,9 +4,9 @@
 # Depends on: cairo, glib, xorg-libsm, xorg-libxext, xorg-libxft
 
 name=pango
-version=1.14.8
+version=1.16.1
 release=1
-source=(ftp://ftp.gtk.org/pub/$name/1.14/$name-$version.tar.bz2 \
+source=(ftp://ftp.gtk.org/pub/$name/1.16/$name-$version.tar.bz2 \
 	pango.modules)
 
 build () {
