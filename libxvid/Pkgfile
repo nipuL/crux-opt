@@ -3,8 +3,8 @@
 # Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=libxvid
-version=1.1.0
-release=3
+version=1.1.2
+release=1
 source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
 
 build() {
