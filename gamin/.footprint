@@ -15,11 +15,11 @@ lrwxrwxrwx	root/root	usr/lib/libgamin-1.so.0 -> libgamin-1.so.0.1.7
 -rw-r--r--	root/root	usr/lib/libgamin_shared.a
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gamin.pc
-drwxr-xr-x	root/root	usr/lib/python2.4/
-drwxr-xr-x	root/root	usr/lib/python2.4/site-packages/
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/_gamin.a
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/_gamin.la
--rwxr-xr-x	root/root	usr/lib/python2.4/site-packages/_gamin.so
--rw-r--r--	root/root	usr/lib/python2.4/site-packages/gamin.py
+drwxr-xr-x	root/root	usr/lib/python2.5/
+drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/_gamin.a
+-rwxr-xr-x	root/root	usr/lib/python2.5/site-packages/_gamin.la
+-rwxr-xr-x	root/root	usr/lib/python2.5/site-packages/_gamin.so
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/gamin.py
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/gam_server
