@@ -1,0 +1,53 @@
+--- Makefile.in.in~	2007-03-26 19:14:21.068194699 +0300
++++ Makefile.in.in	2007-03-26 19:14:29.244947286 +0300
+@@ -245,7 +245,7 @@
+ GENERATED_HEADERS = src/paths.h src/Emacs.ad.h src/config.h lwlib/config.h src/sheap-adjust.h
+ GENERATED_LISP = lisp/finder-inf.el
+ 
+-all: ${PROGNAME} all-elc info
++all: ${PROGNAME} all-elc
+ 
+ ${PROGNAME}:	${GENERATED_HEADERS} ${MAKE_SUBDIR} ${GENERATED_LISP}
+ 
+@@ -450,14 +450,13 @@
+ 	  for dir in \
+ 		lib/${inststaticdir} \
+ 	 	lib/${instvardir}/etc \
+-		lib/${instvardir}/info \
+ 		lib/${instvardir}/lisp; do \
+ 	    if test ! -d ${exec_prefix}/$${dir}; then \
+ 	      $(LN_S) ${prefix}/$${dir} ${exec_prefix}/$${dir}; fi; \
+ 	  done; \
+ 	fi
+ 
+-install-arch-indep: mkdir info
++install-arch-indep: mkdir
+ 	-@set ${COPYDESTS} ; \
+ 	 for dir in ${COPYDIR} ; do \
+ 	   if test "`(cd $$1 && $(pwd))`" != \
+@@ -483,16 +482,6 @@
+ 		 (cd $${subdir} && $(RM) -r RCS CVS SCCS \#* *~) ; \
+ 	       done) ; \
+ 	 done
+-	if test "`(cd ${srcdir}/info && $(pwd))`" != \
+-		"`(cd ${infodir} && $(pwd))`" && cd ${srcdir}/info; then \
+-	  if test ! -f ${infodir}/dir -a -f dir ; then \
+-	    ${INSTALL_DATA} ${srcdir}/info/dir ${infodir}/dir ; \
+-	  fi ; \
+-	  for file in *.info* ; do \
+-	    ${INSTALL_DATA} $${file} ${infodir}/$${file} ; \
+-	    chmod 0644 ${infodir}/$${file}; \
+-	  done ; \
+-	fi
+ 	cd ${srcdir}/etc && \
+ 	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
+ 	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
+@@ -513,7 +502,7 @@
+ ## (e.g. /usr/local/lib/${PROGNAME}-20.5/sparc-sun-solaris2.6), we use
+ ## make-path instead of mkdir.  Not all mkdirs have the `-p' flag.
+ mkdir: FRC.mkdir
+-	${MAKEPATH} ${COPYDESTS} ${docdir} ${infodir} ${archlibdir} \
++	${MAKEPATH} ${COPYDESTS} ${docdir} ${archlibdir} \
+ 	  ${mandir} ${bindir} ${datadir} ${libdir} ${pkgdir} \
+ 	  ${sitelispdir} ${moduledir} ${sitemoduledir}
+ 
