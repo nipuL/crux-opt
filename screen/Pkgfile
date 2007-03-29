@@ -6,7 +6,7 @@
 name=screen
 version=4.0.3
 release=2
-source=(ftp://ftp.uni-erlangen.de/pub/utilities/$name/$name-$version.tar.gz)
+source=(http://fresh.t-systems-sfr.com/unix/src/misc//$name-$version.tar.gz)
 
 build () {
     cd $name-$version
