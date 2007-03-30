@@ -3,12 +3,15 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=fakeroot
-version=1.6.4
+version=1.6.5
 release=1
-source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz \
+        fakeroot-atfuncs.patch)
 
 build () {
     cd $name-$version
+    patch -p1 -i $SRC/fakeroot-atfuncs.patch
+    autoconf
     ./configure --prefix=/usr \
                 --mandir=/usr/man
     make
