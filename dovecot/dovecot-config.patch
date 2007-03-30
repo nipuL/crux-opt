@@ -1,7 +1,7 @@
-diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-example.conf
---- dovecot-1.0.rc28.orig/dovecot-example.conf	2007-03-24 09:43:35.000000000 +0100
-+++ dovecot-1.0.rc28/dovecot-example.conf	2007-03-24 09:45:34.000000000 +0100
-@@ -13,11 +13,11 @@
+diff -Nru dovecot-1.0.rc29.orig/dovecot-example.conf dovecot-1.0.rc29/dovecot-example.conf
+--- dovecot-1.0.rc29.orig/dovecot-example.conf	2007-03-30 17:46:19.000000000 +0200
++++ dovecot-1.0.rc29/dovecot-example.conf	2007-03-30 17:49:22.000000000 +0200
+@@ -16,11 +16,11 @@
  # --with-ssldir=/etc/ssl
  
  # Base directory where to store runtime data.
@@ -15,7 +15,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
  # IP or host address where to listen in for connections. It's not currently
  # possible to specify multiple addresses. "*" listens in all IPv4 interfaces.
-@@ -88,8 +88,8 @@
+@@ -91,8 +91,8 @@
  # dropping root privileges, so keep the key file unreadable by anyone but
  # root. Included doc/mkcert.sh can be used to easily generate self-signed
  # certificate, just make sure to update the domains in dovecot-openssl.cnf
@@ -26,7 +26,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
  # If key file is password protected, give the password here. Alternatively
  # give it when starting dovecot with -p parameter.
-@@ -125,7 +125,7 @@
+@@ -128,7 +128,7 @@
  # which login needs to be able to connect to. The sockets are created when
  # running as root, so you don't have to worry about permissions. Note that
  # everything in this directory is deleted when Dovecot is started.
@@ -34,17 +34,17 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
 +login_dir = /var/run/dovecot/login
  
  # chroot login process to the login_dir. Only reason not to do this is if you
- # wish to run the whole Dovecot without roots.
-@@ -137,7 +137,7 @@
+ # wish to run the whole Dovecot without roots. <doc/wiki/Rootless.txt>
+@@ -138,7 +138,7 @@
+ # and don't use it anywhere else. The user must also belong to a group where
  # only it has access, it's used to control access for authentication process.
- # Note that this user is NOT used to access mails.
- # http://wiki.dovecot.org/UserIds
+ # Note that this user is NOT used to access mails. <doc/wiki/UserIds.txt>
 -#login_user = dovecot
 +login_user = dovecot
  
  # Set max. process size in megabytes. If you don't use
  # login_process_per_connection you might need to grow this.
-@@ -147,10 +147,10 @@
+@@ -148,10 +148,10 @@
  # login process be allowed to process multiple connections (no)? Yes is more
  # secure, espcially with SSL/TLS enabled. No is faster since there's no need
  # to create processes all the time.
@@ -57,16 +57,16 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
  # Maximum number of login processes to create. The listening process count
  # usually stays at login_processes_count, but when multiple users start logging
-@@ -208,7 +208,7 @@
+@@ -209,7 +209,7 @@
  #
- # http://wiki.dovecot.org/MailLocation
+ # <doc/wiki/MailLocation.txt>
  #
 -#mail_location = 
 +mail_location = mbox:~/Mail:INBOX=/var/spool/mail/%u
  
  # If you need to set multiple mailbox locations or want to change default
- # namespace settings, you can do it by defining namespace sections:
-@@ -321,7 +321,7 @@
+ # namespace settings, you can do it by defining namespace sections.
+@@ -324,7 +324,7 @@
  # non-valid GID as primary group ID aren't allowed to log in. If user
  # belongs to supplementary groups with non-valid GIDs, those groups are
  # not set.
@@ -75,7 +75,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  #last_valid_gid = 0
  
  # Maximum number of running mail processes. When this limit is reached,
-@@ -497,19 +497,19 @@
+@@ -498,19 +498,19 @@
  
  protocol imap {
    # Login executable location.
@@ -99,7 +99,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -562,11 +562,11 @@
+@@ -563,11 +563,11 @@
  
  protocol pop3 {
    # Login executable location.
@@ -113,7 +113,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -611,7 +611,7 @@
+@@ -612,7 +612,7 @@
    # installations. %08Xu%08Xv will be the new default, so use it for new
    # installations.
    #
@@ -122,7 +122,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
    # POP3 logout format string:
    #  %t - number of TOP commands
-@@ -657,7 +657,7 @@
+@@ -658,7 +658,7 @@
    #mail_plugin_dir = /usr/lib/dovecot/lda
  
    # Binary to use for sending mails.
@@ -131,7 +131,7 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
    # UNIX socket path to master authentication server to find users.
    #auth_socket_path = /var/run/dovecot/auth-master
-@@ -668,7 +668,7 @@
+@@ -669,7 +669,7 @@
  ##
  
  # Executable location
@@ -140,16 +140,16 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -782,7 +782,7 @@
+@@ -784,7 +784,7 @@
+   # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
-   # authentication to actually work.
-   # http://wiki.dovecot.org/PasswordDatabase/PAM
+   # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
 -  passdb pam {
 +  #passdb pam {
      # [blocking=yes] [session=yes] [setcred=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -815,7 +815,7 @@
+@@ -817,7 +817,7 @@
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -158,10 +158,10 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
  
    # /etc/passwd or similar, using getpwnam()
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -828,10 +828,10 @@
+@@ -829,10 +829,10 @@
  
    # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
-   # http://wiki.dovecot.org/PasswordDatabase/Shadow
+   # <doc/wiki/PasswordDatabase.Shadow.txt>
 -  #passdb shadow {
 +  passdb shadow {
      # [blocking=yes] - See userdb passwd for explanation
@@ -170,4 +170,4 @@ diff -Nru dovecot-1.0.rc28.orig/dovecot-example.conf dovecot-1.0.rc28/dovecot-ex
 +  }
  
    # PAM-like authentication for OpenBSD.
-   # http://wiki.dovecot.org/PasswordDatabase/BSDAuth
+   # <doc/wiki/PasswordDatabase.BSDAuth.txt>
