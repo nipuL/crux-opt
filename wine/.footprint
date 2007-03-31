@@ -778,6 +778,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/snmpapi.dll.so
 -rw-r--r--	root/root	usr/lib/wine/sound.drv16
 -rwxr-xr-x	root/root	usr/lib/wine/spoolss.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/spoolsv.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/start.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/stdole2.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/stdole32.tlb.so
@@ -862,6 +863,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ws2_32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wsock32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wtsapi32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/xcopy.exe.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/widl.1.gz
