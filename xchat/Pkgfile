@@ -8,9 +8,7 @@ version=2.8.0
 release=2
 source=(http://www.xchat.org/files/source/2.8/$name-$version.tar.bz2 \
 	http://www.xchat.org/files/source/2.8/patches/xc280-fix-back.diff \
-	http://www.xchat.org/files/source/2.8/patches/xc280-fix-ja.diff \
-	http://jaeger.morpheus.net/linux/files/$name.desktop \
-	http://jaeger.morpheus.net/linux/files/$name-dcs.png)
+	http://www.xchat.org/files/source/2.8/patches/xc280-fix-ja.diff)
 
 build() {
 	cd $name-$version
@@ -28,6 +26,6 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/{etc,share}
-	install -D $SRC/$name.desktop $PKG/usr/share/applications/$name.desktop
-	install -D $SRC/$name-dcs.png $PKG/usr/share/pixmaps/$name-dcs.png
+	install -D $name.desktop $PKG/usr/share/applications/$name.desktop
+	install -D $name.png $PKG/usr/share/pixmaps/$name.png
 }
