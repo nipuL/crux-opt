@@ -4,17 +4,17 @@
 # Depends on:  gtk
 
 name=scite
-version=172
+version=173
 release=1
 source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.tgz)
 
 build () {
     cd scintilla/gtk
-    sed -i "/^CXXFLAGS/s/-Os/$CXXFLAGS/" makefile
+    sed -i "s/-Os/$CXXFLAGS/" makefile
     make GTK2=1
 
     cd $SRC/$name/gtk
-    sed -i "/^CXXTFLAGS/s/-Os/$CXXFLAGS/" makefile
+    sed -i "s/-Os/$CXXFLAGS/" makefile
     make GTK2=1 prefix=/usr
     mkdir -p $PKG/usr/{bin,share/pixmaps}
     make prefix=$PKG/usr install
@@ -24,8 +24,8 @@ build () {
             /^#tabbar.hide.one/s/#//' \
            $PKG/usr/share/scite/SciTEGlobal.properties
 
-    chmod -x $PKG/usr/share/scite/*
-    rm -r $PKG/usr/share/{applications,scite/*.html}
+    chmod -x $PKG/usr/share/{applications,scite}/*
+    rm -r $PKG/usr/share/scite/*.html
     install -D -m 644 ../doc/scite.1 $PKG/usr/man/man1/scite.1
     ln -s SciTE $PKG/usr/bin/scite
 }

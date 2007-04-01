@@ -6,6 +6,8 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/scite.1.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/SciTE.desktop
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/Sci48M.png
 drwxr-xr-x	root/root	usr/share/scite/
@@ -24,6 +26,7 @@ drwxr-xr-x	root/root	usr/share/scite/
 -rw-r--r--	root/root	usr/share/scite/blitzbasic.properties
 -rw-r--r--	root/root	usr/share/scite/bullant.properties
 -rw-r--r--	root/root	usr/share/scite/caml.properties
+-rw-r--r--	root/root	usr/share/scite/cmake.properties
 -rw-r--r--	root/root	usr/share/scite/conf.properties
 -rw-r--r--	root/root	usr/share/scite/cpp.properties
 -rw-r--r--	root/root	usr/share/scite/csound.properties
