@@ -79,6 +79,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamstretch-gen
 -rwxr-xr-x	root/root	usr/bin/pamsumm
 -rwxr-xr-x	root/root	usr/bin/pamsummcol
+-rwxr-xr-x	root/root	usr/bin/pamthreshold
 -rwxr-xr-x	root/root	usr/bin/pamtilt
 -rwxr-xr-x	root/root	usr/bin/pamtodjvurle
 -rwxr-xr-x	root/root	usr/bin/pamtofits
@@ -91,6 +92,8 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pamtotga
 -rwxr-xr-x	root/root	usr/bin/pamtotiff
 -rwxr-xr-x	root/root	usr/bin/pamtouil
+-rwxr-xr-x	root/root	usr/bin/pamtoxvmini
+-rwxr-xr-x	root/root	usr/bin/pamx
 -rwxr-xr-x	root/root	usr/bin/pbmclean
 -rwxr-xr-x	root/root	usr/bin/pbmlife
 -rwxr-xr-x	root/root	usr/bin/pbmmake
@@ -144,6 +147,7 @@ lrwxrwxrwx	root/root	usr/bin/gemtopbm -> gemtopnm
 -rwxr-xr-x	root/root	usr/bin/pgmabel
 -rwxr-xr-x	root/root	usr/bin/pgmbentley
 -rwxr-xr-x	root/root	usr/bin/pgmcrater
+-rwxr-xr-x	root/root	usr/bin/pgmdeshadow
 lrwxrwxrwx	root/root	usr/bin/pgmedge -> pamedge
 -rwxr-xr-x	root/root	usr/bin/pgmenhance
 -rwxr-xr-x	root/root	usr/bin/pgmhist
@@ -303,6 +307,7 @@ lrwxrwxrwx	root/root	usr/bin/ppmtouil -> pamtouil
 -rwxr-xr-x	root/root	usr/bin/spctoppm
 -rwxr-xr-x	root/root	usr/bin/spottopgm
 -rwxr-xr-x	root/root	usr/bin/sputoppm
+-rwxr-xr-x	root/root	usr/bin/svgtopam
 -rwxr-xr-x	root/root	usr/bin/tgatoppm
 -rwxr-xr-x	root/root	usr/bin/thinkjettopbm
 -rwxr-xr-x	root/root	usr/bin/tifftopnm
@@ -337,8 +342,8 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/ppmfloyd.h
 -rw-r--r--	root/root	usr/include/shhopt.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.33
--rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.33
+lrwxrwxrwx	root/root	usr/lib/libnetpbm.so.10 -> libnetpbm.so.10.35
+-rwxr-xr-x	root/root	usr/lib/libnetpbm.so.10.35
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/411toppm.1.gz
@@ -418,6 +423,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pamstretch.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamsumm.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamsummcol.1.gz
+-rw-r--r--	root/root	usr/man/man1/pamthreshold.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtilt.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtodjvurle.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtofits.1.gz
@@ -430,6 +436,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pamtotga.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtotiff.1.gz
 -rw-r--r--	root/root	usr/man/man1/pamtouil.1.gz
+-rw-r--r--	root/root	usr/man/man1/pamtoxvmini.1.gz
+-rw-r--r--	root/root	usr/man/man1/pamx.1.gz
 -rw-r--r--	root/root	usr/man/man1/pbmclean.1.gz
 -rw-r--r--	root/root	usr/man/man1/pbmlife.1.gz
 -rw-r--r--	root/root	usr/man/man1/pbmmake.1.gz
@@ -483,6 +491,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/pgmabel.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmbentley.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmcrater.1.gz
+-rw-r--r--	root/root	usr/man/man1/pgmdeshadow.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmenhance.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmhist.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgmkernel.1.gz
@@ -625,6 +634,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/spctoppm.1.gz
 -rw-r--r--	root/root	usr/man/man1/spottopgm.1.gz
 -rw-r--r--	root/root	usr/man/man1/sputoppm.1.gz
+-rw-r--r--	root/root	usr/man/man1/svgtopam.1.gz
 -rw-r--r--	root/root	usr/man/man1/tgatoppm.1.gz
 -rw-r--r--	root/root	usr/man/man1/thinkjettopbm.1.gz
 -rw-r--r--	root/root	usr/man/man1/tifftopnm.1.gz
