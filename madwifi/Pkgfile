@@ -1,5 +1,5 @@
 # Description: Kernel module for Atheros based 802.11a/b/g cards
-# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
+# Maintainer: Till Biedermann, tillbiedermann at yahoo dot de
 # URL: http://madwifi.org
 # Depends on: sharutils
 
