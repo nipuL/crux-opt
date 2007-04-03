@@ -1,6 +1,6 @@
-# Maintainer:  Johannes Winkelmann, jw at tks6 dot net
+# Maintainer:  Simone Rota, sip at crux dot nu
 # Description: programmable bash completion for pkgutils and ports 
-# URL:         http://www.fukt.bth.se/~per/pkgutils/
+# URL:         http://www.crux.nu
 # Depends on:  bash-completion
 
 name=crux-bashcompletion
