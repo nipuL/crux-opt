@@ -1,28 +1,29 @@
-# Maintainer: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Description: Java plugin for Mozilla Firefox
 # URL: http://java.sun.com
-# Depends on: jre,firefox
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: Jay Dolan, jdolan at jdolan dot dyndns dot org
+# Depends on: jre, firefox
 
 name=firefox-java-plugin
-version=1.5.0
-release=09
+version=1.6.0
+release=1
 source=()
 
 build(){
-	plugins=(
-	  /usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so
-	  /usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
-	)
+    plugins=(
+	/usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so
+	/usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
+    )
 
-	for p in ${plugins[@]}; do
-	  test -f $p && break
-	done
+    for p in ${plugins[@]}; do
+	test -f $p && break
+    done
 
-	if [ ! -f $p ]; then
-	  echo "Java Runtime Environment not found"
-	  return
-	fi
+    if [ ! -f $p ]; then
+	echo "Java Runtime Environment not found!"
+	return
+    fi
 
-	mkdir -p $PKG/usr/lib/firefox/plugins
-	ln -s $p $PKG/usr/lib/firefox/plugins	
+    mkdir -p $PKG/usr/lib/firefox/plugins
+    ln -s $p $PKG/usr/lib/firefox/plugins	
 }
