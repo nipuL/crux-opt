@@ -1,0 +1,16 @@
+# Description: Microsoft Cabinet file decompressor
+# URL: http://www.kyz.uklinux.net/cabextract.php
+# Maintainer: Antti Nykänen, aon at iki dot fi
+# Depends on:
+
+name=cabextract
+version=1.2
+release=1
+source=(http://www.kyz.uklinux.net/downloads/cabextract-$version.tar.gz)
+
+build() {
+	cd cabextract-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
