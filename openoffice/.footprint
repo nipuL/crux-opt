@@ -286,8 +286,6 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xmerge.jar -> xmerge.jar
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/xmerge.jar.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xml-apis.jar -> xml-apis.jar.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/classes/xml-apis.jar.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/classes/xt.jar -> xt.jar.1
--r--r--r--	root/root	usr/lib/openoffice/program/classes/xt.jar.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/cmdmail.uno.so -> cmdmail.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/cmdmail.uno.so.1.1
 drwxr-xr-x	root/root	usr/lib/openoffice/program/components/
@@ -385,6 +383,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/javavm.uno.so -> javavm.uno.so.1
 -r--r--r--	root/root	usr/lib/openoffice/program/jvmfwk3rc
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/kde-open-url
 -r--r--r--	root/root	usr/lib/openoffice/program/kdebe1.uno.so
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/ldapbe2.uno.so -> ldapbe2.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/ldapbe2.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/legacy_binfilters.rdb -> legacy_binfilters.rdb.1
 -r--r--r--	root/root	usr/lib/openoffice/program/legacy_binfilters.rdb.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libabp680li.so
@@ -402,6 +402,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbasegfx680li.so -> libbasegfx
 -r--r--r--	root/root	usr/lib/openoffice/program/libbasegfx680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_frm680li.so -> libbf_frm680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_frm680li.so.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_go680li.so -> libbf_go680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libbf_go680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_lng680li.so -> libbf_lng680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libbf_lng680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libbf_migratefilter680li.so -> libbf_migratefilter680li.so.1.1
@@ -470,6 +472,7 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdbpool2.so -> libdbpool2.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdbtools680li.so -> libdbtools680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdbtools680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdbu680li.so
+-r--r--r--	root/root	usr/lib/openoffice/program/libdeploymentmisc680li.so
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdict_ja.so -> libdict_ja.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdict_ja.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdict_zh.so -> libdict_zh.so.1.1
@@ -538,8 +541,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhsqldb2.so -> libhsqldb2.so.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhunspell.so -> libhunspell.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libhunspell.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libhwp.so
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhyphen680li.so -> libhyphen680li.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libhyphen680li.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libhyphen680li.so -> libhyphen680li.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libhyphen680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libi18nisolang1gcc3.so -> libi18nisolang1gcc3.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libi18nisolang1gcc3.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libi18nregexpgcc3.so -> libi18nregexpgcc3.so.1.1
@@ -550,22 +553,18 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicd680li.so -> libicd680li.so
 -r--r--r--	root/root	usr/lib/openoffice/program/libicd680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicg680li.so -> libicg680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libicg680li.so.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicudata.so -> libicudata.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicudata.so.26 -> libicudata.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicudata.so.26.0 -> libicudata.so.26.0.1.1
--r--r--r--	root/root	usr/lib/openoffice/program/libicudata.so.26.0.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicui18n.so -> libicui18n.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicui18n.so.26 -> libicui18n.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicui18n.so.26.0 -> libicui18n.so.26.0.1
--r--r--r--	root/root	usr/lib/openoffice/program/libicui18n.so.26.0.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicule.so -> libicule.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicule.so.26 -> libicule.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicule.so.26.0 -> libicule.so.26.0.1.1
--r--r--r--	root/root	usr/lib/openoffice/program/libicule.so.26.0.1.1
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicuuc.so -> libicuuc.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicuuc.so.26 -> libicuuc.so.26.0
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicuuc.so.26.0 -> libicuuc.so.26.0.1
--r--r--r--	root/root	usr/lib/openoffice/program/libicuuc.so.26.0.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicudata.so.36 -> libicudata.so.36.0
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicudata.so.36.0 -> libicudata.so.36.0.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libicudata.so.36.0.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicui18n.so.36 -> libicui18n.so.36.0
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicui18n.so.36.0 -> libicui18n.so.36.0.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libicui18n.so.36.0.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicule.so.36 -> libicule.so.36.0
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicule.so.36.0 -> libicule.so.36.0.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libicule.so.36.0.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicuuc.so.36 -> libicuuc.so.36.0
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libicuuc.so.36.0 -> libicuuc.so.36.0.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libicuuc.so.36.0.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libidx680li.so -> libidx680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libidx680li.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libime680li.so -> libime680li.so.1.1
@@ -1882,6 +1881,12 @@ drwxr-xr-x	root/root	usr/lib/openoffice/program/resource/
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/wzi680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/xmlsec680en-US.res
 -r--r--r--	root/root	usr/lib/openoffice/program/resource/xsltdlg680en-US.res
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/root3.dat -> root3.dat.1
+-r--r--r--	root/root	usr/lib/openoffice/program/root3.dat.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/root4.dat -> root4.dat.1
+-r--r--r--	root/root	usr/lib/openoffice/program/root4.dat.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/root5.dat -> root5.dat.1
+-r--r--r--	root/root	usr/lib/openoffice/program/root5.dat.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/sax.uno.so -> sax.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/sax.uno.so.1.1
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/sbase
@@ -1912,6 +1917,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/spadmin -> soffice
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/spadmin.bin
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/streams.uno.so -> streams.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/streams.uno.so.1.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/stringresource680li.uno.so -> stringresource680li.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/stringresource680li.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/sunjavaplugin.so -> sunjavaplugin.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/sunjavaplugin.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/svtmisc.uno.so -> svtmisc.uno.so.1.1
@@ -1945,6 +1952,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/uno -> unopkg
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/unopkg
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/unopkg.bin
 -r--r--r--	root/root	usr/lib/openoffice/program/unorc
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/updatefeed.uno.so -> updatefeed.uno.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/updatefeed.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/updchk.uno.so
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/uri-encode
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/uriproc.uno.so -> uriproc.uno.so.1.1
@@ -2163,6 +2172,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/config/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/accelerator/
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/accelerator/default.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/accelerator/en-US/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/accelerator/en-US/default.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/global/accelerator/es/
@@ -2181,6 +2191,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/BasicID
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/BasicIDE/toolbar/insertcontrolsbar.xml
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/BasicIDE/toolbar/macrobar.xml
 -r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/BasicIDE/toolbar/standardbar.xml
+-r--r--r--	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/BasicIDE/toolbar/translationbar.xml
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartModule/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartModule/accelerator/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/soffice.cfg/modules/StartModule/accelerator/en-US/
@@ -2786,6 +2797,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_TH.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_de_CH_v2.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_de_DE_v2.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_th_pl_PL_v2.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/WordNet_license.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/de_AT.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/de_AT.dic
@@ -2828,6 +2840,8 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_de_DE_v2.idx
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_en_US_v2.dat
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_en_US_v2.idx
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_pl_PL_v2.dat
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_pl_PL_v2.idx
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_license.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_v2.dat
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/th_sk_SK_v2.idx
@@ -2865,6 +2879,8 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dtd/officedocument/1_0/
 -r--r--r--	root/root	usr/lib/openoffice/share/dtd/officedocument/1_0/table.mod
 -r--r--r--	root/root	usr/lib/openoffice/share/dtd/officedocument/1_0/text.mod
 -r--r--r--	root/root	usr/lib/openoffice/share/dtd/officedocument/1_0/toolbar.dtd
+drwxr-xr-x	root/root	usr/lib/openoffice/share/extension/
+drwxr-xr-x	root/root	usr/lib/openoffice/share/extension/install/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/fonts/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/fonts/truetype/
 -r--r--r--	root/root	usr/lib/openoffice/share/fonts/truetype/Vera.ttf
@@ -3527,6 +3543,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/Offic
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/Setup.xcu
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/TypeDetection/
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/TypeDetection/UISort.xcu
+-r--r--r--	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/UserProfile.xcu
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/VCL.xcu
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/ucb/
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/data/org/openoffice/ucb/Configuration.xcu
@@ -4183,6 +4200,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/xdg/
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/base.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/calc.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/draw.desktop
+-r--r--r--	root/root	usr/lib/openoffice/share/xdg/extension.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/impress.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/math.desktop
 -r--r--r--	root/root	usr/lib/openoffice/share/xdg/printeradmin.desktop
