@@ -13,6 +13,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-bisect
 -rwxr-xr-x	root/root	usr/bin/git-blame
 -rwxr-xr-x	root/root	usr/bin/git-branch
+-rwxr-xr-x	root/root	usr/bin/git-bundle
 -rwxr-xr-x	root/root	usr/bin/git-cat-file
 -rwxr-xr-x	root/root	usr/bin/git-check-ref-format
 -rwxr-xr-x	root/root	usr/bin/git-checkout
@@ -35,10 +36,10 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-diff
 -rwxr-xr-x	root/root	usr/bin/git-diff-files
 -rwxr-xr-x	root/root	usr/bin/git-diff-index
--rwxr-xr-x	root/root	usr/bin/git-diff-stages
 -rwxr-xr-x	root/root	usr/bin/git-diff-tree
 -rwxr-xr-x	root/root	usr/bin/git-fast-import
 -rwxr-xr-x	root/root	usr/bin/git-fetch
+-rwxr-xr-x	root/root	usr/bin/git-fetch--tool
 -rwxr-xr-x	root/root	usr/bin/git-fetch-pack
 -rwxr-xr-x	root/root	usr/bin/git-fmt-merge-msg
 -rwxr-xr-x	root/root	usr/bin/git-for-each-ref
@@ -76,6 +77,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-merge-resolve
 -rwxr-xr-x	root/root	usr/bin/git-merge-stupid
 -rwxr-xr-x	root/root	usr/bin/git-merge-tree
+-rwxr-xr-x	root/root	usr/bin/git-mergetool
 -rwxr-xr-x	root/root	usr/bin/git-mktag
 -rwxr-xr-x	root/root	usr/bin/git-mktree
 -rwxr-xr-x	root/root	usr/bin/git-mv
@@ -102,7 +104,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-request-pull
 -rwxr-xr-x	root/root	usr/bin/git-rerere
 -rwxr-xr-x	root/root	usr/bin/git-reset
--rwxr-xr-x	root/root	usr/bin/git-resolve
 -rwxr-xr-x	root/root	usr/bin/git-rev-list
 -rwxr-xr-x	root/root	usr/bin/git-rev-parse
 -rwxr-xr-x	root/root	usr/bin/git-revert
@@ -165,6 +166,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-bisect.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-blame.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-branch.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-bundle.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cat-file.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-check-ref-format.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-checkout-index.1.gz
@@ -185,7 +187,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-describe.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff-files.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff-index.1.gz
--rw-r--r--	root/root	usr/man/man1/git-diff-stages.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fast-import.1.gz
@@ -221,6 +222,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-merge-one-file.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-merge-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-merge.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-mergetool.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mktag.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mktree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mv.1.gz
@@ -248,7 +250,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-request-pull.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-rerere.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-reset.1.gz
--rw-r--r--	root/root	usr/man/man1/git-resolve.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-rev-list.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-rev-parse.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-revert.1.gz
@@ -299,6 +300,7 @@ drwxr-xr-x	root/root	usr/share/git-core/templates/hooks/
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/applypatch-msg
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/commit-msg
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/post-commit
+-rw-r--r--	root/root	usr/share/git-core/templates/hooks/post-receive
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/post-update
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-applypatch
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-commit
