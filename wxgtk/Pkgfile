@@ -1,12 +1,12 @@
 # Description: wxWidgets for GTK+
 # URL: http://www.wxwindows.org/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on: gtk
 
 name=wxgtk
-version=2.6.3
+version=2.6.4
 release=1
-source=(http://dl.sourceforge.net/sourceforge/wxwindows/wxGTK-$version.tar.bz2)
+source=(http://dl.sf.net/wxwindows/wxGTK-$version.tar.bz2)
 # alternate mirror
 # ftp://biolpc22.york.ac.uk/pub/$version/wxGTK-$version.tar.bz2
 
