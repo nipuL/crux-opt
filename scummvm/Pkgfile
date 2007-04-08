@@ -5,13 +5,17 @@
 
 name=scummvm
 version=0.9.1
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure
+	./configure --prefix=/usr
 	make
-	install -D -m 0755 $name $PKG/usr/bin/$name
-	install -D -m 0644 icons/$name.xpm $PKG/usr/share/icons/$name.xpm
+	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/share/scummvm/themes
+	install -m 0644 gui/themes/* $PKG/usr/share/scummvm/themes
+
+	rm -rf $PKG/usr/share/doc
 }
