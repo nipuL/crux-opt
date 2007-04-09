@@ -4,7 +4,7 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.35.25
+version=10.35.26
 release=1
 source=(http://ptoplus.net/~anttinyk/files/$name-$version.tar.gz
 	Makefile.config)
