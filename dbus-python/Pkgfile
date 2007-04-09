@@ -1,14 +1,18 @@
 # Description: D-Bus Python bindings  
 # URL: http://freedesktop.org/wiki/Software_2fdbus
 # Maintainer: Matt Housh, jaeger at crux dot nu
-# Depends on: dbus-glib, pyrex, libxml2-python
+# Depends on: dbus-glib, python
 
 name=dbus-python
-version=0.71
+version=0.80.1
 release=1
 source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	python setup.py install --root=$PKG --prefix=/usr
+	./configure --prefix=/usr \
+		--disable-html-docs
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
 }
