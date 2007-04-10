@@ -5,23 +5,16 @@
 # Depends on:  ncurses, readline, libpng, xorg-libx11, xorg-libxau
 
 name=gnuplot
-version=4.0.0
-release=2
+version=4.2.0
+release=1
 source=(http://dl.sourceforge.net/sourceforge/gnuplot/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    sed -i -e '/^install:/s/install-info//' \
-           -e '/^all:/s/gnuplot\.info//' \
-           docs/Makefile.in
+    sed -i '/^install:/s/install-info//' docs/Makefile.in
     ./configure --prefix=/usr \
-                --with-png \
-                --with-x \
-                --x-include=/usr/X11R6/include \
-                --x-libraries=/usr/X11R6/lib \
-                --with-readline=gnu \
-                --libexecdir=/usr/lib
+                --libexecdir=/usr/lib \
+                --with-x
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/{info,share/emacs}
 }
