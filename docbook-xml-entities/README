@@ -1,8 +1,0 @@
-
-
-README for docbook-xml-entities
-
-After updating docbook-xml-entities, a new /etc/xml/catalog is created. If
-docbook-xml-dtd is also installed/needed, you should reinstall it to regenerate
-its entries in the catalog file.
-
