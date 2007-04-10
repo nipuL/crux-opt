@@ -4,12 +4,13 @@
 # Depends on:  gdbm, ncurses, openssl
 
 name=mutt
-version=1.5.14
+version=1.5.15
 release=1
 source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-docdir=/usr/share/mutt \
@@ -18,9 +19,12 @@ build () {
                 --enable-imap \
                 --with-ssl \
                 --enable-hcache \
-                --disable-nls
+                --disable-nls \
+                # --enable-smtp --with-sasl 
+
     make
     make DESTDIR=$PKG install
+
     find $PKG/usr/share/mutt/* ! -name manual.txt | xargs rm -rf
     rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
     rm $PKG/usr/bin/{flea,muttbug}
