@@ -1,3 +1,0 @@
-# Network hotplugging
-ACTION=="add", SUBSYSTEM=="net", ENV{INTERFACE}=="*", RUN+="/lib/udev/netif_handler"
-ACTION=="remove", SUBSYSTEM=="net", ENV{INTERFACE}=="*", RUN+="/lib/udev/netif_handler"

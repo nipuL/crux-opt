@@ -1,7 +1,0 @@
-drwxr-xr-x	root/root	etc/
-drwxr-xr-x	root/root	etc/udev/
-drwxr-xr-x	root/root	etc/udev/rules.d/
--rw-r--r--	root/root	etc/udev/rules.d/26-crux-netif.rules
-drwxr-xr-x	root/root	lib/
-drwxr-xr-x	root/root	lib/udev/
--rwxr-xr-x	root/root	lib/udev/netif_handler

@@ -1,6 +1,0 @@
-This port implements a hotplug handler for network devices, allowing to react
-on hotplug events i.e. to assign an IP.
-
-Once active, a handler script will call
-  /etc/rc.d/net.<ifname> [start|stop]
-where 'ifname' is the name of the interface, i.e. eth0, ath0, usb0 etc.
