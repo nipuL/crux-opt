@@ -8,6 +8,9 @@
 
 ##### CHANGELOG ##############################################################
 #
+#  Apr 10, 2007 - version 1.1.2
+#     removed extra libGL.a cp in the ati section
+#
 #	Mar 14, 2007 - version 1.1.1
 #		updated all sections for xorg 7.x
 #		removed extra libGL.a references (nvidia)
@@ -140,7 +143,6 @@ case "$1" in
 			echo -n "libGLcore "
 			cp /usr/lib/xorg/modules/extensions/libGLcore{.so,_so}
 			echo -n "libGL "
-			cp /usr/lib/libGL{.a,_a}
 			mv /usr/lib/libGL{.so.1.2,_so_1_2}
 			# according to ati port
 			[ ! -L /usr/lib/libGL.so ] && \
