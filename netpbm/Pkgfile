@@ -5,16 +5,16 @@
 
 name=netpbm
 version=10.35.26
-release=1
+release=2
 source=(http://ptoplus.net/~anttinyk/files/$name-$version.tar.gz
 	Makefile.config)
 
 build() {
 	cd $name-$version
 	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/Makefile.config > Makefile.config
-	make && make pkgdir=$PKG/usr package
+	make -j1
+	make pkgdir=$PKG/usr package
 	mkdir $PKG/usr/share
 	mv $PKG/usr/misc $PKG/usr/share/$name
-	rm -r $PKG/usr/{README,VERSION,link,man/web}
-	rm -r $PKG/usr/{config_template,pkginfo,bin/doc.url}
+	rm -rf $PKG/usr/{README,VERSION,link,man,config_template,pkginfo,bin/doc.url}
 }
