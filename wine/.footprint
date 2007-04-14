@@ -674,6 +674,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libwsock32.def
 -rw-r--r--	root/root	usr/lib/wine/libwtsapi32.def
 -rwxr-xr-x	root/root	usr/lib/wine/localspl.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/localui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/lz32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/lzexpand.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/mapi32.dll.so
@@ -818,7 +819,6 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/winaspi.dll16
 -rw-r--r--	root/root	usr/lib/wine/windebug.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/winealsa.drv.so
--rwxr-xr-x	root/root	usr/lib/wine/winearts.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/wineaudioio.drv.so
 -rwxr-xr-x	root/root	usr/lib/wine/wineboot.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winebrowser.exe.so
