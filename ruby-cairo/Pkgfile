@@ -4,18 +4,15 @@
 # Depends on: ruby cairo
 
 name=ruby-cairo
-version=1.2.0
+version=1.4.1
 release=1
-source=(http://cairographics.org/releases/rcairo-$version.tar.gz \
-        $name.diff)
+source=(http://cairographics.org/releases/rcairo-$version.tar.gz)
 
 build () {
 	cd rcairo-$version
 
-	patch -Np1 -i $SRC/$name.diff
+	ruby extconf.rb
 
-	ruby setup.rb config
-	ruby setup.rb setup
-
-	DESTDIR=$PKG ruby setup.rb install
+	make
+	make DESTDIR=$PKG install
 }
