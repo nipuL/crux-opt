@@ -82,6 +82,9 @@ drwxr-xr-x	root/root	usr/lib/pygtk/2.0/demos/images/
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/sizegroup.py
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/sizegroup.pyc
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/sizegroup.pyo
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/statusicon.py
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/statusicon.pyc
+-rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/statusicon.pyo
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/stock_browser.py
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/stock_browser.pyc
 -rw-r--r--	root/root	usr/lib/pygtk/2.0/demos/stock_browser.pyo
@@ -408,7 +411,6 @@ drwxr-xr-x	root/root	usr/share/gtk-doc/html/pygtk/
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pangocairo-constants.html
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pangocairo-functions.html
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pygtk-introduction.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pygtk-reference-copyright.html
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pygtk-reference-format.html
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/pygtk.devhelp
 -rw-r--r--	root/root	usr/share/gtk-doc/html/pygtk/style.css
@@ -427,6 +429,9 @@ drwxr-xr-x	root/root	usr/share/pygtk/2.0/codegen/
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/codegen.py
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/codegen.pyc
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/codegen.pyo
+-rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/createdefs.py
+-rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/createdefs.pyc
+-rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/createdefs.pyo
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/definitions.py
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/definitions.pyc
 -rw-r--r--	root/root	usr/share/pygtk/2.0/codegen/definitions.pyo
