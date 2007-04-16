@@ -3,17 +3,13 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=fakeroot
-version=1.6.5
+version=1.7
 release=1
-source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz \
-        fakeroot-atfuncs.patch)
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/fakeroot-atfuncs.patch
-    autoconf
-    ./configure --prefix=/usr \
-                --mandir=/usr/man
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/man/??
