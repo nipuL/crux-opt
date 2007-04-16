@@ -3,15 +3,15 @@
 # Maintainer:  Simone Rota, sip at crux dot nu
 
 name=bftpd
-version=1.6
+version=1.8
 release=1
-source=(http://bftpd.sourceforge.net/downloads/src/bftpd-$version.tar.gz \
-	bftpd-$version-config.patch bftpd-$version-destdir.patch ftpd)
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
+	bftpd-config.patch bftpd-destdir.patch ftpd)
 
 build () {
     cd $name-$version
-    patch -p1 -i ../bftpd-$version-config.patch
-    patch -p1 -i ../bftpd-$version-destdir.patch
+    patch -p1 -i ../bftpd-config.patch
+    patch -p1 -i ../bftpd-destdir.patch
     ./configure --prefix=/usr --enable-libz
     make
     mkdir -p $PKG/usr/sbin $PKG/usr/man/man8 $PKG/etc $PKG/etc/rc.d

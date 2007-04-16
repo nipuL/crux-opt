@@ -1,4 +1,4 @@
-e1376d3d7827aae9f1383ec870d8fdd1  bftpd-1.6-config.patch
-45e7fb165aa729eb8ff401e847c07cde  bftpd-1.6-destdir.patch
-203ebbe285857a4b001d4a9872cffce4  bftpd-1.6.tar.gz
+10a711f92fbb56fc48739cec8b385c26  bftpd-1.8.tar.gz
+e1376d3d7827aae9f1383ec870d8fdd1  bftpd-config.patch
+45e7fb165aa729eb8ff401e847c07cde  bftpd-destdir.patch
 594cb67d469eedb55b268c9922a0dfcd  ftpd
