@@ -4,11 +4,14 @@
 # Depends on:  python, mysql
 
 name=mysql-python
-version=1.2.1
+version=1.2.2
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/MySQL-python-$version.tar.gz )
+source=(http://dl.sourceforge.net/sourceforge/$name/MySQL-python-$version.tar.gz \
+        http://cheeseshop.python.org/packages/2.5/s/setuptools/setuptools-0.6c5-py2.5.egg)
 
 build () {
     cd MySQL-python-$version
+    cp $SRC/setuptools-0.6c5-py2.5.egg .
     python setup.py install --root=$PKG --prefix=/usr
+    rm -r $PKG/usr/lib/python2.5/site-packages/MySQL_python-1.2.2-py2.5.egg-info
 }
