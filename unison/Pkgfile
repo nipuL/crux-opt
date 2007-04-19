@@ -5,7 +5,7 @@
 # Depends on:  ocaml
 
 name=unison
-version=2.27.12
+version=2.27.24
 release=1
 source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz \
         $name.1)
@@ -13,7 +13,7 @@ source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$versi
 build() {
     cd $name-$version
     unset CFLAGS CXXFLAGS
-    make UISTYLE=text
+    make -j1 UISTYLE=text THREADS=true
     install -D -m 755 unison $PKG/usr/bin/unison
     install -D -m 644 $SRC/unison.1 $PKG/usr/man/man1/unison.1
 }
