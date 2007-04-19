@@ -4,7 +4,7 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=python
-version=2.5
+version=2.5.1
 release=1
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
         $name-$version.patch)
@@ -18,7 +18,7 @@ build () {
                 --with-threads \
                 --enable-ipv6 
     make 
-    make DESTDIR=$PKG install
+    make -j1 DESTDIR=$PKG install
     
     ln -sf python2.5 $PKG/usr/bin/python
     ln -sf python2.5 $PKG/usr/lib/python

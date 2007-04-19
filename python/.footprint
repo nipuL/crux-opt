@@ -1236,7 +1236,7 @@ drwxr-xr-x	root/root	usr/lib/python2.5/idlelib/Icons/
 -rw-r--r--	root/root	usr/lib/python2.5/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.5/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.5/lib-dynload/Python-2.5-py2.5.egg-info
+-rw-r--r--	root/root	usr/lib/python2.5/lib-dynload/Python-2.5.1-py2.5.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.5/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.5/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.5/lib-dynload/_codecs_cn.so
@@ -1696,6 +1696,9 @@ drwxr-xr-x	root/root	usr/lib/python2.5/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.5/test/fork_wait.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/fork_wait.pyo
 -rw-r--r--	root/root	usr/lib/python2.5/test/greyrgb.uue
+-rw-r--r--	root/root	usr/lib/python2.5/test/infinite_reload.py
+-rw-r--r--	root/root	usr/lib/python2.5/test/infinite_reload.pyc
+-rw-r--r--	root/root	usr/lib/python2.5/test/infinite_reload.pyo
 -rw-r--r--	root/root	usr/lib/python2.5/test/inspect_fodder.py
 -rw-r--r--	root/root	usr/lib/python2.5/test/inspect_fodder.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/inspect_fodder.pyo
@@ -1983,6 +1986,9 @@ drwxr-xr-x	root/root	usr/lib/python2.5/test/output/
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_complex.py
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_complex.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_complex.pyo
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_complex_args.py
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_complex_args.pyc
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_complex_args.pyo
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_contains.py
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_contains.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_contains.pyo
@@ -2570,6 +2576,9 @@ drwxr-xr-x	root/root	usr/lib/python2.5/test/output/
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_struct.py
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_struct.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_struct.pyo
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_structmembers.py
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_structmembers.pyc
+-rw-r--r--	root/root	usr/lib/python2.5/test/test_structmembers.pyo
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_structseq.py
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_structseq.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/test/test_structseq.pyo
