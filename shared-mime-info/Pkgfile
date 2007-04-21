@@ -5,15 +5,18 @@
 # Group: gnome
 
 name=shared-mime-info
-version=0.20
+version=0.21
 release=1
-source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2 \
-        $name.patch)
+source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	patch -p1 < ../$name.patch
-	./configure --prefix=/usr
+
+	rm po/*.po
+	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
+	       -e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
+
+	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 
