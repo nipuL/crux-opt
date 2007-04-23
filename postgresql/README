@@ -33,7 +33,7 @@ NEW INSTALL
 To complete the installation and create a test database you need to do
 some additional steps:
 
-# useradd postgres
+# useradd -m -d /home/postgres postgres
 # passwd -l postgres
 
 # mkdir -p /var/pgsql/data
@@ -49,7 +49,8 @@ some additional steps:
 # createdb test
 # psql test
 
-edit /etc/cron/weekly as root and add a line "/usr/sbin/rotatelog postgresql"
+Edit /etc/cron/weekly/syslog as root and add
+a line "/usr/sbin/rotatelog postgresql"
 
 The complete installation instructions are located here:
 
