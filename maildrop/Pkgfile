@@ -4,7 +4,7 @@
 # Depends on:  gdbm
 
 name=maildrop
-version=2.0.3
+version=2.0.4
 release=1
 source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2 \
         ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-7.0.tar.bz2)
@@ -16,12 +16,15 @@ build () {
     make DESTDIR=$SRC install
 
     cd $SRC/$name-$version
+    sed -i '/^MAILDROPMAN/s/=/= makedat.1/' Makefile.in
+
     CPPFLAGS="-I$SRC/include" LDFLAGS="-L$SRC/lib" \
     ./configure --prefix=/usr \
                 --with-db=gdbm \
                 --disable-tempdir
     make 
     make DESTDIR=$PKG install
+
     chown root:root $PKG/usr/bin/{maildrop,lockmail}
     rm -r $PKG/usr/{include,lib,man/man3,share}
 }
