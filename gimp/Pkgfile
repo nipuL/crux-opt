@@ -1,7 +1,7 @@
 # Description: The GIMP
 # URL: http://www.gimp.org/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: gtk, libart_lgpl, libexif, xorg-libxmu, xorg-libxpm
+# Depends on: gtk, libart_lgpl, libexif, xorg-libxmu, xorg-libxpm, gimp-print
 
 name=gimp
 version=2.2.13
