@@ -4,9 +4,9 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=2.3.1
+version=2.4.0
 release=1
-source=(http://sylpheed.sraoss.jp/sylpheed/v2.3/$name-$version.tar.bz2)
+source=(http://sylpheed.sraoss.jp/sylpheed/v2.4/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
