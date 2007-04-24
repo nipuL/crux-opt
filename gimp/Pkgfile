@@ -4,8 +4,8 @@
 # Depends on: gtk, libart_lgpl, libexif, xorg-libxmu, xorg-libxpm, gimp-print
 
 name=gimp
-version=2.2.13
-release=2
+version=2.2.14
+release=1
 source=(ftp://ftp.gimp.org/pub/gimp/v2.2/gimp-$version.tar.bz2)
 
 build() {
