@@ -4,7 +4,7 @@
 # Packager: Han Boetes, han at mijncomputer dot nl
 
 name=libpcre
-version=7.0
+version=7.1
 release=1
 source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar.bz2)
 
@@ -18,4 +18,6 @@ build() {
         --enable-unicode-properties
     make
     make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share
 }
