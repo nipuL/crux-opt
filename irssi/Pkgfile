@@ -5,18 +5,16 @@
 # Depends on: glib
 
 name=irssi
-version=0.8.10
-release=2
-source=(http://www.irssi.org/files/${name}-${version}.tar.bz2 \
-       fix_segfault_on_exit.patch)
+version=0.8.11
+release=1
+source=(http://www.irssi.org/files/${name}-${version}.tar.bz2)
 
 build () {
     cd $name-$version
 
-    patch -p1 < $SRC/fix_segfault_on_exit.patch
-
     ./configure \
 	--prefix=/usr \
+	--mandir=/usr/man \
         --enable-ipv6 \
         --with-proxy
     make
