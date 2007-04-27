@@ -1,7 +1,7 @@
 # Description: Versatile media player and encoder/converter
 # URL: http://www.mplayerhq.hu/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: x11
+# Depends on: expat, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
 
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis,
 # cdparanoia, win32-essential-codecs, faac, x264
