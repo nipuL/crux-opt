@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=alsa-lib
-version=1.0.14rc2
+version=1.0.14rc3
 release=1
 source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.bz2)
 

@@ -109,6 +109,7 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/SI7018/
 -rw-r--r--	root/root	usr/share/alsa/cards/SI7018/sndoc-mixer.alisp
 -rw-r--r--	root/root	usr/share/alsa/cards/SI7018/sndop-mixer.alisp
 -rw-r--r--	root/root	usr/share/alsa/cards/TRID4DWAVENX.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/USB-Audio.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/VIA686A.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/VIA8233.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/VIA8233A.conf
