@@ -5,8 +5,9 @@
 
 name=alsa-utils
 version=1.0.14rc2
-release=1
-source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.bz2)
+release=2
+source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.bz2 \
+	rc.alsa)
 
 build() {
 	cd $name-$version
@@ -14,4 +15,5 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share $PKG/usr/man/fr
+	install -D -m 0755 $SRC/rc.alsa $PKG/etc/rc.d/alsa
 }
