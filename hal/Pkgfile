@@ -4,17 +4,17 @@
 # Depends on: dbus, dbus-glib
 
 name=hal
-version=0.5.7.1
-release=3
+version=0.5.9
+release=1
 source=(http://freedesktop.org/~david/dist/$name-$version.tar.gz \
-	rc.hald $name-$version-dbus-close.patch)
+	rc.hald)
 
 build() {
 	cd $name-$version
-	patch -p1 -i $SRC/$name-$version-dbus-close.patch
 	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
 		-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
 	./configure --prefix=/usr \
+		--mandir=/usr/man \
 		--libexecdir=/usr/lib/$name \
 		--localstatedir=/var \
 		--with-hal-user=haldaemon \
@@ -31,4 +31,5 @@ build() {
 		$PKG/etc/udev/rules.d/90-hal.rules
 	sed -i -e '36,43d' -e 's/user="0"/group="plugdev"/' \
 		$PKG/usr/etc/dbus-1/system.d/hal.conf
+	rm -rf $PKG/usr/share/gtk-doc
 }
