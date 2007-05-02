@@ -5,14 +5,15 @@
 
 name=gvim
 version=7.0
-release=4
+release=5
 source=(ftp://ftp.vim.org/pub/vim/unix/vim-$version.tar.bz2 \
         http://jue.li/crux/files/vim-7.0.001-109.tar.gz \
-        http://jue.li/crux/files/vim-7.0.110-224.tar.gz)
+        http://jue.li/crux/files/vim-7.0.110-224.tar.gz \
+        http://jue.li/crux/files/vim-7.0.225-239.tar.gz)
 
 build () {
     cd vim70
-    for p in $SRC/vim-7.0.{001-109,110-224}/*; do
+    for p in $SRC/vim-7.0.{001-109,110-224,225-239}/*; do
        patch -p0 -i $p
     done
 
