@@ -4,7 +4,7 @@
 # Depends on: fontconfig, glitz, libpng, xorg-libxrender
 
 name=cairo
-version=1.4.4
+version=1.4.6
 release=1
 source=(http://cairographics.org/releases/$name-$version.tar.gz)
 
