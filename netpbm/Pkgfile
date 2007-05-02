@@ -10,9 +10,11 @@ source=(http://aon.iki.fi/files/netpbm/netpbm-$version.tar.gz
 	Makefile.config)
 
 build() {
+	export MAKEFLAGS="$MAKEFLAGS -j1"
+
 	cd netpbm-$version
 	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/Makefile.config > Makefile.config
-	make -j1
+	make
 	make pkgdir=$PKG/usr package
 	mkdir $PKG/usr/share
 	mv $PKG/usr/misc $PKG/usr/share/netpbm
