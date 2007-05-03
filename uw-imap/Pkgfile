@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=uw-imap
-version=2006g
+version=2006h
 release=1
 source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.Z)
 
