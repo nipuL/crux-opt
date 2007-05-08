@@ -1,6 +1,6 @@
---- vncserver~	2003-07-31 08:19:37.000000000 -0600
-+++ vncserver	2005-07-17 14:34:38.000000000 -0600
-@@ -36,12 +36,12 @@
+--- vnc_unixsrc/vncserver	2007-04-26 12:57:06.000000000 +0200
++++ vnc_unixsrc-new/vncserver	2007-05-08 14:29:16.000000000 +0200
+@@ -36,13 +36,13 @@
  $geometry = "1024x768";
  $depth = 24;
  $desktopName = "X";
@@ -9,6 +9,7 @@
  $vncUserDir = "$ENV{HOME}/.vnc";
 -$fontPath = "unix/:7100";
 +$fontPath = "/usr/X11R6/lib/X11/fonts/misc,/usr/X11R6/lib/X11/fonts/Type1,/usr/X11R6/lib/X11/fonts/75dpi";
+ $authType = "-rfbauth $vncUserDir/passwd";
  
  # Here is another example of setting the font path:
 -# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";

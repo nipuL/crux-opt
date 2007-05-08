@@ -17,10 +17,12 @@ drwxr-xr-x	root/root	usr/share/vnc/
 drwxr-xr-x	root/root	usr/share/vnc/classes/
 -rw-r--r--	root/root	usr/share/vnc/classes/AuthPanel.class
 -rw-r--r--	root/root	usr/share/vnc/classes/ButtonPanel.class
+-rw-r--r--	root/root	usr/share/vnc/classes/CapabilityInfo.class
+-rw-r--r--	root/root	usr/share/vnc/classes/CapsContainer.class
 -rw-r--r--	root/root	usr/share/vnc/classes/ClipboardFrame.class
 -rw-r--r--	root/root	usr/share/vnc/classes/DesCipher.class
--rw-r--r--	root/root	usr/share/vnc/classes/HTTPConnectSocket.class
--rw-r--r--	root/root	usr/share/vnc/classes/HTTPConnectSocketFactory.class
+-rw-r--r--	root/root	usr/share/vnc/classes/InStream.class
+-rw-r--r--	root/root	usr/share/vnc/classes/MemInStream.class
 -rw-r--r--	root/root	usr/share/vnc/classes/OptionsFrame.class
 -rw-r--r--	root/root	usr/share/vnc/classes/RecordingFrame.class
 -rw-r--r--	root/root	usr/share/vnc/classes/ReloginPanel.class
@@ -28,6 +30,8 @@ drwxr-xr-x	root/root	usr/share/vnc/classes/
 -rw-r--r--	root/root	usr/share/vnc/classes/SessionRecorder.class
 -rw-r--r--	root/root	usr/share/vnc/classes/SocketFactory.class
 -rw-r--r--	root/root	usr/share/vnc/classes/VncCanvas.class
+-rw-r--r--	root/root	usr/share/vnc/classes/VncCanvas2.class
 -rw-r--r--	root/root	usr/share/vnc/classes/VncViewer.class
 -rw-r--r--	root/root	usr/share/vnc/classes/VncViewer.jar
+-rw-r--r--	root/root	usr/share/vnc/classes/ZlibInStream.class
 -rw-r--r--	root/root	usr/share/vnc/classes/index.vnc
