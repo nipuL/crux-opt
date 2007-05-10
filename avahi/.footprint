@@ -15,6 +15,8 @@ lrwxrwxrwx	root/root	usr/bin/avahi-publish-service -> avahi-publish
 lrwxrwxrwx	root/root	usr/bin/avahi-resolve-address -> avahi-resolve
 lrwxrwxrwx	root/root	usr/bin/avahi-resolve-host-name -> avahi-resolve
 -rwxr-xr-x	root/root	usr/bin/avahi-set-host-name
+-rwxr-xr-x	root/root	usr/bin/bssh
+lrwxrwxrwx	root/root	usr/bin/bvnc -> bssh
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/avahi/
 -rwxr-xr-x	root/root	usr/etc/avahi/avahi-autoipd.action
@@ -83,27 +85,34 @@ drwxr-xr-x	root/root	usr/include/avahi-core/
 drwxr-xr-x	root/root	usr/include/avahi-glib/
 -rw-r--r--	root/root	usr/include/avahi-glib/glib-malloc.h
 -rw-r--r--	root/root	usr/include/avahi-glib/glib-watch.h
+drwxr-xr-x	root/root	usr/include/avahi-ui/
+-rw-r--r--	root/root	usr/include/avahi-ui/avahi-ui.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libavahi-client.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-client.la
-lrwxrwxrwx	root/root	usr/lib/libavahi-client.so -> libavahi-client.so.3.2.1
-lrwxrwxrwx	root/root	usr/lib/libavahi-client.so.3 -> libavahi-client.so.3.2.1
--rwxr-xr-x	root/root	usr/lib/libavahi-client.so.3.2.1
+lrwxrwxrwx	root/root	usr/lib/libavahi-client.so -> libavahi-client.so.3.2.2
+lrwxrwxrwx	root/root	usr/lib/libavahi-client.so.3 -> libavahi-client.so.3.2.2
+-rwxr-xr-x	root/root	usr/lib/libavahi-client.so.3.2.2
 -rw-r--r--	root/root	usr/lib/libavahi-common.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-common.la
-lrwxrwxrwx	root/root	usr/lib/libavahi-common.so -> libavahi-common.so.3.4.3
-lrwxrwxrwx	root/root	usr/lib/libavahi-common.so.3 -> libavahi-common.so.3.4.3
--rwxr-xr-x	root/root	usr/lib/libavahi-common.so.3.4.3
+lrwxrwxrwx	root/root	usr/lib/libavahi-common.so -> libavahi-common.so.3.4.4
+lrwxrwxrwx	root/root	usr/lib/libavahi-common.so.3 -> libavahi-common.so.3.4.4
+-rwxr-xr-x	root/root	usr/lib/libavahi-common.so.3.4.4
 -rw-r--r--	root/root	usr/lib/libavahi-core.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-core.la
-lrwxrwxrwx	root/root	usr/lib/libavahi-core.so -> libavahi-core.so.4.0.4
-lrwxrwxrwx	root/root	usr/lib/libavahi-core.so.4 -> libavahi-core.so.4.0.4
--rwxr-xr-x	root/root	usr/lib/libavahi-core.so.4.0.4
+lrwxrwxrwx	root/root	usr/lib/libavahi-core.so -> libavahi-core.so.5.0.2
+lrwxrwxrwx	root/root	usr/lib/libavahi-core.so.5 -> libavahi-core.so.5.0.2
+-rwxr-xr-x	root/root	usr/lib/libavahi-core.so.5.0.2
 -rw-r--r--	root/root	usr/lib/libavahi-glib.a
 -rwxr-xr-x	root/root	usr/lib/libavahi-glib.la
 lrwxrwxrwx	root/root	usr/lib/libavahi-glib.so -> libavahi-glib.so.1.0.1
 lrwxrwxrwx	root/root	usr/lib/libavahi-glib.so.1 -> libavahi-glib.so.1.0.1
 -rwxr-xr-x	root/root	usr/lib/libavahi-glib.so.1.0.1
+-rw-r--r--	root/root	usr/lib/libavahi-ui.a
+-rwxr-xr-x	root/root	usr/lib/libavahi-ui.la
+lrwxrwxrwx	root/root	usr/lib/libavahi-ui.so -> libavahi-ui.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libavahi-ui.so.0 -> libavahi-ui.so.0.0.1
+-rwxr-xr-x	root/root	usr/lib/libavahi-ui.so.0.0.1
 -rw-r--r--	root/root	usr/lib/libdns_sd.a
 -rwxr-xr-x	root/root	usr/lib/libdns_sd.la
 lrwxrwxrwx	root/root	usr/lib/libdns_sd.so -> libdns_sd.so.1.0.0
@@ -120,6 +129,7 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/avahi-compat-libdns_sd.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/avahi-core.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/avahi-glib.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/avahi-ui.pc
 drwxr-xr-x	root/root	usr/lib/python2.5/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/avahi/
@@ -143,6 +153,8 @@ lrwxrwxrwx	root/root	usr/man/man1/avahi-resolve-address.1.gz -> avahi-resolve.1.
 lrwxrwxrwx	root/root	usr/man/man1/avahi-resolve-host-name.1.gz -> avahi-resolve.1.gz
 -rw-r--r--	root/root	usr/man/man1/avahi-resolve.1.gz
 -rw-r--r--	root/root	usr/man/man1/avahi-set-host-name.1.gz
+-rw-r--r--	root/root	usr/man/man1/bssh.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/bvnc.1.gz -> bssh.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/avahi-daemon.conf.5.gz
 -rw-r--r--	root/root	usr/man/man5/avahi.hosts.5.gz
@@ -160,6 +172,8 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/avahi-discover.desktop
+-rw-r--r--	root/root	usr/share/applications/bssh.desktop
+-rw-r--r--	root/root	usr/share/applications/bvnc.desktop
 drwxr-xr-x	root/root	usr/share/avahi/
 -rw-r--r--	root/root	usr/share/avahi/avahi-service.dtd
 drwxr-xr-x	root/root	usr/share/avahi/interfaces/
