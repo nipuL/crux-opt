@@ -21,7 +21,7 @@ build() {
 	cd Xvnc
 
 	./configure
-	make
+	make -j1
 
 	cd ..
 
