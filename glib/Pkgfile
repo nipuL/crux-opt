@@ -10,8 +10,7 @@ source=(ftp://ftp.gtk.org/pub/$name/2.12/$name-$version.tar.bz2)
 build () {
 	cd $name-$version
 	./configure --prefix=/usr \
-		--mandir=/usr/man \
-		--enable-debug=no
+		--mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{gtk-doc,locale}
