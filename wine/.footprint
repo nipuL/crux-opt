@@ -720,6 +720,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/mswsock.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msxml3.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/nddeapi.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/net.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/netapi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/newdev.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/notepad.exe.so
