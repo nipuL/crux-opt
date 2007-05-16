@@ -4,7 +4,7 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.24
+version=3.0.25
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba)
@@ -19,7 +19,7 @@ build () {
                 --with-piddir=/var/run/samba \
                 --with-mandir=/usr/man \
                 --with-logfilebase=/var/log/samba
-    make
+    make -j1
     make DESTDIR=$PKG install
     
     # nsswitch extensions
