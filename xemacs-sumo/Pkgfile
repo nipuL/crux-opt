@@ -1,11 +1,11 @@
 # Packager: Daniel Mueller, daniel at danm dot de
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # URL: http://www.xemacs.org
 # Description: All packages for xemacs
 # Depends on: xemacs
 
 name=xemacs-sumo
-version=2006-12-21
+version=2007-04-27
 release=1
 source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
 build(){

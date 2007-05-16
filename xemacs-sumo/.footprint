@@ -2289,6 +2289,7 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/uniquify.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/vertical-mode.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/where-was-i-db.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/wide-edit.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edit-utils/winring.elc
 drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/edt/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/edt/ChangeLog
@@ -2577,6 +2578,7 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.1.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.2.upstream
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.contrib.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.upstream
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/GNUS-NEWS
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/gnus/_pkg.el
@@ -3464,6 +3466,7 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-display.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-doctor.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-emacs.el
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-epg.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-eval-ruby.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-eval.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-filter.elc
@@ -3485,6 +3488,8 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-layout.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-log.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-lsdb.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-mcat-japanese.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-mcat.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-menu.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-message.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-mini.elc
@@ -3493,6 +3498,8 @@ drwxr-xr-x	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-naming.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-ndcc.el
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-options.elc
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-package-info.el.in
+-rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-package-info.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-rdcc.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-ruby.elc
 -rw-r--r--	root/root	usr/lib/xemacs/xemacs-packages/lisp/riece/riece-server.elc
