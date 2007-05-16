@@ -4,12 +4,12 @@
 # Depends on:  ghostscript, foomatic-filters
 
 name=hpijs
-version=2.1.9
+version=2.7.4
 release=1
-source=(http://dl.sourceforge.net/sourceforge/hpinkjet/hplip-0.9.10.tar.gz)
+source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-1.7.4a.tar.gz)
 
 build () {
-    cd hplip-0.9.10/prnt/$name
+    cd hplip-1.7.4a/prnt/$name
     
     ./configure --prefix=/usr 
     make 
@@ -19,5 +19,4 @@ build () {
     rm $PKG/usr/bin/foomatic-rip
     rm $PKG/usr/share/cups/model/foomatic-ppds
     rm -r $PKG/usr/{lib,share/{ppd,doc}}
-    chown -R root:root $PKG
 }
