@@ -12,6 +12,6 @@ build() {
     cd pth-$version
 
     ./configure --prefix=/usr
-    make
+    make -j1
     make DESTDIR=$PKG install
 }
