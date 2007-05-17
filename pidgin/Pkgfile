@@ -7,7 +7,7 @@
 
 name=pidgin
 version=2.0.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build () {
@@ -22,7 +22,10 @@ build () {
 		--with-nss-includes=/usr/include/nss \
 		--with-nspr-libs=/usr/lib \
 		--with-nss-libs=/usr/lib \
-		--disable-gevolution
+		--disable-gevolution \
+		--disable-dbus \
+		--disable-gstreamer \
+		--with-dynamic-prpls="gg,irc,jabber,msn,novell,oscar,qq,sametime,silc,simple,yahoo,zephyr"
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/locale

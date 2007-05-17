@@ -2,11 +2,6 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/finch
 -rwxr-xr-x	root/root	usr/bin/pidgin
--rwxr-xr-x	root/root	usr/bin/purple-client-example
--rwxr-xr-x	root/root	usr/bin/purple-remote
--rwxr-xr-x	root/root	usr/bin/purple-send
--rwxr-xr-x	root/root	usr/bin/purple-send-async
--rwxr-xr-x	root/root	usr/bin/purple-url-handler
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/finch/
 -rw-r--r--	root/root	usr/include/finch/finch.h
@@ -60,12 +55,7 @@ drwxr-xr-x	root/root	usr/include/libpurple/
 -rw-r--r--	root/root	usr/include/libpurple/connection.h
 -rw-r--r--	root/root	usr/include/libpurple/conversation.h
 -rw-r--r--	root/root	usr/include/libpurple/core.h
--rw-r--r--	root/root	usr/include/libpurple/dbus-bindings.h
--rw-r--r--	root/root	usr/include/libpurple/dbus-define-api.h
 -rw-r--r--	root/root	usr/include/libpurple/dbus-maybe.h
--rw-r--r--	root/root	usr/include/libpurple/dbus-purple.h
--rw-r--r--	root/root	usr/include/libpurple/dbus-server.h
--rw-r--r--	root/root	usr/include/libpurple/dbus-useful.h
 -rw-r--r--	root/root	usr/include/libpurple/debug.h
 -rw-r--r--	root/root	usr/include/libpurple/desktopitem.h
 -rw-r--r--	root/root	usr/include/libpurple/dnsquery.h
@@ -166,10 +156,6 @@ drwxr-xr-x	root/root	usr/lib/finch/
 lrwxrwxrwx	root/root	usr/lib/libgnt.so -> libgnt.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgnt.so.0 -> libgnt.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgnt.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libpurple-client.la
-lrwxrwxrwx	root/root	usr/lib/libpurple-client.so -> libpurple-client.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/libpurple-client.so.0 -> libpurple-client.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libpurple-client.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libpurple.la
 lrwxrwxrwx	root/root	usr/lib/libpurple.so -> libpurple.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libpurple.so.0 -> libpurple.so.0.0.0
@@ -187,8 +173,6 @@ drwxr-xr-x	root/root	usr/lib/pidgin/
 -rwxr-xr-x	root/root	usr/lib/pidgin/iconaway.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/markerline.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/markerline.so
--rwxr-xr-x	root/root	usr/lib/pidgin/musicmessaging.la
--rwxr-xr-x	root/root	usr/lib/pidgin/musicmessaging.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/notify.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/notify.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/pidginrc.la
@@ -214,16 +198,12 @@ drwxr-xr-x	root/root	usr/lib/purple-2/
 -rwxr-xr-x	root/root	usr/lib/purple-2/autoaccept.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/buddynote.la
 -rwxr-xr-x	root/root	usr/lib/purple-2/buddynote.so
--rwxr-xr-x	root/root	usr/lib/purple-2/dbus-example.la
--rwxr-xr-x	root/root	usr/lib/purple-2/dbus-example.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/idle.la
 -rwxr-xr-x	root/root	usr/lib/purple-2/idle.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/joinpart.la
 -rwxr-xr-x	root/root	usr/lib/purple-2/joinpart.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/libaim.la
 -rwxr-xr-x	root/root	usr/lib/purple-2/libaim.so
--rwxr-xr-x	root/root	usr/lib/purple-2/libbonjour.la
--rwxr-xr-x	root/root	usr/lib/purple-2/libbonjour.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/libgg.la
 -rwxr-xr-x	root/root	usr/lib/purple-2/libgg.so
 -rwxr-xr-x	root/root	usr/lib/purple-2/libicq.la
@@ -318,7 +298,6 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/animations/16/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/arrow-up.xpm
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/buttons/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/buttons/edit.png
--rw-r--r--	root/root	usr/share/pixmaps/pidgin/buttons/music.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/buttons/pause.png
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/dialogs/
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/dialogs/16/
