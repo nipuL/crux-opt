@@ -4,13 +4,15 @@
 # Depends on: libgcrypt, opencdk
 
 name=gnutls
-version=1.0.25
+version=1.6.2
 release=1
-source=(http://ftp.gnupg.org/gcrypt/alpha/$name/$name-$version.tar.gz)
+source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr \
+		--mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/{info,locale}
 }
