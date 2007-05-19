@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=maradns
-version=1.2.12.05
+version=1.2.12.06
 release=1
 source=(http://www.maradns.org/download/1.2/$version/maradns-$version.tar.bz2 \
         mararc maradns db.localhost)
@@ -16,7 +16,7 @@ build () {
 
     sed -i "/^FLAGS/s/-O2/$CFLAGS/" build/Makefile.linux
     ./configure
-    make
+    make -j1
     make PREFIX=$PKG/usr RPM_BUILD_ROOT=$PKG install
 
     rm -r $PKG/usr/doc
