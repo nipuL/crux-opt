@@ -1,0 +1,28 @@
+# Description: A free replacement for Motif
+# URL: http://www.lesstif.org/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: xorg
+
+name=lesstif
+version=0.95.0
+release=1
+source=(http://dl.sf.net/lesstif/lesstif-$version.tar.bz2
+	lesstif-$version-libxpm.patch
+	lesstif-$version-vendorsp.patch)
+
+build() {
+	cd lesstif-$version
+	patch -p0 -i $SRC/lesstif-$version-libxpm.patch
+	patch -p0 -i $SRC/lesstif-$version-vendorsp.patch
+	./configure \
+		--prefix=/usr \
+		--enable-nonstandard-conversions \
+		--disable-debug \
+		--with-editres \
+		--with-xdnd
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/LessTif $PKG/usr/bin/mwm \
+	       $PKG/usr/lib/X11/{app-defaults,mwm} \
+	       $PKG/usr/man/man{1/mwm.1,5/mwmrc.5}
+}
