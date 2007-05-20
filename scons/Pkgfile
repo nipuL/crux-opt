@@ -4,7 +4,7 @@
 # Depends on: python
 
 name=scons
-version=0.96.1
+version=0.97
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
@@ -12,7 +12,4 @@ build() {
 	cd $name-$version
 
 	python setup.py install --prefix=/usr --root=$PKG
-
-	install -d $PKG/usr/man/man1
-	install -m 644 scons{,ign}.1 $PKG/usr/man/man1
 }
