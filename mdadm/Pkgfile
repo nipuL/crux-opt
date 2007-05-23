@@ -3,11 +3,13 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
-version=2.6.1
+version=2.6.2
 release=1
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
+        $name-$version.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version.patch
     make CXFLAGS="$CFLAGS" DESTDIR=$PKG MANDIR=/usr/man install
 }

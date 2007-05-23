@@ -1,0 +1,28 @@
+Fix compile error in Detail.c
+
+'avail' is undefined if '--export', so make sure we don't try to use
+it.
+
+
+### Diffstat output
+ ./Detail.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff .prev/Detail.c ./Detail.c
+--- .prev/Detail.c	2007-05-21 14:25:50.000000000 +1000
++++ ./Detail.c	2007-05-22 08:57:59.000000000 +1000
+@@ -377,12 +377,12 @@ This is pretty boring
+ 
+ 	if (brief > 1 && devices) printf("\n   devices=%s", devices);
+ 	if (brief) printf("\n");
+-out:
+ 	if (test &&
+ 	    !enough(array.level, array.raid_disks, array.layout,
+ 		    1, avail, avail_disks))
+ 		rv = 2;
+ 
++out:
+ 	close(fd);
+ 	return rv;
+ }
+
