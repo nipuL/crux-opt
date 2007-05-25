@@ -6,11 +6,11 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/opera
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/opera/
-drwxr-xr-x	root/root	usr/lib/opera/9.20-20070409.6/
--rwxr-xr-x	root/root	usr/lib/opera/9.20-20070409.6/missingsyms.so
--rwxr-xr-x	root/root	usr/lib/opera/9.20-20070409.6/opera
--rwxr-xr-x	root/root	usr/lib/opera/9.20-20070409.6/spellcheck.so
--rwxr-xr-x	root/root	usr/lib/opera/9.20-20070409.6/works
+drwxr-xr-x	root/root	usr/lib/opera/9.21-20070510.6/
+-rwxr-xr-x	root/root	usr/lib/opera/9.21-20070510.6/missingsyms.so
+-rwxr-xr-x	root/root	usr/lib/opera/9.21-20070510.6/opera
+-rwxr-xr-x	root/root	usr/lib/opera/9.21-20070510.6/spellcheck.so
+-rwxr-xr-x	root/root	usr/lib/opera/9.21-20070510.6/works
 drwxr-xr-x	root/root	usr/lib/opera/plugins/
 -rwxr-xr-x	root/root	usr/lib/opera/plugins/libnpp.so
 -rwxr-xr-x	root/root	usr/lib/opera/plugins/operaplugincleaner
