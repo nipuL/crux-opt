@@ -15,6 +15,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-branch
 -rwxr-xr-x	root/root	usr/bin/git-bundle
 -rwxr-xr-x	root/root	usr/bin/git-cat-file
+-rwxr-xr-x	root/root	usr/bin/git-check-attr
 -rwxr-xr-x	root/root	usr/bin/git-check-ref-format
 -rwxr-xr-x	root/root	usr/bin/git-checkout
 -rwxr-xr-x	root/root	usr/bin/git-checkout-index
@@ -76,6 +77,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-merge-recursive
 -rwxr-xr-x	root/root	usr/bin/git-merge-resolve
 -rwxr-xr-x	root/root	usr/bin/git-merge-stupid
+-rwxr-xr-x	root/root	usr/bin/git-merge-subtree
 -rwxr-xr-x	root/root	usr/bin/git-merge-tree
 -rwxr-xr-x	root/root	usr/bin/git-mergetool
 -rwxr-xr-x	root/root	usr/bin/git-mktag
@@ -168,6 +170,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-branch.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-bundle.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-cat-file.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-check-attr.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-check-ref-format.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-checkout-index.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-checkout.1.gz
@@ -289,6 +292,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/man/man3/
 -r--r--r--	root/root	usr/man/man3/Git.3pm.gz
 -r--r--r--	root/root	usr/man/man3/private-Error.3pm.gz
+drwxr-xr-x	root/root	usr/man/man5/
+-rw-r--r--	root/root	usr/man/man5/gitattributes.5.gz
 drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/git.7.gz
 drwxr-xr-x	root/root	usr/share/
@@ -308,3 +313,21 @@ drwxr-xr-x	root/root	usr/share/git-core/templates/hooks/
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/update
 drwxr-xr-x	root/root	usr/share/git-core/templates/info/
 -rw-r--r--	root/root	usr/share/git-core/templates/info/exclude
+drwxr-xr-x	root/root	usr/share/git-gui/
+drwxr-xr-x	root/root	usr/share/git-gui/lib/
+-rw-r--r--	root/root	usr/share/git-gui/lib/blame.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/branch.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/browser.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/class.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/commit.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/console.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/database.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/diff.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/error.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/index.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/merge.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/option.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/remote.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/shortcut.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/tclIndex
+-rw-r--r--	root/root	usr/share/git-gui/lib/transport.tcl
