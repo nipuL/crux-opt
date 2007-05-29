@@ -3,11 +3,9 @@
 # URL: http://pidgin.im/
 # Depends on: nss, startup-notification
 
-# Nice to have: libao
-
 name=pidgin
-version=2.0.0
-release=2
+version=2.0.1
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build () {
