@@ -5,8 +5,8 @@
 # Depends on: boehm-gc
 
 name=w3m
-version=0.5.1
-release=2
+version=0.5.2
+release=1
 source=(http://dl.sourceforge.net/${name}/${name}-${version}.tar.gz)
 
 build() {
@@ -15,6 +15,9 @@ build() {
     sed -i s/showaudio/mplayer/ config.h.in
 
     ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+	--mandir=/usr/man \
         --disable-image \
         --disable-gopher \
         --disable-japanese \
@@ -41,8 +44,6 @@ build() {
         --enable-mouse \
         --enable-sslverify \
         --enable-w3mmailer \
-        --libexecdir=/usr/lib \
-        --prefix=/usr \
         --with-gc
     make
     make DESTDIR=$PKG install 
