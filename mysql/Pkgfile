@@ -6,7 +6,7 @@
 name=mysql
 version=5.0.41
 release=1
-source=(http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
+source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
 
 build () {
