@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=libtxc_dxtn
-version=060508
+version=070518
 release=1
 source=(http://homepage.hispeed.ch/rscheidegger/dri_experimental/$name$version.tar.gz)
 
