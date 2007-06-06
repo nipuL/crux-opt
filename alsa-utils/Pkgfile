@@ -4,14 +4,14 @@
 # Depends on: gettext, alsa-lib, dialog
 
 name=alsa-utils
-version=1.0.14rc2
-release=2
-source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.bz2 \
+version=1.0.14
+release=1
+source=(ftp://ftp.alsa-project.org/pub/utils/$name-$version.tar.bz2 \
 	rc.alsa)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --disable-nls
+	./configure --prefix=/usr --disable-nls --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share $PKG/usr/man/fr
