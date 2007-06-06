@@ -136,4 +136,5 @@ drwxr-xr-x	root/root	usr/share/alsa/pcm/
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround50.conf
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround51.conf
 -rw-r--r--	root/root	usr/share/alsa/pcm/surround71.conf
+-rw-r--r--	root/root	usr/share/alsa/smixer.conf
 -rw-r--r--	root/root	usr/share/alsa/sndo-mixer.alisp
