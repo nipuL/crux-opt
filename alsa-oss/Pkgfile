@@ -4,13 +4,13 @@
 # Depends on: alsa-lib
 
 name=alsa-oss
-version=1.0.12
+version=1.0.14
 release=1
 source=(ftp://ftp.alsa-project.org/pub/oss-lib/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 }
