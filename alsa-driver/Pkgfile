@@ -3,9 +3,9 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=alsa-driver
-version=1.0.14rc3
+version=1.0.14
 release=1
-source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.bz2)
+source=(ftp://ftp.alsa-project.org/pub/driver/$name-$version.tar.bz2)
 
 build() {
 
