@@ -9,6 +9,16 @@ If using udev, add your user to the "video" group to be able to
 use the nvidia devices required for 3d to function properly.
 
 
+*** NOTE for users of legacy hardware ***
+
+Before installing this port, take a look at the Legacy GPU list on
+nvidia's site: http://www.nvidia.com/object/IO_32667.html
+
+If your hardware is supported by either the 1.0-96xx or 1.0-71xx
+driver series, install the corresponding port instead of this one.
+
+
+
 POST-INSTALL
 
 Use opt/gl-select from ports to select the correct gl/glx
