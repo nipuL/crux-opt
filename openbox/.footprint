@@ -40,6 +40,12 @@ lrwxrwxrwx	root/root	usr/lib/libobrender.so.12 -> libobrender.so.12.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/obparser-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/obrender-3.0.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/openbox-gnome-session.1.gz
+-rw-r--r--	root/root	usr/man/man1/openbox-kde-session.1.gz
+-rw-r--r--	root/root	usr/man/man1/openbox-session.1.gz
+-rw-r--r--	root/root	usr/man/man1/openbox.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/doc/
 drwxr-xr-x	root/root	usr/share/doc/openbox/
@@ -64,12 +70,6 @@ drwxr-xr-x	root/root	usr/share/doc/openbox/xbm/
 drwxr-xr-x	root/root	usr/share/gnome/
 drwxr-xr-x	root/root	usr/share/gnome/wm-properties/
 -rw-r--r--	root/root	usr/share/gnome/wm-properties/openbox.desktop
-drwxr-xr-x	root/root	usr/share/man/
-drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/openbox-gnome-session.1.gz
--rw-r--r--	root/root	usr/share/man/man1/openbox-kde-session.1.gz
--rw-r--r--	root/root	usr/share/man/man1/openbox-session.1.gz
--rw-r--r--	root/root	usr/share/man/man1/openbox.1.gz
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/openbox.png
 drwxr-xr-x	root/root	usr/share/themes/
