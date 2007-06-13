@@ -194,6 +194,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/presets/uno_packages/cache/
 drwxr-xr-x	root/root	usr/lib/openoffice/presets/wordbook/
 drwxr-xr-x	root/root	usr/lib/openoffice/program/
 -r--r--r--	root/root	usr/lib/openoffice/program/JREProperties.class
+-r--r--r--	root/root	usr/lib/openoffice/program/about.bmp
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/acceptor.uno.so -> acceptor.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/acceptor.uno.so.1.1
 drwxr-xr-x	root/root	usr/lib/openoffice/program/addin/
