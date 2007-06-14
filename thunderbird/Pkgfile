@@ -4,9 +4,9 @@
 # Depends on: libidl, gtk, libjpeg, libpng, zlib, expat
 
 name=thunderbird
-version=2.0.0.0
+version=2.0.0.4
 release=1
-source=(http://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
 	mozconfig)
 
 build() {
