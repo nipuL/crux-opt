@@ -4,9 +4,9 @@
 # Depends on: ruby
 
 name=rake
-version=0.7.2
+version=0.7.3
 release=1
-source=(http://rubyforge.org/frs/download.php/17891/$name-$version.tgz)
+source=(http://rubyforge.org/frs/download.php/19879/$name-$version.tgz)
 
 build() {
 	cd $name-$version
