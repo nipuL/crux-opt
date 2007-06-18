@@ -6,7 +6,7 @@
 name=lftp
 version=3.5.11
 release=1
-source=(http://ftp.yars.free.net/$name/$name-$version.tar.bz2)
+source=(http://tactical.wiretapped.net/mirrors/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
