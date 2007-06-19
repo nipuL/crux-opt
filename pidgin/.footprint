@@ -157,9 +157,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnt.so -> libgnt.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgnt.so.0 -> libgnt.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgnt.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libpurple.la
-lrwxrwxrwx	root/root	usr/lib/libpurple.so -> libpurple.so.0.0.1
-lrwxrwxrwx	root/root	usr/lib/libpurple.so.0 -> libpurple.so.0.0.1
--rwxr-xr-x	root/root	usr/lib/libpurple.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libpurple.so -> libpurple.so.0.0.2
+lrwxrwxrwx	root/root	usr/lib/libpurple.so.0 -> libpurple.so.0.0.2
+-rwxr-xr-x	root/root	usr/lib/libpurple.so.0.0.2
 drwxr-xr-x	root/root	usr/lib/pidgin/
 -rwxr-xr-x	root/root	usr/lib/pidgin/convcolors.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/convcolors.so
@@ -167,6 +167,8 @@ drwxr-xr-x	root/root	usr/lib/pidgin/
 -rwxr-xr-x	root/root	usr/lib/pidgin/extplacement.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/gestures.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/gestures.so
+-rwxr-xr-x	root/root	usr/lib/pidgin/gtkbuddynote.la
+-rwxr-xr-x	root/root	usr/lib/pidgin/gtkbuddynote.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/history.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/history.so
 -rwxr-xr-x	root/root	usr/lib/pidgin/iconaway.la
@@ -639,6 +641,7 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/tray/16/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-extended-away.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-invisible.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-message.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-new-im.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-offline.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/16/tray-online.png
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/tray/22/
@@ -648,8 +651,27 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/tray/22/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-extended-away.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-invisible.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-message.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-new-im.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-offline.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/22/tray-online.png
+drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/tray/32/
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-away.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-busy.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-connecting.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-extended-away.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-invisible.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-new-im.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-offline.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/32/tray-online.png
+drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/tray/48/
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-away.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-busy.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-connecting.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-extended-away.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-invisible.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-new-im.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-offline.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/tray/48/tray-online.png
 drwxr-xr-x	root/root	usr/share/pixmaps/purple/
 drwxr-xr-x	root/root	usr/share/pixmaps/purple/buddy_icons/
 drwxr-xr-x	root/root	usr/share/pixmaps/purple/buddy_icons/qq/
