@@ -4,15 +4,18 @@
 # Depends on: libusb, libexif
 
 name=libgphoto2
-version=2.1.6
-release=2
+version=2.3.1
+release=1
 source=(http://dl.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
 
 build () {
 	cd $name-$version
 	./configure --prefix=/usr \
 		--disable-nls \
-		--disable-static
+		--disable-static \
+		--mandir=/usr/man
+	find . -name "Makefile" -exec \
+		sed -i -e 's|\(udevscriptdir = \)${libdir}/udev|\1/lib/udev|g' '{}' \;
 	make EXIF_CFLAGS="-DHAVE_EXIF_0_5_4"
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/doc
