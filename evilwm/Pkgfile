@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxext
 
 name=evilwm
-version=0.99.25
+version=1.0.0
 release=1
 source=(http://www.6809.org.uk/$name/$name-$version.tar.gz \
         $name-config.patch)
