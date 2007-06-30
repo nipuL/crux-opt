@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.0.rc29.orig/dovecot-example.conf dovecot-1.0.rc29/dovecot-example.conf
---- dovecot-1.0.rc29.orig/dovecot-example.conf	2007-03-30 17:46:19.000000000 +0200
-+++ dovecot-1.0.rc29/dovecot-example.conf	2007-03-30 17:49:22.000000000 +0200
+diff -Nru dovecot-1.0.1.orig/dovecot-example.conf dovecot-1.0.1/dovecot-example.conf
+--- dovecot-1.0.1.orig/dovecot-example.conf	2007-06-30 11:50:01.000000000 +0200
++++ dovecot-1.0.1/dovecot-example.conf	2007-06-30 11:50:18.000000000 +0200
 @@ -16,11 +16,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -140,7 +140,7 @@ diff -Nru dovecot-1.0.rc29.orig/dovecot-example.conf dovecot-1.0.rc29/dovecot-ex
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -784,7 +784,7 @@
+@@ -785,7 +785,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -149,18 +149,18 @@ diff -Nru dovecot-1.0.rc29.orig/dovecot-example.conf dovecot-1.0.rc29/dovecot-ex
      # [blocking=yes] [session=yes] [setcred=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -817,7 +817,7 @@
+@@ -818,7 +818,7 @@
      #   args = session=yes *
      #   args = cache_key=%u dovecot
      #args = dovecot
 -  }
 +  #}
  
-   # /etc/passwd or similar, using getpwnam()
+   # System users (NSS, /etc/passwd, or similiar)
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -829,10 +829,10 @@
- 
-   # /etc/shadow or similiar, using getspnam(). Deprecated by PAM nowadays.
+@@ -831,10 +831,10 @@
+   # Shadow passwords for system users (NSS, /etc/shadow or similiar).
+   # Deprecated by PAM nowadays.
    # <doc/wiki/PasswordDatabase.Shadow.txt>
 -  #passdb shadow {
 +  passdb shadow {
