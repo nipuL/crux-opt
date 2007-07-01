@@ -3,12 +3,13 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=libpcap
-version=0.9.5
+version=0.9.6
 release=1
 source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+    sed -i 's/0.9.5/0.9.6/' VERSION
     ./configure --prefix=/usr --enable-ipv6
     make
     make DESTDIR=$PKG install install-shared
