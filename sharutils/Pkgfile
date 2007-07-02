@@ -4,13 +4,16 @@
 # Depends on: 
 
 name=sharutils
-version=4.6.3
+version=4.7
 release=1
 source=(ftp://ftp.gnu.org/gnu/$name/REL-$version/$name-$version.tar.bz2)
 
 build(){
-    cd $name-$version
-    ./configure --prefix=/usr --disable-nls
-    make DESTDIR=$PKG install
-	rm -rf $PKG/usr/info
+	cd $name-$version
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--disable-nls
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
 }
