@@ -29,16 +29,16 @@ libraries and extensions like so:
 
 POST-REMOVE
 
-Use opt/gl-select from ports to revert to the x11 gl/glx libraries
+Use opt/gl-select from ports to revert to the xorg gl/glx libraries
 and extensions like so:
 
-	# gl-select x11
+	# gl-select xorg
 
 
 When UPGRADING/DOWNGRADING the nvidia port (where the version changes),
-use gl-select to revert to x11 and then re-select nvidia in order to
+use gl-select to revert to xorg and then re-select nvidia in order to
 refresh the libGLcore and libGL symlinks, like so:
 
 	# prt-get update nvidia
-	# gl-select x11; gl-select nvidia
+	# gl-select xorg; gl-select nvidia
 
