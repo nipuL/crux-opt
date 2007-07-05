@@ -5,7 +5,7 @@
 
 name=scummvm
 version=0.10.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
@@ -13,9 +13,5 @@ build() {
 	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
-
-	install -d $PKG/usr/share/scummvm/themes
-	install -m 0644 gui/themes/* $PKG/usr/share/scummvm/themes
-
 	rm -rf $PKG/usr/share/doc
 }
