@@ -5,24 +5,9 @@
 # Matt Housh, jaeger at morpheus dot net
 # Jose V Beneyto, joberui at ei dot upv dot es
 #
-
-##### CHANGELOG ##############################################################
+# For changelog, see:
+# http://crux.nu/gitweb/?p=ports/opt.git;a=history;f=gl-select/Pkgfile;hb=2.3
 #
-#  Jul  4, 2007 - version 1.1.3
-#     updated nvidia section for new nvidia versioning scheme
-#
-#  Apr 10, 2007 - version 1.1.2
-#     removed extra libGL.a cp in the ati section
-#
-#	Mar 14, 2007 - version 1.1.1
-#		updated all sections for xorg 7.x
-#		removed extra libGL.a references (nvidia)
-#
-#	Feb 20, 2007 - version 1.1
-#		changelog was not kept prior to this date
-#		added abstractions and ati support contributed by Jose V Beneyto (sepen)
-#
-##############################################################################
 
 infoUsage() {
 	echo "Usage: $0 [xorg|nvidia|ati]"
@@ -100,7 +85,8 @@ case "$1" in
 		checkInstalled nvidia
 
 		# get the .so version number
-		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | cut -d- -f1`"
+		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./'`"
+		echo "NV_VER=$NV_VER"
 
 		# check for the existence of libglx_so and libGL_so_1_2
 		# if none, move the xorg stuff out of the way for nvidia's
