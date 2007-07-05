@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at morpheus dot net
 
 name=gl-select
-version=1.1.2
+version=1.1.3
 release=1
 source=($name)
 
