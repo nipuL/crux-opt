@@ -45,12 +45,14 @@ drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/irda.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/lwres.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/lwres.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/m2m.la
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/m2m.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/mate.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/mate.so
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/megaco.la
--rwxr-xr-x	root/root	usr/lib/wireshark/plugins/megaco.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/mgcp.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/mgcp.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opcua.la
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opcua.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opsi.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/opsi.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/parlay.la
@@ -73,6 +75,8 @@ drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/tango.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/v5ua.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/v5ua.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimax.la
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/wimax.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/capinfos.1.gz
@@ -98,6 +102,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/chargecontrol.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.dtd
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/gqpolicy.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/imscxdx.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/mobileipv4.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/nasreq.xml

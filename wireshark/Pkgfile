@@ -6,7 +6,7 @@
 # Nice to have: libpcre
 
 name=wireshark
-version=0.99.5
+version=0.99.6
 release=1
 source=(http://www.$name.org/download/src/$name-$version.tar.bz2)
 
@@ -14,6 +14,7 @@ build() {
 	cd $name-$version
 
 	./configure --prefix=/usr \
+	            --mandir=/usr/man \
 	            --with-plugins=/usr/lib/$name/plugins \
 	            --disable-nls \
 	            --enable-snmp \
