@@ -331,6 +331,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/oleidl.idl
 -rw-r--r--	root/root	usr/include/wine/windows/optary.h
 -rw-r--r--	root/root	usr/include/wine/windows/optary.idl
+-rw-r--r--	root/root	usr/include/wine/windows/pdh.h
+-rw-r--r--	root/root	usr/include/wine/windows/pdhmsg.h
 -rw-r--r--	root/root	usr/include/wine/windows/pktdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/poppack.h
 -rw-r--r--	root/root	usr/include/wine/windows/powrprof.h
@@ -432,6 +434,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/winnls.h
 -rw-r--r--	root/root	usr/include/wine/windows/winnls32.h
 -rw-r--r--	root/root	usr/include/wine/windows/winnt.h
+-rw-r--r--	root/root	usr/include/wine/windows/winperf.h
 -rw-r--r--	root/root	usr/include/wine/windows/winreg.h
 -rw-r--r--	root/root	usr/include/wine/windows/winres.h
 -rw-r--r--	root/root	usr/include/wine/windows/winresrc.h
@@ -537,6 +540,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpnhpast.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsound.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dswave.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dwmapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dxdiagn.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/eject.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/expand.exe.so
@@ -551,6 +555,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/hhctrl.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/hid.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/hlink.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/hnetcfg.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/iccvid.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/icinfo.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/icmp.dll.so
@@ -603,6 +608,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libdplayx.def
 -rw-r--r--	root/root	usr/lib/wine/libdpnet.def
 -rw-r--r--	root/root	usr/lib/wine/libdsound.def
+-rw-r--r--	root/root	usr/lib/wine/libdwmapi.def
 -rw-r--r--	root/root	usr/lib/wine/libdxerr8.a
 -rw-r--r--	root/root	usr/lib/wine/libdxerr9.a
 -rw-r--r--	root/root	usr/lib/wine/libdxguid.a
@@ -747,6 +753,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/ntdll.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ntdsapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/ntoskrnl.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/ntprint.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/objsel.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbc32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/odbccp32.dll.so
@@ -769,6 +776,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/opengl32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pdh.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/powrprof.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/printui.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/progman.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/psapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pstorec.dll.so
