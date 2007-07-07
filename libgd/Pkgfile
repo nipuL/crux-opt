@@ -5,7 +5,7 @@
 # Depends on: xorg-libxpm, libpng, libjpeg, freetype
 
 name=libgd
-version=2.0.34
+version=2.0.35
 release=1
 source=(http://www.libgd.org/releases/gd-$version.tar.gz)
 
