@@ -5,8 +5,8 @@
 # Depends on:  xorg-libxaw
 
 name=xterm
-version=225
-release=2
+version=227
+release=1
 source=(ftp://invisible-island.net/xterm/xterm-$version.tgz \
     configure.diff)
 
