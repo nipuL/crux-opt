@@ -5,9 +5,9 @@
 # Depends on: gtk, shared-mime-info
 
 name=rox
-version=2.6
+version=2.6.1
 release=1
-source=(http://heanet.dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
+source=(http://dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
 
 build () {
 	cd $name-filer-$version/ROX-Filer
