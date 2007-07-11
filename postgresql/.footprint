@@ -648,6 +648,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/Africa/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Accra
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Addis_Ababa
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Algiers
+-rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Asmara
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Asmera
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Bamako
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Africa/Bangui
@@ -772,6 +773,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/Indiana/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Indiana/Petersburg
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Indiana/Vevay
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Indiana/Vincennes
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/Indiana/Winamac
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Indianapolis
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Inuvik
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Iqaluit
@@ -822,6 +824,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/North_Dakota/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Rankin_Inlet
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Recife
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Regina
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/Resolute
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Rio_Branco
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Rosario
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Santiago
@@ -954,6 +957,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/Atlantic/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Canary
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Cape_Verde
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Faeroe
+-rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Faroe
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Jan_Mayen
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Madeira
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Atlantic/Reykjavik
@@ -968,6 +972,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/Australia/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Canberra
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Currie
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Darwin
+-rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Eucla
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Hobart
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/LHI
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Australia/Lindeman
@@ -1216,6 +1221,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/US/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/W-SU
 -rw-r--r--	root/root	usr/share/postgresql/timezone/WET
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Zulu
+-rw-r--r--	root/root	usr/share/postgresql/timezone/posixrules
 drwxr-xr-x	root/root	usr/share/postgresql/timezonesets/
 -rw-r--r--	root/root	usr/share/postgresql/timezonesets/Africa.txt
 -rw-r--r--	root/root	usr/share/postgresql/timezonesets/America.txt
