@@ -4,13 +4,13 @@
 # Depends:      ncurses
 
 name=htop
-version=0.6.5
+version=0.6.6
 release=1
 source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls
+    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
     make
     make DESTDIR=$PKG install
    
