@@ -6,12 +6,12 @@
 
 name=pygobject
 version=2.12.3
-release=1
+release=2
 source=(http://ftp.acc.umu.se/pub/GNOME/sources/$name/2.12/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --disable-doc
+	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
 }
