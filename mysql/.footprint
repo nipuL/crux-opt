@@ -57,6 +57,7 @@ drwxr-xr-x	root/root	usr/include/mysql/
 -rw-r--r--	root/root	usr/include/mysql/m_ctype.h
 -rw-r--r--	root/root	usr/include/mysql/m_string.h
 -rw-r--r--	root/root	usr/include/mysql/my_alloc.h
+-rw-r--r--	root/root	usr/include/mysql/my_attribute.h
 -rw-r--r--	root/root	usr/include/mysql/my_config.h
 -rw-r--r--	root/root	usr/include/mysql/my_dbug.h
 -rw-r--r--	root/root	usr/include/mysql/my_dir.h
