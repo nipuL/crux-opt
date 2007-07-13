@@ -27,6 +27,10 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/lpr
 -rwxr-xr-x	root/root	usr/bin/lprm
 -rwxr-xr-x	root/root	usr/bin/lpstat
+drwxr-xr-x	root/root	usr/etc/
+drwxr-xr-x	root/root	usr/etc/dbus-1/
+drwxr-xr-x	root/root	usr/etc/dbus-1/system.d/
+-rw-r--r--	root/root	usr/etc/dbus-1/system.d/cups.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/cups/
 -rw-r--r--	root/root	usr/include/cups/adminutil.h

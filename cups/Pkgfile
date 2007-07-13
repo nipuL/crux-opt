@@ -4,7 +4,7 @@
 # Depends on:  libpng, libtiff, openssl
 
 name=cups
-version=1.2.11
+version=1.2.12
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
@@ -15,6 +15,7 @@ build () {
 
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
+                --mandir=/usr/man \
                 --localstatedir=/var \
                 --with-docdir=/usr/share/cups/doc \
                 --with-logdir=/var/log/cups \
@@ -27,7 +28,7 @@ build () {
                 --enable-pam=no
 
     make
-    make BUILDROOT=$PKG install
+    make BUILDROOT=$PKG DBUSDIR=/usr/etc/dbus-1/system.d install
 
     rm -rf $PKG/etc/{rc*.d,init.d}
     rm -rf $PKG/usr/share/{locale,icons,applications}
