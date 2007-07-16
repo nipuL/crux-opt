@@ -4,7 +4,7 @@
 # Depends on: firefox
 
 name=firefox-flash-plugin
-version=9.0.31.0
+version=9.0.48.0
 release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_9_linux.tar.gz)
 
