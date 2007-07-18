@@ -4,12 +4,12 @@
 # Depends on: libsdl
 
 name=zsnes
-version=1.42
+version=1.51
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/${name}142src.tar.gz)
+source=(http://dl.sourceforge.net/sourceforge/$name/${name}151src.tar.bz2)
 
 build() {
-	cd ${name}_1_42/src
+	cd ${name}_1_51/src
 	./configure	--prefix=/usr
 	make
 	install -D -m 0755 $name $PKG/usr/bin/$name
