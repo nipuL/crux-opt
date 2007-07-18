@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=mailx
-version=12.2
+version=12.3
 release=1
 source=(http://dl.sourceforge.net/sourceforge/heirloom/$name-$version.tar.bz2)
 
