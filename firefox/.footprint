@@ -1603,6 +1603,7 @@ drwxr-xr-x	root/root	usr/include/firefox/toolkitcomps/
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsICommandLine.h
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsICommandLineHandler.h
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsICommandLineRunner.h
+-rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsICommandLineValidator.h
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsIRemoteService.h
 -rw-r--r--	root/root	usr/include/firefox/toolkitcomps/nsToolkitCompsCID.h
 drwxr-xr-x	root/root	usr/include/firefox/transformiix/
@@ -1907,6 +1908,7 @@ drwxr-xr-x	root/root	usr/include/firefox/xpcom/
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIEnvironment.h
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIErrorService.h
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIEventQueue.h
+-rw-r--r--	root/root	usr/include/firefox/xpcom/nsIEventQueueListener.h
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIEventQueueService.h
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIEventTarget.h
 -rw-r--r--	root/root	usr/include/firefox/xpcom/nsIException.h
@@ -2791,6 +2793,7 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsICommandLine.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsICommandLineHandler.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsICommandLineRunner.idl
+-rw-r--r--	root/root	usr/share/idl/firefox/nsICommandLineValidator.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsICommandManager.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsICommandParams.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIComponentLoader.idl
@@ -3178,6 +3181,7 @@ drwxr-xr-x	root/root	usr/share/idl/firefox/
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIErrorService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIEventHandler.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIEventQueue.idl
+-rw-r--r--	root/root	usr/share/idl/firefox/nsIEventQueueListener.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIEventQueueService.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIEventTarget.idl
 -rw-r--r--	root/root	usr/share/idl/firefox/nsIException.idl
