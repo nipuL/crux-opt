@@ -1,9 +1,9 @@
 # Description: A tool for statically checking C programs
 # URL: http://www.splint.org/
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
  
 name=splint
-version=3.1.1
+version=3.1.2
 release=1
 source=(http://www.splint.org/downloads/$name-$version.src.tgz) 
 build() {
