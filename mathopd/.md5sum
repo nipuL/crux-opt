@@ -1,6 +1,7 @@
 ec0d71c0c75986c1c4974320788945cc  dir_cgi-1.1.tar.gz
 56ed28d0c582903a2c29c9c5f9153e57  mathopd
-48b54bf1e9673203a8f18a4fefab4730  mathopd-1.5p5.tar.gz
+c26b466f20ddcdc6b68180a248f3156c  mathopd-1.5p6.tar.gz
+3e318e6add3583d90373cc335e5ea75e  mathopd-config.patch
 dd645079a41380fbb301da6d5559de84  mathopd.8.gz
 2f0f28b786a555bbd800c0cbcf0d7057  mathopd.conf
 30b3213864d035989dacd1d256880e81  mathopd.conf.5.gz

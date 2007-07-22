@@ -3,18 +3,19 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=mathopd
-version=1.5p5
-release=3
+version=1.5p6
+release=1
 source=(http://www.mathopd.org/dist/$name-$version.tar.gz \
-        http://jue.li/misc/dir_cgi/dir_cgi-1.1.tar.gz \        
+        http://jue.li/misc/dir_cgi/dir_cgi-1.1.tar.gz \
         http://www.mathopd.org/doc/mathopd.8.gz \
         http://www.mathopd.org/doc/mathopd.conf.5.gz \
-        mathopd.conf mathopd)
+        mathopd-config.patch mathopd.conf mathopd)
 
 build () {
     cd $name-$version/src
-    sed -i '37s/# //' Makefile
-    make -e CPPFLAGS="-DHAVE_CRYPT_H -DHAVE_VFORK -DLINUX_SENDFILE -Wall"
+
+    patch -p2 -i $SRC/mathopd-config.patch
+    make
 
     install -d $PKG/{var/log,etc/rc.d,usr/{bin,sbin,man/man{8,5}}}
     install -m 755 mathopd $PKG/usr/sbin
