@@ -22,14 +22,14 @@ drwxr-xr-x	root/root	usr/include/FLAC/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libFLAC++.a
 -rwxr-xr-x	root/root	usr/lib/libFLAC++.la
-lrwxrwxrwx	root/root	usr/lib/libFLAC++.so -> libFLAC++.so.6.0.1
-lrwxrwxrwx	root/root	usr/lib/libFLAC++.so.6 -> libFLAC++.so.6.0.1
--rwxr-xr-x	root/root	usr/lib/libFLAC++.so.6.0.1
+lrwxrwxrwx	root/root	usr/lib/libFLAC++.so -> libFLAC++.so.6.1.0
+lrwxrwxrwx	root/root	usr/lib/libFLAC++.so.6 -> libFLAC++.so.6.1.0
+-rwxr-xr-x	root/root	usr/lib/libFLAC++.so.6.1.0
 -rw-r--r--	root/root	usr/lib/libFLAC.a
 -rwxr-xr-x	root/root	usr/lib/libFLAC.la
-lrwxrwxrwx	root/root	usr/lib/libFLAC.so -> libFLAC.so.8.0.1
-lrwxrwxrwx	root/root	usr/lib/libFLAC.so.8 -> libFLAC.so.8.0.1
--rwxr-xr-x	root/root	usr/lib/libFLAC.so.8.0.1
+lrwxrwxrwx	root/root	usr/lib/libFLAC.so -> libFLAC.so.8.1.0
+lrwxrwxrwx	root/root	usr/lib/libFLAC.so.8 -> libFLAC.so.8.1.0
+-rwxr-xr-x	root/root	usr/lib/libFLAC.so.8.1.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/flac++.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/flac.pc
