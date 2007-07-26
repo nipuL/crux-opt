@@ -4,7 +4,7 @@
 # Depends on: sdl_mixer, sdl_net, wxgtk, freealut
 
 name=scorched3d
-version=40.1c
+version=40.1d
 release=1
 source=(http://dl.sourceforge.net/$name/Scorched3D-$version-src.tar.gz \
 	$name-freealut.patch)
