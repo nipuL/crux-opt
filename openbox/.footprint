@@ -29,14 +29,14 @@ drwxr-xr-x	root/root	usr/include/openbox/3.4/openbox/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libobparser.a
 -rwxr-xr-x	root/root	usr/lib/libobparser.la
-lrwxrwxrwx	root/root	usr/lib/libobparser.so -> libobparser.so.15.0.0
-lrwxrwxrwx	root/root	usr/lib/libobparser.so.15 -> libobparser.so.15.0.0
--rwxr-xr-x	root/root	usr/lib/libobparser.so.15.0.0
+lrwxrwxrwx	root/root	usr/lib/libobparser.so -> libobparser.so.16.0.0
+lrwxrwxrwx	root/root	usr/lib/libobparser.so.16 -> libobparser.so.16.0.0
+-rwxr-xr-x	root/root	usr/lib/libobparser.so.16.0.0
 -rw-r--r--	root/root	usr/lib/libobrender.a
 -rwxr-xr-x	root/root	usr/lib/libobrender.la
-lrwxrwxrwx	root/root	usr/lib/libobrender.so -> libobrender.so.15.0.0
-lrwxrwxrwx	root/root	usr/lib/libobrender.so.15 -> libobrender.so.15.0.0
--rwxr-xr-x	root/root	usr/lib/libobrender.so.15.0.0
+lrwxrwxrwx	root/root	usr/lib/libobrender.so -> libobrender.so.16.0.0
+lrwxrwxrwx	root/root	usr/lib/libobrender.so.16 -> libobrender.so.16.0.0
+-rwxr-xr-x	root/root	usr/lib/libobrender.so.16.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/obparser-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/obrender-3.0.pc
