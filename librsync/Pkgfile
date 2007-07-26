@@ -5,11 +5,14 @@
 
 name=librsync
 version=0.9.7
-release=1
-source=(http://dl.sourceforge.net/${name}/${name}-${version}.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/${name}/${name}-${version}.tar.gz
+	librsync.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 < $SRC/librsync.patch
 
     ./configure \
 	--prefix=/usr \

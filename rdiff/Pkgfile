@@ -2,14 +2,18 @@
 # URL: http://librsync.sourceforge.net/
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
+# Depends on: librsync
 
 name=rdiff
 version=0.9.7
-release=1
-source=(http://dl.sourceforge.net/librsync/librsync-${version}.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/librsync/librsync-${version}.tar.gz
+	librsync.patch)
 
 build() {
     cd librsync-$version
+
+    patch -p1 < $SRC/librsync.patch
 
     ./configure --prefix=/usr
     make
