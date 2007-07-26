@@ -5,7 +5,7 @@
 # Depends on:  gtk, openssl
 
 name=gkrellm
-version=2.2.10
+version=2.3.0
 release=1
 source=(http://members.dslextreme.com/users/billw/$name/$name-$version.tar.bz2)
 
