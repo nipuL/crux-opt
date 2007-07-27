@@ -86,7 +86,6 @@ case "$1" in
 
 		# get the .so version number
 		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./'`"
-		echo "NV_VER=$NV_VER"
 
 		# check for the existence of libglx_so and libGL_so_1_2
 		# if none, move the xorg stuff out of the way for nvidia's
