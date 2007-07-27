@@ -5,7 +5,7 @@
 
 name=nvidia
 version=100.14.11
-release=2
+release=3
 source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
 	$name-makefile.patch)
 
@@ -26,7 +26,7 @@ build() {
 	cp -a usr/X11R6/lib/* $PKG/usr/lib/xorg/
 	cp -a usr/lib/* $PKG/usr/lib/
 	sed -i -e 's|__LIBGL_PATH__|/usr/lib|' $PKG/usr/lib/libGL.la
-	ln -s libnvidia-wfb.so.100.14.11 $PKG/usr/lib/xorg/modules/libwfb.so
+	ln -s libnvidia-wfb.so.$version $PKG/usr/lib/xorg/modules/libwfb.so
 
 	# copy includes
 	mkdir -p $PKG/usr/include/nvidia
