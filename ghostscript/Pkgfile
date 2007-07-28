@@ -14,7 +14,7 @@ build () {
     ./configure --prefix=/usr \
                 --enable-cups \
                 --with-drivers=ALL
-    make
+    make -j1
     make install_prefix=$PKG install
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
    
