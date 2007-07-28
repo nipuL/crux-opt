@@ -12,6 +12,6 @@ build () {
     cd $name-III-$version
     patch -p1 < $SRC/$name-$version.patch
     ./configure --prefix=/usr 
-    make FLAGS="$CFLAGS"
+    make -j1 FLAGS="$CFLAGS"
     make prefix=$PKG/usr install
 }
