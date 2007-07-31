@@ -4,7 +4,7 @@
 # Packager: Olle Gustafsson, ogg at linux dot se
 
 name=libao
-version=0.8.6
+version=0.8.8
 release=1
 source=(http://downloads.xiph.org/releases/ao/${name}-${version}.tar.gz)
 
@@ -13,7 +13,9 @@ build() {
 
     sed -i 's|MANDIR=.*|MANDIR=/usr/man|' configure
 
-    ./configure --prefix=/usr 
+    ./configure \
+	--prefix=/usr \
+	--mandir=/usr/man
     make
     make DESTDIR=$PKG install
 
