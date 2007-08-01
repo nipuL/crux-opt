@@ -26,10 +26,30 @@ infoRevert() {
 	echo "the correct new setup using 'gl-select xorg; gl-select <new gl/glx>'."
 }
 
+# checkInstalled() checks either a single port or list of ports, like so:
+#   checkInstalled xorg
+#   checkInstalled nvidia nvidia-legacy-96xx nvidia-legacy-71xx
 checkInstalled() {
-	if [ -z "`pkginfo -i | awk '{ print $1 }' | grep -e ^$1$`" ]
+	local notInstalled=1
+	for arg in $@
+	do
+		if [ ! -z "`pkginfo -i | awk '{ print $1 }' | grep -e ^$arg$`" ]
+		then
+			notInstalled=0
+		fi
+	done
+	if [ $notInstalled -eq 1 ]
 	then
-		echo "$1 isn't installed!"
+		if [ $# -eq 1 ]
+		then
+			echo "$arg isn't installed!"
+		else
+			echo "None of the following ports are installed! (one is required)"
+			for i in $@
+			do
+				echo "  $i"
+			done
+		fi
 		exit 1
 	fi
 }
@@ -81,11 +101,11 @@ case "$1" in
 	"nvidia")
 		echo "* nvidia gl/glx selected"
 
-		# is the nvidia port installed?
-		checkInstalled nvidia
+		# is an nvidia port installed?
+		checkInstalled nvidia nvidia-legacy-96xx nvidia-legacy-71xx
 
 		# get the .so version number
-		NV_VER="`pkginfo -i | grep "^nvidia " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./'`"
+		NV_VER="`pkginfo -i | grep -e "^nvidia " -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./' | cut -d- -f1`"
 
 		# check for the existence of libglx_so and libGL_so_1_2
 		# if none, move the xorg stuff out of the way for nvidia's
