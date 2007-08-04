@@ -1,6 +1,6 @@
-diff -Nru aterm-1.0.0.orig/README.configure aterm-1.0.0/README.configure
---- aterm-1.0.0.orig/README.configure	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/README.configure	2005-07-11 20:48:41.000000000 +0200
+diff -Nru aterm-1.0.1.orig/README.configure aterm-1.0.1/README.configure
+--- aterm-1.0.1.orig/README.configure	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/README.configure	2007-08-02 14:23:19.000000000 +0200
 @@ -56,6 +56,10 @@
  	the mouse button down on a scrollbar arrow
  --disable-mousewheel
@@ -12,9 +12,9 @@ diff -Nru aterm-1.0.0.orig/README.configure aterm-1.0.0/README.configure
  --enable-old-selection
  	revert mouse selection to something similar to v2.20 (and prior) -
  	this implies word selection of those versions (i.e. next option)
-diff -Nru aterm-1.0.0.orig/autoconf/configure.in aterm-1.0.0/autoconf/configure.in
---- aterm-1.0.0.orig/autoconf/configure.in	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/autoconf/configure.in	2005-07-11 20:48:41.000000000 +0200
+diff -Nru aterm-1.0.1.orig/autoconf/configure.in aterm-1.0.1/autoconf/configure.in
+--- aterm-1.0.1.orig/autoconf/configure.in	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/autoconf/configure.in	2007-08-02 15:00:51.000000000 +0200
 @@ -82,6 +82,9 @@
  AC_ARG_ENABLE(mousewheel,  [  --disable-mousewheel    disable scrolling via mouse wheel or buttons 4 & 5],
    [if test x$enableval = xno; then  AC_DEFINE(NO_MOUSE_WHEEL,1,[Use wheel events (button4 and button5) to scroll])  fi])
@@ -25,9 +25,18 @@ diff -Nru aterm-1.0.0.orig/autoconf/configure.in aterm-1.0.0/autoconf/configure.
  AC_ARG_ENABLE(old-selection, [  --enable-old-selection  enable v2.20 (and prior) mouse selection
                            - this implies old word selection],
    [if test x$enableval = xyes; then  AC_DEFINE(OLD_SELECTION,1,[Define to use old rxvt (ver 2.20 and before) style selection, not xterm style.]) fi])
-diff -Nru aterm-1.0.0.orig/doc/aterm.1 aterm-1.0.0/doc/aterm.1
---- aterm-1.0.0.orig/doc/aterm.1	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/doc/aterm.1	2005-07-11 20:48:41.000000000 +0200
+@@ -635,7 +638,7 @@
+   [setlocale(LC_CTYPE, "");],
+   rxvt_cv_func_xsetlocale=yes, rxvt_cv_func_xsetlocale=no)])
+ if test "${rxvt_cv_func_xsetlocale}" = no; then
+-  AC_DEFINE(NO_XSETLOCALE)
++  AC_DEFINE(NO_XSETLOCALE,1,[Define if xsetlocale doesn't work])
+ fi
+ 
+ AC_CACHE_CHECK(for working plain setlocale, rxvt_cv_func_setlocale,
+diff -Nru aterm-1.0.1.orig/doc/aterm.1 aterm-1.0.1/doc/aterm.1
+--- aterm-1.0.1.orig/doc/aterm.1	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/doc/aterm.1	2007-08-02 14:23:19.000000000 +0200
 @@ -230,6 +230,16 @@
  .IP "\fB-st\fP|\fB+st\fP" 
  Display scrollbar without/with a trough;
@@ -45,10 +54,22 @@ diff -Nru aterm-1.0.0.orig/doc/aterm.1 aterm-1.0.0/doc/aterm.1
  .IP "\fB-iconic\fP" 
  Start iconified, if the window manager supports that option\&.
  .IP "\fB-sl\fP \fInumber\fP" 
-diff -Nru aterm-1.0.0.orig/src/command.c aterm-1.0.0/src/command.c
---- aterm-1.0.0.orig/src/command.c	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/src/command.c	2005-07-11 20:48:41.000000000 +0200
-@@ -2365,6 +2365,13 @@
+diff -Nru aterm-1.0.1.orig/src/command.c aterm-1.0.1/src/command.c
+--- aterm-1.0.1.orig/src/command.c	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/src/command.c	2007-08-02 15:48:46.000000000 +0200
+@@ -1886,9 +1886,9 @@
+ 	    case XK_F2:		/* "\033[12~" */
+ 	    case XK_F3:		/* "\033[13~" */
+ 	    case XK_F4:		/* "\033[14~" */
+-			FKEY(11, XK_F1);
++		    FKEY(11, XK_F1);
+ 		break;
+-#endif			
++#endif
+ 	    case XK_F5:		/* "\033[15~" */
+ 			FKEY(15, XK_F5);
+ 		break;
+@@ -2411,6 +2411,13 @@
  	}
  	break;
  
@@ -62,7 +83,7 @@ diff -Nru aterm-1.0.0.orig/src/command.c aterm-1.0.0/src/command.c
      case FocusIn:
  	if (!TermWin.focus) {
  	    TermWin.focus = 1;
-@@ -2381,7 +2388,12 @@
+@@ -2427,7 +2434,12 @@
  #endif
  	}
  	break;
@@ -76,9 +97,9 @@ diff -Nru aterm-1.0.0.orig/src/command.c aterm-1.0.0/src/command.c
      case FocusOut:
  	if (TermWin.focus) {
  	    TermWin.focus = 0;
-diff -Nru aterm-1.0.0.orig/src/main.c aterm-1.0.0/src/main.c
---- aterm-1.0.0.orig/src/main.c	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/src/main.c	2005-07-11 20:50:18.000000000 +0200
+diff -Nru aterm-1.0.1.orig/src/main.c aterm-1.0.1/src/main.c
+--- aterm-1.0.1.orig/src/main.c	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/src/main.c	2007-08-02 14:23:19.000000000 +0200
 @@ -705,7 +705,14 @@
  					   &attributes);
  
@@ -141,22 +162,7 @@ diff -Nru aterm-1.0.0.orig/src/main.c aterm-1.0.0/src/main.c
  	attributes.cursor = TermWin_cursor ;
  /* the vt window */
  #ifdef HAVE_AFTERIMAGE
-@@ -1037,12 +1063,12 @@
- 	XConfigureEvent *xconf = &(ev->xconfigure);
- 	
- 	while( XCheckTypedWindowEvent( Xdisplay, TermWin.parent, ConfigureNotify, ev ) );
--	fprintf( stderr, "config_geom = %dx%d\n", xconf->width, xconf->height );
-+/*	fprintf( stderr, "config_geom = %dx%d\n", xconf->width, xconf->height ); */
-     resize_window1(xconf->width, xconf->height);
- #if 1
- 	XTranslateCoordinates (Xdisplay, TermWin.parent, Xroot, 0, 0, &root_x, &root_y, &wdumm);
- 
--	fprintf( stderr, "root_geom = %dx%d%+d%+d, root_size = %dx%d\n", xconf->width, xconf->height, root_x, root_y, XdisplayWidth, XdisplayHeight ); 
-+/*	fprintf( stderr, "root_geom = %dx%d%+d%+d, root_size = %dx%d\n", xconf->width, xconf->height, root_x, root_y, XdisplayWidth, XdisplayHeight ); */
- 	TermWin.root_x = root_x ; 
- 	TermWin.root_y = root_y ; 
- 	TermWin.root_width = xconf->width ; 
-@@ -2341,6 +2367,11 @@
+@@ -2361,6 +2387,11 @@
  /* do it now to avoid unneccessary redrawing */
      XMapWindow(Xdisplay, TermWin.vt);
      XMapWindow(Xdisplay, TermWin.parent);
@@ -168,20 +174,20 @@ diff -Nru aterm-1.0.0.orig/src/main.c aterm-1.0.0/src/main.c
  
  #if 0
  #if defined(BACKGROUND_IMAGE) || defined(TRANSPARENT) || defined(_MYSTYLE_)
-diff -Nru aterm-1.0.0.orig/src/rxvt.h aterm-1.0.0/src/rxvt.h
---- aterm-1.0.0.orig/src/rxvt.h	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/src/rxvt.h	2005-07-11 20:48:41.000000000 +0200
-@@ -779,6 +779,7 @@
+diff -Nru aterm-1.0.1.orig/src/rxvt.h aterm-1.0.1/src/rxvt.h
+--- aterm-1.0.1.orig/src/rxvt.h	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/src/rxvt.h	2007-08-02 14:33:42.000000000 +0200
+@@ -785,6 +785,7 @@
  #define Opt_transparent		(1LU<<13)
  #define Opt_transparent_sb	(1LU<<14)
  #define Opt_borderLess		(1LU<<16)
-+#define Opt_fake_root           (1LU<<17)
++#define Opt_fake_root       (1LU<<17)
  
  /* place holder used for parsing command-line options */
  #define Opt_Reverse		(1LU<<30)
-diff -Nru aterm-1.0.0.orig/src/xdefaults.c aterm-1.0.0/src/xdefaults.c
---- aterm-1.0.0.orig/src/xdefaults.c	2005-07-11 20:48:22.000000000 +0200
-+++ aterm-1.0.0/src/xdefaults.c	2005-07-11 20:48:41.000000000 +0200
+diff -Nru aterm-1.0.1.orig/src/xdefaults.c aterm-1.0.1/src/xdefaults.c
+--- aterm-1.0.1.orig/src/xdefaults.c	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/src/xdefaults.c	2007-08-02 14:23:19.000000000 +0200
 @@ -80,6 +80,9 @@
  #ifdef GREEK_SUPPORT
  static const char *rs_greek_keyboard = NULL;
@@ -192,7 +198,7 @@ diff -Nru aterm-1.0.0.orig/src/xdefaults.c aterm-1.0.0/src/xdefaults.c
  /*}}} */
  
  /*{{{ monolithic option/resource structure: */
-@@ -311,6 +314,10 @@
+@@ -316,6 +319,10 @@
  	 "scroll-on-tty-output inhibit"),
      BOOL(rs_scrollKeypress, "scrollKey", "sk",
           Opt_scrollKeypress, "scroll-on-keypress"),

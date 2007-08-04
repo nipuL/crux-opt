@@ -1,3 +1,3 @@
-568777c65a723f6ba27464473c424a10  aterm-1.0.0.tar.gz
-97d90349c7d7e633fb7ab3a2ae0bf5fb  aterm-configure.patch
-4e8daae7dea71b3c7956d96a7bd366e5  aterm-fake_root.patch
+b0975b4b46225544e2eac898d888c08a  aterm-1.0.1.tar.gz
+370ad2c16bc513fcc45b9ef07a0125f2  aterm-fake_root.patch
+5b2e5f14acd18893837d8734b41d505a  aterm-fkeys.patch

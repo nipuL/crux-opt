@@ -1,0 +1,35 @@
+diff -Nru aterm-1.0.1.orig/src/command.c aterm-1.0.1/src/command.c
+--- aterm-1.0.1.orig/src/command.c	2007-08-03 11:20:28.000000000 +0200
++++ aterm-1.0.1/src/command.c	2007-08-03 11:21:53.000000000 +0200
+@@ -1869,28 +1869,18 @@
+ 		}
+ 		break;
+ 		
+-		case XK_F1:		/* "\033OP" */
+-	    case XK_F2:		/* "\033OQ" */
+-	    case XK_F3:		/* "\033OR" */
+-	    case XK_F4:		/* "\033OS" */
+-		len = 3;
+-		STRCPY(kbuf, "\033OP");
+-		kbuf[2] += (keysym - XK_F1);
+-		break;
+-
+ #define FKEY(n, fkey)							\
+     len = 5;								\
+     sprintf((char *) kbuf,"\033[%02d~", (int)((n) + (keysym - fkey)))
+-#if 0                          /* old style keymappings : */
+ 	    case XK_F1:		/* "\033[11~" */
+ 	    case XK_F2:		/* "\033[12~" */
+ 	    case XK_F3:		/* "\033[13~" */
+ 	    case XK_F4:		/* "\033[14~" */
+-		    FKEY(11, XK_F1);
++		FKEY(11, XK_F1);
+ 		break;
+-#endif
++
+ 	    case XK_F5:		/* "\033[15~" */
+-			FKEY(15, XK_F5);
++		FKEY(15, XK_F5);
+ 		break;
+ 
+ 	    case XK_F6:		/* "\033[17~" */
