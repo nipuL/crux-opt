@@ -3,9 +3,9 @@
 # Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=glib
-version=2.12.11
+version=2.14.0
 release=1
-source=(ftp://ftp.gtk.org/pub/$name/2.12/$name-$version.tar.bz2)
+source=(ftp://ftp.gtk.org/pub/$name/2.14/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
