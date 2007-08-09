@@ -1,0 +1,25 @@
+diff -Nru evilwm-1.0.0.orig/screen.c evilwm-1.0.0/screen.c
+--- evilwm-1.0.0.orig/screen.c	2007-08-09 12:13:46.000000000 +0200
++++ evilwm-1.0.0/screen.c	2007-08-09 12:11:34.000000000 +0200
+@@ -313,8 +313,8 @@
+ 		} else {
+ 			c->oldx = c->x;
+ 			c->oldw = c->width;
+-			c->x = 0;
+-			c->width = DisplayWidth(dpy, c->screen->screen);
++			c->x = 1;
++			c->width = DisplayWidth(dpy, c->screen->screen) - 2;
+ 		}
+ 	}
+ 	if (hv & MAXIMISE_VERT) {
+@@ -325,8 +325,8 @@
+ 		} else {
+ 			c->oldy = c->y;
+ 			c->oldh = c->height;
+-			c->y = 0;
+-			c->height = DisplayHeight(dpy, c->screen->screen);
++			c->y = 1;
++			c->height = DisplayHeight(dpy, c->screen->screen) - 2;
+ 		}
+ 	}
+ 	moveresize(c);

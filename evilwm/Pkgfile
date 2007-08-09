@@ -5,13 +5,14 @@
 
 name=evilwm
 version=1.0.0
-release=1
+release=2
 source=(http://www.6809.org.uk/$name/$name-$version.tar.gz \
-        $name-config.patch)
+        $name-config.patch $name-maximise.patch)
 
 build () {
     cd $name-$version
-    patch -p1 < ../$name-config.patch
+    patch -p1 < $SRC/$name-config.patch
+    patch -p1 < $SRC/$name-maximise.patch
     make 
     make DESTDIR=$PKG install
 }
