@@ -111,6 +111,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/compobj.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.idl
+-rw-r--r--	root/root	usr/include/wine/windows/cor.h
 -rw-r--r--	root/root	usr/include/wine/windows/cpl.h
 -rw-r--r--	root/root	usr/include/wine/windows/custcntl.h
 -rw-r--r--	root/root	usr/include/wine/windows/cvconst.h
@@ -189,6 +190,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/dshow.h
 -rw-r--r--	root/root	usr/include/wine/windows/dsound.h
 -rw-r--r--	root/root	usr/include/wine/windows/dsrole.h
+-rw-r--r--	root/root	usr/include/wine/windows/dwmapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/dxdiag.h
 -rw-r--r--	root/root	usr/include/wine/windows/dxerr8.h
 -rw-r--r--	root/root	usr/include/wine/windows/dxerr9.h
@@ -208,9 +210,11 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/fci.h
 -rw-r--r--	root/root	usr/include/wine/windows/fdi.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplus.h
+-rw-r--r--	root/root	usr/include/wine/windows/gdipluscolormatrix.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusenums.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusflat.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusgpstubs.h
+-rw-r--r--	root/root	usr/include/wine/windows/gdiplusimaging.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusinit.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusmem.h
 -rw-r--r--	root/root	usr/include/wine/windows/gdiplusmetaheader.h
@@ -254,11 +258,14 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/lmserver.h
 -rw-r--r--	root/root	usr/include/wine/windows/lmshare.h
 -rw-r--r--	root/root	usr/include/wine/windows/lmstats.h
+-rw-r--r--	root/root	usr/include/wine/windows/lmuse.h
+-rw-r--r--	root/root	usr/include/wine/windows/lmuseflg.h
 -rw-r--r--	root/root	usr/include/wine/windows/lmwksta.h
 -rw-r--r--	root/root	usr/include/wine/windows/lzexpand.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapicode.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapidefs.h
+-rw-r--r--	root/root	usr/include/wine/windows/mapiform.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapiguid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapitags.h
 -rw-r--r--	root/root	usr/include/wine/windows/mapiutil.h
@@ -284,6 +291,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/msacmdlg.h
 -rw-r--r--	root/root	usr/include/wine/windows/msacmdrv.h
 -rw-r--r--	root/root	usr/include/wine/windows/mscat.h
+-rw-r--r--	root/root	usr/include/wine/windows/mscoree.h
+-rw-r--r--	root/root	usr/include/wine/windows/mscoree.idl
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmcid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmdid.h
 -rw-r--r--	root/root	usr/include/wine/windows/mshtmhst.h
@@ -292,6 +301,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/mshtml.idl
 -rw-r--r--	root/root	usr/include/wine/windows/msi.h
 -rw-r--r--	root/root	usr/include/wine/windows/msidefs.h
+-rw-r--r--	root/root	usr/include/wine/windows/msinkaut.h
+-rw-r--r--	root/root	usr/include/wine/windows/msinkaut.idl
 -rw-r--r--	root/root	usr/include/wine/windows/msiquery.h
 -rw-r--r--	root/root	usr/include/wine/windows/mssip.h
 -rw-r--r--	root/root	usr/include/wine/windows/mswsock.h
@@ -419,6 +430,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/urlhist.idl
 -rw-r--r--	root/root	usr/include/wine/windows/urlmon.h
 -rw-r--r--	root/root	usr/include/wine/windows/urlmon.idl
+-rw-r--r--	root/root	usr/include/wine/windows/userenv.h
 -rw-r--r--	root/root	usr/include/wine/windows/usp10.h
 -rw-r--r--	root/root	usr/include/wine/windows/uuids.h
 -rw-r--r--	root/root	usr/include/wine/windows/uxtheme.h
@@ -437,6 +449,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/winerror.h
 -rw-r--r--	root/root	usr/include/wine/windows/wingdi.h
 -rw-r--r--	root/root	usr/include/wine/windows/wininet.h
+-rw-r--r--	root/root	usr/include/wine/windows/winineti.h
 -rw-r--r--	root/root	usr/include/wine/windows/winioctl.h
 -rw-r--r--	root/root	usr/include/wine/windows/winldap.h
 -rw-r--r--	root/root	usr/include/wine/windows/winnetwk.h
@@ -445,7 +458,6 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/winnt.h
 -rw-r--r--	root/root	usr/include/wine/windows/winperf.h
 -rw-r--r--	root/root	usr/include/wine/windows/winreg.h
--rw-r--r--	root/root	usr/include/wine/windows/winres.h
 -rw-r--r--	root/root	usr/include/wine/windows/winresrc.h
 -rw-r--r--	root/root	usr/include/wine/windows/winscard.h
 -rw-r--r--	root/root	usr/include/wine/windows/winsmcrd.h
@@ -548,6 +560,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/dpnaddr.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dpnhpast.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/dpnlobby.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dsound.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dswave.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/dwmapi.dll.so
@@ -555,6 +568,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/eject.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/expand.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/explorer.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/faultrep.dll.so
 -rw-r--r--	root/root	usr/lib/wine/gdi.exe16
 -rwxr-xr-x	root/root	usr/lib/wine/gdi32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/gdiplus.dll.so
@@ -576,6 +590,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/imm.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/imm32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/infosoft.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/inkobj.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/inseng.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/iphlpapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/itss.dll.so
@@ -741,6 +756,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/msftedit.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msg711.acm.so
 -rwxr-xr-x	root/root	usr/lib/wine/mshtml.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/mshtml.tlb.so
 -rwxr-xr-x	root/root	usr/lib/wine/msi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msiexec.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/msimg32.dll.so
@@ -893,6 +909,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/wing.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/wing32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winhelp.exe.so
+-rwxr-xr-x	root/root	usr/lib/wine/winhttp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wininet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winmm.dll.so
 -rw-r--r--	root/root	usr/lib/wine/winnls.dll16
@@ -909,6 +926,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/wordpad.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/wow32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/wprocs.dll16
+-rwxr-xr-x	root/root	usr/lib/wine/write.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/ws2_32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wsock32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wtsapi32.dll.so
