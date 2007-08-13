@@ -4,14 +4,14 @@
 # Depends on: xorg-libxft, xorg-libxpm, perl
 
 name=rxvt-unicode
-version=8.2
+version=8.3
 release=1
 source=(http://dist.schmorp.de/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr \
+	./configure --prefix=/usr --mandir=/usr/man \
 	            --enable-utmp --enable-wtmp \
 	            --enable-transparency --enable-tinting --enable-fading \
 	            --enable-mousewheel \
