@@ -5,7 +5,7 @@
 # Nice to have: libpcre
 
 name=zsh
-version=4.2.6
+version=4.3.4
 release=1
 source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
 	http://www.grml.org/zsh/zsh-lovers.1)
@@ -31,7 +31,6 @@ build() {
         --enable-cap \
         --disable-locale \
         --with-curses-terminfo
-
     make
     make DESTDIR=$PKG install 
 
