@@ -5,8 +5,8 @@
 # Depends on: zlib, libjpeg, lcms
 
 name=libmng
-version=1.0.9
-release=2
+version=1.0.10
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
 	libmng.la)
 
@@ -15,8 +15,9 @@ build() {
     cd $name-$version
     cp makefiles/makefile.linux Makefile
     sed -i -e 's|/local||g' Makefile
+    sed -i 's|1\.0\.9|1\.0\.10|g' Makefile
     make
     make prefix=$PKG/usr install
-    (cd $PKG/usr/lib; ln -s libmng.so.1.1.0.9 libmng.so.1.0.9)
+    (cd $PKG/usr/lib; ln -s libmng.so.1.1.0.10 libmng.so.1.0.10)
     install -m 755 $SRC/libmng.la $PKG/usr/lib
 }

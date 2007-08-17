@@ -8,7 +8,7 @@
 dlname='libmng.so.1'
 
 # Names of this library.
-library_names='libmng.so.1.0.9 libmng.so.1 libmng.so'
+library_names='libmng.so.1.0.10 libmng.so.1 libmng.so'
 
 # The name of the static archive.
 old_library='libmng.a'
@@ -19,7 +19,7 @@ dependency_libs=' -lz /usr/lib/libjpeg.la /usr/lib/liblcms.la -lm'
 # Version information for libmng.
 current=1
 age=0
-revision=9
+revision=10
 
 # Is this an already installed library?
 installed=yes
