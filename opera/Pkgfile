@@ -5,12 +5,12 @@
 # Depends on: qt3
 
 name=opera
-version=9.22-20070716.6
+version=9.23-20070809.6
 release=1
-source=(http://$name.nsc.no/linux/922/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
+source=(http://$name.nsc.no/linux/923/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
 
 build() {
-    cd $name-$version-shared-qt.i386-en-655
+    cd $name-$version-shared-qt.i386-en-*
 
     sed -i s:share/man:man: install.sh
     sed -i s:/usr/lib/netscape:/usr/lib/firefox: ini/pluginpath.ini
