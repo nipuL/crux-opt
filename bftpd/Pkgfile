@@ -3,13 +3,13 @@
 # Maintainer:  Simone Rota, sip at crux dot nu
 
 name=bftpd
-version=1.9
+version=1.9.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
 	bftpd-config.patch bftpd-destdir.patch ftpd)
 
 build () {
-    cd $name-$version
+    cd $name
     patch -p1 -i ../bftpd-config.patch
     patch -p1 -i ../bftpd-destdir.patch
     ./configure --prefix=/usr --enable-libz
