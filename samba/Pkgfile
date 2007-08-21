@@ -4,13 +4,14 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.25b
+version=3.0.25c
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        samba)
+        samba-config.patch samba)
 
 build () {
     cd $name-$version/source
+    patch -d $SRC -p0 -i $SRC/samba-config.patch
     ./configure --prefix=/usr \
                 --with-fhs \
                 --with-smbmount \
@@ -22,19 +23,20 @@ build () {
     make -j1
     make DESTDIR=$PKG install
     
-    # nsswitch extensions
-    install nsswitch/libnss_win{s,bind}.so $PKG/usr/lib/samba
-
-    install -d $PKG/{sbin,var/log/samba}
-    
     # symlinks
     (cd $PKG/usr/lib 
      ln -s samba/libsmbclient.so libsmbclient.so
-     ln -s samba/libsmbclient.so libsmbclient.so.0
-     ln -s samba/libnss_winbind.so libnss_winbind.so
-     ln -s samba/libnss_winbind.so libnss_winbind.so.2
-     ln -s samba/libnss_wins.so libnss_wins.so
-     ln -s samba/libnss_wins.so libnss_wins.so.2)
+     ln -s samba/libsmbclient.so libsmbclient.so.0)
+    
+    # nsswitch extensions
+    install -d $PKG/lib
+    install nsswitch/libnss_win{s,bind}.so $PKG/lib
+    ln -s libnss_wins.so $PKG/lib/libnss_wins.so.2
+    ln -s libnss_winbind.so $PKG/lib/libnss_winbind.so.2
+
+    # spool/log directory
+    install -d $PKG/var/log/samba
+    install -d -m 1777 $PKG/var/spool/samba
     
     # config-file and start-script
     cp ../examples/smb.conf.default $PKG/etc/samba
