@@ -15,6 +15,6 @@ build () {
     mkdir X11
     ln -s .. X11/Xaw3d
     xmkmf
-    make
+    make -j1
     make DESTDIR=$PKG install
 }
