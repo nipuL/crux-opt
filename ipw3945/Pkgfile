@@ -1,0 +1,30 @@
+# Description: Intel PRO/Wireless 3945ABG driver
+# URL: http://ip3945.sourceforge.net
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: wireless-tools
+
+name=ipw3945
+version=1.2.2
+release=1
+source=(http://bughost.org/$name/ucode/$name-ucode-1.14.2.tgz \
+        http://bughost.org/$name/daemon/${name}d-1.7.22.tgz
+        http://dl.sourceforge.net/$name/$name-$version.tgz)
+
+build() {
+	pushd $name-ucode-1.14.2
+	install -d $PKG/lib/firmware
+	install -m 644 $name.ucode $PKG/lib/firmware
+	popd
+
+	pushd ${name}d-1.7.22
+	install -d $PKG/usr/sbin
+	install -m 755 x86/${name}d $PKG/usr/sbin
+	popd
+
+	pushd $name-$version
+	make
+	install -d $PKG/lib/modules/`uname -r`/kernel/drivers/net/wireless
+	install -m 644 $name.ko \
+	        $PKG/lib/modules/`uname -r`/kernel/drivers/net/wireless
+	popd
+}
