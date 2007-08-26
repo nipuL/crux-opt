@@ -5,7 +5,7 @@
 # Depends on: libsdl
 
 name=dosbox
-version=0.71
+version=0.72
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
