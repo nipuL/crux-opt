@@ -42,6 +42,7 @@ drwxr-xr-x	root/root	usr/include/dar/
 -rw-r--r--	root/root	usr/include/dar/tools.hpp
 -rw-r--r--	root/root	usr/include/dar/tronconneuse.hpp
 -rw-r--r--	root/root	usr/include/dar/tuyau.hpp
+-rw-r--r--	root/root	usr/include/dar/user_group_bases.hpp
 -rw-r--r--	root/root	usr/include/dar/user_interaction.hpp
 -rw-r--r--	root/root	usr/include/dar/wrapperlib.hpp
 drwxr-xr-x	root/root	usr/lib/
