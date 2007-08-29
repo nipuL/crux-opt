@@ -5,12 +5,16 @@
 
 name=gtk
 version=2.10.14
-release=1
+release=2
 source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules)
+	gdk-pixbuf.loaders gtk.immodules http-authstring.patch)
 
 build () {
 	cd gtk+-$version
+
+	# fix for building with cups 1.3
+	patch -p1 -i $SRC/http-authstring.patch
+
 	./configure --prefix=/usr \
 		--mandir=/usr/man
 	make
