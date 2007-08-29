@@ -10,6 +10,8 @@ release=1
 source=(http://openoffice-atl.osuosl.org/stable/$version/OOo_${version}_LinuxIntel_install_en-US.tar.gz)
 
 build() {
+	mkdir $SRC/tmp
+	export TMPDIR=$SRC/tmp
 	cd OO*/RPMS
 	for f in *.rpm; do rpm2targz $f; done
 	for f in *.tar.gz; do tar xvfz $f -C $PKG; done
