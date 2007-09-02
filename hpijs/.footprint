@@ -8,6 +8,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-2000C-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-2500C-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-2500CM-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-910-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-915-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Business_Inkjet_1000-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Business_Inkjet_1100-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Business_Inkjet_1200-hpijs.ppd.gz
@@ -45,6 +47,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_8550GN-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_9500-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_9500_MFP-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_CM4730_MFP-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_CP3505-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-Color_LaserJet_CP4005-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-DesignJet_ColorPro_CAD-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-DeskJet_1100C-hpijs.ppd.gz
@@ -263,6 +267,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_M4345_MFP-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_M5025_MFP-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_M5035_MFP-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_P2010-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_P2015-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_P3004-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-LaserJet_P3005-hpijs.ppd.gz
@@ -401,13 +406,20 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_8400-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_8700-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A310-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A320-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A430-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A440-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A510-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A520-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A610-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A620-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A710-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_A820-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C3100-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C4100-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C4200-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C5100-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C5200-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C6100-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_C7100-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP-PhotoSmart_D5060-hpijs.ppd.gz
@@ -431,7 +443,6 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Business_Inkjet_2600.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Business_Inkjet_2800.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Business_Inkjet_3000.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/HP_CM8050_CM8060_MFP.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_2550.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_2605.ppd.gz
@@ -448,6 +459,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_8500.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_8550.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_CM1015.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_CM4730_MFP.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_CP3505.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_Color_LaserJet_CP4005.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_LaserJet_1200.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/HP_LaserJet_1220.ppd.gz

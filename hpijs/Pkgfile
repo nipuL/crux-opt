@@ -4,19 +4,20 @@
 # Depends on:  ghostscript, foomatic-filters
 
 name=hpijs
-version=2.7.4
+version=2.7.7
 release=1
-source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-1.7.4a.tar.gz)
+source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
 build () {
-    cd hplip-1.7.4a/prnt/$name
+    cd hplip-$version
     
-    ./configure --prefix=/usr 
+    ./configure --prefix=/usr \
+                --with-hpppddir=/usr/share/cups/model/HP \
+                --enable-hpijs-only-build \
+                --disable-foomatic-xml-install \
+                --enable-foomatic-ppd-install
     make 
     make DESTDIR=$PKG install
-    mv $PKG/usr/share/{ppd/HP,cups/model}
-    
-    rm $PKG/usr/bin/foomatic-rip
-    rm $PKG/usr/share/cups/model/foomatic-ppds
-    rm -r $PKG/usr/{lib,share/{ppd,doc}}
+
+    rm -r $PKG/usr/{share/{hplip,doc},lib}
 }
