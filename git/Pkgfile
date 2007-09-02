@@ -5,7 +5,7 @@
 # Nice to have: tk
 
 name=git
-version=1.5.2.5
+version=1.5.3
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
@@ -24,6 +24,11 @@ build() {
 		install -d $PKG/usr/man/$i
 		install -m 644 $i/* $PKG/usr/man/$i;
 	done
+
+	install -d $PKG/usr/man/man3
+	mv $PKG/usr/share/man/man3/{Git,private-Error}.3pm \
+		$PKG/usr/man/man3/
+	rmdir $PKG/usr/share/{man/man3,man}
 
 	find $PKG -name perllocal.pod -delete
 	find $PKG -name .packlist -delete
