@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=mod_php
-version=5.2.3
+version=5.2.4
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2) 
 
