@@ -2,12 +2,13 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/fontforge
 -rwxr-xr-x	root/root	usr/bin/fontimage
+-rwxr-xr-x	root/root	usr/bin/fontlint
 -rwxr-xr-x	root/root	usr/bin/sfddiff
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libgdraw.la
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.1.1.0
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so.1 -> libgdraw.so.1.1.0
--rwxr-xr-x	root/root	usr/lib/libgdraw.so.1.1.0
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.0.2.0
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so.0 -> libgdraw.so.0.2.0
+-rwxr-xr-x	root/root	usr/lib/libgdraw.so.0.2.0
 -rwxr-xr-x	root/root	usr/lib/libgunicode.la
 lrwxrwxrwx	root/root	usr/lib/libgunicode.so -> libgunicode.so.3.0.0
 lrwxrwxrwx	root/root	usr/lib/libgunicode.so.3 -> libgunicode.so.3.0.0
@@ -18,6 +19,7 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/fontforge.1.gz
 -rw-r--r--	root/root	usr/man/man1/fontimage.1.gz
+-rw-r--r--	root/root	usr/man/man1/fontlint.1.gz
 -rw-r--r--	root/root	usr/man/man1/sfddiff.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/fontforge/
