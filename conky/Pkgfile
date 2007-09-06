@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.4.5
+version=1.4.7
 release=1
 source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
         
