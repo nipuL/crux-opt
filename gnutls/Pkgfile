@@ -4,7 +4,7 @@
 # Depends on: libgcrypt, opencdk
 
 name=gnutls
-version=1.6.2
+version=1.6.3
 release=1
 source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
 

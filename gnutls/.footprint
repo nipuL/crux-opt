@@ -21,24 +21,24 @@ drwxr-xr-x	root/root	usr/include/gnutls/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libgnutls-extra.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-extra.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.13.2.3
-lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.13 -> libgnutls-extra.so.13.2.3
--rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.13.2.3
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so -> libgnutls-extra.so.13.3.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls-extra.so.13 -> libgnutls-extra.so.13.3.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls-extra.so.13.3.0
 -rw-r--r--	root/root	usr/lib/libgnutls-openssl.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.13.2.3
-lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.13 -> libgnutls-openssl.so.13.2.3
--rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.13.2.3
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so -> libgnutls-openssl.so.13.3.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls-openssl.so.13 -> libgnutls-openssl.so.13.3.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls-openssl.so.13.3.0
 -rw-r--r--	root/root	usr/lib/libgnutls.a
 -rwxr-xr-x	root/root	usr/lib/libgnutls.la
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.13.2.3
-lrwxrwxrwx	root/root	usr/lib/libgnutls.so.13 -> libgnutls.so.13.2.3
--rwxr-xr-x	root/root	usr/lib/libgnutls.so.13.2.3
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so -> libgnutls.so.13.3.0
+lrwxrwxrwx	root/root	usr/lib/libgnutls.so.13 -> libgnutls.so.13.3.0
+-rwxr-xr-x	root/root	usr/lib/libgnutls.so.13.3.0
 -rw-r--r--	root/root	usr/lib/libgnutlsxx.a
 -rwxr-xr-x	root/root	usr/lib/libgnutlsxx.la
-lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.13.2.3
-lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so.13 -> libgnutlsxx.so.13.2.3
--rwxr-xr-x	root/root	usr/lib/libgnutlsxx.so.13.2.3
+lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so -> libgnutlsxx.so.13.3.0
+lrwxrwxrwx	root/root	usr/lib/libgnutlsxx.so.13 -> libgnutlsxx.so.13.3.0
+-rwxr-xr-x	root/root	usr/lib/libgnutlsxx.so.13.3.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gnutls-extra.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gnutls.pc
@@ -399,6 +399,8 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_dsa_raw.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_pk_rsa_raw.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_raw_dn.3.gz
+-rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_raw_issuer_dn.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_serial.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_signature_algorithm.3.gz
 -rw-r--r--	root/root	usr/man/man3/gnutls_x509_crt_get_subject_alt_name.3.gz
