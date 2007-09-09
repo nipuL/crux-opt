@@ -5,13 +5,13 @@
 
 name=wvdial
 version=1.60
-release=1
+release=2
 source=(http://alumnit.ca/download/$name-$version.tar.gz \
-        http://wvstreams.googlecode.com/files/wvstreams-4.4.tar.gz \
+        http://wvstreams.googlecode.com/files/wvstreams-4.4.1.tar.gz \
         $name-$version.patch)
 
 build() {
-    cd wvstreams-4.4
+    cd wvstreams-4.4.1
     ./configure --prefix=/usr \
                 --enable-verbose \
                 --without-{pam,tcl,qt}
@@ -20,6 +20,6 @@ build() {
 
     cd $SRC/$name-$version
     patch -p1 < $SRC/$name-$version.patch
-    make CXXOPTS="$CXXFLAGS" WVS=$SRC/wvstreams-4.4
+    make CXXOPTS="$CXXFLAGS" WVS=$SRC/wvstreams-4.4.1
     make DESTDIR=$PKG install
 }
