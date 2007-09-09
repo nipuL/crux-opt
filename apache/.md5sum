@@ -1,4 +1,4 @@
 e0514e5840c0e58cc4e7982a7e14fc4b  apache
-cdbbe8679f97b93b1d5f9767976b0cb8  apache-ssl_cert.patch
+75a919be7ff65f443287b094eaf6a162  apache-ssl_cert.patch
 bd931fee9d102c361e95ad318d199674  crux.layout
-536c86c7041515a25dd8bad3611da9a3  httpd-2.2.4.tar.bz2
+203bea91715064f0c787f6499d33a377  httpd-2.2.6.tar.bz2

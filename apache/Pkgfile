@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=apache
-version=2.2.4
+version=2.2.6
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         $name-ssl_cert.patch crux.layout apache)
@@ -35,5 +35,5 @@ build(){
    sed -ri '/^(User|Group)/s/daemon/www/' $PKG/etc/apache/httpd.conf
    sed -i '1s|local/||' $PKG/var/www/cgi-bin/printenv
    rm -R $PKG/{var/www/htdocs/*,usr/bin}
-   rm $PKG/var/www/{error,icons,icons/small}/README*
+   rm $PKG/var/www/{error,icons}/README*
 }
