@@ -1,0 +1,17 @@
+# Description: command line application for maintaining lists of tasks
+# URL: http://swapoff.org/DevTodo
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=devtodo
+version=0.1.20
+release=1
+source=(http://swapoff.org/files/$name/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+
+	./configure --prefix=/usr --mandir=/usr/man
+
+	make
+	make DESTDIR=$PKG install
+}
