@@ -2,7 +2,7 @@
 # URL: http://www.tux.org/~bagleyd/xlockmore.html 
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
-# Depends on: x11, fortune
+# Depends on: gtk, fortune
 
 name=xlockmore
 version=5.23
