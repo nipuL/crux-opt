@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=libgmp
-version=4.2.1
+version=4.2.2
 release=1
 source=(ftp://ftp.gnu.org/gnu/gmp/gmp-$version.tar.bz2)
 
