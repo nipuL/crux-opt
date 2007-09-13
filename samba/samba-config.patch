@@ -1,6 +1,6 @@
-diff -Nru samba-3.0.25c.orig/examples/smb.conf.default samba-3.0.25c/examples/smb.conf.default
---- samba-3.0.25c.orig/examples/smb.conf.default	2007-08-21 10:15:23.000000000 +0200
-+++ samba-3.0.25c/examples/smb.conf.default	2007-08-21 10:17:38.000000000 +0200
+diff -Nru samba-3.0.26a.orig/examples/smb.conf.default samba-3.0.26a/examples/smb.conf.default
+--- samba-3.0.26a.orig/examples/smb.conf.default	2007-09-12 09:39:16.000000000 +0200
++++ samba-3.0.26a/examples/smb.conf.default	2007-09-12 09:39:40.000000000 +0200
 @@ -63,7 +63,7 @@
  
  # this tells Samba to use a separate log file for each machine
