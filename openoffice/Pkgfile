@@ -2,7 +2,7 @@
 # URL: http://www.openoffice.org
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: x11, rpm2targz
+# Depends on: mesa3d, xorg-libxaw, xorg-libxcursor, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libxrandr, rpm2targz
 
 name=openoffice
 version=2.2.1
