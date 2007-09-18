@@ -3,6 +3,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pdffonts
 -rwxr-xr-x	root/root	usr/bin/pdfimages
 -rwxr-xr-x	root/root	usr/bin/pdfinfo
+-rwxr-xr-x	root/root	usr/bin/pdftoabw
 -rwxr-xr-x	root/root	usr/bin/pdftohtml
 -rwxr-xr-x	root/root	usr/bin/pdftoppm
 -rwxr-xr-x	root/root	usr/bin/pdftops
@@ -15,19 +16,20 @@ drwxr-xr-x	root/root	usr/include/poppler/glib/
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-document.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-enums.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-features.h
+-rw-r--r--	root/root	usr/include/poppler/glib/poppler-form-field.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler-page.h
 -rw-r--r--	root/root	usr/include/poppler/glib/poppler.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libpoppler-glib.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler-glib.la
-lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so -> libpoppler-glib.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so.1 -> libpoppler-glib.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler-glib.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so -> libpoppler-glib.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler-glib.so.2 -> libpoppler-glib.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler-glib.so.2.0.0
 -rw-r--r--	root/root	usr/lib/libpoppler.a
 -rwxr-xr-x	root/root	usr/lib/libpoppler.la
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.1.0.0
-lrwxrwxrwx	root/root	usr/lib/libpoppler.so.1 -> libpoppler.so.1.0.0
--rwxr-xr-x	root/root	usr/lib/libpoppler.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so -> libpoppler.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib/libpoppler.so.2 -> libpoppler.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib/libpoppler.so.2.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-cairo.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/poppler-glib.pc
