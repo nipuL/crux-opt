@@ -1,4 +1,4 @@
 eb8046ca31ce7a56b1e36816e9537545  gdk-pixbuf.loaders
-e9c280afec29b11772af5a7c807abf41  gtk+-2.12.0.tar.bz2
+018d7dd0fa7de01cfdb77c7c55e7ba26  gtk+-2.10.14.tar.bz2
 b203b162788dd918a922be347ca1bf5d  gtk.immodules
-bdf79fd8a435bad46d51b407d0e961b4  gtkiconcache.patch
+eb1659d096092f85f45fc82878673208  http-authstring.patch

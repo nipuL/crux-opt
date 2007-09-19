@@ -4,16 +4,15 @@
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.12.0
+version=2.10.14
 release=1
-source=(ftp://ftp.gtk.org/pub/gtk/2.12/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules gtkiconcache.patch)
+source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
+	gdk-pixbuf.loaders gtk.immodules http-authstring.patch)
 
 build () {
 	cd gtk+-$version
 
-	# fix for icon cache validation
-	patch -p1 -i $SRC/gtkiconcache.patch
+	patch -p1 -i $SRC/http-authstring.patch
 
 	./configure --prefix=/usr \
 		--mandir=/usr/man
