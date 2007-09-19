@@ -83,13 +83,6 @@ drwxr-xr-x	root/root	usr/include/firefox/browsercomps/
 -rw-r--r--	root/root	usr/include/firefox/browsercomps/nsIBrowserHandler.h
 drwxr-xr-x	root/root	usr/include/firefox/browsersearch/
 -rw-r--r--	root/root	usr/include/firefox/browsersearch/nsIBrowserSearchService.h
-drwxr-xr-x	root/root	usr/include/firefox/cairo/
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo-features.h
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo-ft.h
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo-rename.h
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo-xlib-xrender.h
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo-xlib.h
--rw-r--r--	root/root	usr/include/firefox/cairo/cairo.h
 drwxr-xr-x	root/root	usr/include/firefox/caps/
 -rw-r--r--	root/root	usr/include/firefox/caps/nsICryptoHash.h
 -rw-r--r--	root/root	usr/include/firefox/caps/nsIPrincipal.h
@@ -1040,8 +1033,6 @@ drwxr-xr-x	root/root	usr/include/firefox/libbz2/
 -rw-r--r--	root/root	usr/include/firefox/libbz2/bzlib.h
 drwxr-xr-x	root/root	usr/include/firefox/libmar/
 -rw-r--r--	root/root	usr/include/firefox/libmar/mar.h
-drwxr-xr-x	root/root	usr/include/firefox/libpixman/
--rw-r--r--	root/root	usr/include/firefox/libpixman/pixman.h
 drwxr-xr-x	root/root	usr/include/firefox/libreg/
 -rw-r--r--	root/root	usr/include/firefox/libreg/NSReg.h
 -rw-r--r--	root/root	usr/include/firefox/libreg/VerReg.h
