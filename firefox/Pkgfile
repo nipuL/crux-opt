@@ -4,9 +4,10 @@
 # Depends on: libidl, gtk, libpng, libjpeg, zlib
 
 name=firefox
-version=2.0.0.6
+version=2.0.0.7
 release=1
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
+	$name-2.0-add-ldflags.patch $name-nopangoxft.patch \
 	http://crux.nu/files/$name/$name.desktop \
 	http://crux.nu/files/$name/$name.png \
 	mozconfig)
@@ -18,6 +19,8 @@ build() {
 	export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
 	cd mozilla
+	patch -p0 -i $SRC/$name-2.0-add-ldflags.patch
+	patch -p1 -i $SRC/$name-nopangoxft.patch
 	sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
 	./configure
 	make
