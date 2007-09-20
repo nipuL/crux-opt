@@ -329,6 +329,7 @@ drwxr-xr-x	root/root	usr/share/git-gui/lib/
 -rw-r--r--	root/root	usr/share/git-gui/lib/branch_rename.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/browser.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/checkout_op.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/choose_font.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/choose_rev.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/class.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/commit.tcl
