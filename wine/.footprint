@@ -99,6 +99,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/axextend.idl
 -rw-r--r--	root/root	usr/include/wine/windows/basetsd.h
 -rw-r--r--	root/root	usr/include/wine/windows/basetyps.h
+-rw-r--r--	root/root	usr/include/wine/windows/bcrypt.h
 -rw-r--r--	root/root	usr/include/wine/windows/cderr.h
 -rw-r--r--	root/root	usr/include/wine/windows/cfgmgr32.h
 -rw-r--r--	root/root	usr/include/wine/windows/cguid.h
@@ -200,6 +201,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/dxgitype.h
 -rw-r--r--	root/root	usr/include/wine/windows/dxgitype.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dyngraph.idl
+-rw-r--r--	root/root	usr/include/wine/windows/errorrep.h
 -rw-r--r--	root/root	usr/include/wine/windows/errors.h
 -rw-r--r--	root/root	usr/include/wine/windows/evcode.h
 -rw-r--r--	root/root	usr/include/wine/windows/evntrace.h
@@ -227,6 +229,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/htiframe.h
 -rw-r--r--	root/root	usr/include/wine/windows/htiframe.idl
 -rw-r--r--	root/root	usr/include/wine/windows/htmlhelp.h
+-rw-r--r--	root/root	usr/include/wine/windows/i_cryptasn1tls.h
 -rw-r--r--	root/root	usr/include/wine/windows/iads.h
 -rw-r--r--	root/root	usr/include/wine/windows/iads.idl
 -rw-r--r--	root/root	usr/include/wine/windows/icftypes.h
@@ -239,6 +242,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/indexsrv.h
 -rw-r--r--	root/root	usr/include/wine/windows/indexsrv.idl
 -rw-r--r--	root/root	usr/include/wine/windows/initguid.h
+-rw-r--r--	root/root	usr/include/wine/windows/intshcut.h
 -rw-r--r--	root/root	usr/include/wine/windows/ipexport.h
 -rw-r--r--	root/root	usr/include/wine/windows/iphlpapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/ipifcons.h
@@ -448,6 +452,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/windowsx.h
 -rw-r--r--	root/root	usr/include/wine/windows/winerror.h
 -rw-r--r--	root/root	usr/include/wine/windows/wingdi.h
+-rw-r--r--	root/root	usr/include/wine/windows/winhttp.h
 -rw-r--r--	root/root	usr/include/wine/windows/wininet.h
 -rw-r--r--	root/root	usr/include/wine/windows/winineti.h
 -rw-r--r--	root/root	usr/include/wine/windows/winioctl.h
@@ -799,6 +804,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/olepro32.dll.so
 -rw-r--r--	root/root	usr/lib/wine/olesvr.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/olesvr32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/olethk32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/oleview.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/opengl32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pdh.dll.so
