@@ -4,9 +4,9 @@
 # Packager: Han Boetes, han at mijncomputer dot nl
 
 name=libpcre
-version=7.3
+version=7.4
 release=1
-source=(http://dl.sourceforge.net/pcre/pcre-$version.tar.bz2)
+source=(ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$version.tar.bz2)
 
 build() {
     cd pcre-$version

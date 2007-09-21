@@ -69,3 +69,4 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/pcreprecompile.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcresample.3.gz
 -rw-r--r--	root/root	usr/man/man3/pcrestack.3.gz
+-rw-r--r--	root/root	usr/man/man3/pcresyntax.3.gz
