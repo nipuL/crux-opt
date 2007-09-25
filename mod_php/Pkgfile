@@ -21,7 +21,7 @@ build () {
                 --without-pear \
                 --disable-pdo
     make
-    make INSTALL_ROOT=$PKG install
+    make -j1 INSTALL_ROOT=$PKG install
     rm -r $PKG/etc/apache
     sed -i "/^extension_dir/s|\./|/usr/lib/php/extensions|" php.ini-dist
     install -D -m 644 php.ini-dist $PKG/etc/php.ini
