@@ -5,9 +5,9 @@
 # Group: gnome
 
 name=libglade
-version=2.6.0
+version=2.6.2
 release=1
-source=(http://ftp.gnome.org/pub/gnome/platform/2.14/2.14.3/sources/$name-$version.tar.bz2)
+source=(http://download.gnome.org/sources/$name/2.6/$name-$version.tar.bz2)
 
 build() {
 	install -d -m 0755 $PKG/etc/xml/dtd/$name/2.0
