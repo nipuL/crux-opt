@@ -2,12 +2,15 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gdk-pixbuf-csource
 -rwxr-xr-x	root/root	usr/bin/gdk-pixbuf-query-loaders
+-rwxr-xr-x	root/root	usr/bin/gtk-builder-convert
 -rwxr-xr-x	root/root	usr/bin/gtk-query-immodules-2.0
+-rwxr-xr-x	root/root	usr/bin/gtk-register
 -rwxr-xr-x	root/root	usr/bin/gtk-update-icon-cache
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/gtk-2.0/
 -rw-r--r--	root/root	usr/etc/gtk-2.0/gdk-pixbuf.loaders
 -rw-r--r--	root/root	usr/etc/gtk-2.0/gtk.immodules
+-rw-r--r--	root/root	usr/etc/gtk-2.0/im-multipress.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/gtk-2.0/
 drwxr-xr-x	root/root	usr/include/gtk-2.0/gdk-pixbuf-xlib/
@@ -76,6 +79,8 @@ drwxr-xr-x	root/root	usr/include/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbin.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbindings.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbox.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbuildable.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbuilder.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkbutton.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkcalendar.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkcelleditable.h
@@ -185,6 +190,7 @@ drwxr-xr-x	root/root	usr/include/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkradiotoolbutton.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrange.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrc.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrecentaction.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrecentchooser.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrecentchooserdialog.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrecentchoosermenu.h
@@ -193,6 +199,7 @@ drwxr-xr-x	root/root	usr/include/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkrecentmanager.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkruler.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkscale.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkscalebutton.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkscrollbar.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkscrolledwindow.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkselection.h
@@ -228,6 +235,7 @@ drwxr-xr-x	root/root	usr/include/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktoolbar.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktoolbutton.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktoolitem.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktooltip.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktooltips.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktree.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtktreednd.h
@@ -247,6 +255,7 @@ drwxr-xr-x	root/root	usr/include/gtk-2.0/gtk/
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkvbox.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkversion.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkviewport.h
+-rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkvolumebutton.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkvpaned.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkvruler.h
 -rw-r--r--	root/root	usr/include/gtk-2.0/gtk/gtkvscale.h
@@ -277,6 +286,8 @@ drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-inuktitut.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-ipa.la
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-ipa.so
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-multipress.la
+-rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-multipress.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-thai.la
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-thai.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-ti-er.la
@@ -317,8 +328,6 @@ drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/loaders/
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-xpm.la
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-xpm.so
 drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/
--rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-cups.la
--rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-cups.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-file.la
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-file.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-lpr.la
@@ -326,21 +335,21 @@ drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/
 drwxr-xr-x	root/root	usr/lib/gtk-2.0/include/
 -rw-r--r--	root/root	usr/lib/gtk-2.0/include/gdkconfig.h
 -rw-r--r--	root/root	usr/lib/libgdk-x11-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgdk-x11-2.0.so -> libgdk-x11-2.0.so.0.1000.14
-lrwxrwxrwx	root/root	usr/lib/libgdk-x11-2.0.so.0 -> libgdk-x11-2.0.so.0.1000.14
--rwxr-xr-x	root/root	usr/lib/libgdk-x11-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgdk-x11-2.0.so -> libgdk-x11-2.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgdk-x11-2.0.so.0 -> libgdk-x11-2.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgdk-x11-2.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf-2.0.so -> libgdk_pixbuf-2.0.so.0.1000.14
-lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf-2.0.so.0 -> libgdk_pixbuf-2.0.so.0.1000.14
--rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf-2.0.so -> libgdk_pixbuf-2.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf-2.0.so.0 -> libgdk_pixbuf-2.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf-2.0.so.0.1200.0
 -rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so -> libgdk_pixbuf_xlib-2.0.so.0.1000.14
-lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so.0 -> libgdk_pixbuf_xlib-2.0.so.0.1000.14
--rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so -> libgdk_pixbuf_xlib-2.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so.0 -> libgdk_pixbuf_xlib-2.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgdk_pixbuf_xlib-2.0.so.0.1200.0
 -rw-r--r--	root/root	usr/lib/libgtk-x11-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgtk-x11-2.0.so -> libgtk-x11-2.0.so.0.1000.14
-lrwxrwxrwx	root/root	usr/lib/libgtk-x11-2.0.so.0 -> libgtk-x11-2.0.so.0.1000.14
--rwxr-xr-x	root/root	usr/lib/libgtk-x11-2.0.so.0.1000.14
+lrwxrwxrwx	root/root	usr/lib/libgtk-x11-2.0.so -> libgtk-x11-2.0.so.0.1200.0
+lrwxrwxrwx	root/root	usr/lib/libgtk-x11-2.0.so.0 -> libgtk-x11-2.0.so.0.1200.0
+-rwxr-xr-x	root/root	usr/lib/libgtk-x11-2.0.so.0.1200.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gdk-pixbuf-2.0.pc
@@ -353,6 +362,7 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gdk-pixbuf-csource.1.gz
 -rw-r--r--	root/root	usr/man/man1/gdk-pixbuf-query-loaders.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtk-builder-convert.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-query-immodules-2.0.1.gz
 -rw-r--r--	root/root	usr/man/man1/gtk-update-icon-cache.1.gz
 drwxr-xr-x	root/root	usr/share/

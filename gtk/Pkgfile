@@ -4,15 +4,16 @@
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.10.14
-release=2
-source=(ftp://ftp.gtk.org/pub/gtk/v2.10/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules http-authstring.patch)
+version=2.12.0
+release=1
+source=(ftp://ftp.gtk.org/pub/gtk/2.12/${name}+-$version.tar.bz2 \
+	gdk-pixbuf.loaders gtk.immodules gtkiconcache.patch \
+	gtk-register.sh)
 
 build () {
 	cd gtk+-$version
 
-	patch -p1 -i $SRC/http-authstring.patch
+	patch -p1 -i $SRC/gtkiconcache.patch
 
 	./configure --prefix=/usr \
 		--mandir=/usr/man
@@ -22,4 +23,6 @@ build () {
 	install -m 644 $SRC/{gtk.immodules,gdk-pixbuf.loaders} \
 		$PKG/usr/etc/gtk-2.0/
 	rm -r $PKG/usr/share/{locale,gtk-doc,gtk-2.0} $PKG/usr/bin/gtk-demo
+
+	install -m 0755 $SRC/gtk-register.sh $PKG/usr/bin/gtk-register
 }
