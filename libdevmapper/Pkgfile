@@ -5,7 +5,7 @@
 
 name=libdevmapper
 version=1.02.22
-release=2
+release=3
 source=(ftp://sources.redhat.com/pub/dm/device-mapper.$version.tgz)
 
 build() {
@@ -15,6 +15,7 @@ build() {
 	--prefix=/usr \
 	--libdir=/lib \
 	--mandir=/usr/man \
+	--sbindir=/sbin \
 	--enable-pkgconfig \
 	--disable-nls \
 	--with-optimisation="$CFLAGS"
@@ -22,7 +23,4 @@ build() {
     make DESTDIR=$PKG install
 
     find $PKG -type f -exec chmod u+w {} \;
-
-    ln -s /lib/libdevmapper.so.1.02 $PKG/usr/lib/libdevmapper.so.1.02
-    ln -s /lib/libdevmapper.so.1.02 $PKG/usr/lib/libdevmapper.so
 }
