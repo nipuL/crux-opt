@@ -5,6 +5,10 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/fontlint
 -rwxr-xr-x	root/root	usr/bin/sfddiff
 drwxr-xr-x	root/root	usr/lib/
+-rwxr-xr-x	root/root	usr/lib/libfontforge.la
+lrwxrwxrwx	root/root	usr/lib/libfontforge.so -> libfontforge.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libfontforge.so.1 -> libfontforge.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libfontforge.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgdraw.la
 lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.2.0.3
 lrwxrwxrwx	root/root	usr/lib/libgdraw.so.2 -> libgdraw.so.2.0.3
