@@ -34,6 +34,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/irssi/
 drwxr-xr-x	root/root	usr/share/irssi/help/
+-rw-r--r--	root/root	usr/share/irssi/help/accept
 -rw-r--r--	root/root	usr/share/irssi/help/action
 -rw-r--r--	root/root	usr/share/irssi/help/admin
 -rw-r--r--	root/root	usr/share/irssi/help/alias

@@ -5,9 +5,9 @@
 # Depends on: glib
 
 name=irssi
-version=0.8.11
+version=0.8.12
 release=1
-source=(http://www.irssi.org/files/${name}-${version}.tar.bz2)
+source=(http://www.irssi.org/files/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
@@ -20,9 +20,10 @@ build () {
     make
     make DESTDIR=$PKG install
 
-    find $PKG -name '*.bs' -delete
-    find $PKG -name perllocal.pod -delete
-    find $PKG -name .packlist -delete
-
+    find $PKG \
+	-name .packlist -or \
+	-name perllocal.pod -or \
+	-name '*.bs' -or \
+	-name autosplit.ix | xargs rm
     rm -rf $PKG/usr/{include,share/doc}
 }
