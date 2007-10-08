@@ -10,27 +10,20 @@
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0rc1
-release=3
+version=1.0rc2
+release=1
 source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
-	http://www1.mplayerhq.hu/MPlayer/patches/asmrules_fix_20061231.diff \
-	http://www1.mplayerhq.hu/MPlayer/patches/cddb_fix_20070605.diff \
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
 
 build() {
 	cd MPlayer-$version
 
-	# fix for asmrp buffer overflow
-	patch -p0 -i $SRC/asmrules_fix_20061231.diff
-
-	# fix for cddb stack overflow
-	patch -p0 -i $SRC/cddb_fix_20070605.diff
-
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
 	./configure --prefix=/usr \
-		--with-codecsdir=/usr/lib/win32
+		--mandir=/usr/man \
+		--win32codecsdir=/usr/lib/win32
 
 	make
 	make DESTDIR=$PKG install
@@ -38,6 +31,7 @@ build() {
 	(cd $PKG/usr/man/man1; rm mencoder.1; ln -s mplayer.1.gz mencoder.1.gz)
 
 	# fonts
+	mkdir -p $PKG/usr/share/mplayer/font
 	cp -a $SRC/font-arial-iso-8859-1/font-arial-??-iso-8859-1 \
 		$PKG/usr/share/mplayer/font
 	(cd $PKG/usr/share/mplayer/font
