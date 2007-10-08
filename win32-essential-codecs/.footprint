@@ -16,15 +16,12 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/acelpdec.ax
 -rw-r--r--	root/root	usr/lib/win32/alf2cd.acm
 -rw-r--r--	root/root	usr/lib/win32/aslcodec_dshow.dll
--rw-r--r--	root/root	usr/lib/win32/atrac3.acm
--rw-r--r--	root/root	usr/lib/win32/atrc.so.6.0
 -rw-r--r--	root/root	usr/lib/win32/clrviddd.dll
 -rw-r--r--	root/root	usr/lib/win32/cook.so
 -rw-r--r--	root/root	usr/lib/win32/drvc.so
 -rw-r--r--	root/root	usr/lib/win32/dspr.so.6.0
 -rw-r--r--	root/root	usr/lib/win32/iac25_32.ax
 -rw-r--r--	root/root	usr/lib/win32/icmw_32.dll
--rw-r--r--	root/root	usr/lib/win32/imc32.acm
 -rw-r--r--	root/root	usr/lib/win32/ir41_32.dll
 -rw-r--r--	root/root	usr/lib/win32/ir50_32.dll
 -rw-r--r--	root/root	usr/lib/win32/ivvideo.dll
@@ -66,3 +63,4 @@ drwxr-xr-x	root/root	usr/lib/win32/
 -rw-r--r--	root/root	usr/lib/win32/wmvdmod.dll
 -rw-r--r--	root/root	usr/lib/win32/wnvwinx.dll
 -rw-r--r--	root/root	usr/lib/win32/wvc1dmod.dll
+-rw-r--r--	root/root	usr/lib/win32/xanlib.dll
