@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=ncftp
-version=3.2.0
+version=3.2.1
 release=1
 source=(ftp://ftp.ncftp.com/$name/$name-$version-src.tar.bz2)
 
