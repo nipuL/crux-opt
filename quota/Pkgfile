@@ -1,0 +1,27 @@
+# Description: Tools for the Linux quota system
+# URL:         http://sourceforge.net/projects/linuxquota/
+# Packager:    Mikhail Kolesnik, mike at openbunker dot org
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+
+name=quota
+version=3.15
+release=1
+source=(http://dl.sourceforge.net/sourceforge/linuxquota/$name-$version.tar.gz \
+        warnquota.conf ${name}_tcp_wrappers.patch)
+
+build(){
+    cd $name-tools
+    patch -p1 -i $SRC/quota_tcp_wrappers.patch
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc/quota \
+                --enable-nls=no \
+                --enable-altformat=yes \
+                --enable-rpc=yes \
+                --enable-nis=no \
+                --enable-bsd_behaviour=yes \
+                --enable-rootsbin=yes
+    make
+    make install ROOTDIR=$PKG
+    install -D -m 644 $SRC/warnquota.conf $PKG/etc/quota/warnquota.conf
+}

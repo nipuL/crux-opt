@@ -1,0 +1,13 @@
+diff -pruN quota-tools.orig/rquota_svc.c quota-tools/rquota_svc.c
+--- quota-tools.orig/rquota_svc.c	2005-06-01 10:21:30.000000000 +0300
++++ quota-tools/rquota_svc.c	2006-08-06 22:43:48.000000000 +0300
+@@ -36,6 +36,9 @@
+ #ifdef HOSTS_ACCESS
+ #include <tcpd.h>
+ #include <netdb.h>
++
++int allow_severity, deny_severity;
++
+ #endif
+ 
+ #ifdef __STDC__
