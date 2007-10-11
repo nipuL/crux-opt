@@ -1,0 +1,80 @@
+diff -Nru fuse-2.7.0.orig/kernel/dev.c fuse-2.7.0/kernel/dev.c
+--- fuse-2.7.0.orig/kernel/dev.c	2007-10-11 10:23:40.000000000 +0200
++++ fuse-2.7.0/kernel/dev.c	2007-10-11 10:24:11.000000000 +0200
+@@ -1093,9 +1093,15 @@
+ int __init fuse_dev_init(void)
+ {
+ 	int err = -ENOMEM;
++#ifdef KERNEL_2_6_23_PLUS
++	fuse_req_cachep = kmem_cache_create("fuse_request",
++					    sizeof(struct fuse_req),
++					    0, 0, NULL);
++#else
+ 	fuse_req_cachep = kmem_cache_create("fuse_request",
+ 					    sizeof(struct fuse_req),
+ 					    0, 0, NULL, NULL);
++#endif
+ 	if (!fuse_req_cachep)
+ 		goto out;
+ 
+diff -Nru fuse-2.7.0.orig/kernel/file.c fuse-2.7.0/kernel/file.c
+--- fuse-2.7.0.orig/kernel/file.c	2007-10-11 10:23:40.000000000 +0200
++++ fuse-2.7.0/kernel/file.c	2007-10-11 10:24:21.000000000 +0200
+@@ -865,7 +865,11 @@
+ 	.release	= fuse_release,
+ 	.fsync		= fuse_fsync,
+ 	.lock		= fuse_file_lock,
++#ifdef KERNEL_2_6_23_PLUS
++	.splice_read	= generic_file_splice_read,
++#else
+ 	.sendfile	= generic_file_sendfile,
++#endif
+ };
+ 
+ static struct file_operations fuse_direct_io_file_operations = {
+diff -Nru fuse-2.7.0.orig/kernel/fuse_i.h fuse-2.7.0/kernel/fuse_i.h
+--- fuse-2.7.0.orig/kernel/fuse_i.h	2007-10-11 10:23:40.000000000 +0200
++++ fuse-2.7.0/kernel/fuse_i.h	2007-10-11 10:24:41.000000000 +0200
+@@ -45,6 +45,9 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+ #  define KERNEL_2_6_22_PLUS
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,23)
++#  define KERNEL_2_6_23_PLUS
++#endif
+ 
+ #if defined(__arm__) && LINUX_VERSION_CODE < KERNEL_VERSION(2,6,20)
+ #define DCACHE_BUG
+diff -Nru fuse-2.7.0.orig/kernel/inode.c fuse-2.7.0/kernel/inode.c
+--- fuse-2.7.0.orig/kernel/inode.c	2007-10-11 10:23:40.000000000 +0200
++++ fuse-2.7.0/kernel/inode.c	2007-10-11 10:24:54.000000000 +0200
+@@ -861,10 +861,18 @@
+ 	if (err)
+ 		goto out_unreg;
+ 
++#ifdef KERNEL_2_6_23_PLUS
++	fuse_inode_cachep = kmem_cache_create("fuse_inode",
++					      sizeof(struct fuse_inode),
++					      0, SLAB_HWCACHE_ALIGN,
++					      fuse_inode_init_once);
++#else
+ 	fuse_inode_cachep = kmem_cache_create("fuse_inode",
+ 					      sizeof(struct fuse_inode),
+ 					      0, SLAB_HWCACHE_ALIGN,
+ 					      fuse_inode_init_once, NULL);
++#endif
++
+ 	err = -ENOMEM;
+ 	if (!fuse_inode_cachep)
+ 		goto out_unreg2;
+diff -Nru fuse-2.7.0.orig/lib/fuse.c fuse-2.7.0/lib/fuse.c
+--- fuse-2.7.0.orig/lib/fuse.c	2007-10-11 10:23:40.000000000 +0200
++++ fuse-2.7.0/lib/fuse.c	2007-10-11 10:25:13.000000000 +0200
+@@ -1425,6 +1425,7 @@
+ 
+ int fuse_fs_chmod(struct fuse_fs *fs, const char *path, mode_t mode)
+ {
++    fuse_get_context()->private_data = fs->user_data;
+     if (fs->op.chmod)
+         return fs->op.chmod(path, mode);
+     else
