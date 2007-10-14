@@ -131,7 +131,9 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3drmdef.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dtypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dvec.inl
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx8.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx8core.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx8math.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbghelp.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbinit.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbprop.idl
@@ -768,6 +770,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/msisys.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/msnet32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msrle32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msvcirt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcrt.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcrt20.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msvcrt40.dll.so
@@ -814,6 +817,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/psapi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/pstorec.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/qcap.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/qmgr.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/quartz.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/query.dll.so
 -rw-r--r--	root/root	usr/lib/wine/rasapi16.dll16
@@ -989,6 +993,8 @@ drwxr-xr-x	root/root	usr/share/wine/fonts/
 -rw-r--r--	root/root	usr/share/wine/fonts/sserifer.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/sserifet.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/svgasys.fon
+-rw-r--r--	root/root	usr/share/wine/fonts/tahoma.ttf
+-rw-r--r--	root/root	usr/share/wine/fonts/tahomabd.ttf
 -rw-r--r--	root/root	usr/share/wine/fonts/vgas1255.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgas1256.fon
 -rw-r--r--	root/root	usr/share/wine/fonts/vgas1257.fon
