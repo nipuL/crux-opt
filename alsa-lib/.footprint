@@ -83,6 +83,7 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/
 -rw-r--r--	root/root	usr/share/alsa/cards/CMI8338.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/CMI8738-MC6.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/CMI8738-MC8.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/CMI8788.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/CS46xx.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/EMU10K1.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/EMU10K1X.conf
@@ -102,6 +103,7 @@ drwxr-xr-x	root/root	usr/share/alsa/cards/
 -rw-r--r--	root/root	usr/share/alsa/cards/PC-Speaker.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/PMac.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/PMacToonie.conf
+-rw-r--r--	root/root	usr/share/alsa/cards/PS3.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/RME9636.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/RME9652.conf
 -rw-r--r--	root/root	usr/share/alsa/cards/SI7018.conf
