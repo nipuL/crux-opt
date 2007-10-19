@@ -1,5 +1,5 @@
 # Description: Small and fast music player using the ncurses library
-# URL: http://onion.dynserv.net/~timo/cmus.html
+# URL: http://cmus.sf.net/
 # Maintainer: Antti Nykänen, aon at iki dot fi
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: 
@@ -8,7 +8,7 @@
 name=cmus
 version=2.2.0
 release=1
-source=(http://onion.dynserv.net/~timo/files/$name-$version.tar.bz2)
+source=(http://mirror.greaterscope.net/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
