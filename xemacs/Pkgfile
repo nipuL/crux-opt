@@ -5,7 +5,7 @@
 # Depends on: xorg, libtiff, libpng, ncurses, lesstif 
 
 name=xemacs
-version=21.4.20
+version=21.4.21
 release=1
 source=(http://ftp.xemacs.org/pub/xemacs/xemacs-21.4/$name-$version.tar.gz
 	$name-$version-no_info.diff)
