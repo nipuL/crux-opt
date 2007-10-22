@@ -4,10 +4,10 @@
 # Depends on: libidl, gtk, libpng, libjpeg, zlib
 
 name=firefox
-version=2.0.0.7
+version=2.0.0.8
 release=1
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
-	$name-2.0-add-ldflags.patch $name-nopangoxft.patch \
+	$name-2.0-add-ldflags.patch \
 	http://crux.nu/files/$name/$name.desktop \
 	http://crux.nu/files/$name/$name.png \
 	mozconfig)
@@ -20,7 +20,6 @@ build() {
 
 	cd mozilla
 	patch -p0 -i $SRC/$name-2.0-add-ldflags.patch
-	patch -p1 -i $SRC/$name-nopangoxft.patch
 	sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
 	./configure
 	make
@@ -52,4 +51,12 @@ build() {
 	install -D -m 0644 $SRC/$name.desktop \
 		$PKG/usr/share/applications/$name.desktop
 	install -D -m 0644 $SRC/$name.png $PKG/usr/share/pixmaps/$name.png
+
+	# fix file permissions since version 2.0.0.8
+	find $PKG/usr/include/firefox -type f -exec chmod g+r,a+r {} \;
+	find $PKG/usr/include/firefox -type f -perm -u=x -exec chmod g+x,a+x {} \; # no code in headerfiles!
+	find $PKG/usr/share/idl -type f -name '*.idl' -exec chmod g+r,a+r {} \;
+	find $PKG/usr/share/idl -type f -name '*.idl' -perm -u=x -exec chmod g+x,a+x {} \;
+	find $PKG/usr/lib/firefox -type f -exec chmod g+r,a+r {} \;
+	chmod 755 $PKG/usr/lib/firefox/run-mozilla.sh
 }

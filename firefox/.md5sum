@@ -1,6 +1,5 @@
 25f355113cdee6800380c6e1a4cd38f0  firefox-2.0-add-ldflags.patch
-ec14cf833d75d07190c4095345d688bd  firefox-2.0.0.7-source.tar.bz2
-f975d9aa6ec232da0dfa8f27398d2af3  firefox-nopangoxft.patch
+f4ffac67751bc3e556c4926da2e0b65a  firefox-2.0.0.8-source.tar.bz2
 0eceebd5fbc394248c8c94d66fc95d66  firefox.desktop
 19ec3915f76e7eb820ad2c59730ee2be  firefox.png
 95de7479767fc69e62ad7958d620d955  mozconfig
