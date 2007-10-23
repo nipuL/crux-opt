@@ -5,7 +5,7 @@
 
 name=xaw3d
 version=1.5
-release=4
+release=5
 source=(ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/Xaw3d-$version.tar.gz \
         $name-$version.patch)
 
@@ -15,6 +15,6 @@ build () {
     mkdir X11
     ln -s .. X11/Xaw3d
     xmkmf
-    make -j1
+    make -j1 XPLIB=''
     make DESTDIR=$PKG install
 }
