@@ -1,6 +1,5 @@
 eb8046ca31ce7a56b1e36816e9537545  gdk-pixbuf.loaders
 b50c279539fca50a496d7feafae350d4  gdkwindow.patch
-e9c280afec29b11772af5a7c807abf41  gtk+-2.12.0.tar.bz2
+c46f34addc2fe3ea6756055d59fb8856  gtk+-2.12.1.tar.bz2
 3c88561a89724dfe9d807077ba0603c8  gtk-register.sh
 b203b162788dd918a922be347ca1bf5d  gtk.immodules
-bdf79fd8a435bad46d51b407d0e961b4  gtkiconcache.patch

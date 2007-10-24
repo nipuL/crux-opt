@@ -1,6 +1,6 @@
 # GdkPixbuf Image Loader Modules file
 # Automatically generated file, do not edit
-# Created by gdk-pixbuf-query-loaders from gtk+-2.12.0
+# Created by gdk-pixbuf-query-loaders from gtk+-2.12.1
 #
 # LoaderDir = /usr/lib/gtk-2.0/2.10.0/loaders
 #
@@ -8,7 +8,10 @@
 "wbmp" 4 "gtk20" "The WBMP image format"
 "image/vnd.wap.wbmp" ""
 "wbmp" ""
-" " "z" 1
+"  " "zz" 1
+" `" "z " 1
+" @" "z " 1
+"  " "z " 1
 
 "/usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-jpeg.so"
 "jpeg" 5 "gtk20" "The JPEG image format"
