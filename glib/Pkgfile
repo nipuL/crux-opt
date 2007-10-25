@@ -3,7 +3,7 @@
 # Maintainer: Matt Housh, jaeger at crux dot nu
 
 name=glib
-version=2.14.1
+version=2.14.2
 release=1
 source=(ftp://ftp.gtk.org/pub/$name/2.14/$name-$version.tar.bz2)
 

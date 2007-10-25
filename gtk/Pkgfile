@@ -1,19 +1,18 @@
 # Description: A multi-platform toolkit for creating graphical user interfaces
 # URL: http://www.gtk.org/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.12.0
-release=2
+version=2.12.1
+release=1
 source=(ftp://ftp.gtk.org/pub/gtk/2.12/${name}+-$version.tar.bz2 \
-	gdk-pixbuf.loaders gtk.immodules gtkiconcache.patch gdkwindow.patch \
+	gdk-pixbuf.loaders gtk.immodules gdkwindow.patch \
 	gtk-register.sh)
 
 build () {
 	cd gtk+-$version
 
-	patch -p1 -i $SRC/gtkiconcache.patch
 	patch -p0 -i $SRC/gdkwindow.patch
 
 	./configure --prefix=/usr \
