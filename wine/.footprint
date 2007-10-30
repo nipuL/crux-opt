@@ -134,6 +134,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx8.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx8core.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3dx8math.h
+-rw-r--r--	root/root	usr/include/wine/windows/d3dx8math.inl
 -rw-r--r--	root/root	usr/include/wine/windows/dbghelp.h
 -rw-r--r--	root/root	usr/include/wine/windows/dbinit.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dbprop.idl
@@ -159,6 +160,8 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/devenum.idl
 -rw-r--r--	root/root	usr/include/wine/windows/devguid.h
 -rw-r--r--	root/root	usr/include/wine/windows/digitalv.h
+-rw-r--r--	root/root	usr/include/wine/windows/dimm.h
+-rw-r--r--	root/root	usr/include/wine/windows/dimm.idl
 -rw-r--r--	root/root	usr/include/wine/windows/dinput.h
 -rw-r--r--	root/root	usr/include/wine/windows/dispdib.h
 -rw-r--r--	root/root	usr/include/wine/windows/dispex.h
@@ -618,9 +621,11 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rw-r--r--	root/root	usr/lib/wine/libcomctl32.def
 -rw-r--r--	root/root	usr/lib/wine/libcomdlg32.def
 -rw-r--r--	root/root	usr/lib/wine/libcompstui.def
+-rw-r--r--	root/root	usr/lib/wine/libcredui.def
 -rw-r--r--	root/root	usr/lib/wine/libcrtdll.def
 -rw-r--r--	root/root	usr/lib/wine/libcrypt32.def
 -rw-r--r--	root/root	usr/lib/wine/libcryptdll.def
+-rw-r--r--	root/root	usr/lib/wine/libcryptnet.def
 -rw-r--r--	root/root	usr/lib/wine/libctl3d32.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d8.def
 -rw-r--r--	root/root	usr/lib/wine/libd3d9.def
@@ -767,6 +772,7 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/msi.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msiexec.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/msimg32.dll.so
+-rwxr-xr-x	root/root	usr/lib/wine/msimtf.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msisys.ocx.so
 -rwxr-xr-x	root/root	usr/lib/wine/msnet32.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/msrle32.dll.so

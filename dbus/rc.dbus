@@ -13,7 +13,7 @@ case $1 in
 		;;
 	stop)
 		killall -q /usr/sbin/dbus-daemon
-		rm -f /var/run/dbus/pid
+		rm -f /var/run/dbus/dbus.pid
 		;;
 	restart)
 		$0 stop
