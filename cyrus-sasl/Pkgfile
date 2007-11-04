@@ -7,7 +7,7 @@
 name=cyrus-sasl
 version=2.1.22
 release=2
-source=(http://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
+source=(ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
 	$name-$version-crypt.patch \
         saslauthd)
 
