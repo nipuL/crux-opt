@@ -3,7 +3,7 @@
 # Maintainer:  Simone Rota, sip at crux dot nu
 
 name=bftpd
-version=2.0
+version=2.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
 	bftpd-config.patch bftpd-destdir.patch ftpd)

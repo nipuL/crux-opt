@@ -4,9 +4,11 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python2.5/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex-0.9.5.1a-py2.5.egg-info
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex-0.9.6.2-py2.5.egg-info
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/Builtin.py
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/Builtin.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/CmdLine.py
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/CmdLine.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/Code.py
@@ -51,17 +53,13 @@ drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/build_ext.py
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/build_ext.pyc
-drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/DarwinSystem.py
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/DarwinSystem.pyc
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/MacSystem.py
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/MacSystem.pyc
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/MacUtils.py
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/MacUtils.pyc
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/TS_Misc_Suite.py
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/TS_Misc_Suite.pyc
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/__init__.py (EMPTY)
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Mac/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/extension.py
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Distutils/extension.pyc
+drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/DistutilsOld/
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/DistutilsOld/__init__.py
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/DistutilsOld/__init__.pyc
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/DistutilsOld/build_ext.py
+-rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/DistutilsOld/build_ext.pyc
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/Plex/
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Plex/Actions.py
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Plex/Actions.pyc

@@ -4,12 +4,15 @@
 # Depends on:  gdbm, ncurses, openssl
 
 name=mutt
-version=1.5.16
+version=1.5.17
 release=1
-source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz)
+source=(http://mirrors.sunsite.dk/$name/devel/$name-$version.tar.gz \
+        http://jue.li/crux/files/$name-$version-manual.txt.gz)
 
 build () {
     cd $name-$version
+
+    gunzip -c $SRC/$name-$version-manual.txt.gz > doc/manual.txt
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
