@@ -1,17 +1,16 @@
 # Description: Artwiz X fonts revisited
 # URL: http://artwizaleczapka.sourceforge.net/
 # Maintainer: Matt Housh, jaeger at morpheus dot net
-# Depends on: x11
+# Depends on: xorg-mkfontdir, xorg-mkfontscale
 
-name=x11-fonts-artwiz-aleczapka
+name=xorg-font-artwiz-aleczapka
 version=1.3
 release=1
 source=(http://dl.sourceforge.net/sourceforge/artwizaleczapka/artwiz-aleczapka-en-1.3.tar.bz2)
 
 build() {
-	mkdir -p $PKG/usr/share/fonts/artwiz-aleczapka
+	mkdir -p $PKG/usr/lib/X11/fonts/artwiz-aleczapka
 	cd artwiz-aleczapka-en-1.3
-	install -o root -g root -m 0644 *.pcf $PKG/usr/share/fonts/artwiz-aleczapka/
-	install -o root -g root -m 0644 fonts.alias \
-		$PKG/usr/share/fonts/artwiz-aleczapka/
+	install -o root -g root -m 0644 *.pcf \
+		$PKG/usr/lib/X11/fonts/artwiz-aleczapka/
 }
