@@ -6,13 +6,15 @@
 
 name=xpdf
 version=3.02
-release=2
+release=3
 source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz
-	$name-$version.patch)
+	$name-${version}pl1.patch
+	$name-${version}pl2.patch)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version.patch
+    patch -p1 -i $SRC/$name-${version}pl1.patch
+    patch -p1 -i $SRC/$name-${version}pl2.patch
     ./configure \
 	--prefix=/usr \
         --with-Xm-library=/usr/lib \

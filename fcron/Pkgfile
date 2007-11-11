@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=fcron
-version=3.0.3
+version=3.0.4
 release=1
 source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz \
         fcron root.orig)
