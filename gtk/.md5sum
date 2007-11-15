@@ -3,3 +3,4 @@ b50c279539fca50a496d7feafae350d4  gdkwindow.patch
 c46f34addc2fe3ea6756055d59fb8856  gtk+-2.12.1.tar.bz2
 3c88561a89724dfe9d807077ba0603c8  gtk-register.sh
 142aacfd2e437691078a1648733b3fe0  gtk.immodules
+9d8d54627b9ec37900a10d0295600dd9  gtkclipboard.patch
