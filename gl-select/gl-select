@@ -3,7 +3,7 @@
 # gl-select: select active gl/glx libraries/extensions
 #
 # Matt Housh, jaeger at morpheus dot net
-# Jose V Beneyto, joberui at ei dot upv dot es
+# Jose V Beneyto, sepen at users dot sourceforge dot net
 #
 # For changelog, see:
 # http://crux.nu/gitweb/?p=ports/opt.git;a=history;f=gl-select/Pkgfile;hb=2.3

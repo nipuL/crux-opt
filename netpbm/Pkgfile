@@ -4,7 +4,7 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.35.32
+version=10.35.33
 release=1
 source=(http://aon.iki.fi/files/netpbm/netpbm-$version.tar.gz
 	Makefile.config)

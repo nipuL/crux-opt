@@ -5,15 +5,16 @@
 
 name=gtk
 version=2.12.1
-release=1
+release=2
 source=(ftp://ftp.gtk.org/pub/gtk/2.12/${name}+-$version.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules gdkwindow.patch \
-	gtk-register.sh)
+	gtk-register.sh gtkclipboard.patch)
 
 build () {
 	cd gtk+-$version
 
 	patch -p0 -i $SRC/gdkwindow.patch
+	patch -p1 -i $SRC/gtkclipboard.patch
 
 	./configure --prefix=/usr \
 		--mandir=/usr/man
