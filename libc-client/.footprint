@@ -15,10 +15,7 @@ drwxr-xr-x	root/root	usr/include/c-client/
 -rw-r--r--	root/root	usr/include/c-client/linkage.c
 -rw-r--r--	root/root	usr/include/c-client/linkage.h
 -rw-r--r--	root/root	usr/include/c-client/mail.h
--rw-r--r--	root/root	usr/include/c-client/mbx.h
--rw-r--r--	root/root	usr/include/c-client/mh.h
 -rw-r--r--	root/root	usr/include/c-client/misc.h
--rw-r--r--	root/root	usr/include/c-client/mx.h
 -rw-r--r--	root/root	usr/include/c-client/netmsg.h
 -rw-r--r--	root/root	usr/include/c-client/newsrc.h
 -rw-r--r--	root/root	usr/include/c-client/nl.h
@@ -32,6 +29,7 @@ drwxr-xr-x	root/root	usr/include/c-client/
 -rw-r--r--	root/root	usr/include/c-client/tcp_unix.h
 -rw-r--r--	root/root	usr/include/c-client/unix.h
 -rw-r--r--	root/root	usr/include/c-client/utf8.h
+-rw-r--r--	root/root	usr/include/c-client/utf8aux.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libc-client.a
 lrwxrwxrwx	root/root	usr/lib/libc-client.so -> libc-client.so.1.0.0
