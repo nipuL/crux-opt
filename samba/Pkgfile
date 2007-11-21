@@ -4,14 +4,16 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.26a
+version=3.0.27a
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 
 build () {
     cd $name-$version/source
-    patch -d $SRC -p0 -i $SRC/samba-config.patch
+
+    patch -d .. -p1 -i $SRC/samba-config.patch
+
     ./configure --prefix=/usr \
                 --with-fhs \
                 --with-smbmount \
@@ -20,14 +22,15 @@ build () {
                 --with-piddir=/var/run/samba \
                 --with-mandir=/usr/man \
                 --with-logfilebase=/var/log/samba
+
     make -j1
     make DESTDIR=$PKG install
-    
+
     # symlinks
     (cd $PKG/usr/lib 
      ln -s samba/libsmbclient.so libsmbclient.so
      ln -s samba/libsmbclient.so libsmbclient.so.0)
-    
+
     # nsswitch extensions
     install -d $PKG/lib
     install nsswitch/libnss_win{s,bind}.so $PKG/lib
@@ -37,11 +40,11 @@ build () {
     # spool/log directory
     install -d $PKG/var/log/samba
     install -d -m 1777 $PKG/var/spool/samba
-    
+
     # config-file and start-script
     cp ../examples/smb.conf.default $PKG/etc/samba
     install -D -m 755  $SRC/samba $PKG/etc/rc.d/samba
-    
+
     # cleanup
     rm -r $PKG/usr/{var,lib/samba/*.msg}
     chmod -x $PKG/usr/include/*
