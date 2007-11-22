@@ -5,7 +5,7 @@
 
 name=wpa_supplicant
 version=0.5.8
-release=1
+release=2
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
 
 build () {
@@ -13,8 +13,10 @@ build () {
     cp defconfig .config
     echo "CONFIG_READLINE=y" >> .config
     make
-    install -d $PKG/{usr/sbin,etc}
+    install -d $PKG/{usr/sbin,usr/man/man{8,5},etc}
     install wpa_{cli,passphrase,supplicant} $PKG/usr/sbin
+    install doc/docbook/*.8 $PKG/usr/man/man8
+    install doc/docbook/*.5 $PKG/usr/man/man5
     echo -e "ctrl_interface=/var/run/wpa_supplicant\n" > $PKG/etc/wpa.conf
     chmod 0600 $PKG/etc/wpa.conf
 }
