@@ -5,7 +5,7 @@
 
 name=samba
 version=3.0.27a
-release=1
+release=2
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 
@@ -25,6 +25,8 @@ build () {
 
     make -j1
     make DESTDIR=$PKG install
+
+    mv $PKG/usr/sbin/*.cifs $PKG/sbin
 
     # symlinks
     (cd $PKG/usr/lib 
