@@ -5,13 +5,14 @@
 
 name=gnutls
 version=2.0.4
-release=1
+release=2
 source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr \
-		--mandir=/usr/man
+		--mandir=/usr/man \
+		--disable-guile
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{info,locale}

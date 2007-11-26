@@ -10,7 +10,9 @@ lrwxrwxrwx	root/root	lib/libnss_winbind.so.2 -> libnss_winbind.so
 -rwxr-xr-x	root/root	lib/libnss_wins.so
 lrwxrwxrwx	root/root	lib/libnss_wins.so.2 -> libnss_wins.so
 drwxr-xr-x	root/root	sbin/
+-rwxr-xr-x	root/root	sbin/mount.cifs
 lrwxrwxrwx	root/root	sbin/mount.smbfs -> /usr/bin/smbmount
+-rwxr-xr-x	root/root	sbin/umount.cifs
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/eventlogadm
@@ -142,10 +144,8 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy.8.gz
 -rw-r--r--	root/root	usr/man/man8/winbindd.8.gz
 drwxr-xr-x	root/root	usr/sbin/
--rwxr-xr-x	root/root	usr/sbin/mount.cifs
 -rwxr-xr-x	root/root	usr/sbin/nmbd
 -rwxr-xr-x	root/root	usr/sbin/smbd
--rwxr-xr-x	root/root	usr/sbin/umount.cifs
 -rwxr-xr-x	root/root	usr/sbin/winbindd
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/log/
