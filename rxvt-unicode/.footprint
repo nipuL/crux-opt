@@ -6,7 +6,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/urxvt/
 drwxr-xr-x	root/root	usr/lib/urxvt/perl/
--rw-r--r--	root/root	usr/lib/urxvt/perl/automove-background
 -rw-r--r--	root/root	usr/lib/urxvt/perl/block-graphics-to-ascii
 -rw-r--r--	root/root	usr/lib/urxvt/perl/digital-clock
 -rw-r--r--	root/root	usr/lib/urxvt/perl/example-refresh-hooks
