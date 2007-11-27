@@ -83,6 +83,7 @@ drwxr-xr-x	root/root	usr/include/libpurple/
 -rw-r--r--	root/root	usr/include/libpurple/privacy.h
 -rw-r--r--	root/root	usr/include/libpurple/proxy.h
 -rw-r--r--	root/root	usr/include/libpurple/prpl.h
+-rw-r--r--	root/root	usr/include/libpurple/purple.h
 -rw-r--r--	root/root	usr/include/libpurple/request.h
 -rw-r--r--	root/root	usr/include/libpurple/roomlist.h
 -rw-r--r--	root/root	usr/include/libpurple/savedstatuses.h
@@ -145,6 +146,7 @@ drwxr-xr-x	root/root	usr/include/pidgin/
 -rw-r--r--	root/root	usr/include/pidgin/gtkthemes.h
 -rw-r--r--	root/root	usr/include/pidgin/gtkutils.h
 -rw-r--r--	root/root	usr/include/pidgin/gtkwhiteboard.h
+-rw-r--r--	root/root	usr/include/pidgin/minidialog.h
 -rw-r--r--	root/root	usr/include/pidgin/pidgin.h
 -rw-r--r--	root/root	usr/include/pidgin/pidgincombobox.h
 -rw-r--r--	root/root	usr/include/pidgin/pidginstock.h
@@ -168,9 +170,9 @@ lrwxrwxrwx	root/root	usr/lib/libgnt.so -> libgnt.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libgnt.so.0 -> libgnt.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libgnt.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libpurple.la
-lrwxrwxrwx	root/root	usr/lib/libpurple.so -> libpurple.so.0.2.2
-lrwxrwxrwx	root/root	usr/lib/libpurple.so.0 -> libpurple.so.0.2.2
--rwxr-xr-x	root/root	usr/lib/libpurple.so.0.2.2
+lrwxrwxrwx	root/root	usr/lib/libpurple.so -> libpurple.so.0.3.0
+lrwxrwxrwx	root/root	usr/lib/libpurple.so.0 -> libpurple.so.0.3.0
+-rwxr-xr-x	root/root	usr/lib/libpurple.so.0.3.0
 drwxr-xr-x	root/root	usr/lib/pidgin/
 -rwxr-xr-x	root/root	usr/lib/pidgin/convcolors.la
 -rwxr-xr-x	root/root	usr/lib/pidgin/convcolors.so
@@ -288,9 +290,6 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/32x32/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/48x48/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/48x48/apps/pidgin.png
-drwxr-xr-x	root/root	usr/share/icons/hicolor/scalable/
-drwxr-xr-x	root/root	usr/share/icons/hicolor/scalable/apps/
--rw-r--r--	root/root	usr/share/icons/hicolor/scalable/apps/pidgin.svg
 drwxr-xr-x	root/root	usr/share/pixmaps/
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/animations/
@@ -337,6 +336,7 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/dialogs/64/
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/emblems/
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/emblems/16/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/aol-client.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/birthday.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/blocked.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/bot.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/external.png
@@ -348,6 +348,7 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/emblems/16/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/hiptop.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/male.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/mobile.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/music.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/not-authorized.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/operator.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/emblems/16/qq-member.png
@@ -610,6 +611,8 @@ drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/status/11/
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/chat.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/extended-away.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/invisible.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/log-in.png
+-rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/log-out.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/offline.png
 -rw-r--r--	root/root	usr/share/pixmaps/pidgin/status/11/person.png
 drwxr-xr-x	root/root	usr/share/pixmaps/pidgin/status/11/rtl/
