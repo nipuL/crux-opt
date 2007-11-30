@@ -6,7 +6,7 @@
 # Nice to have: gtk, qt3
 
 name=pinentry
-version=0.7.3
+version=0.7.4
 release=1
 source=(http://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz)
 

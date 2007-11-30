@@ -1,0 +1,12 @@
+diff -Nru centerim-4.22.1/libicq2000/src/Client.cpp centerim-4.22.1-new/libicq2000/src/Client.cpp
+--- centerim-4.22.1/libicq2000/src/Client.cpp	2007-06-14 00:44:04.000000000 +0200
++++ centerim-4.22.1-new/libicq2000/src/Client.cpp	2007-11-30 17:26:06.000000000 +0100
+@@ -1524,7 +1524,7 @@
+ 	SignalLog(LogEvent::INFO, "Received server-based list from server\n");
+ 	SBLListSNAC *sbs = static_cast<SBLListSNAC*>(snac);
+ 	mergeSBL( sbs->getContactTree() );
+-//        SendSBLReceivedACK();
++        SendSBLReceivedACK();
+ 	break;
+       }
+       

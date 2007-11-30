@@ -4,13 +4,14 @@
 # Depends on: bison, flex, glib, gtk
 
 name=gob
-version=2.0.14
+version=2.0.15
 release=1
 source=(http://ftp.5z.com/pub/$name/gob2-$version.tar.gz)
 
 build() {
 	cd gob2-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr \
+		--mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 }

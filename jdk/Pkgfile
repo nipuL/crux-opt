@@ -4,7 +4,7 @@
 
 name=jdk
 version=1.6.0_03
-release=1
+release=2
 source=(http://download.java.net/dlj/binaries/jdk-6u3-dlj-linux-i586.bin)
 
 build(){
@@ -30,5 +30,9 @@ build(){
 	for j in java javac javah javap javaws jar keytool; do
 		ln -s ../lib/java/bin/$j
 	done
+
+	# fix for xcb assertions
+	sed -i 's/XINERAMA/FAKEEXTN/g' \
+		$PKG/usr/lib/java/jre/lib/i386/xawt/libmawt.so 
 }
 
