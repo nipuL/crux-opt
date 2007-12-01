@@ -2069,6 +2069,7 @@ drwxr-xr-x	root/root	usr/include/firefox/system_wrappers/gdk/
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdk.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkevents.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkkeysyms.h
+-rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkpango.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkprivate.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkregion.h
 -rw-r--r--	root/root	usr/include/firefox/system_wrappers/gdk/gdkwindow.h
