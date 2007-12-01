@@ -4,11 +4,15 @@
 
 name=valgrind
 version=3.2.3
-release=1
-source=(http://$name.org/downloads/$name-$version.tar.bz2)
+release=2
+source=(http://$name.org/downloads/$name-$version.tar.bz2 \
+        glibc26.patch)
 
 build() {
 	cd $name-$version
+
+	patch -Np1 -i $SRC/glibc26.patch
+
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
