@@ -3,7 +3,7 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=squid
-version=2.6.STABLE16
+version=2.6.STABLE17
 release=1
 source=(http://www.squid-cache.org/Versions/v2/2.6/$name-$version.tar.bz2 \
         squid.conf squid)
@@ -13,15 +13,21 @@ build () {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --sysconfdir=/etc/squid \
-                --libexecdir=/usr/sbin \
+                --libexecdir=/usr/lib/squid \
                 --localstatedir=/var/squid \
                 --datadir=/usr/share/squid \
                 --enable-linux-netfilter \
                 --enable-err-languages=English \
-                --enable-epoll
+                --enable-epoll \
+                --enable-storeio=ufs,aufs,coss \
+                --with-large-files \
+                --with-pthreads \
+                --with-aufs-threads=16
+
     make all
     make DESTDIR=$PKG install
 
+    rm $PKG/usr/bin/RunCache
     rm -r $PKG/{var/squid/logs,etc/squid/mime.conf.default}
     mv $PKG/usr/share/squid/errors/{English/*,.}
     rm -r $PKG/usr/share/squid/errors/English

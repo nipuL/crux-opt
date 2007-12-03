@@ -5,7 +5,7 @@
 # Depends on: mplayer, firefox, gettext
 
 name=mplayerplug-in
-version=3.45
+version=3.50
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
         http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.8b1/gecko-sdk-i686-pc-linux-gnu-1.8b1.tar.gz)
