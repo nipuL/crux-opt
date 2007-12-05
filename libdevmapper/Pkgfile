@@ -4,8 +4,8 @@
 # Packager: Mark Rosenstand, mark at borkware dot net
 
 name=libdevmapper
-version=1.02.22
-release=3
+version=1.02.23
+release=1
 source=(ftp://sources.redhat.com/pub/dm/device-mapper.$version.tgz)
 
 build() {
