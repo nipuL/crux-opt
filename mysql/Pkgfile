@@ -4,7 +4,7 @@
 # Depends on:  ncurses, zlib
 
 name=mysql
-version=5.0.45
+version=5.0.51
 release=1
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
