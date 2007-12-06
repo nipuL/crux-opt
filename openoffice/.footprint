@@ -477,8 +477,8 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/libcurl.so.3 -> libcurl.so.3.0.0
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libcurl.so.3.0.0 -> libcurl.so.3.0.0.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libcurl.so.3.0.0.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdate680li.so
-lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdb-4.2.so -> libdb-4.2.so.1
--r--r--r--	root/root	usr/lib/openoffice/program/libdb-4.2.so.1
+lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdb-4.2.so -> libdb-4.2.so.1.1
+-r--r--r--	root/root	usr/lib/openoffice/program/libdb-4.2.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdb_java-4.2.so
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/libdba680li.so -> libdba680li.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/libdba680li.so.1.1
@@ -1957,6 +1957,7 @@ lrwxrwxrwx	root/root	usr/lib/openoffice/program/slideshow.uno.so -> slideshow.un
 -r--r--r--	root/root	usr/lib/openoffice/program/sofficerc
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/spadmin -> soffice
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/spadmin.bin
+-r-xr-xr-x	root/root	usr/lib/openoffice/program/stclient_wrapper
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/streams.uno.so -> streams.uno.so.1.1
 -r--r--r--	root/root	usr/lib/openoffice/program/streams.uno.so.1.1
 lrwxrwxrwx	root/root	usr/lib/openoffice/program/stringresource680li.uno.so -> stringresource680li.uno.so.1.1
@@ -3021,10 +3022,12 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_et_EE.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_hu_HU.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_lt_LT.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_pl_PL.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_hyph_sl_SI.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_it_IT.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_lt_LT.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_nl_NL.txt
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_pl_PL.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_pt_BR.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_sk_SK.txt
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/README_sl_SI.txt
@@ -3062,6 +3065,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_it_IT.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_lt_LT.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_nl_NL.dic
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_pl_PL.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_ru_RU.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/hyph_sl_SI.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/it_IT.aff
@@ -3070,6 +3074,8 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/dict/ooo/
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/lt_LT.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/nl_NL.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/nl_NL.dic
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/pl_PL.aff
+-r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/pl_PL.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/pt_BR.aff
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/pt_BR.dic
 -r--r--r--	root/root	usr/lib/openoffice/share/dict/ooo/sk_SK.aff
@@ -3896,6 +3902,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Of
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Embedding/Embedding-writer.xcu
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Jobs/
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Jobs/Jobs-onlineupdate.xcu
+-r--r--r--	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Jobs/Jobs-stclient.xcu
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Scripting/
 -r--r--r--	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Scripting/Scripting-python.xcu
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/modules/org/openoffice/Office/Writer/
