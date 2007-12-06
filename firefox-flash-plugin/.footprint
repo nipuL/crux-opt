@@ -2,5 +2,4 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/firefox/
 drwxr-xr-x	root/root	usr/lib/firefox/plugins/
--r--r--r--	root/root	usr/lib/firefox/plugins/flashplayer.xpt
 -rwxr-xr-x	root/root	usr/lib/firefox/plugins/libflashplayer.so
