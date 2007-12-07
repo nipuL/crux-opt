@@ -64,7 +64,7 @@ drwxr-xr-x	root/root	usr/lib/tomcat/server/lib/
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/catalina-optional.jar
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/catalina-storeconfig.jar
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/catalina.jar
--rw-r--r--	root/root	usr/lib/tomcat/server/lib/commons-modeler-2.0.jar
+-rw-r--r--	root/root	usr/lib/tomcat/server/lib/commons-modeler-2.0.1.jar
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/servlets-cgi.renametojar
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/servlets-default.jar
 -rw-r--r--	root/root	usr/lib/tomcat/server/lib/servlets-invoker.jar
