@@ -4,8 +4,8 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.27a
-release=2
+version=3.0.28
+release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 

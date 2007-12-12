@@ -1,10 +1,10 @@
 # Description: A multi-protocol instant messaging client
-# Maintainer: Matt Housh, jaeger at morpheus dot net
 # URL: http://pidgin.im/
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: nss, startup-notification
 
 name=pidgin
-version=2.3.0
+version=2.3.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 

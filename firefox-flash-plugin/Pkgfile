@@ -1,16 +1,16 @@
 # Description: Macromedia Flash Plugin for Firefox
 # URL: http://www.macromedia.com/shockwave/download/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: firefox
 
 name=firefox-flash-plugin
-version=9.0.48.0
+version=9.0.115.0
 release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_9_linux.tar.gz)
 
 build() {
 	mkdir -p $PKG/usr/lib/firefox/plugins
-	cp install_flash_player_9_linux/{libflashplayer.so,flashplayer.xpt} \
+	cp install_flash_player_9_linux/libflashplayer.so \
 		$PKG/usr/lib/firefox/plugins
 	chown -R root:root $PKG
 }
