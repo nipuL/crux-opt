@@ -1,10 +1,10 @@
-# Description: An open video codec from the xiph.org foundation's ogg project
+# Description: A free and open video compression format from the Xiph.org Foundation
 # URL: http://www.theora.org/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: libogg, libvorbis
 
 name=libtheora
-version=1.0alpha7
+version=1.0beta2
 release=1
 source=(http://downloads.xiph.org/releases/theora/$name-$version.tar.bz2)
 

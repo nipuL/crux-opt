@@ -4,10 +4,10 @@
 # Depends on:  expat, db, gdbm
 
 name=apr
-version=1.2.11
+version=1.2.12
 release=1
 source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
-        http://www.apache.org/dist/$name/$name-util-1.2.10.tar.bz2)
+        http://www.apache.org/dist/$name/$name-util-$version.tar.bz2)
 
 build(){
     cd $name-$version
@@ -16,7 +16,7 @@ build(){
     make 
     make DESTDIR=$PKG install
 
-    cd $SRC/$name-util-1.2.10
+    cd $SRC/$name-util-$version
     ./configure --prefix=/usr \
                 --with-apr=$SRC/$name-$version \
                 --with-expat=/usr \
