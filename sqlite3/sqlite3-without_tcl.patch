@@ -1,0 +1,23 @@
+diff -Nru sqlite-3.5.4.orig/Makefile.in sqlite-3.5.4/Makefile.in
+--- sqlite-3.5.4.orig/Makefile.in	2007-12-17 10:23:23.000000000 +0100
++++ sqlite-3.5.4/Makefile.in	2007-12-17 10:25:05.000000000 +0100
+@@ -317,18 +317,11 @@
+                 -rpath $(libdir)/sqlite \
+ 		-version-info "8:6:8"
+ 
+-testcli$(TEXE):	$(TOP)/src/shell.c libsqlite3.la sqlite3.h
++sqlite3$(TEXE):	$(TOP)/src/shell.c libsqlite3.la sqlite3.h
+ 	$(LTLINK) $(READLINE_FLAGS) $(LIBPTHREAD) \
+ 		-o $@ $(TOP)/src/shell.c libsqlite3.la \
+ 		$(LIBREADLINE) $(TLIBS)
+ 
+-sqlite3$(EXE):	$(TOP)/src/shell.c sqlite3.c sqlite3.h
+-	$(LTLINK) $(READLINE_FLAGS) -o $@                          \
+-		-DSQLITE_MAX_SQL_LENGTH=1000000000                  \
+-		-USQLITE_THREADSAFE -DSQLITE_THREADSAFE=0           \
+-		$(TOP)/src/shell.c sqlite3.c                        \
+-		$(LIBREADLINE) $(TLIBS) $(THREADLIB)
+-
+ # This target creates a directory named "tsrc" and fills it with
+ # copies of all of the C source code and header files needed to
+ # build on the target system.  Some of the C source code and header
