@@ -1,13 +1,13 @@
 # Description: a light-weight system monitor
 # URL:         http://conky.sourceforge.net/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  xorg-libxdamage, xorg-libxext, xorg-libxft
+# Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.4.7
+version=1.4.9
 release=1
 source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
-        
+
 build() {
     cd $name-$version
     ./configure --prefix=/usr \
@@ -18,6 +18,5 @@ build() {
                 --enable-portmon \
                 --enable-mpd 
     make
-    make install DESTDIR=$PKG
-    install -D doc/conkyrc.sample $PKG/usr/share/$name/conkyrc.sample
+    make DESTDIR=$PKG install
 }
