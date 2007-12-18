@@ -1,17 +1,18 @@
 # Description: commandline option parser 
-# URL: http://freshmeat.net/projects/popt/
-# Packager:   Robert McMeekin, viper at mcmeekin dot info
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# URL: http://rpm5.org/files/popt/
+# Packager: Robert McMeekin, viper at mcmeekin dot info
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: gettext
 
 name=popt
-version=1.7
+version=1.13
 release=1
-source=(http://gentoo.osuosl.org/distfiles/$name-$version.tar.gz)
+source=(http://rpm5.org/files/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr \
+		--mandir=/usr/man \
 		--disable-nls
 	make
 	make DESTDIR=$PKG install
