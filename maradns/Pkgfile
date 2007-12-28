@@ -3,14 +3,14 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=maradns
-version=1.2.12.09
+version=1.3.07.08
 release=1
-source=(http://www.maradns.org/download/1.2/$version/maradns-$version.tar.bz2 \
+source=(http://www.maradns.org/download/1.3/$version/maradns-$version.tar.bz2 \
         mararc maradns db.localhost)
 
 build () {
     cd maradns-$version
-    
+
     install -d  $PKG/usr/{bin,sbin,man/man{1,5,8}}
     install -d  $PKG/{etc/{rc.d,maradns},var/log}
 
