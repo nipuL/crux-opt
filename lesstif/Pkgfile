@@ -5,7 +5,7 @@
 
 name=lesstif
 version=0.95.0
-release=1
+release=2
 source=(http://dl.sf.net/lesstif/lesstif-$version.tar.bz2
 	lesstif-$version-libxpm.patch
 	lesstif-$version-vendorsp.patch)
@@ -22,6 +22,11 @@ build() {
 		--with-xdnd
 	make
 	make DESTDIR=$PKG install
+
+	# remove xprint stuff
+	rm $PKG/usr/include/Xm/Print{SP,}.h
+	sed -i -e 's/.*Print.h.*//' $PKG/usr/include/Xm/XmAll.h
+
 	rm -rf $PKG/usr/LessTif $PKG/usr/bin/mwm \
 	       $PKG/usr/lib/X11/{app-defaults,mwm} \
 	       $PKG/usr/man/man{1/mwm.1,5/mwmrc.5}
