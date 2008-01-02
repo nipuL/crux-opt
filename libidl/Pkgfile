@@ -1,10 +1,10 @@
 # Description: A library for creating trees of CORBA Interface Definition Language (IDL) files
 # URL: http://andrewtv.org/libIDL/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Matt Housh, jaeger at crux dot nu
 # Depends on: glib
 
 name=libidl
-version=0.8.7
+version=0.8.9
 release=1
 source=(http://download.gnome.org/sources/libIDL/0.8/libIDL-$version.tar.bz2)
 
@@ -13,5 +13,5 @@ build() {
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/info
+	rm -rf $PKG/usr/share
 }
