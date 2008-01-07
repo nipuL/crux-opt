@@ -14,7 +14,7 @@ build () {
                 --disable-analyzer-hooks \
                 --disable-gtktest \
                 --enable-nasm
-    make
+    make -j1
     make prefix=$PKG/usr install
     rm -r $PKG/usr/share
 }
