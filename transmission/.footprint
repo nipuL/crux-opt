@@ -1,10 +1,10 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/transmission
--rwxr-xr-x	root/root	usr/bin/transmission-cli
 -rwxr-xr-x	root/root	usr/bin/transmission-daemon
 -rwxr-xr-x	root/root	usr/bin/transmission-proxy
 -rwxr-xr-x	root/root	usr/bin/transmission-remote
+-rwxr-xr-x	root/root	usr/bin/transmissioncli
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/transmission-daemon.1.gz
