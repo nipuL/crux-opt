@@ -2,10 +2,10 @@
 # Packager: Erlend Bergsås Mikkelsen, howl at online dot no
 # Description: a small filer/desktop application based on gtk
 # URL: http://rox.sourceforge.net
-# Depends on: gtk, shared-mime-info
+# Depends on: libglade, shared-mime-info
 
 name=rox
-version=2.6.1
+version=2.7.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
 
