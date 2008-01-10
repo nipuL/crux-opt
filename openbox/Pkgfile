@@ -4,8 +4,8 @@
 # Depends on: xorg-libxinerama, xorg-libxrandr, xorg-libsm, glib, libxml2, pango
 
 name=openbox
-version=3.4.4
-release=2
+version=3.4.5
+release=1
 source=(http://www.icculus.org/$name/releases/$name-$version.tar.gz)
 
 build() {
