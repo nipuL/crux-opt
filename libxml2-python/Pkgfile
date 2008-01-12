@@ -4,14 +4,14 @@
 # Depends on:  python, libxml2
 
 name=libxml2-python
-version=2.6.30
+version=2.6.31
 release=1
 source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz \
         $name-config.patch)
 
 build () {
     cd libxml2-$version
-    patch -p1 < $SRC/$name-config.patch
+    patch -p1 -i $SRC/$name-config.patch
     ./configure --prefix=/usr
     cd python
     make

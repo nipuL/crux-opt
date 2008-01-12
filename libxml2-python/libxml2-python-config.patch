@@ -1,16 +1,7 @@
-diff -Nru libxml2-2.6.27.orig/python/Makefile.in libxml2-2.6.27/python/Makefile.in
---- libxml2-2.6.27.orig/python/Makefile.in	2006-10-26 08:07:43.000000000 +0200
-+++ libxml2-2.6.27/python/Makefile.in	2006-10-26 08:10:57.000000000 +0200
-@@ -56,7 +56,7 @@
- am__installdirs = "$(DESTDIR)$(pythondir)"
- pythonLTLIBRARIES_INSTALL = $(INSTALL)
- LTLIBRARIES = $(python_LTLIBRARIES)
--@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(top_builddir)/libxml2.la
-+@WITH_PYTHON_TRUE@am__DEPENDENCIES_1 = $(libdir)/libxml2.la
- @WITH_PYTHON_TRUE@libxml2mod_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
- am__libxml2mod_la_SOURCES_DIST = libxml.c types.c libxml2-py.c
- @WITH_PYTHON_TRUE@am_libxml2mod_la_OBJECTS = libxml.lo types.lo \
-@@ -326,7 +326,7 @@
+diff -Nru libxml2-2.6.31.orig/python/Makefile.in libxml2-2.6.31/python/Makefile.in
+--- libxml2-2.6.31.orig/python/Makefile.in	2008-01-11 12:19:19.000000000 +0100
++++ libxml2-2.6.31/python/Makefile.in	2008-01-11 12:25:21.000000000 +0100
+@@ -330,7 +330,7 @@
  
  libxml2mod_la_LDFLAGS = @CYGWIN_EXTRA_LDFLAGS@ @WIN32_EXTRA_LDFLAGS@ -module -avoid-version 
  @WITH_PYTHON_TRUE@mylibs = \
