@@ -18,4 +18,5 @@ build() {
 	make depend
 	make
 	make prefix=$PKG/usr install
+	rm -rf $PKG/usr/man/{de,fr}.UTF-8
 }
