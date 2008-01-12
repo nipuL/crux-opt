@@ -5,13 +5,15 @@
 # Depends on:  zlib
 
 name=libxml2
-version=2.6.30
+version=2.6.31
 release=1
 source=(ftp://xmlsoft.org/libxml2/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --without-python
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --without-python
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/doc $PKG/usr/share/{doc,gtk-doc}
