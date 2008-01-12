@@ -167,6 +167,7 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/Camlp4Top/Top.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/Camlp4Top/Top.cmo
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/Camlp4_config.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/camlp4/Camlp4_import.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/camlp4fulllib.cma
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/camlp4lib.cma
 -rw-r--r--	root/root	usr/lib/ocaml/camlp4/camlp4o.cma
@@ -318,9 +319,19 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/obj.p.cmx
 drwxr-xr-x	root/root	usr/lib/ocaml/ocamlbuild/
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild.cmo
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_executor.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_executor.cmo
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_executor.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_executor.o
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_pack.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_plugin.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmi
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmo
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.cmx
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuild_unix_plugin.o
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuildlib.a
 -rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuildlib.cma
+-rw-r--r--	root/root	usr/lib/ocaml/ocamlbuild/ocamlbuildlib.cmxa
 drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/
 drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/custom/
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/ocamldoc.hva
