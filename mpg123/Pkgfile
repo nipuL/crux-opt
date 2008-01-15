@@ -1,10 +1,10 @@
 # Description: Commandline MP3 player 
 # URL:         http://www.mpg123.de
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  alsa-lib
+# Depends on:  libtool, alsa-lib
 
 name=mpg123
-version=1.0.1
+version=1.1.0
 release=1
 source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
 
@@ -13,7 +13,8 @@ build() {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-cpu=x86 \
-                --with-audio=alsa
+                --with-audio="alsa oss dummy" \
+                --with-default-audio=alsa
     make
     make DESTDIR=$PKG install
 }
