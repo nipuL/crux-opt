@@ -4,14 +4,13 @@
 # Depends on: libdaemon, dbus, dbus-python, pygtk, libglade
 
 name=avahi
-version=0.6.19
+version=0.6.22
 release=1
 source=(http://avahi.org/download/$name-$version.tar.gz \
 	rc.$name $name-dbus-major-version.patch)
 
 build() {
 	cd $name-$version
-	#patch avahi-daemon/dbus-protocol.c -i $SRC/$name-dbus-major-version.patch
 	./configure --prefix=/usr \
 		--localstatedir=/var \
 		--mandir=/usr/man \
@@ -31,4 +30,5 @@ build() {
 	make DESTDIR=$PKG install
 	install -D -o root -g root -m 0755 $SRC/rc.$name \
 		$PKG/etc/rc.d/$name
+	rm -rf $PKG/usr/share/locale
 }
