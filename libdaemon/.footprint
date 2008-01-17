@@ -11,8 +11,8 @@ drwxr-xr-x	root/root	usr/include/libdaemon/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libdaemon.a
 -rwxr-xr-x	root/root	usr/lib/libdaemon.la
-lrwxrwxrwx	root/root	usr/lib/libdaemon.so -> libdaemon.so.0.2.4
-lrwxrwxrwx	root/root	usr/lib/libdaemon.so.0 -> libdaemon.so.0.2.4
--rwxr-xr-x	root/root	usr/lib/libdaemon.so.0.2.4
+lrwxrwxrwx	root/root	usr/lib/libdaemon.so -> libdaemon.so.0.3.1
+lrwxrwxrwx	root/root	usr/lib/libdaemon.so.0 -> libdaemon.so.0.3.1
+-rwxr-xr-x	root/root	usr/lib/libdaemon.so.0.3.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdaemon.pc
