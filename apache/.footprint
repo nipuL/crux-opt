@@ -142,6 +142,7 @@ drwxr-xr-x	root/root	usr/lib/apache/build/
 -rwxr-xr-x	root/root	usr/lib/apache/mod_speling.so
 -rwxr-xr-x	root/root	usr/lib/apache/mod_ssl.so
 -rwxr-xr-x	root/root	usr/lib/apache/mod_status.so
+-rwxr-xr-x	root/root	usr/lib/apache/mod_substitute.so
 -rwxr-xr-x	root/root	usr/lib/apache/mod_unique_id.so
 -rwxr-xr-x	root/root	usr/lib/apache/mod_userdir.so
 -rwxr-xr-x	root/root	usr/lib/apache/mod_usertrack.so
