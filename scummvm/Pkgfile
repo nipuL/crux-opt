@@ -4,8 +4,8 @@
 # Depends on: libsdl, libogg, libmad, zlib, mpeg2dec, flac
 
 name=scummvm
-version=0.10.0
-release=2
+version=0.11.0
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
