@@ -2,11 +2,11 @@
 # URL:         http://caml.inria.fr/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Erlend Bergsås Mikkelsen, howl at online dot no
-# Depends on:  ncurses, gdbm, xorg-libx11, xorg-libxau
+# Depends on:  ncurses, gdbm
 
 name=ocaml
 version=3.10.1
-release=1
+release=2
 source=(http://caml.inria.fr/pub/distrib/$name-3.10/$name-$version.tar.bz2)
 
 build() {

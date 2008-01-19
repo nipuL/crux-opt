@@ -226,14 +226,6 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/genlex.ml
 -rw-r--r--	root/root	usr/lib/ocaml/genlex.mli
 -rw-r--r--	root/root	usr/lib/ocaml/genlex.p.cmx
--rw-r--r--	root/root	usr/lib/ocaml/graphics.a
--rw-r--r--	root/root	usr/lib/ocaml/graphics.cma
--rw-r--r--	root/root	usr/lib/ocaml/graphics.cmi
--rw-r--r--	root/root	usr/lib/ocaml/graphics.cmx
--rw-r--r--	root/root	usr/lib/ocaml/graphics.cmxa
--rw-r--r--	root/root	usr/lib/ocaml/graphics.mli
--rw-r--r--	root/root	usr/lib/ocaml/graphicsX11.cmi
--rw-r--r--	root/root	usr/lib/ocaml/graphicsX11.mli
 -rw-r--r--	root/root	usr/lib/ocaml/hashtbl.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/hashtbl.cmx
 -rw-r--r--	root/root	usr/lib/ocaml/hashtbl.ml
@@ -265,7 +257,6 @@ drwxr-xr-x	root/root	usr/lib/ocaml/camlp4/Camlp4Top/
 -rw-r--r--	root/root	usr/lib/ocaml/libasmrunp.a
 -rw-r--r--	root/root	usr/lib/ocaml/libbigarray.a
 -rw-r--r--	root/root	usr/lib/ocaml/libcamlrun.a
--rw-r--r--	root/root	usr/lib/ocaml/libgraphics.a
 -rw-r--r--	root/root	usr/lib/ocaml/libmldbm.a
 -rw-r--r--	root/root	usr/lib/ocaml/libnums.a
 -rw-r--r--	root/root	usr/lib/ocaml/libstr.a
@@ -486,7 +477,6 @@ drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/custom/
 -rw-r--r--	root/root	usr/lib/ocaml/stringLabels.p.cmx
 drwxr-xr-x	root/root	usr/lib/ocaml/stublibs/
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllbigarray.so
--rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllgraphics.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllmldbm.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllnums.so
 -rwxr-xr-x	root/root	usr/lib/ocaml/stublibs/dllstr.so
