@@ -6,7 +6,7 @@
 # Nice to have: kqemu
 
 name=qemu-bin
-version=0.9.0
+version=0.9.1
 release=1
 source=(http://fabrice.bellard.free.fr/qemu/qemu-$version-i386.tar.gz)
 
