@@ -4,10 +4,11 @@
 # Depends on:  vim, gtk
 
 name=gvim
-version=7.1.123
+version=7.1.242
 release=1
 source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.1.tar.bz2 \
-        http://crux.nu/~jue/files/dist/vim-7.1.001-123.tar.bz2)
+        http://crux.nu/~jue/files/dist/vim-7.1.001-123.tar.bz2 \
+        http://crux.nu/~jue/files/dist/vim-7.1.124-242.tar.bz2)
 
 build () {
     cd vim71/src
