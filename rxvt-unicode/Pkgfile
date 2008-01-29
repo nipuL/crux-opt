@@ -4,9 +4,9 @@
 # Depends on: xorg-libxft, xorg-libxpm, perl
 
 name=rxvt-unicode
-version=9.0
+version=9.02
 release=1
-source=(http://dist.schmorp.de/$name/$name-$version.tar.bz2)
+source=(http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
