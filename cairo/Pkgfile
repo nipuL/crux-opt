@@ -1,6 +1,6 @@
 # Description: A 2D graphics library with support for multiple output devices
 # URL: http://www.cairographics.org/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: fontconfig, glitz, libpng, xorg-libxrender
 
 name=cairo
