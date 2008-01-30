@@ -1,6 +1,6 @@
 # Description: A library for high-performance 2D graphics
 # URL: http://www.levien.com/libart/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Maintainer: Simone Rota, sip at crux dot nu
 
 name=libart_lgpl
 version=2.3.17
