@@ -1,6 +1,6 @@
 # Description: An OpenGL image compositing library
 # URL: http://www.freedesktop.org/Software/glitz
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: mesa3d
 
 name=glitz
