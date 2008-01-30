@@ -1,6 +1,6 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL: http://www.gtk.org/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=glib
 version=2.14.5
