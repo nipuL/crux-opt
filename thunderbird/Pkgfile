@@ -1,5 +1,5 @@
 # Description: Thunderbird EMail client from the Mozilla project
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Simone Rota, sip at crux dot nu
 # URL: http://www.mozilla.org/projects/thunderbird/
 # Depends on: libidl, gtk, libjpeg, libpng, zlib, expat
 
