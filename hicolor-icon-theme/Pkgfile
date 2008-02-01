@@ -1,6 +1,6 @@
 # Description: default fallback used by the icon theme specification
 # URL: http://icon-theme.freedesktop.org/wiki/HicolorTheme
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=hicolor-icon-theme
 version=0.9
