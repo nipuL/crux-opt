@@ -4,7 +4,7 @@
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.12.5
+version=2.12.7
 release=1
 source=(http://download.gnome.org/sources/gtk+/2.12/${name}+-$version.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules \

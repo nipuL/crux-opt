@@ -1,5 +1,5 @@
-5125e06de0478bdb34aaa2521d4c1b5e  gdk-pixbuf.loaders
-588c7fb3d9ebadf4f5a1ab4c534e4db5  gtk+-2.12.5.tar.bz2
+0e4ccd189f79ff494148ac1dcd9ac10a  gdk-pixbuf.loaders
+57132c4a921ef00e241a0fc991787556  gtk+-2.12.7.tar.bz2
 3c88561a89724dfe9d807077ba0603c8  gtk-register.sh
-e57090af24fd8b684e5779d9e8104812  gtk.immodules
+0f4a617ac4ba140d0ee1d9694c177b59  gtk.immodules
 9d8d54627b9ec37900a10d0295600dd9  gtkclipboard.patch
