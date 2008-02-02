@@ -5,7 +5,7 @@
 # Nice to have: tk
 
 name=git
-version=1.5.3.8
+version=1.5.4
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
@@ -32,4 +32,7 @@ build() {
 
 	find $PKG -name perllocal.pod -delete
 	find $PKG -name .packlist -delete
+
+	rm -rf $PKG/usr/share/gitk/lib/msgs
+	rmdir $PKG/usr/share/gitk/{lib,}
 }
