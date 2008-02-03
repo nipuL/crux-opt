@@ -1,6 +1,7 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 # Depends on: xorg, gl-select
 
 name=nvidia
