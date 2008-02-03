@@ -1,6 +1,7 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Packager: Matt Housh, jaeger at crux dot nu
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 # Depends on: libidl, gtk, libpng, libjpeg, zlib
 
 name=firefox
