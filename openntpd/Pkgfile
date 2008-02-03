@@ -1,6 +1,7 @@
 # Description: portable version of openbsd's ntpd implementation
 # URL: http://www.openntpd.org/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 
 name=openntpd
 version=3.9p1
