@@ -1,6 +1,7 @@
 # Description: The RAR Archiver
 # URL: http://www.rarlab.com/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Packager: Matt Housh, jaeger at crux dot nu
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 
 name=rar
 version=3.6.0
