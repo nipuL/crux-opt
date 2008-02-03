@@ -1,6 +1,7 @@
 # Description: BinChunker for Unix / Linux
 # URL: http://hes.iki.fi/bchunk/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 
 name=bchunk
 version=1.2.0
