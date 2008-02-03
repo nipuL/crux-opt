@@ -1,6 +1,7 @@
 # Description: A selector for gl/glx libraries and extensions
 # URL: N/A
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 
 name=gl-select
 version=1.2
