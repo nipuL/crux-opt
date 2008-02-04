@@ -1,6 +1,6 @@
 # Description: XSL Transformations library
 # URL: http://xmlsoft.org/XSLT/
-# Maintainer: Matt Housh, jaeger at crux dot nu
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libxml2
 
 name=libxslt
