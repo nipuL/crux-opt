@@ -1,6 +1,7 @@
 # Description: XML::Parser
 # URL: http://search.cpan.org/~msergeant/XML-Parser-2.34/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: expat, perl
 
 name=p5-xml-parser
