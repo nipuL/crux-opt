@@ -1,6 +1,7 @@
 # URL: http://corefonts.sourceforge.net/
 # Description: Microsoft's Web Fonts (truetype)
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: xorg-mkfontdir, xorg-mkfontscale
 
 name=xorg-font-msttcorefonts
