@@ -1,6 +1,7 @@
 # Description: HTML::Parser
 # URL: http://search.cpan.org/~gaas/HTML-Parser-3.46/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: p5-html-tagset
 
 name=p5-html-parser
