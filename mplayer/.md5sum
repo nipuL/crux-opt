@@ -1,3 +1,7 @@
 7e27e535c2d267637df34898f1b91707  MPlayer-1.0rc2.tar.bz2
+543a5d8441e11e585062ade2014a1fad  demux_audio_fix_20080129.diff
+9b60da1a0f2b6d2e2d2158ec1f5656c0  demux_mov_fix_20080129.diff
 1ecd31d17b51f16332b1fcc7da36b312  font-arial-iso-8859-1.tar.bz2
 c64631601912913f3e5dfbecc3b79d44  mplayer.conf
+2060511669714e02d4df2ed008b9deee  stream_cddb_fix_20080120.diff
+06bba9f77e66ac7199ea2be604395309  url_fix_20080120.diff
