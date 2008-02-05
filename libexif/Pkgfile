@@ -1,6 +1,7 @@
 # Description: An EXIF tag parsing library
 # URL: http://libexif.sourceforge.net/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
 
 name=libexif
 version=0.6.16
