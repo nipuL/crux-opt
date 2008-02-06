@@ -2,7 +2,7 @@
 # URL: http://www.gnu.org/software/grub/
 # Packager: Daniel Müller, daniel at danm dot de
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
-# Depends on: ncurses, gettext
+# Depends on: gettext
 
 name=grub
 version=0.97
