@@ -2,7 +2,7 @@
 # URL: http://www.freedesktop.org/wiki/Software/hal
 # Packager: Matt Housh, jaeger at crux dot nu
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
-# Depends on: dbus, dbus-glib
+# Depends on: dbus-glib
 
 name=hal
 version=0.5.10
