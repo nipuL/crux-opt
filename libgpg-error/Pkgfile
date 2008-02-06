@@ -1,12 +1,12 @@
 # Description: A small library defining error values for GnuPG components
-# URL: http://www.gnupg.org/(en)/related_software/libgpg-error/
+# URL: http://www.gnupg.org
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 # Packager: Matt Housh, jaeger at morpheus dot net
 
 name=libgpg-error
-version=1.4
+version=1.6
 release=1
-source=(http://mirrors.rootmode.com/ftp.gnupg.org/$name/$name-$version.tar.gz)
+source=(ftp://ftp.gnupg.org/gcrypt/libgpg-error/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
