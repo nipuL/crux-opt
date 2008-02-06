@@ -5,7 +5,7 @@
 # Depends on: cyrus-sasl, openssl, db
 
 name=postfix
-version=2.4.6
+version=2.5.0
 release=1
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc postfix.patch)
@@ -28,6 +28,7 @@ build() {
 	config_directory=/etc/postfix \
 	manpage_directory=/usr/man \
 	daemon_directory=/usr/lib/postfix \
+	data_directory=/var/lib/postfix \
 	command_directory=/usr/sbin \
 	queue_directory=/var/spool/postfix \
 	sendmail_path=/usr/sbin/sendmail \
@@ -44,6 +45,9 @@ build() {
     ( cd $PKG/usr/sbin
       chgrp postdrop postqueue postdrop
       chmod g+s postqueue postdrop )
+
+    ( cd $PKG/var/lib
+      chown mail postfix )
 
     #
     # Add .gz extensions to manpages (pkgmk compresses them)

@@ -137,6 +137,8 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/postsuper
 -rwxr-xr-x	root/root	usr/sbin/sendmail
 drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/lib/
+drwx------	mail/root	var/lib/postfix/
 drwxr-xr-x	root/root	var/spool/
 drwxr-xr-x	root/root	var/spool/postfix/
 drwx------	mail/root	var/spool/postfix/active/
