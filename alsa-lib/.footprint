@@ -9,13 +9,11 @@ drwxr-xr-x	root/root	usr/include/alsa/
 -rw-r--r--	root/root	usr/include/alsa/conf.h
 -rw-r--r--	root/root	usr/include/alsa/control.h
 -rw-r--r--	root/root	usr/include/alsa/control_external.h
--rw-r--r--	root/root	usr/include/alsa/conv.h
 -rw-r--r--	root/root	usr/include/alsa/error.h
 -rw-r--r--	root/root	usr/include/alsa/global.h
 -rw-r--r--	root/root	usr/include/alsa/hwdep.h
 -rw-r--r--	root/root	usr/include/alsa/iatomic.h
 -rw-r--r--	root/root	usr/include/alsa/input.h
--rw-r--r--	root/root	usr/include/alsa/instr.h
 -rw-r--r--	root/root	usr/include/alsa/mixer.h
 -rw-r--r--	root/root	usr/include/alsa/mixer_abst.h
 -rw-r--r--	root/root	usr/include/alsa/output.h
@@ -32,10 +30,6 @@ drwxr-xr-x	root/root	usr/include/alsa/
 -rw-r--r--	root/root	usr/include/alsa/seq_midi_event.h
 -rw-r--r--	root/root	usr/include/alsa/seqmid.h
 drwxr-xr-x	root/root	usr/include/alsa/sound/
--rw-r--r--	root/root	usr/include/alsa/sound/ainstr_fm.h
--rw-r--r--	root/root	usr/include/alsa/sound/ainstr_gf1.h
--rw-r--r--	root/root	usr/include/alsa/sound/ainstr_iw.h
--rw-r--r--	root/root	usr/include/alsa/sound/ainstr_simple.h
 -rw-r--r--	root/root	usr/include/alsa/sound/asound_fm.h
 -rw-r--r--	root/root	usr/include/alsa/sound/emu10k1.h
 -rw-r--r--	root/root	usr/include/alsa/sound/hdsp.h
