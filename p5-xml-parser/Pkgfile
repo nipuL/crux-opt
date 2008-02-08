@@ -5,8 +5,8 @@
 # Depends on: expat, perl
 
 name=p5-xml-parser
-version=2.34
-release=5
+version=2.36
+release=1
 source=(http://cpan.develooper.com/modules/by-category/11_String_Lang_Text_Proc/XML/XML-Parser-$version.tar.gz)
 
 build() {
