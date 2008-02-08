@@ -1029,10 +1029,6 @@ drwxr-xr-x	root/root	usr/include/firefox/layout/
 -rw-r--r--	root/root	usr/include/firefox/layout/nsTextTransformer.h
 -rw-r--r--	root/root	usr/include/firefox/layout/nsTreeColFrame.h
 -rw-r--r--	root/root	usr/include/firefox/layout/nsTreeUtils.h
-drwxr-xr-x	root/root	usr/include/firefox/libbz2/
--rw-r--r--	root/root	usr/include/firefox/libbz2/bzlib.h
-drwxr-xr-x	root/root	usr/include/firefox/libmar/
--rw-r--r--	root/root	usr/include/firefox/libmar/mar.h
 drwxr-xr-x	root/root	usr/include/firefox/libreg/
 -rw-r--r--	root/root	usr/include/firefox/libreg/NSReg.h
 -rw-r--r--	root/root	usr/include/firefox/libreg/VerReg.h
@@ -3056,10 +3052,6 @@ drwxr-xr-x	root/root	usr/include/firefox/xpinstall/
 -rw-r--r--	root/root	usr/include/firefox/xpinstall/nsPIXPIStubHook.h
 -rw-r--r--	root/root	usr/include/firefox/xpinstall/nsSoftwareUpdateIIDs.h
 -rw-r--r--	root/root	usr/include/firefox/xpinstall/nsXPITriggerInfo.h
-drwxr-xr-x	root/root	usr/include/firefox/xpnet/
--rw-r--r--	root/root	usr/include/firefox/xpnet/nsFTPConn.h
--rw-r--r--	root/root	usr/include/firefox/xpnet/nsHTTPConn.h
--rw-r--r--	root/root	usr/include/firefox/xpnet/nsSocket.h
 drwxr-xr-x	root/root	usr/include/firefox/xul/
 -rw-r--r--	root/root	usr/include/firefox/xul/nsIXULPopupListener.h
 -rw-r--r--	root/root	usr/include/firefox/xul/nsXULAtomList.h
@@ -3084,15 +3076,8 @@ drwxr-xr-x	root/root	usr/include/firefox/xultmpl/
 -rw-r--r--	root/root	usr/include/firefox/xultmpl/nsIXULBuilderListener.h
 -rw-r--r--	root/root	usr/include/firefox/xultmpl/nsIXULSortService.h
 -rw-r--r--	root/root	usr/include/firefox/xultmpl/nsIXULTemplateBuilder.h
-drwxr-xr-x	root/root	usr/include/firefox/zlib/
--rw-r--r--	root/root	usr/include/firefox/zlib/mozzconf.h
--rw-r--r--	root/root	usr/include/firefox/zlib/zconf.h
--rw-r--r--	root/root	usr/include/firefox/zlib/zlib.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/firefox/
--rwxr-xr-x	root/root	usr/lib/firefox/LICENSE
--rwxr-xr-x	root/root	usr/lib/firefox/TestGtkEmbed
--rw-r--r--	root/root	usr/lib/firefox/bloaturls.txt
 -rw-r--r--	root/root	usr/lib/firefox/browserconfig.properties
 drwxr-xr-x	root/root	usr/lib/firefox/chrome/
 -rw-r--r--	root/root	usr/lib/firefox/chrome/browser.jar
@@ -3360,7 +3345,6 @@ drwxr-xr-x	root/root	usr/lib/firefox/defaults/profile/chrome/
 -rw-r--r--	root/root	usr/lib/firefox/defaults/profile/mimeTypes.rdf
 -rwxr-xr-x	root/root	usr/lib/firefox/defaults/profile/prefs.js
 -rw-r--r--	root/root	usr/lib/firefox/defaults/profile/search.rdf
--rw-r--r--	root/root	usr/lib/firefox/dependentlibs.list
 drwxr-xr-x	root/root	usr/lib/firefox/dictionaries/
 -rw-r--r--	root/root	usr/lib/firefox/dictionaries/en-US.aff
 -rw-r--r--	root/root	usr/lib/firefox/dictionaries/en-US.dic
@@ -3414,7 +3398,6 @@ drwxr-xr-x	root/root	usr/lib/firefox/init.d/
 -rwxr-xr-x	root/root	usr/lib/firefox/libxpcom_core.so
 -rwxr-xr-x	root/root	usr/lib/firefox/libxpistub.so
 -rwxr-xr-x	root/root	usr/lib/firefox/mangle
--rwxr-xr-x	root/root	usr/lib/firefox/mozilla-installer-bin
 -rwxr-xr-x	root/root	usr/lib/firefox/mozilla-xremote-client
 -rwxr-xr-x	root/root	usr/lib/firefox/nsinstall
 -rw-r--r--	root/root	usr/lib/firefox/old-homepage-default.properties
@@ -3593,8 +3576,6 @@ drwxr-xr-x	root/root	usr/lib/firefox/searchplugins/
 -rw-r--r--	root/root	usr/lib/firefox/searchplugins/google.xml
 -rw-r--r--	root/root	usr/lib/firefox/searchplugins/yahoo.xml
 -rwxr-xr-x	root/root	usr/lib/firefox/shlibsign
--rwxr-xr-x	root/root	usr/lib/firefox/updater
--rw-r--r--	root/root	usr/lib/firefox/updater.ini
 -rwxr-xr-x	root/root	usr/lib/firefox/xpcshell
 -rwxr-xr-x	root/root	usr/lib/firefox/xpicleanup
 -rwxr-xr-x	root/root	usr/lib/firefox/xpidl

@@ -46,7 +46,9 @@ build() {
 
 	chmod 644 $PKG/usr/lib/pkgconfig/$name-*.pc
 
+	# cleanup junk
 	rm -f $PKG/usr/lib/$name/README.txt $PKG/usr/lib/$name/init.d/README
+	rm -f $PKG/usr/lib/$name/{LICENSE,TestGtkEmbed,bloaturls.txt,dependentlibs.list}
 
 	# desktop entry/icon
 	install -D -m 0644 $SRC/$name.desktop \
