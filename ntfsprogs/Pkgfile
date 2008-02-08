@@ -5,13 +5,14 @@
 # Depends on: fuse
 
 name=ntfsprogs
-version=1.13.1
+version=2.0.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/linux-ntfs/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr \
+		--mandir=/usr/man \
 		--enable-fuse-module \
 		--disable-gnome-vfs
 	make

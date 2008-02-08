@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	sbin/
 lrwxrwxrwx	root/root	sbin/mkfs.ntfs -> /usr/sbin/mkntfs
+lrwxrwxrwx	root/root	sbin/mount.fuse.ntfs -> /usr/bin/ntfsmount
 lrwxrwxrwx	root/root	sbin/mount.ntfs-fuse -> /usr/bin/ntfsmount
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
@@ -19,6 +20,7 @@ drwxr-xr-x	root/root	usr/include/ntfs/
 -rw-r--r--	root/root	usr/include/ntfs/collate.h
 -rw-r--r--	root/root	usr/include/ntfs/compat.h
 -rw-r--r--	root/root	usr/include/ntfs/compress.h
+-rw-r--r--	root/root	usr/include/ntfs/crypto.h
 -rw-r--r--	root/root	usr/include/ntfs/debug.h
 -rw-r--r--	root/root	usr/include/ntfs/device.h
 -rw-r--r--	root/root	usr/include/ntfs/device_io.h
@@ -36,11 +38,9 @@ drwxr-xr-x	root/root	usr/include/ntfs/
 -rw-r--r--	root/root	usr/include/ntfs/mft.h
 -rw-r--r--	root/root	usr/include/ntfs/mst.h
 -rw-r--r--	root/root	usr/include/ntfs/ntfstime.h
--rw-r--r--	root/root	usr/include/ntfs/rich.h
 -rw-r--r--	root/root	usr/include/ntfs/runlist.h
 -rw-r--r--	root/root	usr/include/ntfs/security.h
 -rw-r--r--	root/root	usr/include/ntfs/support.h
--rw-r--r--	root/root	usr/include/ntfs/tree.h
 -rw-r--r--	root/root	usr/include/ntfs/types.h
 -rw-r--r--	root/root	usr/include/ntfs/unistr.h
 -rw-r--r--	root/root	usr/include/ntfs/version.h
@@ -48,14 +48,16 @@ drwxr-xr-x	root/root	usr/include/ntfs/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libntfs.a
 -rwxr-xr-x	root/root	usr/lib/libntfs.la
-lrwxrwxrwx	root/root	usr/lib/libntfs.so -> libntfs.so.9.0.0
-lrwxrwxrwx	root/root	usr/lib/libntfs.so.9 -> libntfs.so.9.0.0
--rwxr-xr-x	root/root	usr/lib/libntfs.so.9.0.0
+lrwxrwxrwx	root/root	usr/lib/libntfs.so -> libntfs.so.10.0.0
+lrwxrwxrwx	root/root	usr/lib/libntfs.so.10 -> libntfs.so.10.0.0
+-rwxr-xr-x	root/root	usr/lib/libntfs.so.10.0.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/libntfs-gnomevfs.8.gz
+-rw-r--r--	root/root	usr/man/man8/libntfs.8.gz
 lrwxrwxrwx	root/root	usr/man/man8/mkfs.ntfs.8.gz -> mkntfs.8.gz
 -rw-r--r--	root/root	usr/man/man8/mkntfs.8.gz
+lrwxrwxrwx	root/root	usr/man/man8/mount.fuse.ntfs.8.gz -> ntfsmount.8.gz
 lrwxrwxrwx	root/root	usr/man/man8/mount.ntfs-fuse.8.gz -> ntfsmount.8.gz
 -rw-r--r--	root/root	usr/man/man8/ntfscat.8.gz
 -rw-r--r--	root/root	usr/man/man8/ntfsclone.8.gz
