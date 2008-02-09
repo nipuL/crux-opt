@@ -6,7 +6,7 @@
 name=opencdk
 version=0.5.7
 release=1
-source=(http://ftp.gnupg.org/gcrypt/alpha/gnutls/$name/$name-$version.tar.gz)
+source=(http://www.gnu.org/software/gnutls/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
