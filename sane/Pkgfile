@@ -6,7 +6,7 @@
 name=sane
 version=1.0.18
 release=3
-source=(ftp://ftp2.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
+source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
 
 build () {
     cd $name-backends-$version
