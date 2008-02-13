@@ -4,15 +4,13 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.5.4
-release=2
+version=3.5.6
+release=1
 
-source=(http://www.sqlite.org/sqlite-$version.tar.gz \
-        $name-without_tcl.patch)
+source=(http://www.sqlite.org/sqlite-$version.tar.gz)
 
 build () {
     cd sqlite-$version
-    patch -p1 -i $SRC/$name-without_tcl.patch
     ./configure --prefix=/usr \
                 --enable-threadsafe \
                 --disable-tcl
