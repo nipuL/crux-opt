@@ -4,8 +4,8 @@
 # Depends on:  libusb, libjpeg
 
 name=sane
-version=1.0.18
-release=3
+version=1.0.19
+release=1
 source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
 
 build () {
