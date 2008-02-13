@@ -4,7 +4,7 @@
 # Depends on:  openssl, gtk
 
 name=transmission
-version=1.04
+version=1.05
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
 
@@ -13,5 +13,5 @@ build() {
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/locale
+    rm -rf $PKG/usr/share/{locale,icons}
 }
