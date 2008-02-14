@@ -2,17 +2,17 @@
 # URL: http://www.lyx.org
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: tetex, qt3, imagemagick
+# Depends on: tetex, qt4, imagemagick
 
 name=lyx
-version=1.4.4
+version=1.5.3
 release=1
 source=(ftp://ftp.lyx.org/pub/$name/stable/$name-$version.tar.bz2)
 
 build(){
   cd $name-$version
-  export QTDIR=/usr/share/qt
-  ./configure --prefix=/usr --with-frontend=qt --disable-nls \
+  export QTDIR=/usr/share/qt4
+  ./configure --prefix=/usr --with-frontend=qt4 --disable-nls \
       --mandir=/usr/man
   make
   make DESTDIR=$PKG install
