@@ -2,7 +2,7 @@
 # Maintainer: Simone Rota, sip at crux dot nu
 # Description: a graphical login utility
 # URL: http://slim.berlios.de
-# Depends on: xorg-libxft, libjpeg, libpng
+# Depends on: xorg-libxft, xorg-libxmu, xorg-xauth, libjpeg, libpng
 
 name=slim
 version=1.3.0
