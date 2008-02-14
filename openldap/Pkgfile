@@ -1,7 +1,7 @@
 # Description: Lightweight Directory Access Protocol (LDAP) Toolkit
 # URL: http://www.openldap.org/
 # Packager: Daniel Mueller, daniel at danm dot de
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Richard Pöttler, richard dot poettler at gmail dot com
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap
