@@ -1,42 +1,108 @@
 # Description: Mozilla Network Security Services (NSS)
-# URL: http://www.mozilla.org/projects/security/pki/nss/
+# URL: http://www.mozilla.org/projects/security/pki/nss
+# Packager: Brett Goulder, predatorfreak at dcaf-security dot org
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
-# Packager: Simone Rota, sip at varlock dot com
-# Depends on: zip
 
 name=nss
-version=3.11.4
+version=3.11.9
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_RTM/src/$name-3.11.tar.gz \
-	ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_4_RTM/src/$name-$version.tar.gz \
-	$name-fixes.patch)
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/$name/releases/NSS_3_11_9_RTM/src/$name-$version.tar.gz \
+ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7/src/nspr-4.7.tar.gz
+nspr.pc.in
+nss.pc.in
+nss-config.in)
 
 build() {
 	export BUILD_OPT=1
-	cp -rp $name-$version/* $name-3.11
-	cd $name-3.11
-	patch -p1 < $SRC/$name-fixes.patch
-	#patch -p0 < $SRC/$name-$version-gcc-visibility.patch
-	cd mozilla/security/nss
-	make nss_build_all
-	make install
+	export XCFLAGS=${CFLAGS}
+	export PKG_CONFIG_ALLOW_SYSTEM_LIBS=1
+	export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
+	cd $name-$version
+	mv $SRC/nspr-4.7/mozilla/* mozilla/
+	./mozilla/nsprpub/configure \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--includedir=/usr/include/nspr \
+		--enable-optimize="${CFLAGS}" \
+		--disable-debug
+	make
+	export	MINOR_VERSION=7
+	make DESTDIR=$PKG install
+	cd $PKG/usr/lib
+	for file in *.so; do
+		mv ${file} ${file}.${MINOR_VERSION}
+		ln -s ${file}.${MINOR_VERSION} ${file}
+	done
+	cd $SRC/$name-$version
+
+	export NSPR_INCLUDE_DIR="/usr/include/nspr"
+	export NSPR_LIB_DIR="/usr/lib"
+
+	NSPR_LIBS=`./config/nspr-config --libs`
+	NSPR_CFLAGS=`./config/nspr-config --cflags`
+	NSPR_VERSION=`./config/nspr-config --version`
 	mkdir -p $PKG/usr/lib/pkgconfig
-	mkdir -p $PKG/usr/bin/
-	mkdir -p $PKG/usr/include/nspr
-	mkdir -p $PKG/usr/include/nss
-	find ../../dist/*/lib -type l \
-		\( -name "*.so" -o -name "*.chk" \) \
-		-exec cp -L {} $PKG/usr/lib \;
-	cp -Lr ../../dist/public/* $PKG/usr/include/
-	cp -Lr ../../dist/*/include/* $PKG/usr/include/nspr
-	cp -Lr ../../nsprpub/Linux*/config/nspr-config $PKG/usr/bin/
-	cp -Lr ../../nsprpub/lib/pkgconfig/nspr.pc $PKG/usr/lib/pkgconfig/
-	cp -Lr lib/pkgconfig/nss.pc $PKG/usr/lib/pkgconfig/
-	cp -Lr cmd/config/nss-config $PKG/usr/bin/
-	cp -Lr ../../dist/*/lib/libcrmf.a $PKG/usr/lib/
-	rm -rf $PKG/usr/include/nspr/md/
-	chmod 644 $PKG/usr/include/nspr/prvrsion.h
-	chmod +x $PKG/usr/bin/nss-config
-	chmod +x $PKG/usr/bin/nspr-config
+	sed $SRC/nspr.pc.in -e "s,%libdir%,/usr/lib," \
+		-e "s,%prefix%,/usr," \
+		-e "s,%exec_prefix%,/usr/bin," \
+		-e "s,%includedir%,/usr/include/nspr," \
+		-e "s,%NSPR_VERSION%,${NSPR_VERSION}," \
+		-e "s,%FULL_NSPR_LIBS%,${NSPR_LIBS}," \
+		-e "s,%FULL_NSPR_CFLAGS%,${NSPR_CFLAGS}," > $PKG/usr/lib/pkgconfig/nspr.pc
+	ln -sf nspr.pc $PKG/usr/lib/pkgconfig/mozilla-nspr.pc
+	install -d $PKG/usr/bin
+	install -m755 config/nspr-config $PKG/usr/bin/nspr-config
+
+	make -j 1 -C mozilla/security/coreconf
+	make -j 1 -C mozilla/security/dbm
+	make -j 1 -C mozilla/security/nss
+
+	install -d $PKG/usr/include/nss
+
+	NSS_VMAJOR=`grep "#define.*NSS_VMAJOR" mozilla/security/nss/lib/nss/nss.h | awk '{print $3}'`
+	NSS_VMINOR=`grep "#define.*NSS_VMINOR" mozilla/security/nss/lib/nss/nss.h | awk '{print $3}'`
+	NSS_VPATCH=`grep "#define.*NSS_VPATCH" mozilla/security/nss/lib/nss/nss.h | awk '{print $3}'`
+
+	sed $SRC/nss.pc.in -e "s,%libdir%,/usr/lib,g" \
+		-e "s,%prefix%,/usr,g" \
+		-e "s,%exec_prefix%,/usr/bin,g" \
+		-e "s,%includedir%,/usr/include/nss,g" \
+		-e "s,%NSPR_VERSION%,4.6.7,g" \
+		-e "s,%NSS_VERSION%,3.11.7,g" > \
+		$PKG/usr/lib/pkgconfig/nss.pc
+
+	ln -sf nss.pc $PKG/usr/lib/pkgconfig/mozilla-nss.pc
+	chmod 644 $PKG/usr/lib/pkgconfig/*.pc
+
+	sed $SRC/nss-config.in -e "s,@libdir@,/usr/lib,g" \
+		-e "s,@prefix@,/usr/bin,g" \
+		-e "s,@exec_prefix@,/usr/bin,g" \
+		-e "s,@includedir@,/usr/include/nss,g" \
+		-e "s,@MOD_MAJOR_VERSION@,${NSS_VMAJOR},g" \
+		-e "s,@MOD_MINOR_VERSION@,${NSS_VMINOR},g" \
+		-e "s,@MOD_PATCH_VERSION@,${NSS_VPATCH},g" \
+		> $PKG/usr/bin/nss-config
+	chmod 755 $PKG/usr/bin/nss-config
+
+	for file in libnss3.so libssl3.so libsmime3.so \
+		libsoftokn3.so libsoftokn3.chk libnssckbi.so \
+		libfreebl3.so libfreebl3.chk; do
+			install -m644 mozilla/dist/*.OBJ/lib/${file} $PKG/usr/lib/
+	done
+
+	for file in libcrmf.a libnssb.a libnssckfw.a; do
+		install -m644 mozilla/dist/*.OBJ/lib/${file} $PKG/usr/lib/
+	done
+
+	for file in certutil modutil pk12util signtool ssltap; do
+		install -m755 mozilla/dist/*.OBJ/bin/${file} $PKG/usr/bin/
+	done
+
+	install -m644 mozilla/dist/public/nss/*.h $PKG/usr/include/nss/
+
+	rm -rf $PKG/usr/bin/compile-et.pl \
+		$PKG/usr/bin/prerr.properties \
+		$PKG/usr/share/aclocal/nspr.m4 \
+		$PKG/usr/include/nspr/md
 }
