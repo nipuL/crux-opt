@@ -4,15 +4,17 @@
 # Depends on:  openssl
 
 name=vsftpd
-version=2.0.5
-release=2
+version=2.0.6
+release=1
 source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
-        $name-config.patch $name-$version-syscall.patch vsftpd)
+        $name-config.patch $name-syscall.patch vsftpd)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version-syscall.patch
+
+    patch -p1 -i $SRC/$name-syscall.patch
     patch -p1 -i $SRC/$name-config.patch
+
     make
     make DESTDIR=$PKG install
 
