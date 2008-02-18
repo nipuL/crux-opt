@@ -5,7 +5,7 @@
 
 name=nss
 version=3.11.9
-release=1
+release=2
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/$name/releases/NSS_3_11_9_RTM/src/$name-$version.tar.gz \
 ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7/src/nspr-4.7.tar.gz
 nspr.pc.in
@@ -36,8 +36,8 @@ build() {
 	done
 	cd $SRC/$name-$version
 
-	export NSPR_INCLUDE_DIR="/usr/include/nspr"
-	export NSPR_LIB_DIR="/usr/lib"
+	export NSPR_INCLUDE_DIR="$SRC/nss-$version/dist/include/nspr"
+	export NSPR_LIB_DIR="$SRC/nss-$version/dist/lib"
 
 	NSPR_LIBS=`./config/nspr-config --libs`
 	NSPR_CFLAGS=`./config/nspr-config --cflags`
