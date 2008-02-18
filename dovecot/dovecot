@@ -22,7 +22,7 @@ restart)
 	$0 start
 	;;
 reload)
-	kill -s SIGHUP $(pidof dovecot)
+	kill -s HUP $(pidof dovecot)
 	;;
 *)
 	echo "usage: $0 [start|stop|restart|reload]"
