@@ -16,7 +16,7 @@ restart)
 	$0 start
 	;;
 reload)
-	kill -s SIGHUP `pidof dnsmasq`
+	kill -s HUP $(pidof dnsmasq)
 	;;
 *)
 	echo "usage: $0 [start|stop|restart|reload]"
