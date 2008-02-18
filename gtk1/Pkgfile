@@ -2,7 +2,7 @@
 # URL:         http://www.gtk.org/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Daniel Mueller, daniel at danm dot de
-# Depends on:  xorg-libxi, glib1
+# Depends on:  xorg-libxi, xorg-libxt, glib1
 
 name=gtk1
 version=1.2.10
