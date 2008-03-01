@@ -12,7 +12,8 @@ source=(http://dl.sourceforge.net/sourceforge/$name/${name}_full-$version.tar.bz
 build() {
 	cd $name-$version
 	./configure	--prefix=/usr \
-			--disable-nls
+			--disable-nls \
+			--without-freetype-src
 	sed -i 's|^prefix.*|prefix ?= /usr|' Makefile
 	make
 	make install prefix=$PKG/usr
