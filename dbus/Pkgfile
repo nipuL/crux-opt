@@ -5,8 +5,8 @@
 # Depends on: expat
 
 name=dbus
-version=1.0.2
-release=4
+version=1.1.20
+release=1
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 	rc.dbus 30-dbus.launch)
 
@@ -15,6 +15,8 @@ build() {
 	./configure --prefix=/usr \
 		--with-dbus-daemondir=/usr/sbin \
 		--localstatedir=/var \
+		--libexecdir=/usr/lib/dbus \
+		--mandir=/usr/man \
 		--disable-static \
 		--with-dbus-user=messagebus \
 		--with-xml=expat \

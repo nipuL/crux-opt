@@ -15,6 +15,7 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/dbus-1/
 -rw-r--r--	root/root	usr/etc/dbus-1/session.conf
+drwxr-xr-x	root/root	usr/etc/dbus-1/session.d/
 -rw-r--r--	root/root	usr/etc/dbus-1/system.conf
 drwxr-xr-x	root/root	usr/etc/dbus-1/system.d/
 drwxr-xr-x	root/root	usr/include/
@@ -41,10 +42,13 @@ drwxr-xr-x	root/root	usr/lib/dbus-1.0/
 drwxr-xr-x	root/root	usr/lib/dbus-1.0/include/
 drwxr-xr-x	root/root	usr/lib/dbus-1.0/include/dbus/
 -rw-r--r--	root/root	usr/lib/dbus-1.0/include/dbus/dbus-arch-deps.h
+drwxr-xr-x	root/root	usr/lib/dbus/
+drwxr-xr-x	root/root	usr/lib/dbus/dbus-1/
+-rwsr-x---	root/messagebus	usr/lib/dbus/dbus-daemon-launch-helper
 -rwxr-xr-x	root/root	usr/lib/libdbus-1.la
-lrwxrwxrwx	root/root	usr/lib/libdbus-1.so -> libdbus-1.so.3.2.0
-lrwxrwxrwx	root/root	usr/lib/libdbus-1.so.3 -> libdbus-1.so.3.2.0
--rwxr-xr-x	root/root	usr/lib/libdbus-1.so.3.2.0
+lrwxrwxrwx	root/root	usr/lib/libdbus-1.so -> libdbus-1.so.3.4.0
+lrwxrwxrwx	root/root	usr/lib/libdbus-1.so.3 -> libdbus-1.so.3.4.0
+-rwxr-xr-x	root/root	usr/lib/libdbus-1.so.3.4.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/dbus-1.pc
 drwxr-xr-x	root/root	usr/man/
@@ -60,6 +64,7 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/dbus-1/
 drwxr-xr-x	root/root	usr/share/dbus-1/services/
+drwxr-xr-x	root/root	usr/share/dbus-1/system-services/
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwxr-xr-x	root/root	var/lib/dbus/
