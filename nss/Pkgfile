@@ -54,9 +54,9 @@ build() {
 	install -d $PKG/usr/bin
 	install -m755 config/nspr-config $PKG/usr/bin/nspr-config
 
-	make -j 1 -C mozilla/security/coreconf
-	make -j 1 -C mozilla/security/dbm
-	make -j 1 -C mozilla/security/nss
+	make -j 1 BUILD_OPT=1 XCFLAGS="$CFLAGS" -C mozilla/security/coreconf
+	make -j 1 BUILD_OPT=1 XCFLAGS="$CFLAGS" -C mozilla/security/dbm
+	make -j 1 BUILD_OPT=1 XCFLAGS="$CFLAGS" -C mozilla/security/nss
 
 	install -d $PKG/usr/include/nss
 
