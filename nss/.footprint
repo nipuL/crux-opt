@@ -161,19 +161,19 @@ drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libcrmf.a
 -rw-r--r--	root/root	usr/lib/libfreebl3.chk
 -rw-r--r--	root/root	usr/lib/libfreebl3.so
--rwxr-xr-x	root/root	usr/lib/libnspr4.a
+-rw-r--r--	root/root	usr/lib/libnspr4.a
 lrwxrwxrwx	root/root	usr/lib/libnspr4.so -> libnspr4.so.7
--rwxr-xr-x	root/root	usr/lib/libnspr4.so.7
+-rw-r--r--	root/root	usr/lib/libnspr4.so.7
 -rw-r--r--	root/root	usr/lib/libnss3.so
 -rw-r--r--	root/root	usr/lib/libnssb.a
 -rw-r--r--	root/root	usr/lib/libnssckbi.so
 -rw-r--r--	root/root	usr/lib/libnssckfw.a
--rwxr-xr-x	root/root	usr/lib/libplc4.a
+-rw-r--r--	root/root	usr/lib/libplc4.a
 lrwxrwxrwx	root/root	usr/lib/libplc4.so -> libplc4.so.7
--rwxr-xr-x	root/root	usr/lib/libplc4.so.7
--rwxr-xr-x	root/root	usr/lib/libplds4.a
+-rw-r--r--	root/root	usr/lib/libplc4.so.7
+-rw-r--r--	root/root	usr/lib/libplds4.a
 lrwxrwxrwx	root/root	usr/lib/libplds4.so -> libplds4.so.7
--rwxr-xr-x	root/root	usr/lib/libplds4.so.7
+-rw-r--r--	root/root	usr/lib/libplds4.so.7
 -rw-r--r--	root/root	usr/lib/libsmime3.so
 -rw-r--r--	root/root	usr/lib/libsoftokn3.chk
 -rw-r--r--	root/root	usr/lib/libsoftokn3.so
@@ -183,5 +183,3 @@ lrwxrwxrwx	root/root	usr/lib/pkgconfig/mozilla-nspr.pc -> nspr.pc
 lrwxrwxrwx	root/root	usr/lib/pkgconfig/mozilla-nss.pc -> nss.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/nspr.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/nss.pc
-drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/aclocal/
