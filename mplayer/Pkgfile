@@ -11,23 +11,14 @@
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0rc2
-release=3
-source=(http://www1.mplayerhq.hu/MPlayer/releases/MPlayer-$version.tar.bz2 \
+version=1.0rc2-r26172
+release=1
+source=(http://crux.nu/files/distfiles/$name-r26172.tar.bz2
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
-	http://www.mplayerhq.hu/MPlayer/patches/demux_audio_fix_20080129.diff \
-	http://www.mplayerhq.hu/MPlayer/patches/demux_mov_fix_20080129.diff \
-	http://www.mplayerhq.hu/MPlayer/patches/stream_cddb_fix_20080120.diff \
-	http://www.mplayerhq.hu/MPlayer/patches/url_fix_20080120.diff \
 	mplayer.conf)
 
 build() {
-	cd MPlayer-$version
-
-	patch -d libmpdemux -i $SRC/demux_audio_fix_20080129.diff
-	patch -d libmpdemux -i $SRC/demux_mov_fix_20080129.diff
-	patch -d stream -i $SRC/stream_cddb_fix_20080120.diff
-	patch -d stream -i $SRC/url_fix_20080120.diff
+	cd $name
 
 	# mplayer decides optimizations at configure time, don't use CRUX's
 	unset CFLAGS
