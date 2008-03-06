@@ -1,6 +1,6 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL: http://www.mozilla.org/projects/security/pki/nss/
-# Maintainer: Danny Rawlins, romster at shortcircuit dot net dot au
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
 # Packager: Simone Rota, sip at varlock dot com
 
 name=nss
