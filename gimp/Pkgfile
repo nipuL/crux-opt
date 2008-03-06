@@ -1,7 +1,7 @@
 # Description: The GIMP
 # URL: http://www.gimp.org/
 # Maintainer: Simone Rota, sip at crux dot nu
-# Depends on: gtk, libart_lgpl, xorg-libxmu, xorg-libxpm
+# Depends on: gtk, libart_lgpl, xorg-libxmu, xorg-libxpm, p5-xml-parser
 
 # Nice to have: gimp-print
 
