@@ -5,7 +5,7 @@
 # Depends on: expat, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
 
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis,
-# cdparanoia, win32-essential-codecs, faac, x264
+# cdparanoia, win32-essential-codecs, faac, x264, libdvdnav
 
 # More information can be found at http://www.mplayerhq.hu/DOCS/codecs.html and
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
