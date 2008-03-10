@@ -42,20 +42,20 @@ build() {
 	export NSPR_INCLUDE_DIR="$SRC/nss-$version/dist/include/nspr"
 	export NSPR_LIB_DIR="$SRC/nss-$version/dist/lib"
 
-	NSPR_LIBS="`./config/nspr-config --libs`"
-	NSPR_CFLAGS="`./config/nspr-config --cflags`"
-	NSPR_VERSION="`./config/nspr-config --version`"
+	NSPR_LIBS=`./config/nspr-config --libs`
+	NSPR_CFLAGS=`./config/nspr-config --cflags`
+	NSPR_VERSION=`./config/nspr-config --version`
 
 	install -d $PKG/usr/lib/pkgconfig
 
 	sed $SRC/nspr.pc.in \
-		-e "s,@libdir@,/usr/lib," \
-		-e "s,@prefix@,/usr," \
-		-e "s,@exec_prefix@,/usr/bin," \
-		-e "s,@includedir@,/usr/include/nspr," \
-		-e "s,@NSPR_VERSION@,$NSPR_VERSION," \
-		-e "s,@FULL_NSPR_LIBS@,$NSPR_LIBS," \
-		-e "s,@FULL_NSPR_CFLAGS@,$NSPR_CFLAGS," > \
+		-e "s,%libdir%,/usr/lib," \
+		-e "s,%prefix%,/usr," \
+		-e "s,%exec_prefix%,/usr/bin," \
+		-e "s,%includedir%,/usr/include/nspr," \
+		-e "s,%NSPR_VERSION%,$NSPR_VERSION," \
+		-e "s,%FULL_NSPR_LIBS%,$NSPR_LIBS," \
+		-e "s,%FULL_NSPR_CFLAGS%,$NSPR_CFLAGS," > \
 		$PKG/usr/lib/pkgconfig/nspr.pc
 
 	pushd $PKG/usr/lib/pkgconfig
@@ -70,17 +70,17 @@ build() {
 	find $PKG/usr/lib/ -type f -exec chmod a-x {} \;
 	install -d $PKG/usr/include/nss
 	file='mozilla/security/nss/lib/nss/nss.h'
-	NSS_VMAJOR="`grep "#define.*NSS_VMAJOR" $file | awk '{print $3}'`"
-	NSS_VMINOR="`grep "#define.*NSS_VMINOR" $file | awk '{print $3}'`"
-	NSS_VPATCH="`grep "#define.*NSS_VPATCH" $file | awk '{print $3}'`"
+	NSS_VMAJOR=`grep "#define.*NSS_VMAJOR" $file | awk '{print $3}'`
+	NSS_VMINOR=`grep "#define.*NSS_VMINOR" $file | awk '{print $3}'`
+	NSS_VPATCH=`grep "#define.*NSS_VPATCH" $file | awk '{print $3}'`
 
 	sed $SRC/nss.pc.in \
-		-e "s,@libdir@,/usr/lib,g" \
-		-e "s,@prefix@,/usr,g" \
-		-e "s,@exec_prefix@,/usr/bin,g" \
-		-e "s,@includedir@,/usr/include/nss,g" \
-		-e "s,@NSPR_VERSION@,4.6.7,g" \
-		-e "s,@NSS_VERSION@,3.11.7,g" > \
+		-e "s,%libdir%,/usr/lib,g" \
+		-e "s,%prefix%,/usr,g" \
+		-e "s,%exec_prefix%,/usr/bin,g" \
+		-e "s,%includedir%,/usr/include/nss,g" \
+		-e "s,%NSPR_VERSION%,$NSPR_VERSION,g" \
+		-e "s,%NSS_VERSION%,$version,g" > \
 		$PKG/usr/lib/pkgconfig/nss.pc
 
 	ln -sf nss.pc $PKG/usr/lib/pkgconfig/mozilla-nss.pc
