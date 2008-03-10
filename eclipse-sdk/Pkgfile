@@ -5,9 +5,9 @@
 # Depends on: gtk, jdk
 
 name=eclipse-sdk
-version=3.3.1.1
+version=3.3.2
 release=1
-source=(http://rm.mirror.garr.it/mirrors/eclipse/eclipse/downloads/drops/R-3.3.1.1-200710231652/eclipse-SDK-3.3.1.1-linux-gtk.tar.gz \
+source=(http://rm.mirror.garr.it/mirrors/eclipse/eclipse/downloads/drops/R-3.3.2-200802211800/eclipse-SDK-3.3.2-linux-gtk.tar.gz \
 	eclipse.sh)
 
 build() {
