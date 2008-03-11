@@ -4,17 +4,18 @@
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=nmap
-version=4.20
-release=1
+version=4.53
+release=2
 source=(http://download.insecure.org/$name/dist/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr \
-	--without-nmapfe \
-	--with-libpcre=included \
-	--with-libpcap=included
+    ./configure --prefix=/usr --libexecdir=/usr/lib \
+	--with-libpcre=included --with-liblua=included \
+	--with-libpcap=included --without-zenmap
     make
-    make prefix=$PKG/usr install
-    rm -rf $PKG/usr/share/applications
+    make DESTDIR=$PKG install
+    #install -m 644 docs/zenmap.1 $PKG/usr/man/man1
+    rm -rf $PKG/usr/bin/uninstall_zenmap
+    rm -rf $PKG/usr/share/zenmap/{locale,docs}
 }
