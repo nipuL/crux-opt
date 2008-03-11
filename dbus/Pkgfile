@@ -6,12 +6,14 @@
 
 name=dbus
 version=1.1.20
-release=1
+release=2
 source=(http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
-	rc.dbus 30-dbus.launch)
+rc.dbus 30-dbus.launch \
+$name-$version-fix-build.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-fix-build.patch
 	./configure --prefix=/usr \
 		--with-dbus-daemondir=/usr/sbin \
 		--localstatedir=/var \
