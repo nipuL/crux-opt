@@ -1,7 +1,7 @@
 # Description: The minimalist window manager
 # URL:         http://www.6809.org.uk/evilwm/
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  xorg-libxext
+# Depends on:  xorg-libxext, xorg-libxrandr
 
 name=evilwm
 version=1.0.0
