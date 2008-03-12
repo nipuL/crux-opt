@@ -4,26 +4,27 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=python
-version=2.5.1
+version=2.5.2
 release=1
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
         $name-$version.patch)
 
 build () {
     cd Python-$version
-    
-    patch -p1 < $SRC/$name-$version.patch
+
+    patch -p1 -i $SRC/$name-$version.patch
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --enable-shared \
                 --with-threads \
-                --enable-ipv6 
-    make 
+                --enable-ipv6
+    make
     make -j1 DESTDIR=$PKG install
-    
+
     ln -sf python2.5 $PKG/usr/bin/python
     ln -sf python2.5 $PKG/usr/lib/python
     ln -sf python2.5 $PKG/usr/include/python
-    
+
     rm -r $PKG/usr/lib/python/{bsddb,ctypes,email,sqlite3}/test
     rm -r $PKG/usr/lib/python/distutils/tests
     rm $PKG/usr/lib/python/{distutils,site-packages,test}/README
