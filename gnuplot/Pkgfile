@@ -5,7 +5,7 @@
 # Depends on:  ncurses, readline, libpng, xorg-libx11, xorg-libxau
 
 name=gnuplot
-version=4.2.2
+version=4.2.3
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gnuplot/$name-$version.tar.gz)
 
