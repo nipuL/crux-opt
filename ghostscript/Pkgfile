@@ -4,7 +4,7 @@
 # Depends on:  cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=8.61
+version=8.62
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2 \
         http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz) 
