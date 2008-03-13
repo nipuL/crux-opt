@@ -5,7 +5,7 @@
 # Depends on: 
 
 name=lighttpd
-version=1.4.18
+version=1.4.19
 release=1
 source=(http://www.$name.net/download/$name-$version.tar.gz \
         $name.conf \
@@ -14,7 +14,7 @@ source=(http://www.$name.net/download/$name-$version.tar.gz \
 build() {
     cd $name-$version
     ./configure --prefix=/usr --libdir=/usr/lib/$name --with-openssl \
-        --mandir=/usr/man
+        --mandir=/usr/man --without-pcre
     make
     make DESTDIR=$PKG install
 
