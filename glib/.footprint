@@ -4,8 +4,57 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/glib-gettextize
 -rwxr-xr-x	root/root	usr/bin/glib-mkenums
 -rwxr-xr-x	root/root	usr/bin/gobject-query
+-rwxr-xr-x	root/root	usr/bin/gtester
+-rw-r--r--	root/root	usr/bin/gtester-report
 drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/gio-unix-2.0/
+drwxr-xr-x	root/root	usr/include/gio-unix-2.0/gio/
+-rw-r--r--	root/root	usr/include/gio-unix-2.0/gio/gdesktopappinfo.h
+-rw-r--r--	root/root	usr/include/gio-unix-2.0/gio/gunixinputstream.h
+-rw-r--r--	root/root	usr/include/gio-unix-2.0/gio/gunixmounts.h
+-rw-r--r--	root/root	usr/include/gio-unix-2.0/gio/gunixoutputstream.h
 drwxr-xr-x	root/root	usr/include/glib-2.0/
+drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gappinfo.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gasyncresult.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gbufferedinputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gbufferedoutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gcancellable.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gcontenttype.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gdatainputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gdataoutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gdrive.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfile.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileattribute.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileenumerator.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileicon.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileinfo.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileinputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfilemonitor.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfilenamecompleter.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileoutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfilterinputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gfilteroutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gicon.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/ginputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gio.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gioenumtypes.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gioerror.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/giomodule.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gioscheduler.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gloadableicon.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gmemoryinputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gmemoryoutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gmount.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gmountoperation.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gnativevolumemonitor.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/goutputstream.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gseekable.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gsimpleasyncresult.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gthemedicon.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gvfs.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gvolume.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gvolumemonitor.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib-object.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib.h
 drwxr-xr-x	root/root	usr/include/glib-2.0/glib/
@@ -17,6 +66,7 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/glib/
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gbase64.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gbookmarkfile.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gcache.h
+-rw-r--r--	root/root	usr/include/glib-2.0/glib/gchecksum.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gcompletion.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gconvert.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gdataset.h
@@ -57,12 +107,14 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/glib/
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gstdio.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gstrfuncs.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gstring.h
+-rw-r--r--	root/root	usr/include/glib-2.0/glib/gtestutils.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gthread.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gthreadpool.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gtimer.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gtree.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gtypes.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gunicode.h
+-rw-r--r--	root/root	usr/include/glib-2.0/glib/gurifuncs.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gutils.h
 -rw-r--r--	root/root	usr/include/glib-2.0/glib/gwin32.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gmodule.h
@@ -88,23 +140,29 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/include/
 -rw-r--r--	root/root	usr/lib/glib-2.0/include/glibconfig.h
+-rwxr-xr-x	root/root	usr/lib/libgio-2.0.la
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.0.0
 -rwxr-xr-x	root/root	usr/lib/libglib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.1400.6
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.1400.6
--rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.1400.6
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.1600.1
 -rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.1400.6
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.1400.6
--rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.1400.6
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.1600.1
 -rwxr-xr-x	root/root	usr/lib/libgobject-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.1400.6
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.1400.6
--rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.1400.6
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.1600.1
 -rwxr-xr-x	root/root	usr/lib/libgthread-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.1400.6
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.1400.6
--rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.1400.6
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.1600.1
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.1600.1
+-rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.1600.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/gio-2.0.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/gio-unix-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/glib-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gmodule-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gmodule-export-2.0.pc
