@@ -4,7 +4,7 @@
 # Depends on: openssl
 
 name=lftp
-version=3.6.3
+version=3.7.0
 release=1
 source=(ftp://ftp.130th.net/pub/mirror/$name/$name-$version.tar.bz2)
 
