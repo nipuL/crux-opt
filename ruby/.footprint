@@ -316,6 +316,10 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/rexml/encodings/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/encodings/UTF-16.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/encodings/UTF-8.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/entity.rb
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/rexml/formatters/
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/formatters/default.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/formatters/pretty.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/formatters/transitive.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/functions.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/instruction.rb
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/rexml/light/
@@ -341,6 +345,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/rexml/parsers/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/streamlistener.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/syncenumerator.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/text.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/undefinednamespaceexception.rb
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/rexml/validation/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/validation/relaxng.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rexml/validation/validation.rb
