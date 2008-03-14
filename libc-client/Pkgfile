@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=libc-client
-version=2007
+version=2007a
 release=1
 source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.Z)
 
