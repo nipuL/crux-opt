@@ -4,13 +4,13 @@
 # Depends on:  ghostscript, foomatic-filters
 
 name=hpijs
-version=2.7.7
+version=2.7.12
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
 build () {
     cd hplip-$version
-    
+
     ./configure --prefix=/usr \
                 --with-hpppddir=/usr/share/cups/model/HP \
                 --enable-hpijs-only-build \
