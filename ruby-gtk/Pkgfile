@@ -7,7 +7,7 @@
 
 name=ruby-gtk
 version=0.16.0
-release=2
+release=3
 source=(http://dl.sourceforge.net/ruby-gnome2/ruby-gtk2-$version.tar.gz \
         $name.diff)
 
