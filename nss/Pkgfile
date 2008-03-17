@@ -59,7 +59,6 @@ build() {
 		$PKG/usr/lib/pkgconfig/nspr.pc
 
 	pushd $PKG/usr/lib/pkgconfig
-	ln -s nspr.pc mozilla-nspr.pc
 	popd
 	install -D -m 0755 config/nspr-config $PKG/usr/bin/nspr-config
 
@@ -83,7 +82,6 @@ build() {
 		-e "s,@NSS_VERSION@,$version,g" > \
 		$PKG/usr/lib/pkgconfig/nss.pc
 
-	ln -sf nss.pc $PKG/usr/lib/pkgconfig/mozilla-nss.pc
 	chmod 0644 $PKG/usr/lib/pkgconfig/*.pc
 
 	sed $SRC/nss-config.in \

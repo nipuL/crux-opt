@@ -179,7 +179,5 @@ lrwxrwxrwx	root/root	usr/lib/libplds4.so -> libplds4.so.7
 -rw-r--r--	root/root	usr/lib/libsoftokn3.so
 -rw-r--r--	root/root	usr/lib/libssl3.so
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
-lrwxrwxrwx	root/root	usr/lib/pkgconfig/mozilla-nspr.pc -> nspr.pc
-lrwxrwxrwx	root/root	usr/lib/pkgconfig/mozilla-nss.pc -> nss.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/nspr.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/nss.pc
