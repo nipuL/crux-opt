@@ -11,6 +11,7 @@ source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
 	http://crux.nu/files/grub/$version/$name-$version-patches.tar.gz \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
 	http://crux.nu/files/grub/common/crux03.xpm.gz \
+	grub-ext2-ext3-inodesize.patch \
 	grub.conf.sample)
 
 build () {
@@ -68,6 +69,8 @@ build () {
 
 	# http://lists.gnu.org/archive/html/bug-grub/2005-04/msg00031.html
 	patch -p0 -i $SRC/$name-patches/$name-0.95-xfs-writable-strings.patch
+	# Fix a problem with ext2/ext3 filesystems that have a certain inode size.
+	patch -p1 -i $SRC/grub-ext2-ext3-inodesize.patch
 
 	unset CXXFLAGS 
 	export CFLAGS="-Os" 
