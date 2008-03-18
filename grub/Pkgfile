@@ -6,7 +6,7 @@
 
 name=grub
 version=0.97
-release=2
+release=3
 source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
 	http://crux.nu/files/grub/$version/$name-$version-patches.tar.gz \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
