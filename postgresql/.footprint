@@ -792,6 +792,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/Kentucky/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Maceio
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Managua
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Manaus
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/Marigot
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Martinique
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Mazatlan
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Mendoza
@@ -833,6 +834,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/North_Dakota/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Sao_Paulo
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Scoresbysund
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Shiprock
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/St_Barthelemy
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/St_Johns
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/St_Kitts
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/St_Lucia
