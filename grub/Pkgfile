@@ -6,12 +6,11 @@
 
 name=grub
 version=0.97
-release=3
+release=4
 source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
-	http://crux.nu/files/grub/$version/$name-$version-patches.tar.gz \
+	http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2 \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
 	http://crux.nu/files/grub/common/crux03.xpm.gz \
-	grub-ext2-ext3-inodesize.patch \
 	grub.conf.sample)
 
 build () {
@@ -20,60 +19,13 @@ build () {
 	# automake 1.10 fix
 	sed -i '19i\AM_PROG_AS' configure.ac
 
-	# Apply Fedora Core patches
-	PATCH_LIST=(
-		0.93-configfile
-		0.90-symlinkmenulst
-		0.97-install.in
-		0.94-installcopyonly
-		0.94-addsyncs
-		0.95-staticcurses
-		0.93-endedit
-		0.90-append
-		0.97-once
-		0.95-graphics
-		0.91-splashimagehelp
-		0.93-graphics-bootterm
-		0.95-hiddenmenu-tweak
-		0.93-special-device-names
-		0.94-i2o
-		0.95-moreraid
-		0.94-initrdmax
-		0.95-odirect
-		0.95-geometry-26kernel
-		0.95-md
-		0.95-md-rework
-		0.95-xpmjunk
-		0.95-splash-error-term
-		0.97-nxstack
-		0.97-nx-multiinstall
-		0.97-mdadm-path
-		0.95-md-mbr
-		0.97-gcc4
-		0.95-nonmbr
-		0.95-recheck-bad
-		0.97-prototypes
-		0.97-datadir
-		0.97-dmraid
-		0.97-dmraid-recheck-bad
-		0.97-dmraid-partition-names
-		0.97-mactel-kbd
-		0.97-stderr
-		0.97-mpath
-	)
-
-	for PATCH in ${PATCH_LIST[@]}
-	do
-		patch -p1 -i $SRC/$name-patches/$name-$PATCH.patch
+	for i in $SRC/*.patch; do
+	 patch -p1 -i $i
 	done
 
-	# http://lists.gnu.org/archive/html/bug-grub/2005-04/msg00031.html
-	patch -p0 -i $SRC/$name-patches/$name-0.95-xfs-writable-strings.patch
-	# Fix a problem with ext2/ext3 filesystems that have a certain inode size.
-	patch -p1 -i $SRC/grub-ext2-ext3-inodesize.patch
-
-	unset CXXFLAGS 
-	export CFLAGS="-Os" 
+	# We really shouldn't optimise GRUB at all.
+	unset CXXFLAGS
+	unset CFLAGS
     
 	autoreconf --install --force
 
