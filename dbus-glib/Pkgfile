@@ -5,14 +5,12 @@
 # Depends on: dbus, glib
 
 name=dbus-glib
-version=0.72
+version=0.74
 release=1
-source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz \
-	$name-$version.patch)
+source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -p1 -i $SRC/$name-$version.patch
 	./configure --prefix=/usr \
 		--disable-static \
 		--with-xml=expat
