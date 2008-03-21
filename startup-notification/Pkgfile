@@ -1,7 +1,7 @@
 # Description: Startup notification library.
 # URL: http://freedesktop.org/wiki/Software/startup-notification
 # Maintainer: Simone Rota, sip at crux dot nu
-# Depends on: xorg-libsm, xorg-libx11
+# Depends on: xorg-libsm, xorg-libx11, xorg-lobxt
 
 name=startup-notification
 version=0.8
