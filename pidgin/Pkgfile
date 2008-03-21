@@ -1,7 +1,7 @@
 # Description: A multi-protocol instant messaging client
 # URL: http://pidgin.im/
 # Maintainer: Simone Rota, sip at crux dot nu
-# Depends on: nss, startup-notification
+# Depends on: nss, startup-notification, p5-xml-parser, gtk
 
 name=pidgin
 version=2.4.0
