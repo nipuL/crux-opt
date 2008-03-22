@@ -19,9 +19,9 @@ POST-INSTALL
 	Now it's time to create your own "boot menu":
 
 	# # Copy sample file
-	# cp /boot/grub/grub.conf.sample /boot/grub/grub.conf
+	# cp /boot/grub/menu.lst.sample /boot/grub/menu.lst
 	# # Modify it for your system 
-	# vi /boot/grub/grub.conf
+	# vi /boot/grub/menu.lst
 	
 	For more information about setting up your own grub boot menu file:
 	http://www.gnu.org/manual/grub-0.92/html_mono/grub.html#Configuration
@@ -42,9 +42,8 @@ POST-INSTALL
 
 PRECAUTION
 
-	Installing a new boot manager is like modifiying the partition table 
+	Installing a new boot manager is like modifying the partition table 
 	or installing a new system kernel. Please create a rescue disk first :)
-	This is a heavily patched version of grub - Use it at your own risk !
 	
-Matt Housh	<jaeger@crux.nu>
+Brett Goulder	<predatorfreak@dcaf-security.org>
 

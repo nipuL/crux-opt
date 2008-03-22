@@ -6,12 +6,12 @@
 
 name=grub
 version=0.97
-release=4
+release=5
 source=(ftp://alpha.gnu.org/gnu/grub/$name-$version.tar.gz \
 	http://crux.nu/files/grub/0.97/$name-$version-patches-2.tar.bz2 \
 	http://crux.nu/files/grub/common/crux02.xpm.gz \
 	http://crux.nu/files/grub/common/crux03.xpm.gz \
-	grub.conf.sample)
+	menu.lst.sample)
 
 build () {
 	cd $name-$version
@@ -30,6 +30,7 @@ build () {
 	autoreconf --install --force
 
 	./configure --prefix=/usr \
+		--libdir=/usr/share \
 		--mandir=/usr/man \
 		--sbindir=/sbin \
 		--disable-nls \
@@ -40,5 +41,5 @@ build () {
 	rm -rf $PKG/usr/share/info
 
 	mkdir -p $PKG/boot/grub
-	install -m 644 $SRC/{crux*,grub.conf.sample} $PKG/boot/grub/
+	install -m 644 $SRC/{crux*,menu.lst.sample} $PKG/boot/grub/
 }
