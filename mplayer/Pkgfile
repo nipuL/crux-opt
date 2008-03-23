@@ -12,7 +12,7 @@
 
 name=mplayer
 version=1.0rc2-r26172
-release=1
+release=2
 source=(http://crux.nu/files/distfiles/$name-r26172.tar.bz2
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
@@ -20,8 +20,8 @@ source=(http://crux.nu/files/distfiles/$name-r26172.tar.bz2
 build() {
 	cd $name
 
-	# mplayer decides optimizations at configure time, don't use CRUX's
-	unset CFLAGS
+	# Keep in line with mplayer CFLAGS, but allow people to set their own march/mtune values.
+	export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
 	./configure --prefix=/usr \
 		--mandir=/usr/man \
 		--win32codecsdir=/usr/lib/win32 \
