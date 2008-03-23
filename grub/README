@@ -47,10 +47,12 @@ POST-INSTALL
 
 	Last but not least, install/enable the boot manager:
 
+	# # If the boot partition is mounted, you must specify --stage2, like below.
+	# # Otherwise, you may remove this.
 	# # Run grub
 	# grub
 	grub> root (hdX,Y)
-	grub> setup (hdX)
+	grub> setup --stage2=/boot/grub/stage2 (hdX)
 	grub> quit
 
 	Please correct the path and device names according to your configuration. Also
