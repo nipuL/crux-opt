@@ -2,7 +2,7 @@
 # URL: http://glade.gnome.org/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: glib, atk, gtk, libxml2, python, pkg-config
+# Depends on: gtk, python, pkg-config
 # Group: gnome
 
 name=libglade
