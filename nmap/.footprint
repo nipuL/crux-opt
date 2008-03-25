@@ -19,6 +19,7 @@ drwxr-xr-x	root/root	usr/share/nmap/
 -rw-r--r--	root/root	usr/share/nmap/nmap.dtd
 -rw-r--r--	root/root	usr/share/nmap/nmap.xsl
 drwxr-xr-x	root/root	usr/share/nmap/nselib/
+-rw-r--r--	root/root	usr/share/nmap/nselib/http.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/ipOps.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/listop.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/match.lua
@@ -26,6 +27,7 @@ drwxr-xr-x	root/root	usr/share/nmap/nselib/
 -rw-r--r--	root/root	usr/share/nmap/nselib/shortport.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/stdnse.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/strbuf.lua
+-rw-r--r--	root/root	usr/share/nmap/nselib/tab.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/url.lua
 drwxr-xr-x	root/root	usr/share/nmap/scripts/
 -rw-r--r--	root/root	usr/share/nmap/scripts/HTTPAuth.nse

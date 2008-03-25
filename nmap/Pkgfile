@@ -1,21 +1,22 @@
 # Description: Utility for network exploration or security auditing
-# URL: http://www.insecure.org/nmap
+# URL: http://nmap.org
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=nmap
-version=4.53
-release=2
-source=(http://download.insecure.org/$name/dist/$name-$version.tar.bz2)
+version=4.60
+release=1
+source=(http://nmap.org/dist/$name-$version.tar.bz2)
+
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --libexecdir=/usr/lib \
+    ./configure --prefix=/usr --libexecdir=/usr/lib --mandir=/usr/man \
 	--with-libpcre=included --with-liblua=included \
 	--with-libpcap=included --without-zenmap
     make
     make DESTDIR=$PKG install
-    #install -m 644 docs/zenmap.1 $PKG/usr/man/man1
-    rm -rf $PKG/usr/bin/uninstall_zenmap
-    rm -rf $PKG/usr/share/zenmap/{locale,docs}
+    rm -rf $PKG/usr/man/man1/zenmap.*
+    
+    
 }
