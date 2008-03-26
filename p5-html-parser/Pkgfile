@@ -14,6 +14,7 @@ build() {
 	echo "no" | perl Makefile.PL
 	make OPTIMIZE="$CFLAGS"
 	make DESTDIR=$PKG install
-	find ${PKG} -name perllocal.pod -exec rm '{}' \;
-	find ${PKG} -name .packlist -exec rm '{}' \;
+	find ${PKG} -name .packlist -o \
+		-name perllocal.pod -o \
+		-name '*.bs' | xargs rm
 }
