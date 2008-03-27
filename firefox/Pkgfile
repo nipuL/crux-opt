@@ -17,7 +17,7 @@ build() {
 	export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
 	cd mozilla
-	patch -p0 -i $SRC/ldflags.patch
+	patch -p0 -i $SRC/firefox-2.0-add-ldflags.patch
 	sed -e "s/#CFLAGS#/$CFLAGS/" -e "s/#MAKEFLAGS/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
 	./configure
 	make
