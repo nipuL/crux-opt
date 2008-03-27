@@ -1,33 +1,30 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Packager: Matt Housh, jaeger at crux dot nu
-# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
-# Depends on: libidl, gtk
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org.
+# Depends on: libidl, gtk, libpng, libjpeg, zlib, nss
 
 name=firefox
-version=2.0.0.12
+version=2.0.0.13
 release=1
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
-	$name-2.0-add-ldflags.patch \
 	http://crux.nu/files/$name/$name.desktop \
 	http://crux.nu/files/$name/$name.png \
+	firefox-2.0-add-ldflags.patch \
 	mozconfig)
 
 build() {
 	export MOZ_CO_PROJECT=browser
-	export BUILD_OFFICIAL=1
-	export MOZILLA_OFFICIAL=1
 	export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
 	cd mozilla
-	patch -p0 -i $SRC/$name-2.0-add-ldflags.patch
-	sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
+	patch -p0 -i $SRC/ldflags.patch
+	sed -e "s/#CFLAGS#/$CFLAGS/" -e "s/#MAKEFLAGS/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
 	./configure
 	make
 
-	mkdir -p $PKG$MOZILLA_FIVE_HOME
+	install -d $PKG$MOZILLA_FIVE_HOME
 	cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
-	mkdir -p $PKG/usr/bin
+	install -d $PKG/usr/bin
 	ln -s /usr/lib/$name/$name $PKG/usr/bin/$name
 
 	# devel stuff
@@ -47,14 +44,16 @@ build() {
 	chmod 644 $PKG/usr/lib/pkgconfig/$name-*.pc
 
 	# cleanup junk
-	rm -f $PKG/usr/lib/$name/README.txt $PKG/usr/lib/$name/init.d/README
-	rm -f $PKG/usr/lib/$name/{LICENSE,TestGtkEmbed,bloaturls.txt,dependentlibs.list}
+	rm -rfv $PKG/usr/lib/$name/README.txt $PKG/usr/lib/$name/init.d/
+	rm -rf $PKG/usr/lib/$name/{LICENSE,TestGtkEmbed,bloaturls.txt,dependentlibs.list}
+	rm -rf $PKG/usr/lib/$name/res/samples $PKG/usr/lib/$name/res/throbber
+	rm -rf $PKG/usr/include/$name/system_wrappers
 
 	# desktop entry/icon
 	install -D -m 0644 $SRC/$name.desktop \
 		$PKG/usr/share/applications/$name.desktop
 	install -D -m 0644 $SRC/$name.png $PKG/usr/share/pixmaps/$name.png
-
+	
 	# fix file permissions since version 2.0.0.8
 	find $PKG/usr/include/firefox -type f -exec chmod g+r,a+r {} \;
 	find $PKG/usr/include/firefox -type f -perm -u=x -exec chmod g+x,a+x {} \; # no code in headerfiles!
