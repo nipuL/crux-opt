@@ -11,6 +11,7 @@ source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
+	export PATH="$PATH:/usr/sbin"
 	./configure --prefix=/usr \
 		--disable-static \
 		--with-xml=expat
