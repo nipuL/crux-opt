@@ -18,7 +18,7 @@ build() {
 
 	cd mozilla
 	patch -p0 -i $SRC/firefox-2.0-add-ldflags.patch
-	sed -e "s/#CFLAGS#/$CFLAGS/" -e "s/#MAKEFLAGS/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
+	sed -e "s/#CFLAGS#/$CFLAGS/" -e "s/#MAKEFLAGS#/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
 	./configure
 	make
 
