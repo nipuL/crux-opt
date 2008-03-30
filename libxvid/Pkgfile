@@ -2,6 +2,7 @@
 # URL: http://www.xvid.org/
 # Packager: Matt Housh, jaeger at crux dot nu
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Nice to have: yasm
 
 name=libxvid
 version=1.1.3
