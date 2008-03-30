@@ -1,0 +1,16 @@
+# Description: A complete rewrite of the NASM assembler under the new BSD License
+# URL: http://www.tortall.net/projects/yasm/
+# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Packager: Brett Goulder, predatorfreak at dcaf-security dot org
+
+name=yasm
+version=0.6.2
+release=1
+source=(http://www.tortall.net/projects/yasm/releases/$name-$version.tar.gz)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
