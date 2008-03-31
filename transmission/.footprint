@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/benc2php
 -rwxr-xr-x	root/root	usr/bin/transmission
 -rwxr-xr-x	root/root	usr/bin/transmission-daemon
 -rwxr-xr-x	root/root	usr/bin/transmission-proxy
