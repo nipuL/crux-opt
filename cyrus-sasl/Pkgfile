@@ -31,7 +31,7 @@ build(){
             --enable-cram \
             --enable-digest \
 	    --enable-shared 
-	make
+	make -j 1
 	make DESTDIR=$PKG install
 
 	mkdir -p \
