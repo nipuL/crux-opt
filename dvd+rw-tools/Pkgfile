@@ -5,7 +5,7 @@
 # Depends on: cdrtools
 
 name=dvd+rw-tools
-version=7.0
+version=7.1
 release=1
 source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz)
 
