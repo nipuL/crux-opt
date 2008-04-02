@@ -4,14 +4,12 @@
 # Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.5.0
+version=1.5.1
 release=1
-source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2 \
-        $name-$version.patch)
+source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    patch -p2 -i $SRC/$name-$version.patch
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --disable-nls \
