@@ -2,7 +2,7 @@
 # URL: http://www.tightvnc.org
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 # Packager: sten, nick dot steeves at shaw dot ca
-# Depends on: xorg
+# Depends on: libjpeg xorg-libxaw xorg-gccmakedep
 
 name=tightvnc
 version=1.3.9
