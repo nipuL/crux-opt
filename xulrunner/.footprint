@@ -239,6 +239,10 @@ drwxr-xr-x	root/root	usr/include/xulrunner/content/
 -rw-r--r--	root/root	usr/include/xulrunner/content/nsXBLAtomList.h
 -rw-r--r--	root/root	usr/include/xulrunner/content/nsXBLAtoms.h
 -rw-r--r--	root/root	usr/include/xulrunner/content/nsXMLNameSpaceMap.h
+drwxr-xr-x	root/root	usr/include/xulrunner/cookie/
+-rw-r--r--	root/root	usr/include/xulrunner/cookie/nsICookieAcceptDialog.h
+-rw-r--r--	root/root	usr/include/xulrunner/cookie/nsICookiePromptService.h
+-rw-r--r--	root/root	usr/include/xulrunner/cookie/nsIPermission.h
 drwxr-xr-x	root/root	usr/include/xulrunner/dbm/
 -rw-r--r--	root/root	usr/include/xulrunner/dbm/cdefs.h
 -rw-r--r--	root/root	usr/include/xulrunner/dbm/mcom_db.h
@@ -1554,6 +1558,11 @@ drwxr-xr-x	root/root	usr/include/xulrunner/shistory/
 -rw-r--r--	root/root	usr/include/xulrunner/shistory/nsISHistoryInternal.h
 drwxr-xr-x	root/root	usr/include/xulrunner/simple/
 -rw-r--r--	root/root	usr/include/xulrunner/simple/nsISimpleTest.h
+drwxr-xr-x	root/root	usr/include/xulrunner/spellchecker/
+-rw-r--r--	root/root	usr/include/xulrunner/spellchecker/mozIPersonalDictionary.h
+-rw-r--r--	root/root	usr/include/xulrunner/spellchecker/mozISpellCheckingEngine.h
+-rw-r--r--	root/root	usr/include/xulrunner/spellchecker/mozISpellI18NManager.h
+-rw-r--r--	root/root	usr/include/xulrunner/spellchecker/mozISpellI18NUtil.h
 drwxr-xr-x	root/root	usr/include/xulrunner/sqlite3/
 -rw-r--r--	root/root	usr/include/xulrunner/sqlite3/sqlite3.h
 -rw-r--r--	root/root	usr/include/xulrunner/sqlite3/sqlite3file.h
@@ -2087,6 +2096,7 @@ drwxr-xr-x	root/root	usr/lib/xulrunner/components/
 -rw-r--r--	root/root	usr/lib/xulrunner/components/content_xmldoc.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/content_xslt.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/content_xtf.xpt
+-rw-r--r--	root/root	usr/lib/xulrunner/components/cookie.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/directory.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/docshell.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/dom.xpt
@@ -2133,11 +2143,15 @@ drwxr-xr-x	root/root	usr/lib/xulrunner/components/
 -rw-r--r--	root/root	usr/lib/xulrunner/components/layout_xul_tree.xpt
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libauth.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libautoconfig.so
+-rwxr-xr-x	root/root	usr/lib/xulrunner/components/libcookie.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libfileview.so
+-rwxr-xr-x	root/root	usr/lib/xulrunner/components/libmyspell.so
+-rwxr-xr-x	root/root	usr/lib/xulrunner/components/libpermissions.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libpipboot.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libpipnss.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libpippki.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libsimpletest.so
+-rwxr-xr-x	root/root	usr/lib/xulrunner/components/libspellchecker.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libsystem-pref.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libtransformiix.so
 -rwxr-xr-x	root/root	usr/lib/xulrunner/components/libuniversalchardet.so
@@ -2194,6 +2208,7 @@ drwxr-xr-x	root/root	usr/lib/xulrunner/components/
 -rw-r--r--	root/root	usr/lib/xulrunner/components/saxparser.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/shistory.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/simple.xpt
+-rw-r--r--	root/root	usr/lib/xulrunner/components/spellchecker.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/storage.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/toolkitprofile.xpt
 -rw-r--r--	root/root	usr/lib/xulrunner/components/toolkitremote.xpt
@@ -2245,6 +2260,9 @@ drwxr-xr-x	root/root	usr/lib/xulrunner/defaults/profile/chrome/
 -rw-r--r--	root/root	usr/lib/xulrunner/defaults/profile/chrome/userChrome-example.css
 -rw-r--r--	root/root	usr/lib/xulrunner/defaults/profile/chrome/userContent-example.css
 -rw-r--r--	root/root	usr/lib/xulrunner/defaults/profile/localstore.rdf
+drwxr-xr-x	root/root	usr/lib/xulrunner/dictionaries/
+-rw-r--r--	root/root	usr/lib/xulrunner/dictionaries/en-US.aff
+-rw-r--r--	root/root	usr/lib/xulrunner/dictionaries/en-US.dic
 drwxr-xr-x	root/root	usr/lib/xulrunner/greprefs/
 -rw-r--r--	root/root	usr/lib/xulrunner/greprefs/all.js
 -rw-r--r--	root/root	usr/lib/xulrunner/greprefs/security-prefs.js
@@ -2472,6 +2490,10 @@ drwxr-xr-x	root/root	usr/share/idl/xulrunner/
 -rw-r--r--	root/root	usr/share/idl/xulrunner/inISearchProcess.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/jsdIDebuggerService.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/mozIJSSubScriptLoader.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/mozIPersonalDictionary.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/mozISpellCheckingEngine.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/mozISpellI18NManager.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/mozISpellI18NUtil.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/mozIStorageConnection.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/mozIStorageDataSet.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/mozIStorageFunction.idl
@@ -2621,10 +2643,12 @@ drwxr-xr-x	root/root	usr/share/idl/xulrunner/
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIConverterOutputStream.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookie.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookie2.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieAcceptDialog.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieConsent.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieManager.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieManager2.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookiePermission.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookiePromptService.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieService.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICookieStorage.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsICryptoFIPSInfo.idl
@@ -3121,6 +3145,7 @@ drwxr-xr-x	root/root	usr/share/idl/xulrunner/
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPasswordInternal.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPasswordManager.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPasswordManagerInternal.idl
+-rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPermission.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPermissionManager.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPersistentProperties2.idl
 -rw-r--r--	root/root	usr/share/idl/xulrunner/nsIPhonetic.idl
