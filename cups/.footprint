@@ -41,7 +41,6 @@ drwxr-xr-x	root/root	usr/include/cups/
 -rw-r--r--	root/root	usr/include/cups/dir.h
 -rw-r--r--	root/root	usr/include/cups/file.h
 -rw-r--r--	root/root	usr/include/cups/http.h
--rw-r--r--	root/root	usr/include/cups/i18n.h
 -rw-r--r--	root/root	usr/include/cups/image.h
 -rw-r--r--	root/root	usr/include/cups/ipp.h
 -rw-r--r--	root/root	usr/include/cups/language.h
