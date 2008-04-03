@@ -1,11 +1,11 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org.
-# Depends on: libidl, gtk, dbus-glib, sqlite3, perl, python
+# Depends on: libidl, gtk, perl, python
 
 name=xulrunner
 version=1.8.1.13
-release=2
+release=3
 source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version-source.tar.bz2 \
 	mozconfig)
 

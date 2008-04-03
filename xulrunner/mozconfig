@@ -7,6 +7,8 @@ ac_add_options --with-default-mozilla-five-home=/usr/lib/xulrunner
 ac_add_options --with-system-jpeg
 ac_add_options --with-system-zlib
 ac_add_options --with-system-bz2
+ac_add_options --with-system-nss
+ac_add_options --with-system-nspr
 ac_add_options --with-pthreads
 ac_add_options --disable-tests
 ac_add_options --disable-debug
