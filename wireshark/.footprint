@@ -42,6 +42,8 @@ drwxr-xr-x	root/root	usr/lib/wireshark/plugins/
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/ethercat.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/gryphon.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/gryphon.so
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/infiniband.la
+-rwxr-xr-x	root/root	usr/lib/wireshark/plugins/infiniband.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/irda.la
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/irda.so
 -rwxr-xr-x	root/root	usr/lib/wireshark/plugins/lwres.la

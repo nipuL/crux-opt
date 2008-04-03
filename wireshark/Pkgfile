@@ -6,7 +6,7 @@
 # Nice to have: libpcre
 
 name=wireshark
-version=0.99.8
+version=1.0.0
 release=1
 source=(http://www.$name.org/download/src/$name-$version.tar.bz2)
 
