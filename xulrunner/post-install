@@ -1,4 +1,6 @@
 #!/bin/sh
 
-/bin/echo "/usr/lib/xulrunner" >> /etc/ld.so.conf
-/sbin/ldconfig
+if [ -z "`grep "usr/lib/xulrunner" /etc/ld.so.conf`" ]; then
+	/bin/echo "/usr/lib/xulrunner" >> /etc/ld.so.conf
+	/sbin/ldconfig
+fi
