@@ -4,15 +4,15 @@
 # Depends on:  ncurses
 
 name=clex
-version=3.17
+version=3.18
 release=1
 source=(http://www.clex.sk/download/$name-$version.tar.gz \
         $name-bs.patch)
 
 build () {
     cd $name-$version
-    patch -p1 < $SRC/$name-bs.patch
-    ./configure --prefix=/usr
+    patch -p1 -i $SRC/$name-bs.patch
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
 }
