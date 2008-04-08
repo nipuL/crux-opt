@@ -1,4 +1,3 @@
 23bc5ff22fe4f9a208d65fbbfd489ad9  30-dbus.launch
-85d76404ef5ce9e86f7009dfd4c4b5a6  dbus-1.1.20-fix-build.patch
-c552b9bc4b69e4c602644abc21b7661e  dbus-1.1.20.tar.gz
+b57aa1ba0834cbbb1e7502dc2cbfacc2  dbus-1.2.1.tar.gz
 dd882e45b9397a5dbf8650057ee9a340  rc.dbus
