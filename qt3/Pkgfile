@@ -2,7 +2,7 @@
 # URL: http://www.trolltech.com
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Daniel Mueller, daniel at danm dot de
-# Depends on: freeglut, xorg-libxcursor, xorg-xrandr, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libice, libpng
+# Depends on: freeglut, xorg-libxcursor, xorg-xrandr, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libice, libpng, libmng
 
 name=qt3
 version=3.3.7
