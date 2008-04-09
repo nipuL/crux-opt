@@ -51,7 +51,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-grep
 -rwxr-xr-x	root/root	usr/bin/git-gui
 -rwxr-xr-x	root/root	usr/bin/git-hash-object
--rwxr-xr-x	root/root	usr/bin/git-help--browse
 -rwxr-xr-x	root/root	usr/bin/git-http-fetch
 -rwxr-xr-x	root/root	usr/bin/git-http-push
 -rwxr-xr-x	root/root	usr/bin/git-imap-send
@@ -137,6 +136,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/git-var
 -rwxr-xr-x	root/root	usr/bin/git-verify-pack
 -rwxr-xr-x	root/root	usr/bin/git-verify-tag
+-rwxr-xr-x	root/root	usr/bin/git-web--browse
 -rwxr-xr-x	root/root	usr/bin/git-whatchanged
 -rwxr-xr-x	root/root	usr/bin/git-write-tree
 -rwxr-xr-x	root/root	usr/bin/gitk
@@ -280,6 +280,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-var.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-verify-pack.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-verify-tag.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-web--browse.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-whatchanged.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-write-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/gitk.1.gz
@@ -307,6 +308,7 @@ drwxr-xr-x	root/root	usr/share/git-core/templates/hooks/
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-applypatch
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-commit
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/pre-rebase
+-rw-r--r--	root/root	usr/share/git-core/templates/hooks/prepare-commit-msg
 -rw-r--r--	root/root	usr/share/git-core/templates/hooks/update
 drwxr-xr-x	root/root	usr/share/git-core/templates/info/
 -rw-r--r--	root/root	usr/share/git-core/templates/info/exclude
@@ -349,6 +351,7 @@ drwxr-xr-x	root/root	usr/share/git-gui/lib/msgs/
 -rw-r--r--	root/root	usr/share/git-gui/lib/remote.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/remote_branch_delete.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/shortcut.tcl
+-rw-r--r--	root/root	usr/share/git-gui/lib/spellcheck.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/status_bar.tcl
 -rw-r--r--	root/root	usr/share/git-gui/lib/tclIndex
 -rw-r--r--	root/root	usr/share/git-gui/lib/transport.tcl
