@@ -1,18 +1,18 @@
-diff -Nru stunnel-4.16.orig/src/Makefile.in stunnel-4.16/src/Makefile.in
---- stunnel-4.16.orig/src/Makefile.in	2006-09-02 10:26:19.000000000 +0200
-+++ stunnel-4.16/src/Makefile.in	2006-09-02 10:26:34.000000000 +0200
-@@ -223,7 +223,7 @@
+diff -Nru stunnel-4.22.orig/src/Makefile.in stunnel-4.22/src/Makefile.in
+--- stunnel-4.22.orig/src/Makefile.in	2008-04-07 20:12:07.000000000 +0200
++++ stunnel-4.22/src/Makefile.in	2008-04-07 20:13:35.000000000 +0200
+@@ -224,7 +224,7 @@
  INCLUDES = -I/usr/kerberos/include
  
  # Additional compiler flags
--AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(prefix)/var/run/stunnel/stunnel.pid"'
-+AM_CPPFLAGS = -DLIBDIR='"$(libdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"/var/run/stunnel/stunnel.pid"'
+-AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)/stunnel"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
++AM_CPPFLAGS = -DLIBDIR='"$(pkglibdir)"' -DCONFDIR='"$(sysconfdir)"' -DPIDFILE='"$(localstatedir)/run/stunnel/stunnel.pid"'
  
  # Win32 executable
  EXTRA_DIST = stunnel.exe make.bat mingw.mak makece.bat evc.mak vc.mak nogui.c os2.mak
-diff -Nru stunnel-4.16.orig/tools/stunnel.conf-sample.in stunnel-4.16/tools/stunnel.conf-sample.in
---- stunnel-4.16.orig/tools/stunnel.conf-sample.in	2006-09-02 10:26:19.000000000 +0200
-+++ stunnel-4.16/tools/stunnel.conf-sample.in	2006-09-02 10:29:27.000000000 +0200
+diff -Nru stunnel-4.22.orig/tools/stunnel.conf-sample.in stunnel-4.22/tools/stunnel.conf-sample.in
+--- stunnel-4.22.orig/tools/stunnel.conf-sample.in	2008-04-07 20:12:07.000000000 +0200
++++ stunnel-4.22/tools/stunnel.conf-sample.in	2008-04-08 13:14:40.000000000 +0200
 @@ -3,16 +3,16 @@
  ; Please make sure you understand them (especially the effect of chroot jail)
  
@@ -34,12 +34,13 @@ diff -Nru stunnel-4.16.orig/tools/stunnel.conf-sample.in stunnel-4.16/tools/stun
  ; PID is created inside chroot jail
  pid = /stunnel.pid
  
-@@ -39,7 +39,7 @@
+@@ -39,7 +39,8 @@
  
  ; Some debugging stuff useful for troubleshooting
  ;debug = 7
 -;output = stunnel.log
 +output = /var/log/stunnel.log
++syslog = no
  
  ; Use it for client mode
  ;client = yes
