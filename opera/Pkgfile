@@ -5,9 +5,9 @@
 # Depends on: qt3
 
 name=opera
-version=9.26-20080218.6
+version=9.27-20080331.6
 release=1
-source=(http://opera.nsc.no/linux/926/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
+source=(http://opera.nsc.no/linux/927/final/en/i386/shared/$name-$version-shared-qt.i386-en.tar.bz2)
 
 build() {
     cd $name-$version-shared-qt.i386-en-*
