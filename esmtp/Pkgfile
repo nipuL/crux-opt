@@ -4,14 +4,15 @@
 # Depends on: libesmtp
 
 name=esmtp
-version=0.5.1
+version=0.6.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
-	CPPFLAGS=`libesmtp-config --cflags` ./configure --prefix=/usr
+	CPPFLAGS=`libesmtp-config --cflags` \
+		./configure --prefix=/usr --mandir=/usr/man
 
 	make
 	make DESTDIR=$PKG install
