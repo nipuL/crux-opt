@@ -1,0 +1,23 @@
+# Description: Portable Document Format Viewer with Search
+# Packager: Markus Ackermann, maol at symlink dot ch
+# Maintainer: Simone Rota, sip at crux dot nu
+# URL: http://www.adobe.com/
+# Depends on: gtk, libstdc++-compat
+
+name=acroread
+version=8.1.2
+release=1
+source=(http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/enu/AdobeReader_enu-$version-1.i486.tar.gz)
+PKGMK_NO_STRIP="yes"
+
+build() {
+	mkdir -p $PKG/usr/lib $PKG/usr/bin
+	cd $PKG/usr/lib
+	tar -xf $SRC/AdobeReader/COMMON.TAR
+	tar -xf $SRC/AdobeReader/ILINXR.TAR
+	rm -rf Adobe/Reader8/{help,HowTo}
+	rm -r Adobe/Reader8/Browser/{HowTo,install_browser_plugin}
+	find . -name PPKLite.api -exec rm {} \;	
+	ln -sf /usr/lib/Adobe/Reader8/bin/acroread  $PKG/usr/bin/acroread
+
+}
