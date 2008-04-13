@@ -1,5 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/firefox/
-drwxr-xr-x	root/root	usr/lib/firefox/plugins/
-lrwxrwxrwx	root/root	usr/lib/firefox/plugins/nppdf.so -> /usr/lib/Acrobat7/Browser/intellinux/nppdf.so
