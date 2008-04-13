@@ -4,7 +4,7 @@
 # URL: http://www.adobe.com/
 # Depends on: gtk, libstdc++-compat
 
-name=acroread
+name=adobereader
 version=8.1.2
 release=1
 source=(http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/enu/AdobeReader_enu-$version-1.i486.tar.gz)
