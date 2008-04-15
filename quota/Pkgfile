@@ -4,14 +4,13 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=quota
-version=3.15
-release=2
+version=3.16
+release=1
 source=(http://dl.sourceforge.net/sourceforge/linuxquota/$name-$version.tar.gz \
-        warnquota.conf ${name}_tcp_wrappers.patch)
+        warnquota.conf)
 
 build(){
     cd $name-tools
-    patch -p1 -i $SRC/quota_tcp_wrappers.patch
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --sysconfdir=/etc/quota \
