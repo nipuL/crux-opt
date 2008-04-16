@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/gdm-control
 -rwxr-xr-x	root/root	usr/bin/gnome-panel-control
 -rwxr-xr-x	root/root	usr/bin/openbox
 -rwxr-xr-x	root/root	usr/bin/openbox-gnome-session
@@ -31,14 +32,16 @@ drwxr-xr-x	root/root	usr/include/openbox/3.4/openbox/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libobparser.a
 -rwxr-xr-x	root/root	usr/lib/libobparser.la
-lrwxrwxrwx	root/root	usr/lib/libobparser.so -> libobparser.so.16.0.4
-lrwxrwxrwx	root/root	usr/lib/libobparser.so.16 -> libobparser.so.16.0.4
--rwxr-xr-x	root/root	usr/lib/libobparser.so.16.0.4
+lrwxrwxrwx	root/root	usr/lib/libobparser.so -> libobparser.so.21.0.1
+lrwxrwxrwx	root/root	usr/lib/libobparser.so.21 -> libobparser.so.21.0.1
+-rwxr-xr-x	root/root	usr/lib/libobparser.so.21.0.1
 -rw-r--r--	root/root	usr/lib/libobrender.a
 -rwxr-xr-x	root/root	usr/lib/libobrender.la
-lrwxrwxrwx	root/root	usr/lib/libobrender.so -> libobrender.so.16.0.4
-lrwxrwxrwx	root/root	usr/lib/libobrender.so.16 -> libobrender.so.16.0.4
--rwxr-xr-x	root/root	usr/lib/libobrender.so.16.0.4
+lrwxrwxrwx	root/root	usr/lib/libobrender.so -> libobrender.so.21.0.1
+lrwxrwxrwx	root/root	usr/lib/libobrender.so.21 -> libobrender.so.21.0.1
+-rwxr-xr-x	root/root	usr/lib/libobrender.so.21.0.1
+drwxr-xr-x	root/root	usr/lib/openbox/
+-rwxr-xr-x	root/root	usr/lib/openbox/xdg-autostart
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/obparser-3.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/obrender-3.0.pc
