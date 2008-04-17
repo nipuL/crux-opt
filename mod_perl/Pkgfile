@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=mod_perl
-version=2.0.3
+version=2.0.4
 release=1
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
@@ -14,10 +14,10 @@ build(){
     perl Makefile.PL \
          MP_USE_DSO=1 \
          MP_APXS=/usr/sbin/apxs
-   
+
     make
     make DESTDIR=$PKG install
-  
+
     rm -r $PKG/usr/bin
     rm -r $PKG/usr/lib/perl5/site_perl/5.8.?/linux/{Apache,Bundle}
     rm $PKG/usr/man/man3/{Bundle::*,Apache::*}
