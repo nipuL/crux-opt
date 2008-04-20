@@ -4,7 +4,7 @@
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=lsof
-version=4.78
+version=4.79
 release=1
 source=(ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_$version.tar.bz2)
 
