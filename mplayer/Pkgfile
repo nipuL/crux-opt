@@ -12,7 +12,7 @@
 
 name=mplayer
 version=1.0_rc2_p26450
-release=2
+release=1
 source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version.tar.bz2 \
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
