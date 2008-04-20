@@ -1,2 +1,3 @@
 e7aaca79c846e34cfe8111040bfee2d0  NVIDIA-Linux-x86-169.12-pkg0.run
+a6b6d9d7ff0306343be3fa40e72337fd  nvidia-169.12-2.6.25.patch
 544ac021f572c0aca5025dcca9d01510  nvidia-makefile.patch
