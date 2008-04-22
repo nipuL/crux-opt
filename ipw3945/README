@@ -1,4 +1,0 @@
-README for ipw3945
-
-REQUIREMENTS
-Enable the IEEE 802.11 subsystem in the kernel (CONFIG_IEEE80211).
