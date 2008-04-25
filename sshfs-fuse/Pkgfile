@@ -5,15 +5,13 @@
 # Depends on:  fuse, glib
 
 name=sshfs-fuse
-version=1.9
+version=2.0
 release=1
-source=(http://dl.sourceforge.net/sourceforge/fuse/$name-$version.tar.gz \
-        sshfs.1)
+source=(http://dl.sourceforge.net/sourceforge/fuse/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-sshnodelay
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
-    install -D -m 644 $SRC/sshfs.1 $PKG/usr/man/man1/sshfs.1
 }
