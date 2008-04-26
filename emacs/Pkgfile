@@ -1,7 +1,7 @@
 # Description: an extensible, customizable, self-documenting real-time display editor
 # URL: http://www.gnu.org/software/emacs/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Depends on: xorg, libtiff
+# Depends on: xorg, libtiff, ctags
 
 name=emacs
 version=22.2
@@ -25,7 +25,8 @@ build() {
 	find $PKG/usr/share/emacs -name "*.el.gz" | while read file; do
 		[ -f ${file%.gz}c ] && rm -f $file
 	done
-	rm $PKG/usr/bin/emacs-$version
+	rm -f $PKG/usr/bin/emacs-$version 
+	rm -f $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1}
 
 	chown -R root:root $PKG
 }

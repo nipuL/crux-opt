@@ -1,11 +1,9 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/b2m
--rwxr-xr-x	root/root	usr/bin/ctags
 -rwxr-xr-x	root/root	usr/bin/ebrowse
 -rwxr-xr-t	root/root	usr/bin/emacs
 -rwxr-xr-x	root/root	usr/bin/emacsclient
--rwxr-xr-x	root/root	usr/bin/etags
 -rwxr-xr-x	root/root	usr/bin/grep-changelog
 -rwxr-xr-x	root/root	usr/bin/rcs-checkin
 drwxr-xr-x	root/root	usr/lib/
@@ -28,10 +26,8 @@ drwxr-xr-x	root/root	usr/lib/emacs/22.2/i686-pc-linux-gnu/
 -rwxr-xr-x	root/root	usr/lib/emacs/22.2/i686-pc-linux-gnu/vcdiff
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/ctags.1.gz
 -rw-r--r--	root/root	usr/man/man1/emacs.1.gz
 -rw-r--r--	root/root	usr/man/man1/emacsclient.1.gz
--rw-r--r--	root/root	usr/man/man1/etags.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/emacs/
 drwxr-xr-x	root/root	usr/share/emacs/22.2/
