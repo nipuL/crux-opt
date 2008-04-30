@@ -6,7 +6,7 @@
 
 name=zsh
 version=4.3.6
-release=1
+release=2
 source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
 	http://www.grml.org/zsh/zsh-lovers.1)
 
