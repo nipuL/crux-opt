@@ -6,7 +6,7 @@
 name=libpng
 version=1.2.26
 release=1
-source=(ftp://ftp.simplesystems.org/pub/$name/png/src/$name-$version.tar.bz2)
+source=(ftp://ftp.simplesystems.org/pub/$name/png/src/history/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
