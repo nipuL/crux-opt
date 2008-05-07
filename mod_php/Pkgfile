@@ -1,28 +1,28 @@
-# Description: PHP5 module for the apache 2.0.x HTTP server  
+# Description: PHP DSO module for apache 
 # URL:         http://www.php.net
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  mysql, apache, libxml2
-# Group:       apache
+# Depends on:  apache libxml2
 
 name=mod_php
-version=5.2.5
+version=5.2.6
 release=1
-source=(http://www.php.net/distributions/php-$version.tar.bz2) 
+source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
 build () {
     cd php-$version
-    sed -i "s/-i -a/-i/" configure
-    ./configure --prefix=/usr \
-                --with-apxs2=/usr/sbin/apxs \
-                --with-config-file-path=/etc \
-                --with-mysql=/usr \
-                --with-zlib-dir=/usr/lib \
-                --with-openssl=/usr \
-                --without-pear \
-                --disable-pdo
+
+    local PHP_CONFIG="
+    --prefix=/usr \
+    --with-config-file-path=/etc/php \
+    --with-config-file-scan-dir=/etc/php/conf.d \
+    --disable-static --disable-debug --disable-pear"
+
+    EXTENSION_DIR=/usr/lib/php/extensions \
+    ./configure \
+        $PHP_CONFIG \
+        --with-apxs2=/usr/sbin/apxs \
+        --disable-cli
+
     make
-    make -j1 INSTALL_ROOT=$PKG install
-    rm -r $PKG/etc/apache
-    sed -i "/^extension_dir/s|\./|/usr/lib/php/extensions|" php.ini-dist
-    install -D -m 644 php.ini-dist $PKG/etc/php.ini
+    install -D -m 755 libs/libphp5.so $PKG/usr/lib/apache/libphp5.so
 }
