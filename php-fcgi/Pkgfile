@@ -16,7 +16,7 @@ build () {
     --prefix=/usr \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
-    --disable-static --disable-debug --disable-pear"
+    --disable-static --disable-debug --without-pear"
 
     EXTENSION_DIR=/usr/lib/php/extensions \
     ./configure \
