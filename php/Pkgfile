@@ -16,7 +16,7 @@ build () {
     --prefix=/usr \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
-    --disable-static --disable-debug --disable-pear"
+    --disable-static --disable-debug --without-pear"
 
     local PHP_SHARED="
     --enable-dba=shared --with-gdbm --with-db4 \
