@@ -5,12 +5,12 @@
 
 name=fuse
 version=2.7.3
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --disable-kernel-module
     make
     make DESTDIR=$PKG install
     rm -r $PKG/{dev,etc/init.d}
