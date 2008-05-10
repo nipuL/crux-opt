@@ -9,6 +9,7 @@ release=1
 source=(http://dl.sf.net/$name/$name-$version.tar.bz2)
 
 build(){
-	cd $name* && make KERNELPATH=/usr/src/linux-$(uname -r)
-	make DESTDIR=$PKG BINDIR=/usr/bin MANDIR=/usr/man install
+    cd $name* && make KERNELPATH=/lib/modules/$(uname -r)/build
+    make DESTDIR=$PKG BINDIR=/usr/bin MANDIR=/usr/man install
+    find $PKG/lib/modules/ -type f | xargs chmod 0644
 }
