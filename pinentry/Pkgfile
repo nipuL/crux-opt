@@ -7,11 +7,13 @@
 
 name=pinentry
 version=0.7.5
-release=1
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz)
+release=2
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.gz $name-$version.patch)
 
 build() {
     cd $name-$version
+
+    patch -p1 < $SRC/$name-$version.patch
         
     ./configure \
 	--prefix=/usr \
