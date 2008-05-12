@@ -4,7 +4,7 @@
 # Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc
-version=7.0
+version=7.1
 release=1
 source=(http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/gc-${version}.tar.gz)
 
