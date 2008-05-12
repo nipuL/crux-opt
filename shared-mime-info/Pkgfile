@@ -5,7 +5,7 @@
 # Group: gnome
 
 name=shared-mime-info
-version=0.22
+version=0.30
 release=1
 source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2)
 
@@ -18,9 +18,5 @@ build() {
 
 	./configure --prefix=/usr --mandir=/usr/man
 	make
-	make DESTDIR=$PKG install
-
-	install -d -m 755 $PKG/usr/lib/pkgconfig
-	mv $PKG/usr/share/pkgconfig/shared-mime-info.pc $PKG/usr/lib/pkgconfig
-	rmdir $PKG/usr/share/pkgconfig
+	make -j1 DESTDIR=$PKG install
 }
