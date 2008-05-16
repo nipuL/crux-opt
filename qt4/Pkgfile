@@ -6,7 +6,7 @@
 name=qt4
 version=4.4.0
 release=1
-source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.gz)
+source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
 build () {
     cd qt-x11-opensource-src-$version
