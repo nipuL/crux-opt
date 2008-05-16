@@ -5,7 +5,7 @@
 # Depends on: dbus-glib
 
 name=hal
-version=0.5.10
+version=0.5.11
 release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
 	rc.hald)
@@ -21,7 +21,9 @@ build() {
 		--with-hal-user=haldaemon \
 		--with-hal-group=haldaemon \
 		--with-dbus-sys=/usr/etc/dbus-1/system.d \
-		--with-hwdata=/usr/share
+		--with-hwdata=/usr/share \
+		--disable-policy-kit \
+		--disable-console-kit
 	sed -i -e '/device-manager/d' tools/Makefile
 	make
 	make DESTDIR=$PKG install
@@ -34,4 +36,6 @@ build() {
 		$PKG/usr/etc/dbus-1/system.d/hal.conf
 	rm -rf $PKG/usr/share/gtk-doc
 	mv $PKG/usr/etc/udev $PKG/etc/
+	mkdir -p $PKG/var/lib/hal
+	chown haldaemon:haldaemon $PKG/var/lib/hal
 }

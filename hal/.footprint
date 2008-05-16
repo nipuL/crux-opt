@@ -39,10 +39,12 @@ drwxr-xr-x	root/root	usr/lib/hal/
 -rwxr-xr-x	root/root	usr/lib/hal/hal-storage-unmount
 -rwxr-xr-x	root/root	usr/lib/hal/hal-system-power-pm-is-supported
 -rwxr-xr-x	root/root	usr/lib/hal/hal-system-power-pmu
+-rwxr-xr-x	root/root	usr/lib/hal/hal-system-setserial
 -rwxr-xr-x	root/root	usr/lib/hal/hal-system-sonypic
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-acpi
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-cpufreq
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-hid-ups
+-rwxr-xr-x	root/root	usr/lib/hal/hald-addon-imac-backlight
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-input
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-macbook-backlight
 -rwxr-xr-x	root/root	usr/lib/hal/hald-addon-macbookpro-backlight
@@ -59,9 +61,11 @@ drwxr-xr-x	root/root	usr/lib/hal/
 -rwxr-xr-x	root/root	usr/lib/hal/hald-probe-serial
 -rwxr-xr-x	root/root	usr/lib/hal/hald-probe-smbios
 -rwxr-xr-x	root/root	usr/lib/hal/hald-probe-storage
+-rwxr-xr-x	root/root	usr/lib/hal/hald-probe-video4linux
 -rwxr-xr-x	root/root	usr/lib/hal/hald-probe-volume
 -rwxr-xr-x	root/root	usr/lib/hal/hald-runner
 drwxr-xr-x	root/root	usr/lib/hal/scripts/
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-dockstation-undock
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-functions
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-luks-remove
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-luks-setup
@@ -76,7 +80,11 @@ drwxr-xr-x	root/root	usr/lib/hal/scripts/
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-power-shutdown
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-power-suspend
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-power-suspend-hybrid
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-wol-enable
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-wol-enabled
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/hal-system-wol-supported
 drwxr-xr-x	root/root	usr/lib/hal/scripts/linux/
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-dockstation-undock-linux
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-luks-remove-linux
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-luks-setup-linux
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-luks-teardown-linux
@@ -90,6 +98,10 @@ drwxr-xr-x	root/root	usr/lib/hal/scripts/linux/
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-system-power-shutdown-linux
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-system-power-suspend-hybrid-linux
 -rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-system-power-suspend-linux
+lrwxrwxrwx	root/root	usr/lib/hal/scripts/linux/hal-system-wol-enable-linux -> hal-system-wol-linux
+lrwxrwxrwx	root/root	usr/lib/hal/scripts/linux/hal-system-wol-enabled-linux -> hal-system-wol-linux
+-rwxr-xr-x	root/root	usr/lib/hal/scripts/linux/hal-system-wol-linux
+lrwxrwxrwx	root/root	usr/lib/hal/scripts/linux/hal-system-wol-supported-linux -> hal-system-wol-linux
 -rw-r--r--	root/root	usr/lib/libhal-storage.a
 -rwxr-xr-x	root/root	usr/lib/libhal-storage.la
 lrwxrwxrwx	root/root	usr/lib/libhal-storage.so -> libhal-storage.so.1.0.0
@@ -127,16 +139,20 @@ drwxr-xr-x	root/root	usr/share/hal/fdi/information/20thirdparty/
 drwxr-xr-x	root/root	usr/share/hal/fdi/policy/
 drwxr-xr-x	root/root	usr/share/hal/fdi/policy/10osvendor/
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-cpufreq.fdi
+-rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-dockstation.fdi
+-rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-imac-backlight.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-input-policy.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-macbook-backlight.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-macbookpro-utils.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-rfkill-switch.fdi
+-rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-tabletPCs.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-usbcsr-mice.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/10-x11-input.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/15-storage-luks.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/20-storage-methods.fdi
+-rw-r--r--	root/root	usr/share/hal/fdi/policy/10osvendor/30-wol.fdi
 drwxr-xr-x	root/root	usr/share/hal/fdi/policy/20thirdparty/
 drwxr-xr-x	root/root	usr/share/hal/fdi/preprobe/
 drwxr-xr-x	root/root	usr/share/hal/fdi/preprobe/10osvendor/
@@ -145,7 +161,7 @@ drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/cache/
 drwxr-xr-x	haldaemon/haldaemon	var/cache/hald/
 drwxr-xr-x	root/root	var/lib/
-drwx------	haldaemon/haldaemon	var/lib/hal/
+drwxr-xr-x	haldaemon/haldaemon	var/lib/hal/
 drwxr-xr-x	root/root	var/run/
 drwxr-xr-x	haldaemon/haldaemon	var/run/hald/
 drwxr-xr-x	root/root	var/run/hald/hald-local/
