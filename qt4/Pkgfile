@@ -44,7 +44,6 @@ build () {
     ln -s ../../lib/qt       $PKG/usr/share/qt4/plugins
     ln -s linux-g++          $PKG/usr/share/qt4/mkspecs/default
 
-    sed -i "s|-L$SRC/qt-x11-opensource-src-$version/lib ||g" $PKG/usr/lib/*.prl
     sed -i -e "s|-L$SRC/qt-x11-opensource-src-$version/lib ||g" \
            -e "s|$SRC/qt-x11-opensource-src-$version/bin|/usr/share/qt4/bin|g" \
 	$PKG/usr/lib/pkgconfig/*.pc
