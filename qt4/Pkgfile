@@ -11,8 +11,8 @@ source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar
 build () {
     cd qt-x11-opensource-src-$version
     
+    sed -i 's|X11R6/||g' mkspecs/*/*.conf
     sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++.conf
-    sed -i "s|-I. |$CXXFLAGS -I. |" qmake/Makefile.unix
     sed -i "s|read acceptance|acceptance=yes|" configure
     sed -i "s|INSTALLS += translations||" projects.pro
 
@@ -38,7 +38,6 @@ build () {
     rm -rf $PKG/usr/share/qt4/mkspecs/features/{mac,win32}
     rm -rf $PKG/usr/share/qt4/mkspecs/common/mac*
     rm -rf $PKG/usr/share/qt4/phrasebooks
-    sed -i 's|X11R6/||g' $PKG/usr/share/qt4/mkspecs/*/*.conf
 
     ln -s ../../include/qt4  $PKG/usr/share/qt4/include
     ln -s ../../lib          $PKG/usr/share/qt4/lib
