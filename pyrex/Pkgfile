@@ -5,13 +5,13 @@
 # Depends on: python
 
 name=pyrex
-version=0.9.6.4
+version=0.9.8
 release=1
 source=(http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/Pyrex-$version.tar.gz)
 
 build() {
 	cd Pyrex-$version
 	python setup.py install --root=$PKG
-	rm -rf $PKG/usr/lib/python2.5/site-packages/Pyrex/Mac
+	rm -rf $PKG/usr/lib/python2.5/site-packages/{*.egg-info,Pyrex/Mac}
 	chown -R root:root $PKG
 }

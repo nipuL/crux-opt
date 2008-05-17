@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/python2.5/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/
--rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex-0.9.6.4-py2.5.egg-info
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/
 drwxr-xr-x	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/
 -rw-r--r--	root/root	usr/lib/python2.5/site-packages/Pyrex/Compiler/Builtin.py
