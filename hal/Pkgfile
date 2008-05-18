@@ -6,7 +6,7 @@
 
 name=hal
 version=0.5.11
-release=3
+release=4
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
 	hal.conf
 	rc.hald)

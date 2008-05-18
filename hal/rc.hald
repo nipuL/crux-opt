@@ -5,7 +5,8 @@
 
 case $1 in
 	start)
-		/usr/sbin/hald --daemon=yes --use-syslog
+		# Run as haldaemon, not root.
+		su haldaemon -s /bin/sh -c '/usr/sbin/hald --daemon=yes --use-syslog'
 		;;
 	stop)
 		killall -q /usr/sbin/hald
