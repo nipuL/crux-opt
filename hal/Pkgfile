@@ -30,10 +30,8 @@ build() {
 	install -D -o root -g root -m 0755 $SRC/rc.hald \
 		$PKG/etc/rc.d/hald
 	rm -rf $PKG/usr/share/{doc,locale}
-	# delete pam_console stuff, enable plugdev group
-	# policies in place of uid 0
-	sed -i -e '48,55d' -e 's/user="0"/group="plugdev"/' \
-		$PKG/usr/etc/dbus-1/system.d/hal.conf
+	# enable plugdev group policies in place of uid 0
+	sed -i 's/user="root"/group="pludev"/' $PKG/usr/etc/dbus-1/system.d/hal.conf
 	rm -rf $PKG/usr/share/gtk-doc
 	mv $PKG/usr/etc/udev $PKG/etc/
 	mkdir -p $PKG/var/lib/hal
