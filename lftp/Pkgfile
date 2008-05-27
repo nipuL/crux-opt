@@ -4,25 +4,18 @@
 # Depends on: openssl
 
 name=lftp
-version=3.7.2
+version=3.7.3
 release=1
 source=(ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
+
 	./configure --prefix=/usr --disable-nls --with-openssl=/usr \
-	            --mandir=/usr/man
-
-	make -C src confpaths.h
-
-	echo "#undef SYSCONFDIR" >> src/confpaths.h
-	echo "#define SYSCONFDIR \"/usr/etc\"" >> src/confpaths.h
+	            --mandir=/usr/man --sysconfdir=/usr/etc
 
 	make
 	make DESTDIR=$PKG install
 
-	mkdir $PKG/usr/etc
-	mv $PKG/etc/lftp.conf $PKG/usr/etc
-	rmdir $PKG/etc
 	rm -r $PKG/usr/lib
 }

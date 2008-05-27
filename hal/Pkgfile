@@ -6,8 +6,9 @@
 
 name=hal
 version=0.5.11
-release=1
+release=5
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
+	hal.conf
 	rc.hald)
 
 build() {
@@ -30,12 +31,9 @@ build() {
 	install -D -o root -g root -m 0755 $SRC/rc.hald \
 		$PKG/etc/rc.d/hald
 	rm -rf $PKG/usr/share/{doc,locale}
-	# delete pam_console stuff, enable plugdev group
-	# policies in place of uid 0
-	sed -i -e '48,55d' -e 's/user="0"/group="plugdev"/' \
-		$PKG/usr/etc/dbus-1/system.d/hal.conf
 	rm -rf $PKG/usr/share/gtk-doc
 	mv $PKG/usr/etc/udev $PKG/etc/
+	cp $SRC/hal.conf $PKG/usr/etc/dbus-1/system.d/
 	mkdir -p $PKG/var/lib/hal
 	chown haldaemon:haldaemon $PKG/var/lib/hal
 }

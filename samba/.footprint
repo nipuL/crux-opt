@@ -142,6 +142,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_readonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_recycle.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_xattr_tdb.8.gz
 -rw-r--r--	root/root	usr/man/man8/winbindd.8.gz
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/nmbd

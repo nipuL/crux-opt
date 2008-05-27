@@ -4,7 +4,7 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.28a
+version=3.0.29
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
@@ -49,6 +49,7 @@ build () {
 
     # cleanup
     rm -r $PKG/usr/{var,lib/samba/*.msg}
+    rm $PKG/usr/man/man1/ldb*.1
     chmod -x $PKG/usr/include/*
 
     # remove swat
