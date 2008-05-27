@@ -5,7 +5,7 @@
 # Depends on: tetex, qt4, imagemagick
 
 name=lyx
-version=1.5.3
+version=1.5.5
 release=1
 source=(ftp://ftp.lyx.org/pub/$name/stable/$name-$version.tar.bz2)
 
@@ -19,5 +19,9 @@ build(){
 
   rm -rf $PKG/usr/info
   rm -rf $PKG/usr/share/lyx/examples
+
+  # remove localization files
+  rm -rf $PKG/usr/share/lyx/bind/??/ \
+         $PKG/usr/share/lyx/doc/??/
 }
   
