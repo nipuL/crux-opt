@@ -3,7 +3,7 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/samba
 drwxr-xr-x	root/root	etc/samba/
 drwxr-xr-x	root/root	etc/samba/private/
--rw-r--r--	root/root	etc/samba/smb.conf.default
+-rw-------	root/root	etc/samba/smb.conf.default
 drwxr-xr-x	root/root	lib/
 -rwxr-xr-x	root/root	lib/libnss_winbind.so
 lrwxrwxrwx	root/root	lib/libnss_winbind.so.2 -> libnss_winbind.so

@@ -1,0 +1,116 @@
+# https://bugzilla.samba.org/show_bug.cgi?id=5285
+
+From: Guenther Deschner <gd@samba.org>
+Date: Wed, 28 May 2008 11:20:16 +0000 (+0200)
+Subject: Fix Bug #5285. (libcap header mismatch)
+X-Git-Url: http://gitweb.samba.org/?p=samba.git;a=commitdiff_plain;h=d48bdc8f5de03b88d79685d2e89f0ed2f8207ef5
+
+Fix Bug #5285. (libcap header mismatch)
+
+Can someone with gpfs available test this ? The only codepath using this
+function is the modules/gpfs.c module. The fix resolves at least the build
+issues Samba has with recent kernel / libcap versions by using the portable
+cap_get_proc()/cap_set_proc() interface (instead of using capget/capset).
+
+Guenther
+---
+
+diff --git a/source/include/smb.h b/source/include/smb.h
+index 46afcde..13e9162 100644
+--- a/source/include/smb.h
++++ b/source/include/smb.h
+@@ -1710,7 +1710,8 @@ minimum length == 18.
+ 
+ enum smbd_capability {
+     KERNEL_OPLOCK_CAPABILITY,
+-    DMAPI_ACCESS_CAPABILITY
++    DMAPI_ACCESS_CAPABILITY,
++    LEASE_CAPABILITY
+ };
+ 
+ /* if a kernel does support oplocks then a structure of the following
+diff --git a/source/lib/system.c b/source/lib/system.c
+index b23aa04..de5f552 100644
+--- a/source/lib/system.c
++++ b/source/lib/system.c
+@@ -776,6 +776,11 @@ static BOOL set_process_capability(enum smbd_capability capability,
+ 			cap_vals[num_cap_vals++] = CAP_MKNOD;
+ #endif
+ 			break;
++		case LEASE_CAPABILITY:
++#ifdef CAP_LEASE
++			cap_vals[num_cap_vals++] = CAP_LEASE;
++#endif
++			break;
+ 	}
+ 
+ 	SMB_ASSERT(num_cap_vals <= ARRAY_SIZE(cap_vals));
+diff --git a/source/smbd/oplock_linux.c b/source/smbd/oplock_linux.c
+index 14db98c..c6c11a7 100644
+--- a/source/smbd/oplock_linux.c
++++ b/source/smbd/oplock_linux.c
+@@ -23,22 +23,6 @@
+ 
+ #if HAVE_KERNEL_OPLOCKS_LINUX
+ 
+-/* these can be removed when they are in glibc headers */
+-struct  cap_user_header {
+-	uint32 version;
+-	int pid;
+-} header;
+-struct cap_user_data {
+-	uint32 effective;
+-	uint32 permitted;
+-	uint32 inheritable;
+-} data;
+-
+-extern int capget(struct cap_user_header * hdrp,
+-		  struct cap_user_data * datap);
+-extern int capset(struct cap_user_header * hdrp,
+-		  const struct cap_user_data * datap);
+-
+ static SIG_ATOMIC_T signals_received;
+ #define FD_PENDING_SIZE 100
+ static SIG_ATOMIC_T fd_pending_array[FD_PENDING_SIZE];
+@@ -76,32 +60,6 @@ static void signal_handler(int sig, siginfo_t *info, void *unused)
+ 	sys_select_signal(RT_SIGNAL_LEASE);
+ }
+ 
+-/****************************************************************************
+- Try to gain a linux capability.
+-****************************************************************************/
+-
+-static void set_capability(unsigned capability)
+-{
+-#ifndef _LINUX_CAPABILITY_VERSION
+-#define _LINUX_CAPABILITY_VERSION 0x19980330
+-#endif
+-	header.version = _LINUX_CAPABILITY_VERSION;
+-	header.pid = 0;
+-
+-	if (capget(&header, &data) == -1) {
+-		DEBUG(3,("Unable to get kernel capabilities (%s)\n",
+-			 strerror(errno)));
+-		return;
+-	}
+-
+-	data.effective |= (1<<capability);
+-
+-	if (capset(&header, &data) == -1) {
+-		DEBUG(3,("Unable to set %d capability (%s)\n", 
+-			 capability, strerror(errno)));
+-	}
+-}
+-
+ /*
+  Call to set the kernel lease signal handler
+ */
+@@ -127,7 +85,7 @@ int linux_setlease(int fd, int leasetype)
+ 
+ 	ret = fcntl(fd, F_SETLEASE, leasetype);
+ 	if (ret == -1 && errno == EACCES) {
+-		set_capability(CAP_LEASE);
++		set_effective_capability(LEASE_CAPABILITY);
+ 		ret = fcntl(fd, F_SETLEASE, leasetype);
+ 	}
+ 
