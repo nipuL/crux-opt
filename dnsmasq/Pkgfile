@@ -3,17 +3,17 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=dnsmasq
-version=2.41
-release=2
+version=2.42
+release=1
 source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.gz \
         $name-config.patch dnsmasq)
 
 build () {
     cd $name-$version
 
-    patch -p1 < $SRC/$name-config.patch
+    patch -p1 -i $SRC/$name-config.patch
     make
-    make PREFIX=$PKG/usr install 
+    make PREFIX=$PKG/usr install
 
     install -D -m 755 $SRC/dnsmasq $PKG/etc/rc.d/dnsmasq
     install -m 644 dnsmasq.conf.example $PKG/etc/dnsmasq.conf
