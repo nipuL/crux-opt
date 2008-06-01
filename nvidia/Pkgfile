@@ -5,11 +5,10 @@
 # Depends on: xorg, gl-select
 
 name=nvidia
-version=169.12
+version=173.14.05
 release=2
 source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
-	$name-makefile.patch
-	$name-$version-2.6.25.patch)
+	$name-makefile.patch)
 
 build() {
 	sh NVIDIA-Linux-x86-$version-pkg0.run --extract-only
@@ -17,9 +16,6 @@ build() {
 
 	# patch Makefile.kbuild for normal users and no load during build
 	patch -p0 -i $SRC/$name-makefile.patch usr/src/nv/Makefile.kbuild
-	# Allow stable version to build with kernel's equal to or greater than
-	# 2.6.25
-	patch -p0 -i $SRC/$name-$version-2.6.25.patch
 
 	# create directories the Makefile expects
 	mkdir -p $PKG/usr/lib \
