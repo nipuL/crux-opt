@@ -4,13 +4,14 @@
 # Packager: Brett Goulder, predatorfreak at dcaf-security dot org
 
 name=yasm
-version=0.6.2
+version=0.7.1
 release=1
 source=(http://www.tortall.net/projects/yasm/releases/$name-$version.tar.gz)
 
 build () {
 	cd $name-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr \
+		--mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
 }
