@@ -11,7 +11,7 @@
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0_rc2_p26753
+version=1.0_rc2_p26914
 release=1
 source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version.tar.bz2 \
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
