@@ -2,7 +2,7 @@
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # URL: http://www.xemacs.org
 # Description: A highly customizable open source text editor and application development system
-# Depends on: xorg, xorg-xbitmaps, libtiff, libpng, ncurses, lesstif 
+# Depends on: xorg-xbitmaps, libtiff, libpng, ncurses, lesstif 
 
 name=xemacs
 version=21.4.21
