@@ -29,7 +29,6 @@ lrwxrwxrwx	root/root	usr/bin/wineg++ -> winegcc
 -rwxr-xr-x	root/root	usr/bin/wineprefixcreate
 -rwxr-xr-x	root/root	usr/bin/wineserver
 -rwxr-xr-x	root/root	usr/bin/wineshelllink
--rwxr-xr-x	root/root	usr/bin/winhelp
 -rwxr-xr-x	root/root	usr/bin/wmc
 -rwxr-xr-x	root/root	usr/bin/wrc
 drwxr-xr-x	root/root	usr/include/
@@ -1011,7 +1010,8 @@ drwxr-xr-x	root/root	usr/lib/wine/
 -rwxr-xr-x	root/root	usr/lib/wine/winex11.drv.so
 -rw-r--r--	root/root	usr/lib/wine/wing.dll16
 -rwxr-xr-x	root/root	usr/lib/wine/wing32.dll.so
--rwxr-xr-x	root/root	usr/lib/wine/winhelp.exe.so
+-rw-r--r--	root/root	usr/lib/wine/winhelp.exe16
+-rwxr-xr-x	root/root	usr/lib/wine/winhlp32.exe.so
 -rwxr-xr-x	root/root	usr/lib/wine/winhttp.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/wininet.dll.so
 -rwxr-xr-x	root/root	usr/lib/wine/winmm.dll.so

@@ -5,13 +5,15 @@
 # Depends on: fontforge
 
 name=wine
-version=1.0-rc1
+version=1.0-rc3
 release=1
 source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2
+	$name-$version-openssl.diff
 )
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-openssl.diff
 	./configure \
 		--prefix=/usr \
 		--mandir=$PKG/usr/man \
