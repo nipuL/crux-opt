@@ -1,6 +1,6 @@
 # GTK+ Input Method Modules file
 # Automatically generated file, do not edit
-# Created by gtk-query-immodules-2.0 from gtk+-2.12.9
+# Created by gtk-query-immodules-2.0 from gtk+-2.12.10
 #
 # ModulesPath = /home/tilman/.gtk-2.0/2.10.0/i686-pc-linux-gnu/immodules:/home/tilman/.gtk-2.0/2.10.0/immodules:/home/tilman/.gtk-2.0/i686-pc-linux-gnu/immodules:/home/tilman/.gtk-2.0/immodules:/usr/lib/gtk-2.0/2.10.0/i686-pc-linux-gnu/immodules:/usr/lib/gtk-2.0/2.10.0/immodules:/usr/lib/gtk-2.0/i686-pc-linux-gnu/immodules:/usr/lib/gtk-2.0/immodules
 #
@@ -23,7 +23,7 @@
 "xim" "X Input Method" "gtk20" "/usr/share/locale" "ko:ja:th:zh" 
 
 "/usr/lib/gtk-2.0/2.10.0/immodules/im-thai.so" 
-"thai" "Thai-Lao" "gtk+" "/usr/share/locale" "lo:th" 
+"thai" "Thai-Lao" "gtk20" "/usr/share/locale" "lo:th" 
 
 "/usr/lib/gtk-2.0/2.10.0/immodules/im-ipa.so" 
 "ipa" "IPA" "gtk20" "/usr/share/locale" "" 
