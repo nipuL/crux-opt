@@ -12,7 +12,7 @@
 
 name=mplayer
 version=1.0_rc2_p26914
-release=1
+release=2
 source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version.tar.bz2 \
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
 	mplayer.conf)
@@ -33,15 +33,10 @@ build() {
 	(cd $PKG/usr/man/man1; rm mencoder.1; ln -s mplayer.1.gz mencoder.1.gz)
 
 	# fonts
-	mkdir -p $PKG/usr/share/mplayer/font
+	mkdir -p $PKG/usr/share/mplayer
 	cp -a $SRC/font-arial-iso-8859-1/font-arial-??-iso-8859-1 \
-		$PKG/usr/share/mplayer/font
-	(cd $PKG/usr/share/mplayer/font
-	for i in font-arial-14-iso-8859-1/*
-		do
-			ln -s $i
-		done)
-	chmod 644 $PKG/usr/share/mplayer/font/font-arial-??-iso-8859-1/*
+		$PKG/usr/share/mplayer
+	ln -s font-arial-14-iso-8859-1 $PKG/usr/share/mplayer/font
 
 	# config
 	cp $SRC/mplayer.conf $PKG/usr/etc/mplayer/
