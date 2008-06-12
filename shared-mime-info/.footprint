@@ -67,6 +67,7 @@ drwxr-xr-x	root/root	usr/share/mime/application/
 -rw-r--r--	root/root	usr/share/mime/application/vnd.oasis.opendocument.text-template.xml
 -rw-r--r--	root/root	usr/share/mime/application/vnd.oasis.opendocument.text-web.xml
 -rw-r--r--	root/root	usr/share/mime/application/vnd.oasis.opendocument.text.xml
+-rw-r--r--	root/root	usr/share/mime/application/vnd.openofficeorg.extension.xml
 -rw-r--r--	root/root	usr/share/mime/application/vnd.rn-realmedia.xml
 -rw-r--r--	root/root	usr/share/mime/application/vnd.stardivision.calc.xml
 -rw-r--r--	root/root	usr/share/mime/application/vnd.stardivision.chart.xml
@@ -206,6 +207,7 @@ drwxr-xr-x	root/root	usr/share/mime/application/
 -rw-r--r--	root/root	usr/share/mime/application/x-macbinary.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-magicpoint.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-markaby.xml
+-rw-r--r--	root/root	usr/share/mime/application/x-matroska.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-mif.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-mozilla-bookmarks.xml
 -rw-r--r--	root/root	usr/share/mime/application/x-ms-dos-executable.xml
@@ -310,6 +312,7 @@ drwxr-xr-x	root/root	usr/share/mime/audio/
 -rw-r--r--	root/root	usr/share/mime/audio/x-m4b.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-matroska.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-minipsf.xml
+-rw-r--r--	root/root	usr/share/mime/audio/x-mo3.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-mod.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-mpegurl.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-ms-asx.xml
@@ -332,7 +335,10 @@ drwxr-xr-x	root/root	usr/share/mime/audio/
 -rw-r--r--	root/root	usr/share/mime/audio/x-xi.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-xm.xml
 -rw-r--r--	root/root	usr/share/mime/audio/x-xmf.xml
+-rw-r--r--	root/root	usr/share/mime/generic-icons
 -rw-r--r--	root/root	usr/share/mime/globs
+-rw-r--r--	root/root	usr/share/mime/globs2
+-rw-r--r--	root/root	usr/share/mime/icons (EMPTY)
 drwxr-xr-x	root/root	usr/share/mime/image/
 -rw-r--r--	root/root	usr/share/mime/image/bmp.xml
 -rw-r--r--	root/root	usr/share/mime/image/cgm.xml
@@ -401,6 +407,7 @@ drwxr-xr-x	root/root	usr/share/mime/image/
 -rw-r--r--	root/root	usr/share/mime/image/x-rgb.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-sgi.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-sigma-x3f.xml
+-rw-r--r--	root/root	usr/share/mime/image/x-skencil.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-sony-arw.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-sony-sr2.xml
 -rw-r--r--	root/root	usr/share/mime/image/x-sony-srf.xml
@@ -490,7 +497,6 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/x-gettext-translation-template.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-gettext-translation.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-google-video-pointer.xml
--rw-r--r--	root/root	usr/share/mime/text/x-gtkrc.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-haskell.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-iMelody.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-idl.xml
@@ -498,6 +504,7 @@ drwxr-xr-x	root/root	usr/share/mime/text/
 -rw-r--r--	root/root	usr/share/mime/text/x-iptables.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-java.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-ldif.xml
+-rw-r--r--	root/root	usr/share/mime/text/x-lilypond.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-literate-haskell.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-log.xml
 -rw-r--r--	root/root	usr/share/mime/text/x-lua.xml
