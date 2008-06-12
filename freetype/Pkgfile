@@ -4,9 +4,9 @@
 # Depends on:  zlib
 
 name=freetype
-version=2.3.5
+version=2.3.6
 release=1
-source=(http://dl.sourceforge.net/freetype/freetype-$version.tar.bz2)
+source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
 build() {
     cd freetype-$version

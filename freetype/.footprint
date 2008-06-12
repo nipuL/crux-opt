@@ -16,6 +16,7 @@ drwxr-xr-x	root/root	usr/include/freetype2/freetype/config/
 -rw-r--r--	root/root	usr/include/freetype2/freetype/ftbitmap.h
 -rw-r--r--	root/root	usr/include/freetype2/freetype/ftcache.h
 -rw-r--r--	root/root	usr/include/freetype2/freetype/ftchapters.h
+-rw-r--r--	root/root	usr/include/freetype2/freetype/ftcid.h
 -rw-r--r--	root/root	usr/include/freetype2/freetype/fterrdef.h
 -rw-r--r--	root/root	usr/include/freetype2/freetype/fterrors.h
 -rw-r--r--	root/root	usr/include/freetype2/freetype/ftgasp.h
@@ -53,9 +54,9 @@ drwxr-xr-x	root/root	usr/include/freetype2/freetype/config/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfreetype.a
 -rwxr-xr-x	root/root	usr/lib/libfreetype.la
-lrwxrwxrwx	root/root	usr/lib/libfreetype.so -> libfreetype.so.6.3.16
-lrwxrwxrwx	root/root	usr/lib/libfreetype.so.6 -> libfreetype.so.6.3.16
--rwxr-xr-x	root/root	usr/lib/libfreetype.so.6.3.16
+lrwxrwxrwx	root/root	usr/lib/libfreetype.so -> libfreetype.so.6.3.17
+lrwxrwxrwx	root/root	usr/lib/libfreetype.so.6 -> libfreetype.so.6.3.17
+-rwxr-xr-x	root/root	usr/lib/libfreetype.so.6.3.17
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/freetype2.pc
 drwxr-xr-x	root/root	usr/share/
