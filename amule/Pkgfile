@@ -18,5 +18,5 @@ build() {
 			--disable-nls
 	make
 	make install DESTDIR=$PKG
-	rm -rf $PKG/usr/{share/{doc,amule},man/{de,es,eu,hu},lib,bin/autostart-xas}
+	rm -rf $PKG/usr/{share/{doc,amule},man,lib,bin/autostart-xas}
 }
