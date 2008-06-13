@@ -2,17 +2,15 @@
 # URL: http://www.amule.org/
 # Maintainer: Antti Nykänen, aon at iki dot fi
 # Packager: Daniel Walpole, daniel at walpole dot id dot au
-# Depends on: wxgtk
+# Depends on: wxgtk, crypto++
 
 name=amule
-version=2.1.3
-release=2
-source=(http://download.berlios.de/amule/aMule-$version.tar.bz2
-	$name-$version-wx.diff)
+version=2.2.1
+release=1
+source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
 build() {
 	cd aMule-$version
-	patch -p1 -i $SRC/$name-$version-wx.diff
 	export CFLAGS="${CFLAGS//-fstack-protector/}"
 	export CXXFLAGS="${CXXFLAGS//-fstack-protector/}"
 	./configure 	--prefix=/usr \
@@ -20,5 +18,5 @@ build() {
 			--disable-nls
 	make
 	make install DESTDIR=$PKG
-	rm -r $PKG/usr{/share/doc,/man/??}
+	rm -rf $PKG/usr/{share/{doc,amule},man/{de,es,eu,hu},lib,bin/autostart-xas}
 }
