@@ -6,7 +6,7 @@
 
 name=amule
 version=2.2.1
-release=1
+release=2
 source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
 build() {
