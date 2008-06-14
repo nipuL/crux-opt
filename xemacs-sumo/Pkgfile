@@ -6,13 +6,28 @@
 
 name=xemacs-sumo
 version=2007-04-27
-release=1
+release=2
 source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
 build(){
-	mkdir -p $PKG/usr/lib/xemacs
-	mv xemacs-packages $PKG/usr/lib/xemacs/
-    	find $PKG/usr/lib/xemacs -name "*.el" | while read file; do
+	install -d -m0755 $PKG/usr/lib/xemacs
+
+	find xemacs-packages \
+		-name "ChangeLog*" \
+		-o -name "*README*" \
+		-o -name "INSTALL*" \
+		-o -name "*NEWS*" \
+		-o -name "BUGS*" \
+		-o -name "AUTHORS" \
+		-o -name "COPYING" \
+		-o -name "TODO*"|xargs rm -f
+
+	rm -rf xemacs-packages/{info,etc/zenirc}
+
+    	find xemacs-packages -name "*.el" | while read file; do
 		[ -f ${file}c ] && rm -f $file
     	done
+
+	mv xemacs-packages $PKG/usr/lib/xemacs/
+
 	chown -R root:root $PKG
 }
