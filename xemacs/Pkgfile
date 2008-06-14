@@ -6,9 +6,10 @@
 
 name=xemacs
 version=21.4.21
-release=1
+release=2
 source=(http://ftp.xemacs.org/pub/xemacs/xemacs-21.4/$name-$version.tar.gz
-	$name-$version-no_info.diff)
+	$name-$version-no_info.diff
+	$name-$version-etc-blacklist)
         
 build(){
 	cd $name-$version
@@ -48,6 +49,13 @@ build(){
 	find $PKG/usr/lib/$name-$version -name "*.el" | while read file; do
 		[ -f ${file}c ] && rm -f $file
 	done
+
+	rm -f $PKG/usr/lib/$name-$version/i686-pc-linux/include/{m,s}/README
+	rm -f $PKG/usr/lib/$name-$version/lisp/{ChangeLog.*,{,term/}README}
+
+	for i in $(< $SRC/$name-$version-etc-blacklist); do
+	        rm -rf $PKG/usr/lib/$name-$version/etc/$i
+        done
 
 	# correct permissions
 	chown -R root:root $PKG
