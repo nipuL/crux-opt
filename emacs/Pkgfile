@@ -5,8 +5,9 @@
 
 name=emacs
 version=22.2
-release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+release=2
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
+	$name-$version-etc-blacklist)
 
 build() {
 	cd $name-$version
@@ -25,8 +26,14 @@ build() {
 	find $PKG/usr/share/emacs -name "*.el.gz" | while read file; do
 		[ -f ${file%.gz}c ] && rm -f $file
 	done
+
 	rm -f $PKG/usr/bin/emacs-$version 
 	rm -f $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1}
+	rm -f $PKG/usr/share/emacs/$version/lisp/{COPYING,{,term/}README}
+
+	for i in $(< $SRC/$name-$version-etc-blacklist); do
+		rm -rf $PKG/usr/share/emacs/$version/etc/$i
+	done
 
 	chown -R root:root $PKG
 }
