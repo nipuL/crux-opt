@@ -4,7 +4,7 @@
 # Depends on: ruby cairo
 
 name=ruby-cairo
-version=1.6.1
+version=1.6.2
 release=1
 source=(http://cairographics.org/releases/rcairo-$version.tar.gz)
 
