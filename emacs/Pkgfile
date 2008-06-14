@@ -5,7 +5,7 @@
 
 name=emacs
 version=22.2
-release=2
+release=3
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 	$name-$version-etc-blacklist)
 
