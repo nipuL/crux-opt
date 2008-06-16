@@ -810,6 +810,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/Argentina/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/Mendoza
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/Rio_Gallegos
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/San_Juan
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/San_Luis
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/Tucuman
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Argentina/Ushuaia
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Aruba
@@ -992,6 +993,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/Asia/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Dushanbe
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Gaza
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Harbin
+-rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Ho_Chi_Minh
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Hong_Kong
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Hovd
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Irkutsk
@@ -1004,6 +1006,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/Asia/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Karachi
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Kashgar
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Katmandu
+-rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Kolkata
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Krasnoyarsk
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Kuala_Lumpur
 -rw-r--r--	root/root	usr/share/postgresql/timezone/Asia/Kuching
