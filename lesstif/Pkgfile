@@ -1,7 +1,7 @@
 # Description: A free replacement for Motif
 # URL: http://www.lesstif.org/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Depends on: xorg
+# Depends on: freetype, xorg-libxt
 
 name=lesstif
 version=0.95.0
