@@ -182,7 +182,6 @@ drwxr-xr-x	root/root	usr/lib/LessTif/config/
 -rw-r--r--	root/root	usr/lib/LessTif/config/LessTif.rules
 -rw-r--r--	root/root	usr/lib/LessTif/config/LessTif.tmpl
 -rw-r--r--	root/root	usr/lib/LessTif/config/host.def
-drwxr-xr-x	root/root	usr/lib/X11/
 -rwxr-xr-x	root/root	usr/lib/libMrm.la
 lrwxrwxrwx	root/root	usr/lib/libMrm.so -> libMrm.so.2.0.1
 lrwxrwxrwx	root/root	usr/lib/libMrm.so.2 -> libMrm.so.2.0.1

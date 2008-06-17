@@ -5,15 +5,17 @@
 
 name=lesstif
 version=0.95.0
-release=2
-source=(http://dl.sf.net/lesstif/lesstif-$version.tar.bz2
-	lesstif-$version-libxpm.patch
-	lesstif-$version-vendorsp.patch)
+release=3
+source=(http://dl.sf.net/$name/lesstif-$version.tar.bz2
+	$name-$version-libxpm.patch
+	$name-$version-vendorsp.patch
+	$name-$version-disable_mwm.patch)
 
 build() {
-	cd lesstif-$version
-	patch -p0 -i $SRC/lesstif-$version-libxpm.patch
-	patch -p0 -i $SRC/lesstif-$version-vendorsp.patch
+	cd $name-$version
+	patch -p0 -i $SRC/$name-$version-libxpm.patch
+	patch -p0 -i $SRC/$name-$version-vendorsp.patch
+	patch -p0 -i $SRC/$name-$version-disable_mwm.patch
 	./configure \
 		--prefix=/usr \
 		--enable-nonstandard-conversions \
@@ -27,7 +29,6 @@ build() {
 	rm $PKG/usr/include/Xm/Print{SP,}.h
 	sed -i -e 's/.*Print.h.*//' $PKG/usr/include/Xm/XmAll.h
 
-	rm -rf $PKG/usr/LessTif $PKG/usr/bin/mwm \
-	       $PKG/usr/lib/X11/{app-defaults,mwm} \
+	rm -rf $PKG/usr/LessTif $PKG/usr/lib/X11/ \
 	       $PKG/usr/man/man{1/mwm.1,5/mwmrc.5}
 }
