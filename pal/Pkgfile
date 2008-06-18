@@ -4,7 +4,7 @@
 # Depends on: glib, gettext, readline
 
 name=pal
-version=0.4.1
+version=0.4.2
 release=1
 source=(http://dl.sourceforge.net/palcal/$name-$version.tgz)
 
