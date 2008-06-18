@@ -1,7 +1,7 @@
 # Description: Fast and small window manager
 # URL:         http://blackboxwm.sourceforge.net
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends:     xorg-libxext, xorg-libxft
+# Depends on:  xorg-libxext, xorg-libxft
 
 name=blackbox
 version=0.70.1
