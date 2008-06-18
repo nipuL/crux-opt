@@ -1,5 +1,5 @@
 #!/bin/sh
 
-/usr/sbin/groupadd -g 83 _ntp
-/usr/sbin/useradd -g _ntp -u 83 -c "NTP Daemon" -d /var/empty -s /bin/false _ntp
-/usr/bin/passwd -l _ntp
+/usr/sbin/groupadd ntp
+/usr/sbin/useradd -g ntp -d /var/empty -s /bin/false ntp
+/usr/bin/passwd -l ntp

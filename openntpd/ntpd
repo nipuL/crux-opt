@@ -1,14 +1,11 @@
 #!/bin/sh
 #
-# /etc/rc.d/ntpd: start/stop ntp daemon
+# /etc/rc.d/ntpd: start/stop ntpd daemon
 #
-
-# comment or clear $NTPD_OPTS to disable initial clock set on startup
-NTPD_OPTS="-s"
 
 case $1 in
     start)
-	/usr/sbin/ntpd $NTPD_OPTS
+	/usr/sbin/ntpd -s
 	;;
     stop)
 	killall -q /usr/sbin/ntpd

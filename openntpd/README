@@ -1,15 +1,19 @@
 
+REQUIREMENTS
 
-README for openntpd
+PRE-INSTALL
 
-openntpd expects to have a user and group dedicated to it. By default, _ntp. To
-create them, use the following or similar commands, edited to your needs.
+POST-INSTALL
 
-	# groupadd -g 83 _ntp
-	# useradd -g _ntp -u 83 -c "NTP Daemon" -d /var/empty -s /bin/false _ntp
+    Create the necessary user 'ntp' and its group 'ntp'.
 
-*NOTE*
+	groupadd ntp
+	useradd -g ntp -d /var/empty -s /bin/false ntp
+	passwd -l ntp
 
-	A post-install script has been added to the port which takes care of the
-	above.
+MISCELLANEOUS
+
+    Have a look at the start/stop script if you don't like ntpd setting
+    the time immediately at startup. That allows for a large time
+    correction. Disable that feature by removing the '-s' option.
 
