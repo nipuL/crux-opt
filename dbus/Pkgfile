@@ -1,7 +1,7 @@
 # Description: A message bus system
 # URL: http://freedesktop.org/wiki/Software_2fdbus
 # Packager: Matt Housh, jaeger at crux dot nu
-# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: expat
 
 name=dbus
