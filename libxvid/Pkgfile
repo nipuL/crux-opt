@@ -1,7 +1,7 @@
 # Description: An ISO MPEG-4 compliant video codec
 # URL: http://www.xvid.org/
 # Packager: Matt Housh, jaeger at crux dot nu
-# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Nice to have: yasm
 
 name=libxvid
