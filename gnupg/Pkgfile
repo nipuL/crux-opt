@@ -1,0 +1,39 @@
+# Description: GNU privacy guard
+# URL: http://www.gnupg.org
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Packager: Daniel Mueller, daniel at danm dot de
+# Depends on: libgcrypt, libassuan, libksba, pinentry
+
+name=gnupg
+version=2.0.9
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2
+        $name.diff)
+
+build () {
+    cd $name-$version
+
+    # fix the build with gcc 4.3
+    patch -Np0 -i $SRC/$name.diff
+
+    ./configure \
+	--prefix=/usr \
+	--libexecdir=/usr/lib \
+	--mandir=/usr/man \
+	--enable-static-rnd=linux \
+	--enable-dev-random \
+        --disable-nls \
+        --disable-ldap 
+
+    make
+    make DESTDIR=$PKG install
+
+    chmod u+s $PKG/usr/bin/gpg2
+    ln -s /usr/bin/gpg2 $PKG/usr/bin/gpg
+    ln -s /usr/man/man1/gpg2.1.gz $PKG/usr/man/man1/gpg.1.gz
+
+    rm -rf $PKG/usr/share/info
+    rm -f $PKG/usr/share/gnupg/{FAQ,faq.html,qualified.txt}
+    rm -f $PKG/usr/share/gnupg/help*
+}
