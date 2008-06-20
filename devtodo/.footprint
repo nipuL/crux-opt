@@ -1,0 +1,20 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/devtodo
+lrwxrwxrwx	root/root	usr/bin/tda -> devtodo
+lrwxrwxrwx	root/root	usr/bin/tdd -> devtodo
+lrwxrwxrwx	root/root	usr/bin/tde -> devtodo
+lrwxrwxrwx	root/root	usr/bin/tdl -> devtodo
+lrwxrwxrwx	root/root	usr/bin/tdr -> devtodo
+lrwxrwxrwx	root/root	usr/bin/todo -> devtodo
+drwxr-xr-x	root/root	usr/etc/
+-rw-r--r--	root/root	usr/etc/todorc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tda.1.gz -> devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdd.1.gz -> devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tde.1.gz -> devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdl.1.gz -> devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdr.1.gz -> devtodo.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/todo.1.gz -> devtodo.1.gz
