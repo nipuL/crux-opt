@@ -6,7 +6,7 @@
 
 name=zsh
 version=4.3.6
-release=2
+release=3
 source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
 	http://www.grml.org/zsh/zsh-lovers.1)
 
@@ -23,7 +23,6 @@ build() {
         --enable-fndir=/usr/share/zsh/$version/functions \
         --enable-site-fndir=/usr/share/zsh/site-functions \
         --enable-zsh-mem \
-        --enable-zsh-secure-free \
         --enable-maildir-support \
         --enable-function-subdirs \
 	--enable-pcre \
