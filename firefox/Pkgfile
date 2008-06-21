@@ -1,64 +1,36 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org.
-# Depends on: libidl, gtk, libpng, libjpeg, zlib, nss
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: xulrunner
 
 name=firefox
-version=2.0.0.14
+version=3.0
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2 \
-	http://crux.nu/files/$name/$name.desktop \
-	http://crux.nu/files/$name/$name.png \
-	firefox-2.0-add-ldflags.patch \
-	mozconfig)
-
+source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2
+        mozconfig xulrunner.patch)
+    
 build() {
-	export MOZ_CO_PROJECT=browser
-	export MOZILLA_FIVE_HOME=/usr/lib/firefox
+    export MOZ_CO_PROJECT=browser
+    export BUILD_OFFICIAL=1
+    export MOZILLA_OFFICIAL=1
+    export MOZILLA_FIVE_HOME=/usr/lib/firefox
 
-	cd mozilla
-	patch -p0 -i $SRC/firefox-2.0-add-ldflags.patch
-	sed -e "s/#CFLAGS#/$CFLAGS/" -e "s/#MAKEFLAGS#/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
-	./configure
-	make
+    cd mozilla
+    patch -p1 -i $SRC/xulrunner.patch
+    sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
+    ./configure
+    make
 
-	install -d $PKG$MOZILLA_FIVE_HOME
-	cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
-	install -d $PKG/usr/bin
-	ln -s /usr/lib/$name/$name $PKG/usr/bin/$name
+    install -d \
+	$PKG$MOZILLA_FIVE_HOME \
+	$PKG/usr/bin \
+	$PKG/usr/share/idl/firefox \
+	$PKG/usr/include/firefox
 
-	# devel stuff
-	mkdir -p $PKG/usr/share/idl/$name $PKG/usr/include/$name
-	cp -frL dist/idl/* $PKG/usr/share/idl/$name/
-	cp -frL dist/include/* $PKG/usr/include/$name/
+    cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
+    ln -s /usr/lib/firefox/firefox $PKG/usr/bin/firefox
 
-	# pkgconfig
-	mkdir -p $PKG/usr/lib/pkgconfig
-	install build/unix/*.pc $PKG/usr/lib/pkgconfig
-	sed -i -e "s|/usr/local|/usr|g" $PKG/usr/lib/pkgconfig/*.pc
-	sed -i -e "s|$name-$version|$name|g" $PKG/usr/lib/pkgconfig/*.pc
-	# disgusting hack
-	sed -i -e 's|\(Cflags:.*\)|\1 -I${includedir}/dom -I${includedir}/necko|' \
-		$PKG/usr/lib/pkgconfig/*.pc
-
-	chmod 644 $PKG/usr/lib/pkgconfig/$name-*.pc
-
-	# cleanup junk
-	rm -rfv $PKG/usr/lib/$name/README.txt $PKG/usr/lib/$name/init.d/
-	rm -rf $PKG/usr/lib/$name/{LICENSE,TestGtkEmbed,bloaturls.txt,dependentlibs.list}
-	rm -rf $PKG/usr/lib/$name/res/samples $PKG/usr/lib/$name/res/throbber
-	rm -rf $PKG/usr/include/$name/system_wrappers
-
-	# desktop entry/icon
-	install -D -m 0644 $SRC/$name.desktop \
-		$PKG/usr/share/applications/$name.desktop
-	install -D -m 0644 $SRC/$name.png $PKG/usr/share/pixmaps/$name.png
-	
-	# fix file permissions since version 2.0.0.8
-	find $PKG/usr/include/firefox -type f -exec chmod g+r,a+r {} \;
-	find $PKG/usr/include/firefox -type f -perm -u=x -exec chmod g+x,a+x {} \; # no code in headerfiles!
-	find $PKG/usr/share/idl -type f -name '*.idl' -exec chmod g+r,a+r {} \;
-	find $PKG/usr/share/idl -type f -name '*.idl' -perm -u=x -exec chmod g+x,a+x {} \;
-	find $PKG/usr/lib/firefox -type f -exec chmod g+r,a+r {} \;
-	chmod 755 $PKG/usr/lib/firefox/run-mozilla.sh
+    # devel stuff
+    cp -frL dist/idl/* $PKG/usr/share/idl/firefox/
+    cp -frL dist/include/* $PKG/usr/include/firefox/
 }
