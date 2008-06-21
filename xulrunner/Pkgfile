@@ -1,34 +1,23 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Maintainer: Brett Goulder, predatorfreak at dcaf-security dot org.
-# Depends on: libidl, gtk, perl, python
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libidl, gtk, perl, python, dbus-glib
 
 name=xulrunner
-version=1.8.1.14
+version=1.9
 release=1
-source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version-source.tar.bz2 \
-	mozconfig)
+source=(http://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.0/source/firefox-3.0-source.tar.bz2
+        mozconfig)
 
 build() {
 	export MOZ_CO_PROJECT="xulrunner"
 	export XCFLAGS="$CFLAGS"
 
 	cd mozilla
-	sed -e "s/#CFLAGS#/$CFLAGS/g" -e "s/#MAKEFLAGS#/$MAKEFLAGS/g" $SRC/mozconfig > .mozconfig
-	make -f client.mk configure
-	make -f client.mk build
+	sed -e "s/#CFLAGS#/$CFLAGS/g" \
+	    -e "s/#MAKEFLAGS#/$MAKEFLAGS/g" \
+	    $SRC/mozconfig > .mozconfig
+	./configure
+	make 
 	make DESTDIR=$PKG install
-
-	# Move directories
-	mv $PKG/usr/lib/$name-$version $PKG/usr/lib/$name
-	mv $PKG/usr/share/idl/$name-$version $PKG/usr/share/idl/$name
-	mv $PKG/usr/include/$name-$version $PKG/usr/include/$name
-
-	# Fix paths
-	sed -i -e "s/-$version//g" $PKG/usr/bin/$name
-
-	sed -i -e "s:/usr/lib/$name-$version:/usr/lib/$name:" \
-		-e "s:/usr/include/$name-$version:/usr/include/$name:" \
-		-e "s:/usr/share/idl/$name-$version:/usr/share/idl/$name:" \
-		$PKG/usr/lib/pkgconfig/*.pc
 }
