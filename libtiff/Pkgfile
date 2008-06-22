@@ -1,0 +1,20 @@
+# Description: Library for manipulation of TIFF (Tag Image File Format) images
+# URL:         http://www.remotesensing.org/libtiff/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  libjpeg, zlib
+
+name=libtiff
+version=3.8.2
+release=1
+source=(ftp://ftp.remotesensing.org/libtiff/tiff-$version.tar.gz \
+        $name-$version.patch)
+
+build() {
+    cd tiff-$version
+    patch -p1 -i $SRC/$name-$version.patch
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{bin,share,man/man1}
+}
