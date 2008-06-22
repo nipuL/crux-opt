@@ -1,0 +1,13 @@
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+POST-INSTALL
+
+PRECAUTION
+
+    If you don't remove libpcre before building this port libpcre will
+    be a runtime dependency of zsh. This is a problem on systems where
+    zsh needs to be available at boot before the directory containing
+    libpcre.so is mounted. 
