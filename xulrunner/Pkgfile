@@ -1,7 +1,7 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: libidl, gtk, perl, python, dbus-glib
+# Depends on: libidl, nss, gtk, perl, python, dbus-glib
 
 name=xulrunner
 version=1.9
