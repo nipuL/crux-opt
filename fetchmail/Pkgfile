@@ -5,19 +5,24 @@
 
 name=fetchmail
 version=6.3.8
-release=2
+release=3
 source=(http://download.berlios.de/$name/$name-$version.tar.bz2 
-        http://www.fetchmail.info/fetchmail-SA-2007-02.txt)
+        http://www.fetchmail.info/fetchmail-SA-2007-02.txt
+        http://www.fetchmail.info/fetchmail-SA-2008-01.txt)
 
 build() {
     cd $name-$version
+
     patch -p0 -i $SRC/$name-SA-2007-02.txt
+    patch -p1 -i $SRC/$name-SA-2008-01.txt
+
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --with-ssl=/usr \
                 --disable-nls
     make
     make DESTDIR=$PKG install
+
     rm -rf $PKG/usr/bin/fetchmailconf \
            $PKG/usr/man/man?/fetchmailconf.? \
            $PKG/usr/lib
