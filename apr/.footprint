@@ -28,10 +28,12 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 -rw-r--r--	root/root	usr/include/apr-1/apr_ldap.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_ldap_init.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_ldap_option.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_ldap_rebind.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_ldap_url.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_lib.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_md4.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_md5.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_memcache.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_mmap.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_network_io.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_optional.h
@@ -55,6 +57,7 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 -rw-r--r--	root/root	usr/include/apr-1/apr_tables.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_thread_cond.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_thread_mutex.h
+-rw-r--r--	root/root	usr/include/apr-1/apr_thread_pool.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_thread_proc.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_thread_rwlock.h
 -rw-r--r--	root/root	usr/include/apr-1/apr_time.h
@@ -71,14 +74,14 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libapr-1.a
 -rwxr-xr-x	root/root	usr/lib/libapr-1.la
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.2.12
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.2.12
--rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.2.12
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.3.2
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.3.2
+-rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.3.2
 -rw-r--r--	root/root	usr/lib/libaprutil-1.a
 -rwxr-xr-x	root/root	usr/lib/libaprutil-1.la
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.2.12
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.2.12
--rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.2.12
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.3.2
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.3.2
+-rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.3.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-1.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-util-1.pc
