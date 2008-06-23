@@ -5,7 +5,7 @@
 
 name=php
 version=5.2.6
-release=1
+release=2
 source=(http://www.php.net/distributions/php-$version.tar.bz2 
         extensions.ini)
 
@@ -38,6 +38,7 @@ build () {
     make -j1 INSTALL_ROOT=$PKG install
     rm $PKG/usr/lib/php/extensions/*.a
 
+    sed -i '/^extension_dir/s|=.*$|= "/usr/lib/php/extensions"|' php.ini-*
     install -d $PKG/etc/php/conf.d
     install -m 644 php.ini-* $PKG/etc/php
     install -m 644 $SRC/extensions.ini $PKG/etc/php/conf.d
