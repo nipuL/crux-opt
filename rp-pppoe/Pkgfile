@@ -4,13 +4,13 @@
 # Depends on:  ppp
 
 name=rp-pppoe
-version=3.8
+version=3.9
 release=1
 source=(http://www.roaringpenguin.com/files/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version/src
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make RPM_INSTALL_ROOT=$PKG install
     rm -r $PKG/{usr/share/,etc/ppp/plugins}
