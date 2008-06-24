@@ -2,11 +2,11 @@
 # URL: http://www.gnu.org/software/gnutls/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: opencdk
+# Depends on: libgcrypt
 
 name=gnutls
-version=2.0.4
-release=2
+version=2.4.0
+release=1
 source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
 
 build() {
