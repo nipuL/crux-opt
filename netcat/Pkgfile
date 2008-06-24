@@ -1,6 +1,6 @@
 # Description: Read and write data across network connections
 # URL: http://netcat.sourceforge.net
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 
 name=netcat
 version=0.7.1

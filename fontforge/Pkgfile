@@ -1,7 +1,7 @@
 # Description: An outline font editor.
 # URL: http://fontforge.sourceforge.net
 # Packager: Daniel Walpole, daniel at walpole dot id dot au
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on: freetype, libpng, libtiff, libungif, libxml2
 
 name=fontforge

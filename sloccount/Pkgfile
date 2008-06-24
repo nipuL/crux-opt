@@ -1,6 +1,6 @@
 # Description: a set of tools for counting physical Source Lines of Code
 # URL: http://www.dwheeler.com/
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on:
 
 name=sloccount

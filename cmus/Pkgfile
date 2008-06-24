@@ -1,6 +1,6 @@
 # Description: Small and fast music player using the ncurses library
 # URL: http://cmus.sf.net/
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
 # Depends on: 
 # Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis

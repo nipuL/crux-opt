@@ -1,6 +1,6 @@
 # Description: An all-platform Edonkey client.
 # URL: http://www.amule.org/
-# Maintainer: Antti Nykänen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Packager: Daniel Walpole, daniel at walpole dot id dot au
 # Depends on: wxgtk, crypto++
 
