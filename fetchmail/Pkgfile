@@ -5,16 +5,15 @@
 
 name=fetchmail
 version=6.3.8
-release=3
+release=4
 source=(http://download.berlios.de/$name/$name-$version.tar.bz2 
-        http://www.fetchmail.info/fetchmail-SA-2007-02.txt
-        http://www.fetchmail.info/fetchmail-SA-2008-01.txt)
+        $name-SA-2007-02.patch $name-SA-2008-01.patch)
 
 build() {
     cd $name-$version
 
-    patch -p0 -i $SRC/$name-SA-2007-02.txt
-    patch -p1 -i $SRC/$name-SA-2008-01.txt
+    patch -p0 -i $SRC/$name-SA-2007-02.patch
+    patch -p1 -i $SRC/$name-SA-2008-01.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
