@@ -1,0 +1,25 @@
+# Description: Netscape Portable Runtime library
+# URL:         http://www.mozilla.org/projects/nspr/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+
+name=nspr
+version=4.7.1
+release=1
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.1/src/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./mozilla/nsprpub/configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --includedir=/usr/include/nspr \
+        --enable-optimize="$CFLAGS" \
+        --disable-debug --enable-64bit
+
+    make
+    make DESTDIR=$PKG install
+
+    rm $PKG/usr/bin/{compile-et.pl,prerr.properties}
+    rm -r $PKG/usr/include/nspr/md
+}
