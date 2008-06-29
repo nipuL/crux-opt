@@ -1,0 +1,48 @@
+# Description: Versatile media player and encoder/converter
+# URL: http://www.mplayerhq.hu/
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch maintainer:  Fredrik Rinnestam, fredrik at obra dot se
+# Depends on: expat, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
+
+# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis,
+# cdparanoia, win32-essential-codecs, faac, x264, libdvdnav
+
+# More information can be found at http://www.mplayerhq.hu/DOCS/codecs.html and
+# http://www.mplayerhq.hu/DOCS/HTML/en/index.html
+
+name=mplayer
+version=1.0_rc2_p27120
+release=2
+source=(http://gentoo.chem.wisc.edu/gentoo/distfiles/$name-$version.tar.bz2 \
+	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+	mplayer.conf)
+
+build() {
+	cd $name-$version
+
+	# Keep in line with mplayer CFLAGS, but allow people to set their own march/mtune values.
+	export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
+	./configure --prefix=/usr \
+		--mandir=/usr/man \
+		--win32codecsdir=/usr/lib/win32 \
+		--enable-largefiles
+
+	make
+	make DESTDIR=$PKG install
+
+	(cd $PKG/usr/man/man1; rm mencoder.1; ln -s mplayer.1.gz mencoder.1.gz)
+
+	# fonts
+	mkdir -p $PKG/usr/share/mplayer
+	cp -a $SRC/font-arial-iso-8859-1/font-arial-??-iso-8859-1 \
+		$PKG/usr/share/mplayer
+	ln -s font-arial-14-iso-8859-1 $PKG/usr/share/mplayer/font
+
+	# config
+	cp $SRC/mplayer.conf $PKG/usr/etc/mplayer/
+	cp etc/input.conf $PKG/usr/etc/mplayer/
+
+	# finish up
+	chown -R root:root $PKG
+}
