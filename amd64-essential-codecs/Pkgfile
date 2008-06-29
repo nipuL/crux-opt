@@ -1,0 +1,16 @@
+# Description: "Essential" amd64 binary codecs for mplayer, xine, etc.
+# URL: http://www.mplayerhq.hu/DOCS/codecs-status.html
+# Maintainer:	Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Packager: Matt Housh, jaeger at morpheus dot net
+
+name=amd64-essential-codecs
+version=20071007
+release=1
+source=(http://www3.mplayerhq.hu/MPlayer/releases/codecs/essential-amd64-$version.tar.bz2)
+
+build() {
+	cd essential-amd64-$version
+	mkdir -p $PKG/usr/lib/amd64
+	install -m 0644 * $PKG/usr/lib/amd64/
+}
