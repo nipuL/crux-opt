@@ -1,0 +1,18 @@
+# Description: The GNU Debugger (GDB)
+# URL:         http://sources.redhat.com/gdb/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  ncurses
+
+name=gdb
+version=6.8
+release=1
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{info,share,lib,include}
+}
