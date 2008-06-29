@@ -1,0 +1,19 @@
+# Description: A multilanguage implementation of Ctags, for effective editing of source code.
+# URL: http://ctags.sourceforge.net
+# Packager: Håvard Moen, vanilje at netcom dot no
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=ctags
+version=5.7
+release=1
+source=(http://dl.sourceforge.net/$name/$name-$version.tar.gz \
+        $name.diff)
+
+build() {
+	cd $name-$version
+	patch -Np0 -i $SRC/$name.diff
+	./configure --prefix=/usr --enable-etags
+	make
+	make prefix=$PKG/usr install
+}
