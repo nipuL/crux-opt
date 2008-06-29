@@ -4,7 +4,7 @@
 # Depends on:  zlib
 
 name=freetype
-version=2.3.6
+version=2.3.7
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.bz2)
 
