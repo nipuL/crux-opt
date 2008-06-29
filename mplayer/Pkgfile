@@ -25,7 +25,7 @@ build() {
 	export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
 	./configure --prefix=/usr \
 		--mandir=/usr/man \
-		--win32codecsdir=/usr/lib/win32 \
+		--codecsdir=/usr/lib/amd64 \
 		--enable-largefiles
 
 	make
