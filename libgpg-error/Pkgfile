@@ -1,0 +1,18 @@
+# Description: A small library defining error values for GnuPG components
+# URL: http://www.gnupg.org
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Packager: Matt Housh, jaeger at morpheus dot net
+
+name=libgpg-error
+version=1.6
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/libgpg-error/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
+}
