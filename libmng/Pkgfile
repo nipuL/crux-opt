@@ -1,0 +1,22 @@
+# Description: libmng - Mutliple Image Network Graphics 
+# URL: http://www.libmng.com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: Daniel Mueller, daniel at danm dot de
+# Arch maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Depends on: zlib, libjpeg, lcms
+
+name=libmng
+version=1.0.10
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+ 
+    ln -s makefiles/configure.in .
+    ln -s makefiles/Makefile.am .
+    autoreconf --force --install
+    ./configure --prefix=/usr --mandir=/usr/man
+    make 
+    make DESTDIR=$PKG install
+}
