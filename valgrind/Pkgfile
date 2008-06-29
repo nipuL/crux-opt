@@ -1,4 +1,4 @@
-# Description: An open-source memory debugger for x86-GNU/Linux
+# Description: A debugging and profiling system for Linux programs
 # URL: http://valgrind.org
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
