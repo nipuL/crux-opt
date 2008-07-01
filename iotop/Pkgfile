@@ -1,0 +1,16 @@
+# Maintainer:  Johannes Winkelmann, jw at smts dot ch
+# Description: top like program to display I/O load
+# URL:         http://guichaz.free.fr/iotop/files/iotop-0.2.tar.bz2
+# Depends on:  python
+
+name=iotop
+version=0.2
+release=1
+source=(http://guichaz.free.fr/${name}/files/${name}-${version}.tar.bz2)
+
+build() {
+    cd $name-$version
+    python setup.py install --root=$PKG --prefix=/usr
+    
+    rm -r $PKG/usr/lib/python2.5/site-packages/iotop-0.2-py2.5.egg-info/
+}
