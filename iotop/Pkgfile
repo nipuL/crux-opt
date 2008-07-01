@@ -1,6 +1,6 @@
 # Maintainer:  Johannes Winkelmann, jw at smts dot ch
 # Description: top like program to display I/O load
-# URL:         http://guichaz.free.fr/iotop/files/iotop-0.2.tar.bz2
+# URL:         http://guichaz.free.fr/iotop/
 # Depends on:  python
 
 name=iotop
