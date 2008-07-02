@@ -4,7 +4,7 @@
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=glib
-version=2.16.3
+version=2.16.4
 release=1
 source=(ftp://ftp.gnome.org/pub/GNOME/sources/$name/2.16/$name-$version.tar.bz2)
 
