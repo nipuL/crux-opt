@@ -1,7 +1,7 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib/
-drwxr-xr-x	root/root	usr/lib/amd64/
--rw-r--r--	root/root	usr/lib/amd64/README
--rw-r--r--	root/root	usr/lib/amd64/cook.so
--rw-r--r--	root/root	usr/lib/amd64/drvc.so
--rw-r--r--	root/root	usr/lib/amd64/sipr.so
+drwxr-xr-x	root/root	usr/lib/mplayer/
+drwxr-xr-x	root/root	usr/lib/mplayer/codecs/
+-rw-r--r--	root/root	usr/lib/mplayer/codecs/cook.so
+-rw-r--r--	root/root	usr/lib/mplayer/codecs/drvc.so
+-rw-r--r--	root/root	usr/lib/mplayer/codecs/sipr.so

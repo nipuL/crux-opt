@@ -1,4 +1,4 @@
-# Description: "Essential" amd64 binary codecs for mplayer, xine, etc.
+# Description: "Essential" x86_64 binary codecs for mplayer, xine, etc.
 # URL: http://www.mplayerhq.hu/DOCS/codecs-status.html
 # Maintainer:	Fredrik Rinnestam, fredrik at obra dot se
 # Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
@@ -11,6 +11,7 @@ source=(http://www3.mplayerhq.hu/MPlayer/releases/codecs/essential-amd64-$versio
 
 build() {
 	cd essential-amd64-$version
-	mkdir -p $PKG/usr/lib/amd64
-	install -m 0644 * $PKG/usr/lib/amd64/
+	mkdir -p $PKG/usr/lib/mplayer/codecs
+	install -m 0644 * $PKG/usr/lib/mplayer/codecs/
+    rm -f $PKG/usr/lib/mplayer/codecs/README
 }
