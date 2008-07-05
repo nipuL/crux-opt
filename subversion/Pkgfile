@@ -4,7 +4,7 @@
 # Depends on:  apr, neon, expat
 
 name=subversion
-version=1.4.6
+version=1.5.0
 release=1
 source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
 
@@ -14,6 +14,7 @@ build() {
     sed -i -e 's|0.26.1|0.26.2|g' configure
     LDFLAGS="-L$PKG/usr/lib" \
         ./configure --prefix=/usr \
+           --mandir=/usr/man \
            --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
            --disable-mod-activation --without-swig --disable-nls \
            --disable-neon-version-check
