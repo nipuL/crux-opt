@@ -1,0 +1,17 @@
+WARNING:
+
+This version of the port is incompatible with the previous ones, so 
+please make sure you don't have any 
+  export CC=/usr/bin/ccache-gcc 
+or
+  export CXX=/usr/bin/ccache-g++
+in your startup/configuration files; this will make compilations fail.
+
+
+POSTINSTALL
+To use ccache, prepend /usr/lib/ccache to your $PATH environment variable.
+
+You might also want to change the ccache directory, using the CCACHE_DIR 
+environement variable, or by using symlinks (I have created a /ccache 
+directory, and make $HOME/.ccache point to /ccache for those users who
+want to use the shared cache)
