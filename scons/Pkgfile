@@ -1,0 +1,16 @@
+# Description: Software construction tool
+# URL: http://www.scons.org
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: python
+
+name=scons
+version=0.98.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	python setup.py install --prefix=/usr --root=$PKG
+}
