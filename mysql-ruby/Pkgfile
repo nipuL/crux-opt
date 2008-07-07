@@ -5,12 +5,12 @@
 
 name=mysql-ruby
 version=2.7.6
-release=1
+release=2
 source=(http://tmtm.org/downloads/mysql/ruby/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ruby extconf.rb --with-mysql-dir=/usr
+    ruby extconf.rb --vendor --with-mysql-dir=/usr
     make
     make DESTDIR=$PKG install
 }
