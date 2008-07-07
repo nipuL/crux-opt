@@ -8,9 +8,9 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/testrb
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libruby-static.a
-lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.6
-lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.6
--rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.6
+lrwxrwxrwx	root/root	usr/lib/libruby.so -> libruby.so.1.8.7
+lrwxrwxrwx	root/root	usr/lib/libruby.so.1.8 -> libruby.so.1.8.7
+-rwxr-xr-x	root/root	usr/lib/libruby.so.1.8.7
 drwxr-xr-x	root/root	usr/lib/ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/English.rb
@@ -139,7 +139,6 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/dl.so
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/dlconfig.h
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/dln.h
--rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/enumerator.so
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/env.h
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/etc.so
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/fcntl.so
@@ -148,7 +147,6 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/digest/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/intern.h
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/io/
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/io/wait.so
--rw-r--r--	root/root	usr/lib/ruby/1.8/linux/largefile.h
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/missing.h
 -rwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/nkf.so
 -rw-r--r--	root/root	usr/lib/ruby/1.8/linux/node.h
@@ -202,6 +200,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/openssl/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/buffering.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/cipher.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/digest.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/pkcs7.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/ssl.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/openssl/x509.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/optparse.rb
@@ -364,30 +363,46 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/rss/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/0.9.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/1.0.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/2.0.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/atom.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/content.rb
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/rss/content/
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/content/1.0.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/content/2.0.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/converter.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/dublincore.rb
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/rss/dublincore/
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/dublincore/1.0.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/dublincore/2.0.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/dublincore/atom.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/image.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/itunes.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker.rb
 drwxr-xr-x	root/root	usr/lib/ruby/1.8/rss/maker/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/0.9.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/1.0.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/2.0.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/atom.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/base.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/content.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/dublincore.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/entry.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/feed.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/image.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/itunes.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/slash.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/syndication.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/taxonomy.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/maker/trackback.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/parser.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/rexmlparser.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/rss.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/slash.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/syndication.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/taxonomy.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/trackback.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/utils.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/xml-stylesheet.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/rss/xml.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/xmlparser.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rss/xmlscanner.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/rubyunit.rb
@@ -401,6 +416,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/runit/cui/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/runit/testsuite.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/runit/topublic.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/scanf.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/securerandom.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/set.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/sha1.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/shell.rb
@@ -507,6 +523,7 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/uri/
 -rw-r--r--	root/root	usr/lib/ruby/1.8/uri/http.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/uri/https.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/uri/ldap.rb
+-rw-r--r--	root/root	usr/lib/ruby/1.8/uri/ldaps.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/uri/mailto.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/weakref.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.8/webrick.rb
@@ -668,6 +685,9 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.8/yaml/
 drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/
 drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/
 drwxr-xr-x	root/root	usr/lib/ruby/site_ruby/1.8/linux/
+drwxr-xr-x	root/root	usr/lib/ruby/vendor_ruby/
+drwxr-xr-x	root/root	usr/lib/ruby/vendor_ruby/1.8/
+drwxr-xr-x	root/root	usr/lib/ruby/vendor_ruby/1.8/linux/
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/ruby.1.gz
