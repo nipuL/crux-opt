@@ -10,6 +10,7 @@ drwxr-xr-x	root/root	usr/lib/gv/
 -rw-r--r--	root/root	usr/lib/gv/gv_system.ad
 -rw-r--r--	root/root	usr/lib/gv/gv_user.ad
 -rw-r--r--	root/root	usr/lib/gv/gv_user_res.dat
+-rw-r--r--	root/root	usr/lib/gv/gv_widgetless.dat
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/gv.1.gz
