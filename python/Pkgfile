@@ -5,7 +5,7 @@
 
 name=python
 version=2.5.2
-release=1
+release=2
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
         $name-$version.patch)
 
@@ -22,8 +22,9 @@ build () {
     make -j1 DESTDIR=$PKG install
 
     ln -sf python2.5 $PKG/usr/bin/python
-    ln -sf python2.5 $PKG/usr/lib/python
-    ln -sf python2.5 $PKG/usr/include/python
+    ln -s python2.5 $PKG/usr/lib/python
+    ln -s python2.5 $PKG/usr/include/python
+    ln -s /usr/lib/libpython2.5.so $PKG/usr/lib/python2.5/config/libpython2.5.so
 
     rm -r $PKG/usr/lib/python/{bsddb,ctypes,email,sqlite3}/test
     rm -r $PKG/usr/lib/python/distutils/tests
