@@ -5,7 +5,7 @@
 
 name=mod_php
 version=5.2.6
-release=1
+release=2
 source=(http://www.php.net/distributions/php-$version.tar.bz2)
 
 build () {
@@ -15,6 +15,7 @@ build () {
     --prefix=/usr \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
+    --with-zlib \
     --disable-static --disable-debug --without-pear"
 
     EXTENSION_DIR=/usr/lib/php/extensions \
