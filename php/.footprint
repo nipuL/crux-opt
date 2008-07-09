@@ -279,7 +279,6 @@ drwxr-xr-x	root/root	usr/lib/php/extensions/
 -rwxr-xr-x	root/root	usr/lib/php/extensions/dba.so
 -rwxr-xr-x	root/root	usr/lib/php/extensions/openssl.so
 -rwxr-xr-x	root/root	usr/lib/php/extensions/zip.so
--rwxr-xr-x	root/root	usr/lib/php/extensions/zlib.so
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/php-config.1.gz

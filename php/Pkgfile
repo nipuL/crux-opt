@@ -1,11 +1,11 @@
 # Description: PHP interpreter, extension modules and support stuff
 # URL:         http://www.php.net
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ncurses readline libxml2 bzip2 curl db gdbm openssl zip zlib
+# Depends on:  ncurses readline libxml2 bzip2 curl db gdbm zip
 
 name=php
 version=5.2.6
-release=2
+release=3
 source=(http://www.php.net/distributions/php-$version.tar.bz2 
         extensions.ini)
 
@@ -16,6 +16,7 @@ build () {
     --prefix=/usr \
     --with-config-file-path=/etc/php \
     --with-config-file-scan-dir=/etc/php/conf.d \
+    --with-zlib \
     --disable-static --disable-debug --without-pear"
 
     local PHP_SHARED="
@@ -23,8 +24,7 @@ build () {
     --with-bz2=shared \
     --with-curl=shared \
     --with-openssl=shared \
-    --enable-zip=shared \
-    --with-zlib=shared"
+    --enable-zip=shared"
 
     EXTENSION_DIR=/usr/lib/php/extensions \
     ./configure \
