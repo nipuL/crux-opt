@@ -1,7 +1,7 @@
 # Description: Utilities to control and monitor S.M.A.R.T. hard drives
 # URL: http://smartmontools.sourceforge.net/
 # Maintainer: Simon Gloßner, viper at hometux dot de
-# Packager: Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager: Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=smartmontools
 version=5.38

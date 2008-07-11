@@ -1,6 +1,6 @@
 # Description: MySQL module for PHP
 # URL:         http://www.php.net
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  mysql zlib
 
 name=php-mysql

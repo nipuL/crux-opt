@@ -1,6 +1,6 @@
 # Description: GNU Midnight Commander
 # URL:         http://www.ibiblio.org/mc/ 
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  e2fsprogs, glib
 
 name=mc

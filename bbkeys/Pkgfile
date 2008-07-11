@@ -1,6 +1,6 @@
 # Description: bbkeys, keybinding software for blackbox 
 # URL: 	       http://bbkeys.sourceforge.net
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  blackbox
 
 name=bbkeys

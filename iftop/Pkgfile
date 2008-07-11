@@ -1,6 +1,6 @@
 # Description: Real-time bandwidth usage information on a network interface 
 # URL:         http://www.ex-parrot.com/~pdw/iftop/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  libpcap, ncurses
 
 name=iftop

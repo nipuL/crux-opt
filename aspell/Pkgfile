@@ -1,6 +1,6 @@
 # Description: GNU aspell is a spell checker designed to replace ispell
 # URL:         http://aspell.net
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses
 
 name=aspell

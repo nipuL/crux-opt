@@ -1,5 +1,5 @@
 # Description: Bi-directional file synchronization tool
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Markus Ackermann, maol at symlink dot ch
 # URL:         http://www.cis.upenn.edu/~bcpierce/unison/
 # Depends on:  ocaml

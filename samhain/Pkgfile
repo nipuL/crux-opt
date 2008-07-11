@@ -1,6 +1,6 @@
 # Description: File integrity / intrusion detection system
 # URL:         http://la-samhna.de/samhain/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=samhain
 version=2.4.4

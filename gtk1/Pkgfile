@@ -1,6 +1,6 @@
 # Description: Library for creating graphical user interfaces for X
 # URL:         http://www.gtk.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Daniel Mueller, daniel at danm dot de
 # Depends on:  xorg-libxi, xorg-libxt, glib1
 

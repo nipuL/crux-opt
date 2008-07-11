@@ -1,6 +1,6 @@
 # Description: University of Washington's IMAP/POP server
 # URL:         http://www.washington.edu/imap/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=uw-imap

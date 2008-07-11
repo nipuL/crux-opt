@@ -1,6 +1,6 @@
 # Description: Free library for arbitrary precision arithmetic
 # URL:         http://www.swox.com/gmp/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=libgmp
 version=4.2.2

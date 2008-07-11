@@ -1,6 +1,6 @@
 # Description: Very fast and highly configurable HTTP server
 # URL:         http://www.mathopd.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=mathopd
 version=1.5p6

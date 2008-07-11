@@ -1,6 +1,6 @@
 # Description: ASCII to Postscript converter (Prettyprint)
 # URL:         http://www.inf.enst.fr/~demaille/a2ps/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de 
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de 
 # Depends on:  psutils, perl
 
 name=a2ps

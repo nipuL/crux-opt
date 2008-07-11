@@ -1,6 +1,6 @@
 # Description: A simple HTTP server for static content
 # URL:         http://linux.bytesex.org/misc/webfs.html
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=webfs

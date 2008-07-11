@@ -1,6 +1,6 @@
 # Description: Utility for encrypting and decrypting files and streams
 # URL:         http://ccrypt.sourceforge.net/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=ccrypt
 version=1.7

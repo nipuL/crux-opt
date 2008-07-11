@@ -1,6 +1,6 @@
 # Description: Replacement for Berkeley Mail and System V mailx command
 # URL:         http://nail.sourceforge.net/ 
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=mailx

@@ -1,6 +1,6 @@
 # Description: A authoritative,recursive (caching) DNS server that strives to be secure and fast
 # URL:         http://www.maradns.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=maradns
 version=1.3.07.08

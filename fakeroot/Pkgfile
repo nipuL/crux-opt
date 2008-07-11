@@ -1,6 +1,6 @@
 # Description: Run commands in an environment faking root privileges
 # URL:         http://packages.debian.org/unstable/utils/fakeroot
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=fakeroot
 version=1.9.5

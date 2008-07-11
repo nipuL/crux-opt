@@ -1,6 +1,6 @@
 # Description: Fast, secure, production-quality and standard-conformant FTP server
 # URL:         http://pureftpd.sourceforge.net
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=pure-ftpd

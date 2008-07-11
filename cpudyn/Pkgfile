@@ -1,6 +1,6 @@
 # Description: Daemon to control the speed of mobile CPUs 
 # URL:         http://mnm.uib.es/~gallir/cpudyn/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=cpudyn
 version=1.0.1

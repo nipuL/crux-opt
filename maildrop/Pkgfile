@@ -1,6 +1,6 @@
 # Description: Mail Delivery Agent with filtering abilities
 # URL:         http://www.courier-mta.org/maildrop/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  gdbm
 
 name=maildrop

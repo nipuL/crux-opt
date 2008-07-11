@@ -1,6 +1,6 @@
 # Description: User space IEEE 802.1X/WPA supplicant (wireless client) 
 # URL:         http://hostap.epitest.fi/wpa_supplicant/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=wpa_supplicant

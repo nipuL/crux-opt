@@ -1,6 +1,6 @@
 # Description: yapo - Yet Another Ports Overview
 # URL:         http://jue.li/crux/yapo
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  prt-get, ncurses-ruby
 
 name=yapo

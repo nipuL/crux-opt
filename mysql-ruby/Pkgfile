@@ -1,6 +1,6 @@
 # Description: Extention library to use MySQL via Ruby
 # URL:         http://www.tmtm.org/en/mysql/ruby/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ruby, mysql
 
 name=mysql-ruby

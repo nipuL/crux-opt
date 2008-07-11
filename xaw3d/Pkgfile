@@ -1,6 +1,6 @@
 # Description: 3D-style graphics library for X 
 # URL:         http://freshmeat.net/projects/xaw3d
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  xorg-libxpm, xorg-libxmu, xorg-imake
 
 name=xaw3d

@@ -1,6 +1,6 @@
 # Description: SQL database server
 # URL:         http://www.mysql.com
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses, zlib
 
 name=mysql

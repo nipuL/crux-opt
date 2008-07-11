@@ -1,7 +1,7 @@
 # Description: Tools for the Linux quota system
 # URL:         http://sourceforge.net/projects/linuxquota/
 # Packager:    Mikhail Kolesnik, mike at openbunker dot org
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=quota
 version=3.16

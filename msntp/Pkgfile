@@ -1,6 +1,6 @@
 # Description: Simple Network Time Protocol server/client/utility
 # URL:         http://www.hpcf.cam.ac.uk/export/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=msntp
 version=1.6

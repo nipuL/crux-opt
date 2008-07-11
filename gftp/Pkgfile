@@ -1,6 +1,6 @@
 # Description: Multithreaded FTP client with GTK+2 user interface
 # URL:         http://gftp.seul.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  gtk, openssl, readline
 
 name=gftp

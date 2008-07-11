@@ -1,6 +1,6 @@
 # Description: PHP interpreter, extension modules and support stuff
 # URL:         http://www.php.net
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses readline libxml2 bzip2 curl db gdbm zip
 
 name=php

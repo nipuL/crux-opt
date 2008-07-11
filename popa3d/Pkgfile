@@ -1,6 +1,6 @@
 # Description: A tiny POP3 daemon designed with security as the primary goal
 # URL:         http://www.openwall.com/popa3d
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=popa3d
 version=1.0.2

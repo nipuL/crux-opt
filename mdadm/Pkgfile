@@ -1,6 +1,6 @@
 # Description: Multiple device (RAID) admin tool
 # URL:         http://www.cse.unsw.edu.au/~neilb/source/mdadm/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
 version=2.6.7

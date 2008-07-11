@@ -1,6 +1,6 @@
 # Description: Versatile mail delivery agent/filter
 # URL:         http://www.procmail.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=procmail
 version=3.22

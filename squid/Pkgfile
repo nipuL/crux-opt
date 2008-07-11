@@ -1,6 +1,6 @@
 # Description: A full-featured web proxy cache
 # URL:         http://www.squid-cache.org
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=squid
 version=2.6.STABLE21

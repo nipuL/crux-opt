@@ -1,6 +1,6 @@
 # Description: GNU enscript, converts ASCII files to PostScript
 # URL:         http://people.ssh.fi/mtr/genscript/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=enscript
 version=1.6.4

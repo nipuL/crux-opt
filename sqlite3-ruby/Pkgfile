@@ -1,6 +1,6 @@
 # Description: Interface to the SQLite DB engine
 # URL:         http://sqlite-ruby.rubyforge.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ruby, sqlite3
 
 name=sqlite3-ruby

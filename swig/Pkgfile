@@ -1,6 +1,6 @@
 # Description: A tool to create language bindings
 # URL:         http://www.swig.org/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=swig
 version=1.3.36

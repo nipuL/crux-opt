@@ -1,6 +1,6 @@
 # Description: GTK+ email client and news reader
 # URL:         http://sylpheed.sraoss.jp/en/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  gtk, openssl
 
 name=sylpheed

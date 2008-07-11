@@ -1,6 +1,6 @@
 # Description: Weave Dial - PPP dialer
 # URL:         http://open.nit.ca/wiki/?page=WvDial
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ppp, openssl
 
 name=wvdial

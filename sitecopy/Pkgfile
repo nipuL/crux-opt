@@ -1,6 +1,6 @@
 # Description: Utility for maintaining remote web sites via FTP or WebDAV
 # URL:         http://www.lyra.org/sitecopy
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  neon
 
 name=sitecopy

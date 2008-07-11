@@ -1,6 +1,6 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses, readline
 
 name=samba

@@ -1,6 +1,6 @@
 # Description: Small and secure SSH2 server and client
 # URL:         http://matt.ucc.asn.au/dropbear/dropbear.html
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  zlib
 
 name=dropbear

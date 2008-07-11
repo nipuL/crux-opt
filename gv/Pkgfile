@@ -1,6 +1,6 @@
 # Description: GhostView, Postscript/PDF viewer
 # URL:         http://www.gnu.org/software/gv/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  xaw3d, ghostscript
 
 name=gv

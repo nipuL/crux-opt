@@ -1,6 +1,6 @@
 # Description: Remote filesystem in userspace using SSH
 # URL:         http://fuse.sourceforge.net/sshfs.html
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:  fuse, glib
 

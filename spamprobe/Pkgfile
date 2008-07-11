@@ -1,6 +1,6 @@
 # Description: Spam detection program that uses Bayesian analysis
 # URL:         http://spamprobe.sourceforge.net/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=spamprobe
 version=1.4d

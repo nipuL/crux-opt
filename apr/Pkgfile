@@ -1,5 +1,5 @@
 # Description: Apache Portable Runtime library
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # URL:         http://apr.apache.org/
 # Depends on:  e2fsprogs, expat, db, gdbm
 

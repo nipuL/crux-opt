@@ -1,6 +1,6 @@
 # Description: Network time protocol client/server
 # URL:         http://chrony.sunsite.dk/index.php
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses, readline
 
 name=chrony

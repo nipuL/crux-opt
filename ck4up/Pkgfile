@@ -1,6 +1,6 @@
 # Description: ck4up - Check for Updates, a utility to monitor web pages for updates
 # URL:         http://jue.li/crux/ck4up
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ruby
 
 name=ck4up

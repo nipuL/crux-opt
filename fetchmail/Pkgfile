@@ -1,6 +1,6 @@
 # Description: A remote-mail retrieval utility
 # URL:         http://fetchmail.berlios.de/
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  openssl
 
 name=fetchmail

@@ -1,4 +1,4 @@
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Description: GTK+ frontend running over Samba and Smbmount to manage SMB shares
 # URL:         http://www.bnro.de/~schmidjo/
 # Depends on:  samba, gtk1
