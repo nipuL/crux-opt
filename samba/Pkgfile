@@ -4,35 +4,32 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.0.30
+version=3.2.0
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
-        samba-config.patch samba-capget.patch samba)
+        samba-config.patch samba)
 
 build () {
     cd $name-$version/source
 
     patch -d .. -p1 -i $SRC/samba-config.patch
-    patch -d .. -p1 -i $SRC/samba-capget.patch
 
     ./configure --prefix=/usr \
+                --libdir=/usr/lib/samba \
                 --with-fhs \
-                --with-smbmount \
                 --with-configdir=/etc/samba \
                 --with-lockdir=/var/run/samba \
                 --with-piddir=/var/run/samba \
                 --with-mandir=/usr/man \
-                --with-logfilebase=/var/log/samba
+                --with-logfilebase=/var/log/samba \
+                --disable-swat
 
     make -j1
     make DESTDIR=$PKG install
 
+    install -d $PKG/sbin
     mv $PKG/usr/sbin/*.cifs $PKG/sbin
-
-    # symlinks
-    (cd $PKG/usr/lib 
-     ln -s samba/libsmbclient.so libsmbclient.so
-     ln -s samba/libsmbclient.so libsmbclient.so.0)
+    mv $PKG/usr/lib/samba/*.so $PKG/usr/lib
 
     # nsswitch extensions
     install -d $PKG/lib
@@ -45,14 +42,9 @@ build () {
     install -d -m 1777 $PKG/var/spool/samba
 
     # config-file and start-script
-    cp ../examples/smb.conf.default $PKG/etc/samba
+    install -m 600 ../examples/smb.conf.default $PKG/etc/samba
     install -D -m 755  $SRC/samba $PKG/etc/rc.d/samba
 
     # cleanup
-    rm -r $PKG/usr/{var,lib/samba/*.msg}
-    chmod -x $PKG/usr/include/*
-
-    # remove swat
-    rm $PKG/usr/{sbin/swat,man/man8/swat.8}
-    rm -r $PKG/usr/share
+    rm -r $PKG/usr/{var,man/man8/swat.8}
 }
