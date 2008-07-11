@@ -3,15 +3,13 @@
 # Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
 
 name=cdparanoia
-version=alpha9.8
-release=3
-source=(http://xiph.org/paranoia/download/$name-III-$version.src.tgz \
-        $name-$version.patch)
+version=10.0
+release=1
+source=(http://downloads.xiph.org/releases/$name/$name-III-$version.src.tgz)
 
 build () {
     cd $name-III-$version
-    patch -p1 < $SRC/$name-$version.patch
-    ./configure --prefix=/usr 
-    make -j1 FLAGS="$CFLAGS"
+    ./configure --prefix=/usr
+    make -j1
     make prefix=$PKG/usr install
 }
