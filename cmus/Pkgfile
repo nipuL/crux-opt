@@ -7,7 +7,7 @@
 
 name=cmus
 version=2.2.0
-release=1
+release=2
 source=(http://mirror.greaterscope.net/$name/$name-$version.tar.bz2)
 
 build() {
@@ -15,5 +15,5 @@ build() {
     ./configure prefix=/usr mandir=/usr/man CONFIG_ARTS=n
     make
     make DESTDIR=$PKG install install-man
-    rm -rf $PKG/usr/share/doc
+    rm -rf $PKG/usr/share/{doc,cmus/*.theme}
 }
