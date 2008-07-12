@@ -1,16 +1,16 @@
-README for cups 1.1.x
+README for cups 1.3.x
 
 REQUIREMENTS
 
 1. This version of cups no longer includes a postscript interpreter. Install 
-   the ghostscript port additionally. 
+   the ghostscript port additionally.
 2. In order to have more printer drivers available, the installation of the 
-   gimp-print port is recommended. HP DeskJet/LaserJet users should install 
-   the hpijs driver.
+   gutenprint port (formerly gimp-print) is recommended. HP DeskJet/LaserJet 
+   users should install the hpijs driver.
 3. Build and install in the following order:
    - cups
-   - gimp-print (optionally)
-   - ghostscript 
+   - gutenprint (optionally)
+   - ghostscript
    - foomatic-filters (optionally)
    - hpijs (optionally)
 
@@ -28,12 +28,13 @@ NOT you must have foomatic-filters installed and must generate a PPD file
 
 PRE-INSTALL
 
-1. Remove a installed lprng package. 
+1. Remove a installed lprng package.
    Cups and lprng cannot be installed together.
 
 POST-INSTALL
 
 1. Configure your printer with the web-interface, http://localhost:631.
-   
+
+
 PRECAUTION
 

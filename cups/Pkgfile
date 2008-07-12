@@ -5,7 +5,7 @@
 
 name=cups
 version=1.3.7
-release=1
+release=2
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups)
 
@@ -24,7 +24,9 @@ build () {
                 --with-languages="" \
                 --without-{java,perl,php,python} \
                 --enable-threads \
-                --enable-ssl=yes \
+                --enable-ssl \
+                --enable-gnutls=no \
+                --enable-openssl=yes \
                 --enable-pam=no
 
     make
