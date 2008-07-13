@@ -3,9 +3,9 @@
 # URL: http://java.sun.com
 
 name=jre
-version=1.6.0_06
+version=1.6.0_07
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u6-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u7-dlj-linux-i586.bin)
 
 build(){
 	sh $SRC/jdk-*.bin --accept-license --unpack
