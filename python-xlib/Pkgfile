@@ -1,0 +1,17 @@
+# Description: Python interface to xlib.
+# URL:         http://python-xlib.sourceforge.net
+# Maintainer:  Johannes Winkelmann, jw at smts dot ch
+# Packager:    Johannes Winkelmann, jw at tks6 dot net
+# Depends on:  python xorg-libx11
+
+name=python-xlib
+version=0.14
+release=1
+source=(http://dl.sourceforge.net/sourceforge/python-xlib/python-xlib-$version.tar.gz)
+
+build() {
+    cd python-xlib-$version
+    python setup.py install --root=$PKG --prefix=/usr
+    rm $PKG/usr/lib/python2.5/site-packages/python_xlib-*-py2.5.egg-info
+}
+
