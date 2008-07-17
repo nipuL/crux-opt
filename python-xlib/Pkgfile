@@ -14,4 +14,3 @@ build() {
     python setup.py install --root=$PKG --prefix=/usr
     rm $PKG/usr/lib/python2.5/site-packages/python_xlib-*-py2.5.egg-info
 }
-
