@@ -2,7 +2,7 @@
 # URL:         http://pypanel.sourceforge.net
 # Maintainer:  Johannes Winkelmann, jw at tks6 dot net
 # Packager:    Johannes Winkelmann, jw at tks6 dot net
-# Depends on:  python-xlib
+# Depends on:  python-xlib imlib2
 
 name=pypanel
 version=2.4
