@@ -6,8 +6,18 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/opgprof
 -rwxr-xr-x	root/root	usr/bin/ophelp
 -rwxr-xr-x	root/root	usr/bin/opimport
+-rwxr-xr-x	root/root	usr/bin/opjitconv
 -rwxr-xr-x	root/root	usr/bin/opreport
 -rwxr-xr-x	root/root	usr/bin/oprofiled
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/opagent.h
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/oprofile/
+-rw-r--r--	root/root	usr/lib/oprofile/libopagent.a
+-rwxr-xr-x	root/root	usr/lib/oprofile/libopagent.la
+lrwxrwxrwx	root/root	usr/lib/oprofile/libopagent.so -> libopagent.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/oprofile/libopagent.so.1 -> libopagent.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/oprofile/libopagent.so.1.0.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/opannotate.1.gz
@@ -49,6 +59,9 @@ drwxr-xr-x	root/root	usr/share/oprofile/arm/xscale1/
 drwxr-xr-x	root/root	usr/share/oprofile/arm/xscale2/
 -rw-r--r--	root/root	usr/share/oprofile/arm/xscale2/events
 -rw-r--r--	root/root	usr/share/oprofile/arm/xscale2/unit_masks
+drwxr-xr-x	root/root	usr/share/oprofile/avr32/
+-rw-r--r--	root/root	usr/share/oprofile/avr32/events
+-rw-r--r--	root/root	usr/share/oprofile/avr32/unit_masks
 drwxr-xr-x	root/root	usr/share/oprofile/i386/
 drwxr-xr-x	root/root	usr/share/oprofile/i386/athlon/
 -rw-r--r--	root/root	usr/share/oprofile/i386/athlon/events
@@ -128,6 +141,9 @@ drwxr-xr-x	root/root	usr/share/oprofile/ppc/
 drwxr-xr-x	root/root	usr/share/oprofile/ppc/7450/
 -rw-r--r--	root/root	usr/share/oprofile/ppc/7450/events
 -rw-r--r--	root/root	usr/share/oprofile/ppc/7450/unit_masks
+drwxr-xr-x	root/root	usr/share/oprofile/ppc/e300/
+-rw-r--r--	root/root	usr/share/oprofile/ppc/e300/events
+-rw-r--r--	root/root	usr/share/oprofile/ppc/e300/unit_masks
 drwxr-xr-x	root/root	usr/share/oprofile/ppc/e500/
 -rw-r--r--	root/root	usr/share/oprofile/ppc/e500/events
 -rw-r--r--	root/root	usr/share/oprofile/ppc/e500/unit_masks
