@@ -5,6 +5,6 @@ REQUIREMENTS
 PRE-INSTALL
 
 POST-INSTALL
-1. append /usr/lib/xulrunner-1.9 to ld.so.conf and run ldconfig
+1. append /usr/lib/xulrunner-1.9.0.1 to ld.so.conf and run ldconfig
 
 PRECAUTION
