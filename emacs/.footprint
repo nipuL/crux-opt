@@ -349,6 +349,8 @@ drwxr-xr-x	root/root	usr/share/emacs/22.2/etc/images/smilies/
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/images/zoom-out.xpm
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/letter.pbm
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/letter.xpm
+-rw-r--r--	root/root	usr/share/emacs/22.2/etc/ps-prin0.ps
+-rw-r--r--	root/root	usr/share/emacs/22.2/etc/ps-prin1.ps
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/sex.6
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/splash.pbm
 -rw-r--r--	root/root	usr/share/emacs/22.2/etc/splash.xpm
