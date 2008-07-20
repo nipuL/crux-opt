@@ -1,0 +1,13 @@
+
+README for dbus 0.92+
+
+REQUIREMENTS
+
+PRE/POST-INSTALL
+	Create a user/group messagebus with a unused id < 99:
+
+	'groupadd -g 81 messagebus'
+	'useradd -u 81 -g messagebus -d /var/empty -s /bin/false messagebus'
+	'passwd -l messagebus'
+
+PRECAUTION
