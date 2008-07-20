@@ -1,0 +1,21 @@
+# Description: A library that provides a secure layer over a reliable transport layer
+# URL: http://www.gnu.org/software/gnutls/
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libgcrypt
+
+name=gnutls
+version=2.4.0
+release=1
+source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+		--mandir=/usr/man \
+		--disable-guile
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/{info,locale}
+}
