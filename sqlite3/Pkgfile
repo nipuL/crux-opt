@@ -1,0 +1,22 @@
+# Description: SQL database engine
+# URL:         http://www.sqlite.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on:  ncurses, readline
+
+name=sqlite3
+version=3.5.9
+release=1
+
+source=(http://www.sqlite.org/sqlite-$version.tar.gz)
+
+build () {
+    cd sqlite-$version
+    ./configure --prefix=/usr \
+                --enable-threadsafe \
+                --disable-tcl
+    make
+    make DESTDIR=$PKG install
+    install -d $PKG/usr/man/man1
+    install -m 644 sqlite3.1 $PKG/usr/man/man1
+}
