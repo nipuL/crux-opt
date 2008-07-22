@@ -1,6 +1,6 @@
 # Description: Java plugin for Mozilla Firefox
 # URL: http://java.sun.com
-# Maintainer: unmaintained, maintainer-wanted at crux dot nu
+# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Packager: Jay Dolan, jdolan at jdolan dot dyndns dot org
 # Depends on: jre, firefox
 
@@ -10,20 +10,22 @@ release=1
 source=()
 
 build(){
-    plugins=(
-	/usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so
-	/usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
+  plugins=(
+    # jre
+    /usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so \
+    # jdk
+    /usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
     )
-
-    for p in ${plugins[@]}; do
-	test -f $p && break
-    done
-
-    if [ ! -f $p ]; then
-	echo "Java Runtime Environment not found!"
-	return
-    fi
-
-    mkdir -p $PKG/usr/lib/firefox/plugins
-    ln -s $p $PKG/usr/lib/firefox/plugins	
+  
+  for p in ${plugins[@]}; do
+    test -f $p && break
+  done
+  
+  if [ ! -f $p ]; then
+    echo "Java Runtime Environment not found!"
+    return
+  fi
+  
+  mkdir -p $PKG/usr/lib/firefox/plugins
+  ln -s $p $PKG/usr/lib/firefox/plugins
 }
