@@ -5,16 +5,17 @@
 # Group: gnome
 
 name=shared-mime-info
-version=0.40
+version=0.51
 release=1
-source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2)
+source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
 	cd $name-$version
 
-	rm po/*.po
-	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
-	       -e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
+	# kill nls support. don't depend on intltool.
+	patch -Np1 -i $SRC/$name.diff
+	autoreconf
 
 	./configure --prefix=/usr --mandir=/usr/man
 	make
