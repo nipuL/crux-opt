@@ -1,7 +1,7 @@
 # Description: Macromedia Flash Plugin for Firefox
 # URL: http://www.adobe.com/products/flashplayer/
+# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Packager: Matt Housh, jaeger at crux dot nu
-# Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on: firefox
 
 name=firefox-flash-plugin
@@ -10,8 +10,6 @@ release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_9_linux.tar.gz)
 
 build() {
-	mkdir -p $PKG/usr/lib/firefox/plugins
-	cp install_flash_player_9_linux/libflashplayer.so \
-		$PKG/usr/lib/firefox/plugins
-	chown -R root:root $PKG
+  install -D -m 0755 install_flash_player_9_linux/libflashplayer.so \
+    $PKG/usr/lib/firefox/plugins/libflashplayer.so
 }
