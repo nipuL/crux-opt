@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.conf
---- dovecot-1.1.0.orig/dovecot-example.conf	2008-06-21 17:41:36.000000000 +0200
-+++ dovecot-1.1.0/dovecot-example.conf	2008-06-21 17:41:50.000000000 +0200
+diff -Nru dovecot-1.1.2.orig/dovecot-example.conf dovecot-1.1.2/dovecot-example.conf
+--- dovecot-1.1.2.orig/dovecot-example.conf	2008-07-24 08:38:13.000000000 +0200
++++ dovecot-1.1.2/dovecot-example.conf	2008-07-24 08:38:25.000000000 +0200
 @@ -16,11 +16,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -15,7 +15,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # A space separated list of IP or host addresses where to listen in for
  # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
-@@ -91,8 +91,8 @@
+@@ -90,8 +90,8 @@
  # dropping root privileges, so keep the key file unreadable by anyone but
  # root. Included doc/mkcert.sh can be used to easily generate self-signed
  # certificate, just make sure to update the domains in dovecot-openssl.cnf
@@ -26,7 +26,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # If key file is password protected, give the password here. Alternatively
  # give it when starting dovecot with -p parameter.
-@@ -133,7 +133,7 @@
+@@ -132,7 +132,7 @@
  # which login needs to be able to connect to. The sockets are created when
  # running as root, so you don't have to worry about permissions. Note that
  # everything in this directory is deleted when Dovecot is started.
@@ -35,7 +35,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # chroot login process to the login_dir. Only reason not to do this is if you
  # wish to run the whole Dovecot without roots. <doc/wiki/Rootless.txt>
-@@ -143,7 +143,7 @@
+@@ -142,7 +142,7 @@
  # and don't use it anywhere else. The user must also belong to a group where
  # only it has access, it's used to control access for authentication process.
  # Note that this user is NOT used to access mails. <doc/wiki/UserIds.txt>
@@ -44,7 +44,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # Set max. process size in megabytes. If you don't use
  # login_process_per_connection you might need to grow this.
-@@ -153,10 +153,10 @@
+@@ -152,10 +152,10 @@
  # login process be allowed to process multiple connections (no)? Yes is more
  # secure, espcially with SSL/TLS enabled. No is faster since there's no need
  # to create processes all the time.
@@ -57,7 +57,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # Maximum number of login processes to create. The listening process count
  # usually stays at login_processes_count, but when multiple users start logging
-@@ -212,7 +212,7 @@
+@@ -211,7 +211,7 @@
  #
  # <doc/wiki/MailLocation.txt>
  #
@@ -66,7 +66,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # If you need to set multiple mailbox locations or want to change default
  # namespace settings, you can do it by defining namespace sections.
-@@ -352,7 +352,7 @@
+@@ -351,7 +351,7 @@
  # non-valid GID as primary group ID aren't allowed to log in. If user
  # belongs to supplementary groups with non-valid GIDs, those groups are
  # not set.
@@ -75,7 +75,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  #last_valid_gid = 0
  
  # Maximum number of running mail processes. When this limit is reached,
-@@ -503,19 +503,19 @@
+@@ -502,19 +502,19 @@
  
  protocol imap {
    # Login executable location.
@@ -99,7 +99,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -572,11 +572,11 @@
+@@ -571,11 +571,11 @@
  
  protocol pop3 {
    # Login executable location.
@@ -113,7 +113,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -615,7 +615,7 @@
+@@ -614,7 +614,7 @@
    # Dovecot's default, so if you're building a new server it would be a good
    # idea to change this. %08Xu%08Xv should be pretty fail-safe.
    #
@@ -122,7 +122,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
    # POP3 logout format string:
    #  %i - total number of bytes read from client
-@@ -678,7 +678,7 @@
+@@ -677,7 +677,7 @@
    #deliver_log_format = msgid=%m: %$
  
    # Binary to use for sending mails.
@@ -131,7 +131,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
    # Human readable error message for rejection mails. Use can use variables:
    #  %n = CRLF, %r = reason, %s = subject, %t = recipient
-@@ -693,7 +693,7 @@
+@@ -692,7 +692,7 @@
  ##
  
  # Executable location
@@ -140,7 +140,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -826,7 +826,7 @@
+@@ -825,7 +825,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -149,7 +149,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
      # [session=yes] [setcred=yes] [failure_show_msg=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -855,7 +855,7 @@
+@@ -854,7 +854,7 @@
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -158,7 +158,7 @@ diff -Nru dovecot-1.1.0.orig/dovecot-example.conf dovecot-1.1.0/dovecot-example.
  
    # System users (NSS, /etc/passwd, or similiar)
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -868,10 +868,10 @@
+@@ -867,10 +867,10 @@
    # Shadow passwords for system users (NSS, /etc/shadow or similiar).
    # Deprecated by PAM nowadays.
    # <doc/wiki/PasswordDatabase.Shadow.txt>

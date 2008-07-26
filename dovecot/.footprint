@@ -1,4 +1,5 @@
 drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/dovecot-db-example.conf
 -rw-r--r--	root/root	etc/dovecot.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/dovecot
@@ -267,6 +268,7 @@ drwxr-xr-x	root/root	usr/lib/dovecot/
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/listview
 -rwxr-xr-x	root/root	usr/lib/dovecot/logview
+-rwxr-xr-x	root/root	usr/lib/dovecot/maildirlock
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/
@@ -282,9 +284,7 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_expire_plugin.so -> ../l
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_fts_plugin.so -> ../lib20_fts_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_mail_log_plugin.so -> ../lib20_mail_log_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_mbox_snarf_plugin.so -> ../lib20_mbox_snarf_plugin.so
--rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.a
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.la
--rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.so -> ../lib20_zlib_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib21_fts_squat_plugin.so -> ../lib21_fts_squat_plugin.so
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/lda/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib01_acl_plugin.so -> ../lib01_acl_plugin.so
@@ -322,6 +322,9 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib21_fts_squat_plugin.so -> ..
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib21_fts_squat_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib21_fts_squat_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib21_fts_squat_plugin.so
@@ -330,8 +333,11 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib02_lazy_expunge_plugin.so -
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_expire_plugin.so -> ../lib20_expire_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_fts_plugin.so -> ../lib20_fts_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_mail_log_plugin.so -> ../lib20_mail_log_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_mbox_snarf_plugin.so -> ../lib20_mbox_snarf_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_zlib_plugin.so -> ../lib20_zlib_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib21_fts_squat_plugin.so -> ../lib21_fts_squat_plugin.so
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/rawlog
