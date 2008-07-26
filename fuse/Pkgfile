@@ -4,8 +4,8 @@
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 
 name=fuse
-version=2.7.3
-release=2
+version=2.7.4
+release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
