@@ -5,13 +5,16 @@
 # Depends on:  openssl
 
 name=msmtp
-version=1.4.15
+version=1.4.16
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-ssl=openssl \
+                --disable-nls
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/share
