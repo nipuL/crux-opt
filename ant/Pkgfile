@@ -5,9 +5,9 @@
 # Depends on: jdk
 
 name=ant
-version=1.7.0
+version=1.7.1
 release=1
-source=(http://mirrors.publicshout.org/apache/ant/binaries/apache-${name}-${version}-bin.tar.bz2)
+source=(http://apache.panu.it/ant/binaries/apache-${name}-${version}-bin.tar.bz2)
 
 build() {
 	cd apache-$name-$version
