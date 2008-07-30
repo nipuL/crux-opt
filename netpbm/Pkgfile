@@ -6,7 +6,7 @@
 name=netpbm
 version=10.35.48
 release=1
-source=(http://aon.iki.fi/files/netpbm/netpbm-$version.tar.gz
+source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
 	Makefile.config)
 
 build() {
