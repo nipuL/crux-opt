@@ -1,4 +1,4 @@
 7a0ece0af8aefad4313270a8786e041e  vsftpd
-f7a742690d7f86e356fb66d3840079c7  vsftpd-2.0.6.tar.gz
-42228defa4d54bdc280c1e885944942c  vsftpd-config.patch
+3e39cb7b0bee306ad7df8e3552e15297  vsftpd-2.0.7.tar.gz
+d69ea2c7fe28d63a586f47deb5ea7726  vsftpd-config.patch
 50909902ac4ee17700ae9f3cc712485b  vsftpd-syscall.patch
