@@ -1,18 +1,18 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: xorg, gl-select
+# Maintainer: Juergen Daubert, juergen dot daubert at t-online dot de 
+# Depends on: gtk gl-select
 
 name=nvidia
-version=173.14.05
-release=2
-source=(http://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
+version=173.14.12
+release=1
+source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg1.run \
 	$name-makefile.patch)
 
 build() {
-	sh NVIDIA-Linux-x86-$version-pkg0.run --extract-only
-	cd NVIDIA-Linux-x86-$version-pkg0
+	sh NVIDIA-Linux-x86-$version-pkg1.run --extract-only
+	cd NVIDIA-Linux-x86-$version-pkg1
 
 	# patch Makefile.kbuild for normal users and no load during build
 	patch -p0 -i $SRC/$name-makefile.patch usr/src/nv/Makefile.kbuild
