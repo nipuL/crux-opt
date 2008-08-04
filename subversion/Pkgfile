@@ -4,24 +4,21 @@
 # Depends on:  apr, neon, expat
 
 name=subversion
-version=1.5.0
-release=2
+version=1.5.1
+release=1
 source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
 
 build() {
     cd $name-$version
 
-    sed -i -e 's|0.26.1|0.26.2|g' configure
-    LDFLAGS="-L$PKG/usr/lib" \
-        ./configure --prefix=/usr \
-           --mandir=/usr/man \
-           --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
-           --disable-mod-activation --without-swig --disable-nls \
-           --disable-neon-version-check
+    ./configure --prefix=/usr \
+       --mandir=/usr/man \
+       --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
+       --disable-mod-activation --without-swig --disable-nls \
+       --without-apxs
 
     make
-    make -j 1 DESTDIR=$PKG external-install local-install 
-    sed -i -e "s|-L$PKG/usr/lib||g" $PKG/usr/lib/*.la
+    make DESTDIR=$PKG external-install local-install
 
     # info pages seem to get generated when makeinfo is available
     rm -rf $PKG/usr/info
