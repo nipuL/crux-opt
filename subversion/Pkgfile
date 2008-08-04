@@ -18,7 +18,7 @@ build() {
        --without-apxs
 
     make
-    make DESTDIR=$PKG external-install local-install
+    make -j1 DESTDIR=$PKG external-install local-install
 
     # info pages seem to get generated when makeinfo is available
     rm -rf $PKG/usr/info
