@@ -14,6 +14,7 @@ drwxr-xr-x	root/root	usr/include/neon/
 -rw-r--r--	root/root	usr/include/neon/ne_i18n.h
 -rw-r--r--	root/root	usr/include/neon/ne_locks.h
 -rw-r--r--	root/root	usr/include/neon/ne_md5.h
+-rw-r--r--	root/root	usr/include/neon/ne_pkcs11.h
 -rw-r--r--	root/root	usr/include/neon/ne_props.h
 -rw-r--r--	root/root	usr/include/neon/ne_redirect.h
 -rw-r--r--	root/root	usr/include/neon/ne_request.h
@@ -27,9 +28,9 @@ drwxr-xr-x	root/root	usr/include/neon/
 -rw-r--r--	root/root	usr/include/neon/ne_xmlreq.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libneon.la
-lrwxrwxrwx	root/root	usr/lib/libneon.so -> libneon.so.26.0.4
-lrwxrwxrwx	root/root	usr/lib/libneon.so.26 -> libneon.so.26.0.4
--rwxr-xr-x	root/root	usr/lib/libneon.so.26.0.4
+lrwxrwxrwx	root/root	usr/lib/libneon.so -> libneon.so.27.1.2
+lrwxrwxrwx	root/root	usr/lib/libneon.so.27 -> libneon.so.27.1.2
+-rwxr-xr-x	root/root	usr/lib/libneon.so.27.1.2
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/neon.pc
 drwxr-xr-x	root/root	usr/man/
@@ -58,9 +59,11 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/ne_close_connection.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_forget_auth.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_get_error.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_get_request_flag.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_get_response_header.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_get_scheme.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_get_server_hostport.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_get_session_flag.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_get_status.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_has_support.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_i18n_init.3.gz
@@ -88,8 +91,9 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/ne_set_request_body_buffer.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_set_request_body_fd.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_set_request_body_fd64.3.gz
--rw-r--r--	root/root	usr/man/man3/ne_set_request_expect100.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_set_request_flag.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_set_server_auth.3.gz
+-rw-r--r--	root/root	usr/man/man3/ne_set_session_flag.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_set_useragent.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_shave.3.gz
 -rw-r--r--	root/root	usr/man/man3/ne_sock_exit.3.gz
