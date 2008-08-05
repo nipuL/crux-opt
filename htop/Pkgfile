@@ -4,7 +4,7 @@
 # Depends on:   ncurses
 
 name=htop
-version=0.7
+version=0.8
 release=1
 source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
 
@@ -14,5 +14,6 @@ build() {
     make
     make DESTDIR=$PKG install
    
+    rm -rf $PKG/usr/{include,lib}
     rm -rf $PKG/usr/share/{applications,pixmaps,}
 }
