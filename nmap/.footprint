@@ -19,6 +19,8 @@ drwxr-xr-x	root/root	usr/share/nmap/
 -rw-r--r--	root/root	usr/share/nmap/nmap.dtd
 -rw-r--r--	root/root	usr/share/nmap/nmap.xsl
 drwxr-xr-x	root/root	usr/share/nmap/nselib/
+-rw-r--r--	root/root	usr/share/nmap/nselib/comm.lua
+-rw-r--r--	root/root	usr/share/nmap/nselib/datafiles.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/http.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/ipOps.lua
 -rw-r--r--	root/root	usr/share/nmap/nselib/listop.lua
@@ -56,8 +58,6 @@ drwxr-xr-x	root/root	usr/share/nmap/scripts/
 -rw-r--r--	root/root	usr/share/nmap/scripts/iax2Detect.nse
 -rw-r--r--	root/root	usr/share/nmap/scripts/ircServerInfo.nse
 -rw-r--r--	root/root	usr/share/nmap/scripts/ircZombieTest.nse
--rw-r--r--	root/root	usr/share/nmap/scripts/kibuvDetection.nse
--rw-r--r--	root/root	usr/share/nmap/scripts/mswindowsShell.nse
 -rw-r--r--	root/root	usr/share/nmap/scripts/nbstat.nse
 -rw-r--r--	root/root	usr/share/nmap/scripts/netbios-smb-os-discovery.nse
 -rw-r--r--	root/root	usr/share/nmap/scripts/promiscuous.nse
