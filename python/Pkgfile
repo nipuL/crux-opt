@@ -1,18 +1,20 @@
 # Description: Python interpreter, version 2.5
 # URL:         http://www.python.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  db, gdbm, ncurses, openssl, readline, zlib
+# Depends on:  db gdbm ncurses openssl readline bzip2 zlib
 
 name=python
 version=2.5.2
-release=2
+release=3
 source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
-        $name-$version.patch)
+        $name-$version.patch CVE-2008-{2315,2316,3142,3144}.patch.gz)
 
 build () {
     cd Python-$version
 
     patch -p1 -i $SRC/$name-$version.patch
+    gunzip -c $SRC/CVE*.patch.gz | patch -p1
+
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
