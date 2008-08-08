@@ -6,10 +6,13 @@
 name=cryptsetup
 version=1.0.6
 release=1
-source=(http://luks.endorphin.org/source/$name-$version.tar.bz2)
+source=(http://luks.endorphin.org/source/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
     cd $name-$version
+
+    patch -Np1 -i $SRC/$name.diff
    
     touch m4/Makefile.in
 
