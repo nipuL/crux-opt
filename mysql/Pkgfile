@@ -2,10 +2,10 @@
 # URL:         http://www.mysql.com
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on:  ncurses, zlib
+# Depends on:  ncurses readline zlib
 
 name=mysql
-version=5.0.51b
+version=5.0.67
 release=1
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
@@ -20,6 +20,7 @@ build () {
                 --enable-thread-safe-client \
                 --without-berkeley-db \
                 --enable-innodb \
+                --without-readline \
                 --without-debug \
                 --without-docs \
                 --without-bench 
