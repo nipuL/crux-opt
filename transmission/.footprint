@@ -17,7 +17,6 @@ drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/transmission.png
 drwxr-xr-x	root/root	usr/share/transmission/
 drwxr-xr-x	root/root	usr/share/transmission/web/
--rw-r--r--	root/root	usr/share/transmission/web/LICENSE
 drwxr-xr-x	root/root	usr/share/transmission/web/images/
 drwxr-xr-x	root/root	usr/share/transmission/web/images/buttons/
 -rw-r--r--	root/root	usr/share/transmission/web/images/buttons/info_activity.png
