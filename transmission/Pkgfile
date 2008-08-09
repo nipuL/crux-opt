@@ -5,7 +5,7 @@
 # Depends on:  openssl, gtk
 
 name=transmission
-version=1.31
+version=1.32
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
 
