@@ -6,7 +6,7 @@
 
 name=cryptsetup
 version=1.0.6
-release=1
+release=2
 source=(http://luks.endorphin.org/source/$name-$version.tar.bz2
         $name.diff)
 
