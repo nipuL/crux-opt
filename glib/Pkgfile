@@ -5,7 +5,7 @@
 name=glib
 version=2.16.5
 release=1
-source=(ftp://ftp.gnome.org/pub/GNOME/sources/$name/2.16/$name-$version.tar.bz2)
+source=(http://download.gnome.org/sources/$name/2.16/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
