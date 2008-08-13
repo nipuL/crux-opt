@@ -1,0 +1,19 @@
+# Description: some scripts for CRUX ports
+# URL: http://prt-utils.berlios.de
+# Maintainer: Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Martin Opel, mo at obbl-net dot de
+# Depends on: prt-get
+
+name=prt-utils
+version=0.9.1
+release=2
+source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.gz \
+	$name.patch)
+
+build() {
+	cd $name-$version
+	patch < ../$name.patch
+	mkdir -p $PKG/usr/{man/man1,bin}
+	make DESTDIR=$PKG install
+}
