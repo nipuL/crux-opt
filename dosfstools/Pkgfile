@@ -1,0 +1,27 @@
+# URL: ftp://ftp.ibiblio.org/pub/Linux/system/filesystems/dosfs/
+# Description: tools for creating and checking DOS filesystems in linux
+# Packager: Ryan B. Lynch, rlynch at strozllc dot com
+# Maintainer: Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:
+
+name=dosfstools
+version=2.11
+release=1
+source=(http://fresh.t-systems-sfr.com/linux/src/$name-$version.src.tar.gz)
+
+build() {
+	cd $name-$version
+	make
+	mkdir -p $PKG/sbin
+	mkdir -p $PKG/usr/man/man8
+	cp dosfsck/dosfsck $PKG/sbin
+	cp dosfsck/dosfsck.8 $PKG/usr/man/man8
+	cp mkdosfs/mkdosfs $PKG/sbin
+	cp mkdosfs/mkdosfs.8 $PKG/usr/man/man8
+	cd $PKG/sbin && ln -s dosfsck fsck.msdos && ln -s dosfsck fsck.vfat \
+		&& ln -s mkdosfs mkfs.msdos && ln -s mkdosfs mkfs.vfat
+	cd $PKG/usr/man/man8 && ln -s dosfsck.8 fsck.msdos.8 \
+		&& ln -s dosfsck.8 fsck.vfat.8 && ln -s mkdosfs.8 mkfs.msdos.8 \
+		&& ln -s mkdosfs.8 mkfs.vfat.8
+}
