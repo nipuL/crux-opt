@@ -1,0 +1,17 @@
+# Description: The RAR Archiver
+# URL: http://www.rarlab.com/
+# Packager: Matt Housh, jaeger at crux dot nu
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+
+name=rar
+version=3.8.b2
+release=2
+source=(http://www.rarlab.com/rar/rarlinux-$version.tar.gz)
+
+build() {
+    cd $name
+    install -D -m 0755 rar_static $PKG/usr/bin/rar
+    install -D -m 0644 rarfiles.lst $PKG/etc/rarfiles.lst
+    install -D -m 0755 default.sfx $PKG/usr/lib/default.sfx
+}
