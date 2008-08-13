@@ -1,0 +1,20 @@
+# Description: GNU shar (encoding/decoding) utilities
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# URL: http://www.gnu.org/software/sharutils/sharutils.html
+# Depends on: 
+
+name=sharutils
+version=4.7
+release=1
+source=(ftp://ftp.gnu.org/gnu/$name/REL-$version/$name-$version.tar.bz2)
+
+build(){
+	cd $name-$version
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--disable-nls
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}
