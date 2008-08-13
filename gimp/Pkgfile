@@ -1,0 +1,24 @@
+# Description: The GIMP
+# URL: http://www.gimp.org/
+# Maintainer: Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: gtk, libart_lgpl, xorg-libxmu, xorg-libxpm, p5-xml-parser
+
+# Nice to have: gimp-print
+
+name=gimp
+version=2.4.5
+release=1
+source=(ftp://ftp.gimp.org/pub/gimp/v2.4/gimp-$version.tar.bz2)
+
+build() {
+	cd gimp-$version
+	sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
+	./configure --prefix=/usr \
+		--mandir=/usr/man \
+		--disable-static \
+		--disable-python
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/{gtk-doc,locale}
+}
