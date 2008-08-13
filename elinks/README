@@ -1,0 +1,11 @@
+README for elinks 0.11.x
+
+To get a more "common" behaviour of elinks cursor-keys add 
+the following to ~/.elinks/elinks.conf:
+
+  bind "main" "Up"    = "move-cursor-up"
+  bind "main" "Right" = "move-cursor-right"
+  bind "main" "Left"  = "move-cursor-left"
+  bind "main" "Down"  = "move-cursor-down"
+
+
