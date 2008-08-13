@@ -1,0 +1,17 @@
+# Description: A set of python bindings for cairo
+# URL: http://cairographics.org/pycairo
+# Maintainer: Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: cairo, python
+
+name=pycairo
+version=1.2.6
+release=1
+source=(http://cairographics.org/releases/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
