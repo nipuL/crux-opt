@@ -1,0 +1,18 @@
+PRE-INSTALL
+
+    Kernel sources must exist in /lib/modules/[version]/build
+
+POST-INSTALL
+
+    Run depmod -a, edit /etc/modprobe.conf and /etc/rc.d/net.  The module 
+    name is ath_hal or ath_pci, depending on your card.  The wireless 
+    ifdevice name is ath0.  Something like this should work:
+
+    /etc/modprobe.conf:
+    alias ath0 ath_pci
+
+    /etc/rc.d/net:
+    iwconfig ath0 essid myid
+    iwconfig ath0 key mykey
+    dhcpcd ath0
+
