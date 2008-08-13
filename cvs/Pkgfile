@@ -1,0 +1,19 @@
+# Description: Concurrent Versions System
+# URL:         https://www.cvshome.org/
+# Maintainer:  Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+
+name=cvs
+version=1.11.23
+release=1
+source=(http://ftp.gnu.org/gnu/non-gnu/cvs/source/stable/$version/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/man --disable-server
+    make
+    make DESTDIR=$PKG install
+    make -C man DESTDIR=$PKG install-man
+    rm -rf $PKG/usr/{share,info,man/man8} \
+	   $PKG/usr/bin/{cvsbug,rcs2log}
+}
