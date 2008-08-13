@@ -1,0 +1,39 @@
+# Maintainer: Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Description: Java 2 Software Development Kit
+# URL: http://java.sun.com
+
+name=jdk
+version=1.6.0_07
+release=1
+source=(http://download.java.net/dlj/binaries/jdk-6u7-dlj-linux-amd64.bin)
+
+build(){
+	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
+	sh $SRC/jdk-*.bin --accept-license --unpack
+	
+	export GLOBIGNORE="*/man1"
+	rm -rf jdk*/{man/,jre/lib/javaws/messages_,demo,sample}*
+	rm -rf jdk*/jre/lib/fontconfig.{RedHat,SuSE,Sun,Turbo}.*
+	rm -rf jdk*/jre/plugin/i386/ns7-gcc29
+
+	export GLOBIGNORE="*/src.zip"
+	for i in jdk*/* jdk*/jre/*; do
+	  test -f $i && rm -rf $i;
+	done
+	
+	ln -s jdk* java
+
+	# generate classes.jsa
+ 	(cd java; ./bin/java -Xshare:dump)
+
+	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
+	for j in java javac javah javap javaws jar keytool; do
+		ln -s ../lib/java/bin/$j
+	done
+
+	# fix for xcb assertions
+	sed -i 's/XINERAMA/FAKEEXTN/g' \
+		$PKG/usr/lib/java/jre/lib/amd64/xawt/libmawt.so 
+}
+
