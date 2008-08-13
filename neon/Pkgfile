@@ -1,0 +1,24 @@
+# Maintainer:  Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Description: neon is an HTTP and WebDAV client library
+# URL:         http://www.webdav.org/neon 
+# Depends on:  openssl expat 
+
+name=neon
+version=0.26.4
+release=1
+source=(http://www.webdav.org/neon/neon-${version}.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --with-ssl \
+                --with-expat \
+                --enable-shared \
+                --disable-static \
+                --disable-debug 
+    make
+    make DESTDIR=$PKG install
+   
+    rm -rf $PKG/usr/share/
+}
