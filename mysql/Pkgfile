@@ -1,0 +1,40 @@
+# Description: SQL database server
+# URL:         http://www.mysql.com
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  ncurses, zlib
+
+name=mysql
+version=5.0.51b
+release=1
+source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
+        my.cnf mysqld)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --libexecdir=/usr/sbin \
+                --localstatedir=/var/lib \
+                --enable-assembler \
+                --enable-thread-safe-client \
+                --without-berkeley-db \
+                --enable-innodb \
+                --without-debug \
+                --without-docs \
+                --without-bench 
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/mysql-test
+    rm $PKG/usr/share/mysql/charsets/README
+    find $PKG/usr/share/mysql/* -prune -type f ! -regex '.*\(cnf\|sql\)$' | xargs rm -f {} \;
+    find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
+
+    mkdir -p $PKG/{var/lib,var/log}
+    touch mysqld.log
+    install -m 600 -o daemon -g daemon mysqld.log $PKG/var/log
+    install -d -m 700 -o daemon -g daemon $PKG/var/lib/mysql
+    install -D -m 755 $SRC/mysqld $PKG/etc/rc.d/mysqld
+    install -m 600 $SRC/my.cnf $PKG/etc
+}
