@@ -1,0 +1,33 @@
+# Description: Scanner Access Now Easy - Scanner driver for Linux
+# URL:         http://www.sane-project.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  libusb, libjpeg
+
+name=sane
+version=1.0.19
+release=1
+source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
+
+build () {
+    cd $name-backends-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --localstatedir=/var \
+                --disable-translations \
+                --enable-locking \
+                --with-group=scanner
+    make
+    make -j1 DESTDIR=$PKG install
+
+    install -d $PKG/etc/udev/rules.d
+    install -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d
+    sed -i 's/usb_device/usb/' $PKG/etc/udev/rules.d/libsane.rules
+
+    chown root:root $PKG/{var,var/lock}
+    chmod 0755 $PKG/var
+    chmod 1777 $PKG/var/lock
+
+    rm -r $PKG/usr/{doc,share}
+}
