@@ -1,0 +1,18 @@
+# Description: Artwiz X fonts revisited
+# URL: http://artwizaleczapka.sourceforge.net/
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: xorg-mkfontdir, xorg-mkfontscale
+
+name=xorg-font-artwiz-aleczapka
+version=1.3
+release=1
+source=(http://dl.sourceforge.net/sourceforge/artwizaleczapka/artwiz-aleczapka-en-1.3.tar.bz2)
+
+build() {
+	mkdir -p $PKG/usr/lib/X11/fonts/artwiz-aleczapka
+	cd artwiz-aleczapka-en-1.3
+	install -o root -g root -m 0644 *.pcf \
+		$PKG/usr/lib/X11/fonts/artwiz-aleczapka/
+}
