@@ -1,0 +1,36 @@
+# Description: CGI/FastCGI version of the PHP interpreter
+# URL:         http://www.php.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  libxml2
+
+name=php-fcgi
+version=5.2.6
+release=2
+source=(http://www.php.net/distributions/php-$version.tar.bz2 
+        php-fcgi)
+
+build () {
+    cd php-$version
+
+    local PHP_CONFIG="
+    --prefix=/usr \
+    --with-config-file-path=/etc/php \
+    --with-config-file-scan-dir=/etc/php/conf.d \
+    --with-zlib \
+    --disable-static --disable-debug --without-pear"
+
+    EXTENSION_DIR=/usr/lib/php/extensions \
+    ./configure \
+        $PHP_CONFIG \
+        --enable-fastcgi \
+        --enable-cgi \
+        --disable-cli \
+        --enable-force-cgi-redirect \
+        --enable-discard-path
+
+    make
+
+    install -D -m 755 sapi/cgi/php-cgi $PKG/usr/bin/php-cgi
+    install -D -m 755 $SRC/php-fcgi $PKG/etc/rc.d/php-fcgi
+}
