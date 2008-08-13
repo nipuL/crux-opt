@@ -1,0 +1,40 @@
+diff -Nru sqlite-2.8.17.orig/Makefile.in sqlite-2.8.17/Makefile.in
+--- sqlite-2.8.17.orig/Makefile.in	2005-12-20 14:25:35.000000000 +0100
++++ sqlite-2.8.17/Makefile.in	2005-12-20 14:25:51.000000000 +0100
+@@ -26,7 +26,7 @@
+ # will run on the target platform.  (BCC and TCC are usually the
+ # same unless your are cross-compiling.)
+ #
+-TCC = @TARGET_CC@ @TARGET_CFLAGS@ -I. -I${TOP}/src
++TCC = @TARGET_CC@ @TARGET_CFLAGS@  $(OPTS) -I. -I${TOP}/src
+ 
+ # Some standard variables and programs
+ #
+@@ -41,6 +41,9 @@
+ LTLINK = $(LIBTOOL) --mode=link $(TCC)
+ LTINSTALL = $(LIBTOOL) --mode=install $(INSTALL)
+ 
++OPTS = -DNDEBUG=1 -DTHREADSAVE=1
++LDFLAGS += -lpthread
++
+ # Compiler options needed for programs that use the TCL library.
+ #
+ TCL_FLAGS = @TARGET_TCL_INC@
+@@ -187,7 +190,7 @@
+           | awk '{print $$5,$$6}' >last_change
+ 
+ libsqlite.la:	$(LIBOBJ)
+-	$(LTLINK) -o libsqlite.la $(LIBOBJ) ${RELEASE} -rpath @exec_prefix@/lib \
++	$(LTLINK) -o libsqlite.la $(LIBOBJ) $(LDFLAGS) ${RELEASE} -rpath @exec_prefix@/lib \
+ 		-version-info "8:6:8"
+ 
+ libtclsqlite.la:	tclsqlite.lo libsqlite.la
+@@ -473,6 +476,8 @@
+ 	$(INSTALL) -m 0644 sqlite.h $(DESTDIR)$(prefix)/include
+ 	$(INSTALL) -d $(DESTDIR)$(exec_prefix)/lib/pkgconfig; 
+ 	$(INSTALL) -m 0644 sqlite.pc $(DESTDIR)$(exec_prefix)/lib/pkgconfig; 
++	$(INSTALL) -d $(DESTDIR)/$(prefix)/man/man1
++	$(INSTALL) -m 0644 sqlite.1 $(DESTDIR)/$(prefix)/man/man1
+ 
+ clean:	
+ 	rm -f *.lo *.la *.o sqlite@TARGET_EXEEXT@ libsqlite.la sqlite.h opcodes.*
