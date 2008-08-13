@@ -1,0 +1,19 @@
+# Description: A screen manager with VT100/ANSI terminal emulation 
+# URL:         http://www.gnu.org/software/screen/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  ncurses
+
+name=screen
+version=4.0.3
+release=2
+source=(http://fresh.t-systems-sfr.com/unix/src/misc//$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr --enable-colors256
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/info
+    chmod -s $PKG/usr/bin/$name-$version
+}
