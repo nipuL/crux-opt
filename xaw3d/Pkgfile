@@ -1,0 +1,22 @@
+# Description: 3D-style graphics library for X 
+# URL:         http://freshmeat.net/projects/xaw3d
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  xorg-libxpm, xorg-libxmu, xorg-imake
+
+name=xaw3d
+version=1.5
+release=5
+source=(ftp://ftp.x.org/contrib/widgets/Xaw3d/R6.3/Xaw3d-$version.tar.gz \
+        $name-$version.patch)
+
+build () {
+    patch -p1 < $name-$version.patch
+    cd xc/lib/Xaw3d
+    mkdir X11
+    ln -s .. X11/Xaw3d
+    xmkmf
+    make -j1 XPLIB=''
+    make DESTDIR=$PKG install
+    mv $PKG/usr/lib64 $PKG/usr/lib
+}
