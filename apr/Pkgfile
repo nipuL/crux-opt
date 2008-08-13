@@ -1,0 +1,32 @@
+# Description: Apache Portable Runtime library
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# URL:         http://apr.apache.org/
+# Depends on:  e2fsprogs, expat, db, gdbm
+
+name=apr
+version=1.3.2
+release=1
+source=(http://www.apache.org/dist/$name/$name-$version.tar.bz2 \
+        http://www.apache.org/dist/$name/$name-util-$version.tar.bz2)
+
+build(){
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --with-installbuilddir=/usr/share/apr-1 
+    make 
+    make DESTDIR=$PKG install
+
+    cd $SRC/$name-util-$version
+    ./configure --prefix=/usr \
+                --with-apr=$SRC/$name-$version \
+                --with-expat=/usr \
+                --with-berkeley-db=/usr \
+                --with-gdbm=/usr
+    make
+    make DESTDIR=$PKG install
+
+    sed -i -r "/^APR_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apr-1-config
+    sed -i -r "/^APU_(SOURCE|BUILD)/s|=.*|=|" $PKG/usr/bin/apu-1-config
+    rm -r $PKG/usr/lib/*.exp
+}
