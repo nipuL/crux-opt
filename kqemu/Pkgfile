@@ -1,0 +1,20 @@
+# Description: QEMU Accelerator Module
+# URL:         http://bellard.org/qemu/
+# Maintainer:  Simone Rota, sip at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:  
+
+name=kqemu
+version=1.3.0pre11
+release=3
+source=(http://bellard.org/qemu/$name-$version.tar.gz \
+	$name.patch)
+
+build() {
+	cd $name-$version
+	patch -Np1 -i ../$name.patch
+	./configure
+	make
+	install -D -m 0644 $name.ko $PKG/lib/modules/$(uname -r)/misc/kqemu.ko
+}
