@@ -3,14 +3,14 @@
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 
 name=cdrtools
-version=2.01.01a45
+version=2.01.01a46
 release=1
 source=(ftp://ftp.berlios.de/pub/cdrecord/alpha/$name-$version.tar.bz2)
 
 build() {
     cd $name-2.01.01
 
-    make
+    make -j1
     make INS_BASE=$PKG/usr install
 
     rm -rf $PKG/usr/{include,lib,sbin,share,man/man5}
