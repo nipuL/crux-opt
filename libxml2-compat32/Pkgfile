@@ -1,0 +1,25 @@
+# Description: XML library version 2
+# URL:         http://xmlsoft.org/
+# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Daniel Mueller, daniel at danm dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  libxml2 zlib-compat32
+
+name=libxml2-compat32
+version=2.6.32
+release=1
+source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz)
+
+build () {
+    cd libxml2-$version
+    ./configure --prefix=/usr --without-python --libdir=/usr/lib32
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{include,man,share}
+    
+    (
+	cd $PKG/usr/bin;
+	rm xmlcatalog xmllint;
+	mv xml2-config xml2-config32
+    )
+}
