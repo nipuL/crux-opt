@@ -1,0 +1,20 @@
+# Description: ALSA libraries
+# URL: http://www.alsa-project.org
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: alsa-lib
+
+name=alsa-lib-compat32
+version=1.0.17
+release=1
+source=(ftp://ftp.alsa-project.org/pub/lib/alsa-lib-$version.tar.bz2)
+
+build() {
+    cd alsa-lib-$version
+    ./configure --prefix=/usr \
+	--libdir=/usr/lib32 \
+	--disable-python
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{bin,include,share}
+}

@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib32/
+drwxr-xr-x	root/root	usr/lib32/alsa-lib/
+drwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-ac97.la
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-ac97.so
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-hda.la
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-hda.so
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-sbase.la
+-rwxr-xr-x	root/root	usr/lib32/alsa-lib/smixer/smixer-sbase.so
+-rwxr-xr-x	root/root	usr/lib32/libasound.la
+lrwxrwxrwx	root/root	usr/lib32/libasound.so -> libasound.so.2.0.0
+lrwxrwxrwx	root/root	usr/lib32/libasound.so.2 -> libasound.so.2.0.0
+-rwxr-xr-x	root/root	usr/lib32/libasound.so.2.0.0
+drwxr-xr-x	root/root	usr/lib32/pkgconfig/
+-rw-r--r--	root/root	usr/lib32/pkgconfig/alsa.pc
