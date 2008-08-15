@@ -1,0 +1,20 @@
+# Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
+# URL: http://www.gtk.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: glib
+
+name=glib-compat32
+version=2.16.5
+release=1
+source=(ftp://ftp.gnome.org/pub/GNOME/sources/glib/2.16/glib-$version.tar.bz2)
+
+build () {
+    cd glib-$version
+    i386 ./configure --prefix=/usr \
+	--libdir=/usr/lib32 \
+	--mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{bin,include,man,share}
+}
