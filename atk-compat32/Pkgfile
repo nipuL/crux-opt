@@ -1,0 +1,18 @@
+# Description: A set of interfaces for accessibility
+# URL: http://www.gtk.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: atk, glib-compat32
+
+name=atk-compat32
+version=1.22.0
+release=1
+source=(http://download.gnome.org/sources/atk/1.22/atk-$version.tar.bz2)
+
+build () {
+	cd atk-$version
+	./configure --prefix=/usr --libdir=/usr/lib32
+	make
+	make DESTDIR=$PKG install
+	rm -r $PKG/usr/{include,share}
+}
