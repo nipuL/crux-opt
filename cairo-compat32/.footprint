@@ -1,0 +1,17 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib32/
+-rw-r--r--	root/root	usr/lib32/libcairo.a
+-rwxr-xr-x	root/root	usr/lib32/libcairo.la
+lrwxrwxrwx	root/root	usr/lib32/libcairo.so -> libcairo.so.2.17.5
+lrwxrwxrwx	root/root	usr/lib32/libcairo.so.2 -> libcairo.so.2.17.5
+-rwxr-xr-x	root/root	usr/lib32/libcairo.so.2.17.5
+drwxr-xr-x	root/root	usr/lib32/pkgconfig/
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-ft.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-glitz.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-pdf.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-png.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-ps.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-svg.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-xlib-xrender.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-xlib.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/cairo.pc

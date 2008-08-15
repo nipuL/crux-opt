@@ -1,0 +1,24 @@
+# Description: A 2D graphics library with support for multiple output devices
+# URL: http://www.cairographics.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: cairo, fontconfig-compat32, glitz-compat32, libpng-compat32, xorg-libxrender-compat32, xorg-libpixman-compat32
+
+name=cairo-compat32
+version=1.6.4
+release=1
+source=(http://cairographics.org/releases/cairo-$version.tar.gz)
+
+build() {
+	cd cairo-$version
+	./configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--x-libraries=/usr/lib32 \
+		--enable-ps \
+		--enable-pdf \
+		--enable-glitz \
+		--disable-gtk-doc
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{include,share}
+}
