@@ -1,0 +1,8 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/cups-config32
+drwxr-xr-x	root/root	usr/lib32/
+lrwxrwxrwx	root/root	usr/lib32/libcups.so -> libcups.so.2
+-rwxr-xr-x	root/root	usr/lib32/libcups.so.2
+lrwxrwxrwx	root/root	usr/lib32/libcupsimage.so -> libcupsimage.so.2
+-rwxr-xr-x	root/root	usr/lib32/libcupsimage.so.2
