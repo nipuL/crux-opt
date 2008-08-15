@@ -1,10 +1,10 @@
-# Description: a light-weight system monitor
+# Description: Light-weight system monitor
 # URL:         http://conky.sourceforge.net/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.6.0
+version=1.6.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
 
