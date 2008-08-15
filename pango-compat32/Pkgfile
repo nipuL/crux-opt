@@ -1,0 +1,29 @@
+# Description: A library for layout and rendering of text
+# URL: http://www.gtk.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: pango, cairo-compat32, glib-compat32, xorg-libsm-compat32, xorg-libxext-compat32, xorg-libxft-compat32
+
+name=pango-compat32
+version=1.20.5
+release=1
+source=(http://download.gnome.org/sources/pango/1.20/pango-$version.tar.bz2 \
+	pango.modules)
+
+build () {
+	cd pango-$version
+	./configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--sysconfdir=/usr/etc32 \
+		--x-libraries=/usr/lib32 
+	make
+	make DESTDIR=$PKG install
+	(
+		cd $PKG/usr/bin
+		for file in *; do
+			mv $file ${file}-32
+		done
+	)
+	install -D -m 644 $SRC/pango.modules $PKG/usr/etc32/pango/pango.modules
+	rm -rf $PKG/usr/{include,man,share}
+}

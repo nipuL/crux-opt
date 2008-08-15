@@ -1,0 +1,62 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/pango-querymodules-32
+-rwxr-xr-x	root/root	usr/bin/pango-view-32
+drwxr-xr-x	root/root	usr/etc32/
+drwxr-xr-x	root/root	usr/etc32/pango/
+-rw-r--r--	root/root	usr/etc32/pango/pango.modules
+-rw-r--r--	root/root	usr/etc32/pango/pangox.aliases
+drwxr-xr-x	root/root	usr/lib32/
+-rwxr-xr-x	root/root	usr/lib32/libpango-1.0.la
+lrwxrwxrwx	root/root	usr/lib32/libpango-1.0.so -> libpango-1.0.so.0.2002.3
+lrwxrwxrwx	root/root	usr/lib32/libpango-1.0.so.0 -> libpango-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpango-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpangocairo-1.0.la
+lrwxrwxrwx	root/root	usr/lib32/libpangocairo-1.0.so -> libpangocairo-1.0.so.0.2002.3
+lrwxrwxrwx	root/root	usr/lib32/libpangocairo-1.0.so.0 -> libpangocairo-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpangocairo-1.0.so.0.2002.3
+-rw-r--r--	root/root	usr/lib32/libpangoft2-1.0.la
+lrwxrwxrwx	root/root	usr/lib32/libpangoft2-1.0.so -> libpangoft2-1.0.so.0.2002.3
+lrwxrwxrwx	root/root	usr/lib32/libpangoft2-1.0.so.0 -> libpangoft2-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpangoft2-1.0.so.0.2002.3
+-rw-r--r--	root/root	usr/lib32/libpangox-1.0.la
+lrwxrwxrwx	root/root	usr/lib32/libpangox-1.0.so -> libpangox-1.0.so.0.2002.3
+lrwxrwxrwx	root/root	usr/lib32/libpangox-1.0.so.0 -> libpangox-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpangox-1.0.so.0.2002.3
+-rw-r--r--	root/root	usr/lib32/libpangoxft-1.0.la
+lrwxrwxrwx	root/root	usr/lib32/libpangoxft-1.0.so -> libpangoxft-1.0.so.0.2002.3
+lrwxrwxrwx	root/root	usr/lib32/libpangoxft-1.0.so.0 -> libpangoxft-1.0.so.0.2002.3
+-rwxr-xr-x	root/root	usr/lib32/libpangoxft-1.0.so.0.2002.3
+drwxr-xr-x	root/root	usr/lib32/pango/
+drwxr-xr-x	root/root	usr/lib32/pango/1.6.0/
+drwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-arabic-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-arabic-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-arabic-lang.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-arabic-lang.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-basic-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-basic-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-basic-x.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-basic-x.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-hangul-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-hangul-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-hebrew-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-hebrew-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-indic-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-indic-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-indic-lang.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-indic-lang.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-khmer-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-khmer-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-syriac-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-syriac-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-thai-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-thai-fc.so
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-tibetan-fc.la
+-rwxr-xr-x	root/root	usr/lib32/pango/1.6.0/modules/pango-tibetan-fc.so
+drwxr-xr-x	root/root	usr/lib32/pkgconfig/
+-rw-r--r--	root/root	usr/lib32/pkgconfig/pango.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/pangocairo.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/pangoft2.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/pangox.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/pangoxft.pc
