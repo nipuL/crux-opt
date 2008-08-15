@@ -1,0 +1,3 @@
+In the compat32 section of your pkgmk.conf add the following:
+
+export FT2_CONFIG=/usr/bin/freetype-config32
