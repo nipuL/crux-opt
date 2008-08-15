@@ -1,0 +1,13 @@
+# Description: A selector for gl/glx libraries and extensions
+# URL: N/A
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+
+name=gl-select-compat32
+version=1.2
+release=1
+source=(gl-select32)
+
+build() {
+	install -D -m 0755 -o root -g root $SRC/gl-select32 $PKG/usr/bin/gl-select32
+}

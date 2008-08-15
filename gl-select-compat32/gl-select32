@@ -1,0 +1,152 @@
+#!/bin/bash
+#
+# gl-select: select active gl/glx libraries/extensions
+#
+# Matt Housh, jaeger at morpheus dot net
+# Jose V Beneyto, joberui at ei dot upv dot es
+# Lucas Hazel
+#
+# This is a modified version for compat32 support on CRUX64
+
+infoUsage() {
+	echo "Usage: $0 [xorg|nvidia|ati]"
+}
+
+infoMissing() {
+	echo "One or more of the non-xorg gl/glx backup files are missing. This means"
+	echo "either you're not using a non-xorg gl/glx setup, in which case nothing"
+	echo "needs to be changed, OR your xorg backups are missing, which can be"
+	echo "solved by reinstalling the xorg packages from the CRUX CD or ports."
+}
+
+infoRevert() {
+	echo "You appear to already be using a non-xorg gl/glx setup. If the"
+	echo "one selected isn't the correct one, revert to xorg and then select"
+	echo "the correct new setup using 'gl-select xorg; gl-select <new gl/glx>'."
+}
+
+# checkInstalled() checks either a single port or list of ports, like so:
+#   checkInstalled xorg
+#   checkInstalled nvidia nvidia-legacy-96xx nvidia-legacy-71xx
+checkInstalled() {
+	local notInstalled=1
+	for arg in $@
+	do
+		if [ ! -z "`pkginfo -i | awk '{ print $1 }' | grep -e ^$arg$`" ]
+		then
+			notInstalled=0
+		fi
+	done
+	if [ $notInstalled -eq 1 ]
+	then
+		if [ $# -eq 1 ]
+		then
+			echo "$arg isn't installed!"
+		else
+			echo "None of the following ports are installed! (one is required)"
+			for i in $@
+			do
+				echo "  $i"
+			done
+		fi
+		exit 1
+	fi
+}
+
+# if other than a single argument is passed, spit out some help
+if [ $# -ne 1 ]
+then
+	infoUsage
+	exit 1
+fi
+
+# check for the xorg port; if it's not installed, why is this script even run?
+# xorg is a metaport and it's possible that the proper deps might not all be
+# installed; more strict error checking may be implemented at a later date
+checkInstalled xorg
+
+# perform the selection for the following supported gl/glx setups
+case "$1" in
+	"xorg")
+		echo "* xorg gl/glx selected"
+
+		# check for the existence of libglx_so, libGL_so_1_2 and friends
+		# if none, nothing is necessary or the backups have been erased
+		BACKUPS="/usr/lib32/libGL_so_1_2"
+
+		for F in $BACKUPS
+		do
+			if [ ! -e $F ]
+			then
+				infoMissing
+				exit 1
+			fi
+		done
+
+		# move the xorg backups back into place
+		echo -n "libGL "
+		mv /usr/lib32/libGL{_so_1_2,.so.1.2}
+		ln -sf libGL.so.1 /usr/lib32/libGL.so
+		;;
+
+	"nvidia")
+		echo "* nvidia gl/glx selected"
+
+		# is an nvidia port installed?
+		checkInstalled nvidia-compat32 nvidia-legacy-96xx-compat32 nvidia-legacy-71xx-compat32
+
+		# get the .so version number
+		NV_VER="`pkginfo -i | grep -e "^nvidia-compat32 " -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx-compat32 " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./' | cut -d- -f1`"
+
+		# check for the existence of libglx_so and libGL_so_1_2
+		# if none, move the xorg stuff out of the way for nvidia's
+		if [ ! -e /usr/lib32/libGL_so_1_2 ]
+		then
+			echo -n "libGL "
+			mv /usr/lib32/libGL{.so.1.2,_so_1_2}
+			rm /usr/lib32/libGL.so{,.1}
+			# nvidia's library versioning prevents ldconfig from creating
+			# libGL.so and libGLcore.so
+			ln -sf libGL.so.$NV_VER /usr/lib32/libGL.so
+			ln -sf libGLcore.so.$NV_VER /usr/lib32/libGLcore.so
+		else
+			infoRevert
+			exit 1
+		fi
+		;;
+
+	"ati")
+		echo "* ati gl/glx selected"
+
+		# is the ati port installed?
+		checkInstalled ati-compat32
+
+		# check for the existence of libGL_so_1_2
+		# if none, copy/move the xorg stuff out of the way for ati's
+		if [ ! -e /usr/lib32/libGL_so_1_2 ]
+		then
+			echo -n "libGL "
+			mv /usr/lib32/libGL{.so.1.2,_so_1_2}
+			# according to ati port
+			[ ! -L /usr/lib32/libGL.so ] && \
+				ln -sf libGL_so_1_2_ati /usr/lib32/libGL.so
+			[ ! -L /usr/lib32/libGL.so.1 ] && \
+				ln -sf libGL_so_1_2_ati /usr/lib32/libGL.so.1
+			[ ! -L /usr/lib32/libGL.so.1.2 ] && \
+				ln -sf libGL_so_1_2_ati /usr/lib32/libGL.so.1.2
+		else
+			infoRevert
+			exit 1
+		fi
+		;;
+
+	*)
+		infoUsage
+		;;
+esac
+
+/sbin/ldconfig > /dev/null 2>&1
+
+echo "done."
+
+# End of file
