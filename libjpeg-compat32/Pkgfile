@@ -1,0 +1,30 @@
+# Description: Library of JPEG support functions.
+# URL:         http://www.ijg.org/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: libjpeg
+
+name=libjpeg-compat32
+version=6b
+release=1
+source=(ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v$version.tar.gz)
+
+build() {
+    mkdir -p $PKG/usr/include $PKG/usr/lib32
+    
+    cd jpeg-$version
+    
+    i386 ./configure --prefix=/usr \
+	--libdir=/usr/lib32 \
+	--enable-shared \
+	--enable-static
+
+    # Use updated libtool
+    cp `which libtool` .
+
+    make
+    mkdir -p $PKG/usr/include $PKG/usr/lib32
+    make prefix=/$PKG/usr libdir=$PKG/usr/lib32 install-lib
+    sed -i -e "s|\/lib'|/lib32'|g" $PKG/usr/lib32/*.la
+    rm -rf $PKG/usr/include
+}
