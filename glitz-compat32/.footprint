@@ -1,0 +1,15 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib32/
+-rw-r--r--	root/root	usr/lib32/libglitz-glx.a
+-rwxr-xr-x	root/root	usr/lib32/libglitz-glx.la
+lrwxrwxrwx	root/root	usr/lib32/libglitz-glx.so -> libglitz-glx.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib32/libglitz-glx.so.1 -> libglitz-glx.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib32/libglitz-glx.so.1.0.0
+-rw-r--r--	root/root	usr/lib32/libglitz.a
+-rwxr-xr-x	root/root	usr/lib32/libglitz.la
+lrwxrwxrwx	root/root	usr/lib32/libglitz.so -> libglitz.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib32/libglitz.so.1 -> libglitz.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib32/libglitz.so.1.0.0
+drwxr-xr-x	root/root	usr/lib32/pkgconfig/
+-rw-r--r--	root/root	usr/lib32/pkgconfig/glitz-glx.pc
+-rw-r--r--	root/root	usr/lib32/pkgconfig/glitz.pc

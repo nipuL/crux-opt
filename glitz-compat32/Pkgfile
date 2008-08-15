@@ -1,0 +1,22 @@
+# Description: An OpenGL image compositing library
+# URL: http://www.freedesktop.org/Software/glitz
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot ay
+# Depends on: glitz, mesa3d-compat32
+
+name=glitz-compat32
+version=0.5.6
+release=1
+source=(http://cairographics.org/snapshots/glitz-$version.tar.gz)
+
+build() {
+	cd glitz-$version
+	./configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--x-libraries=/usr/lib32
+	make
+	make DESTDIR=$PKG install
+	find $PKG/usr/lib32 -name "*.la" -exec \
+		sed -i -e "s|-L${SRC}[^ ,']*||g" -e "s|-L/usr/lib32 ||g" {} \;
+	rm -rf $PKG/usr/include
+}
