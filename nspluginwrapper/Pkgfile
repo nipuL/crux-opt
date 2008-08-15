@@ -1,0 +1,16 @@
+# Description: Run plugins built for other architectures
+# URL: http://gwenole.beauchesne.info//en/projects/nspluginwrapper
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:
+
+name=nspluginwrapper
+version=0.9.91.5
+release=1
+source=(http://gwenole.beauchesne.info/projects/$name/files/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
