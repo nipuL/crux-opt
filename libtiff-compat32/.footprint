@@ -1,0 +1,12 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib32/
+-rw-r--r--	root/root	usr/lib32/libtiff.a
+-rwxr-xr-x	root/root	usr/lib32/libtiff.la
+lrwxrwxrwx	root/root	usr/lib32/libtiff.so -> libtiff.so.3.8.2
+lrwxrwxrwx	root/root	usr/lib32/libtiff.so.3 -> libtiff.so.3.8.2
+-rwxr-xr-x	root/root	usr/lib32/libtiff.so.3.8.2
+-rw-r--r--	root/root	usr/lib32/libtiffxx.a
+-rwxr-xr-x	root/root	usr/lib32/libtiffxx.la
+lrwxrwxrwx	root/root	usr/lib32/libtiffxx.so -> libtiffxx.so.3.8.2
+lrwxrwxrwx	root/root	usr/lib32/libtiffxx.so.3 -> libtiffxx.so.3.8.2
+-rwxr-xr-x	root/root	usr/lib32/libtiffxx.so.3.8.2
