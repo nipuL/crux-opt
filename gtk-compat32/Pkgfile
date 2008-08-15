@@ -1,0 +1,35 @@
+# Description: A multi-platform toolkit for creating graphical user interfaces
+# URL: http://www.gtk.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: gtk, atk-compat32, libtiff-compat32, pango-compat32, xorg-libsm-compat32, xorg-libxcursor-compat32, xorg-libxinerama-compat32, xorg-libxrandr-compat32
+
+name=gtk-compat32
+version=2.12.11
+release=1
+source=(http://download.gnome.org/sources/gtk+/2.12/gtk+-$version.tar.bz2 \
+	gdk-pixbuf.loaders gtk.immodules \
+	gtk-register-32.sh gtkclipboard.patch)
+
+compat32_dep_check $name cups || exit 1
+
+build () {
+    cd gtk+-$version
+    patch -p1 -i $SRC/gtkclipboard.patch
+    ./configure --prefix=/usr \
+	--libdir=/usr/lib32 \
+	--x-libraries=/usr/lib32 \
+	--sysconfdir=/usr/etc32 \
+	--program-suffix=-32 \
+	--mandir=/usr/man
+    
+    make
+    make DESTDIR=$PKG install
+
+    mkdir -p $PKG/usr/etc32/gtk-2.0
+    install -m 644 $SRC/{gtk.immodules,gdk-pixbuf.loaders} \
+	$PKG/usr/etc32/gtk-2.0/
+    rm -r $PKG/usr/{include,man,share} $PKG/usr/bin/gtk-demo-32
+    
+    install -m 0755 $SRC/gtk-register-32.sh $PKG/usr/bin/gtk-register-32
+}
