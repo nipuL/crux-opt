@@ -1,0 +1,19 @@
+# Description: Userspace interface to kernel DRM services
+# URL: http://dri.freedesktop.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: libdrm
+
+name=libdrm-compat32
+version=2.3.0
+release=1
+source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2)
+
+build() {
+    cd libdrm-$version
+    ./configure --prefix=/usr --libdir=/usr/lib32
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/include
+}
+
