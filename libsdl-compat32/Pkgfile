@@ -1,0 +1,25 @@
+# Description: SDL, Simple DirectMedia Layer 
+# Description: a multimedia library which provides fast access to both graphics framebuffers and audio devices
+# URL: http://www.libsdl.org
+# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: sten, nick dot steeves at shaw dot ca
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: alsa-lib-compat32, mesa3d-compat32
+
+name=libsdl-compat32
+version=1.2.13
+release=1
+source=(http://www.libsdl.org/release/SDL-$version.tar.gz) 
+
+build () {
+    cd SDL-$version
+    ./configure	--prefix=/usr \
+	--libdir=/usr/lib32 \
+        --enable-alsa --mandir=/usr/man
+    make 
+    make DESTDIR=$PKG install
+
+    mv $PKG/usr/bin/sdl-config $PKG/usr/bin/sdl-config32
+
+    rm -rf $PKG/usr/{include,man,share}
+}
