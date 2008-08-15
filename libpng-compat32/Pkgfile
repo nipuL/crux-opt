@@ -1,0 +1,22 @@
+# Description: Library of PNG support functions.
+# URL:         http://www.libpng.org
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  libpng, zlib-compat32
+
+name=libpng-compat32
+version=1.2.29
+release=1
+source=(ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-$version.tar.bz2)
+
+build() {
+    cd libpng-$version
+
+    ./configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--mandir=/usr/man
+
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/{bin,include,man}
+}
