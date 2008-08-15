@@ -1,0 +1,26 @@
+# Description: A library for configuring and customizing font access
+# URL:         http://fontconfig.org/wiki/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  fontconfig, freetype-compat32, expat-compat32
+
+name=fontconfig-compat32
+version=2.6.0
+release=1
+source=(http://fontconfig.org/release/fontconfig-$version.tar.gz)
+
+build() {
+    cd fontconfig-$version
+
+    ./configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--with-freetype-config=/usr/bin/freetype-config32 \
+                --sysconfdir=/etc \
+                --mandir=/usr/man \
+                --localstatedir=/var 
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/{share,bin,include,man} $PKG/etc
+}
