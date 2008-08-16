@@ -820,6 +820,7 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/iopart.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/isprs.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/jgrga.layout
+-rw-r--r--	root/root	usr/share/lyx/layouts/jss.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/kluwer.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/latex8.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/letter.layout
@@ -983,6 +984,7 @@ drwxr-xr-x	root/root	usr/share/lyx/scripts/
 -rw-r--r--	root/root	usr/share/lyx/syntax.default
 drwxr-xr-x	root/root	usr/share/lyx/templates/
 -rw-r--r--	root/root	usr/share/lyx/templates/IEEEtran.lyx
+-rw-r--r--	root/root	usr/share/lyx/templates/JSS-article.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/README.new_templates
 -rw-r--r--	root/root	usr/share/lyx/templates/aa.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/aastex.lyx
