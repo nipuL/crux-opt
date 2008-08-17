@@ -1,0 +1,25 @@
+# Description: GTK version of the vim editor
+# URL:         http://www.vim.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on:  vim, gtk
+
+name=gvim
+version=7.2
+release=1
+source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2)
+
+build () {
+    cd vim72/src
+
+    ./configure --prefix=/usr \
+                --with-vim-name=gvim \
+                --with-x=yes \
+                --enable-gui=gtk2 \
+                --enable-multibyte \
+                --disable-gpm \
+                --disable-nls
+
+    make VIMRTDIR=
+    make VIMRTDIR= DESTDIR=$PKG installvimbin
+}
