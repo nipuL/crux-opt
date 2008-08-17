@@ -1,0 +1,45 @@
+# Description: Simple Authentication and Security Layer
+# URL: http://asg.web.cmu.edu/sasl/sasl-library.html
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Packager: Daniel Mueller, daniel at danm dot de
+# Depends on: db, openssl
+
+name=cyrus-sasl
+version=2.1.22
+release=2
+source=(ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
+	$name-$version-crypt.patch \
+        saslauthd)
+
+build(){
+	cd $name-$version
+
+        # fix the crypt function
+	patch -p1 < $SRC/$name-$version-crypt.patch
+
+	./configure \
+	    --prefix=/usr \
+	    --sysconfdir=/etc/sasl \
+	    --with-plugindir=/usr/lib/sasl2 \
+	    --with-saslauthd=/var/sasl/saslauthd \
+	    --with-dbpath=/etc/sasl/sasldb2 \
+	    --with-dblib=berkeley \
+	    --with-bdb-incdir=/usr/include \
+	    --with-bdb-libdir=/usr/lib \
+	    --with-openssl=/usr \
+            --enable-login \
+            --enable-cram \
+            --enable-digest \
+	    --enable-shared 
+	make -j 1
+	make DESTDIR=$PKG install
+
+	mkdir -p \
+	    $PKG/usr/lib/sasl2 \
+	    $PKG/var/sasl/saslauthd \
+	    $PKG/etc/rc.d
+	
+	install -m 644 saslauthd/saslauthd.mdoc $PKG/usr/man/man8/saslauthd.8
+	install -m 755 $SRC/saslauthd $PKG/etc/rc.d
+}
