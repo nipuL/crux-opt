@@ -6,7 +6,7 @@
 # Nice to have: tk
 
 name=git
-version=1.5.6.5
+version=1.6.0
 release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
@@ -17,7 +17,8 @@ build() {
 	# investigate whether there's a better way.
 	sed -i -e '15,16d' -e '18d' perl/Makefile.PL
 
-	make CFLAGS="$CFLAGS" prefix=/usr DESTDIR=$PKG install
+	make CFLAGS="$CFLAGS" prefix=/usr gitexecdir=/usr/lib/git-core \
+	     DESTDIR=$PKG install
 
 	cd $SRC
 
