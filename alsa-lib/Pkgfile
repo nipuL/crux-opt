@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=alsa-lib
-version=1.0.17
+version=1.0.17a
 release=1
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 
