@@ -5,9 +5,9 @@
 # Depends on: qt4
 
 name=opera
-version=9.51
+version=9.52
 release=1
-source=(http://ftp.ntua.gr/pub/www/Opera/linux/951/final/en/i386/opera-$version.gcc4-qt4.i386.tar.bz2)
+source=(http://ftp.ntua.gr/pub/www/Opera/linux/952/final/en/i386/opera-$version-2091.gcc4-qt4.i386.tar.bz2)
 
 build() {
     cd $name-$version-*
