@@ -6,7 +6,7 @@
 # Depends on: cyrus-sasl, openssl, db
 
 name=postfix
-version=2.5.3
+version=2.5.4
 release=1
 source=(ftp://ftp.porcupine.org/mirrors/postfix-release/official/$name-$version.tar.gz
         aliases postfix.rc postfix.patch)
