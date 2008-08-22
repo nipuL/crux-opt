@@ -1,0 +1,23 @@
+# Description: Light-weight system monitor
+# URL:         http://conky.sourceforge.net/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
+
+name=conky
+version=1.6.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-nls \
+                --enable-xft  \
+                --enable-seti \
+                --enable-portmon \
+                --enable-mpd 
+    make
+    make DESTDIR=$PKG install
+}
