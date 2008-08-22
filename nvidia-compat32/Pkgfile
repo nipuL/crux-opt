@@ -4,7 +4,7 @@
 # Depends on: nvidia, gl-select-compat32, xorg-libx11-compat32, xorg-libxext-compat32
 
 name=nvidia-compat32
-version=173.14.12
+version=177.67
 release=1
 source=(http://download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-pkg2.run)
 	
