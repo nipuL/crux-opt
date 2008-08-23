@@ -5,7 +5,7 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.2.1
+version=3.2.2
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
@@ -30,7 +30,7 @@ build () {
 
     install -d $PKG/sbin
     mv $PKG/usr/sbin/*.cifs $PKG/sbin
-    mv $PKG/usr/lib/samba/*.so $PKG/usr/lib
+    mv $PKG/usr/lib/samba/*.so* $PKG/usr/lib
 
     # nsswitch extensions
     install -d $PKG/lib
