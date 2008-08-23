@@ -50,12 +50,18 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/tdb.h
 -rw-r--r--	root/root	usr/include/wbclient.h
 drwxr-xr-x	root/root	usr/lib/
--rwxr-xr-x	root/root	usr/lib/libnetapi.so
--rwxr-xr-x	root/root	usr/lib/libsmbclient.so
--rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so
--rwxr-xr-x	root/root	usr/lib/libtalloc.so
--rwxr-xr-x	root/root	usr/lib/libtdb.so
--rwxr-xr-x	root/root	usr/lib/libwbclient.so
+lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.0
+-rwxr-xr-x	root/root	usr/lib/libnetapi.so.0
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0
+lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
+-rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so.0
+lrwxrwxrwx	root/root	usr/lib/libtalloc.so -> libtalloc.so.1
+-rwxr-xr-x	root/root	usr/lib/libtalloc.so.1
+lrwxrwxrwx	root/root	usr/lib/libtdb.so -> libtdb.so.1
+-rwxr-xr-x	root/root	usr/lib/libtdb.so.1
+lrwxrwxrwx	root/root	usr/lib/libwbclient.so -> libwbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/libwbclient.so.0
 drwxr-xr-x	root/root	usr/lib/samba/
 drwxr-xr-x	root/root	usr/lib/samba/auth/
 -rwxr-xr-x	root/root	usr/lib/samba/auth/script.so
@@ -121,6 +127,7 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/pam_winbind.7.gz
 -rw-r--r--	root/root	usr/man/man7/samba.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/cifs.upcall.8.gz
 -rw-r--r--	root/root	usr/man/man8/eventlogadm.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ad.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ldap.8.gz
