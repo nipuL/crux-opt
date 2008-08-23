@@ -15,6 +15,7 @@ build() {
        --mandir=/usr/man \
        --with-apr=/usr --with-apr-util=/usr --with-neon=/usr \
        --disable-mod-activation --without-swig --disable-nls \
+       --disable-neon-version-check \
        --without-apxs
 
     make
