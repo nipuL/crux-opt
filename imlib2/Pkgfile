@@ -1,5 +1,5 @@
 # Description: A fast image manipulation library
-# URL: http://enlightenment.org/Libraries/Imlib2/
+# URL: http://freshmeat.net/projects/imlib2/
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: freetype, libid3tag, libpng, libtiff, libungif, xorg-libsm, xorg-libxext
