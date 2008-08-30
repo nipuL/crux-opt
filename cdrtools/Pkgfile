@@ -3,7 +3,7 @@
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 
 name=cdrtools
-version=2.01.01a46
+version=2.01.01a47
 release=1
 source=(ftp://ftp.berlios.de/pub/cdrecord/alpha/$name-$version.tar.bz2)
 
