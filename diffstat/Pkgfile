@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=diffstat
-version=1.44
+version=1.46
 release=1
 source=(ftp://invisible-island.net/$name/$name-$version.tgz)
 
