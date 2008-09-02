@@ -1,0 +1,173 @@
+diff -Nru dovecot-1.1.2.orig/dovecot-example.conf dovecot-1.1.2/dovecot-example.conf
+--- dovecot-1.1.2.orig/dovecot-example.conf	2008-07-24 08:38:13.000000000 +0200
++++ dovecot-1.1.2/dovecot-example.conf	2008-07-24 08:38:25.000000000 +0200
+@@ -16,11 +16,11 @@
+ # --with-ssldir=/etc/ssl
+ 
+ # Base directory where to store runtime data.
+-#base_dir = /var/run/dovecot/
++base_dir = /var/run/dovecot/
+ 
+ # Protocols we want to be serving: imap imaps pop3 pop3s
+ # If you only want to use dovecot-auth, you can set this to "none".
+-#protocols = imap imaps
++protocols = imaps pop3s
+ 
+ # A space separated list of IP or host addresses where to listen in for
+ # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
+@@ -90,8 +90,8 @@
+ # dropping root privileges, so keep the key file unreadable by anyone but
+ # root. Included doc/mkcert.sh can be used to easily generate self-signed
+ # certificate, just make sure to update the domains in dovecot-openssl.cnf
+-#ssl_cert_file = /etc/ssl/certs/dovecot.pem
+-#ssl_key_file = /etc/ssl/private/dovecot.pem
++ssl_cert_file = /etc/ssl/certs/dovecot.crt
++ssl_key_file = /etc/ssl/keys/dovecot.key
+ 
+ # If key file is password protected, give the password here. Alternatively
+ # give it when starting dovecot with -p parameter.
+@@ -132,7 +132,7 @@
+ # which login needs to be able to connect to. The sockets are created when
+ # running as root, so you don't have to worry about permissions. Note that
+ # everything in this directory is deleted when Dovecot is started.
+-#login_dir = /var/run/dovecot/login
++login_dir = /var/run/dovecot/login
+ 
+ # chroot login process to the login_dir. Only reason not to do this is if you
+ # wish to run the whole Dovecot without roots. <doc/wiki/Rootless.txt>
+@@ -142,7 +142,7 @@
+ # and don't use it anywhere else. The user must also belong to a group where
+ # only it has access, it's used to control access for authentication process.
+ # Note that this user is NOT used to access mails. <doc/wiki/UserIds.txt>
+-#login_user = dovecot
++login_user = dovecot
+ 
+ # Set max. process size in megabytes. If you don't use
+ # login_process_per_connection you might need to grow this.
+@@ -152,10 +152,10 @@
+ # login process be allowed to process multiple connections (no)? Yes is more
+ # secure, espcially with SSL/TLS enabled. No is faster since there's no need
+ # to create processes all the time.
+-#login_process_per_connection = yes
++login_process_per_connection = no
+ 
+ # Number of login processes to keep for listening new connections.
+-#login_processes_count = 3
++login_processes_count = 1
+ 
+ # Maximum number of login processes to create. The listening process count
+ # usually stays at login_processes_count, but when multiple users start logging
+@@ -211,7 +211,7 @@
+ #
+ # <doc/wiki/MailLocation.txt>
+ #
+-#mail_location = 
++mail_location = mbox:~/Mail:INBOX=/var/spool/mail/%u
+ 
+ # If you need to set multiple mailbox locations or want to change default
+ # namespace settings, you can do it by defining namespace sections.
+@@ -351,7 +351,7 @@
+ # non-valid GID as primary group ID aren't allowed to log in. If user
+ # belongs to supplementary groups with non-valid GIDs, those groups are
+ # not set.
+-#first_valid_gid = 1
++first_valid_gid = 100
+ #last_valid_gid = 0
+ 
+ # Maximum number of running mail processes. When this limit is reached,
+@@ -502,19 +502,19 @@
+ 
+ protocol imap {
+   # Login executable location.
+-  #login_executable = /usr/libexec/dovecot/imap-login
++  login_executable = /usr/lib/dovecot/imap-login
+ 
+   # IMAP executable location. Changing this allows you to execute other
+   # binaries before the imap process is executed.
+   #
+   # This would write rawlogs into ~/dovecot.rawlog/ directory:
+-  #   mail_executable = /usr/libexec/dovecot/rawlog /usr/libexec/dovecot/imap
++  #   mail_executable = /usr/lib/dovecot/rawlog /usr/lib/dovecot/imap
+   #
+   # This would attach gdb into the imap process and write backtraces into
+   # /tmp/gdbhelper.* files:
+-  #   mail_executable = /usr/libexec/dovecot/gdbhelper /usr/libexec/dovecot/imap
++  #   mail_executable = /usr/lib/dovecot/gdbhelper /usr/lib/dovecot/imap
+   #
+-  #mail_executable = /usr/libexec/dovecot/imap
++  mail_executable = /usr/lib/dovecot/imap
+ 
+   # Maximum IMAP command line length in bytes. Some clients generate very long
+   # command lines with huge mailboxes, so you may need to raise this if you get
+@@ -571,11 +571,11 @@
+ 
+ protocol pop3 {
+   # Login executable location.
+-  #login_executable = /usr/libexec/dovecot/pop3-login
++  login_executable = /usr/lib/dovecot/pop3-login
+ 
+   # POP3 executable location. See IMAP's mail_executable above for examples
+   # how this could be changed.
+-  #mail_executable = /usr/libexec/dovecot/pop3
++  mail_executable = /usr/lib/dovecot/pop3
+ 
+   # Don't try to set mails non-recent or seen with POP3 sessions. This is
+   # mostly intended to reduce disk I/O. With maildir it doesn't move files
+@@ -614,7 +614,7 @@
+   # Dovecot's default, so if you're building a new server it would be a good
+   # idea to change this. %08Xu%08Xv should be pretty fail-safe.
+   #
+-  #pop3_uidl_format = %08Xu%08Xv
++  pop3_uidl_format = %08Xu%08Xv
+ 
+   # POP3 logout format string:
+   #  %i - total number of bytes read from client
+@@ -677,7 +677,7 @@
+   #deliver_log_format = msgid=%m: %$
+ 
+   # Binary to use for sending mails.
+-  #sendmail_path = /usr/lib/sendmail
++  #sendmail_path = /usr/sbin/sendmail
+ 
+   # Human readable error message for rejection mails. Use can use variables:
+   #  %n = CRLF, %r = reason, %s = subject, %t = recipient
+@@ -692,7 +692,7 @@
+ ##
+ 
+ # Executable location
+-#auth_executable = /usr/libexec/dovecot/dovecot-auth
++auth_executable = /usr/lib/dovecot/dovecot-auth
+ 
+ # Set max. process size in megabytes.
+ #auth_process_size = 256
+@@ -825,7 +825,7 @@
+   # database (passwd usually), you can use static userdb.
+   # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
+   # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
+-  passdb pam {
++  #passdb pam {
+     # [session=yes] [setcred=yes] [failure_show_msg=yes]
+     # [cache_key=<key>] [<service name>]
+     #
+@@ -854,7 +854,7 @@
+     #   args = session=yes %Ls
+     #   args = cache_key=%u dovecot
+     #args = dovecot
+-  }
++  #}
+ 
+   # System users (NSS, /etc/passwd, or similiar)
+   # In many systems nowadays this uses Name Service Switch, which is
+@@ -867,10 +867,10 @@
+   # Shadow passwords for system users (NSS, /etc/shadow or similiar).
+   # Deprecated by PAM nowadays.
+   # <doc/wiki/PasswordDatabase.Shadow.txt>
+-  #passdb shadow {
++  passdb shadow {
+     # [blocking=yes] - See userdb passwd for explanation
+     #args = 
+-  #}
++  }
+ 
+   # PAM-like authentication for OpenBSD.
+   # <doc/wiki/PasswordDatabase.BSDAuth.txt>
