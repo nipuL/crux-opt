@@ -6,7 +6,7 @@
 # Depends on:  zlib
 
 name=libxml2
-version=2.6.32
+version=2.7.1
 release=1
 source=(ftp://xmlsoft.org/libxml2/$name-$version.tar.gz)
 
@@ -17,5 +17,6 @@ build () {
                 --without-python
     make
     make DESTDIR=$PKG install
+
     rm -rf $PKG/usr/doc $PKG/usr/share/{doc,gtk-doc}
 }
