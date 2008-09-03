@@ -4,7 +4,7 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.4.0
+version=4.4.1
 release=1
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
@@ -24,7 +24,7 @@ build () {
 		-platform linux-g++ -release -shared -sm \
 		-tablet -nis -verbose -qt-gif -system-zlib \
 		-system-lib{png,jpeg} \
-		-no-{cups,fast,exceptions,nas-sound} \
+		-no-{cups,fast,exceptions,nas-sound,phonon} \
 		-x{cursor,inerama,kb,randr,render} \
                 -nomake demos -nomake examples -nomake docs \
                 -no-separate-debug-info

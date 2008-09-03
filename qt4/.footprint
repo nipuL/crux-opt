@@ -178,8 +178,6 @@ drwxr-xr-x	root/root	usr/include/qt4/Qt/
 -rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_powerpc.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_s390.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_sparc.h
--rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_windows.h
--rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_windowsce.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qatomic_x86_64.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qauthenticator.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qbasicatomic.h
@@ -490,7 +488,6 @@ drwxr-xr-x	root/root	usr/include/qt4/Qt/
 -rw-r--r--	root/root	usr/include/qt4/Qt/qsyntaxhighlighter.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qsystemsemaphore.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qsystemtrayicon.h
--rw-r--r--	root/root	usr/include/qt4/Qt/qt_windows.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qtabbar.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qtableview.h
 -rw-r--r--	root/root	usr/include/qt4/Qt/qtablewidget.h
@@ -1143,8 +1140,6 @@ drwxr-xr-x	root/root	usr/include/qt4/QtCore/
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_powerpc.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_s390.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_sparc.h
--rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_windows.h
--rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_windowsce.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qatomic_x86_64.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qbasicatomic.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qbasictimer.h
@@ -1227,7 +1222,6 @@ drwxr-xr-x	root/root	usr/include/qt4/QtCore/
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qstringlist.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qstringmatcher.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qsystemsemaphore.h
--rw-r--r--	root/root	usr/include/qt4/QtCore/qt_windows.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qtconcurrentcompilertest.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qtconcurrentexception.h
 -rw-r--r--	root/root	usr/include/qt4/QtCore/qtconcurrentfilter.h
@@ -2249,105 +2243,105 @@ drwxr-xr-x	root/root	usr/include/qt4/QtXml/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libQt3Support.la
 -rw-r--r--	root/root	usr/lib/libQt3Support.prl
-lrwxrwxrwx	root/root	usr/lib/libQt3Support.so -> libQt3Support.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQt3Support.so.4 -> libQt3Support.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQt3Support.so.4.4 -> libQt3Support.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQt3Support.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQt3Support.so -> libQt3Support.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQt3Support.so.4 -> libQt3Support.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQt3Support.so.4.4 -> libQt3Support.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQt3Support.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtAssistantClient.prl
-lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so -> libQtAssistantClient.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so.4 -> libQtAssistantClient.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so.4.4 -> libQtAssistantClient.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtAssistantClient.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so -> libQtAssistantClient.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so.4 -> libQtAssistantClient.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtAssistantClient.so.4.4 -> libQtAssistantClient.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtAssistantClient.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtCLucene.la
 -rw-r--r--	root/root	usr/lib/libQtCLucene.prl
-lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so -> libQtCLucene.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so.4 -> libQtCLucene.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so.4.4 -> libQtCLucene.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtCLucene.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so -> libQtCLucene.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so.4 -> libQtCLucene.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtCLucene.so.4.4 -> libQtCLucene.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtCLucene.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtCore.la
 -rw-r--r--	root/root	usr/lib/libQtCore.prl
-lrwxrwxrwx	root/root	usr/lib/libQtCore.so -> libQtCore.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtCore.so.4 -> libQtCore.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtCore.so.4.4 -> libQtCore.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtCore.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtCore.so -> libQtCore.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtCore.so.4 -> libQtCore.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtCore.so.4.4 -> libQtCore.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtCore.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtDBus.la
 -rw-r--r--	root/root	usr/lib/libQtDBus.prl
-lrwxrwxrwx	root/root	usr/lib/libQtDBus.so -> libQtDBus.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDBus.so.4 -> libQtDBus.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDBus.so.4.4 -> libQtDBus.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtDBus.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtDBus.so -> libQtDBus.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDBus.so.4 -> libQtDBus.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDBus.so.4.4 -> libQtDBus.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtDBus.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtDesigner.prl
-lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so -> libQtDesigner.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so.4 -> libQtDesigner.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so.4.4 -> libQtDesigner.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtDesigner.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so -> libQtDesigner.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so.4 -> libQtDesigner.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDesigner.so.4.4 -> libQtDesigner.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtDesigner.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtDesignerComponents.prl
-lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so -> libQtDesignerComponents.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so.4 -> libQtDesignerComponents.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so.4.4 -> libQtDesignerComponents.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtDesignerComponents.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so -> libQtDesignerComponents.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so.4 -> libQtDesignerComponents.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtDesignerComponents.so.4.4 -> libQtDesignerComponents.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtDesignerComponents.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtGui.la
 -rw-r--r--	root/root	usr/lib/libQtGui.prl
-lrwxrwxrwx	root/root	usr/lib/libQtGui.so -> libQtGui.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtGui.so.4 -> libQtGui.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtGui.so.4.4 -> libQtGui.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtGui.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtGui.so -> libQtGui.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtGui.so.4 -> libQtGui.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtGui.so.4.4 -> libQtGui.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtGui.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtHelp.la
 -rw-r--r--	root/root	usr/lib/libQtHelp.prl
-lrwxrwxrwx	root/root	usr/lib/libQtHelp.so -> libQtHelp.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtHelp.so.4 -> libQtHelp.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtHelp.so.4.4 -> libQtHelp.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtHelp.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtHelp.so -> libQtHelp.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtHelp.so.4 -> libQtHelp.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtHelp.so.4.4 -> libQtHelp.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtHelp.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtNetwork.la
 -rw-r--r--	root/root	usr/lib/libQtNetwork.prl
-lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so -> libQtNetwork.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so.4 -> libQtNetwork.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so.4.4 -> libQtNetwork.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtNetwork.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so -> libQtNetwork.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so.4 -> libQtNetwork.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtNetwork.so.4.4 -> libQtNetwork.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtNetwork.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtOpenGL.la
 -rw-r--r--	root/root	usr/lib/libQtOpenGL.prl
-lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so -> libQtOpenGL.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so.4 -> libQtOpenGL.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so.4.4 -> libQtOpenGL.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtOpenGL.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so -> libQtOpenGL.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so.4 -> libQtOpenGL.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtOpenGL.so.4.4 -> libQtOpenGL.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtOpenGL.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtScript.la
 -rw-r--r--	root/root	usr/lib/libQtScript.prl
-lrwxrwxrwx	root/root	usr/lib/libQtScript.so -> libQtScript.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtScript.so.4 -> libQtScript.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtScript.so.4.4 -> libQtScript.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtScript.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtScript.so -> libQtScript.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtScript.so.4 -> libQtScript.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtScript.so.4.4 -> libQtScript.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtScript.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtSql.la
 -rw-r--r--	root/root	usr/lib/libQtSql.prl
-lrwxrwxrwx	root/root	usr/lib/libQtSql.so -> libQtSql.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtSql.so.4 -> libQtSql.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtSql.so.4.4 -> libQtSql.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtSql.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtSql.so -> libQtSql.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtSql.so.4 -> libQtSql.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtSql.so.4.4 -> libQtSql.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtSql.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtSvg.la
 -rw-r--r--	root/root	usr/lib/libQtSvg.prl
-lrwxrwxrwx	root/root	usr/lib/libQtSvg.so -> libQtSvg.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtSvg.so.4 -> libQtSvg.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtSvg.so.4.4 -> libQtSvg.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtSvg.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtSvg.so -> libQtSvg.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtSvg.so.4 -> libQtSvg.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtSvg.so.4.4 -> libQtSvg.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtSvg.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtTest.la
 -rw-r--r--	root/root	usr/lib/libQtTest.prl
-lrwxrwxrwx	root/root	usr/lib/libQtTest.so -> libQtTest.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtTest.so.4 -> libQtTest.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtTest.so.4.4 -> libQtTest.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtTest.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtTest.so -> libQtTest.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtTest.so.4 -> libQtTest.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtTest.so.4.4 -> libQtTest.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtTest.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtUiTools.a
 -rw-r--r--	root/root	usr/lib/libQtUiTools.prl
 -rw-r--r--	root/root	usr/lib/libQtWebKit.la
 -rw-r--r--	root/root	usr/lib/libQtWebKit.prl
-lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so -> libQtWebKit.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so.4 -> libQtWebKit.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so.4.4 -> libQtWebKit.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtWebKit.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so -> libQtWebKit.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so.4 -> libQtWebKit.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtWebKit.so.4.4 -> libQtWebKit.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtWebKit.so.4.4.1
 -rw-r--r--	root/root	usr/lib/libQtXml.la
 -rw-r--r--	root/root	usr/lib/libQtXml.prl
-lrwxrwxrwx	root/root	usr/lib/libQtXml.so -> libQtXml.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtXml.so.4 -> libQtXml.so.4.4.0
-lrwxrwxrwx	root/root	usr/lib/libQtXml.so.4.4 -> libQtXml.so.4.4.0
--rwxr-xr-x	root/root	usr/lib/libQtXml.so.4.4.0
+lrwxrwxrwx	root/root	usr/lib/libQtXml.so -> libQtXml.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtXml.so.4 -> libQtXml.so.4.4.1
+lrwxrwxrwx	root/root	usr/lib/libQtXml.so.4.4 -> libQtXml.so.4.4.1
+-rwxr-xr-x	root/root	usr/lib/libQtXml.so.4.4.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/Qt3Support.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/QtAssistantClient.pc
