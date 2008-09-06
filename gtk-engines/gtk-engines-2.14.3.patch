@@ -1,0 +1,22 @@
+diff -Nru gtk-engines-2.14.3.orig/Makefile.am gtk-engines-2.14.3/Makefile.am
+--- gtk-engines-2.14.3.orig/Makefile.am	2008-08-15 22:19:30.000000000 +0200
++++ gtk-engines-2.14.3/Makefile.am	2008-08-15 22:29:08.000000000 +0200
+@@ -1,5 +1,5 @@
+-SUBDIRS = engines themes test schema
+-DIST_SUBDIRS = $(SUBDIRS) po
++SUBDIRS = engines themes test
++DIST_SUBDIRS = $(SUBDIRS)
+ 
+ EXTRA_DIST = \
+ 	autogen.sh	\
+diff -Nru gtk-engines-2.14.3.orig/configure.ac gtk-engines-2.14.3/configure.ac
+--- gtk-engines-2.14.3.orig/configure.ac	2008-08-15 22:19:30.000000000 +0200
++++ gtk-engines-2.14.3/configure.ac	2008-08-15 22:19:56.000000000 +0200
+@@ -19,7 +19,6 @@
+ AM_PROG_LIBTOOL
+ 
+ dnl Initialize intltool
+-AC_PROG_INTLTOOL([0.31.0])
+ GETTEXT_PACKAGE=gtk-engines
+ AC_SUBST([GETTEXT_PACKAGE])
+ AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
