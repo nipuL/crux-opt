@@ -6,7 +6,7 @@
 # Depends on:
 
 name=nano
-version=2.0.8
+version=2.0.9
 release=1
 source=(http://www.nano-editor.org/dist/v2.0/$name-$version.tar.gz)
 
