@@ -13,7 +13,7 @@ build() {
     cd $name-$version
     ./configure --mandir=/usr/man --prefix=/usr --libexecdir=/usr/lib --without-pam
     make
-    install -d $PKG/{etc,usr/{bin,sbin}}
+    install -d $PKG/{etc,usr/{bin,sbin,lib}}
     make DESTDIR=$PKG install
     ln -sf sudo $PKG/usr/bin/sudoedit
     ln -sf sudo.8.gz $PKG/usr/man/man8/sudoedit.8
