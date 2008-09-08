@@ -120,7 +120,6 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_inkjet_printer_cp1700-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_2500-hpijs-pcl3.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_2500_series-hpijs.ppd.gz
--rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_2600-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_3000-hpijs-pcl3.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_3500-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-color_laserjet_3500n-hpijs.ppd.gz
@@ -285,11 +284,13 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_d4100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_d4200_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_d4300_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_d730-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f2100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f2200_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f300_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f4100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f4200_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-deskjet_f735-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-dj350-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-dj450-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_1010-hpijs.ppd.gz
@@ -331,6 +332,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3050-hpijs-pcl3.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3052-hpijs-pcl3.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3055-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3100-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3150-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3200-hpijs-pcl3.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3200m-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-laserjet_3200se-hpijs.ppd.gz
@@ -530,6 +533,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a530_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a610_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a620_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a630_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a710_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_a820_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c3100_series-hpijs.ppd.gz
@@ -540,8 +544,11 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c4400_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c5100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c5200_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c5300_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c5500_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c6100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c6200_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c6300_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c7100_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c7200_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_c8100_series-hpijs.ppd.gz
@@ -554,6 +561,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/HP/
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_d7200_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_d7300_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_d7400_series-hpijs.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_d7500_series-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_p1000-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_p1100-hpijs.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/HP/hp-photosmart_pro_b8300_series-hpijs.ppd.gz
