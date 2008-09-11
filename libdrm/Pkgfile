@@ -4,7 +4,7 @@
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=libdrm
-version=2.3.0
+version=2.3.1
 release=1
 source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2)
 
