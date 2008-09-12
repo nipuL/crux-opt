@@ -14,11 +14,10 @@ drwxr-xr-x	root/root	usr/include/drm/
 -rw-r--r--	root/root	usr/include/drm/via_3d_reg.h
 -rw-r--r--	root/root	usr/include/drm/via_drm.h
 -rw-r--r--	root/root	usr/include/xf86drm.h
--rw-r--r--	root/root	usr/include/xf86mm.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libdrm.la
-lrwxrwxrwx	root/root	usr/lib/libdrm.so -> libdrm.so.2.3.0
-lrwxrwxrwx	root/root	usr/lib/libdrm.so.2 -> libdrm.so.2.3.0
--rwxr-xr-x	root/root	usr/lib/libdrm.so.2.3.0
+lrwxrwxrwx	root/root	usr/lib/libdrm.so -> libdrm.so.2.3.1
+lrwxrwxrwx	root/root	usr/lib/libdrm.so.2 -> libdrm.so.2.3.1
+-rwxr-xr-x	root/root	usr/lib/libdrm.so.2.3.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdrm.pc
