@@ -6,16 +6,14 @@
 
 name=vte
 version=0.17.2
-release=2
+release=3
 source=(ftp://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
-  rm po/*.po
   sed -e '/^IT_PROG_INTLTOOL/d' -i configure.in
+  sed -e '/^SUBDIRS/s/po//' -i Makefile.in
   autoconf
-  sed -e 's/USE_NLS=yes/USE_NLS=no/' \
-      -e 's/ENABLE_NLS 1/ENABLE_NLS 0/' -i configure
   ./configure --prefix=/usr \
               --libexecdir=/usr/lib/$name \
               --disable-static \
@@ -26,5 +24,5 @@ build() {
               --with-pangox
   make
   make DESTDIR=$PKG install
-  rm -r $PKG/usr/share/gtk-doc
+  rm -rf $PKG/usr/share/{gtk-doc,locale}
 }
