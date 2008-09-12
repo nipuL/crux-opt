@@ -4,7 +4,7 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=cdparanoia
-version=10.1
+version=10.2
 release=1
 source=(http://downloads.xiph.org/releases/$name/$name-III-$version.src.tgz)
 
