@@ -1,6 +1,6 @@
 # GdkPixbuf Image Loader Modules file
 # Automatically generated file, do not edit
-# Created by gdk-pixbuf-query-loaders from gtk+-2.12.11
+# Created by gdk-pixbuf-query-loaders from gtk+-2.12.12
 #
 # LoaderDir = /usr/lib/gtk-2.0/2.10.0/loaders
 #
@@ -68,6 +68,7 @@
 "tiff" "tif" ""
 "MM *" "  z " 100
 "II* " "   z" 100
+"II* \020   CR\002 " "   z zzz   z" 0
 
 "/usr/lib/gtk-2.0/2.10.0/loaders/libpixbufloader-bmp.so"
 "bmp" 5 "gtk20" "The BMP image format"
