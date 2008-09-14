@@ -3,7 +3,7 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 
 name=glib
-version=2.16.5
+version=2.16.6
 release=1
 source=(http://download.gnome.org/sources/$name/2.16/$name-$version.tar.bz2)
 
