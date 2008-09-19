@@ -4,7 +4,7 @@
 # Depends on:  ghostscript
 
 name=hpijs
-version=2.8.7
+version=2.8.9
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
@@ -16,7 +16,7 @@ build () {
                 --enable-hpijs-only-build \
                 --disable-foomatic-xml-install \
                 --enable-foomatic-ppd-install
-    make 
+    make
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/{hplip,doc}
