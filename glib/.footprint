@@ -24,6 +24,8 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gdatainputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gdataoutputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gdrive.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gemblem.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gemblemedicon.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gfile.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileattribute.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gfileenumerator.h
@@ -38,10 +40,12 @@ drwxr-xr-x	root/root	usr/include/glib-2.0/gio/
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gicon.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/ginputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gio.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/gioenums.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gioenumtypes.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gioerror.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/giomodule.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gioscheduler.h
+-rw-r--r--	root/root	usr/include/glib-2.0/gio/giotypes.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gloadableicon.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gmemoryinputstream.h
 -rw-r--r--	root/root	usr/include/glib-2.0/gio/gmemoryoutputstream.h
@@ -141,25 +145,25 @@ drwxr-xr-x	root/root	usr/lib/glib-2.0/
 drwxr-xr-x	root/root	usr/lib/glib-2.0/include/
 -rw-r--r--	root/root	usr/lib/glib-2.0/include/glibconfig.h
 -rwxr-xr-x	root/root	usr/lib/libgio-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so -> libgio-2.0.so.0.1800.1
+lrwxrwxrwx	root/root	usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.1800.1
+-rwxr-xr-x	root/root	usr/lib/libgio-2.0.so.0.1800.1
 -rwxr-xr-x	root/root	usr/lib/libglib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.1600.6
-lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.1600.6
--rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.1600.6
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so -> libglib-2.0.so.0.1800.1
+lrwxrwxrwx	root/root	usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.1800.1
+-rwxr-xr-x	root/root	usr/lib/libglib-2.0.so.0.1800.1
 -rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.1600.6
-lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.1600.6
--rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.1600.6
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0.1800.1
+lrwxrwxrwx	root/root	usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.1800.1
+-rwxr-xr-x	root/root	usr/lib/libgmodule-2.0.so.0.1800.1
 -rwxr-xr-x	root/root	usr/lib/libgobject-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.1600.6
-lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.1600.6
--rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.1600.6
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0.1800.1
+lrwxrwxrwx	root/root	usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.1800.1
+-rwxr-xr-x	root/root	usr/lib/libgobject-2.0.so.0.1800.1
 -rwxr-xr-x	root/root	usr/lib/libgthread-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.1600.6
-lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.1600.6
--rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.1600.6
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0.1800.1
+lrwxrwxrwx	root/root	usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.1800.1
+-rwxr-xr-x	root/root	usr/lib/libgthread-2.0.so.0.1800.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gio-unix-2.0.pc
@@ -175,6 +179,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/glib-gettextize.1.gz
 -rw-r--r--	root/root	usr/man/man1/glib-mkenums.1.gz
 -rw-r--r--	root/root	usr/man/man1/gobject-query.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtester-report.1.gz
+-rw-r--r--	root/root	usr/man/man1/gtester.1.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/glib-2.0.m4
