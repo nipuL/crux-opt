@@ -4,7 +4,7 @@
 #
 # Matt Housh, jaeger at morpheus dot net
 # Jose V Beneyto, joberui at ei dot upv dot es
-# Lucas Hazel
+# Lucas Hazel, lucas@die.net.au
 #
 # This is a modified version for compat32 support on CRUX64
 
@@ -96,7 +96,10 @@ case "$1" in
 		checkInstalled nvidia-compat32 nvidia-legacy-96xx-compat32 nvidia-legacy-71xx-compat32
 
 		# get the .so version number
-		NV_VER="`pkginfo -i | grep -e "^nvidia-compat32 " -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx-compat32 " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./' | cut -d- -f1`"
+		NV_VER="`pkginfo -i | grep -e "^nvidia-compat32 " \
+                  -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx-compat32 " \
+                  | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' \
+                  | sed -e 's/-/\./' | cut -d- -f1`"
 
 		# check for the existence of libglx_so and libGL_so_1_2
 		# if none, move the xorg stuff out of the way for nvidia's
@@ -106,9 +109,8 @@ case "$1" in
 			mv /usr/lib32/libGL{.so.1.2,_so_1_2}
 			rm /usr/lib32/libGL.so{,.1}
 			# nvidia's library versioning prevents ldconfig from creating
-			# libGL.so and libGLcore.so
+			# libGL.so
 			ln -sf libGL.so.$NV_VER /usr/lib32/libGL.so
-			ln -sf libGLcore.so.$NV_VER /usr/lib32/libGLcore.so
 		else
 			infoRevert
 			exit 1
