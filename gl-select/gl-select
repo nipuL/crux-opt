@@ -3,10 +3,10 @@
 # gl-select: select active gl/glx libraries/extensions
 #
 # Matt Housh, jaeger at morpheus dot net
-# Jose V Beneyto, sepen at users dot sourceforge dot net
+# Jose V Beneyto, sepen at crux dot nu
 #
 # For changelog, see:
-# http://crux.nu/gitweb/?p=ports/opt.git;a=history;f=gl-select/Pkgfile;hb=2.3
+# http://crux.nu/gitweb/?p=ports/opt.git;a=history;f=gl-select/Pkgfile
 #
 
 infoUsage() {
@@ -74,7 +74,6 @@ case "$1" in
 		# check for the existence of libglx_so, libGL_so_1_2 and friends
 		# if none, nothing is necessary or the backups have been erased
 		BACKUPS="/usr/lib/xorg/modules/extensions/libglx_so \
-			/usr/lib/xorg/modules/extensions/libGLcore_so \
 			/usr/lib/libGL_so_1_2"
 
 		for F in $BACKUPS
@@ -90,9 +89,6 @@ case "$1" in
 		echo -n "libglx "
 		rm -f /usr/lib/xorg/modules/extensions/libglx.so
 		mv /usr/lib/xorg/modules/extensions/libglx{_so,.so}
-		echo -n "libGLcore "
-		rm -f /usr/lib/xorg/modules/extensions/libGLcore.so
-		mv /usr/lib/xorg/modules/extensions/libGLcore{_so,.so}
 		echo -n "libGL "
 		mv /usr/lib/libGL{_so_1_2,.so.1.2}
 		ln -sf libGL.so.1 /usr/lib/libGL.so
@@ -105,7 +101,9 @@ case "$1" in
 		checkInstalled nvidia nvidia-legacy-96xx nvidia-legacy-71xx
 
 		# get the .so version number
-		NV_VER="`pkginfo -i | grep -e "^nvidia " -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx " | awk '{ print $2 }' | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./' | cut -d- -f1`"
+		NV_VER="`pkginfo -i | grep -e "^nvidia " \
+		  -e "^nvidia-legacy-[[:digit:]][[:digit:]]xx " | awk '{ print $2 }' \
+		  | sed -e 's/-[0-9]\+$//' | sed -e 's/-/\./' | cut -d- -f1`"
 
 		# check for the existence of libglx_so and libGL_so_1_2
 		# if none, move the xorg stuff out of the way for nvidia's
@@ -116,17 +114,12 @@ case "$1" in
 			mv /usr/lib/xorg/modules/extensions/libglx{.so,_so}
 			ln -s libglx.so.$NV_VER \
 				/usr/lib/xorg/modules/extensions/libglx.so
-			echo -n "libGLcore "
-			mv /usr/lib/xorg/modules/extensions/libGLcore{.so,_so}
-			ln -s /usr/lib/libGLcore.so.$NV_VER \
-				/usr/lib/xorg/modules/extensions/libGLcore.so
 			echo -n "libGL "
 			mv /usr/lib/libGL{.so.1.2,_so_1_2}
 			rm /usr/lib/libGL.so{,.1}
 			# nvidia's library versioning prevents ldconfig from creating
-			# libGL.so and libGLcore.so
+			# libGL.so
 			ln -sf libGL.so.$NV_VER /usr/lib/libGL.so
-			ln -sf libGLcore.so.$NV_VER /usr/lib/libGLcore.so
 		else
 			infoRevert
 			exit 1
@@ -148,8 +141,6 @@ case "$1" in
 			# possible the revertion of the driver
 			echo -n "libglx "
 			cp /usr/lib/xorg/modules/extensions/libglx{.so,_so}
-			echo -n "libGLcore "
-			cp /usr/lib/xorg/modules/extensions/libGLcore{.so,_so}
 			echo -n "libGL "
 			mv /usr/lib/libGL{.so.1.2,_so_1_2}
 			# according to ati port
