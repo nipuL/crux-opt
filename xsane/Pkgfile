@@ -5,7 +5,7 @@
 # Depends on:  gimp, sane
 
 name=xsane
-version=0.995
+version=0.996
 release=1
 source=(http://www.xsane.org/download/$name-$version.tar.gz)
 

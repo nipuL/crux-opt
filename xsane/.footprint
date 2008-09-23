@@ -10,6 +10,10 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/xsane.1.gz
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/applications/
+-rw-r--r--	root/root	usr/share/applications/xsane.desktop
+drwxr-xr-x	root/root	usr/share/pixmaps/
+-rw-r--r--	root/root	usr/share/pixmaps/xsane.xpm
 drwxr-xr-x	root/root	usr/share/sane/
 drwxr-xr-x	root/root	usr/share/sane/xsane/
 -rw-r--r--	root/root	usr/share/sane/xsane/Mustek-logo.xpm
