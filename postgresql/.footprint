@@ -927,6 +927,7 @@ drwxr-xr-x	root/root	usr/share/postgresql/timezone/America/North_Dakota/
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Resolute
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Rio_Branco
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Rosario
+-rw-r--r--	root/root	usr/share/postgresql/timezone/America/Santarem
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Santiago
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Santo_Domingo
 -rw-r--r--	root/root	usr/share/postgresql/timezone/America/Sao_Paulo
