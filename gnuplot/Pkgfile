@@ -6,7 +6,7 @@
 # Depends on:  ncurses, readline, libpng, xorg-libx11, xorg-libxau
 
 name=gnuplot
-version=4.2.3
+version=4.2.4
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gnuplot/$name-$version.tar.gz)
 
@@ -14,6 +14,7 @@ build() {
     cd $name-$version
     sed -i '/^install:/s/install-info//' docs/Makefile.in
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --libexecdir=/usr/lib \
                 --with-x
     make
