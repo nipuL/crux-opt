@@ -5,19 +5,20 @@
 # Depends on: gtk, fortune
 
 name=xlockmore
-version=5.23
+version=5.26.1
 release=1
-source=(http://www.tux.org/pub/tux/xlockmore/$name-$version.tar.bz2)
+source=(ftp://ibiblio.org/pub/Linux/X11/screensavers/$name-$version.tar.bz2)
 
 build(){
 	cd $name-$version
 	./configure --prefix=/usr --enable-vtlock --enable-syslog \
 		    --enable-multiple-user --enable-multiple-root \
 		    --disable-magick --without-motif --with-opengl \
-		    --with-esound
+		    --without-esound
 	make
 	make prefix=$PKG/usr xapploaddir=$PKG/etc/X11/app-defaults install
 	if [ -d $PKG/usr/lib ]; then
 		rm -rf $PKG/usr/lib
 	fi
+	mv $PKG/usr/share/man $PKG/usr
 }
