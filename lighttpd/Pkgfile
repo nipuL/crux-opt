@@ -2,10 +2,10 @@
 # URL: http://www.lighttpd.net/
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Jukka Heino, jukka dot heino at gmail dot com
-# Depends on: 
+# Depends on: libpcre
 
 name=lighttpd
-version=1.4.19
+version=1.4.20
 release=1
 source=(http://www.$name.net/download/$name-$version.tar.gz \
         $name.conf \
@@ -14,7 +14,7 @@ source=(http://www.$name.net/download/$name-$version.tar.gz \
 build() {
     cd $name-$version
     ./configure --prefix=/usr --libdir=/usr/lib/$name --with-openssl \
-        --mandir=/usr/man --without-pcre
+        --mandir=/usr/man --with-pcre
     make
     make DESTDIR=$PKG install
 
