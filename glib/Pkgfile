@@ -1,6 +1,7 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libpcre
 
 name=glib
 version=2.18.1
