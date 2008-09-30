@@ -2,6 +2,7 @@
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libpcre
 
 name=glib
 version=2.18.1
