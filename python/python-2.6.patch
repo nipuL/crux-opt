@@ -1,0 +1,30 @@
+diff -Nru Python-2.6.orig/Lib/cgi.py Python-2.6/Lib/cgi.py
+--- Python-2.6.orig/Lib/cgi.py	2008-09-03 13:30:35.000000000 +0200
++++ Python-2.6/Lib/cgi.py	2008-09-03 13:32:35.000000000 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/python
++#! /usr/bin/python
+ 
+ # NOTE: the above "/usr/local/bin/python" is NOT a mistake.  It is
+ # intentionally NOT "/usr/bin/env python".  On many systems
+diff -Nru Python-2.6.orig/Modules/Setup.dist Python-2.6/Modules/Setup.dist
+--- Python-2.6.orig/Modules/Setup.dist	2008-09-03 13:30:34.000000000 +0200
++++ Python-2.6/Modules/Setup.dist	2008-09-03 13:32:35.000000000 +0200
+@@ -152,7 +152,7 @@
+ # modules are to be built as shared libraries (see above for more
+ # detail; also note that *static* reverses this effect):
+ 
+-#*shared*
++*shared*
+ 
+ # GNU readline.  Unlike previous Python incarnations, GNU readline is
+ # now incorporated in an optional module, configured in the Setup file
+@@ -385,7 +385,7 @@
+ #
+ # First, look at Setup.config; configure may have set this for you.
+ 
+-#dbm dbmmodule.c 	# dbm(3) may require -lndbm or similar
++dbm dbmmodule.c -DHAVE_NDBM_H -lgdbm_compat -lgdbm	# dbm(3) may require -lndbm or similar
+ 
+ # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
+ #

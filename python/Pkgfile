@@ -1,36 +1,36 @@
-# Description: Python interpreter, version 2.5
+# Description: Python interpreter, version 2.6
 # URL:         http://www.python.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on:  db gdbm ncurses openssl readline bzip2 zlib
+# Depends on:  db gdbm ncurses openssl readline bzip2 zlib sqlite3
 
 name=python
-version=2.5.2
-release=3
-source=(http://www.python.org/ftp/$name/$version/Python-$version.tar.bz2 \
-        $name-$version.patch CVE-2008-{2315,2316,3142,3144}.patch.gz)
+version=2.6rc2
+release=1
+source=(http://www.python.org/ftp/$name/2.6/Python-$version.tar.bz2
+        $name-2.6.patch)
 
 build () {
     cd Python-$version
 
-    patch -p1 -i $SRC/$name-$version.patch
-    gunzip -c $SRC/CVE*.patch.gz | patch -p1
+    patch -p1 -i $SRC/$name-2.6.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
                 --with-threads \
                 --enable-ipv6
-    make
+
+    make EXTRA_CFLAGS="$CFLAGS"
     make -j1 DESTDIR=$PKG install
 
-    ln -sf python2.5 $PKG/usr/bin/python
-    ln -s python2.5 $PKG/usr/lib/python
-    ln -s python2.5 $PKG/usr/include/python
-    ln -s /usr/lib/libpython2.5.so $PKG/usr/lib/python2.5/config/libpython2.5.so
+    ln -sf python2.6 $PKG/usr/bin/python
+    ln -s python2.6 $PKG/usr/lib/python
+    ln -s python2.6 $PKG/usr/include/python
+    ln -s /usr/lib/libpython2.6.so $PKG/usr/lib/python2.6/config/libpython2.6.so
 
     rm -r $PKG/usr/lib/python/{bsddb,ctypes,email,sqlite3}/test
-    rm -r $PKG/usr/lib/python/distutils/tests
+    rm -r $PKG/usr/lib/python/{distutils,json,lib2to3}/tests
     rm $PKG/usr/lib/python/{distutils,site-packages,test}/README
     rm $PKG/usr/lib/python/idlelib/{ChangeLog,{NEWS,README,TODO}.txt}
     rm $PKG/usr/lib/python/ctypes/macholib/README.ctypes
