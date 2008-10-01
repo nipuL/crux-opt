@@ -2,7 +2,7 @@
 # URL: http://gegl.org
 # Maintainer: Simone Rota, sip at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: babl
+# Depends on: babl, gtk
 
 name=gegl
 version=0.0.18
