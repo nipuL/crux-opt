@@ -5,13 +5,15 @@
 
 name=wvdial
 version=1.60
-release=2
+release=3
 source=(http://alumnit.ca/download/$name-$version.tar.gz \
         http://wvstreams.googlecode.com/files/wvstreams-4.4.1.tar.gz \
-        $name-$version.patch)
+        $name-$version.patch wvstreams-gcc43.patch)
 
 build() {
     cd wvstreams-4.4.1
+
+    patch -p1 -i $SRC/wvstreams-gcc43.patch
     ./configure --prefix=/usr \
                 --enable-verbose \
                 --without-{pam,tcl,qt}
