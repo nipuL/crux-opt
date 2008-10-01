@@ -19,5 +19,7 @@ build () {
     make
     make DESTDIR=$PKG install
 
+    chown root:root $PKG/usr/bin/{maildrop,lockmail}
     rm -r $PKG/usr/{include,lib,man/man3,share}
+
 }
