@@ -1,8 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--r-xr-xr-x	root/root	usr/bin/nc
--r-xr-xr-x	root/root	usr/bin/nedit
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/nc.man.gz
--rw-r--r--	root/root	usr/man/man1/nedit.man.gz
