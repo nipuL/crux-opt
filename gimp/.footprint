@@ -1,11 +1,9 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
-lrwxrwxrwx	root/root	usr/bin/gimp -> gimp-2.4
--rwxr-xr-x	root/root	usr/bin/gimp-2.4
-lrwxrwxrwx	root/root	usr/bin/gimp-console -> gimp-console-2.4
--rwxr-xr-x	root/root	usr/bin/gimp-console-2.4
-lrwxrwxrwx	root/root	usr/bin/gimp-remote -> gimp-remote-2.4
--rwxr-xr-x	root/root	usr/bin/gimp-remote-2.4
+lrwxrwxrwx	root/root	usr/bin/gimp -> gimp-2.6
+-rwxr-xr-x	root/root	usr/bin/gimp-2.6
+lrwxrwxrwx	root/root	usr/bin/gimp-console -> gimp-console-2.6
+-rwxr-xr-x	root/root	usr/bin/gimp-console-2.6
 -rwxr-xr-x	root/root	usr/bin/gimptool-2.0
 drwxr-xr-x	root/root	usr/etc/
 drwxr-xr-x	root/root	usr/etc/gimp/
@@ -109,6 +107,7 @@ drwxr-xr-x	root/root	usr/include/gimp-2.0/libgimp/
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimpselection.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimpselection_pdb.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimpselectiontools_pdb.h
+-rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimptextlayer_pdb.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimptexttool_pdb.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimptile.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimp/gimptransformtools_pdb.h
@@ -182,6 +181,7 @@ drwxr-xr-x	root/root	usr/include/gimp-2.0/libgimpthumb/
 drwxr-xr-x	root/root	usr/include/gimp-2.0/libgimpwidgets/
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpbrowser.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpbutton.h
+-rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpcairo-utils.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpcellrenderercolor.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpcellrenderertoggle.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpchainbutton.h
@@ -222,6 +222,8 @@ drwxr-xr-x	root/root	usr/include/gimp-2.0/libgimpwidgets/
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpquerybox.h
+-rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpruler.h
+-rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpscaleentry.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
 -rw-r--r--	root/root	usr/include/gimp-2.0/libgimpwidgets/gimpstock.h
@@ -239,254 +241,250 @@ drwxr-xr-x	root/root	usr/lib/gimp/2.0/environ/
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/interpreters/
 -rw-r--r--	root/root	usr/lib/gimp/2.0/interpreters/default.interp
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_colorblind.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_colorblind.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_gamma.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_gamma.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_highcontrast.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_highcontrast.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_lcms.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_lcms.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_proof.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcdisplay_proof.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_cmyk.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_cmyk.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_triangle.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_triangle.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_water.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolorsel_water.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller_linux_input.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller_linux_input.so
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller_midi.la
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller_midi.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-cmyk.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-cmyk.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-water.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-water.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-wheel.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcolor-selector-wheel.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller-linux-input.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller-linux-input.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller-midi.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libcontroller-midi.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-color-blind.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-color-blind.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-gamma.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-gamma.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-high-contrast.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-lcms.so
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.la
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/modules/libdisplay-filter-proof.so
 drwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/AlienMap2
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/CEL
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/CML_explorer
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/FractalExplorer
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/Lighting
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/MapObject
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/align_layers
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/animationplay
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/animoptimize
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/alien-map
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/align-layers
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/animation-optimize
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/animation-play
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/antialias
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/apply_lens
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/autocrop
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/autostretch_hsv
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/apply-canvas
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/blinds
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/blur
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/bmp
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/borderaverage
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/bumpmap
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/c_astretch
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/blur-gauss
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/blur-gauss-selective
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/blur-motion
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/border-average
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/bump-map
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/cartoon
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/ccanalyze
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/channel_mixer
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/channel-mixer
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/checkerboard
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color_enhance
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/cml-explorer
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color-cube-analyze
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color-enhance
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color-exchange
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color-rotate
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/color-to-alpha
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/colorify
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/colormap-remap
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/colortoalpha
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/compose
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/compressor
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/convmatrix
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/csource
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-normalize
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-retinex
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-stretch
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/contrast-stretch-hsv
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/convolution-matrix
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/crop-auto
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/crop-zealous
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/cubism
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/curve_bend
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/curve-bend
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/decompose
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/deinterlace
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/depthmerge
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/desktop-link
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/depth-merge
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/despeckle
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/destripe
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/dicom
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/diffraction
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/displace
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/dog
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-dog
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-laplace
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-neon
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/edge-sobel
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/emboss
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/engrave
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/exchange
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/faxg3
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-bmp
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-cel
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-compressor
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-csource
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-desktop-link
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-dicom
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-faxg3
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-fits
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-fli
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-gbr
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-gif-load
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-gif-save
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-gih
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-glob
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-header
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-html-table
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ico
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-jpeg
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-mng
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pat
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pcx
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pdf
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pix
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-png
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-pnm
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-ps
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psd-load
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psd-save
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-psp
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-raw
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-sgi
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-sunras
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-svg
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tga
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff-load
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-tiff-save
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-uri
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xbm
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xjt
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xpm
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/file-xwd
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/film
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/fits
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/filter-pack
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/flame
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/flarefx
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/fp
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/fractaltrace
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gauss
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gbr
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/fractal-explorer
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/fractal-trace
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gee
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gee_zoom
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gee-zoom
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gfig
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gflare
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gfli
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gif-load
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gif-save
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gih
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gimpressionist
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/glasstile
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/glob
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gqbist
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gradmap
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gradient-flare
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gradient-map
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/grid
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/gtm
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/guillotine
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/header
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/help
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/hot
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/ifscompose
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/ifs-compose
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/illusion
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/imagemap
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/iwarp
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/jigsaw
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/jpeg
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/laplace
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lcms
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lic
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-apply
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-distortion
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lens-flare
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/lighting
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mail
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mapcolor
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/max_rgb
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/map-object
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/max-rgb
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/maze
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mblur
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/metadata
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mng
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/mosaic
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/neon
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/newsprint
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nlfilt
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noisify
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/normalize
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nl-filter
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noise-hsv
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noise-randomize
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noise-rgb
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noise-solid
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/noise-spread
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/nova
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/oilify
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pagecurl
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/papertile
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pat
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pcx
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/photocopy
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pix
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pixelize
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/plasma
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/plugin-browser
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/png
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/pnm
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/polar
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/postscript
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/polar-coords
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/print
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/procedure-browser
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/psd-load
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/psd-save
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/psp
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/randomize
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/raw
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/rcm
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/redeye
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/retinex
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/qbist
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/red-eye-removal
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/ripple
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/rotate
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sample_colorize
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/scatter_hsv
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sample-colorize
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/screenshot
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/script-fu
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sel2path
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sel_gauss
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/semiflatten
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sgi
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/selection-to-path
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/semi-flatten
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sharpen
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/shift
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sinus
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/smooth_palette
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/snoise
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sobel
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/smooth-palette
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/softglow
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sparkle
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/spheredesigner
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/spread
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/struc
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sunras
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/svg
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tga
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/threshold_alpha
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tiff-load
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tiff-save
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/sphere-designer
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/threshold-alpha
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tile
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tileit
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tiler
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/uniteditor
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/unsharp
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/uri
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tile-glass
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tile-paper
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tile-seamless
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/tile-small
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/unit-editor
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/unsharp-mask
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/value-invert
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/value-propagate
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/van-gogh-lic
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/video
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/vinvert
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/vpropagate
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/warp
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/waves
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/webbrowser
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/whirlpinch
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/web-browser
+-rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/whirl-pinch
 -rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/wind
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/winicon
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/xbm
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/xjt
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/xpm
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/xwd
--rwxr-xr-x	root/root	usr/lib/gimp/2.0/plug-ins/zealouscrop
 -rwxr-xr-x	root/root	usr/lib/libgimp-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so -> libgimp-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimp-2.0.so.0 -> libgimp-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimp-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so -> libgimpbase-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpbase-2.0.so.0 -> libgimpbase-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpbase-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so -> libgimpcolor-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpcolor-2.0.so.0 -> libgimpcolor-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpcolor-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so -> libgimpconfig-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpconfig-2.0.so.0 -> libgimpconfig-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpconfig-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so -> libgimpmath-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpmath-2.0.so.0 -> libgimpmath-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpmath-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so -> libgimpmodule-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpmodule-2.0.so.0 -> libgimpmodule-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpmodule-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so -> libgimpthumb-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpthumb-2.0.so.0 -> libgimpthumb-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpthumb-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so -> libgimpui-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpui-2.0.so.0 -> libgimpui-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpui-2.0.so.0.600.0
 -rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.400.7
-lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.400.7
--rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.400.7
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so -> libgimpwidgets-2.0.so.0.600.0
+lrwxrwxrwx	root/root	usr/lib/libgimpwidgets-2.0.so.0 -> libgimpwidgets-2.0.so.0.600.0
+-rwxr-xr-x	root/root	usr/lib/libgimpwidgets-2.0.so.0.600.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimp-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpthumb-2.0.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/gimpui-2.0.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/gimp-2.4.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gimp-console-2.4.1.gz -> gimp-2.4.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gimp-console.1.gz -> gimp-console-2.4.1.gz
--rw-r--r--	root/root	usr/man/man1/gimp-remote-2.4.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gimp-remote.1.gz -> gimp-remote-2.4.1.gz
-lrwxrwxrwx	root/root	usr/man/man1/gimp.1.gz -> gimp-2.4.1.gz
+-rw-r--r--	root/root	usr/man/man1/gimp-2.6.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/gimp-console-2.6.1.gz -> gimp-2.6.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/gimp-console.1.gz -> gimp-console-2.6.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/gimp.1.gz -> gimp-2.6.1.gz
 -rw-r--r--	root/root	usr/man/man1/gimptool-2.0.1.gz
 drwxr-xr-x	root/root	usr/man/man5/
--rw-r--r--	root/root	usr/man/man5/gimprc-2.4.5.gz
-lrwxrwxrwx	root/root	usr/man/man5/gimprc.5.gz -> gimprc-2.4.5.gz
+-rw-r--r--	root/root	usr/man/man5/gimprc-2.6.5.gz
+lrwxrwxrwx	root/root	usr/man/man5/gimprc.5.gz -> gimprc-2.6.5.gz
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/aclocal/
 -rw-r--r--	root/root	usr/share/aclocal/gimp-2.0.m4
-drwxr-xr-x	root/root	usr/share/application-registry/
--rw-r--r--	root/root	usr/share/application-registry/gimp.applications
 drwxr-xr-x	root/root	usr/share/applications/
 -rw-r--r--	root/root	usr/share/applications/gimp.desktop
 drwxr-xr-x	root/root	usr/share/gimp/
@@ -772,6 +770,7 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/gradients/
 drwxr-xr-x	root/root	usr/share/gimp/2.0/images/
 -rw-r--r--	root/root	usr/share/gimp/2.0/images/gimp-logo.png
 -rw-r--r--	root/root	usr/share/gimp/2.0/images/gimp-splash.png
+-rw-r--r--	root/root	usr/share/gimp/2.0/images/wilber.png
 drwxr-xr-x	root/root	usr/share/gimp/2.0/menus/
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/brush-editor-menu.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/brushes-menu.xml
@@ -797,7 +796,6 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/menus/
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/templates-menu.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/text-editor-toolbar.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/tool-options-menu.xml
--rw-r--r--	root/root	usr/share/gimp/2.0/menus/toolbox-menu.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/tools-menu.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/undo-menu.xml
 -rw-r--r--	root/root	usr/share/gimp/2.0/menus/vectors-menu.xml
@@ -991,10 +989,8 @@ drwxr-xr-x	root/root	usr/share/gimp/2.0/scripts/images/
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/slide.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/sota-chrome-logo.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/speed-text.scm
--rw-r--r--	root/root	usr/share/gimp/2.0/scripts/sphere.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/spinning-globe.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/spyrogimp.scm
--rw-r--r--	root/root	usr/share/gimp/2.0/scripts/starburst-logo.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/starscape-logo.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/swirltile.scm
 -rw-r--r--	root/root	usr/share/gimp/2.0/scripts/swirly-pattern.scm
@@ -1105,5 +1101,3 @@ drwxr-xr-x	root/root	usr/share/icons/hicolor/64x64/apps/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/scalable/
 drwxr-xr-x	root/root	usr/share/icons/hicolor/scalable/apps/
 -rw-r--r--	root/root	usr/share/icons/hicolor/scalable/apps/gimp.svg
-drwxr-xr-x	root/root	usr/share/mime-info/
--rw-r--r--	root/root	usr/share/mime-info/gimp.keys
