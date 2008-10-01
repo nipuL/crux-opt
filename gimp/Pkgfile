@@ -1,14 +1,14 @@
 # Description: The GIMP
 # URL: http://www.gimp.org/
 # Maintainer: Simone Rota, sip at crux dot nu
-# Depends on: gtk, libart_lgpl, xorg-libxmu, xorg-libxpm, p5-xml-parser
+# Depends on: gtk, libart_lgpl, xorg-libxmu, xorg-libxpm, intltool, gegl
 
 # Nice to have: gimp-print
 
 name=gimp
-version=2.4.7
+version=2.6.0
 release=1
-source=(ftp://ftp.gimp.org/pub/gimp/v2.4/gimp-$version.tar.bz2)
+source=(ftp://ftp.gimp.org/pub/gimp/v2.6/gimp-$version.tar.bz2)
 
 build() {
 	cd gimp-$version
@@ -16,7 +16,8 @@ build() {
 	./configure --prefix=/usr \
 		--mandir=/usr/man \
 		--disable-static \
-		--disable-python
+		--disable-python \
+		--disable-nls
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{gtk-doc,locale}
