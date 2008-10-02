@@ -6,11 +6,13 @@
 
 name=gegl
 version=0.0.18
-release=1
-source=(ftp://ftp.gimp.org/pub/$name/0.0/$name-$version.tar.bz2)
+release=2
+source=(ftp://ftp.gimp.org/pub/$name/0.0/$name-$version.tar.bz2 \
+	$name-ffmpeg.patch)
 
 build() {
 	cd $name-$version
+	patch -p1 < ../$name-ffmpeg.patch
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
