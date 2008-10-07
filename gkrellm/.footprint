@@ -7,6 +7,7 @@ drwxr-xr-x	root/root	usr/include/gkrellm2/
 -rw-r--r--	root/root	usr/include/gkrellm2/gkrellm-public-proto.h
 -rw-r--r--	root/root	usr/include/gkrellm2/gkrellm.h
 -rw-r--r--	root/root	usr/include/gkrellm2/gkrellmd.h
+-rw-r--r--	root/root	usr/include/gkrellm2/log.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/gkrellm2/
 drwxr-xr-x	root/root	usr/lib/gkrellm2/plugins/
