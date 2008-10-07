@@ -1,0 +1,10 @@
+--- blackbox-0.70.1/lib/Image.cc.orig	2008-10-03 09:23:56.000000000 +0200
++++ blackbox-0.70.1/lib/Image.cc	2008-10-03 09:24:08.000000000 +0200
+@@ -44,6 +44,7 @@
+ #include <math.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ 
+ // #define COLORTABLE_DEBUG
+ // #define MITSHM_DEBUG
