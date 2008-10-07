@@ -4,7 +4,7 @@
 # Depends on:
 
 name=jhead
-version=2.82
+version=2.84
 release=1
 source=(http://www.sentex.net/~mwandel/$name/$name-$version.tar.gz)
 
