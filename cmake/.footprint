@@ -20,6 +20,7 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/cmake-2.6/
 drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/AddFileDependencies.cmake
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/BundleUtilities.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMake.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASM-ATTInformation.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/CMakeASMCompiler.cmake.in
@@ -247,6 +248,7 @@ drwxr-xr-x	root/root	usr/share/cmake-2.6/Modules/
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/InstallRequiredSystemLibraries.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/KDE3Macros.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/MacOSXBundleInfo.plist.in
+-rw-r--r--	root/root	usr/share/cmake-2.6/Modules/MacOSXFrameworkInfo.plist.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/MacroAddFileDependencies.cmake
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/NSIS.InstallOptions.ini.in
 -rw-r--r--	root/root	usr/share/cmake-2.6/Modules/NSIS.template.in
