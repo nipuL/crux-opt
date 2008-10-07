@@ -8,3 +8,13 @@
  
  // #define COLORTABLE_DEBUG
  // #define MITSHM_DEBUG
+--- blackbox-0.70.1.orig/lib/Resource.cc	2008-10-07 18:32:55.000000000 +0200
++++ blackbox-0.70.1/lib/Resource.cc	2008-10-07 18:34:05.000000000 +0200
+@@ -29,6 +29,7 @@
+ #include <X11/Xresource.h>
+ 
+ #include <stdio.h>
++#include <strings.h>
+ 
+ 
+ bt::Resource::Resource(void)
