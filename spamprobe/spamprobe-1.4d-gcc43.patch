@@ -1,0 +1,154 @@
+diff -ur -x '*~' spamprobe-1.4d.orig/src/database/DatabaseConfig.cc spamprobe-1.4d-dev/src/database/DatabaseConfig.cc
+--- spamprobe-1.4d.orig/src/database/DatabaseConfig.cc	2006-11-17 08:24:48.000000000 +0100
++++ spamprobe-1.4d-dev/src/database/DatabaseConfig.cc	2007-07-09 17:58:18.000000000 +0200
+@@ -29,6 +29,7 @@
+ //
+ 
+ #include <stdexcept>
++#include <cstdlib>
+ #include "File.h"
+ #include "WordData.h"
+ #include "FrequencyDBImpl.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/hdl/HdlTokenizer.cc spamprobe-1.4d-dev/src/hdl/HdlTokenizer.cc
+--- spamprobe-1.4d.orig/src/hdl/HdlTokenizer.cc	2006-11-17 08:24:48.000000000 +0100
++++ spamprobe-1.4d-dev/src/hdl/HdlTokenizer.cc	2007-07-09 18:12:33.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "AbstractCharReader.h"
+ #include "HdlError.h"
+ #include "HdlToken.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/includes/MultiLineSubString.h spamprobe-1.4d-dev/src/includes/MultiLineSubString.h
+--- spamprobe-1.4d.orig/src/includes/MultiLineSubString.h	2006-11-17 08:24:48.000000000 +0100
++++ spamprobe-1.4d-dev/src/includes/MultiLineSubString.h	2007-07-09 18:01:10.000000000 +0200
+@@ -31,6 +31,7 @@
+ #ifndef _MultiLineSubString_h
+ #define _MultiLineSubString_h
+ 
++#include <climits>
+ #include "AbstractMultiLineString.h"
+ 
+ class MultiLineSubString : public AbstractMultiLineString
+diff -ur -x '*~' spamprobe-1.4d.orig/src/includes/util.h spamprobe-1.4d-dev/src/includes/util.h
+--- spamprobe-1.4d.orig/src/includes/util.h	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/includes/util.h	2007-07-09 17:57:21.000000000 +0200
+@@ -42,6 +42,7 @@
+ #include <cassert>
+ #include <iostream>
+ #include <cstdio>
++#include <cstring>
+ #include "Ptr.h"
+ #include "Ref.h"
+ 
+diff -ur -x '*~' spamprobe-1.4d.orig/src/parser/AutoTrainMailMessageReader.cc spamprobe-1.4d-dev/src/parser/AutoTrainMailMessageReader.cc
+--- spamprobe-1.4d.orig/src/parser/AutoTrainMailMessageReader.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/parser/AutoTrainMailMessageReader.cc	2007-07-09 17:59:39.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "MailMessage.h"
+ #include "AutoTrainMailMessageReader.h"
+ 
+diff -ur -x '*~' spamprobe-1.4d.orig/src/parser/HtmlTokenizer.cc spamprobe-1.4d-dev/src/parser/HtmlTokenizer.cc
+--- spamprobe-1.4d.orig/src/parser/HtmlTokenizer.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/parser/HtmlTokenizer.cc	2007-07-09 18:02:31.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "AbstractTokenReceiver.h"
+ #include "StringReader.h"
+ #include "RegularExpression.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/parser/MailMessageReader.cc spamprobe-1.4d-dev/src/parser/MailMessageReader.cc
+--- spamprobe-1.4d.orig/src/parser/MailMessageReader.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/parser/MailMessageReader.cc	2007-07-09 18:03:06.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "RegularExpression.h"
+ #include "MailMessage.h"
+ #include "MailMessageList.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/parser/MbxMailMessageReader.cc spamprobe-1.4d-dev/src/parser/MbxMailMessageReader.cc
+--- spamprobe-1.4d.orig/src/parser/MbxMailMessageReader.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/parser/MbxMailMessageReader.cc	2007-07-09 18:03:41.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include <stdexcept>
+ #include "MailMessage.h"
+ #include "MailMessageList.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/Command_cleanup.cc spamprobe-1.4d-dev/src/spamprobe/Command_cleanup.cc
+--- spamprobe-1.4d.orig/src/spamprobe/Command_cleanup.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/Command_cleanup.cc	2007-07-09 18:13:16.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "CleanupManager.h"
+ #include "SpamFilter.h"
+ #include "FrequencyDB.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/Command_edit_term.cc spamprobe-1.4d-dev/src/spamprobe/Command_edit_term.cc
+--- spamprobe-1.4d.orig/src/spamprobe/Command_edit_term.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/Command_edit_term.cc	2007-07-09 18:13:42.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "SpamFilter.h"
+ #include "FrequencyDB.h"
+ #include "CommandConfig.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/Command_exec.cc spamprobe-1.4d-dev/src/spamprobe/Command_exec.cc
+--- spamprobe-1.4d.orig/src/spamprobe/Command_exec.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/Command_exec.cc	2007-07-09 18:14:16.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "SpamFilter.h"
+ #include "CommandConfig.h"
+ #include "ConfigManager.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/Command_import.cc spamprobe-1.4d-dev/src/spamprobe/Command_import.cc
+--- spamprobe-1.4d.orig/src/spamprobe/Command_import.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/Command_import.cc	2007-07-09 18:14:37.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include <fstream>
+ #include "LineReader.h"
+ #include "IstreamCharReader.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/Command_purge.cc spamprobe-1.4d-dev/src/spamprobe/Command_purge.cc
+--- spamprobe-1.4d.orig/src/spamprobe/Command_purge.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/Command_purge.cc	2007-07-09 18:14:57.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include "CleanupManager.h"
+ #include "SpamFilter.h"
+ #include "FrequencyDB.h"
+diff -ur -x '*~' spamprobe-1.4d.orig/src/spamprobe/spamprobe.cc spamprobe-1.4d-dev/src/spamprobe/spamprobe.cc
+--- spamprobe-1.4d.orig/src/spamprobe/spamprobe.cc	2006-11-17 08:24:49.000000000 +0100
++++ spamprobe-1.4d-dev/src/spamprobe/spamprobe.cc	2007-07-10 09:50:01.000000000 +0200
+@@ -28,6 +28,7 @@
+ //    http://www.cooldevtools.com/qpl.html
+ //
+ 
++#include <cstdlib>
+ #include <unistd.h>
+ #include <locale.h>
+ #include <signal.h>
