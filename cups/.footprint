@@ -90,7 +90,6 @@ drwxr-xr-x	root/root	usr/lib/cups/monitor/
 drwxr-xr-x	root/root	usr/lib/cups/notifier/
 -rwxr-xr-x	root/root	usr/lib/cups/notifier/mailto
 -rwxr-xr-x	root/root	usr/lib/cups/notifier/rss
--rwxr-xr-x	root/root	usr/lib/cups/notifier/testnotify
 lrwxrwxrwx	root/root	usr/lib/libcups.so -> libcups.so.2
 -rwxr-xr-x	root/root	usr/lib/libcups.so.2
 lrwxrwxrwx	root/root	usr/lib/libcupsimage.so -> libcupsimage.so.2
