@@ -6,9 +6,6 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/openoffice/
 -r--r--r--	root/root	usr/lib/openoffice/LICENSE
 -r--r--r--	root/root	usr/lib/openoffice/LICENSE.html
--r--r--r--	root/root	usr/lib/openoffice/README
--r--r--r--	root/root	usr/lib/openoffice/README.html
--r--r--r--	root/root	usr/lib/openoffice/THIRDPARTYLICENSEREADME.html
 lrwxrwxrwx	root/root	usr/lib/openoffice/basis-link -> basis3.0
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/help/
@@ -618,7 +615,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/c
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/dircache.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/dis.py
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/README
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/__init__.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/archive_util.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/bcppcompiler.py
@@ -802,7 +798,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/i
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/CREDITS.txt
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/CallTipWindow.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/CallTips.py
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ChangeLog
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ClassBrowser.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ColorDelegator.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/Debugger.py
@@ -823,7 +818,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/i
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/Icons/tk.gif
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/IdleHistory.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/MultiStatusBar.py
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/NEWS.txt
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ObjectBrowser.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/OutputWindow.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ParenMatch.py
@@ -831,7 +825,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/i
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/Percolator.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/PyParse.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/PyShell.py
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/README.txt
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/RemoteDebugger.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/RemoteObjectBrowser.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ReplaceDialog.py
@@ -841,7 +834,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/i
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/SearchDialogBase.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/SearchEngine.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/StackViewer.py
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/TODO.txt
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/ToolTip.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/TreeWidget.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/UndoDelegator.py
@@ -1035,7 +1027,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/p
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/shlex.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/shutil.py
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/site-packages/
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/site-packages/README
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/site.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/smtpd.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/smtplib.py
@@ -1061,7 +1052,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/s
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/tempfile.py
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/185test.db
--r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/README
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/__init__.py
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/audiotest.au
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/autotest.py
@@ -4201,9 +4191,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/program/resource/
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/unopkg
 -r-xr-xr-x	root/root	usr/lib/openoffice/program/unopkg.bin
 -r--r--r--	root/root	usr/lib/openoffice/program/versionrc
-drwxr-xr-x	root/root	usr/lib/openoffice/readmes/
--r--r--r--	root/root	usr/lib/openoffice/readmes/README_en-US
--r--r--r--	root/root	usr/lib/openoffice/readmes/README_en-US.html
 drwxr-xr-x	root/root	usr/lib/openoffice/share/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/config/
 -r--r--r--	root/root	usr/lib/openoffice/share/config/images_brand.zip
@@ -4212,11 +4199,6 @@ drwxr-xr-x	root/root	usr/lib/openoffice/share/extension/install/
 -r--r--r--	root/root	usr/lib/openoffice/share/extension/install/dict-en.oxt
 -r--r--r--	root/root	usr/lib/openoffice/share/extension/install/dict-es.oxt
 -r--r--r--	root/root	usr/lib/openoffice/share/extension/install/dict-fr.oxt
-drwxr-xr-x	root/root	usr/lib/openoffice/share/readme/
--r--r--r--	root/root	usr/lib/openoffice/share/readme/LICENSE_en-US
--r--r--r--	root/root	usr/lib/openoffice/share/readme/LICENSE_en-US.html
--r--r--r--	root/root	usr/lib/openoffice/share/readme/README_en-US
--r--r--r--	root/root	usr/lib/openoffice/share/readme/README_en-US.html
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/data/
 drwxr-xr-x	root/root	usr/lib/openoffice/share/registry/data/org/

@@ -26,6 +26,13 @@ build() {
 	ln -sf /usr/lib/openoffice/program/spadmin $PKG/usr/bin/spadmin
 
 	rm -r $PKG/opt
+    rm $PKG/usr/lib/openoffice/{README,README.html,THIRDPARTYLICENSEREADME.html}
+    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/README
+    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/{ChangeLog,NEWS.txt,README.txt,TODO.txt}
+    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/site-packages/README
+    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/README
+    rm -rf $PKG/usr/lib/openoffice/readmes
+    rm -rf $PKG/usr/lib/openoffice/share/readme
 	chown root.root $PKG -R
 
 }
