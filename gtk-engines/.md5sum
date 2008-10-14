@@ -1,2 +1,3 @@
-ed43f7d24a099fcf85e0bdba641d6dbd  gtk-engines-2.14.3.patch
-be92ddda833defb7296a850331c03d05  gtk-engines-2.14.3.tar.bz2
+a301ca944d8c839298ec45a01a4a30c8  gtk-engines-2.16.0.tar.bz2
+fcac35cf0f82867a357ea2a641cb6219  gtk-engines-intltool.patch
+
