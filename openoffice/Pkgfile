@@ -5,7 +5,7 @@
 # Depends on: mesa3d, xorg-libxaw, xorg-libxcursor, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libxrandr, rpm2targz
 
 name=openoffice
-version=2.4.1
+version=3.0.0
 release=1
 source=(http://openoffice-atl.osuosl.org/stable/$version/OOo_${version}_LinuxIntel_install_en-US.tar.gz)
 
@@ -19,6 +19,8 @@ build() {
 	rm -rf $PKG/usr/*
 	mkdir -p $PKG/usr/lib/openoffice
 	mv $PKG/opt/openoffice*/* $PKG/usr/lib/openoffice
+	cd $PKG/usr/lib/openoffice
+	ln -sf basis3.0 basis-link
 
 	mkdir -p $PKG/usr/bin
 	ln -sf /usr/lib/openoffice/program/soffice $PKG/usr/bin/soffice

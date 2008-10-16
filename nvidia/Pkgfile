@@ -5,14 +5,14 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=173.14.12
-release=2
-source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg1.run \
+version=177.80
+release=1
+source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
 	$name-makefile.patch)
 
 build() {
-	sh NVIDIA-Linux-x86-$version-pkg1.run --extract-only
-	cd NVIDIA-Linux-x86-$version-pkg1
+	sh NVIDIA-Linux-x86-$version-pkg0.run --extract-only
+	cd NVIDIA-Linux-x86-$version-pkg0
 
 	# patch Makefile.kbuild for normal users and no load during build
 	patch -p0 -i $SRC/$name-makefile.patch usr/src/nv/Makefile.kbuild
