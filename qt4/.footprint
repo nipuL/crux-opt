@@ -2480,5 +2480,6 @@ drwxr-xr-x	root/root	usr/share/qt4/mkspecs/linux-g++-64/
 drwxr-xr-x	root/root	usr/share/qt4/mkspecs/linux-g++/
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/linux-g++/qmake.conf
 -rw-r--r--	root/root	usr/share/qt4/mkspecs/linux-g++/qplatformdefs.h
+-rw-r--r--	root/root	usr/share/qt4/mkspecs/qconfig.pri
 lrwxrwxrwx	root/root	usr/share/qt4/plugins -> ../../lib/qt
 -rw-r--r--	root/root	usr/share/qt4/q3porting.xml
