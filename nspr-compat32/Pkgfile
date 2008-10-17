@@ -1,0 +1,45 @@
+# Description: Netscape Portable Runtime library
+# URL:         http://www.mozilla.org/projects/nspr/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: nspr
+
+name=nspr-compat32
+version=4.7.1
+release=2
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.1/src/nspr-$version.tar.gz
+        nspr.pc.in)
+
+build() {
+    local NSPR_LIBS NSPR_CFLAGS NSPR_VERSION
+
+    cd nspr-$version
+
+    i386 ./mozilla/nsprpub/configure \
+        --prefix=/usr \
+        --libdir=/usr/lib32 \
+        --includedir=/usr/include/nspr \
+        --enable-optimize="$CFLAGS" \
+        --disable-debug --enable-64bit
+
+    make
+    make DESTDIR=$PKG install
+
+    NSPR_LIBS=`./config/nspr-config --libs`
+    NSPR_CFLAGS=`./config/nspr-config --cflags`
+    NSPR_VERSION=`./config/nspr-config --version`
+
+    install -d $PKG/usr/lib32/pkgconfig
+
+    sed $SRC/nspr.pc.in \
+        -e "s,@libdir@,/usr/lib32," \
+        -e "s,@prefix@,/usr," \
+        -e "s,@exec_prefix@,/usr/bin," \
+        -e "s,@includedir@,/usr/include/nspr," \
+        -e "s,@NSPR_VERSION@,$NSPR_VERSION," \
+        -e "s,@FULL_NSPR_LIBS@,$NSPR_LIBS," \
+        -e "s,@FULL_NSPR_CFLAGS@,$NSPR_CFLAGS," > \
+        $PKG/usr/lib32/pkgconfig/nspr.pc
+
+    rm -r $PKG/usr/{bin,include,share}
+}
