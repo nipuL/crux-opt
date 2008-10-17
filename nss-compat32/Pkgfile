@@ -1,0 +1,40 @@
+# Description: Mozilla Network Security Services (NSS)
+# URL:         http://www.mozilla.org/projects/security/pki/nss/
+# Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Depends on:  nss nspr-compat32 sqlite3-compat32
+
+name=nss
+version=3.12.0
+release=1
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/src/nss-3.12.tar.gz \
+        nss-config.in)
+
+build() {
+    cd nss-${version%.*}
+
+    local file
+
+    export NSPR_INCLUDE_DIR=/usr/include/nspr
+    export NSPR_LIB_DIR=/usr/lib32
+    export NSS_USE_SYSTEM_SQLITE=1
+    export BUILD_OPT=1
+
+    make -j1 -C mozilla/security/nss build_coreconf build_dbm all
+
+    install -d $PKG/usr/{bin,lib32}
+
+    for file in \
+        libnss3.so libssl3.so libsmime3.so libsoftokn3.so \
+        libsoftokn3.chk libnssckbi.so libfreebl3.so libfreebl3.chk \
+        libcrmf.a libnssb.a libnssckfw.a libnssutil3.so libnssdbm3.so
+    do
+        install -m 0644 mozilla/dist/*.OBJ/lib/$file $PKG/usr/lib32
+    done
+
+    chmod +x $PKG/usr/lib32/*.so
+
+    # we have to provide our own nss-config, because xulrunner needs it
+    install -m 0755 $SRC/nss-config.in $PKG/usr/bin/nss-config32
+    sed -i "s/@VERSION@/$version/" $PKG/usr/bin/nss-config32
+}
