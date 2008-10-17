@@ -6,12 +6,12 @@
 # Depends on: gtk-compat32, alsa-lib-compat32
 
 name=flash-plugin-compat32
-version=9.0.124.0
+version=10.0.12.36
 release=1
-source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_9_linux.tar.gz)
+source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_${version%%.*}_linux.tar.gz)
 
 build() {
     install -D -o root -g root -m 0755 \
-	install_flash_player_9_linux/libflashplayer.so \
+	install_flash_player_${version%%.*}_linux/libflashplayer.so \
 	$PKG/usr/lib32/flash/libflashplayer.so
 }
