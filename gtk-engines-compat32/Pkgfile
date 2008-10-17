@@ -1,0 +1,18 @@
+# Description: Default GTK+ theme engines
+# URL: http://gtk.themes.org/
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: gtk-engines
+
+name=gtk-engines-compat32
+version=2.16.0
+release=1
+source=(http://ftp.acc.umu.se/pub/GNOME/sources/gtk-engines/${version::4}/gtk-engines-$version.tar.bz2)
+
+build() {
+   cd gtk-engines-$version
+   ./configure --prefix=/usr \
+       --libdir=/usr/lib32
+   make
+   make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}
