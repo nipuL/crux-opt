@@ -1,6 +1,8 @@
 drwxr-xr-x	root/root	etc/
 drwxr-xr-x	root/root	etc/gre.d/
 -rwxr-xr-x	root/root	etc/gre.d/1.9.0.4.system.conf
+drwxr-xr-x	root/root	etc/ld.so.conf.d/
+-rw-r--r--	root/root	etc/ld.so.conf.d/xulrunner.conf
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 lrwxrwxrwx	root/root	usr/bin/xulrunner -> /usr/lib/xulrunner-1.9.0.4/xulrunner
