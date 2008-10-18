@@ -2,15 +2,17 @@
 # URL: http://fy.chalmers.se/~appro/linux/DVD+RW/
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
 # Packager: sten, nick dot steeves at shaw dot ca
-# Depends on: cdrtools
+# Depends on: cdrkit
 
 name=dvd+rw-tools
 version=7.1
-release=1
-source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz)
+release=2
+source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz $name.patch)
 
 build() {
     cd $name-$version
+    
+    patch -p1 < $SRC/$name.patch
 
     make
 
