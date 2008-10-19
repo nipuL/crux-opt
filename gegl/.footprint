@@ -6,18 +6,20 @@ drwxr-xr-x	root/root	usr/include/gegl-0.0/
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-buffer.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-chant.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-color.h
--rw-r--r--	root/root	usr/include/gegl-0.0/gegl-config.c
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-curve.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-paramspecs.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-plugin.h
+-rw-r--r--	root/root	usr/include/gegl-0.0/gegl-simd.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl-utils.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/gegl.h
 drwxr-xr-x	root/root	usr/include/gegl-0.0/operation/
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-area-filter.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-composer.h
+-rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-composer3.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-filter.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-meta.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-point-composer.h
+-rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-point-composer3.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-point-filter.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-point-render.h
 -rw-r--r--	root/root	usr/include/gegl-0.0/operation/gegl-operation-sink.h
@@ -82,6 +84,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.0/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/dst.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/exclusion.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/exclusion.so
+-rwxr-xr-x	root/root	usr/lib/gegl-0.0/fill.la
+-rwxr-xr-x	root/root	usr/lib/gegl-0.0/fill.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/fractal-explorer.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/fractal-explorer.so
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/gamma.la
@@ -203,8 +207,8 @@ drwxr-xr-x	root/root	usr/lib/gegl-0.0/
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/xor.la
 -rwxr-xr-x	root/root	usr/lib/gegl-0.0/xor.so
 -rwxr-xr-x	root/root	usr/lib/libgegl-0.0.la
-lrwxrwxrwx	root/root	usr/lib/libgegl-0.0.so -> libgegl-0.0.so.0.18.0
-lrwxrwxrwx	root/root	usr/lib/libgegl-0.0.so.0 -> libgegl-0.0.so.0.18.0
--rwxr-xr-x	root/root	usr/lib/libgegl-0.0.so.0.18.0
+lrwxrwxrwx	root/root	usr/lib/libgegl-0.0.so -> libgegl-0.0.so.0.20.0
+lrwxrwxrwx	root/root	usr/lib/libgegl-0.0.so.0 -> libgegl-0.0.so.0.20.0
+-rwxr-xr-x	root/root	usr/lib/libgegl-0.0.so.0.20.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/gegl.pc

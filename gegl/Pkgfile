@@ -5,8 +5,8 @@
 # Depends on: babl, gtk
 
 name=gegl
-version=0.0.18
-release=2
+version=0.0.20
+release=1
 source=(ftp://ftp.gimp.org/pub/$name/0.0/$name-$version.tar.bz2 \
 	$name-ffmpeg.patch)
 
