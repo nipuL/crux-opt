@@ -5,7 +5,7 @@
 # Depends on: gtk, fortune
 
 name=xlockmore
-version=5.26.1
+version=5.27
 release=1
 source=(ftp://ibiblio.org/pub/Linux/X11/screensavers/$name-$version.tar.bz2)
 
