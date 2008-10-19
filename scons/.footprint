@@ -372,7 +372,7 @@ drwxr-xr-x	root/root	usr/lib/scons-1.1.0/SCons/compat/
 -rw-r--r--	root/root	usr/lib/scons-1.1.0/SCons/dblite.pyc
 -rw-r--r--	root/root	usr/lib/scons-1.1.0/SCons/exitfuncs.py
 -rw-r--r--	root/root	usr/lib/scons-1.1.0/SCons/exitfuncs.pyc
--rw-r--r--	root/root	usr/lib/scons-1.1.0/scons-1.1.0-py2.5.egg-info
+-rw-r--r--	root/root	usr/lib/scons-1.1.0/scons-1.1.0-py2.6.egg-info
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/scons-time.1.gz
