@@ -4,13 +4,16 @@
 # Depends on:
 
 name=nspluginwrapper
-version=0.9.91.5
+version=1.1.2
 release=1
 source=(http://gwenole.beauchesne.info/projects/$name/files/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr
+	./configure --prefix=/usr \
+	    --with-lib32=lib32 \
+	    --enable-viewer \
+	    --enable-player
 	make
 	make DESTDIR=$PKG install
 }
