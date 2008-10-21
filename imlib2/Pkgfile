@@ -6,7 +6,7 @@
 # Depends on: freetype, libid3tag, libpng, libtiff, libungif, xorg-libsm, xorg-libxext
 
 name=imlib2
-version=1.4.1
+version=1.4.2
 release=1
 source=(http://dl.sourceforge.net/sourceforge/enlightenment/$name-$version.tar.bz2)
 
