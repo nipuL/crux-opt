@@ -5,9 +5,9 @@
 # Depends on: qt4
 
 name=opera
-version=9.60
+version=9.61
 release=1
-source=(http://ftp.ntua.gr/pub/www/Opera/linux/960/final/en/i386/opera-$version.gcc4-qt4.i386.tar.bz2)
+source=(http://ftp.ntua.gr/pub/www/Opera/linux/961/final/en/i386/opera-$version.gcc4-qt4.i386.tar.bz2)
 
 build() {
     cd $name-$version-*
@@ -19,4 +19,6 @@ build() {
 
     sed -i -e "s|$PKG||g" $PKG/usr/bin/opera
     rm -rf $PKG/usr/share/doc
+    find  "$PKG/usr/share/opera/locale/" -type d -mindepth 1 -maxdepth 1 -not -name en -exec rm -r {} \;
+
 }
