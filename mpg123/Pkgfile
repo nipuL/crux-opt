@@ -1,0 +1,20 @@
+# Description: Commandline MP3 player 
+# URL:         http://www.mpg123.de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Depends on:  libtool, alsa-lib
+
+name=mpg123
+version=1.5.1
+release=1
+source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-audio=alsa,oss,dummy \
+                --with-default-audio=alsa
+    make
+    make DESTDIR=$PKG install
+}
