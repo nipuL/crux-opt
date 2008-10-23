@@ -4,7 +4,7 @@
 # Depends on: libattr
 
 name=libcap
-version=2.12
+version=2.13
 release=1
 source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.6/libcap-$version.tar.gz
 	$name-$version-makefile.patch)

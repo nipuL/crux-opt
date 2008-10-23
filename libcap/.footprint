@@ -5,8 +5,8 @@ drwxr-xr-x	root/root	usr/include/sys/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libcap.a
 lrwxrwxrwx	root/root	usr/lib/libcap.so -> libcap.so.2
-lrwxrwxrwx	root/root	usr/lib/libcap.so.2 -> libcap.so.2.12
--rw-r--r--	root/root	usr/lib/libcap.so.2.12
+lrwxrwxrwx	root/root	usr/lib/libcap.so.2 -> libcap.so.2.13
+-rw-r--r--	root/root	usr/lib/libcap.so.2.13
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/cap_clear.3.gz
