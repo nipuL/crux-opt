@@ -5,13 +5,12 @@ REQUIREMENTS
 PRE-INSTALL
 
 POST-INSTALL
-1. append /usr/lib/mysql to ld.so.conf and run ldconfig 
-2. run 'mysql_install_db' to build the system database
+1. run 'mysql_install_db' to build the system database
    in /var/lib/mysql
-3. run 'mysql_upgrade' to add new privileges and features 
+2. run 'mysql_upgrade' to add new privileges and features 
    to the MySQL privilege tables if you have 4.x or 3.x 
    databases
-4. Set a password for the mysql root user:
+3. Set a password for the mysql root user:
    mysqladmin -u root password <mysql_root_password>
 
 PRECAUTION
