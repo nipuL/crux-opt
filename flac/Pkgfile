@@ -6,11 +6,16 @@
 
 name=flac
 version=1.2.1
-release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+        $name.diff)
 
 build() {
 	cd $name-$version
+
+	# fix compilation with gcc 4.3
+	patch -Np1 -i $SRC/$name.diff
+
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install
