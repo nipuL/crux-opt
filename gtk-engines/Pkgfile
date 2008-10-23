@@ -1,19 +1,17 @@
 # Description: Standard theme engines for GTK+2
 # URL:         http://live.gnome.org/GnomeArt/Tutorials/GtkEngines
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  gtk
+# Depends on:  gtk intltool
 
 name=gtk-engines
-version=2.16.0
+version=2.16.1
 release=1
-source=(http://ftp.gnome.org/pub/GNOME/sources/$name/2.16/$name-$version.tar.bz2
-        $name-intltool.patch)
+source=(http://ftp.gnome.org/pub/GNOME/sources/$name/2.16/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/$name-intltool.patch
-    autoreconf -f -i
     ./configure --prefix=/usr --enable-animation
     make
     make DESTDIR=$PKG install
+    rm -r $PKG/usr/share/gtk-engines
 }
