@@ -6,7 +6,7 @@
 
 name=samba
 version=3.2.4
-release=1
+release=2
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 
@@ -17,6 +17,7 @@ build () {
 
     ./configure --prefix=/usr \
                 --libdir=/usr/lib/samba \
+                --localstatedir=/var \
                 --with-fhs \
                 --with-configdir=/etc/samba \
                 --with-lockdir=/var/run/samba \
@@ -30,7 +31,10 @@ build () {
 
     install -d $PKG/sbin
     mv $PKG/usr/sbin/*.cifs $PKG/sbin
-    mv $PKG/usr/lib/samba/*.so* $PKG/usr/lib
+    ln -s samba/libsmbclient.so.0 $PKG/usr/lib/libsmbclient.so 
+
+    install -d $PKG/etc/ld.so.conf.d
+    echo "/usr/lib/samba" > $PKG/etc/ld.so.conf.d/samba.conf
 
     # nsswitch extensions
     install -d $PKG/lib
@@ -38,8 +42,8 @@ build () {
     ln -s libnss_wins.so $PKG/lib/libnss_wins.so.2
     ln -s libnss_winbind.so $PKG/lib/libnss_winbind.so.2
 
-    # spool/log directory
-    install -d $PKG/var/log/samba
+    # spool/log/lib directory
+    install -d $PKG/var/{lib,log}/samba
     install -d -m 1777 $PKG/var/spool/samba
 
     # config-file and start-script
@@ -47,5 +51,5 @@ build () {
     install -D -m 755  $SRC/samba $PKG/etc/rc.d/samba
 
     # cleanup
-    rm -r $PKG/usr/{var,man/man8/swat.8}
+    rm -r $PKG/usr/man/man8/swat.8
 }

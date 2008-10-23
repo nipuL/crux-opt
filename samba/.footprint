@@ -1,4 +1,6 @@
 drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/ld.so.conf.d/
+-rw-r--r--	root/root	etc/ld.so.conf.d/samba.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/samba
 drwxr-xr-x	root/root	etc/samba/
@@ -50,18 +52,7 @@ drwxr-xr-x	root/root	usr/include/
 -rw-r--r--	root/root	usr/include/tdb.h
 -rw-r--r--	root/root	usr/include/wbclient.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libnetapi.so -> libnetapi.so.0
--rwxr-xr-x	root/root	usr/lib/libnetapi.so.0
-lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> libsmbclient.so.0
--rwxr-xr-x	root/root	usr/lib/libsmbclient.so.0
-lrwxrwxrwx	root/root	usr/lib/libsmbsharemodes.so -> libsmbsharemodes.so.0
--rwxr-xr-x	root/root	usr/lib/libsmbsharemodes.so.0
-lrwxrwxrwx	root/root	usr/lib/libtalloc.so -> libtalloc.so.1
--rwxr-xr-x	root/root	usr/lib/libtalloc.so.1
-lrwxrwxrwx	root/root	usr/lib/libtdb.so -> libtdb.so.1
--rwxr-xr-x	root/root	usr/lib/libtdb.so.1
-lrwxrwxrwx	root/root	usr/lib/libwbclient.so -> libwbclient.so.0
--rwxr-xr-x	root/root	usr/lib/libwbclient.so.0
+lrwxrwxrwx	root/root	usr/lib/libsmbclient.so -> samba/libsmbclient.so.0
 drwxr-xr-x	root/root	usr/lib/samba/
 drwxr-xr-x	root/root	usr/lib/samba/auth/
 -rwxr-xr-x	root/root	usr/lib/samba/auth/script.so
@@ -69,6 +60,18 @@ drwxr-xr-x	root/root	usr/lib/samba/charset/
 -rwxr-xr-x	root/root	usr/lib/samba/charset/CP437.so
 -rwxr-xr-x	root/root	usr/lib/samba/charset/CP850.so
 drwxr-xr-x	root/root	usr/lib/samba/idmap/
+lrwxrwxrwx	root/root	usr/lib/samba/libnetapi.so -> libnetapi.so.0
+-rwxr-xr-x	root/root	usr/lib/samba/libnetapi.so.0
+lrwxrwxrwx	root/root	usr/lib/samba/libsmbclient.so -> libsmbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/samba/libsmbclient.so.0
+lrwxrwxrwx	root/root	usr/lib/samba/libsmbsharemodes.so -> libsmbsharemodes.so.0
+-rwxr-xr-x	root/root	usr/lib/samba/libsmbsharemodes.so.0
+lrwxrwxrwx	root/root	usr/lib/samba/libtalloc.so -> libtalloc.so.1
+-rwxr-xr-x	root/root	usr/lib/samba/libtalloc.so.1
+lrwxrwxrwx	root/root	usr/lib/samba/libtdb.so -> libtdb.so.1
+-rwxr-xr-x	root/root	usr/lib/samba/libtdb.so.1
+lrwxrwxrwx	root/root	usr/lib/samba/libwbclient.so -> libwbclient.so.0
+-rwxr-xr-x	root/root	usr/lib/samba/libwbclient.so.0
 -rw-r--r--	root/root	usr/lib/samba/lowcase.dat
 drwxr-xr-x	root/root	usr/lib/samba/nss_info/
 drwxr-xr-x	root/root	usr/lib/samba/pdb/
@@ -171,6 +174,8 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/smbd
 -rwxr-xr-x	root/root	usr/sbin/winbindd
 drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/lib/
+drwxr-xr-x	root/root	var/lib/samba/
 drwxr-xr-x	root/root	var/log/
 drwxr-xr-x	root/root	var/log/samba/
 drwxr-xr-x	root/root	var/run/
