@@ -163,6 +163,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/list/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-list-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-list.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-tree.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-uidvalidity.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/aqueue.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/array-decl.h

@@ -4,7 +4,7 @@
 # Depends on:  cups, ncurses, readline
 
 name=gutenprint
-version=5.0.2
+version=5.2.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gimp-print/$name-$version.tar.bz2)
 
@@ -16,14 +16,11 @@ build () {
                 --enable-cups-ppds \
                 --disable-nls \
                 --disable-samples \
-                --disable-libgutenprintui \
                 --disable-libgutenprintui2 \
-                --without-gimp \
-                --without-gimp2
+                --without-gimp2 
     make
     make -j1 DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/gutenprint/{doc,samples}
-    rm -r $PKG/usr/include/{gutenprintui,gutenprintui2}
-    rm -r $PKG/usr/lib/{gimp,gutenprint}
+    rm -r $PKG/usr/share/locale
 }
