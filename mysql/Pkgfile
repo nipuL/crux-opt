@@ -5,7 +5,7 @@
 
 name=mysql
 version=5.0.67
-release=1
+release=2
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
 
@@ -37,4 +37,7 @@ build () {
     install -d -m 700 -o daemon -g daemon $PKG/var/lib/mysql
     install -D -m 755 $SRC/mysqld $PKG/etc/rc.d/mysqld
     install -m 600 $SRC/my.cnf $PKG/etc
+
+    install -d $PKG/etc/ld.so.conf.d
+    echo "/usr/lib/mysql" > $PKG/etc/ld.so.conf.d/mysql.conf
 }
