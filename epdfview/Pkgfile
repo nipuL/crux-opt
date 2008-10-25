@@ -1,16 +1,18 @@
 # Description: a GTK based pdf viewer
 # URL: http://www.emma-soft.com/projects/epdfview
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: poppler
 
 name=epdfview
 version=0.1.6
 release=1
-source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2)
+source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
 	cd $name-$version
+	patch -Np1 -i $SRC/$name.diff
         ./configure --prefix=/usr --disable-nls
         make
         make DESTDIR=$PKG install
