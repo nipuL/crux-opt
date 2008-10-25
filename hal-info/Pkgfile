@@ -6,7 +6,7 @@
 # Depends on: hal
 
 name=hal-info
-version=20080508
+version=20081022
 release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz)
 
