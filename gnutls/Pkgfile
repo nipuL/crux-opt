@@ -6,7 +6,7 @@
 # Depends on: libgcrypt
 
 name=gnutls
-version=2.4.1
+version=2.6.0
 release=1
 source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
 
