@@ -6,10 +6,12 @@
 name=tnftp
 version=20070806
 release=1
-source=(ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/$name-$version.tar.gz)
+source=(ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/$name-$version.tar.gz
+	$name-$version-glibc-2.8.diff)
 
 build() {
 	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-glibc-2.8.diff
 	./configure \
 	    --prefix=$PKG/usr \
 	    --mandir=$PKG/usr/man \
