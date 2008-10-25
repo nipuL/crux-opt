@@ -6,7 +6,7 @@
 # Depends on: t1lib, gtk, ghostscript, pkg-config
 
 name=poppler
-version=0.8.7
+version=0.10.0
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
