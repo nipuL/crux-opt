@@ -7,13 +7,15 @@
 
 name=dvd+rw-tools
 version=7.1
-release=2
-source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz $name.patch)
+release=3
+source=(http://fy.chalmers.se/~appro/linux/DVD+RW/tools/$name-$version.tar.gz \
+	$name.patch $name-gcc43.patch)
 
 build() {
     cd $name-$version
     
     patch -p1 < $SRC/$name.patch
+    patch -p0 < $SRC/$name-gcc43.patch
 
     make
 
