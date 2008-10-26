@@ -5,7 +5,7 @@
 
 name=libmad
 version=0.15.1b
-release=3
+release=4
 source=(http://dl.sourceforge.net/mad/${name}-${version}.tar.gz \
         mad.pc)
 
@@ -14,6 +14,9 @@ build() {
     sed "s/#version#/$version/" mad.pc > $PKG/usr/lib/pkgconfig/mad.pc
 
     cd $name-$version
+
+    # remove -fforce-mem
+    sed -i '19102d' configure
 
     ./configure --prefix=/usr
     make
