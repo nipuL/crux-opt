@@ -1,18 +1,17 @@
 # Description: Probably the most secure and fastest FTP server
 # URL:         http://vsftpd.beasts.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  openssl
+# Depends on:  openssl libcap
 
 name=vsftpd
 version=2.0.7
-release=1
+release=2
 source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
-        $name-config.patch $name-syscall.patch vsftpd)
+        $name-config.patch vsftpd)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-syscall.patch
     patch -p1 -i $SRC/$name-config.patch
 
     make
