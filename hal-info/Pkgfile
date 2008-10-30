@@ -4,8 +4,8 @@
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=hal-info
-version=20080508
-release=2
+version=20081022
+release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz)
 
 build() {
