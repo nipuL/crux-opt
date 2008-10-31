@@ -7,7 +7,7 @@
 # Nice to have: gimp-print
 
 name=gimp
-version=2.6.1
+version=2.6.2
 release=1
 source=(ftp://ftp.gimp.org/pub/gimp/v2.6/gimp-$version.tar.bz2)
 
