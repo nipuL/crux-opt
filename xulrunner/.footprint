@@ -2114,6 +2114,8 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-gtkmozembed-embedding.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-gtkmozembed.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-js.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-nspr.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-nss.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/mozilla-plugin.pc
 drwxr-xr-x	root/root	usr/lib/xulrunner-1.9.0.3/
 -rwxr-xr-x	root/root	usr/lib/xulrunner-1.9.0.3/LICENSE
