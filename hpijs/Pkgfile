@@ -4,7 +4,7 @@
 # Depends on:  ghostscript
 
 name=hpijs
-version=2.8.9
+version=2.8.10
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
