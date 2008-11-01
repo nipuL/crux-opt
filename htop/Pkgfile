@@ -1,0 +1,20 @@
+# Maintainer:   Simone Rota, sip at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Description:  an interactive process viewer
+# URL:          http://htop.sourceforge.net/
+# Depends on:   ncurses
+
+name=htop
+version=0.8.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+   
+    rm -rf $PKG/usr/{include,lib}
+    rm -rf $PKG/usr/share/{applications,pixmaps,}
+}
