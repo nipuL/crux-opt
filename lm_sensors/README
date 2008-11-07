@@ -1,0 +1,32 @@
+
+README for lm_sensors
+
+
+IMPORTANT NOTES
+
+  * The libsensors configuration file (/etc/sensors.conf) is never overwritten
+  by our installation process, so that you won't lose your personal settings
+  in that file. You still can get our latest default config file in 
+  etc/sensors.conf.eg and manually copy it to /etc/sensors.conf if you want.
+  You will then want to edit it to fit your needs again.
+
+  * The format of /etc/sensors.conf changed with lm-sensors >= 3.0.0.
+  If you have a custom configuration file using the old format, you can convert
+  it using the sensors-conf-convert script. Otherwise just overwrite your old
+  configuration file with the new default one.
+
+
+KERNEL CONFIGURATION
+
+  * Enable "I2C support" (CONFIG_I2C=y or m). On many motherboards, the sensor
+  chip is connected to the SMBus, which is supported by I2C in the Linux kernel
+  
+  * Enable "I2C device interface" (CONFIG_I2C_CHARDEV=m). sensors-detect needs
+  this to probe for SMBus hardware monitoring chips.
+  
+  * In I2C Hardware Bus support, enable all drivers you might need, preferably
+  as modules. If you're not sure, select them all.
+  
+  * Enable "Hardware Monitoring support" (CONFIG_HWMON=y or m).
+  
+  * Enable all hardware monitoring drivers you might need, preferably as modules
