@@ -5,12 +5,14 @@
 
 name=eruby
 version=1.0.5
-release=1
-source=(http://modruby.net/archive/$name-$version.tar.gz)
+release=2
+source=(http://modruby.net/archive/$name-$version.tar.gz \
+        $name-$version.patch)
 
 build() {
     cd $name-$version
-    sed -i 's|/-linux/|/linux/|g' configure.rb
+    patch -p0 -i $SRC/$name-$version.patch
+    #sed -i 's|/-linux/|/linux/|g' configure.rb
     ./configure.rb --prefix=/usr --enable-shared
     make
     make DESTDIR=$PKG install
