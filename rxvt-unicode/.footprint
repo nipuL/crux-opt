@@ -13,6 +13,7 @@ drwxr-xr-x	root/root	usr/lib/urxvt/perl/
 -rw-r--r--	root/root	usr/lib/urxvt/perl/macosx-clipboard
 -rw-r--r--	root/root	usr/lib/urxvt/perl/matcher
 -rw-r--r--	root/root	usr/lib/urxvt/perl/option-popup
+-rw-r--r--	root/root	usr/lib/urxvt/perl/overlay-osc
 -rw-r--r--	root/root	usr/lib/urxvt/perl/readline
 -rw-r--r--	root/root	usr/lib/urxvt/perl/remote-clipboard
 -rw-r--r--	root/root	usr/lib/urxvt/perl/searchable-scrollback
