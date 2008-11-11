@@ -5,10 +5,9 @@
 # Depends on:  gtk
 
 name=gtk-engines
-version=2.16.1
+version=2.17.0
 release=1
-source=(http://ftp.gnome.org/pub/GNOME/sources/$name/2.16/$name-$version.tar.bz2
-        $name-intltool.patch)
+source=(http://ftp.gnome.org/pub/GNOME/sources/$name/2.17/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
