@@ -25,12 +25,14 @@ drwxr-xr-x	root/root	usr/share/transmission/web/images/buttons/
 -rw-r--r--	root/root	usr/share/transmission/web/images/buttons/toolbar_buttons.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/buttons/torrent_buttons.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/favicon.ico
+-rw-r--r--	root/root	usr/share/transmission/web/images/favicon.png
 drwxr-xr-x	root/root	usr/share/transmission/web/images/graphics/
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_firefox.gif
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_opera.gif
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_safari.gif
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/chrome.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/filter_bar.png
+-rw-r--r--	root/root	usr/share/transmission/web/images/graphics/filter_icon.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/iphone_chrome.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/logo.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/transfer_arrows.png
@@ -42,8 +44,8 @@ drwxr-xr-x	root/root	usr/share/transmission/web/javascript/
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/common.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/dialog.js
 drwxr-xr-x	root/root	usr/share/transmission/web/javascript/jquery/
--rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery-dimensions.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.contextmenu.min.js
+-rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.dimensions.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.form.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.transmenu.min.js
