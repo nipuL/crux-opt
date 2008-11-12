@@ -1,12 +1,11 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
 # Depends on: xorg, gl-select
 
 name=nvidia
-version=177.80
+version=177.82
 release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-pkg2.run \
 	$name-makefile.patch)
