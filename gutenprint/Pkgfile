@@ -4,7 +4,7 @@
 # Depends on:  cups, ncurses, readline
 
 name=gutenprint
-version=5.2.1
+version=5.2.2
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gimp-print/$name-$version.tar.bz2)
 
