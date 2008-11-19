@@ -4,16 +4,12 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.8
-release=4
-source=(http://download.berlios.de/$name/$name-$version.tar.bz2 
-        $name-SA-2007-02.patch $name-SA-2008-01.patch)
+version=6.3.9
+release=1
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-
-    patch -p0 -i $SRC/$name-SA-2007-02.patch
-    patch -p1 -i $SRC/$name-SA-2008-01.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
