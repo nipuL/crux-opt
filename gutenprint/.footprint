@@ -417,6 +417,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx4400.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx4450.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx4800.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx4850.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx7000f.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx7400.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-dx7450.5.2.ppd.gz
@@ -433,6 +434,9 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-e720.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-em900c.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-em930c.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-ep801a.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-ep901a.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-ep901f.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-ex.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-ex3.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-i.5.2.ppd.gz
@@ -1669,6 +1673,8 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/model/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_92.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_93.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_94.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_95.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_96.xml
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/p1_5.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/picturemate.xml

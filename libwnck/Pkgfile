@@ -2,7 +2,7 @@
 # URL: http://cvs.gnome.org/viewcvs/libwnck/
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: gtk, startup-notification
+# Depends on: gtk, startup-notification, intltool
 
 name=libwnck
 version=2.24.1
