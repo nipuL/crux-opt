@@ -6,7 +6,7 @@
 
 name=pygobject
 version=2.14.2
-release=1
+release=2
 source=(http://ftp.acc.umu.se/pub/GNOME/sources/$name/2.14/$name-$version.tar.bz2)
 
 build() {
