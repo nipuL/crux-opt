@@ -1,8 +1,0 @@
-README for DirectFB 1.0.0
-
-By default, DirectFB is built without support for the
-multi application core. To enable the multi application core,
-you'll have to
-
-* install the linux-fusion port
-* uncomment the line saying '# EXTRA_ARGS="--enable-multi"' in Pkgfile
