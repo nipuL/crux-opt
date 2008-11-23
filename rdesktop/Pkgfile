@@ -1,7 +1,7 @@
 # Description: Open source client for Windows NT Terminal Server
 # URL: http://www.rdesktop.org/
 # Maintainer: Simone Rota, sip at crux dot nu
-# Depends on: openssl, x11
+# Depends on: xorg-libx11
 
 name=rdesktop
 version=1.6.0
