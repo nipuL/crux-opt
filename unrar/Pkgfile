@@ -6,7 +6,7 @@
 # Depends on:
 
 name=unrar
-version=3.8.4
+version=3.8.5
 release=1
 source=(http://www.rarlab.com/rar/${name}src-$version.tar.gz)
 
