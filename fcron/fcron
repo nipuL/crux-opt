@@ -6,8 +6,8 @@
 case $1 in
 start)
 	/usr/sbin/fcron -b
-	if [ ! -f /var/spool/fcron/root ]; then
-	   /usr/bin/fcrontab -u root -z
+	if [ ! -f /var/spool/fcron/systab ]; then
+	   /usr/bin/fcrontab -u systab -z
 	fi
 	;;
 stop)
