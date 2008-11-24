@@ -33,6 +33,10 @@ drwxr-xr-x	root/root	usr/share/a2ps/
 drwxr-xr-x	root/root	usr/share/a2ps/afm/
 -rw-r--r--	root/root	usr/share/a2ps/afm/fonts.map
 -rwxr-xr-x	root/root	usr/share/a2ps/afm/make_fonts_map.sh
+-rw-r--r--	root/root	usr/share/a2ps/afm/pagb.afm
+-rw-r--r--	root/root	usr/share/a2ps/afm/pagbo.afm
+-rw-r--r--	root/root	usr/share/a2ps/afm/pagd.afm
+-rw-r--r--	root/root	usr/share/a2ps/afm/pagdo.afm
 -rw-r--r--	root/root	usr/share/a2ps/afm/pbkd.afm
 -rw-r--r--	root/root	usr/share/a2ps/afm/pbkdi.afm
 -rw-r--r--	root/root	usr/share/a2ps/afm/pbkl.afm
@@ -84,6 +88,7 @@ drwxr-xr-x	root/root	usr/share/a2ps/encoding/
 -rw-r--r--	root/root	usr/share/a2ps/encoding/koi8.edf
 -rw-r--r--	root/root	usr/share/a2ps/encoding/mac.edf
 -rw-r--r--	root/root	usr/share/a2ps/encoding/ms-cp1250.edf
+-rw-r--r--	root/root	usr/share/a2ps/encoding/ms-cp1251.edf
 drwxr-xr-x	root/root	usr/share/a2ps/fonts/
 -rw-r--r--	root/root	usr/share/a2ps/fonts/pcfont.pfa
 drwxr-xr-x	root/root	usr/share/a2ps/ppd/
@@ -97,6 +102,7 @@ drwxr-xr-x	root/root	usr/share/a2ps/ps/
 -rw-r--r--	root/root	usr/share/a2ps/ps/color.hdr
 -rw-r--r--	root/root	usr/share/a2ps/ps/color.pro
 -rw-r--r--	root/root	usr/share/a2ps/ps/diff.pro
+-rw-r--r--	root/root	usr/share/a2ps/ps/diffcolor.pro
 -rw-r--r--	root/root	usr/share/a2ps/ps/ehandler.ps
 -rw-r--r--	root/root	usr/share/a2ps/ps/fixed.pro
 -rw-r--r--	root/root	usr/share/a2ps/ps/gray.pro
@@ -167,6 +173,7 @@ drwxr-xr-x	root/root	usr/share/a2ps/sheets/
 -rw-r--r--	root/root	usr/share/a2ps/sheets/oracle.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/pascal.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/perl.ssh
+-rw-r--r--	root/root	usr/share/a2ps/sheets/php.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/pic16f84.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/plsql.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/pov.ssh
@@ -177,7 +184,10 @@ drwxr-xr-x	root/root	usr/share/a2ps/sheets/
 -rw-r--r--	root/root	usr/share/a2ps/sheets/promela.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/ps.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/python.ssh
+-rw-r--r--	root/root	usr/share/a2ps/sheets/rd.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/rexx.ssh
+-rw-r--r--	root/root	usr/share/a2ps/sheets/ruby.ssh
+-rw-r--r--	root/root	usr/share/a2ps/sheets/s.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/sather.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/scheme.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/sdl88.ssh
@@ -191,6 +201,7 @@ drwxr-xr-x	root/root	usr/share/a2ps/sheets/
 -rw-r--r--	root/root	usr/share/a2ps/sheets/sql.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/sql92.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/ssh.ssh
+-rw-r--r--	root/root	usr/share/a2ps/sheets/st.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/stratego.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/symbols.ssh
 -rw-r--r--	root/root	usr/share/a2ps/sheets/tcl.ssh
