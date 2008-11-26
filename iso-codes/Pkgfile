@@ -2,7 +2,7 @@
 # URL: http://pkg-isocodes.alioth.debian.org/
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: gettext, pyxml
+# Depends on: gettext
 
 name=iso-codes
 version=1.0
