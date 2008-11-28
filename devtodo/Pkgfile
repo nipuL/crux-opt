@@ -7,12 +7,12 @@ name=devtodo
 version=0.1.20
 release=2
 source=(http://swapoff.org/files/$name/$name-$version.tar.gz
-    $name-gcc-include.patch)
+        $name.diff)
 
 build () {
 	cd $name-$version
 
-	patch -p1 -i $SRC/$name-gcc-include.patch
+	patch -Np1 -i $SRC/$name.diff
 
 	./configure --prefix=/usr --mandir=/usr/man
 
