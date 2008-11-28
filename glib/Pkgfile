@@ -5,8 +5,8 @@
 # Depends on: libpcre
 
 name=glib
-version=2.18.1
-release=2
+version=2.18.3
+release=1
 source=(http://download.gnome.org/sources/$name/2.18/$name-$version.tar.bz2)
 
 build () {
