@@ -1,0 +1,11 @@
+diff -aur devtodo-0.1.20.orig/src/todoterm.cc devtodo-0.1.20/src/todoterm.cc
+--- devtodo-0.1.20.orig/src/todoterm.cc	2007-06-28 15:04:36.000000000 +0200
++++ devtodo-0.1.20/src/todoterm.cc	2008-06-20 22:57:21.683864560 +0200
+@@ -7,6 +7,7 @@
+ #include <stdexcept>
+ #include <curses.h>
+ #include <term.h>
++#include <stdlib.h>
+ 
+ static char info[2048];
+ static bool term_initialized;

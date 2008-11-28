@@ -4,11 +4,14 @@
 
 name=devtodo
 version=0.1.20
-release=1
-source=(http://swapoff.org/files/$name/$name-$version.tar.gz)
+release=2
+source=(http://swapoff.org/files/$name/$name-$version.tar.gz
+        $name.diff)
 
 build () {
 	cd $name-$version
+
+	patch -Np1 -i $SRC/$name.diff
 
 	./configure --prefix=/usr --mandir=/usr/man
 
