@@ -28,7 +28,6 @@ lrwxrwxrwx	root/root	usr/bin/wineg++ -> winegcc
 -rwxr-xr-x	root/root	usr/bin/winepath
 -rwxr-xr-x	root/root	usr/bin/wineprefixcreate
 -rwxr-xr-x	root/root	usr/bin/wineserver
--rwxr-xr-x	root/root	usr/bin/wineshelllink
 -rwxr-xr-x	root/root	usr/bin/wmc
 -rwxr-xr-x	root/root	usr/bin/wrc
 drwxr-xr-x	root/root	usr/include/
@@ -117,6 +116,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.h
 -rw-r--r--	root/root	usr/include/wine/windows/comcat.idl
 -rw-r--r--	root/root	usr/include/wine/windows/commctrl.h
+-rw-r--r--	root/root	usr/include/wine/windows/commctrl.rh
 -rw-r--r--	root/root	usr/include/wine/windows/commdlg.h
 -rw-r--r--	root/root	usr/include/wine/windows/compobj.h
 -rw-r--r--	root/root	usr/include/wine/windows/control.h
@@ -132,6 +132,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/
 -rw-r--r--	root/root	usr/include/wine/windows/d3d.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d10.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d10.idl
+-rw-r--r--	root/root	usr/include/wine/windows/d3d10misc.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8caps.h
 -rw-r--r--	root/root	usr/include/wine/windows/d3d8types.h
@@ -174,6 +175,10 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/ntddk.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/ntddser.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/ntddtape.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/usb.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/usb100.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/usb200.h
+-rw-r--r--	root/root	usr/include/wine/windows/ddk/usbdlib.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/wdm.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/winddiui.h
 -rw-r--r--	root/root	usr/include/wine/windows/ddk/winsplp.h
@@ -447,6 +452,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/servprov.idl
 -rw-r--r--	root/root	usr/include/wine/windows/setupapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/sfc.h
+-rw-r--r--	root/root	usr/include/wine/windows/shdispid.h
 -rw-r--r--	root/root	usr/include/wine/windows/shellapi.h
 -rw-r--r--	root/root	usr/include/wine/windows/shldisp.h
 -rw-r--r--	root/root	usr/include/wine/windows/shldisp.idl
@@ -532,6 +538,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/winternl.h
 -rw-r--r--	root/root	usr/include/wine/windows/wintrust.h
 -rw-r--r--	root/root	usr/include/wine/windows/winuser.h
+-rw-r--r--	root/root	usr/include/wine/windows/winuser.rh
 -rw-r--r--	root/root	usr/include/wine/windows/winver.h
 -rw-r--r--	root/root	usr/include/wine/windows/wmistr.h
 -rw-r--r--	root/root	usr/include/wine/windows/wnaspi32.h
@@ -545,6 +552,7 @@ drwxr-xr-x	root/root	usr/include/wine/windows/ddk/
 -rw-r--r--	root/root	usr/include/wine/windows/wtypes.h
 -rw-r--r--	root/root	usr/include/wine/windows/wtypes.idl
 -rw-r--r--	root/root	usr/include/wine/windows/xcmc.h
+-rw-r--r--	root/root	usr/include/wine/windows/xinput.h
 -rw-r--r--	root/root	usr/include/wine/windows/xmldom.h
 -rw-r--r--	root/root	usr/include/wine/windows/xmldom.idl
 -rw-r--r--	root/root	usr/include/wine/windows/xmldomdid.h
