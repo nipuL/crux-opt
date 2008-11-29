@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=wpa_supplicant
-version=0.5.10
+version=0.5.11
 release=1
 source=(http://hostap.epitest.fi/releases/$name-$version.tar.gz)
 
