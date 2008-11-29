@@ -6,11 +6,13 @@
 
 name=dosbox
 version=0.72
-release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+        $name.diff)
 
 build() {
 	cd $name-$version
+	patch -Np1 -i $SRC/$name.diff
 	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
