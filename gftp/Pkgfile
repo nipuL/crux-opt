@@ -4,14 +4,15 @@
 # Depends on:  gtk, openssl, readline
 
 name=gftp
-version=2.0.18
+version=2.0.19
 release=1
 source=(http://gftp.seul.org/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr --disable-nls
+    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
     make
     make DESTDIR=$PKG install
+    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
     rm $PKG/usr/share/gftp/COPYING
 }
