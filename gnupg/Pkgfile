@@ -6,11 +6,14 @@
 
 name=gnupg
 version=2.0.9
-release=1
-source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
+release=2
+source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2
+        $name.diff)
 
 build () {
     cd $name-$version
+
+    patch -Np1 -i $SRC/$name.diff
 
     ./configure \
 	--prefix=/usr \
