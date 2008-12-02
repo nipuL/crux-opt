@@ -19,8 +19,13 @@ drwxr-xr-x	root/root	usr/share/gftp/
 -rw-r--r--	root/root	usr/share/gftp/dotdot.xpm
 -rw-r--r--	root/root	usr/share/gftp/down.xpm
 -rw-r--r--	root/root	usr/share/gftp/exe.xpm
+-rw-r--r--	root/root	usr/share/gftp/gftp-16x16.png
+-rw-r--r--	root/root	usr/share/gftp/gftp-22x22.png
+-rw-r--r--	root/root	usr/share/gftp/gftp-24x24.png
+-rw-r--r--	root/root	usr/share/gftp/gftp-32x32.png
+-rw-r--r--	root/root	usr/share/gftp/gftp-48x48.png
 -rw-r--r--	root/root	usr/share/gftp/gftp-logo.xpm
--rw-r--r--	root/root	usr/share/gftp/gftp-mini-logo.xpm
+-rw-r--r--	root/root	usr/share/gftp/gftp-scalable.svg
 -rw-r--r--	root/root	usr/share/gftp/gftp.xpm
 -rw-r--r--	root/root	usr/share/gftp/gftprc
 -rw-r--r--	root/root	usr/share/gftp/img.xpm
