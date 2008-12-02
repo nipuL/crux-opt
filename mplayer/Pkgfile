@@ -11,14 +11,17 @@
 # http://www.mplayerhq.hu/DOCS/HTML/en/index.html
 
 name=mplayer
-version=1.0_rc2_p27458
-release=3
+version=1.0_rc2_p28058
+release=1
 source=(http://distfiles.gentoo.org/distfiles/$name-$version.tar.bz2
-	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 \
+	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+	$name-x264.patch
 	mplayer.conf)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/$name-x264.patch
 
 	# Keep in line with mplayer CFLAGS, but allow people to set their own march/mtune values.
 	export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
@@ -43,5 +46,6 @@ build() {
 	cp etc/input.conf $PKG/usr/etc/mplayer/
 
 	# finish up
+	rmdir $PKG/usr/lib
 	chown -R root:root $PKG
 }
