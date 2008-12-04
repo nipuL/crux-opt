@@ -4,7 +4,7 @@
 # Depends on:  ruby
 
 name=ruby-doc
-version=1.8.6
+version=1.8.7-p72
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-$version.tar.bz2)
 
