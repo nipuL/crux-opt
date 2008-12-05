@@ -102,6 +102,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/hash/
 drwxr-xr-x	root/root	usr/include/php/ext/iconv/
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_bsd_iconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_glibc_iconv.h
+-rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_ibm_iconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_iconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_have_libiconv.h
 -rw-r--r--	root/root	usr/include/php/ext/iconv/php_iconv.h
@@ -117,7 +118,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/pcre/pcrelib/
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_internal.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcreposix.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucp.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucpinternal.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucptable.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/php_pcre.h
 drwxr-xr-x	root/root	usr/include/php/ext/pdo/
@@ -206,11 +206,8 @@ drwxr-xr-x	root/root	usr/include/php/ext/xml/
 -rw-r--r--	root/root	usr/include/php/ext/xml/php_xml.h
 drwxr-xr-x	root/root	usr/include/php/ext/zip/
 drwxr-xr-x	root/root	usr/include/php/ext/zip/lib/
-drwxr-xr-x	root/root	usr/include/php/ext/zip/lib/lib/
 -rw-r--r--	root/root	usr/include/php/ext/zip/lib/zip.h
--rw-r--r--	root/root	usr/include/php/ext/zip/lib/zip_alias.h
 -rw-r--r--	root/root	usr/include/php/ext/zip/lib/zipint.h
--rw-r--r--	root/root	usr/include/php/ext/zip/lib/zipint_alias.h
 drwxr-xr-x	root/root	usr/include/php/include/
 drwxr-xr-x	root/root	usr/include/php/main/
 -rw-r--r--	root/root	usr/include/php/main/SAPI.h
