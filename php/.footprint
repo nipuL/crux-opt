@@ -112,13 +112,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/iconv/
 drwxr-xr-x	root/root	usr/include/php/ext/libxml/
 -rw-r--r--	root/root	usr/include/php/ext/libxml/php_libxml.h
 drwxr-xr-x	root/root	usr/include/php/ext/pcre/
-drwxr-xr-x	root/root	usr/include/php/ext/pcre/pcrelib/
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/config.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcre_internal.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/pcreposix.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucp.h
--rw-r--r--	root/root	usr/include/php/ext/pcre/pcrelib/ucptable.h
 -rw-r--r--	root/root	usr/include/php/ext/pcre/php_pcre.h
 drwxr-xr-x	root/root	usr/include/php/ext/pdo/
 -rw-r--r--	root/root	usr/include/php/ext/pdo/php_pdo.h
