@@ -5,14 +5,15 @@
 # Depends on:  ncurses, gdbm
 
 name=ocaml
-version=3.10.2
+version=3.11.0
 release=1
-source=(http://caml.inria.fr/pub/distrib/$name-3.10/$name-$version.tar.bz2)
+source=(http://caml.inria.fr/pub/distrib/$name-3.11/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
     ./configure -prefix /usr -with-pthread --no-tk 
-    make -j1 world opt
+    make -j1 world.opt
     make PREFIX=$PKG/usr install
-    rm -r $PKG/usr/man/man3
+    local f
+    for f in $PKG/usr/bin/*.opt; do mv $f ${f%%.opt}; done
 }
