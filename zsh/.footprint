@@ -446,9 +446,6 @@ drwxr-xr-x	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_ping
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pkg-config
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pkg_instance
--rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pkgadd
--rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pkginfo
--rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pkgrm
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_pon
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_ports
 -rw-r--r--	root/root	usr/share/zsh/4.3.9/functions/Completion/Unix/_postfix
