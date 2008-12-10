@@ -6,7 +6,7 @@
 
 name=p5-html-parser
 version=3.56
-release=1
+release=2
 source=(http://www.cpan.org/authors/id/G/GA/GAAS/HTML-Parser-$version.tar.gz)
 
 build() {
