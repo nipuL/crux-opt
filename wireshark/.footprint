@@ -106,6 +106,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/
 drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/Ericsson.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPGmb.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPRx.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/TGPPSh.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/chargecontrol.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.dtd
@@ -160,6 +161,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/radius/
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.alteon
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.altiga
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.aptis
+-rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.aruba
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.ascend
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.bay
 -rw-r--r--	root/root	usr/share/wireshark/radius/dictionary.bintec
