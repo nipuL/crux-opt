@@ -2,7 +2,7 @@
 # URL: http://www.zsh.org/
 # Packager: Christian Schneider, strcat at gmx dot net
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
-# Nice to have: libpcre
+# Depends on: libpcre
 
 name=zsh
 version=4.3.9
