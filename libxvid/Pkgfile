@@ -6,15 +6,15 @@
 # Nice to have: yasm
 
 name=libxvid
-version=1.1.3
-release=2
-source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2
-$name-$version-nasm-compat.patch)
+version=1.2.1
+release=1
+source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
+#$name-$version-nasm-compat.patch)
 
 build() {
 	mkdir -p $PKG/usr/{include,lib}
-	cd xvidcore-$version/
-	patch -p0 -i $SRC/$name-$version-nasm-compat.patch
+	cd xvidcore
+#	patch -p0 -i $SRC/$name-$version-nasm-compat.patch
 	cd build/generic/
 	autoconf
 	./configure --prefix=/usr
