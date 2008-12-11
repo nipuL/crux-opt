@@ -2,8 +2,7 @@
 # URL: http://www.wireshark.org
 # Packager: Martin Opel, mo at obbl-net dot de
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: gtk libpcap
-# Nice to have: libpcre
+# Depends on: gtk libpcap libpcre
 
 name=wireshark
 version=1.0.5
