@@ -6,7 +6,7 @@
 
 name=dbus-glib
 version=0.78
-release=1
+release=2
 source=(http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
@@ -17,5 +17,5 @@ build() {
 		--with-xml=expat
 	make
 	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share
+	rm -rf $PKG/usr/{etc,libexec,share}
 }
