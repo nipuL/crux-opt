@@ -93,6 +93,8 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/recycle.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/shadow_copy.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/shadow_copy2.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/smb_traffic_analyzer.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/streams_depot.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/streams_xattr.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/syncops.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/xattr_tdb.so
@@ -165,6 +167,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_readonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_recycle.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_smb_traffic_analyzer.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_depot.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_xattr.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_xattr_tdb.8.gz
