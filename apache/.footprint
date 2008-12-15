@@ -67,6 +67,7 @@ drwxr-xr-x	root/root	usr/include/apache/
 -rw-r--r--	root/root	usr/include/apache/mod_include.h
 -rw-r--r--	root/root	usr/include/apache/mod_log_config.h
 -rw-r--r--	root/root	usr/include/apache/mod_proxy.h
+-rw-r--r--	root/root	usr/include/apache/mod_rewrite.h
 -rw-r--r--	root/root	usr/include/apache/mod_ssl.h
 -rw-r--r--	root/root	usr/include/apache/mod_status.h
 -rw-r--r--	root/root	usr/include/apache/mpm.h
