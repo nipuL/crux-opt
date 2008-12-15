@@ -1,0 +1,37 @@
+# Description: Text-based email client that sucks less
+# URL:         http://www.mutt.org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  gdbm ncurses openssl zlib
+
+name=mutt
+version=1.5.18
+release=1
+source=(ftp://ftp.mutt.org/mutt/devel/$name-$version.tar.gz \
+        http://jue.li/crux/files/$name-$version-manual.txt.gz)
+
+build () {
+    cd $name-$version
+
+    gunzip -c $SRC/$name-$version-manual.txt.gz > doc/manual.txt
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-docdir=/usr/share/mutt \
+                --with-mailpath=/var/spool/mail \
+                --enable-pop \
+                --enable-imap \
+                --with-ssl \
+                --enable-hcache \
+                --disable-nls \
+                # --enable-smtp --with-sasl 
+
+    make
+    make DESTDIR=$PKG install
+
+    find $PKG/usr/share/mutt/* ! -name manual.txt -delete
+    rm $PKG/usr/etc/{Muttrc,mime.types}.dist 
+    rm $PKG/usr/bin/{flea,muttbug}
+    rm $PKG/usr/man/man1/{flea.1,muttbug.1,mutt_dotlock.1}
+    rm $PKG/usr/man/man5/{mmdf.5,mbox.5}
+}
