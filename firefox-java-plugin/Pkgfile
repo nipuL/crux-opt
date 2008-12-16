@@ -7,7 +7,7 @@
 
 name=firefox-java-plugin
 version=1.6.0
-release=1
+release=2
 source=()
 
 build(){
@@ -15,7 +15,7 @@ build(){
     # jre
     /usr/lib/java/plugin/i386/ns7/libjavaplugin_oji.so \
     # jdk
-    /usr/lib/java/jre/plugin/i386/ns7/libjavaplugin_oji.so
+    /usr/lib/java/jre/lib/amd64/libnpjp2.so
     )
   
   for p in ${plugins[@]}; do
