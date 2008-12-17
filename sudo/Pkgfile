@@ -5,16 +5,16 @@
 # Depends on:
 
 name=sudo
-version=1.6.9p18
+version=1.6.9p19
 release=1
 source=(http://www.sudo.ws/$name/dist/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
     ./configure --mandir=/usr/man --prefix=/usr --libexecdir=/usr/lib --without-pam
-    make
-    install -d $PKG/{etc,usr/{bin,sbin,lib}}
-    make DESTDIR=$PKG install
+    make -j1
+    install -d $PKG/{etc,usr/{bin,sbin}}
+    make -j1 DESTDIR=$PKG install
     ln -sf sudo $PKG/usr/bin/sudoedit
     ln -sf sudo.8.gz $PKG/usr/man/man8/sudoedit.8
     rm -rf $PKG/usr/info
