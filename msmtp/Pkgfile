@@ -1,0 +1,22 @@
+# Description: An SMTP client suitable for use with mutt etc.
+# URL:         http://msmtp.sourceforge.net/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
+# Depends on:  openssl
+
+name=msmtp
+version=1.4.16
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-ssl=openssl \
+                --disable-nls
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}
