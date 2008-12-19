@@ -4,16 +4,13 @@
 # Depends on:  gtk, openssl
 
 name=sylpheed
-version=2.5.0
-release=2
-source=(http://sylpheed.sraoss.jp/sylpheed/v2.5/$name-$version.tar.bz2
-        $name-$version-gtk-2.14.patch)
+version=2.6.0
+release=1
+source=(http://sylpheed.sraoss.jp/sylpheed/v2.6/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-$version-gtk-2.14.patch
-    
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
