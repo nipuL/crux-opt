@@ -12,5 +12,5 @@ build() {
     cd $name-$version
     sed -i -e 's|share/man/man1|man/man1|' setup.py
     python setup.py install --root=$PKG --prefix=/usr
-    rm -r $PKG/usr/lib/python2.5/site-packages/iotop-*-py2.5.egg-info/
+    rm -r $PKG/usr/lib/python*/site-packages/iotop-*.egg-info/
 }
