@@ -1054,6 +1054,7 @@ drwxr-xr-x	root/root	usr/lib/firefox/components/
 -rw-r--r--	root/root	usr/lib/firefox/components/FeedConverter.js
 -rw-r--r--	root/root	usr/lib/firefox/components/FeedWriter.js
 -rw-r--r--	root/root	usr/lib/firefox/components/WebContentConverter.js
+-rw-r--r--	root/root	usr/lib/firefox/components/aboutRights.js
 -rw-r--r--	root/root	usr/lib/firefox/components/aboutRobots.js
 -rw-r--r--	root/root	usr/lib/firefox/components/browser-feeds.xpt
 -rw-r--r--	root/root	usr/lib/firefox/components/browsercompsbase.xpt
