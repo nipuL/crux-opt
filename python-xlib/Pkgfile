@@ -12,5 +12,5 @@ source=(http://dl.sourceforge.net/sourceforge/python-xlib/python-xlib-$version.t
 build() {
     cd python-xlib-$version
     python setup.py install --root=$PKG --prefix=/usr
-    rm $PKG/usr/lib/python2.5/site-packages/python_xlib-*-py2.5.egg-info
+    rm $PKG/usr/lib/python*/site-packages/python_xlib-*.egg-info
 }
