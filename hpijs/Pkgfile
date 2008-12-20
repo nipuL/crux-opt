@@ -4,7 +4,7 @@
 # Depends on:  ghostscript
 
 name=hpijs
-version=2.8.10
+version=2.8.12
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
@@ -20,4 +20,5 @@ build () {
     make DESTDIR=$PKG install
 
     rm -r $PKG/usr/share/{hplip,doc}
+    rm $PKG/usr/share/cups/model/HP/*.ppd
 }
