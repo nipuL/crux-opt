@@ -1,0 +1,55 @@
+diff -aur libmusicbrainz-2.1.5.orig/lib/c_wrapper.cpp libmusicbrainz-2.1.5/lib/c_wrapper.cpp
+--- libmusicbrainz-2.1.5.orig/lib/c_wrapper.cpp	2006-11-14 17:34:49.000000000 +0100
++++ libmusicbrainz-2.1.5/lib/c_wrapper.cpp	2008-12-20 12:07:34.688177560 +0100
+@@ -24,6 +24,7 @@
+ #include "musicbrainz.h"
+ #include "trm.h"
+ #include "mb_c.h"
++#include <cstring>
+ 
+ extern "C"
+ {
+diff -aur libmusicbrainz-2.1.5.orig/lib/comhttpsocket.cpp libmusicbrainz-2.1.5/lib/comhttpsocket.cpp
+--- libmusicbrainz-2.1.5.orig/lib/comhttpsocket.cpp	2006-11-14 17:34:49.000000000 +0100
++++ libmusicbrainz-2.1.5/lib/comhttpsocket.cpp	2008-12-20 12:07:54.383178200 +0100
+@@ -20,6 +20,7 @@
+ #endif
+ #include <stdlib.h>
+ #include <assert.h>
++#include <cstring>
+ 
+ const char* g_strCOMVer = "libmusicbrainz/"VERSION;
+ 
+diff -aur libmusicbrainz-2.1.5.orig/lib/comsocket.cpp libmusicbrainz-2.1.5/lib/comsocket.cpp
+--- libmusicbrainz-2.1.5.orig/lib/comsocket.cpp	2006-11-14 17:34:49.000000000 +0100
++++ libmusicbrainz-2.1.5/lib/comsocket.cpp	2008-12-20 12:07:04.275176680 +0100
+@@ -37,6 +37,7 @@
+ #include <netinet/tcp.h>
+ #include <errno.h>
+ #include <stdio.h>
++#include <cstring>
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+diff -aur libmusicbrainz-2.1.5.orig/lib/http.cpp libmusicbrainz-2.1.5/lib/http.cpp
+--- libmusicbrainz-2.1.5.orig/lib/http.cpp	2007-05-11 08:21:21.000000000 +0200
++++ libmusicbrainz-2.1.5/lib/http.cpp	2008-12-20 12:09:34.249178880 +0100
+@@ -24,6 +24,7 @@
+ ----------------------------------------------------------------------------*/
+ #include <stdlib.h>
+ #include <stdio.h> 
++#include <cstring>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <ctype.h>
+diff -aur libmusicbrainz-2.1.5.orig/lib/sigclient.cpp libmusicbrainz-2.1.5/lib/sigclient.cpp
+--- libmusicbrainz-2.1.5.orig/lib/sigclient.cpp	2006-11-14 17:34:49.000000000 +0100
++++ libmusicbrainz-2.1.5/lib/sigclient.cpp	2008-12-20 12:10:34.340178600 +0100
+@@ -33,6 +33,7 @@
+ #pragma warning(disable:4786)
+ #endif
+ 
++#include <cstring>
+ #include "sigclient.h"
+ #include "comhttpsocket.h"
+ 

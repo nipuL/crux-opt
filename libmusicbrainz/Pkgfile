@@ -5,11 +5,13 @@
 
 name=libmusicbrainz
 version=2.1.5
-release=1
-source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz)
+release=2
+source=(http://ftp.musicbrainz.org/pub/musicbrainz/$name-$version.tar.gz
+        $name.diff)
 
 build() {
     cd $name-$version
+    patch -Np1 -i $SRC/$name.diff
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
