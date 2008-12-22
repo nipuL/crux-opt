@@ -146,8 +146,6 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mysqlhotcopy.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlimport.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlman.1.gz
--rw-r--r--	root/root	usr/man/man1/mysqlmanager-pwgen.1.gz
--rw-r--r--	root/root	usr/man/man1/mysqlmanagerc.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlshow.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqltest.1.gz
 -rw-r--r--	root/root	usr/man/man1/perror.1.gz

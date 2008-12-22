@@ -5,8 +5,8 @@
 # Depends on:  ncurses readline zlib
 
 name=mysql
-version=5.0.67
-release=2
+version=5.0.75
+release=1
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
 
@@ -23,7 +23,7 @@ build () {
                 --without-readline \
                 --without-debug \
                 --without-docs \
-                --without-bench 
+                --without-bench
     make
     make DESTDIR=$PKG install
 
