@@ -5,14 +5,18 @@
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap
-version=2.3.43
+version=2.4.13
 release=1
 source=(ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/$name-$version.tgz \
 	$name-config.patch slurpd slapd)
 
-build(){
+build() {
 	cd $name-$version
 	patch -p0 -i $SRC/$name-config.patch
+
+	# Workaround for: (ITS#5464) ucred guarded by __USE_GNU in glibc 2.8
+	# http://www.openldap.org/lists/openldap-bugs/200804/msg00074.html
+	export CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE"
 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
@@ -54,7 +58,7 @@ build(){
 	sed -i -e "s|-L${PKG}/usr/lib||g" $PKG/usr/lib/*.la
 	/sbin/ldconfig -n $PKG/usr/lib
 
-# compatiblity links
+	# compatiblity links
 	(cd $PKG/usr/lib; 
 	 ln -s liblber.so liblber.so.2;
 	 ln -s libldap.so libldap.so.2;
