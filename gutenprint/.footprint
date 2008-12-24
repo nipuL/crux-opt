@@ -98,6 +98,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP160.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP170.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP180.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP220.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP500.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP520.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-MULTIPASS-MP610.5.2.ppd.gz
@@ -119,6 +120,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP4200.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP4300.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP4500.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP4600.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP5000.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP5200.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-bjc-PIXMA-iP5300.5.2.ppd.gz
@@ -447,6 +449,8 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-mc5000.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-mc7000.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-mc9000.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-me300.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-meof360.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-meof70.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-meof700fw.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-meof80w.5.2.ppd.gz
@@ -455,6 +459,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-mj8000c.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-mj930c.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-nx100.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-nx105.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-nx200.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-nx300.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-nx400.5.2.ppd.gz
@@ -523,6 +528,7 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pma820.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pma890.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pma900.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pma940.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pma950.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmd1000.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmd600.5.2.ppd.gz
@@ -537,10 +543,12 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmg800.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmg820.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmg850.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pmt960.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pro-xl.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-pro.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px101.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px201.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px401a.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px5500.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px601f.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-px7000.5.2.ppd.gz
@@ -613,6 +621,13 @@ drwxr-xr-x	root/root	usr/share/cups/model/gutenprint/5.2/C/
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-sx405.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-t20.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx100.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx101.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx102.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx103.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx104.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx105.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx106.5.2.ppd.gz
+-rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx109.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx200.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx400.5.2.ppd.gz
 -rw-r--r--	root/root	usr/share/cups/model/gutenprint/5.2/C/stp-escp2-tx700w.5.2.ppd.gz
@@ -1489,6 +1504,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/dither-matrix-4x1.xml
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/artisan.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/b500.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/c120.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/c64.xml
@@ -1527,6 +1543,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/wf500.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inks/x80.xml
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/artisan.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/b500.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/cd_cutter_roll_feed.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/cd_roll_feed.xml
@@ -1535,6 +1552,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/pro_roll_feed.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/r1800.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/r2400.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/rx680.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/rx700.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/spro5000.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/inputslots/standard_roll_feed.xml
@@ -1555,6 +1573,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/media/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/f360_photo7_japan.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/f360_ultrachrome.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/f360_ultrachrome_k3.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/nx100.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/photo_gen0.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/photo_gen1.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/media/photo_gen2.xml
@@ -1675,6 +1694,7 @@ drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/model/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_94.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_95.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_96.xml
+-rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/model/model_97.xml
 drwxr-xr-x	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/p1_5.xml
 -rw-r--r--	root/root	usr/share/gutenprint/5.2/xml/escp2/qualitypresets/picturemate.xml
