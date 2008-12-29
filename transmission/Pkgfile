@@ -4,7 +4,7 @@
 # Depends on:  openssl curl intltool gtk
 
 name=transmission
-version=1.40
+version=1.42
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
 
