@@ -23,7 +23,7 @@ diff -Nru wvdial-1.60.orig/Makefile wvdial-1.60/Makefile
 - $(error WvStreams does not appear to be installed)
 -endif
 -LIBS+=$(PC_LIBS)
-+LIBS =  $(WVS)/libuniconf.a $(WVS)/libwvstreams.a $(WVS)/libwvutils.a $(WVS)/libwvbase.a $(WVS)/xplc/libxplc-cxx.a -lcrypto -lssl
++LIBS = $(WVS)/libwvstatic.a -lstdc++ -lcrypto -lssl
  
  BINDIR=${prefix}/bin
 -MANDIR=${prefix}/share/man
