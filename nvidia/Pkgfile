@@ -8,7 +8,7 @@ name=nvidia
 version=177.82
 release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version-pkg2.run \
-	$name-makefile.patch)
+        $name-makefile.patch $name-2.6.28.patch)
 
 build() {
     sh NVIDIA-Linux-x86_64-$version-pkg2.run --extract-only
@@ -16,6 +16,7 @@ build() {
 
 	# patch Makefile.kbuild for normal users and no load during build
 	patch -p0 -i $SRC/$name-makefile.patch usr/src/nv/Makefile.kbuild
+	patch -p0 -i $SRC/$name-2.6.28.patch
 
 	# create directories the Makefile expects
 	mkdir -p $PKG/usr/lib \
@@ -27,12 +28,12 @@ build() {
 	cp -a usr/X11R6/lib/* $PKG/usr/lib/xorg/
 	cp -a usr/lib/* $PKG/usr/lib/
 	sed -i -e 's|__LIBGL_PATH__|/usr/lib|' $PKG/usr/lib/libGL.la
-    ln -sf libGLcore.so.$version $PKG/usr/lib/libGLcore.so
-    ln -sf /usr/lib/libGLcore.so $PKG/usr/lib/xorg/modules/extensions/libGLcore.so
-
-       # additional symlinks required by gl-select
-       ln -s libGL.so.$version $PKG/usr/lib/libGL_so_1_2_nvidia
-    ln -s libglx.so.$version $PKG/usr/lib/xorg/modules/extensions/libglx_so_nvidia 
+	ln -sf libGLcore.so.$version $PKG/usr/lib/libGLcore.so
+	ln -sf /usr/lib/libGLcore.so $PKG/usr/lib/xorg/modules/extensions/libGLcore.so
+	
+	# additional symlinks required by gl-select
+	ln -s libGL.so.$version $PKG/usr/lib/libGL_so_1_2_nvidia
+	ln -s libglx.so.$version $PKG/usr/lib/xorg/modules/extensions/libglx_so_nvidia
 
 	# copy includes
 	mkdir -p $PKG/usr/include/nvidia
