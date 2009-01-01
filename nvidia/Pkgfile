@@ -6,9 +6,9 @@
 
 name=nvidia
 version=177.82
-release=1
+release=2
 source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
-	$name-makefile.patch)
+        $name-makefile.patch $name-2.6.28.patch)
 
 build() {
 	sh NVIDIA-Linux-x86-$version-pkg0.run --extract-only
@@ -16,6 +16,7 @@ build() {
 
 	# patch Makefile.kbuild for normal users and no load during build
 	patch -p0 -i $SRC/$name-makefile.patch usr/src/nv/Makefile.kbuild
+	patch -p0 -i $SRC/$name-2.6.28.patch
 
 	# create directories the Makefile expects
 	mkdir -p $PKG/usr/lib \
@@ -32,7 +33,7 @@ build() {
 	
 	# additional symlinks required by gl-select
 	ln -s libGL.so.$version $PKG/usr/lib/libGL_so_1_2_nvidia
-    ln -s libglx.so.$version $PKG/usr/lib/xorg/modules/extensions/libglx_so_nvidia	                            
+	ln -s libglx.so.$version $PKG/usr/lib/xorg/modules/extensions/libglx_so_nvidia
 
 	# copy includes
 	mkdir -p $PKG/usr/include/nvidia
