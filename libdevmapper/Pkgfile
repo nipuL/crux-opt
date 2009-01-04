@@ -4,12 +4,12 @@
 # Packager: Mark Rosenstand, mark at borkware dot net
 
 name=libdevmapper
-version=1.02.27
+version=1.02.29
 release=1
-source=(ftp://sources.redhat.com/pub/dm/device-mapper.$version.tgz)
+source=(ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.43.tgz)
 
 build() {
-    cd device-mapper.$version
+    cd LVM2.2.02.43
 
     ./configure \
 	--prefix=/usr \
@@ -19,8 +19,8 @@ build() {
 	--enable-pkgconfig \
 	--disable-nls \
 	--with-optimisation="$CFLAGS"
-    make
-    make DESTDIR=$PKG install
+    make device-mapper
+    make DESTDIR=$PKG install_device-mapper
 
     find $PKG -type f -exec chmod u+w {} \;
 }
