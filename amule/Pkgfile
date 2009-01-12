@@ -5,8 +5,8 @@
 # Depends on: wxgtk, crypto++
 
 name=amule
-version=2.2.2
-release=2
+version=2.2.3
+release=1
 source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
 build() {
