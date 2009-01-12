@@ -1,7 +1,8 @@
 # Description: A tool to display dialog boxes from shell scripts
-# URL:         http://hightek.org/dialog/
-# Maintainer:  Simone Rota, sip at crux dot nu
-# Depends on:  ncurses
+# URL: http://hightek.org/dialog/
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: ncurses
 
 name=dialog
 version=1.1-20080819
@@ -9,8 +10,9 @@ release=1
 source=(ftp://dickey.his.com/dialog/$name-$version.tgz)
 
 build () {
-    cd $name-$version
-    ./configure --prefix=/usr --with-ncursesw
-    make
-    make DESTDIR=$PKG install
+  cd $name-$version
+  ./configure --prefix=/usr \
+              --with-ncursesw
+  make
+  make DESTDIR=$PKG install
 }
