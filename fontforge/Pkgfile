@@ -5,13 +5,14 @@
 # Depends on: freetype, libpng, libtiff, libungif, libxml2
 
 name=fontforge
-version=20080824
+version=20081224
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/${name}_full-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 	./configure	--prefix=/usr \
+			--mandir=$PKG/usr/man \
 			--disable-nls \
 			--without-freetype-src
 	sed -i 's|^prefix.*|prefix ?= /usr|' Makefile

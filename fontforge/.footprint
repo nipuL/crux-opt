@@ -33,6 +33,7 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/gio.h
 -rw-r--r--	root/root	usr/include/fontforge/gkeysym.h
 -rw-r--r--	root/root	usr/include/fontforge/gprogress.h
+-rw-r--r--	root/root	usr/include/fontforge/gresedit.h
 -rw-r--r--	root/root	usr/include/fontforge/gresource.h
 -rw-r--r--	root/root	usr/include/fontforge/groups.h
 -rw-r--r--	root/root	usr/include/fontforge/gwidget.h
@@ -69,17 +70,17 @@ lrwxrwxrwx	root/root	usr/lib/libfontforge.so -> libfontforge.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libfontforge.so.1 -> libfontforge.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libfontforge.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgdraw.la
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.4.0.5
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so.4 -> libgdraw.so.4.0.5
--rwxr-xr-x	root/root	usr/lib/libgdraw.so.4.0.5
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.4.0.6
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so.4 -> libgdraw.so.4.0.6
+-rwxr-xr-x	root/root	usr/lib/libgdraw.so.4.0.6
 -rwxr-xr-x	root/root	usr/lib/libgioftp.la
 lrwxrwxrwx	root/root	usr/lib/libgioftp.so -> libgioftp.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libgioftp.so.1 -> libgioftp.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgioftp.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgunicode.la
-lrwxrwxrwx	root/root	usr/lib/libgunicode.so -> libgunicode.so.3.0.0
-lrwxrwxrwx	root/root	usr/lib/libgunicode.so.3 -> libgunicode.so.3.0.0
--rwxr-xr-x	root/root	usr/lib/libgunicode.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libgunicode.so -> libgunicode.so.3.0.1
+lrwxrwxrwx	root/root	usr/lib/libgunicode.so.3 -> libgunicode.so.3.0.1
+-rwxr-xr-x	root/root	usr/lib/libgunicode.so.3.0.1
 -rwxr-xr-x	root/root	usr/lib/libgutils.la
 lrwxrwxrwx	root/root	usr/lib/libgutils.so -> libgutils.so.1.0.3
 lrwxrwxrwx	root/root	usr/lib/libgutils.so.1 -> libgutils.so.1.0.3
