@@ -1,12 +1,13 @@
-# Maintainer:  Simone Rota, sip at crux dot nu
 # Description: A version control system (CVS replacement)
-# URL:         http://subversion.tigris.org
+# URL: http://subversion.tigris.org
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on:  apr, neon, expat
 
 name=subversion
 version=1.5.5
 release=1
-source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
+source=(http://subversion.tigris.org/downloads/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
