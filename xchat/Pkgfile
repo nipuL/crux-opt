@@ -1,6 +1,7 @@
 # Description: GTK+ based IRC client
 # URL: http://www.xchat.org/
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: openssl, gtk, perl
 
 name=xchat
