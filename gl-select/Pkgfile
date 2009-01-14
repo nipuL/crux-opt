@@ -1,13 +1,14 @@
 # Description: A selector for gl/glx libraries and extensions
-# URL: N/A
+# URL: http://crux.nu/gitweb/?p=ports/opt.git;a=tree;f=gl-select 
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: xorg-server
 
 name=gl-select
-version=1.3
+version=1.4
 release=1
 source=($name)
 
 build() {
-	install -D -m 0755 -o root -g root $SRC/$name $PKG/usr/bin/$name
+  install -D -m 0755 -o root -g root $SRC/$name $PKG/usr/bin/$name
 }
