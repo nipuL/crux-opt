@@ -3,7 +3,7 @@
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: sten, nick dot steeves at shaw dot ca
-# Depends on: libjpeg xorg-libxaw xorg-gccmakedep
+# Depends on: libjpeg xorg-libxaw xorg-gccmakedep,xorg-imake
 
 name=tightvnc
 version=1.3.9
