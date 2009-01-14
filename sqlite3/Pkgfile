@@ -4,18 +4,23 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.6.7
+version=3.6.9
 release=1
 
-source=(http://www.sqlite.org/sqlite-$version.tar.gz)
+source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz 
+        sqlite3-pkgconfig.patch)
 
 build () {
-    cd sqlite-$version
-    ./configure --prefix=/usr \
-                --enable-threadsafe \
-                --disable-tcl
+    cd sqlite-amalgamation-$version
+
+    patch -p1 -i $SRC/sqlite3-pkgconfig.patch
+
+    autoreconf -f
+    libtoolize -fq
+
+    CFLAGS="$CFLAGS -DNDEBUG" \
+    ./configure --prefix=/usr
+
     make
     make DESTDIR=$PKG install
-    install -d $PKG/usr/man/man1
-    install -m 644 sqlite3.1 $PKG/usr/man/man1
 }
