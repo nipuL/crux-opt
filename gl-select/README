@@ -1,0 +1,14 @@
+
+README for gl-select
+
+
+
+POSTINSTALL
+
+If you're already using a non-xorg setup produced by gl-select 1.3, and
+you want to update your selection, first revert to xorg using:
+# gl-select use xorg --old-stuff
+
+
+And then re-select the correct new setup:
+# gl-select use <new gl/glx>
