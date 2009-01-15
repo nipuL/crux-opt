@@ -2,10 +2,10 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ccache-swig
 -rwxr-xr-x	root/root	usr/bin/swig
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/ccache-swig.1.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/man/
-drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/ccache-swig.1.gz
 drwxr-xr-x	root/root	usr/share/swig/
 drwxr-xr-x	root/root	usr/share/swig/1.3.37/
 drwxr-xr-x	root/root	usr/share/swig/1.3.37/allegrocl/
