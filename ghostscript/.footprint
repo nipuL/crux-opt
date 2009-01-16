@@ -35,11 +35,19 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pv.sh
 -rwxr-xr-x	root/root	usr/bin/unix-lpr.sh
 -rwxr-xr-x	root/root	usr/bin/wftopfa
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/ghostscript/
+-rw-r--r--	root/root	usr/include/ghostscript/gdevdsp.h
+-rw-r--r--	root/root	usr/include/ghostscript/iapi.h
+-rw-r--r--	root/root	usr/include/ghostscript/ierrors.h
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cups/
 drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pstopxl
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pstoraster
+lrwxrwxrwx	root/root	usr/lib/libgs.so -> libgs.so.8.63
+lrwxrwxrwx	root/root	usr/lib/libgs.so.8 -> libgs.so.8.63
+-rwxr-xr-x	root/root	usr/lib/libgs.so.8.63
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/dvipdf.1.gz
