@@ -4,14 +4,13 @@
 # Depends on:  ghostscript
 
 name=foomatic-filters
-version=3.0.2
+version=4.0.0
 release=1
 source=(http://www.linuxprinting.org/download/foomatic/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --mandir=/usr/man
     make
-    make DESTDIR=$PKG install
-    rm -r $PKG/usr/lib/ppr
+    make DESTDIR=$PKG install-main install-cups
 }
