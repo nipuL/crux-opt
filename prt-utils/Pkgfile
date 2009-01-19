@@ -1,6 +1,6 @@
 # Description: some scripts for CRUX ports
 # URL: http://prt-utils.berlios.de
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer: Johannes Winkelmann, jw at smts dot ch
 # Packager: Martin Opel, mo at obbl-net dot de
 # Depends on: prt-get
 

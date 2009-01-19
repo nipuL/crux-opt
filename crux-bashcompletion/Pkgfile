@@ -1,4 +1,4 @@
-# Maintainer:  Simone Rota, sip at crux dot nu
+# Maintainer:  Johannes Winkelmann, jw at smts dot ch
 # Description: programmable bash completion for pkgutils and ports 
 # URL:         http://www.crux.nu
 # Depends on:  bash-completion
