@@ -1,7 +1,7 @@
 # Description: MPEG1/MPEG2 decoder (includes libmpeg2)
 # URL: http://libmpeg2.sourceforge.net/
 # Packager: Tilman Sauerbeck, tilman at code-monkey dot de
-# Maintainer: Richard Poetler, richard dot poettler at gmail dot com
+# Maintainer: Richard Poettler, richard dot poettler at gmail dot com
 
 name=mpeg2dec
 version=0.4.1
