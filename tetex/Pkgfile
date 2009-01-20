@@ -1,6 +1,6 @@
-# Maintainer: Simone Rota, sip at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Maintainer: Johannes Winkelmann, jw at smts dot ch
 # Packager: Robert McMeekin, viper at mcmeekin dot info
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Description: TeX distribution for UNIX compatible systems
 # URL: http://www.tug.org/tetex/
 # Depends on: libpng, ncurses, t1lib, libgd
