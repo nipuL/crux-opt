@@ -5,9 +5,9 @@
 # Depends on: tetex, qt4, imagemagick
 
 name=lyx
-version=1.6.0
+version=1.6.1
 release=1
-source=(ftp://ftp.lyx.org/pub/$name/stable/$name-$version.tar.bz2)
+source=(ftp://ftp.lyx.org/pub/$name/stable/1.6.x/$name-$version.tar.bz2)
 
 build(){
   cd $name-$version

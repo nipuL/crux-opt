@@ -63,6 +63,7 @@ drwxr-xr-x	root/root	usr/share/lyx/doc/clipart/
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/GreyedOutNoteImageQt4.png
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/LaTeX.png
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/LyXNoteImageQt4.png
+-rw-r--r--	root/root	usr/share/lyx/doc/clipart/MacroToolbar.png
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/SpaceMarker.png
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/StandardToolbar.png
 -rw-r--r--	root/root	usr/share/lyx/doc/clipart/ToolbarEnvBox.png
@@ -704,6 +705,7 @@ drwxr-xr-x	root/root	usr/share/lyx/images/math/
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_delete-row.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_multicolumn.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-all-lines.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-border-lines.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-longtabular.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-rotate-cell.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-rotate-tabular.png
@@ -778,6 +780,7 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/aapaper.inc
 -rw-r--r--	root/root	usr/share/lyx/layouts/aapaper.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/aastex.layout
+-rw-r--r--	root/root	usr/share/lyx/layouts/achemso.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu-dtd.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu_stdclass.inc
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu_stdcounters.inc
