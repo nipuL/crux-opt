@@ -4,8 +4,8 @@
 # Depends on:  python libxml2
 
 name=libxml2-python
-version=2.7.2
-release=2
+version=2.7.3
+release=1
 source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz \
         $name-config.patch)
 
