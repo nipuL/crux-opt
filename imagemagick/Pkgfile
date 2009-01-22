@@ -1,6 +1,6 @@
 # Description: Image manipulation wizard
-# Packager: danm, maol, jaeger
-# Maintainer: Simone Rota, sip at crux dot nu
+# Packager: danm, maol, jaeger, sip
+# Maintainer: Richard Poettler, richard dot poettler at gmail dot com
 # URL: http://imagemagick.sourceforge.net/
 # Depends on: freetype ghostscript lcms libungif libxml2
 
