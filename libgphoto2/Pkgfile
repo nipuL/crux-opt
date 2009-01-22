@@ -6,14 +6,12 @@
 # Depends on:  libtool libusb libjpeg libexif
 
 name=libgphoto2
-version=2.4.2
+version=2.4.4
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-
-    sed -i 's/lt_dlcaller_register/lt_dlinit/g' configure libgphoto2_port/configure
 
     udevscriptdir=/lib/udev \
     ./configure --prefix=/usr \
@@ -23,5 +21,5 @@ build () {
 
     make
     make DESTDIR=$PKG install
-    rm -rf $PKG/usr/share/doc
+    rm -r $PKG/usr/share/doc
 }
