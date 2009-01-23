@@ -5,19 +5,24 @@
 # Depends on: freetype ghostscript lcms libungif libxml2
 
 name=imagemagick
-version=6.4.6-0
+version=6.4.8-8
 release=1
-source=(http://dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-$version.tar.bz2)
+source=(ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-${version}.tar.bz2)
 
 build () {
-    cd ImageMagick-${version/-*/}
-    ./configure --prefix=/usr --enable-shared --enable-lzw --with-perl \
-        --mandir=/usr/man
+    cd ImageMagick-${version}
+
+    ./configure --prefix=/usr \
+        --mandir=/usr/man \
+	--enable-shared \
+	--with-perl \
+	--without-rsvg
+
     make
     mkdir -p $PKG/usr/
     make DESTDIR=$PKG PREFIX=$PKG/usr install
-    rm -rf $PKG/usr/lib/{perl5/?.?.?,ImageMagick/modules,libltdl.*}
-    rm -rf $PKG/usr/share/ImageMagick-${version/-*}/{ChangeLog,LICENSE,NEWS}
+
     rm -rf $PKG/usr/share/doc
-    find $PKG -name perllocal.pod -o -name .packlist -exec rm {} \;
+    find $PKG \( -name ChangeLog -o -name LICENSE -o -name .packlist -o -name perllocal.pod \) -delete
+    find $PKG -type d -empty -delete
 }
