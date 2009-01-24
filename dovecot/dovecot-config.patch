@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.1.8.orig/dovecot-example.conf dovecot-1.1.8/dovecot-example.conf
---- dovecot-1.1.8.orig/dovecot-example.conf	2009-01-07 22:15:21.000000000 +0100
-+++ dovecot-1.1.8/dovecot-example.conf	2009-01-07 22:15:41.000000000 +0100
+diff -Nru dovecot-1.1.9.orig/dovecot-example.conf dovecot-1.1.9/dovecot-example.conf
+--- dovecot-1.1.9.orig/dovecot-example.conf	2009-01-24 00:01:00.000000000 +0100
++++ dovecot-1.1.9/dovecot-example.conf	2009-01-24 00:01:29.000000000 +0100
 @@ -16,11 +16,11 @@
  # --with-ssldir=/etc/ssl
  
@@ -129,9 +129,9 @@ diff -Nru dovecot-1.1.8.orig/dovecot-example.conf dovecot-1.1.8/dovecot-example.
 -  #sendmail_path = /usr/lib/sendmail
 +  #sendmail_path = /usr/sbin/sendmail
  
-   # Human readable error message for rejection mails. Use can use variables:
-   #  %n = CRLF, %r = reason, %s = subject, %t = recipient
-@@ -693,7 +693,7 @@
+   # Subject: header to use for rejection mails. You can use the same variables
+   # as for rejection_reason below.
+@@ -697,7 +697,7 @@
  ##
  
  # Executable location
@@ -140,7 +140,7 @@ diff -Nru dovecot-1.1.8.orig/dovecot-example.conf dovecot-1.1.8/dovecot-example.
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -826,7 +826,7 @@
+@@ -830,7 +830,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -149,7 +149,7 @@ diff -Nru dovecot-1.1.8.orig/dovecot-example.conf dovecot-1.1.8/dovecot-example.
      # [session=yes] [setcred=yes] [failure_show_msg=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -855,7 +855,7 @@
+@@ -859,7 +859,7 @@
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -158,7 +158,7 @@ diff -Nru dovecot-1.1.8.orig/dovecot-example.conf dovecot-1.1.8/dovecot-example.
  
    # System users (NSS, /etc/passwd, or similiar)
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -868,10 +868,10 @@
+@@ -872,10 +872,10 @@
    # Shadow passwords for system users (NSS, /etc/shadow or similiar).
    # Deprecated by PAM nowadays.
    # <doc/wiki/PasswordDatabase.Shadow.txt>
