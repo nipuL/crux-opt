@@ -1,8 +1,7 @@
 # Description: GNU pico clone (a tiny text editor)
-# URL: http://www.nano-editor.org
-# Maintainer: Simone Rota, sip at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
-# Depends on:
+# URL:         http://www.nano-editor.org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Simone Rota, sip at crux dot nu
 
 name=nano
 version=2.0.9
@@ -10,11 +9,11 @@ release=1
 source=(http://www.nano-editor.org/dist/v2.0/$name-$version.tar.gz)
 
 build(){
-  cd $name-$version
-  ./configure --prefix=/usr --disable-nls --mandir=/usr/man
-  make
-  make DESTDIR=$PKG install
-  rm -r $PKG/usr/share
-  rm $PKG/usr/bin/rnano $PKG/usr/man/man1/rnano.1
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+    rm $PKG/usr/bin/rnano $PKG/usr/man/man1/rnano.1
 }
-  
+
