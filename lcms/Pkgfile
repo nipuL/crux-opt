@@ -1,6 +1,6 @@
 # Description: Little CMS. A free color management engine.
 # URL: http://www.littlecms.com/
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: zlib, libtiff, libjpeg
@@ -11,11 +11,11 @@ release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	mkdir -p $PKG/usr/bin
-	./configure --prefix=/usr \
-			--without-python \
-			--mandir=/usr/man
-	make LIBRARY_REVISION=17
-	make DESTDIR=$PKG install
+    cd $name-$version
+    mkdir -p $PKG/usr/bin
+    ./configure --prefix=/usr \
+                --without-python \
+                --mandir=/usr/man
+    make LIBRARY_REVISION=17
+    make DESTDIR=$PKG install
 }
