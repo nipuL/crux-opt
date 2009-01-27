@@ -6,7 +6,7 @@
 # Depends on: xorg-libxaw
 
 name=xterm
-version=240
+version=241
 release=1
 source=(ftp://invisible-island.net/$name/$name-$version.tgz \
 	configure.diff)
