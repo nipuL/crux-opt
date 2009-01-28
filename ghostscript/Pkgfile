@@ -6,11 +6,12 @@
 
 name=ghostscript
 version=8.63
-release=2
+release=3
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2 \
         http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
 build () {
+    export CFLAGS="$CFLAGS -fPIC"
     cd $name-$version
 
     ./configure --prefix=/usr \
