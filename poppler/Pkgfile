@@ -6,7 +6,7 @@
 # Depends on: t1lib, gtk, ghostscript, pkg-config
 
 name=poppler
-version=0.10.2
+version=0.10.3
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
@@ -17,8 +17,6 @@ build()
 		--prefix=/usr \
 		--mandir=/usr/man \
 		--enable-zlib \
-		--disable-poppler-qt \
-		--disable-poppler-qt4 \
 		--disable-debug
 	make
 	make DESTDIR=$PKG install
