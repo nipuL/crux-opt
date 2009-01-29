@@ -1,6 +1,7 @@
 # Description: A set of python bindings for cairo
 # URL: http://cairographics.org/pycairo
-# Maintainer: Simone Rota, sip at crux dot nu
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Simone Rota, sip at crux dot nu
 # Depends on: cairo, python
 
 name=pycairo
