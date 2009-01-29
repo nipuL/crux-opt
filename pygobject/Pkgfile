@@ -1,6 +1,6 @@
 # Description: python nindings for gobject
 # URL: http://www.pygtk.org
-# Maintainer: Simone Rota, sip at varlock dot com
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Simone Rota, sip at varlock dot com
 # Depends on: gtk, python
 
