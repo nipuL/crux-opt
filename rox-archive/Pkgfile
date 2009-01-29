@@ -1,0 +1,19 @@
+# Description: Archive manager for ROX
+# URL: http://rox.sourceforge.net/phpwiki/index.php/Archive
+# Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: rox-lib
+
+name=rox-archive
+version=2.2
+release=1
+source=(http://dl.sourceforge.net/sourceforge/rox/archive-$version.tar.bz2)
+
+build() {
+	cd archive-$version
+	mkdir -p $PKG/usr/ROX/Apps
+	rm -rf Archive/{Help,Messages,CVS}
+	cp -r Archive $PKG/usr/ROX/Apps
+	
+}

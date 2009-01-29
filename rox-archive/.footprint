@@ -1,0 +1,15 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/ROX/
+drwxr-xr-x	root/root	usr/ROX/Apps/
+drwxr-xr-x	root/root	usr/ROX/Apps/Archive/
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/.DirIcon
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/AppInfo.xml
+-rwxr-xr-x	root/root	usr/ROX/Apps/Archive/AppRun
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/Archive.xml
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/box.py
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/findrox.py
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/findrox.pyc
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/formats.py
+-rw-r--r--	root/root	usr/ROX/Apps/Archive/support.py
+drwxr-xr-x	root/root	usr/ROX/Apps/Archive/tests/
+-rwxr-xr-x	root/root	usr/ROX/Apps/Archive/tests/testall.py
