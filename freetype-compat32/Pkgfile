@@ -5,8 +5,9 @@
 
 name=freetype-compat32
 version=2.3.7
-release=1
-source=(http://download.savannah.gnu.org/releases/freetype/freetype-$version.tar.bz2)
+release=2
+source=(http://download.savannah.gnu.org/releases/freetype/freetype-$version.tar.bz2
+    $name.conf)
 
 build() {
     cd freetype-$version
@@ -18,4 +19,5 @@ build() {
     make DESTDIR=$PKG install
     mv $PKG/usr/bin/freetype-config $PKG/usr/bin/freetype-config32
     rm -rf $PKG/usr/{include,share}
+    install -D -m0544 -oroot -groot $SRC/$name.conf $PKG/etc/pkgmk.conf.d/$name.conf
 }
