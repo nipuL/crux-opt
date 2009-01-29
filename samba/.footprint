@@ -59,6 +59,7 @@ drwxr-xr-x	root/root	usr/lib/samba/auth/
 drwxr-xr-x	root/root	usr/lib/samba/charset/
 -rwxr-xr-x	root/root	usr/lib/samba/charset/CP437.so
 -rwxr-xr-x	root/root	usr/lib/samba/charset/CP850.so
+drwxr-xr-x	root/root	usr/lib/samba/gpext/
 drwxr-xr-x	root/root	usr/lib/samba/idmap/
 lrwxrwxrwx	root/root	usr/lib/samba/libnetapi.so -> libnetapi.so.0
 -rwxr-xr-x	root/root	usr/lib/samba/libnetapi.so.0
@@ -79,6 +80,8 @@ drwxr-xr-x	root/root	usr/lib/samba/rpc/
 -rw-r--r--	root/root	usr/lib/samba/upcase.dat
 -rw-r--r--	root/root	usr/lib/samba/valid.dat
 drwxr-xr-x	root/root	usr/lib/samba/vfs/
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_tdb.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/acl_xattr.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/cap.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/default_quota.so
@@ -131,14 +134,18 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/libsmbclient.7.gz
 -rw-r--r--	root/root	usr/man/man7/pam_winbind.7.gz
 -rw-r--r--	root/root	usr/man/man7/samba.7.gz
+-rw-r--r--	root/root	usr/man/man7/winbind_krb5_locator.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/cifs.upcall.8.gz
 -rw-r--r--	root/root	usr/man/man8/eventlogadm.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ad.8.gz
+-rw-r--r--	root/root	usr/man/man8/idmap_adex.8.gz
+-rw-r--r--	root/root	usr/man/man8/idmap_hash.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ldap.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_nss.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_rid.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_tdb.8.gz
+-rw-r--r--	root/root	usr/man/man8/idmap_tdb2.8.gz
 -rw-r--r--	root/root	usr/man/man8/mount.cifs.8.gz
 -rw-r--r--	root/root	usr/man/man8/net.8.gz
 -rw-r--r--	root/root	usr/man/man8/nmbd.8.gz
@@ -158,6 +165,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_default_quota.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_extd_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_fake_perms.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_fileid.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_full_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_gpfs.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_netatalk.8.gz
@@ -167,6 +175,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_readonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_recycle.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_shadow_copy2.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_smb_traffic_analyzer.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_depot.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_streams_xattr.8.gz

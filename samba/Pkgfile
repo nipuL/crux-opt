@@ -5,7 +5,7 @@
 # Depends on:  ncurses, readline
 
 name=samba
-version=3.2.7
+version=3.3.0
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
@@ -20,6 +20,7 @@ build () {
                 --localstatedir=/var \
                 --with-fhs \
                 --with-configdir=/etc/samba \
+                --with-modulesdir=/usr/lib/samba \
                 --with-lockdir=/var/run/samba \
                 --with-piddir=/var/run/samba \
                 --with-mandir=/usr/man \
@@ -51,5 +52,6 @@ build () {
     install -D -m 755  $SRC/samba $PKG/etc/rc.d/samba
 
     # cleanup
+    rm -r $PKG/usr/share
     rm -r $PKG/usr/man/man8/swat.8
 }
