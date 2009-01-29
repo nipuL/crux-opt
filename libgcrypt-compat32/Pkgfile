@@ -1,0 +1,27 @@
+# Description: A general purpose cryptographic library based on GnuPG
+# URL: http://www.gnupg.org
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libgcrypt libgpg-error-compat32
+
+name=libgcrypt-compat32
+version=1.4.2
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-$version.tar.bz2
+    $name.conf)
+
+build() {
+	cd libgcrypt-$version
+
+	linux32 ./configure \
+	    --prefix=/usr \
+	    --libdir=/usr/lib32 \
+	    --program-suffix=32 \
+	    --disable-padlock-support
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/{include,share,sbin}
+	install -D -m0544 -oroot -groot $SRC/$name.conf $PKG/etc/pkgmk.conf.d/$name.conf
+}
