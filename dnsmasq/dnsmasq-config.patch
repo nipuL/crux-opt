@@ -1,6 +1,6 @@
-diff -Nru dnsmasq-2.46.orig/Makefile dnsmasq-2.46/Makefile
---- dnsmasq-2.46.orig/Makefile	2008-11-14 23:43:19.000000000 +0100
-+++ dnsmasq-2.46/Makefile	2008-11-14 23:43:35.000000000 +0100
+diff -Nru dnsmasq-2.47.orig/Makefile dnsmasq-2.47/Makefile
+--- dnsmasq-2.47.orig/Makefile	2009-02-06 09:20:22.000000000 +0100
++++ dnsmasq-2.47/Makefile	2009-02-06 09:21:25.000000000 +0100
 @@ -15,7 +15,7 @@
  
  PREFIX = /usr/local
@@ -10,18 +10,27 @@ diff -Nru dnsmasq-2.46.orig/Makefile dnsmasq-2.46/Makefile
  LOCALEDIR = ${PREFIX}/share/locale
  
  SRC = src
-diff -Nru dnsmasq-2.46.orig/bld/Makefile dnsmasq-2.46/bld/Makefile
---- dnsmasq-2.46.orig/bld/Makefile	2008-11-14 23:43:19.000000000 +0100
-+++ dnsmasq-2.46/bld/Makefile	2008-11-14 23:43:35.000000000 +0100
+@@ -23,7 +23,7 @@
+ MAN = man
+ 
+ PKG_CONFIG = pkg-config
+-AWK = nawk
++AWK = awk
+ INSTALL = install
+ 
+ DBUS_MINOR=" `echo $(COPTS) | ../bld/pkg-wrapper $(PKG_CONFIG) --modversion dbus-1 | $(AWK) -F . -- '{ if ($$(NF-1)) print \"-DDBUS_MINOR=\"$$(NF-1) }'`" 
+diff -Nru dnsmasq-2.47.orig/bld/Makefile dnsmasq-2.47/bld/Makefile
+--- dnsmasq-2.47.orig/bld/Makefile	2009-02-06 09:20:22.000000000 +0100
++++ dnsmasq-2.47/bld/Makefile	2009-02-06 09:20:35.000000000 +0100
 @@ -1,4 +1,4 @@
 -CFLAGS = -Wall -W -O2
 +CFLAGS += -Wall -W
  
  OBJS = cache.o rfc1035.o util.o option.o forward.o network.o \
         dnsmasq.o dhcp.o lease.o rfc2131.o netlink.o dbus.o bpf.o \
-diff -Nru dnsmasq-2.46.orig/dnsmasq.conf.example dnsmasq-2.46/dnsmasq.conf.example
---- dnsmasq-2.46.orig/dnsmasq.conf.example	2008-11-14 23:43:19.000000000 +0100
-+++ dnsmasq-2.46/dnsmasq.conf.example	2008-11-14 23:43:35.000000000 +0100
+diff -Nru dnsmasq-2.47.orig/dnsmasq.conf.example dnsmasq-2.47/dnsmasq.conf.example
+--- dnsmasq-2.47.orig/dnsmasq.conf.example	2009-02-06 09:20:22.000000000 +0100
++++ dnsmasq-2.47/dnsmasq.conf.example	2009-02-06 09:20:36.000000000 +0100
 @@ -75,8 +75,8 @@
  
  # If you want dnsmasq to change uid and gid to something other
@@ -33,7 +42,7 @@ diff -Nru dnsmasq-2.46.orig/dnsmasq.conf.example dnsmasq-2.46/dnsmasq.conf.examp
  
  # If you want dnsmasq to listen for DHCP and DNS requests only on
  # specified interfaces (and the loopback) give the name of the
-@@ -365,7 +365,7 @@
+@@ -381,7 +381,7 @@
  # The DHCP server needs somewhere on disk to keep its lease database.
  # This defaults to a sane location, but if you want to change it, use
  # the line below.
@@ -42,20 +51,20 @@ diff -Nru dnsmasq-2.46.orig/dnsmasq.conf.example dnsmasq-2.46/dnsmasq.conf.examp
  
  # Set the DHCP server to authoritative mode. In this mode it will barge in
  # and take over the lease for any client which broadcasts on the network,
-diff -Nru dnsmasq-2.46.orig/src/config.h dnsmasq-2.46/src/config.h
---- dnsmasq-2.46.orig/src/config.h	2008-11-14 23:43:19.000000000 +0100
-+++ dnsmasq-2.46/src/config.h	2008-11-14 23:43:35.000000000 +0100
-@@ -43,7 +43,7 @@
- #elif defined(__sun__) || defined (__sun)
- #   define LEASEFILE "/var/cache/dnsmasq.leases"
- #else
--#   define LEASEFILE "/var/lib/misc/dnsmasq.leases"
-+#   define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
+diff -Nru dnsmasq-2.47.orig/src/config.h dnsmasq-2.47/src/config.h
+--- dnsmasq-2.47.orig/src/config.h	2009-02-06 09:20:22.000000000 +0100
++++ dnsmasq-2.47/src/config.h	2009-02-06 09:20:36.000000000 +0100
+@@ -45,7 +45,7 @@
+ #   elif defined(__sun__) || defined (__sun)
+ #      define LEASEFILE "/var/cache/dnsmasq.leases"
+ #   else
+-#      define LEASEFILE "/var/lib/misc/dnsmasq.leases"
++#      define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
+ #   endif
  #endif
- #if defined(__FreeBSD__)
- #   define CONFFILE "/usr/local/etc/dnsmasq.conf"
-@@ -52,7 +52,7 @@
- #endif
+ 
+@@ -59,7 +59,7 @@
+ 
  #define DEFLEASE 3600 /* default lease time, 1 hour */
  #define CHUSER "nobody"
 -#define CHGRP "dip"
