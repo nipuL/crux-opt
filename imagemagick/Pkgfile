@@ -6,7 +6,7 @@
 # Depends on: freetype ghostscript lcms libungif libxml2
 
 name=imagemagick
-version=6.4.8-8
+version=6.4.9-2
 release=1
 source=(ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-${version}.tar.bz2)
 
