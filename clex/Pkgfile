@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=clex
-version=4.0
+version=4.1
 release=1
 source=(http://www.clex.sk/download/$name-$version.tar.gz)
 
