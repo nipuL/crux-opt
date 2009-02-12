@@ -1,20 +1,23 @@
 # Description: GNU Midnight Commander
-# URL:         http://www.ibiblio.org/mc/ 
+# URL:         http://www.midnight-commander.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  e2fsprogs, glib
 
 name=mc
-version=4.6.1
-release=2
-source=(http://www.ibiblio.org/pub/Linux/utils/file/managers/$name/$name-$version.tar.gz \
-       $name-$version-bash_3_2.patch)
+version=4.6.2
+release=1
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version-bash_3_2.patch
-    ./configure --prefix=/usr --disable-nls 
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --libexecdir=/usr/lib \
+                --disable-nls
     make
     make DESTDIR=$PKG install
+
     rm $PKG/usr/share/mc/{mc.hint.*,extfs/README}
     rm -r $PKG/usr/{sbin,man/man8}
 }
