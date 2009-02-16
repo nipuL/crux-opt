@@ -1,0 +1,26 @@
+# Description: Free Lossless Audio Codec
+# URL: http://flac.sourceforge.net/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: flac libogg-compat32
+
+name=flac-compat32
+version=1.2.1
+release=2
+source=(http://dl.sourceforge.net/sourceforge/flac/flac-$version.tar.gz
+        flac.diff)
+
+build() {
+	cd flac-$version
+
+	# fix compilation with gcc 4.3
+	patch -Np1 -i $SRC/flac.diff
+
+	./configure --prefix=/usr \
+	    --libdir=/usr/lib32 \
+	    --with-ogg-libraries=/usr/lib32
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{bin,include,man,share}
+}
