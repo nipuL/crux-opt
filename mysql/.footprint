@@ -143,6 +143,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mysqld_multi.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqld_safe.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqldump.1.gz
+-rw-r--r--	root/root	usr/man/man1/mysqldumpslow.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlhotcopy.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlimport.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlman.1.gz
