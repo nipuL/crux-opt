@@ -5,7 +5,7 @@
 # Depends on:  ncurses readline zlib
 
 name=mysql
-version=5.0.75
+version=5.0.77
 release=1
 source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
         my.cnf mysqld)
@@ -16,6 +16,7 @@ build () {
                 --sysconfdir=/etc \
                 --libexecdir=/usr/sbin \
                 --localstatedir=/var/lib \
+                --mandir=/usr/man \
                 --enable-assembler \
                 --enable-thread-safe-client \
                 --without-berkeley-db \
