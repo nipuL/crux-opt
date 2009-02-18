@@ -4,22 +4,18 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.6.10
+version=3.6.11
 release=1
 
-source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz 
-        sqlite3-pkgconfig.patch)
+source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)
 
 build () {
-    cd sqlite-amalgamation-$version
+    cd sqlite-$version
 
-    patch -p1 -i $SRC/sqlite3-pkgconfig.patch
+    # http://www.sqlite.org/cvstrac/tktview?tn=3583
+    sed -i 's/@RELEASE@/@VERSION@/' sqlite3.pc.in
 
-    autoreconf -f
-    libtoolize -fq
-
-    CFLAGS="$CFLAGS -DNDEBUG" \
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr CFLAGS="$CFLAGS -DNDEBUG"
 
     make
     make DESTDIR=$PKG install
