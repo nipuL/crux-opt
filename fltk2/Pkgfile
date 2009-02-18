@@ -11,6 +11,8 @@ source=(http://ftp.easysw.com/pub/fltk/snapshots/fltk-2.0.x-$version.tar.bz2)
 build() {
     cd fltk-2.0.x-$version
 
+    sed -i '/fltk2-config/s/^\t/\t$(DESTDIR)/' fluid/Makefile
+
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
