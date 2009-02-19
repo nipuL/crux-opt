@@ -246,6 +246,7 @@ drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/defaults/pref/
 -r--r--r--	root/root	usr/lib/openoffice/basis3.0/program/gconfbe1.uno.so
 -r-xr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/gengal
 -r-xr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/gengal.bin
+-r-xr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/gengalrc
 -r-xr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/gnome-open-url
 -r-xr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/gnome-open-url.bin
 drwxr-xr-x	root/root	usr/lib/openoffice/basis3.0/program/greprefs/

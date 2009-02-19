@@ -5,7 +5,7 @@
 # Depends on: mesa3d, xorg-libxaw, xorg-libxcursor, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libxrandr
 
 name=openoffice
-version=3.0.0
+version=3.0.1
 release=1
 source=(http://openoffice-atl.osuosl.org/stable/$version/OOo_${version}_LinuxX86-64_install_en-US_deb.tar.gz)
 
