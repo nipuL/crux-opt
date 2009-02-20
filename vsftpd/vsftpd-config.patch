@@ -1,6 +1,6 @@
-diff -Nru vsftpd-2.0.7.orig/Makefile vsftpd-2.0.7/Makefile
---- vsftpd-2.0.7.orig/Makefile	2008-07-30 22:19:12.000000000 +0200
-+++ vsftpd-2.0.7/Makefile	2008-07-30 22:19:26.000000000 +0200
+diff -Nru vsftpd-2.1.0.orig/Makefile vsftpd-2.1.0/Makefile
+--- vsftpd-2.1.0.orig/Makefile	2009-02-19 08:48:58.000000000 +0100
++++ vsftpd-2.1.0/Makefile	2009-02-19 08:49:11.000000000 +0100
 @@ -3,7 +3,7 @@
  INSTALL	=	install
  IFLAGS  = -idirafter dummyinc
@@ -36,9 +36,9 @@ diff -Nru vsftpd-2.0.7.orig/Makefile vsftpd-2.0.7/Makefile
  
  clean:
  	rm -f *.o *.swp vsftpd
-diff -Nru vsftpd-2.0.7.orig/builddefs.h vsftpd-2.0.7/builddefs.h
---- vsftpd-2.0.7.orig/builddefs.h	2008-07-30 22:19:12.000000000 +0200
-+++ vsftpd-2.0.7/builddefs.h	2008-07-30 22:19:26.000000000 +0200
+diff -Nru vsftpd-2.1.0.orig/builddefs.h vsftpd-2.1.0/builddefs.h
+--- vsftpd-2.1.0.orig/builddefs.h	2009-02-19 08:48:58.000000000 +0100
++++ vsftpd-2.1.0/builddefs.h	2009-02-19 08:49:11.000000000 +0100
 @@ -1,9 +1,9 @@
  #ifndef VSF_BUILDDEFS_H
  #define VSF_BUILDDEFS_H
@@ -52,34 +52,35 @@ diff -Nru vsftpd-2.0.7.orig/builddefs.h vsftpd-2.0.7/builddefs.h
  
  #endif /* VSF_BUILDDEFS_H */
  
-diff -Nru vsftpd-2.0.7.orig/tunables.c vsftpd-2.0.7/tunables.c
---- vsftpd-2.0.7.orig/tunables.c	2008-07-30 22:19:12.000000000 +0200
-+++ vsftpd-2.0.7/tunables.c	2008-07-30 22:19:26.000000000 +0200
-@@ -104,7 +104,7 @@
- /* -rw------- */
- unsigned int tunable_chown_upload_mode = 0600;
+diff -Nru vsftpd-2.1.0.orig/tunables.c vsftpd-2.1.0/tunables.c
+--- vsftpd-2.1.0.orig/tunables.c	2009-02-19 08:48:58.000000000 +0100
++++ vsftpd-2.1.0/tunables.c	2009-02-19 08:54:20.000000000 +0100
+@@ -242,7 +242,7 @@
+   /* -rw------- */
+   tunable_chown_upload_mode = 0600;
  
--const char* tunable_secure_chroot_dir = "/usr/share/empty";
-+const char* tunable_secure_chroot_dir = "/var/empty";
- const char* tunable_ftp_username = "ftp";
- const char* tunable_chown_username = "root";
- const char* tunable_xferlog_file = "/var/log/xferlog";
-@@ -129,10 +129,10 @@
- const char* tunable_deny_file = 0;
- const char* tunable_user_sub_token = 0;
- const char* tunable_email_password_file = "/etc/vsftpd.email_passwords";
--const char* tunable_rsa_cert_file = "/usr/share/ssl/certs/vsftpd.pem";
-+const char* tunable_rsa_cert_file = "/etc/ssl/certs/vsftpd.crt";
- const char* tunable_dsa_cert_file = 0;
- const char* tunable_ssl_ciphers = "DES-CBC3-SHA";
--const char* tunable_rsa_private_key_file = 0;
-+const char* tunable_rsa_private_key_file = "/etc/ssl/keys/vsftpd.key";
- const char* tunable_dsa_private_key_file = 0;
- const char* tunable_ca_certs_file = 0;
- 
-diff -Nru vsftpd-2.0.7.orig/vsftpd.conf vsftpd-2.0.7/vsftpd.conf
---- vsftpd-2.0.7.orig/vsftpd.conf	2008-07-30 22:19:12.000000000 +0200
-+++ vsftpd-2.0.7/vsftpd.conf	2008-07-30 22:19:26.000000000 +0200
+-  install_str_setting("/usr/share/empty", &tunable_secure_chroot_dir);
++  install_str_setting("/var/empty", &tunable_secure_chroot_dir);
+   install_str_setting("ftp", &tunable_ftp_username);
+   install_str_setting("root", &tunable_chown_username);
+   install_str_setting("/var/log/xferlog", &tunable_xferlog_file);
+@@ -269,11 +269,11 @@
+   install_str_setting(0, &tunable_user_sub_token);
+   install_str_setting("/etc/vsftpd.email_passwords",
+                       &tunable_email_password_file);
+-  install_str_setting("/usr/share/ssl/certs/vsftpd.pem",
++  install_str_setting("/etc/ssl/certs/vsftpd.crt",
+                       &tunable_rsa_cert_file);
+   install_str_setting(0, &tunable_dsa_cert_file);
+   install_str_setting("DES-CBC3-SHA", &tunable_ssl_ciphers);
+-  install_str_setting(0, &tunable_rsa_private_key_file);
++  install_str_setting("/etc/ssl/keys/vsftpd.key", &tunable_rsa_private_key_file);
+   install_str_setting(0, &tunable_dsa_private_key_file);
+   install_str_setting(0, &tunable_ca_certs_file);
+ }
+diff -Nru vsftpd-2.1.0.orig/vsftpd.conf vsftpd-2.1.0/vsftpd.conf
+--- vsftpd-2.1.0.orig/vsftpd.conf	2009-02-19 08:48:58.000000000 +0100
++++ vsftpd-2.1.0/vsftpd.conf	2009-02-19 08:49:11.000000000 +0100
 @@ -8,11 +8,25 @@
  # Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
  # capabilities.
@@ -106,10 +107,10 @@ diff -Nru vsftpd-2.0.7.orig/vsftpd.conf vsftpd-2.0.7/vsftpd.conf
  #
  # Uncomment this to enable any form of FTP write command.
  #write_enable=YES
-diff -Nru vsftpd-2.0.7.orig/vsftpd.conf.5 vsftpd-2.0.7/vsftpd.conf.5
---- vsftpd-2.0.7.orig/vsftpd.conf.5	2008-07-30 22:19:12.000000000 +0200
-+++ vsftpd-2.0.7/vsftpd.conf.5	2008-07-30 22:19:26.000000000 +0200
-@@ -927,21 +927,21 @@
+diff -Nru vsftpd-2.1.0.orig/vsftpd.conf.5 vsftpd-2.1.0/vsftpd.conf.5
+--- vsftpd-2.1.0.orig/vsftpd.conf.5	2009-02-19 08:48:58.000000000 +0100
++++ vsftpd-2.1.0/vsftpd.conf.5	2009-02-19 08:49:11.000000000 +0100
+@@ -950,21 +950,21 @@
  This option specifies the location of the RSA certificate to use for SSL
  encrypted connections.
  
