@@ -30,3 +30,4 @@ lrwxrwxrwx	root/root	usr/lib/libdrm_intel.so.1 -> libdrm_intel.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libdrm_intel.so.1.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libdrm.pc
+-rw-r--r--	root/root	usr/lib/pkgconfig/libdrm_intel.pc
