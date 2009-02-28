@@ -1,0 +1,17 @@
+# Description: Microsoft Cabinet file decompressor
+# URL: http://www.cabextract.org.uk/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:
+
+name=cabextract
+version=1.2
+release=1
+source=(http://www.cabextract.org.uk/cabextract-$version.tar.gz)
+
+build() {
+	cd cabextract-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
