@@ -3,6 +3,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/sensors
 -rwxr-xr-x	root/root	usr/bin/sensors-conf-convert
 drwxr-xr-x	root/root	usr/etc/
+drwxr-xr-x	root/root	usr/etc/sensors.d/
 -rw-r--r--	root/root	usr/etc/sensors3.conf
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/sensors/
@@ -11,8 +12,8 @@ drwxr-xr-x	root/root	usr/include/sensors/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libsensors.a
 lrwxrwxrwx	root/root	usr/lib/libsensors.so -> libsensors.so.4
-lrwxrwxrwx	root/root	usr/lib/libsensors.so.4 -> libsensors.so.4.0.2
--rwxr-xr-x	root/root	usr/lib/libsensors.so.4.0.2
+lrwxrwxrwx	root/root	usr/lib/libsensors.so.4 -> libsensors.so.4.1.0
+-rwxr-xr-x	root/root	usr/lib/libsensors.so.4.1.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/sensors.1.gz
