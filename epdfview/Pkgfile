@@ -4,14 +4,12 @@
 # Depends on: poppler
 
 name=epdfview
-version=0.1.6
+version=0.1.7
 release=1
-source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2
-        $name.diff)
+source=(http://www.emma-soft.com/projects/epdfview/chrome/site/releases/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	patch -Np1 -i $SRC/$name.diff
         ./configure --prefix=/usr --disable-nls
         make
         make DESTDIR=$PKG install
