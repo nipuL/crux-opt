@@ -4,8 +4,8 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.4.3
-release=2
+version=4.5.0
+release=1
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
 build () {
@@ -22,7 +22,7 @@ build () {
 		-libdir /usr/lib \
 		-plugindir /usr/lib/qt4 \
 		-platform linux-g++ -release -shared -sm \
-		-tablet -nis -verbose -qt-gif -system-zlib \
+		-nis -verbose -qt-gif -system-zlib \
 		-system-lib{png,jpeg} \
 		-no-{cups,fast,exceptions,nas-sound,phonon} \
 		-x{cursor,inerama,kb,randr,render} \
