@@ -22,6 +22,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ldbdel
 -rwxr-xr-x	root/root	usr/bin/ldbedit
 -rwxr-xr-x	root/root	usr/bin/ldbmodify
+-rwxr-xr-x	root/root	usr/bin/ldbrename
 -rwxr-xr-x	root/root	usr/bin/ldbsearch
 -rwxr-xr-x	root/root	usr/bin/net
 -rwxr-xr-x	root/root	usr/bin/nmblookup
@@ -29,6 +30,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/pdbedit
 -rwxr-xr-x	root/root	usr/bin/profiles
 -rwxr-xr-x	root/root	usr/bin/rpcclient
+-rwxr-xr-x	root/root	usr/bin/sharesec
 -rwxr-xr-x	root/root	usr/bin/smbcacls
 -rwxr-xr-x	root/root	usr/bin/smbclient
 -rwxr-xr-x	root/root	usr/bin/smbcontrol
@@ -108,12 +110,14 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/ldbdel.1.gz
 -rw-r--r--	root/root	usr/man/man1/ldbedit.1.gz
 -rw-r--r--	root/root	usr/man/man1/ldbmodify.1.gz
+-rw-r--r--	root/root	usr/man/man1/ldbrename.1.gz
 -rw-r--r--	root/root	usr/man/man1/ldbsearch.1.gz
 -rw-r--r--	root/root	usr/man/man1/log2pcap.1.gz
 -rw-r--r--	root/root	usr/man/man1/nmblookup.1.gz
 -rw-r--r--	root/root	usr/man/man1/ntlm_auth.1.gz
 -rw-r--r--	root/root	usr/man/man1/profiles.1.gz
 -rw-r--r--	root/root	usr/man/man1/rpcclient.1.gz
+-rw-r--r--	root/root	usr/man/man1/sharesec.1.gz
 -rw-r--r--	root/root	usr/man/man1/smbcacls.1.gz
 -rw-r--r--	root/root	usr/man/man1/smbclient.1.gz
 -rw-r--r--	root/root	usr/man/man1/smbcontrol.1.gz
@@ -136,7 +140,6 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/samba.7.gz
 -rw-r--r--	root/root	usr/man/man7/winbind_krb5_locator.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/cifs.upcall.8.gz
 -rw-r--r--	root/root	usr/man/man8/eventlogadm.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ad.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_adex.8.gz
@@ -157,6 +160,8 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/tdbdump.8.gz
 -rw-r--r--	root/root	usr/man/man8/tdbtool.8.gz
 -rw-r--r--	root/root	usr/man/man8/umount.cifs.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_acl_tdb.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_acl_xattr.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_cacheprime.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_cap.8.gz

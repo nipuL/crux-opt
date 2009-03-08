@@ -1,10 +1,10 @@
 # Description: SMB server and client for unix
 # URL:         http://www.samba.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ncurses, readline
+# Depends on:  ncurses openssl readline zlib
 
 name=samba
-version=3.3.0
+version=3.3.1
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
