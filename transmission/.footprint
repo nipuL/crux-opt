@@ -27,9 +27,6 @@ drwxr-xr-x	root/root	usr/share/transmission/web/images/buttons/
 -rw-r--r--	root/root	usr/share/transmission/web/images/favicon.ico
 -rw-r--r--	root/root	usr/share/transmission/web/images/favicon.png
 drwxr-xr-x	root/root	usr/share/transmission/web/images/graphics/
--rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_firefox.gif
--rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_opera.gif
--rw-r--r--	root/root	usr/share/transmission/web/images/graphics/browser_safari.gif
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/chrome.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/filter_bar.png
 -rw-r--r--	root/root	usr/share/transmission/web/images/graphics/filter_icon.png
@@ -56,4 +53,6 @@ drwxr-xr-x	root/root	usr/share/transmission/web/javascript/jquery/
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/transmission.remote.js
 drwxr-xr-x	root/root	usr/share/transmission/web/stylesheets/
 -rw-r--r--	root/root	usr/share/transmission/web/stylesheets/common.css
+-rw-r--r--	root/root	usr/share/transmission/web/stylesheets/ie6.css
+-rw-r--r--	root/root	usr/share/transmission/web/stylesheets/ie7.css
 -rw-r--r--	root/root	usr/share/transmission/web/stylesheets/iphone.css
