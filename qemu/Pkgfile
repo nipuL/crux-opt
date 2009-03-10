@@ -2,11 +2,11 @@
 # URL: http://nongnu.org/qemu/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libsdl
-# Optional: kqemu
+# Optional: kqemu texinfo
 
 name=qemu
 version=0.10.0
-release=1
+release=2
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
 build() {
@@ -16,4 +16,9 @@ build() {
 	    --host-cc="${CC:=gcc}"
 	make
 	make DESTDIR=$PKG install
+
+	# Documentaion will only be installed if texinfo is found.
+
+	[ -d "$PKG/usr/share/man" ] && mv $PKG/usr/share/man $PKG/usr/man
+	[ -d "$PKG/usr/share/doc" ] && rm -rf $PKG/usr/share/doc
 }
