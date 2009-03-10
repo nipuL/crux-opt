@@ -224,6 +224,9 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/
 -rw-r--r--	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/histogram.a
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/histogram.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/histogram.so
+-rw-r--r--	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/hrz.a
+-rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/hrz.la
+-rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/hrz.so
 -rw-r--r--	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/html.a
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/html.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-6.4.9/modules-Q16/coders/html.so
