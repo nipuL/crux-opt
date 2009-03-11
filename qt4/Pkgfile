@@ -6,7 +6,7 @@
 
 name=qt4
 version=4.5.0
-release=1
+release=2
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
 build () {
@@ -53,7 +53,7 @@ build () {
     cd $PKG/usr/bin
     for f in assistant designer linguist lrelease lupdate moc qmake qtconfig uic
     do 
-        ln -s ../share/qt4/bin/$f $f-qt4
+        ln -s ../share/qt4/bin/$f $f
     done
 
     for f in pixeltool qdbus qdbuscpp2xml qdbusxml2cpp qt3to4 rcc uic3; do 
