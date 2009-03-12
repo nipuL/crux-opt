@@ -8,17 +8,14 @@
 name=shared-mime-info
 version=0.60
 release=1
-source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2
-        $name.diff)
+source=(http://freedesktop.org/~hadess/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
 
-	# kill nls support. don't depend on intltool.
-	patch -Np1 -i $SRC/$name.diff
-	autoreconf
-
 	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make -j1 DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/locale
 }
