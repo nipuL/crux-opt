@@ -93,6 +93,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/fileid.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/full_audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/netatalk.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/preopen.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/readahead.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/readonly.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/recycle.so
@@ -176,6 +177,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_netatalk.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_notify_fam.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_prealloc.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_preopen.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_readahead.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_readonly.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_recycle.8.gz
