@@ -2,7 +2,7 @@
 # URL: http://nongnu.org/qemu/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libsdl
-# Optional: kqemu texinfo
+# Optional: kqemu texi2html
 
 name=qemu
 version=0.10.0
@@ -19,6 +19,11 @@ build() {
 
 	# Documentaion will only be installed if texinfo is found.
 
-	[ -d "$PKG/usr/share/man" ] && mv $PKG/usr/share/man $PKG/usr/man
-	[ -d "$PKG/usr/share/doc" ] && rm -rf $PKG/usr/share/doc
+	if [ -d "$PKG/usr/share/man" ]; then
+	    mv $PKG/usr/share/man $PKG/usr/man
+	fi
+	
+	if [ -d "$PKG/usr/share/doc" ]; then 
+	    rm -rf $PKG/usr/share/doc
+	fi
 }
