@@ -48,7 +48,6 @@ drwxr-xr-x	root/root	usr/share/hal/fdi/information/10freedesktop/
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-hp.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-lenovo.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-misc.fdi
--rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-module-asus-laptop.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-module-sony-laptop.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/30-keymap-module-thinkpad-acpi.fdi
 -rw-r--r--	root/root	usr/share/hal/fdi/information/10freedesktop/99-video-quirk-default.fdi
