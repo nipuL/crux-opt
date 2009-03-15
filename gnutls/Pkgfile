@@ -5,9 +5,9 @@
 # Depends on: libgcrypt
 
 name=gnutls
-version=2.6.3
+version=2.7.6
 release=1
-source=(ftp://ftp.gnutls.org/pub/$name/$name-$version.tar.bz2)
+source=(http://alpha.gnu.org/pub/gnu/$name/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
