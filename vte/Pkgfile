@@ -1,0 +1,29 @@
+# Description: Virtual Terminal Emulator
+# URL: http://developer.gnome.org/arch/gnome/widgets/vte.html
+# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on: gtk p5-xml-parser
+
+name=vte
+version=0.17.4
+release=1
+source=(ftp://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.bz2)
+
+build() {
+  cd $name-$version
+  sed -e '/^IT_PROG_INTLTOOL/d' -i configure.in
+  sed -e '/^SUBDIRS/s/po//' -i Makefile.in
+  autoconf
+  ./configure --prefix=/usr \
+              --libexecdir=/usr/lib/$name \
+              --disable-static \
+              --disable-debugging \
+              --disable-python \
+              --disable-gtk-doc \
+              --with-xft2 \
+              --with-pangox
+  make
+  make DESTDIR=$PKG install
+  rm -rf $PKG/usr/share/{gtk-doc,locale}
+}
