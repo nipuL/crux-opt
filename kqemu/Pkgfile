@@ -1,6 +1,6 @@
 # Description: QEMU Accelerator Module
 # URL:         http://nongnu.org/qemu/
-# Maintainer:  Simone Rota, sip at crux dot nu
+# Maintainer:  Lucas Hazel, lucas at die dot net dot au
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:  
@@ -8,7 +8,7 @@
 name=kqemu
 version=1.4.0pre1
 release=1
-source=(http://nongnu.org/qemu/$name-$version.tar.gz \
+source=(http://www.nongnu.org/qemu/$name-$version.tar.gz \
 	$name.patch)
 
 build() {
