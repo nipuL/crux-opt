@@ -4,7 +4,7 @@
 # Depends on:
 
 name=jhead
-version=2.84
+version=2.87
 release=1
 source=(http://www.sentex.net/~mwandel/$name/$name-$version.tar.gz)
 
@@ -15,5 +15,5 @@ build() {
 	install -d -m 0755 $PKG/usr/bin
 	install -d -m 0755 $PKG/usr/man/man1
 	install -m 0755 $name $PKG/usr/bin/
-	install -m 0644 $name.1.gz $PKG/usr/man/man1/
+	install -m 0644 $name.1 $PKG/usr/man/man1/
 }
