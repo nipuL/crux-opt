@@ -4,14 +4,12 @@
 # Depends on:  ncurses
 
 name=clex
-version=4.1
-release=2
-source=(http://www.clex.sk/download/$name-$version.tar.gz
-        http://www.clex.sk/download/xterm_title.patch)
+version=4.2
+release=1
+source=(http://www.clex.sk/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
-    patch -p1 -i $SRC/xterm_title.patch
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
