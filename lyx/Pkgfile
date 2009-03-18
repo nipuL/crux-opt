@@ -1,0 +1,28 @@
+# Description: LaTeX enabled word processor 
+# URL: http://www.lyx.org
+# Maintainer: Johannes Winkelmann, jw at smts dot ch
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: tetex, qt4, imagemagick
+
+name=lyx
+version=1.6.1
+release=1
+source=(ftp://ftp.lyx.org/pub/$name/stable/1.6.x/$name-$version.tar.bz2)
+
+build(){
+  cd $name-$version
+  export QTDIR=/usr/share/qt4
+  ./configure --prefix=/usr --with-frontend=qt4 --disable-nls \
+      --mandir=/usr/man
+  make
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/info
+  rm -rf $PKG/usr/share/lyx/examples
+
+  # remove localization files
+  rm -rf $PKG/usr/share/lyx/bind/??/ \
+         $PKG/usr/share/lyx/doc/??/
+}
+  
