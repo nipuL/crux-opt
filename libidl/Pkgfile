@@ -5,7 +5,7 @@
 # Depends on: glib
 
 name=libidl
-version=0.8.12
+version=0.8.13
 release=1
 source=(http://download.gnome.org/sources/libIDL/0.8/libIDL-$version.tar.bz2)
 
