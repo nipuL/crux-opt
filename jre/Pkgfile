@@ -1,37 +1,28 @@
-# Maintainer: Simone Rota, sip at crux dot nu
-# Description: Java 2 Software Development Kit
-# URL: http://java.sun.com
+# Description: Java 2 Runtime Kit
+# URL:         http://java.sun.com
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Packager:    Simone Rota, sip at crux dot nu
 
 name=jre
-version=1.6.0_11
+version=1.6.0_12
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u11-dlj-linux-i586.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u12-dlj-linux-i586.bin)
 
 build(){
-	sh $SRC/jdk-*.bin --accept-license --unpack
+    sh $SRC/jdk-*.bin --accept-license --unpack
 
-	cd jdk$version
-	rm jre/lib/*/libsaproc.so
+    cd jdk$version
 
-	mkdir -p jre/man/man1	
-	man=(java javaws keytool orbd policytool \
-		rmid rmiregistry servertool tnameserv)
-	for f in ${man[@]}; do
-		cp man/man1/$f.1 jre/man/man1
-	done
+    install -d $PKG/usr/{bin,lib} jre/man/man1
+    install -m 644 man/man1/{java,javaws,keytool,orbd,rmid,rmiregistry}.1 jre/man/man1
+    install -m 644 man/man1/{servertool,policytool,tnameserv,unpack200}.1 jre/man/man1
+    mv jre $PKG/usr/lib/jre$version
 
-	mkdir -p $PKG/usr/lib
-	mv jre $PKG/usr/lib/jre$version
-	cd $PKG/usr/lib
-	ln -s jre* java
+    ln -s jre$version $PKG/usr/lib/java
+    ln -s ../lib/java/bin/java $PKG/usr/bin/java
+    ln -s ../lib/java/bin/javaws $PKG/usr/bin/javaws
+    ln -s ../lib/java/bin/keytool $PKG/usr/bin/keytool
 
-	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
-	for j in java javaws keytool; do
-		ln -s ../lib/java/bin/$j
-	done
-
-	# fix for xcb assertions
-	sed -i 's/XINERAMA/FAKEEXTN/g' \
-		$PKG/usr/lib/java/lib/i386/xawt/libmawt.so	
+    rm $PKG/usr/lib/jre$version/[A-Z]*
 }
 
