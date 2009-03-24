@@ -5,16 +5,16 @@
 # Depends on:  zlib, libtiff, libjpeg
 
 name=lcms
-version=1.17
+version=1.18
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    mkdir -p $PKG/usr/bin
+    sed -i 's/||||/||/' include/lcms.h
     ./configure --prefix=/usr \
                 --without-python \
                 --mandir=/usr/man
-    make LIBRARY_REVISION=17
+    make
     make DESTDIR=$PKG install
 }
