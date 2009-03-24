@@ -7,11 +7,10 @@
 name=lcms
 version=1.18
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+source=(http://www.littlecms.com/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    sed -i 's/||||/||/' include/lcms.h
     ./configure --prefix=/usr \
                 --without-python \
                 --mandir=/usr/man
