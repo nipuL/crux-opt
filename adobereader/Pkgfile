@@ -5,9 +5,9 @@
 # Depends on: gtk, libstdc++-compat
 
 name=adobereader
-version=8.1.3
+version=8.1.4
 release=1
-source=(http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.3/enu/AdobeReader_enu-$version-1.i486.tar.gz)
+source=(http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.4/enu/AdobeReader_enu-$version-1.i486.tar.gz)
 PKGMK_NO_STRIP="yes"
 
 build() {
