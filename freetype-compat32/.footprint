@@ -7,8 +7,8 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib32/
 -rw-r--r--	root/root	usr/lib32/libfreetype.a
 -rwxr-xr-x	root/root	usr/lib32/libfreetype.la
-lrwxrwxrwx	root/root	usr/lib32/libfreetype.so -> libfreetype.so.6.3.19
-lrwxrwxrwx	root/root	usr/lib32/libfreetype.so.6 -> libfreetype.so.6.3.19
--rwxr-xr-x	root/root	usr/lib32/libfreetype.so.6.3.19
+lrwxrwxrwx	root/root	usr/lib32/libfreetype.so -> libfreetype.so.6.3.20
+lrwxrwxrwx	root/root	usr/lib32/libfreetype.so.6 -> libfreetype.so.6.3.20
+-rwxr-xr-x	root/root	usr/lib32/libfreetype.so.6.3.20
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 -rw-r--r--	root/root	usr/lib32/pkgconfig/freetype2.pc

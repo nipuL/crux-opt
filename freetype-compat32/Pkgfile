@@ -4,7 +4,7 @@
 # Depends on:  freetype zlib-compat32
 
 name=freetype-compat32
-version=2.3.8
+version=2.3.9
 release=1
 source=(http://download.savannah.gnu.org/releases/freetype/freetype-$version.tar.bz2
     $name.conf)
@@ -15,6 +15,7 @@ build() {
 		--libdir=/usr/lib32 \
 		--with-zlib \
 		--disable-nls
+    sed 's/as --32/"&"/' -i builds/unix/libtool
     make
     make DESTDIR=$PKG install
     mv $PKG/usr/bin/freetype-config $PKG/usr/bin/freetype-config32
