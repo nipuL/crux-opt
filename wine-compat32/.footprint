@@ -7,9 +7,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/regsvr32
 -rwxr-xr-x	root/root	usr/bin/widl
 -rwxr-xr-x	root/root	usr/bin/wine
--rwxr-xr-x	root/root	usr/bin/wine-kthread
 -rwxr-xr-x	root/root	usr/bin/wine-preloader
--rwxr-xr-x	root/root	usr/bin/wine-pthread
 -rwxr-xr-x	root/root	usr/bin/wineboot
 -rwxr-xr-x	root/root	usr/bin/winebuild
 -rwxr-xr-x	root/root	usr/bin/winecfg
