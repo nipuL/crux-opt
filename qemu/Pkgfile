@@ -5,8 +5,8 @@
 # Optional: kqemu texi2html
 
 name=qemu
-version=0.10.0
-release=2
+version=0.10.1
+release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
 build() {
