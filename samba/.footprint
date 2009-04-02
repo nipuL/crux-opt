@@ -87,6 +87,7 @@ drwxr-xr-x	root/root	usr/lib/samba/vfs/
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/cap.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/default_quota.so
+-rwxr-xr-x	root/root	usr/lib/samba/vfs/dirsort.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/expand_msdfs.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/extd_audit.so
 -rwxr-xr-x	root/root	usr/lib/samba/vfs/fake_perms.so
@@ -169,6 +170,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/vfs_catia.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_commit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_default_quota.8.gz
+-rw-r--r--	root/root	usr/man/man8/vfs_dirsort.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_extd_audit.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_fake_perms.8.gz
 -rw-r--r--	root/root	usr/man/man8/vfs_fileid.8.gz
