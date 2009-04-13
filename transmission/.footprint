@@ -42,7 +42,6 @@ drwxr-xr-x	root/root	usr/share/transmission/web/javascript/
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/dialog.js
 drwxr-xr-x	root/root	usr/share/transmission/web/javascript/jquery/
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.contextmenu.min.js
--rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.dimensions.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.form.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.min.js
 -rw-r--r--	root/root	usr/share/transmission/web/javascript/jquery/jquery.transmenu.min.js
