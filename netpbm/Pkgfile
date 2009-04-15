@@ -12,6 +12,7 @@ source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
 
 build() {
 	export MAKEFLAGS="$MAKEFLAGS -j1"
+	export CFLAGS="$CFLAGS -fPIC"
 
 	cd netpbm-$version
 #	patch -p0 -i $SRC/$name-$version.diff
