@@ -1,0 +1,24 @@
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Description: A toolkit for manipulation of graphic images
+# URL: http://netpbm.sf.net
+# Depends on: ghostscript
+
+name=netpbm
+version=10.35.61
+release=1
+source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
+	Makefile.config)
+
+build() {
+	export MAKEFLAGS="$MAKEFLAGS -j1"
+
+	cd netpbm-$version
+#	patch -p0 -i $SRC/$name-$version.diff
+	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/Makefile.config > Makefile.config
+	make
+	make pkgdir=$PKG/usr package
+	mkdir $PKG/usr/share
+	mv $PKG/usr/misc $PKG/usr/share/netpbm
+	rm -rf $PKG/usr/{README,VERSION,link,man,config_template,pkginfo,bin/doc.url}
+}
