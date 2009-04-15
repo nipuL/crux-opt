@@ -1297,7 +1297,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/json/
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.1-py2.6.egg-info
+-rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.2-py2.6.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bytesio.so
@@ -1422,9 +1422,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-tk/
 -rw-r--r--	root/root	usr/lib/python2.6/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.1.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.2.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.1.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.2.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyo
@@ -1495,6 +1495,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/fixes/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_intern.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_intern.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_intern.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_isinstance.py
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_isinstance.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_isinstance.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_itertools.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_itertools.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_itertools.pyo
@@ -1537,6 +1540,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/fixes/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_raw_input.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_raw_input.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_raw_input.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_reduce.py
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_reduce.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_reduce.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_renames.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_renames.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/fixes/fix_renames.pyo
@@ -3317,6 +3323,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport_support.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport_support.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_zipimport_support.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zlib.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zlib.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_zlib.pyo
@@ -3347,6 +3356,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/xmltests.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/xmltests.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/xmltests.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/zipdir.zip
 -rw-r--r--	root/root	usr/lib/python2.6/textwrap.py
 -rw-r--r--	root/root	usr/lib/python2.6/textwrap.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/textwrap.pyo
