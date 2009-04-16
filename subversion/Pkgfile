@@ -3,10 +3,10 @@
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on:  apr, neon, expat
+# Depends on: apr, neon, expat
 
 name=subversion
-version=1.5.6
+version=1.6.1
 release=1
 source=(http://subversion.tigris.org/downloads/$name-$version.tar.bz2)
 
