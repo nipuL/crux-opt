@@ -938,8 +938,6 @@ drwxr-xr-x	root/root	usr/share/ri/1.8/system/ERB/Compiler/ExplicitScanner/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/ERB/Compiler/ExplicitScanner/cdesc-ExplicitScanner.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.8/system/ERB/Compiler/PercentLine/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/ERB/Compiler/PercentLine/cdesc-PercentLine.yaml
-drwxr-xr-x	root/root	usr/share/ri/1.8/system/ERB/Compiler/PercentScanner/
--rw-r--r--	root/root	usr/share/ri/1.8/system/ERB/Compiler/PercentScanner/cdesc-PercentScanner.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.8/system/ERB/Compiler/Scanner/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/ERB/Compiler/Scanner/cdesc-Scanner.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.8/system/ERB/Compiler/SimpleScanner/
@@ -5026,11 +5024,14 @@ drwxr-xr-x	root/root	usr/share/ri/1.8/system/REXML/Document/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/clone-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/doctype-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/encoding-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/entity_expansion_limit%3d-c.yaml
+-rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/entity_expansion_limit-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/expanded_name-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/name-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/new-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/node_type-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/parse_stream-c.yaml
+-rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/record_entity_expansion-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/root-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/stand_alone%3f-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/REXML/Document/version-i.yaml
@@ -10682,7 +10683,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.8/system/Vector/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/covector-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/each2-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/elements-c.yaml
--rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/eqn%3f-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/eql%3f-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/hash-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/init_elements-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/Vector/inner_product-i.yaml
