@@ -1,13 +1,13 @@
-# Maintainer: Simone Rota, sip at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Description: Java 2 Software Development Kit
 # URL: http://java.sun.com
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.6.0_12
+version=1.6.0_13
 release=1
-#source=(http://download.java.net/dlj/binaries/jdk-6u10-dlj-linux-amd64.bin)
-source=(http://www.java.net/download/jdk6/6u12/promoted/b02/binaries/jdk-6u12-ea-bin-b02-linux-amd64-08_dec_2008.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u13-dlj-linux-amd64.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
@@ -26,7 +26,7 @@ build(){
 	ln -s jdk* java
 
 	# generate classes.jsa
- 	(cd java; ./bin/java -Xshare:dump)
+	(cd java; ./bin/java -Xshare:dump)
 
 	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
 	for j in java javac javah javap javaws jar keytool; do
