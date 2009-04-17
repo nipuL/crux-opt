@@ -4,7 +4,7 @@
 # Depends on:  openssl, zlib
 
 name=stunnel
-version=4.26
+version=4.27
 release=1
 source=(http://www.stunnel.org/download/stunnel/src/$name-$version.tar.gz \
         $name-config.patch $name)
@@ -18,8 +18,7 @@ build () {
                 --sysconfdir=/etc \
                 --localstatedir=/var \
                 --with-ssl=/usr \
-                --enable-ipv6 \
-                --disable-libwrap
+                --enable-ipv6 
     make
 
     install -D -m 0755 src/stunnel $PKG/usr/sbin/stunnel
