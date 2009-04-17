@@ -1,4 +1,4 @@
-README for dovecot 1.0.x
+README for dovecot 1.1.x
 
 REQUIREMENTS
 
@@ -11,7 +11,3 @@ PRE-INSTALL
 POST-INSTALL
 
 PRECAUTION
-   The configuration file has had a lot of changes between 0.99 and 1.0, 
-   so it's better to just modify the included dovecot.conf file manually
-   than to update the existing one.
-   See http://wiki.dovecot.org/moin.cgi/UpgradingDovecot
