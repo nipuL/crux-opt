@@ -6,7 +6,7 @@
 name=lsof
 version=4.82
 release=1
-source=(ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_$version.tar.bz2)
+source=(ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/lsof_$version.tar.bz2)
 
 build() {
     cd lsof_${version}
