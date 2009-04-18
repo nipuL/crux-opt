@@ -5,17 +5,16 @@
 # Depends on: gtk, atk-compat32, libtiff-compat32, pango-compat32, xorg-libsm-compat32, xorg-libxcursor-compat32, xorg-libxinerama-compat32, xorg-libxrandr-compat32
 
 name=gtk-compat32
-version=2.16.0
+version=2.16.1
 release=1
-source=(http://download.gnome.org/sources/gtk+/2.14/gtk+-$version.tar.bz2 \
+source=(http://download.gnome.org/sources/gtk+/2.16/gtk+-$version.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules \
-	gtk-register-32.sh gtkclipboard.patch)
+	gtk-register-32.sh)
 
 compat32_dep_check $name cups || exit 1
 
 build () {
     cd gtk+-$version
-    patch -p1 -i $SRC/gtkclipboard.patch
     ./configure --prefix=/usr \
 	--libdir=/usr/lib32 \
 	--x-libraries=/usr/lib32 \
