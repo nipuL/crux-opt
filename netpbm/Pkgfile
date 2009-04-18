@@ -5,7 +5,7 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.35.61
+version=10.35.62
 release=1
 source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
 	Makefile.config)
@@ -15,7 +15,6 @@ build() {
 	export CFLAGS="$CFLAGS -fPIC"
 
 	cd netpbm-$version
-#	patch -p0 -i $SRC/$name-$version.diff
 	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/Makefile.config > Makefile.config
 	make
 	make pkgdir=$PKG/usr package
