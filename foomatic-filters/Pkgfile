@@ -4,7 +4,7 @@
 # Depends on:  ghostscript
 
 name=foomatic-filters
-version=4.0.0
+version=4.0.1
 release=1
 source=(http://www.linuxprinting.org/download/foomatic/$name-$version.tar.gz)
 
