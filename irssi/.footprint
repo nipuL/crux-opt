@@ -8,9 +8,7 @@ drwxr-xr-x	root/root	usr/lib/irssi/
 drwxr-xr-x	root/root	usr/lib/irssi/modules/
 -rw-r--r--	root/root	usr/lib/irssi/modules/libirc_proxy.a
 -rwxr-xr-x	root/root	usr/lib/irssi/modules/libirc_proxy.la
-lrwxrwxrwx	root/root	usr/lib/irssi/modules/libirc_proxy.so -> libirc_proxy.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/irssi/modules/libirc_proxy.so.0 -> libirc_proxy.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/irssi/modules/libirc_proxy.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/irssi/modules/libirc_proxy.so
 drwxr-xr-x	root/root	usr/lib/perl5/
 drwxr-xr-x	root/root	usr/lib/perl5/5.10.0/
 drwxr-xr-x	root/root	usr/lib/perl5/5.10.0/linux/
@@ -50,7 +48,6 @@ drwxr-xr-x	root/root	usr/share/irssi/help/
 -rw-r--r--	root/root	usr/share/irssi/help/connect
 -rw-r--r--	root/root	usr/share/irssi/help/ctcp
 -rw-r--r--	root/root	usr/share/irssi/help/cycle
--rw-r--r--	root/root	usr/share/irssi/help/date
 -rw-r--r--	root/root	usr/share/irssi/help/dcc
 -rw-r--r--	root/root	usr/share/irssi/help/dehilight
 -rw-r--r--	root/root	usr/share/irssi/help/deop
@@ -61,7 +58,6 @@ drwxr-xr-x	root/root	usr/share/irssi/help/
 -rw-r--r--	root/root	usr/share/irssi/help/eval
 -rw-r--r--	root/root	usr/share/irssi/help/exec
 -rw-r--r--	root/root	usr/share/irssi/help/flushbuffer
--rw-r--r--	root/root	usr/share/irssi/help/flushbuffers
 -rw-r--r--	root/root	usr/share/irssi/help/format
 -rw-r--r--	root/root	usr/share/irssi/help/hash
 -rw-r--r--	root/root	usr/share/irssi/help/help
@@ -149,7 +145,6 @@ drwxr-xr-x	root/root	usr/share/irssi/help/
 -rw-r--r--	root/root	usr/share/irssi/help/voice
 -rw-r--r--	root/root	usr/share/irssi/help/wait
 -rw-r--r--	root/root	usr/share/irssi/help/wall
--rw-r--r--	root/root	usr/share/irssi/help/wallchops
 -rw-r--r--	root/root	usr/share/irssi/help/wallops
 -rw-r--r--	root/root	usr/share/irssi/help/watch
 -rw-r--r--	root/root	usr/share/irssi/help/who
@@ -170,6 +165,7 @@ drwxr-xr-x	root/root	usr/share/irssi/scripts/
 -rw-r--r--	root/root	usr/share/irssi/scripts/msg-event.pl
 -rw-r--r--	root/root	usr/share/irssi/scripts/quitmsg.pl
 -rw-r--r--	root/root	usr/share/irssi/scripts/redirect.pl
+-rw-r--r--	root/root	usr/share/irssi/scripts/sb_search.pl
 -rw-r--r--	root/root	usr/share/irssi/scripts/scriptassist.pl
 -rw-r--r--	root/root	usr/share/irssi/scripts/splitlong.pl
 -rw-r--r--	root/root	usr/share/irssi/scripts/usercount.pl
