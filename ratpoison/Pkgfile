@@ -5,9 +5,9 @@
 # Depends on: xorg-libxinerama, xorg-libxtst
 
 name=ratpoison
-version=1.4.3
-release=2
-source=(http://savannah.nongnu.org/download/ratpoison/ratpoison-1.4.3.tar.gz)
+version=1.4.4
+release=1
+source=(http://savannah.nongnu.org/download/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
