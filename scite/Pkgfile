@@ -4,7 +4,7 @@
 # Depends on:  gtk
 
 name=scite
-version=177
+version=178
 release=1
 source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.tgz)
 
@@ -16,8 +16,7 @@ build () {
     cd $SRC/$name/gtk
     sed -i "s/-Os/$CXXFLAGS/" makefile
     make GTK2=1 prefix=/usr
-    mkdir -p $PKG/usr/{bin,share/pixmaps}
-    make prefix=$PKG/usr install
+    make DESTDIR=$PKG install
 
     sed -i '/^#buffers/s/#//
             /^#save.recent/s/#//
