@@ -3,7 +3,7 @@
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Simone Rota, sip at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: apr, neon, expat
+# Depends on: apr, neon, expat, sqlite3
 
 name=subversion
 version=1.6.1
