@@ -4,7 +4,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=quota
-version=3.16
+version=3.17
 release=1
 source=(http://dl.sourceforge.net/sourceforge/linuxquota/$name-$version.tar.gz \
         warnquota.conf)
