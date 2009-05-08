@@ -1,0 +1,16 @@
+# Description: Remote lpd client
+# URL: http://truffula.com/rlpr/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: 
+
+name=rlpr
+version=2.06
+release=1
+source=(http://truffula.com/$name/$name-$version.tar.gz)
+
+build() {
+	cd rlpr-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
