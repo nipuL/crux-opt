@@ -12,7 +12,7 @@ drwxr-xr-x	root/root	usr/share/pear/php/.registry/
 -rw-r--r--	root/root	usr/share/pear/php/.registry/console_getopt.reg
 -rw-r--r--	root/root	usr/share/pear/php/.registry/pear.reg
 drwxr-xr-x	root/root	usr/share/pear/php/Archive/
--rw-r--r--	root/root	usr/share/pear/php/Archive/Tar.php
+-rwxr-xr-x	root/root	usr/share/pear/php/Archive/Tar.php
 drwxr-xr-x	root/root	usr/share/pear/php/Console/
 -rw-r--r--	root/root	usr/share/pear/php/Console/Getopt.php
 drwxr-xr-x	root/root	usr/share/pear/php/OS/
@@ -51,7 +51,6 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Command/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Command/Test.xml
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Common.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Config.php
--rw-r--r--	root/root	usr/share/pear/php/PEAR/Dependency.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Dependency2.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/DependencyDB.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Downloader.php
@@ -59,6 +58,7 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Downloader/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Downloader/Package.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/ErrorStack.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Exception.php
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/FixPHP5PEARWarnings.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Frontend.php
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Frontend/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Frontend/CLI.php
@@ -66,6 +66,8 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Frontend/
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Installer/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role.php
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Installer/Role/
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Cfg.php
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Cfg.xml
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Common.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Data.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Data.xml
@@ -81,6 +83,8 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Installer/Role/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Src.xml
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Test.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Test.xml
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Www.php
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/Installer/Role/Www.xml
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/PackageFile.php
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/PackageFile/
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/PackageFile/Generator/
@@ -99,8 +103,8 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/PackageFile/v2/
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/REST/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/REST/10.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/REST/11.php
+-rw-r--r--	root/root	usr/share/pear/php/PEAR/REST/13.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Registry.php
--rw-r--r--	root/root	usr/share/pear/php/PEAR/Remote.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/RunTest.php
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Task/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Task/Common.php
@@ -120,6 +124,7 @@ drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Task/Windowseol/
 drwxr-xr-x	root/root	usr/share/pear/php/PEAR/Validator/
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/Validator/PECL.php
 -rw-r--r--	root/root	usr/share/pear/php/PEAR/XMLParser.php
+-rw-r--r--	root/root	usr/share/pear/php/PEAR5.php
 -rw-r--r--	root/root	usr/share/pear/php/System.php
 -rw-r--r--	root/root	usr/share/pear/php/pearcmd.php
 -rw-r--r--	root/root	usr/share/pear/php/peclcmd.php
