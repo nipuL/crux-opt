@@ -5,34 +5,34 @@
 # Depends on: mesa3d, xorg-libxaw, xorg-libxcursor, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libxrandr
 
 name=openoffice
-version=3.0.1
+version=3.1.0
 release=1
 source=(http://openoffice-atl.osuosl.org/stable/$version/OOo_${version}_LinuxX86-64_install_en-US_deb.tar.gz)
 
 build() {
-	mkdir $SRC/tmp
-	export TMPDIR=$SRC/tmp
-	cd OO*/DEBS
-	for f in *.deb; do ar x $f; tar zxvf data.tar.gz -C $PKG; done
-	
-	rm -rf $PKG/usr/*
-	mkdir -p $PKG/usr/lib/openoffice
-	mv $PKG/opt/openoffice*/* $PKG/usr/lib/openoffice
-	cd $PKG/usr/lib/openoffice
-	ln -sf basis3.0 basis-link
-
-	mkdir -p $PKG/usr/bin
-	ln -sf /usr/lib/openoffice/program/soffice $PKG/usr/bin/soffice
-	ln -sf /usr/lib/openoffice/program/spadmin $PKG/usr/bin/spadmin
-
-	rm -r $PKG/opt
+    mkdir $SRC/tmp
+    export TMPDIR=$SRC/tmp
+    cd OO*/DEBS
+    for f in *.deb; do ar x $f; tar zxvf data.tar.gz -C $PKG; done
+    
+    rm -rf $PKG/usr/*
+    mkdir -p $PKG/usr/lib/openoffice
+    mv $PKG/opt/openoffice*/* $PKG/usr/lib/openoffice
+    cd $PKG/usr/lib/openoffice
+    ln -sf basis3.1 basis-link
+    
+    mkdir -p $PKG/usr/bin
+    ln -sf /usr/lib/openoffice/program/soffice $PKG/usr/bin/soffice
+    ln -sf /usr/lib/openoffice/program/spadmin $PKG/usr/bin/spadmin
+    
+    rm -r $PKG/opt
     rm $PKG/usr/lib/openoffice/{README,README.html,THIRDPARTYLICENSEREADME.html}
-    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/distutils/README
-    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/idlelib/{ChangeLog,NEWS.txt,README.txt,TODO.txt}
-    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/site-packages/README
-    rm $PKG/usr/lib/openoffice/basis3.0/program/python-core-2.3.4/lib/test/README
+    rm $PKG/usr/lib/openoffice/basis3.1/program/python-core-2.6.1/lib/distutils/README
+    rm $PKG/usr/lib/openoffice/basis3.1/program/python-core-2.6.1/lib/idlelib/{ChangeLog,NEWS.txt,README.txt,TODO.txt}
+    rm $PKG/usr/lib/openoffice/basis3.1/program/python-core-2.6.1/lib/site-packages/README
+    rm $PKG/usr/lib/openoffice/basis3.1/program/python-core-2.6.1/lib/test/README
     rm -rf $PKG/usr/lib/openoffice/readmes
     rm -rf $PKG/usr/lib/openoffice/share/readme
-	chown root.root $PKG -R
+    chown root.root $PKG -R
 
 }
