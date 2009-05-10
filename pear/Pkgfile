@@ -1,7 +1,6 @@
 # Description: Framework and distribution system PHP
 # URL: http://pear.php.net/
-# Maintainer: Simone Rota, sip at crux dot nu
-# Packager: Simone Rota, sip at crux dot nu
+# Maintainer: Antti Nykanen, aon at iki dot fi
 # Depends on: mod_php
 
 name=pear
