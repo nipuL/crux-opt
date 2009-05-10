@@ -17,6 +17,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-archimport
 -rwxr-xr-x	root/root	usr/lib/git-core/git-archive
 -rwxr-xr-x	root/root	usr/lib/git-core/git-bisect
+-rwxr-xr-x	root/root	usr/lib/git-core/git-bisect--helper
 -rwxr-xr-x	root/root	usr/lib/git-core/git-blame
 -rwxr-xr-x	root/root	usr/lib/git-core/git-branch
 -rwxr-xr-x	root/root	usr/lib/git-core/git-bundle
@@ -43,6 +44,8 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-diff-files
 -rwxr-xr-x	root/root	usr/lib/git-core/git-diff-index
 -rwxr-xr-x	root/root	usr/lib/git-core/git-diff-tree
+-rwxr-xr-x	root/root	usr/lib/git-core/git-difftool
+-rwxr-xr-x	root/root	usr/lib/git-core/git-difftool--helper
 -rwxr-xr-x	root/root	usr/lib/git-core/git-fast-export
 -rwxr-xr-x	root/root	usr/lib/git-core/git-fast-import
 -rwxr-xr-x	root/root	usr/lib/git-core/git-fetch
@@ -87,6 +90,7 @@ drwxr-xr-x	root/root	usr/lib/git-core/
 -rwxr-xr-x	root/root	usr/lib/git-core/git-merge-subtree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-merge-tree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-mergetool
+-rwxr-xr-x	root/root	usr/lib/git-core/git-mergetool--lib
 -rwxr-xr-x	root/root	usr/lib/git-core/git-mktag
 -rwxr-xr-x	root/root	usr/lib/git-core/git-mktree
 -rwxr-xr-x	root/root	usr/lib/git-core/git-mv
@@ -194,6 +198,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-diff-index.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-diff.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-difftool.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fast-export.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fast-import.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-fetch-pack.1.gz
@@ -230,6 +235,7 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/git-merge-one-file.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-merge-tree.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-merge.1.gz
+-rw-r--r--	root/root	usr/man/man1/git-mergetool--lib.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mergetool.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mktag.1.gz
 -rw-r--r--	root/root	usr/man/man1/git-mktree.1.gz
