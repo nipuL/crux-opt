@@ -9,7 +9,7 @@ name=xterm
 version=243
 release=1
 source=(ftp://invisible-island.net/$name/$name-$version.tgz \
-	configure.diff)
+        configure.diff)
 
 build() {
     cd $name-$version
