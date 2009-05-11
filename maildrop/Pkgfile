@@ -4,8 +4,8 @@
 # Depends on:  gdbm libpcre
 
 name=maildrop
-version=2.0.4
-release=3
+version=2.1.0
+release=1
 source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2)
 
 build () {
@@ -14,6 +14,7 @@ build () {
     sed -i '/^MAILDROPMAN/s/=/= makedat.1/' Makefile.in
 
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --with-db=gdbm \
                 --disable-tempdir
     make
@@ -21,5 +22,4 @@ build () {
 
     chown root:root $PKG/usr/bin/{maildrop,lockmail}
     rm -r $PKG/usr/{include,lib,man/man3,share}
-
 }
