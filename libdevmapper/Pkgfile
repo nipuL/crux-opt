@@ -4,12 +4,12 @@
 # Packager: Mark Rosenstand, mark at borkware dot net
 
 name=libdevmapper
-version=1.02.29
+version=1.02.31
 release=1
-source=(ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.43.tgz)
+source=(ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.45.tgz)
 
 build() {
-    cd LVM2.2.02.43
+    cd LVM2.2.02.45
 
     ./configure \
 	--prefix=/usr \
