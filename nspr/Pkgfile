@@ -4,9 +4,9 @@
 # Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
 
 name=nspr
-version=4.7.1
-release=2
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.1/src/$name-$version.tar.gz
+version=4.7.4
+release=1
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.4/src/$name-$version.tar.gz
         $name.pc.in)
 
 build() {
