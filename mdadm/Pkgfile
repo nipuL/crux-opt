@@ -4,10 +4,12 @@
 
 name=mdadm
 version=2.6.9
-release=1
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
+release=2
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
+        $name-$version-gcc44.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/$name-$version-gcc44.patch
     make CXFLAGS="$CFLAGS" DESTDIR=$PKG MANDIR=/usr/man install
 }
