@@ -13,38 +13,38 @@ drwxr-xr-x	root/root	usr/include/sasl/
 -rw-r--r--	root/root	usr/include/sasl/saslutil.h
 drwxr-xr-x	root/root	usr/lib/
 -rwxr-xr-x	root/root	usr/lib/libsasl2.la
-lrwxrwxrwx	root/root	usr/lib/libsasl2.so -> libsasl2.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/libsasl2.so.2 -> libsasl2.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/libsasl2.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/libsasl2.so -> libsasl2.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/libsasl2.so.2 -> libsasl2.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/libsasl2.so.2.0.23
 drwxr-xr-x	root/root	usr/lib/sasl2/
 -rwxr-xr-x	root/root	usr/lib/sasl2/libanonymous.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libanonymous.so -> libanonymous.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libanonymous.so.2 -> libanonymous.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libanonymous.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libanonymous.so -> libanonymous.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libanonymous.so.2 -> libanonymous.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libanonymous.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/libcrammd5.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libcrammd5.so -> libcrammd5.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libcrammd5.so.2 -> libcrammd5.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libcrammd5.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libcrammd5.so -> libcrammd5.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libcrammd5.so.2 -> libcrammd5.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libcrammd5.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/libdigestmd5.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libdigestmd5.so -> libdigestmd5.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libdigestmd5.so.2 -> libdigestmd5.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libdigestmd5.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libdigestmd5.so -> libdigestmd5.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libdigestmd5.so.2 -> libdigestmd5.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libdigestmd5.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/liblogin.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/liblogin.so -> liblogin.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/liblogin.so.2 -> liblogin.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/liblogin.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/liblogin.so -> liblogin.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/liblogin.so.2 -> liblogin.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/liblogin.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/libotp.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libotp.so -> libotp.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libotp.so.2 -> libotp.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libotp.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libotp.so -> libotp.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libotp.so.2 -> libotp.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libotp.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/libplain.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libplain.so -> libplain.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libplain.so.2 -> libplain.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libplain.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libplain.so -> libplain.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libplain.so.2 -> libplain.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libplain.so.2.0.23
 -rwxr-xr-x	root/root	usr/lib/sasl2/libsasldb.la
-lrwxrwxrwx	root/root	usr/lib/sasl2/libsasldb.so -> libsasldb.so.2.0.22
-lrwxrwxrwx	root/root	usr/lib/sasl2/libsasldb.so.2 -> libsasldb.so.2.0.22
--rwxr-xr-x	root/root	usr/lib/sasl2/libsasldb.so.2.0.22
+lrwxrwxrwx	root/root	usr/lib/sasl2/libsasldb.so -> libsasldb.so.2.0.23
+lrwxrwxrwx	root/root	usr/lib/sasl2/libsasldb.so.2 -> libsasldb.so.2.0.23
+-rwxr-xr-x	root/root	usr/lib/sasl2/libsasldb.so.2.0.23
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/sasl.3.gz
