@@ -6,7 +6,7 @@
 # Depends on:  libtool libusb libjpeg libexif
 
 name=libgphoto2
-version=2.4.5
+version=2.4.6
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
 
