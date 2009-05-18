@@ -5,17 +5,13 @@
 # Depends on: db, openssl
 
 name=cyrus-sasl
-version=2.1.22
-release=2
+version=2.1.23
+release=1
 source=(ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
-	$name-$version-crypt.patch \
         saslauthd)
 
 build(){
 	cd $name-$version
-
-        # fix the crypt function
-	patch -p1 < $SRC/$name-$version-crypt.patch
 
 	./configure \
 	    --prefix=/usr \

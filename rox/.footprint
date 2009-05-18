@@ -7,7 +7,6 @@ drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/
 -rwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/AppRun
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/Options.xml
 -rwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX-Filer
--rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX-Filer-src.xml
 drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/
 drwxr-xr-x	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/
 -rw-r--r--	root/root	usr/ROX/Apps/ROX-Filer/ROX/MIME/application-msword.png

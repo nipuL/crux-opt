@@ -5,13 +5,12 @@
 # Depends on: wxgtk, crypto++
 
 name=amule
-version=2.2.4
+version=2.2.5
 release=1
 source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
 build() {
 	cd aMule-$version
-#	patch -p0 -i $SRC/$name-$version-configure.patch
 	export CFLAGS="${CFLAGS//-fstack-protector/}"
 	export CXXFLAGS="${CXXFLAGS//-fstack-protector/}"
 	./configure 	--prefix=/usr \
@@ -19,5 +18,5 @@ build() {
 			--disable-nls
 	make
 	make install DESTDIR=$PKG
-	rm -rf $PKG/usr/{share/{doc,amule},man,lib,bin/autostart-xas}
+	rm -r $PKG/usr/{share/{doc,amule},man,lib,bin/autostart-xas}
 }
