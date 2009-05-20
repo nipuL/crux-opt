@@ -5,35 +5,35 @@
 # Depends on: dbus-glib, hal-info
 
 name=hal
-version=0.5.11
-release=6
+version=0.5.12
+release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
 	hal.conf
 	rc.hald)
 
 build() {
-	cd $name-$version
-	sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
-		-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
-	./configure --prefix=/usr \
-		--mandir=/usr/man \
-		--libexecdir=/usr/lib/$name \
-		--localstatedir=/var \
-		--with-hal-user=haldaemon \
-		--with-hal-group=haldaemon \
-		--with-dbus-sys=/usr/etc/dbus-1/system.d \
-		--with-hwdata=/usr/share \
-		--disable-policy-kit \
-		--disable-console-kit
-	sed -i -e '/device-manager/d' tools/Makefile
-	make
-	make DESTDIR=$PKG install
-	install -D -o root -g root -m 0755 $SRC/rc.hald \
-		$PKG/etc/rc.d/hald
-	rm -rf $PKG/usr/share/{doc,locale}
-	rm -rf $PKG/usr/share/gtk-doc
-	mv $PKG/usr/etc/udev $PKG/etc/
-	cp $SRC/hal.conf $PKG/usr/etc/dbus-1/system.d/
-	mkdir -p $PKG/var/lib/hal
-	chown haldaemon:haldaemon $PKG/var/lib/hal
+    cd $name-$version
+    sed -i -e 's/USE_NLS=yes/USE_NLS=no/' \
+	-e 's/ENABLE_NLS 1/ENABLE_NLS 0/' configure
+    ./configure --prefix=/usr \
+	--mandir=/usr/man \
+	--libexecdir=/usr/lib/$name \
+	--localstatedir=/var \
+	--with-hal-user=haldaemon \
+	--with-hal-group=haldaemon \
+	--with-dbus-sys=/usr/etc/dbus-1/system.d \
+	--with-hwdata=/usr/share \
+	--disable-policy-kit \
+	--disable-console-kit
+    sed -i -e '/device-manager/d' tools/Makefile
+    make
+    make DESTDIR=$PKG install
+    install -D -o root -g root -m 0755 $SRC/rc.hald \
+	$PKG/etc/rc.d/hald
+    mv $PKG/usr/udev $PKG/etc/
+    rm -rf $PKG/usr/share/{doc,locale}
+    rm -rf $PKG/usr/share/gtk-doc
+    cp $SRC/hal.conf $PKG/usr/etc/dbus-1/system.d/
+    mkdir -p $PKG/var/lib/hal
+    chown haldaemon:haldaemon $PKG/var/lib/hal
 }
