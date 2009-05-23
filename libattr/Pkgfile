@@ -5,7 +5,7 @@
 
 name=libattr
 version=2.4.43-1
-release=1
+release=2
 source=(ftp://oss.sgi.com/projects/xfs/cmd_tars/attr_${version}.tar.gz)
 
 build() {
@@ -20,4 +20,6 @@ build() {
 
 	# category 2 manuals are included in core/man-pages
 	rm -rf $PKG/usr/man/man2
+
+	sed -i "s:libdir=.*:libdir='/usr/lib':" $PKG/usr/lib/libattr.la
 }
