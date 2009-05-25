@@ -4,13 +4,13 @@
 # Depends on:  nspr sqlite3
 
 name=nss
-version=3.12.0
+version=3.12.3
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/src/$name-3.12.tar.gz \
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_3_RTM/src/$name-3.12.3.tar.bz2 \
         nss-config.in)
 
 build() {
-    cd $name-${version%.*}
+    cd $name-$version
 
     local file
 
