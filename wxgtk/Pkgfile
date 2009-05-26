@@ -1,0 +1,29 @@
+# Description: wxWidgets for GTK+
+# URL: http://www.wxwidgets.org/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on: gtk
+
+name=wxgtk
+version=2.8.10
+release=1
+source=(http://dl.sf.net/wxwindows/wxGTK-$version.tar.bz2)
+# alternate mirror
+# ftp://biolpc22.york.ac.uk/pub/$version/wxGTK-$version.tar.bz2
+
+build() {
+	export LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
+	cd wxGTK-$version
+	./configure \
+		--prefix=/usr \
+		--enable-gtk2 \
+		--enable-unicode \
+		--with-opengl
+	make
+	make prefix=$PKG/usr install
+	cd contrib
+	make
+	make prefix=$PKG/usr install
+	ln -sf /usr/lib/wx/config/gtk2-unicode-release-2.8 $PKG/usr/bin/wx-config
+	rm -rf $PKG/usr/share/locale $PKG/usr/share/bakefile
+}
