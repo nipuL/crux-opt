@@ -1,9 +1,0 @@
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/gtklp
--rwxr-xr-x	root/root	usr/bin/gtklpq
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man1/
--rw-r--r--	root/root	usr/man/man1/gtklp.1.gz
--rw-r--r--	root/root	usr/man/man1/gtklpq.1.gz
-drwxr-xr-x	root/root	usr/share/
