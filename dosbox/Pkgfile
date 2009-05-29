@@ -5,14 +5,12 @@
 # Depends on: libsdl
 
 name=dosbox
-version=0.72
-release=2
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
-        $name.diff)
+version=0.73
+release=1
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
-	patch -Np1 -i $SRC/$name.diff
 	./configure --prefix=/usr --mandir=/usr/man
 	make
 	make DESTDIR=$PKG install
