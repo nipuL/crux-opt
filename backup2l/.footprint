@@ -1,8 +1,0 @@
-drwxr-xr-x	root/root	etc/
--rw-r--r--	root/root	etc/backup2l.conf
-drwxr-xr-x	root/root	usr/
-drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/backup2l
-drwxr-xr-x	root/root	usr/man/
-drwxr-xr-x	root/root	usr/man/man8/
--rw-r--r--	root/root	usr/man/man8/backup2l.8.gz
