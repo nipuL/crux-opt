@@ -11,3 +11,6 @@ PRECAUTION
     be a runtime dependency of zsh. This is a problem on systems where
     zsh needs to be available at boot before the directory containing
     libpcre.so is mounted. 
+
+MISC
+    zsh-lovers.1 is taken from http://www.grml.org/zsh/zsh-lovers.1
