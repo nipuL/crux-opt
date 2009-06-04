@@ -1,22 +1,25 @@
 # Description: BitTorrent client/daemon with command-line and optional gtk user interface
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
-# Depends on:  openssl curl gtk
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Depends on:  openssl curl
 
 name=transmission
 version=1.61
-release=1
+release=2
 source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
 
-    ./configure --prefix=/usr --mandir=/usr/man
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-nls \
+                --disable-gtk \
+                --enable-cli \
+                --enable-daemon
     make
     make DESTDIR=$PKG install
 
-    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/transmission.desktop
-    rm -r $PKG/usr/share/{locale,icons}
     rm $PKG/usr/share/transmission/web/LICENSE
 }
