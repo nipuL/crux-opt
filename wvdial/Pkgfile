@@ -5,17 +5,20 @@
 
 name=wvdial
 version=1.60
-release=4
+release=5
 source=(http://alumnit.ca/download/$name-$version.tar.gz \
         http://wvstreams.googlecode.com/files/wvstreams-4.5.1.tar.gz \
-        $name-$version.patch)
+        $name-$version.patch $name-$version-scandir.patch \
+        wvstreams-4.5.1-const.patch)
 
 build() {
     cd wvstreams-4.5.1
+    patch -p0 -i $SRC/wvstreams-4.5.1-const.patch
     ./configure --prefix=/usr --without-{pam,tcl,qt,dbus}
     make -j1
 
     cd $SRC/$name-$version
+    patch -p1 -i $SRC/$name-$version-scandir.patch
     patch -p1 -i $SRC/$name-$version.patch
     make -j1 CXXOPTS="$CXXFLAGS" WVS=$SRC/wvstreams-4.5.1
     make DESTDIR=$PKG install
