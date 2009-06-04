@@ -5,8 +5,8 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.5.0
-release=2
+version=4.5.1
+release=1
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
 build () {
@@ -14,7 +14,6 @@ build () {
     
     sed -i 's|X11R6/||g' mkspecs/*/*.conf
     sed -i "s|-O2|$CXXFLAGS|" mkspecs/common/g++.conf
-    sed -i "s|read acceptance|acceptance=yes|" configure
     sed -i "s|INSTALLS += translations||" projects.pro
 
     ./configure -prefix /usr/share/qt4 \
@@ -28,7 +27,7 @@ build () {
 		-no-{cups,fast,exceptions,nas-sound,phonon} \
 		-x{cursor,inerama,kb,randr,render} \
                 -nomake demos -nomake examples -nomake docs \
-                -no-separate-debug-info
+                -no-separate-debug-info -opensource -confirm-license
     
     make
     make INSTALL_ROOT=$PKG install
