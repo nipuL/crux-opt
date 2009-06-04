@@ -6,16 +6,14 @@
 
 name=libcap
 version=2.16
-release=2
+release=1
 source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.6/libcap-$version.tar.gz
-	$name-$version-makefile.patch
-	$name-$version-headers.patch)
+	$name-$version-makefile.patch)
 
 build () {
 	cd libcap-$version
 	
 	patch -p0 -i $SRC/$name-$version-makefile.patch
-	patch -p1 -i $SRC/$name-$version-headers.patch
 
 	make
 	make \
