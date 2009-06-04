@@ -1,0 +1,14 @@
+# http://git.kernel.org/?p=linux/hotplug/udev.git;a=commit;h=f07996885dab45102492d7f16e7e2997e264c725
+
+diff -Nru mdadm-3.0.orig/udev-md-raid.rules mdadm-3.0/udev-md-raid.rules
+--- mdadm-3.0.orig/udev-md-raid.rules	2009-06-04 10:47:00.000000000 +0200
++++ mdadm-3.0/udev-md-raid.rules	2009-06-04 10:48:50.000000000 +0200
+@@ -30,7 +30,7 @@
+ ENV{DEVTYPE}=="partition", ENV{MD_DEVNAME}=="*[^0-9]", SYMLINK+="md/$env{MD_DEVNAME}%n"
+ ENV{DEVTYPE}=="partition", ENV{MD_DEVNAME}=="*[0-9]", SYMLINK+="md/$env{MD_DEVNAME}p%n"
+ 
+-IMPORT{program}="vol_id --export $tempnode"
++IMPORT{program}="/sbin/blkid -o udev -p $tempnode"
+ OPTIONS+="link_priority=100"
+ ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{ID_FS_UUID_ENC}=="?*", SYMLINK+="disk/by-uuid/$env{ID_FS_UUID_ENC}"
+ ENV{ID_FS_USAGE}=="filesystem|other", ENV{ID_FS_LABEL_ENC}=="?*", SYMLINK+="disk/by-label/$env{ID_FS_LABEL_ENC}"
