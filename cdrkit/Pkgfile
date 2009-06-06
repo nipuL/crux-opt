@@ -5,11 +5,13 @@
 
 name=cdrkit
 version=1.1.9
-release=1
-source=(http://cdrkit.org/releases/cdrkit-$version.tar.gz)
+release=2
+source=(http://cdrkit.org/releases/cdrkit-$version.tar.gz
+	$name-$version-glibc-2.10.patch)
 
 build () {
 	cd cdrkit-$version
+	patch -p1 -i $SRC/$name-$version-glibc-2.10.patch
 	sed -i 's:share/\(man\):\1:' 3rd-party/dirsplit/CMakeLists.txt
 	cmake -DCMAKE_INSTALL_PREFIX=$PKG/usr -DMANSUBDIR=man
 	make install
