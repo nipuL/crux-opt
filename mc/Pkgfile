@@ -5,11 +5,14 @@
 
 name=mc
 version=4.6.2
-release=1
+release=2
 source=(http://www.midnight-commander.org/downloads/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+
+    aclocal
+    automake -a
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \

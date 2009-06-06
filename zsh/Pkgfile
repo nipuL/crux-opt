@@ -1,14 +1,13 @@
 # Description: Very powerfull shell
 # URL: http://www.zsh.org/
-# Packager: Christian Schneider, strcat at gmx dot net
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libpcre
 
 name=zsh
-version=4.3.9
+version=4.3.10
 release=2
 source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
-	http://www.grml.org/zsh/zsh-lovers.1)
+        zsh-lovers.1)
 
 build() {
     cd $name-$version

@@ -1,6 +1,5 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/transmission
 -rwxr-xr-x	root/root	usr/bin/transmission-daemon
 -rwxr-xr-x	root/root	usr/bin/transmission-remote
 -rwxr-xr-x	root/root	usr/bin/transmissioncli
@@ -8,13 +7,8 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/transmission-daemon.1.gz
 -rw-r--r--	root/root	usr/man/man1/transmission-remote.1.gz
--rw-r--r--	root/root	usr/man/man1/transmission.1.gz
 -rw-r--r--	root/root	usr/man/man1/transmissioncli.1.gz
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/applications/
--rw-r--r--	root/root	usr/share/applications/transmission.desktop
-drwxr-xr-x	root/root	usr/share/pixmaps/
--rw-r--r--	root/root	usr/share/pixmaps/transmission.png
 drwxr-xr-x	root/root	usr/share/transmission/
 drwxr-xr-x	root/root	usr/share/transmission/web/
 drwxr-xr-x	root/root	usr/share/transmission/web/images/
