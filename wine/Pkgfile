@@ -5,14 +5,13 @@
 # Depends on: fontforge
 
 name=wine
-version=1.0.1
+version=1.1.22
 release=1
-source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2
-	$name-$version.patch)
+source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2)
 
 build() {
 	cd $name-$version
-	patch -p0 -i $SRC/$name-$version.patch
+#	patch -p0 -i $SRC/$name-$version.patch
 	./configure \
 		--prefix=/usr \
 		--mandir=$PKG/usr/man \
