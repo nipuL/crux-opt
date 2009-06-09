@@ -5,7 +5,7 @@
 # Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.7.0
+version=1.7.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
 
@@ -13,9 +13,8 @@ build() {
     cd $name-$version
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
-                --disable-nls \
+                --disable-lua \
                 --enable-xft  \
-                --enable-seti \
                 --enable-portmon \
                 --enable-mpd 
     make
