@@ -5,7 +5,7 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.8.7-p160
+version=1.8.7-p173
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.8/$name-$version.tar.bz2 \
         $name-arch.patch)
