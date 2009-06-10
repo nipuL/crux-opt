@@ -5,9 +5,9 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.6.0_13
+version=1.6.0_14
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u13-dlj-linux-amd64.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u14-dlj-linux-amd64.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib
@@ -24,9 +24,6 @@ build(){
 	done
 	
 	ln -s jdk* java
-
-	# generate classes.jsa
-	(cd java; ./bin/java -Xshare:dump)
 
 	mkdir -p $PKG/usr/bin && cd $PKG/usr/bin
 	for j in java javac javah javap javaws jar keytool; do
