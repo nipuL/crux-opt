@@ -1,7 +1,7 @@
-diff -Nru ruby-1.8.7-p71.orig/configure ruby-1.8.7-p71/configure
---- ruby-1.8.7-p71.orig/configure	2008-08-08 08:26:41.000000000 +0200
-+++ ruby-1.8.7-p71/configure	2008-08-08 08:26:57.000000000 +0200
-@@ -17676,7 +17676,7 @@
+diff -Nru ruby-1.9.1-p129.orig/configure ruby-1.9.1-p129/configure
+--- ruby-1.9.1-p129.orig/configure	2009-06-11 16:48:17.886630091 +0200
++++ ruby-1.9.1-p129/configure	2009-06-11 16:48:39.136631089 +0200
+@@ -22515,7 +22515,7 @@
  _ACEOF
  
  else
