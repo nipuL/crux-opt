@@ -6,11 +6,15 @@
 
 name=gdb
 version=6.8
-release=1
-source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
+release=2
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2 gdb.diff)
 
 build() {
     cd $name-$version
+
+    # fix the build with gcc 4.4:
+    patch -p1 -i $SRC/gdb.diff
+
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
