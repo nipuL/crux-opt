@@ -5,9 +5,9 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.8.7-p173
+version=1.9.1-p129
 release=1
-source=(ftp://ftp.ruby-lang.org/pub/$name/1.8/$name-$version.tar.bz2 \
+source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
         $name-arch.patch)
 
 build () {
@@ -18,9 +18,9 @@ build () {
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-shared \
-                --enable-pthread
-    make
-    make DESTDIR=$PKG install
+                --disable-install-doc \
+                --with-ruby-version=minor
 
-    chmod -x $PKG/usr/lib/ruby/1.8/linux/*.h
+    make -j1
+    make DESTDIR=$PKG install
 }
