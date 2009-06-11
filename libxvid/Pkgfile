@@ -6,7 +6,7 @@
 # Nice to have: yasm
 
 name=libxvid
-version=1.2.1
+version=1.2.2
 release=1
 source=(http://downloads.xvid.org/downloads/xvidcore-$version.tar.bz2)
 #$name-$version-nasm-compat.patch)
