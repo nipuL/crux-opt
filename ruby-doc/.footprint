@@ -4223,6 +4223,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.8/system/OpenStruct/
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/inspect-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/marshal_dump-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/marshal_load-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/modifiable-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/new-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/new_ostruct_member-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.8/system/OpenStruct/to_s-i.yaml
