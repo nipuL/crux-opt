@@ -13,7 +13,7 @@ build () {
     cd $name-$version
     ./configure --prefix=/usr --enable-colors256
     make
-    make DESTDIR=$PKG install
+    make -j1 DESTDIR=$PKG install
     rm -rf $PKG/usr/info
     chmod -s $PKG/usr/bin/$name-$version
 }
