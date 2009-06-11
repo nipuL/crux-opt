@@ -6,10 +6,10 @@ drwxr-xr-x	root/root	usr/include/pygtk-2.0/
 -rw-r--r--	root/root	usr/include/pygtk-2.0/pyglib.h
 -rw-r--r--	root/root	usr/include/pygtk-2.0/pygobject.h
 drwxr-xr-x	root/root	usr/lib/
--rwxr-xr-x	root/root	usr/lib/libpyglib-2.0.la
-lrwxrwxrwx	root/root	usr/lib/libpyglib-2.0.so -> libpyglib-2.0.so.0.0.0
-lrwxrwxrwx	root/root	usr/lib/libpyglib-2.0.so.0 -> libpyglib-2.0.so.0.0.0
--rwxr-xr-x	root/root	usr/lib/libpyglib-2.0.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libpyglib-2.0-python.la
+lrwxrwxrwx	root/root	usr/lib/libpyglib-2.0-python.so -> libpyglib-2.0-python.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/libpyglib-2.0-python.so.0 -> libpyglib-2.0-python.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libpyglib-2.0-python.so.0.0.0
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/pygobject-2.0.pc
 drwxr-xr-x	root/root	usr/lib/python2.6/
@@ -52,25 +52,6 @@ drwxr-xr-x	root/root	usr/lib/python2.6/site-packages/gtk-2.0/gobject/
 -rw-r--r--	root/root	usr/lib/python2.6/site-packages/pygtk.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/site-packages/pygtk.pyo
 drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/gtk-doc/
-drwxr-xr-x	root/root	usr/share/gtk-doc/html/
-drwxr-xr-x	root/root	usr/share/gtk-doc/html/pygobject/
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-glibmaincontext.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-glibmainloop.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-gobject.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-gobjectgboxed.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-gobjectginterface.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/class-gobjectgpointer.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/glib-constants.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/glib-functions.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/gobject-class-reference.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/gobject-constants.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/gobject-functions.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/index.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/index.sgml
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/pygobject-introduction.html
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/pygobject.devhelp
--rw-r--r--	root/root	usr/share/gtk-doc/html/pygobject/style.css
 drwxr-xr-x	root/root	usr/share/pygobject/
 drwxr-xr-x	root/root	usr/share/pygobject/2.0/
 drwxr-xr-x	root/root	usr/share/pygobject/2.0/codegen/
@@ -80,6 +61,9 @@ drwxr-xr-x	root/root	usr/share/pygobject/2.0/codegen/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/argtypes.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/argtypes.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/argtypes.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/code-coverage.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/code-coverage.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/code-coverage.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/codegen.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/codegen.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/codegen.pyo
@@ -89,12 +73,21 @@ drwxr-xr-x	root/root	usr/share/pygobject/2.0/codegen/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/definitions.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/definitions.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/definitions.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsconvert.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsconvert.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsconvert.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsgen.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsgen.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsgen.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsparser.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsparser.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/defsparser.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract_to_xml.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract_to_xml.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docextract_to_xml.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docgen.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docgen.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/docgen.pyo
@@ -104,6 +97,9 @@ drwxr-xr-x	root/root	usr/share/pygobject/2.0/codegen/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mergedefs.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mergedefs.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mergedefs.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/missingdefs.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/missingdefs.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/missingdefs.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mkskel.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mkskel.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/mkskel.pyo
@@ -113,12 +109,16 @@ drwxr-xr-x	root/root	usr/share/pygobject/2.0/codegen/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/reversewrapper.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/reversewrapper.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/reversewrapper.pyo
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scanvirtuals.py
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scanvirtuals.pyc
+-rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scanvirtuals.pyo
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scmexpr.py
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scmexpr.pyc
 -rw-r--r--	root/root	usr/share/pygobject/2.0/codegen/scmexpr.pyo
 drwxr-xr-x	root/root	usr/share/pygobject/2.0/defs/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gappinfo.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gapplaunchcontext.override
+-rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gdrive.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gfile.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gfileattribute.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gfileenumerator.override
@@ -128,6 +128,7 @@ drwxr-xr-x	root/root	usr/share/pygobject/2.0/defs/
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gio-types.defs
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gio.defs
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gio.override
+-rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gmount.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/goutputstream.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gvolume.override
 -rw-r--r--	root/root	usr/share/pygobject/2.0/defs/gvolumemonitor.override
