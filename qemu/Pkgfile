@@ -5,7 +5,7 @@
 # Optional: kqemu texi2html
 
 name=qemu
-version=0.10.4
+version=0.10.5
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
@@ -17,7 +17,7 @@ build() {
 	make
 	make DESTDIR=$PKG install
 
-	# Documentaion will only be installed if texinfo is found.
+	# Documentaion will only be installed if texi2html is installed.
 
 	if [ -d "$PKG/usr/share/man" ]; then
 	    mv $PKG/usr/share/man $PKG/usr/man
