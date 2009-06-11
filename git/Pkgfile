@@ -2,12 +2,12 @@
 # URL: http://www.kernel.org/pub/software/scm/git/docs
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: curl
+# Depends on: expat, curl
 # Nice to have: tk
 
 name=git
 version=1.6.3.2
-release=1
+release=2
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
 build() {
