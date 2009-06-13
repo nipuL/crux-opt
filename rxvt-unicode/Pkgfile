@@ -5,11 +5,14 @@
 
 name=rxvt-unicode
 version=9.06
-release=1
-source=(http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2)
+release=2
+source=(http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2
+        $name.diff)
 
 build() {
 	cd $name-$version
+
+	patch -p1 -i $SRC/$name.diff
 
 	./configure --prefix=/usr --mandir=/usr/man \
 	            --enable-utmp --enable-wtmp \

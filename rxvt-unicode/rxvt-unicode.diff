@@ -1,0 +1,40 @@
+diff -aur rxvt-unicode-9.06.orig/src/command.C rxvt-unicode-9.06/src/command.C
+--- rxvt-unicode-9.06.orig/src/command.C	2008-11-05 17:21:05.000000000 +0100
++++ rxvt-unicode-9.06/src/command.C	2009-06-11 17:15:20.825550518 +0200
+@@ -3336,7 +3336,7 @@
+           }
+         else
+           {
+-            char *eq = strchr (str, '='); // constness lost, but verified to be ok
++            char *eq = (char*)strchr (str, '='); // constness lost, but verified to be ok
+ 
+             if (eq)
+               {
+diff -aur rxvt-unicode-9.06.orig/src/misc.C rxvt-unicode-9.06/src/misc.C
+--- rxvt-unicode-9.06.orig/src/misc.C	2008-04-26 04:57:18.000000000 +0200
++++ rxvt-unicode-9.06/src/misc.C	2009-06-11 17:16:35.493541260 +0200
+@@ -167,10 +167,10 @@
+   return r;
+ }
+ 
+-char *
++const char *
+ rxvt_basename (const char *str) NOTHROW
+ {
+-  char *base = strrchr (str, '/');
++  const char *base = strrchr (str, '/');
+ 
+   return (char *) (base ? base + 1 : str);
+ }
+diff -aur rxvt-unicode-9.06.orig/src/rxvt.h rxvt-unicode-9.06/src/rxvt.h
+--- rxvt-unicode-9.06.orig/src/rxvt.h	2008-11-05 16:42:03.000000000 +0100
++++ rxvt-unicode-9.06/src/rxvt.h	2009-06-11 17:16:53.117541300 +0200
+@@ -153,7 +153,7 @@
+ char *           rxvt_wcstoutf8                   (const wchar_t *str, int len = -1);
+ wchar_t *        rxvt_utf8towcs                   (const char *str, int len = -1);
+ 
+-char *           rxvt_basename                    (const char *str) NOTHROW;
++const char *     rxvt_basename                    (const char *str) NOTHROW;
+ void             rxvt_vlog                        (const char *fmt, va_list arg_ptr) NOTHROW;
+ void             rxvt_log                         (const char *fmt,...) NOTHROW;
+ void             rxvt_warn                        (const char *fmt,...) NOTHROW;
