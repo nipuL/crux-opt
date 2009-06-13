@@ -6,7 +6,6 @@ drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/mysqld
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
--rwxr-xr-x	root/root	usr/bin/comp_err
 -rwxr-xr-x	root/root	usr/bin/innochecksum
 -rwxr-xr-x	root/root	usr/bin/msql2mysql
 -rwxr-xr-x	root/root	usr/bin/my_print_defaults
@@ -18,17 +17,14 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mysql_client_test
 -rwxr-xr-x	root/root	usr/bin/mysql_config
 -rwxr-xr-x	root/root	usr/bin/mysql_convert_table_format
--rwxr-xr-x	root/root	usr/bin/mysql_explain_log
 -rwxr-xr-x	root/root	usr/bin/mysql_find_rows
 -rwxr-xr-x	root/root	usr/bin/mysql_fix_extensions
 -rwxr-xr-x	root/root	usr/bin/mysql_fix_privilege_tables
 -rwxr-xr-x	root/root	usr/bin/mysql_install_db
 -rwxr-xr-x	root/root	usr/bin/mysql_secure_installation
 -rwxr-xr-x	root/root	usr/bin/mysql_setpermission
--rwxr-xr-x	root/root	usr/bin/mysql_tableinfo
 -rwxr-xr-x	root/root	usr/bin/mysql_tzinfo_to_sql
 -rwxr-xr-x	root/root	usr/bin/mysql_upgrade
--rwxr-xr-x	root/root	usr/bin/mysql_upgrade_shell
 -rwxr-xr-x	root/root	usr/bin/mysql_waitpid
 -rwxr-xr-x	root/root	usr/bin/mysql_zap
 -rwxr-xr-x	root/root	usr/bin/mysqlaccess
@@ -43,10 +39,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/mysqlhotcopy
 -rwxr-xr-x	root/root	usr/bin/mysqlimport
 -rwxr-xr-x	root/root	usr/bin/mysqlshow
+-rwxr-xr-x	root/root	usr/bin/mysqlslap
 -rwxr-xr-x	root/root	usr/bin/mysqltest
--rwxr-xr-x	root/root	usr/bin/mysqltestmanager
--rwxr-xr-x	root/root	usr/bin/mysqltestmanager-pwgen
--rwxr-xr-x	root/root	usr/bin/mysqltestmanagerc
 -rwxr-xr-x	root/root	usr/bin/perror
 -rwxr-xr-x	root/root	usr/bin/replace
 -rwxr-xr-x	root/root	usr/bin/resolve_stack_dump
@@ -78,7 +72,7 @@ drwxr-xr-x	root/root	usr/include/mysql/
 -rw-r--r--	root/root	usr/include/mysql/mysql_version.h
 -rw-r--r--	root/root	usr/include/mysql/mysqld_ername.h
 -rw-r--r--	root/root	usr/include/mysql/mysqld_error.h
--rw-r--r--	root/root	usr/include/mysql/raid.h
+-rw-r--r--	root/root	usr/include/mysql/plugin.h
 -rw-r--r--	root/root	usr/include/mysql/sql_common.h
 -rw-r--r--	root/root	usr/include/mysql/sql_state.h
 -rw-r--r--	root/root	usr/include/mysql/sslopt-case.h
@@ -93,23 +87,53 @@ drwxr-xr-x	root/root	usr/lib/mysql/
 -rw-r--r--	root/root	usr/lib/mysql/libmyisammrg.a
 -rw-r--r--	root/root	usr/lib/mysql/libmysqlclient.a
 -rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient.la
-lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient.so -> libmysqlclient.so.15.0.0
-lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient.so.15 -> libmysqlclient.so.15.0.0
--rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient.so.15.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient.so -> libmysqlclient.so.16.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient.so.16 -> libmysqlclient.so.16.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient.so.16.0.0
 -rw-r--r--	root/root	usr/lib/mysql/libmysqlclient_r.a
 -rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient_r.la
-lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient_r.so -> libmysqlclient_r.so.15.0.0
-lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient_r.so.15 -> libmysqlclient_r.so.15.0.0
--rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient_r.so.15.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient_r.so -> libmysqlclient_r.so.16.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/libmysqlclient_r.so.16 -> libmysqlclient_r.so.16.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/libmysqlclient_r.so.16.0.0
 -rw-r--r--	root/root	usr/lib/mysql/libmystrings.a
 -rw-r--r--	root/root	usr/lib/mysql/libmysys.a
 -rw-r--r--	root/root	usr/lib/mysql/libvio.a
+drwxr-xr-x	root/root	usr/lib/mysql/plugin/
+-rw-r--r--	root/root	usr/lib/mysql/plugin/ha_archive.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_archive.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_archive.so -> ha_archive.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_archive.so.0 -> ha_archive.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_archive.so.0.0.0
+-rw-r--r--	root/root	usr/lib/mysql/plugin/ha_blackhole.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_blackhole.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_blackhole.so -> ha_blackhole.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_blackhole.so.0 -> ha_blackhole.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_blackhole.so.0.0.0
+-rw-r--r--	root/root	usr/lib/mysql/plugin/ha_example.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_example.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_example.so -> ha_example.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_example.so.0 -> ha_example.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_example.so.0.0.0
+-rw-r--r--	root/root	usr/lib/mysql/plugin/ha_federated.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_federated.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_federated.so -> ha_federated.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/ha_federated.so.0 -> ha_federated.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/ha_federated.so.0.0.0
+-rw-r--r--	root/root	usr/lib/mysql/plugin/libdaemon_example.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/libdaemon_example.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/libdaemon_example.so -> libdaemon_example.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/libdaemon_example.so.0 -> libdaemon_example.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/libdaemon_example.so.0.0.0
+-rw-r--r--	root/root	usr/lib/mysql/plugin/mypluglib.a
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/mypluglib.la
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/mypluglib.so -> mypluglib.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/mysql/plugin/mypluglib.so.0 -> mypluglib.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/mysql/plugin/mypluglib.so.0.0.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/comp_err.1.gz
 -rw-r--r--	root/root	usr/man/man1/innochecksum.1.gz
 -rw-r--r--	root/root	usr/man/man1/make_win_bin_dist.1.gz
--rw-r--r--	root/root	usr/man/man1/make_win_src_distribution.1.gz
 -rw-r--r--	root/root	usr/man/man1/msql2mysql.1.gz
 -rw-r--r--	root/root	usr/man/man1/my_print_defaults.1.gz
 -rw-r--r--	root/root	usr/man/man1/myisam_ftdump.1.gz
@@ -123,14 +147,12 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mysql_client_test.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_config.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_convert_table_format.1.gz
--rw-r--r--	root/root	usr/man/man1/mysql_explain_log.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_find_rows.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_fix_extensions.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_fix_privilege_tables.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_install_db.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_secure_installation.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_setpermission.1.gz
--rw-r--r--	root/root	usr/man/man1/mysql_tableinfo.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_tzinfo_to_sql.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_upgrade.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysql_waitpid.1.gz
@@ -148,12 +170,12 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/mysqlimport.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlman.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqlshow.1.gz
+-rw-r--r--	root/root	usr/man/man1/mysqlslap.1.gz
 -rw-r--r--	root/root	usr/man/man1/mysqltest.1.gz
 -rw-r--r--	root/root	usr/man/man1/perror.1.gz
 -rw-r--r--	root/root	usr/man/man1/replace.1.gz
 -rw-r--r--	root/root	usr/man/man1/resolve_stack_dump.1.gz
 -rw-r--r--	root/root	usr/man/man1/resolveip.1.gz
--rw-r--r--	root/root	usr/man/man1/safe_mysqld.1.gz
 drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/mysqld.8.gz
 -rw-r--r--	root/root	usr/man/man8/mysqlmanager.8.gz
@@ -161,7 +183,10 @@ drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/mysqld
 -rwxr-xr-x	root/root	usr/sbin/mysqlmanager
 drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/mysql.m4
 drwxr-xr-x	root/root	usr/share/mysql/
+-rw-r--r--	root/root	usr/share/mysql/binary-configure
 drwxr-xr-x	root/root	usr/share/mysql/charsets/
 -rw-r--r--	root/root	usr/share/mysql/charsets/Index.xml
 -rw-r--r--	root/root	usr/share/mysql/charsets/armscii8.xml
@@ -188,20 +213,30 @@ drwxr-xr-x	root/root	usr/share/mysql/charsets/
 -rw-r--r--	root/root	usr/share/mysql/charsets/macce.xml
 -rw-r--r--	root/root	usr/share/mysql/charsets/macroman.xml
 -rw-r--r--	root/root	usr/share/mysql/charsets/swe7.xml
+-rw-r--r--	root/root	usr/share/mysql/config.huge.ini
+-rw-r--r--	root/root	usr/share/mysql/config.medium.ini
+-rw-r--r--	root/root	usr/share/mysql/config.small.ini
 drwxr-xr-x	root/root	usr/share/mysql/english/
 -rw-r--r--	root/root	usr/share/mysql/english/errmsg.sys
+-rw-r--r--	root/root	usr/share/mysql/errmsg.txt
 -rw-r--r--	root/root	usr/share/mysql/fill_help_tables.sql
+-rw-r--r--	root/root	usr/share/mysql/mi_test_all
+-rw-r--r--	root/root	usr/share/mysql/mi_test_all.res
 -rw-r--r--	root/root	usr/share/mysql/my-huge.cnf
 -rw-r--r--	root/root	usr/share/mysql/my-innodb-heavy-4G.cnf
 -rw-r--r--	root/root	usr/share/mysql/my-large.cnf
 -rw-r--r--	root/root	usr/share/mysql/my-medium.cnf
 -rw-r--r--	root/root	usr/share/mysql/my-small.cnf
+-rw-r--r--	root/root	usr/share/mysql/mysql-log-rotate
+-rwxr-xr-x	root/root	usr/share/mysql/mysql.server
 -rw-r--r--	root/root	usr/share/mysql/mysql_fix_privilege_tables.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_system_tables.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_system_tables_data.sql
 -rw-r--r--	root/root	usr/share/mysql/mysql_test_data_timezone.sql
+-rwxr-xr-x	root/root	usr/share/mysql/mysqld_multi.server
+-rw-r--r--	root/root	usr/share/mysql/ndb-config-2-node.ini
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
-drwx------	daemon/daemon	var/lib/mysql/
+drwx------	mysql/mysql	var/lib/mysql/
 drwxr-xr-x	root/root	var/log/
--rw-------	daemon/daemon	var/log/mysqld.log (EMPTY)
+-rw-------	mysql/mysql	var/log/mysqld.log (EMPTY)

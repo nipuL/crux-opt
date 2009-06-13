@@ -5,13 +5,14 @@
 # Depends on:  ncurses readline zlib
 
 name=mysql
-version=5.0.83
+version=5.1.35
 release=1
-source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.0/$name-$version.tar.gz \
+source=(http://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.1/$name-$version.tar.gz \
         my.cnf mysqld)
 
 build () {
     cd $name-$version
+
     ./configure --prefix=/usr \
                 --sysconfdir=/etc \
                 --libexecdir=/usr/sbin \
@@ -19,24 +20,21 @@ build () {
                 --mandir=/usr/man \
                 --enable-assembler \
                 --enable-thread-safe-client \
-                --without-berkeley-db \
-                --enable-innodb \
-                --without-readline \
-                --without-debug \
-                --without-docs \
-                --without-bench
+                --without-{readline,debug,docs} \
+                --with-ssl \
+                --with-plugins=myisam,innobase
+    
     make
     make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/mysql-test
+    rm -r $PKG/usr/{mysql-test,sql-bench}
     rm $PKG/usr/share/mysql/charsets/README
-    find $PKG/usr/share/mysql/* -prune -type f ! -regex '.*\(cnf\|sql\)$' | xargs rm -f {} \;
     find $PKG/usr/share/mysql/* -type d ! -name english ! -name charsets | xargs rm -rf {} \;
 
-    mkdir -p $PKG/{var/lib,var/log}
+    install -d  $PKG/var/{lib,log}
     touch mysqld.log
-    install -m 600 -o daemon -g daemon mysqld.log $PKG/var/log
-    install -d -m 700 -o daemon -g daemon $PKG/var/lib/mysql
+    install -m 600 -o mysql -g mysql mysqld.log $PKG/var/log
+    install -d -m 700 -o mysql -g mysql $PKG/var/lib/mysql
     install -D -m 755 $SRC/mysqld $PKG/etc/rc.d/mysqld
     install -m 600 $SRC/my.cnf $PKG/etc
 
