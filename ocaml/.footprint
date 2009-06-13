@@ -440,7 +440,6 @@ drwxr-xr-x	root/root	usr/lib/ocaml/ocamldoc/custom/
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_module.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_name.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_ocamlhtml.cmi
--rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_opt.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_parameter.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_parser.cmi
 -rw-r--r--	root/root	usr/lib/ocaml/ocamldoc/odoc_print.cmi
