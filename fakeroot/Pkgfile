@@ -4,7 +4,7 @@
 # Arch Maintainer: Antti Nykanen, aon at iki dot fi
 
 name=fakeroot
-version=1.12.2
+version=1.12.3
 release=1
 source=(http://ftp.de.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
 
