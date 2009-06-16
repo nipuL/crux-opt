@@ -6,9 +6,9 @@
 # Depends on: gtk libpcap libpcre
 
 name=wireshark
-version=1.0.8
+version=1.2.0
 release=1
-source=(http://www.$name.org/download/src/$name-$version.tar.bz2)
+source=(http://www.$name.org/download/src/all-versions/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
