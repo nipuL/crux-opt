@@ -77,7 +77,6 @@ drwxr-xr-x	root/root	usr/lib/cups/filter/
 -rwxr-xr-x	root/root	usr/lib/cups/filter/hpgltops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/imagetoraster
--rwxr-xr-x	root/root	usr/lib/cups/filter/pdftops
 -rwxr-xr-x	root/root	usr/lib/cups/filter/pstops
 lrwxrwxrwx	root/root	usr/lib/cups/filter/rastertodymo -> rastertolabel
 -rwxr-xr-x	root/root	usr/lib/cups/filter/rastertoepson
