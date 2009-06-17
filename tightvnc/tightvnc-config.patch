@@ -1,7 +1,6 @@
-diff -Nru vnc_unixsrc/vncserver vnc_unixsrc-new/vncserver
---- vnc_unixsrc/vncserver	2007-04-26 12:57:06.000000000 +0200
-+++ vnc_unixsrc-new/vncserver	2007-10-03 19:20:06.000000000 +0200
-@@ -36,16 +36,16 @@
+--- vncserver.orig	2009-06-15 20:56:51.840286743 +0200
++++ vncserver	2009-06-15 21:14:49.627829365 +0200
+@@ -32,10 +32,11 @@
  $geometry = "1024x768";
  $depth = 24;
  $desktopName = "X";
@@ -11,14 +10,7 @@ diff -Nru vnc_unixsrc/vncserver vnc_unixsrc-new/vncserver
 -$fontPath = "unix/:7100";
 +$fontPath = "/usr/lib/X11/fonts/misc,/usr/lib/X11/fonts/100dpi,/usr/lib/X11/fonts/75dpi";
  $authType = "-rfbauth $vncUserDir/passwd";
++$colorPath = "/usr/share/X11/rgb";
  
- # Here is another example of setting the font path:
--# $fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
-+# $fontPath = "unix/:7100";
+ # Read configuration from the system-wide and user files if present.
  
- # X colors database path is optional, uncomment and edit to use:
--# $colorPath = "/usr/lib/X11/rgb";
-+# $colorPath = "/usr/share/X11/rgb";
- 
- # You might wish to make your vnc directory under /tmp, to make sure
- # passwords are always kept on the local filesystem. To do that, just
