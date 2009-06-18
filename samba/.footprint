@@ -138,7 +138,6 @@ drwxr-xr-x	root/root	usr/man/man5/
 -rw-r--r--	root/root	usr/man/man5/smbpasswd.5.gz
 drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/libsmbclient.7.gz
--rw-r--r--	root/root	usr/man/man7/pam_winbind.7.gz
 -rw-r--r--	root/root	usr/man/man7/samba.7.gz
 -rw-r--r--	root/root	usr/man/man7/winbind_krb5_locator.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
@@ -154,6 +153,7 @@ drwxr-xr-x	root/root	usr/man/man8/
 -rw-r--r--	root/root	usr/man/man8/mount.cifs.8.gz
 -rw-r--r--	root/root	usr/man/man8/net.8.gz
 -rw-r--r--	root/root	usr/man/man8/nmbd.8.gz
+-rw-r--r--	root/root	usr/man/man8/pam_winbind.8.gz
 -rw-r--r--	root/root	usr/man/man8/pdbedit.8.gz
 -rw-r--r--	root/root	usr/man/man8/smbd.8.gz
 -rw-r--r--	root/root	usr/man/man8/smbpasswd.8.gz

@@ -4,12 +4,14 @@
 # Depends on:  vim, gtk
 
 name=gvim
-version=7.2.160
+version=7.2.209
 release=1
-source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2 \
-        http://crux.nu/~jue/files/dist/vim-7.2.001-051.tar.bz2 \
-        http://crux.nu/~jue/files/dist/vim-7.2.052-102.tar.bz2 \
-        http://crux.nu/~jue/files/dist/vim-7.2.103-160.tar.bz2)
+source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2
+        http://crux.nu/files/distfiles/vim-7.2.001-051.tar.bz2
+        http://crux.nu/files/distfiles/vim-7.2.052-102.tar.bz2
+        http://crux.nu/files/distfiles/vim-7.2.103-160.tar.bz2
+        http://crux.nu/files/distfiles/vim-7.2.161-209.tar.bz2
+        gvim.desktop)
 
 build () {
     cd vim72/src
@@ -26,4 +28,8 @@ build () {
 
     make VIMRTDIR=
     make VIMRTDIR= DESTDIR=$PKG installvimbin
+
+    install -d $PKG/usr/share/{applications,pixmaps}
+    install -m 644 $SRC/gvim.desktop $PKG/usr/share/applications
+    install -m 644 ../runtime/vim*.png $PKG/usr/share/pixmaps
 }
