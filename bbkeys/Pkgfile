@@ -4,13 +4,13 @@
 # Depends on:  blackbox
 
 name=bbkeys
-version=0.9.0
+version=0.9.1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/bbkeys/$name-$version.tar.gz)
 
 build () {
     cd $name-$version 
-    ./configure --prefix=/usr 
+    ./configure --prefix=/usr --mandir=/usr/man 
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/share/doc
