@@ -1,0 +1,17 @@
+# Maintainer:  Johannes Winkelmann, jw at smts dot ch
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Description: top like program to display I/O load
+# URL:         http://guichaz.free.fr/iotop/
+# Depends on:  python
+
+name=iotop
+version=0.2.1
+release=1
+source=(http://guichaz.free.fr/${name}/files/${name}-${version}.tar.bz2)
+
+build() {
+    cd $name-$version
+    sed -i -e 's|share/man/man1|man/man1|' setup.py
+    python setup.py install --root=$PKG --prefix=/usr
+    rm -r $PKG/usr/lib/python*/site-packages/iotop-*.egg-info/
+}
