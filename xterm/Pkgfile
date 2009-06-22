@@ -2,7 +2,7 @@
 # URL: http://dickey.his.com/xterm/xterm.html
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Han Boetes, han at mijncomputer dot nl
-# Depends on: xorg-libxaw
+# Depends on: xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
 version=243
