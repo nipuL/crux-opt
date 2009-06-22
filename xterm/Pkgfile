@@ -3,7 +3,7 @@
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Han Boetes, han at mijncomputer dot nl
 # Arch Maintainer: Antti Nykanen, aon at iki dot fi
-# Depends on: xorg-libxaw
+# Depends on: xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
 version=243
