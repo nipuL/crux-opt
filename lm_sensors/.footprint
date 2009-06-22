@@ -12,8 +12,8 @@ drwxr-xr-x	root/root	usr/include/sensors/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libsensors.a
 lrwxrwxrwx	root/root	usr/lib/libsensors.so -> libsensors.so.4
-lrwxrwxrwx	root/root	usr/lib/libsensors.so.4 -> libsensors.so.4.1.0
--rwxr-xr-x	root/root	usr/lib/libsensors.so.4.1.0
+lrwxrwxrwx	root/root	usr/lib/libsensors.so.4 -> libsensors.so.4.2.0
+-rwxr-xr-x	root/root	usr/lib/libsensors.so.4.2.0
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/sensors.1.gz
