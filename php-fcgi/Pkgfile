@@ -5,7 +5,7 @@
 # Depends on:  libpcre zlib libxml2
 
 name=php-fcgi
-version=5.2.9
+version=5.2.10
 release=1
 source=(http://www.php.net/distributions/php-$version.tar.bz2 
         php-fcgi)
