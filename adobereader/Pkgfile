@@ -2,12 +2,12 @@
 # URL: http://www.adobe.com/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Markus Ackermann, maol at symlink dot ch
-# Depends on: gtk, libstdc++-compat
+# Depends on: gtk libstdc++-compat
 
 name=adobereader
-version=9.1
+version=9.1.2
 release=1
-source=(http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}.0-1_i486linux_enu.tar.bz2)
+source=(ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}-1_i486linux_enu.tar.bz2)
 PKGMK_NO_STRIP="yes"
 
 build() {

@@ -4,8 +4,10 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dpid
 -rwxr-xr-x	root/root	usr/bin/dpidc
 drwxr-xr-x	root/root	usr/etc/
--rw-r--r--	root/root	usr/etc/dillorc
--rw-r--r--	root/root	usr/etc/dpidrc
+drwxr-xr-x	root/root	usr/etc/dillo/
+-rw-r--r--	root/root	usr/etc/dillo/dillorc
+-rw-r--r--	root/root	usr/etc/dillo/dpidrc
+-rw-r--r--	root/root	usr/etc/dillo/keysrc
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/dillo/
 drwxr-xr-x	root/root	usr/lib/dillo/dpi/
@@ -25,3 +27,6 @@ drwxr-xr-x	root/root	usr/lib/dillo/dpi/hello/
 -rwxr-xr-x	root/root	usr/lib/dillo/dpi/hello/hello.filter.dpi
 drwxr-xr-x	root/root	usr/lib/dillo/dpi/https/
 -rwxr-xr-x	root/root	usr/lib/dillo/dpi/https/https.filter.dpi
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/dillo.1.gz
