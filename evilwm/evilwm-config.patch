@@ -1,6 +1,6 @@
-diff -Nru evilwm-1.0.0.orig/Makefile evilwm-1.0.0/Makefile
---- evilwm-1.0.0.orig/Makefile	2007-06-30 19:22:32.000000000 +0200
-+++ evilwm-1.0.0/Makefile	2007-06-30 19:22:44.000000000 +0200
+diff -Nru evilwm-1.0.1.orig/Makefile evilwm-1.0.1/Makefile
+--- evilwm-1.0.1.orig/Makefile	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/Makefile	2009-06-23 10:28:34.000000000 +0200
 @@ -71,7 +71,7 @@
  #DEFINES += -DXDEBUG  # show some X calls
  
@@ -22,9 +22,9 @@ diff -Nru evilwm-1.0.0.orig/Makefile evilwm-1.0.0/Makefile
  	#gzip -9 $(prefix)/share/man/man1/evilwm.1
  
  dist:
-diff -Nru evilwm-1.0.0.orig/evilwm.1 evilwm-1.0.0/evilwm.1
---- evilwm-1.0.0.orig/evilwm.1	2007-06-30 19:22:32.000000000 +0200
-+++ evilwm-1.0.0/evilwm.1	2007-06-30 19:22:44.000000000 +0200
+diff -Nru evilwm-1.0.1.orig/evilwm.1 evilwm-1.0.1/evilwm.1
+--- evilwm-1.0.1.orig/evilwm.1	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/evilwm.1	2009-06-23 10:28:34.000000000 +0200
 @@ -70,7 +70,7 @@
  bottom-right of screen.
  .IP I
@@ -34,9 +34,21 @@ diff -Nru evilwm-1.0.0.orig/evilwm.1 evilwm-1.0.0/evilwm.1
  Maximise current window vertically (toggle).
  .IP X
  Maximise current window (toggle).
-diff -Nru evilwm-1.0.0.orig/keymap.h evilwm-1.0.0/keymap.h
---- evilwm-1.0.0.orig/keymap.h	2007-06-30 19:22:32.000000000 +0200
-+++ evilwm-1.0.0/keymap.h	2007-06-30 19:22:44.000000000 +0200
+diff -Nru evilwm-1.0.1.orig/evilwm.h evilwm-1.0.1/evilwm.h
+--- evilwm-1.0.1.orig/evilwm.h	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/evilwm.h	2009-06-23 10:33:36.000000000 +0200
+@@ -40,7 +40,7 @@
+ 
+ /* default settings */
+ 
+-#define DEF_FONT        "variable"
++#define DEF_FONT        "fixed"
+ #define DEF_FG          "goldenrod"
+ #define DEF_BG          "grey50"
+ #define DEF_BW          1
+diff -Nru evilwm-1.0.1.orig/keymap.h evilwm-1.0.1/keymap.h
+--- evilwm-1.0.1.orig/keymap.h	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/keymap.h	2009-06-23 10:28:34.000000000 +0200
 @@ -14,7 +14,7 @@
  #define KEY_LOWER	XK_Insert
  #define KEY_ALTLOWER	XK_KP_Insert
