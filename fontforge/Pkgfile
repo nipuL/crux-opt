@@ -6,7 +6,7 @@
 # Depends on: freetype, libpng, libtiff, libungif, xorg-libxi, xorg-libxkbui
 
 name=fontforge
-version=20090408
+version=20090622
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/${name}_full-$version.tar.bz2)
 
