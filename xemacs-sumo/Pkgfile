@@ -5,8 +5,8 @@
 # Depends on: xemacs
 
 name=xemacs-sumo
-version=2007-04-27
-release=2
+version=2009-02-17
+release=1
 source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
 build(){
 	install -d -m0755 $PKG/usr/lib/xemacs

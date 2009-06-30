@@ -4,7 +4,7 @@
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.5.1
+version=4.5.2
 release=1
 source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
 
