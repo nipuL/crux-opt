@@ -5,10 +5,9 @@
 # Depends on:  ocaml
 
 name=unison
-version=2.27.149
+version=2.27.157
 release=1
-source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz \
-        $name.1)
+source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
