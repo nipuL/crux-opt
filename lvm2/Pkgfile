@@ -4,7 +4,7 @@
 # Packager:    Mark Rosenstand, mark at borkware dot net
 
 name=lvm2
-version=2.02.47
+version=2.02.48
 release=1
 source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
 
