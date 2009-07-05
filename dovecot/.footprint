@@ -1,5 +1,6 @@
 drwxr-xr-x	root/root	etc/
 -rw-r--r--	root/root	etc/dovecot-db-example.conf
+-rw-r--r--	root/root	etc/dovecot-dict-sql-example.conf
 -rw-r--r--	root/root	etc/dovecot.conf
 drwxr-xr-x	root/root	etc/rc.d/
 -rwxr-xr-x	root/root	etc/rc.d/dovecot
@@ -27,6 +28,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/auth/
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/auth-worker-server.h
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/auth.h
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/common.h
+-rw-r--r--	root/root	usr/include/dovecot/src/auth/db-checkpassword.h
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/db-ldap.h
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/db-passwd-file.h
 -rw-r--r--	root/root	usr/include/dovecot/src/auth/db-sql.h
@@ -55,14 +57,13 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/imap/
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/common.h
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-expunge.h
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-fetch.h
--rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-messageset.h
+-rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-search-args.h
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-search.h
--rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-sort.h
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-status.h
 -rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-sync.h
--rw-r--r--	root/root	usr/include/dovecot/src/imap/imap-thread.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-auth/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-auth/auth-client.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-auth/auth-master.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-auth/auth-server-connection.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-auth/auth-server-request.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-charset/
@@ -70,6 +71,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-charset/
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-dict/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-dict/dict-client.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-dict/dict-private.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-dict/dict-sql-settings.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-dict/dict-sql.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-dict/dict.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-imap/
@@ -77,14 +79,20 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-imap/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-bodystructure.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-date.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-envelope.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-id.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-match.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-quote.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-resp-code.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-seqset.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-utf7.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-imap/imap-util.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-index/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-cache-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-cache.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-modseq.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-private.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-strmap.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-sync-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-transaction-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-index/mail-index-view-private.h
@@ -109,6 +117,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-mail/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-mail/message-send.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-mail/message-size.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-mail/quoted-printable.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-mail/rfc2231-parser.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-mail/rfc822-parser.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-settings/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-settings/settings.h
@@ -128,10 +137,14 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/index/dbox/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/dbox/dbox-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/dbox/dbox-sync.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-mail.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-search-result.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-sort-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-sort.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-sync-changes.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-sync-private.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/index-thread-private.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/istream-mail-stats.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/index/maildir/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/maildir/maildir-filename.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/maildir/maildir-keywords.h
@@ -148,6 +161,8 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/index/mbox/
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/index/raw/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/raw/raw-storage.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/raw/raw-sync.h
+drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/index/shared/
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/index/shared/shared-storage.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/list/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/list/index-mailbox-list.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/list/mailbox-list-fs.h
@@ -157,11 +172,15 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib-storage/list/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-copy.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-error.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-namespace.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-search-build.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-search.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-storage-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-storage.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-thread.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mail-user.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-list-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-list.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-search-result-private.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-tree.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib-storage/mailbox-uidvalidity.h
 drwxr-xr-x	root/root	usr/include/dovecot/src/lib/
@@ -172,10 +191,12 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/base64.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/bsearch-insert-pos.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/buffer.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib/child-wait.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/close-keep-errno.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/compat.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/crc32.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/data-stack.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib/eacces-error.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/env-util.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/failures.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/fd-close-on-exec.h
@@ -188,6 +209,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/file-lock.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/file-set-size.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/hash.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib/hash2.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/hex-binary.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/hex-dec.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/hmac-md5.h
@@ -267,6 +289,7 @@ drwxr-xr-x	root/root	usr/lib/dovecot/
 -rwxr-xr-x	root/root	usr/lib/dovecot/idxview
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap
 -rwxr-xr-x	root/root	usr/lib/dovecot/imap-login
+-rwxr-xr-x	root/root	usr/lib/dovecot/imap-utf7
 -rwxr-xr-x	root/root	usr/lib/dovecot/listview
 -rwxr-xr-x	root/root	usr/lib/dovecot/logview
 -rwxr-xr-x	root/root	usr/lib/dovecot/maildirlock
@@ -274,27 +297,36 @@ drwxr-xr-x	root/root	usr/lib/dovecot/modules/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/auth/
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib01_acl_plugin.so -> ../lib01_acl_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib02_imap_acl_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib02_imap_acl_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib02_imap_acl_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib02_lazy_expunge_plugin.so -> ../lib02_lazy_expunge_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/imap/lib11_imap_quota_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib11_trash_plugin.so -> ../lib11_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_autocreate_plugin.so -> ../lib20_autocreate_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_expire_plugin.so -> ../lib20_expire_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_fts_plugin.so -> ../lib20_fts_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_listescape_plugin.so -> ../lib20_listescape_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_mail_log_plugin.so -> ../lib20_mail_log_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_mbox_snarf_plugin.so -> ../lib20_mbox_snarf_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_virtual_plugin.so -> ../lib20_virtual_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib20_zlib_plugin.so -> ../lib20_zlib_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/imap/lib21_fts_squat_plugin.so -> ../lib21_fts_squat_plugin.so
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/lda/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib01_acl_plugin.so -> ../lib01_acl_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib11_trash_plugin.so -> ../lib11_trash_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_autocreate_plugin.so -> ../lib20_autocreate_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_expire_plugin.so -> ../lib20_expire_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_fts_plugin.so -> ../lib20_fts_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_listescape_plugin.so -> ../lib20_listescape_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_mail_log_plugin.so -> ../lib20_mail_log_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib20_virtual_plugin.so -> ../lib20_virtual_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib21_fts_squat_plugin.so -> ../lib21_fts_squat_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib01_acl_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib01_acl_plugin.la
@@ -308,6 +340,9 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib21_fts_squat_plugin.so -> ..
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib11_trash_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_autocreate_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_convert_plugin.so
@@ -317,12 +352,18 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib21_fts_squat_plugin.so -> ..
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_fts_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_listescape_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_listescape_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_listescape_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mail_log_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_mbox_snarf_plugin.so
+-rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.a
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.la
+-rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_virtual_plugin.so
 -rw-r--r--	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.a
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.la
 -rwxr-xr-x	root/root	usr/lib/dovecot/modules/lib20_zlib_plugin.so
@@ -332,17 +373,21 @@ lrwxrwxrwx	root/root	usr/lib/dovecot/modules/lda/lib21_fts_squat_plugin.so -> ..
 drwxr-xr-x	root/root	usr/lib/dovecot/modules/pop3/
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib02_lazy_expunge_plugin.so -> ../lib02_lazy_expunge_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib10_quota_plugin.so -> ../lib10_quota_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_autocreate_plugin.so -> ../lib20_autocreate_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_convert_plugin.so -> ../lib20_convert_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_expire_plugin.so -> ../lib20_expire_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_fts_plugin.so -> ../lib20_fts_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_listescape_plugin.so -> ../lib20_listescape_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_mail_log_plugin.so -> ../lib20_mail_log_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_mbox_snarf_plugin.so -> ../lib20_mbox_snarf_plugin.so
+lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_virtual_plugin.so -> ../lib20_virtual_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib20_zlib_plugin.so -> ../lib20_zlib_plugin.so
 lrwxrwxrwx	root/root	usr/lib/dovecot/modules/pop3/lib21_fts_squat_plugin.so -> ../lib21_fts_squat_plugin.so
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3
 -rwxr-xr-x	root/root	usr/lib/dovecot/pop3-login
 -rwxr-xr-x	root/root	usr/lib/dovecot/rawlog
 -rwxr-xr-x	root/root	usr/lib/dovecot/ssl-build-param
+-rwxr-xr-x	root/root	usr/lib/dovecot/threadview
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/dovecot
 -rwxr-xr-x	root/root	usr/sbin/dovecotpw
