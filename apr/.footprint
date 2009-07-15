@@ -74,14 +74,14 @@ drwxr-xr-x	root/root	usr/include/apr-1/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libapr-1.a
 -rwxr-xr-x	root/root	usr/lib/libapr-1.la
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.3.5
-lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.3.5
--rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.3.5
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so -> libapr-1.so.0.3.6
+lrwxrwxrwx	root/root	usr/lib/libapr-1.so.0 -> libapr-1.so.0.3.6
+-rwxr-xr-x	root/root	usr/lib/libapr-1.so.0.3.6
 -rw-r--r--	root/root	usr/lib/libaprutil-1.a
 -rwxr-xr-x	root/root	usr/lib/libaprutil-1.la
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.3.7
-lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.3.7
--rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.3.7
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so -> libaprutil-1.so.0.3.8
+lrwxrwxrwx	root/root	usr/lib/libaprutil-1.so.0 -> libaprutil-1.so.0.3.8
+-rwxr-xr-x	root/root	usr/lib/libaprutil-1.so.0.3.8
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-1.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/apr-util-1.pc
