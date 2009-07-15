@@ -99,15 +99,3 @@ Index: mozilla/xulrunner/installer/mozilla-nss.pc.in
 -Cflags: -I${includedir}/stable
 +Libs: %FULL_NSS_LIBS%
 +Cflags: %FULL_NSS_CFLAGS%
-diff -aur mozilla.orig/toolkit/xre/nsAppRunner.cpp mozilla/toolkit/xre/nsAppRunner.cpp
---- mozilla.orig/toolkit/xre/nsAppRunner.cpp	2008-11-17 15:36:43.000000000 +0100
-+++ mozilla/toolkit/xre/nsAppRunner.cpp	2009-05-10 20:38:30.800675740 +0200
-@@ -1459,7 +1459,7 @@
-   if (NS_FAILED(rv))
-     return rv;
- 
--#elif
-+#else
- #error Oops, you need platform-specific code here
- #endif
- 
