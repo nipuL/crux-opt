@@ -4,13 +4,13 @@
 # Depends on:  ncurses
 
 name=tmux
-version=0.8
+version=0.9
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    sed -i '50s/=.*/= -iquote\./' GNUmakefile
+    ./configure
     make
     install -D -m 0755 tmux $PKG/usr/bin/tmux
     install -D -m 0644 tmux.1 $PKG/usr/man/man1/tmux.1
