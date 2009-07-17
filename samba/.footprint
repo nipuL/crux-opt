@@ -78,6 +78,7 @@ lrwxrwxrwx	root/root	usr/lib/samba/libwbclient.so -> libwbclient.so.0
 -rw-r--r--	root/root	usr/lib/samba/lowcase.dat
 drwxr-xr-x	root/root	usr/lib/samba/nss_info/
 drwxr-xr-x	root/root	usr/lib/samba/pdb/
+drwxr-xr-x	root/root	usr/lib/samba/perfcount/
 drwxr-xr-x	root/root	usr/lib/samba/rpc/
 -rw-r--r--	root/root	usr/lib/samba/upcase.dat
 -rw-r--r--	root/root	usr/lib/samba/valid.dat
@@ -141,6 +142,7 @@ drwxr-xr-x	root/root	usr/man/man7/
 -rw-r--r--	root/root	usr/man/man7/samba.7.gz
 -rw-r--r--	root/root	usr/man/man7/winbind_krb5_locator.7.gz
 drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/cifs.upcall.8.gz
 -rw-r--r--	root/root	usr/man/man8/eventlogadm.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_ad.8.gz
 -rw-r--r--	root/root	usr/man/man8/idmap_adex.8.gz
