@@ -4,13 +4,13 @@
 # Depends on:  ncurses openssl readline zlib
 
 name=samba
-version=3.3.5
+version=3.4.0
 release=1
 source=(http://www.samba.org/samba/ftp/stable/$name-$version.tar.gz \
         samba-config.patch samba)
 
 build () {
-    cd $name-$version/source
+    cd $name-$version/source3
 
     patch -d .. -p1 -i $SRC/samba-config.patch
 
@@ -38,7 +38,7 @@ build () {
 
     # nsswitch extensions
     install -d $PKG/lib
-    install nsswitch/libnss_win{s,bind}.so $PKG/lib
+    install ../nsswitch/libnss_win{s,bind}.so $PKG/lib
     ln -s libnss_wins.so $PKG/lib/libnss_wins.so.2
     ln -s libnss_winbind.so $PKG/lib/libnss_winbind.so.2
 
