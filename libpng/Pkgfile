@@ -4,7 +4,7 @@
 # Depends on:  zlib
 
 name=libpng
-version=1.2.37
+version=1.2.38
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
