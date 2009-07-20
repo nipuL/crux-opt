@@ -1,12 +1,12 @@
 # Description: user-friendly dm-crypt/LUKS interface
-# URL: http://luks.endorphin.org/dm-crypt
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
-# Depends on: libdevmapper, libgcrypt, popt
+# URL: http://code.google.com/p/cryptsetup/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: lvm2, libgcrypt, popt
 
 name=cryptsetup
 version=1.0.6
-release=1
-source=(http://luks.endorphin.org/source/$name-$version.tar.bz2
+release=2
+source=(http://$name.googlecode.com/files/$name-$version.tar.bz2
         $name.diff)
 
 build() {
