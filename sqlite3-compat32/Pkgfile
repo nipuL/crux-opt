@@ -1,14 +1,13 @@
 # Description: SQL database engine
 # URL:         http://www.sqlite.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  sqlite3, ncurses-compat32, readline-compat32
 
 name=sqlite3-compat32
-version=3.6.6
+version=3.6.16
 release=1
 
-source=(http://www.sqlite.org/sqlite-$version.tar.gz)
+source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)
 
 build () {
     cd sqlite-$version
