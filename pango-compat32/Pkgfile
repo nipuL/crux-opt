@@ -5,9 +5,9 @@
 # Depends on: pango, cairo-compat32, glib-compat32, xorg-libsm-compat32, xorg-libxext-compat32, xorg-libxft-compat32
 
 name=pango-compat32
-version=1.24.0
+version=1.24.4
 release=1
-source=(http://download.gnome.org/sources/pango/1.20/pango-$version.tar.bz2 \
+source=(http://download.gnome.org/sources/pango/1.24/pango-$version.tar.bz2 \
 	pango.modules)
 
 build () {
