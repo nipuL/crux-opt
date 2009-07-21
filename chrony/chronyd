@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# /etc/rc.d/chronyd: start/stop the chrony time server
+#
+
+KEY=`sed -n "s/^commandkey *//p" /etc/chrony.conf`
+PASSWD=`sed -n "s/^$KEY *//p" /etc/chrony.keys`
+
+case $1 in
+start)
+	/usr/sbin/chronyd -s -r
+	;;
+stop)
+	killall -q  /usr/sbin/chronyd
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+online)
+	/usr/bin/chronyc << EOF > /dev/null
+	password $PASSWD
+	online
+EOF
+	;;
+offline)
+	/usr/bin/chronyc << EOF > /dev/null
+	password $PASSWD
+	offline
+	dump
+	writertc
+EOF
+	;;
+*)
+	echo "usage: $0 [start|stop|restart|online|offline]"
+	;;
+esac
+
+# End of file

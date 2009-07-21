@@ -11,5 +11,5 @@ release=1
 source=(http://download.macromedia.com/pub/labs/flashplayer10/libflashplayer-$version.linux-x86_64.so.tar.gz)
 
 build() {
-   install -D libflashplayer.so $PKG/usr/lib/firefox/plugins/libflashplayer.so
+   install -D -m 0755 libflashplayer.so $PKG/usr/lib/firefox/plugins/libflashplayer.so
 }

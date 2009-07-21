@@ -1,0 +1,26 @@
+# Description: GNU Midnight Commander
+# URL:         http://www.midnight-commander.org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  e2fsprogs, glib
+
+name=mc
+version=4.6.2
+release=2
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+
+    aclocal
+    automake -a
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --libexecdir=/usr/lib \
+                --disable-nls
+    make
+    make DESTDIR=$PKG install
+
+    rm $PKG/usr/share/mc/{mc.hint.*,extfs/README}
+    rm -r $PKG/usr/{sbin,man/man8}
+}

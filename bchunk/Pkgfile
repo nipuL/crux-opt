@@ -1,0 +1,17 @@
+# Description: BinChunker for Unix / Linux
+# URL: http://hes.iki.fi/bchunk/
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Antti Nykanen, aon at iki dot fi
+
+name=bchunk
+version=1.2.0
+release=1
+source=(http://he.fi/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	make
+	mkdir -p $PKG/usr/bin $PKG/usr/man/man1
+	make PREFIX=$PKG/usr install
+	chown root:root $PKG/usr/man/man1/*
+}

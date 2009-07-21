@@ -1,0 +1,20 @@
+# Description: MySQL module for PHP
+# URL:         http://www.php.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  mysql zlib
+
+name=php-mysql
+version=5.2.10
+release=1
+source=(http://www.php.net/distributions/php-$version.tar.bz2)
+
+build () {
+    cd php-$version
+
+    ./configure --disable-all --with-mysql=shared,/usr
+    make build-modules
+
+    install -d $PKG/{etc/php/conf.d,usr/lib/php/extensions}
+    install -m 755 modules/mysql.so $PKG/usr/lib/php/extensions
+    echo "extension=mysql.so" > $PKG/etc/php/conf.d/mysql.ini
+}

@@ -1,0 +1,14 @@
+README for spamprobe 1.2
+
+REQUIREMENTS
+
+PRE-INSTALL
+
+  As of version 1.2 spamprobe is build with the PBL ISAM library
+  instead of Berkeley DB. To transfer the spamprobe database use 
+  the export/import commands.
+
+POST-INSTALL
+ 
+PRECAUTION
+

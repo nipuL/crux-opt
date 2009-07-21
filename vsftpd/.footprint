@@ -1,0 +1,20 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/vsftpd
+drwxr-xr-x	root/root	etc/ssl/
+drwxr-xr-x	root/root	etc/ssl/certs/
+-rw-------	root/root	etc/ssl/certs/vsftpd.crt (EMPTY)
+drwxr-xr-x	root/root	etc/ssl/keys/
+-rw-------	root/root	etc/ssl/keys/vsftpd.key (EMPTY)
+-rw-------	root/root	etc/vsftpd.conf
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man5/
+-rw-r--r--	root/root	usr/man/man5/vsftpd.conf.5.gz
+drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/vsftpd.8.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/vsftpd
+drwxr-xr-x	root/root	var/
+drwxr-xr-x	root/root	var/log/
+-rw-r--r--	root/root	var/log/vsftpd.log (EMPTY)

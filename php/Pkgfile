@@ -1,0 +1,46 @@
+# Description: PHP interpreter, extension modules and support stuff
+# URL:         http://www.php.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ncurses readline zlib libpcre libxml2 bzip2 curl db gdbm zip
+
+name=php
+version=5.2.10
+release=1
+source=(http://www.php.net/distributions/php-$version.tar.bz2 
+        extensions.ini)
+
+build () {
+    cd php-$version
+
+    local PHP_CONFIG="
+    --prefix=/usr \
+    --with-config-file-path=/etc/php \
+    --with-config-file-scan-dir=/etc/php/conf.d \
+    --with-zlib \
+    --with-pcre-regex=/usr \
+    --disable-static --disable-debug --without-pear"
+
+    local PHP_SHARED="
+    --enable-dba=shared --with-gdbm --with-db4 \
+    --with-bz2=shared \
+    --with-curl=shared \
+    --with-openssl=shared \
+    --enable-zip=shared"
+
+    EXTENSION_DIR=/usr/lib/php/extensions \
+    ./configure \
+        $PHP_CONFIG \
+        $PHP_SHARED \
+        --enable-cli \
+        --disable-cgi \
+        --with-readline
+
+    make
+    make -j1 INSTALL_ROOT=$PKG install
+    rm $PKG/usr/lib/php/extensions/*.a
+
+    sed -i '/^extension_dir/s|=.*$|= "/usr/lib/php/extensions"|' php.ini-*
+    install -d $PKG/etc/php/conf.d
+    install -m 644 php.ini-* $PKG/etc/php
+    install -m 644 $SRC/extensions.ini $PKG/etc/php/conf.d
+}

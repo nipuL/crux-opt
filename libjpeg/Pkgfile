@@ -2,7 +2,7 @@
 # URL:         http://www.ijg.org/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Packager:  Hannes Mayer, crux86_64 at ecarux dot de
+# Arch Packager:  Hannes Mayer, crux86_64 at ecarux dot de
 
 name=libjpeg
 version=6b

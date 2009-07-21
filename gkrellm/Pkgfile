@@ -1,0 +1,18 @@
+# Description: GTK+ system monitor and more
+# URL:         http://www.gkrellm.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Daniel Mueller, daniel at danm dot de
+# Depends on:  gtk, openssl
+
+name=gkrellm
+version=2.3.2
+release=1
+source=(http://members.dslextreme.com/users/billw/$name/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    sed -i '/^enable_nls/s/1/0/' Makefile
+    make PREFIX=/usr 
+    make INSTALLROOT=$PKG/usr MANDIR=$PKG/usr/man/man1 install
+    mkdir -p $PKG/usr/lib/gkrellm2/plugins 
+}

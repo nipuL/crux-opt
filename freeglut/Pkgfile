@@ -6,7 +6,7 @@
 
 name=freeglut
 version=2.4.0
-release=1
+release=2
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
     freeglut-2.4.0.patch)
 

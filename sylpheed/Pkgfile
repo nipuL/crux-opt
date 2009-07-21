@@ -1,0 +1,24 @@
+# Description: GTK+ email client and news reader
+# URL:         http://sylpheed.sraoss.jp/en/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gtk, openssl
+
+name=sylpheed
+version=2.6.0
+release=1
+source=(http://sylpheed.sraoss.jp/sylpheed/v2.6/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+
+    sed -ri '/\[.+\]=/d' sylpheed.desktop
+    install -d $PKG/usr/share/{applications,pixmaps}
+    install -m 0644 sylpheed.desktop $PKG/usr/share/applications
+    install -m 0644 sylpheed.png $PKG/usr/share/pixmaps
+
+    rm -r $PKG/usr/share/{locale,sylpheed}
+}

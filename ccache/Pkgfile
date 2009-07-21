@@ -1,6 +1,6 @@
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
-# Packager: 
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Fredrik Rinnestam, fredrik at obra dot se
 # Description: A compiler cache
 # URL: http://ccache.samba.org
 

@@ -1,0 +1,211 @@
+diff -Nru aterm-1.0.1.orig/README.configure aterm-1.0.1/README.configure
+--- aterm-1.0.1.orig/README.configure	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/README.configure	2007-08-02 14:23:19.000000000 +0200
+@@ -56,6 +56,10 @@
+ 	the mouse button down on a scrollbar arrow
+ --disable-mousewheel
+ 	remove support for scrolling via mouse wheel or buttons 4 & 5
++--enable-fake-root
++	add support for pseudo root terminals. Associated with 
++	transparency options, this enables pseudo-terminals
++	looking like they are part of X root window
+ --enable-old-selection
+ 	revert mouse selection to something similar to v2.20 (and prior) -
+ 	this implies word selection of those versions (i.e. next option)
+diff -Nru aterm-1.0.1.orig/autoconf/configure.in aterm-1.0.1/autoconf/configure.in
+--- aterm-1.0.1.orig/autoconf/configure.in	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/autoconf/configure.in	2007-08-02 15:00:51.000000000 +0200
+@@ -82,6 +82,9 @@
+ AC_ARG_ENABLE(mousewheel,  [  --disable-mousewheel    disable scrolling via mouse wheel or buttons 4 & 5],
+   [if test x$enableval = xno; then  AC_DEFINE(NO_MOUSE_WHEEL,1,[Use wheel events (button4 and button5) to scroll])  fi])
+ 
++AC_ARG_ENABLE(fake-root,  [  --enable-fake-root      enable fake root support],
++  [if test x$enableval = xyes; then  AC_DEFINE(FAKE_ROOT,1,[Define to enable fake root pseudo-terminals])  fi])
++
+ AC_ARG_ENABLE(old-selection, [  --enable-old-selection  enable v2.20 (and prior) mouse selection
+                           - this implies old word selection],
+   [if test x$enableval = xyes; then  AC_DEFINE(OLD_SELECTION,1,[Define to use old rxvt (ver 2.20 and before) style selection, not xterm style.]) fi])
+@@ -635,7 +638,7 @@
+   [setlocale(LC_CTYPE, "");],
+   rxvt_cv_func_xsetlocale=yes, rxvt_cv_func_xsetlocale=no)])
+ if test "${rxvt_cv_func_xsetlocale}" = no; then
+-  AC_DEFINE(NO_XSETLOCALE)
++  AC_DEFINE(NO_XSETLOCALE,1,[Define if xsetlocale doesn't work])
+ fi
+ 
+ AC_CACHE_CHECK(for working plain setlocale, rxvt_cv_func_setlocale,
+diff -Nru aterm-1.0.1.orig/doc/aterm.1 aterm-1.0.1/doc/aterm.1
+--- aterm-1.0.1.orig/doc/aterm.1	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/doc/aterm.1	2007-08-02 14:23:19.000000000 +0200
+@@ -230,6 +230,16 @@
+ .IP "\fB-st\fP|\fB+st\fP" 
+ Display scrollbar without/with a trough;
+ resource \fBscrollBar_floating\fP\&.
++.IP "\fB-fr\fP|\fB+fr\fP" 
++Turn on/off making the aterm's parent window an unmanaged one mapped 
++at the bottom on the stack without cursor change. When turned on, also 
++provide a 'point-to-focus' behavior model independently
++from the X Window Manager.\&
++
++This is useful combined with other options (\fB-tr\fP, \fB-bw\fP,
++\fB-geometry\fP, ...) to provide pseudo-terminals seamlessly integrated
++into the X desktop. Please note this will not work as expected with WMs 
++masquerading the X root window with fake roots; resource \fBfakeRoot\fP\&.
+ .IP "\fB-iconic\fP" 
+ Start iconified, if the window manager supports that option\&.
+ .IP "\fB-sl\fP \fInumber\fP" 
+diff -Nru aterm-1.0.1.orig/src/command.c aterm-1.0.1/src/command.c
+--- aterm-1.0.1.orig/src/command.c	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/src/command.c	2007-08-02 15:48:46.000000000 +0200
+@@ -1886,9 +1886,9 @@
+ 	    case XK_F2:		/* "\033[12~" */
+ 	    case XK_F3:		/* "\033[13~" */
+ 	    case XK_F4:		/* "\033[14~" */
+-			FKEY(11, XK_F1);
++		    FKEY(11, XK_F1);
+ 		break;
+-#endif			
++#endif
+ 	    case XK_F5:		/* "\033[15~" */
+ 			FKEY(15, XK_F5);
+ 		break;
+@@ -2411,6 +2411,13 @@
+ 	}
+ 	break;
+ 
++#ifdef FAKE_ROOT
++    case EnterNotify:
++      if (Options&Opt_fake_root)
++	XGrabKeyboard(Xdisplay,TermWin.parent,True,
++		      GrabModeAsync,GrabModeAsync,CurrentTime);
++      else break;
++#endif
+     case FocusIn:
+ 	if (!TermWin.focus) {
+ 	    TermWin.focus = 1;
+@@ -2427,7 +2434,12 @@
+ #endif
+ 	}
+ 	break;
+-
++#ifdef FAKE_ROOT
++    case LeaveNotify:
++      if (Options&Opt_fake_root)
++	XUngrabKeyboard(Xdisplay,CurrentTime);
++      else break;
++#endif
+     case FocusOut:
+ 	if (TermWin.focus) {
+ 	    TermWin.focus = 0;
+diff -Nru aterm-1.0.1.orig/src/main.c aterm-1.0.1/src/main.c
+--- aterm-1.0.1.orig/src/main.c	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/src/main.c	2007-08-02 14:23:19.000000000 +0200
+@@ -705,7 +705,14 @@
+ 					   &attributes);
+ 
+ #else
+-	attr_mask |= CWColormap ;
++#ifdef FAKE_ROOT
++    attributes.override_redirect = (Options&Opt_fake_root)?True:False;
++    mwmhints.flags = 0;
++#else
++    attributes.override_redirect = False;
++#endif
++
++    attr_mask |= CWColormap | CWOverrideRedirect ;
+     TermWin.parent = XCreateWindow(Xdisplay, Xroot,
+ 				   szHint.x, szHint.y,
+ 				   szHint.width, szHint.height,
+@@ -745,8 +752,17 @@
+     }
+    
+ 
+-/* vt cursor: Black-on-White is standard, but this is more popular */
+-    TermWin_cursor = XCreateFontCursor(Xdisplay, XC_xterm);
++/* vt cursor: Black-on-White is standard, but this is more popular,
++   so let's do the opposite unless we found ourselves in the FAKE_ROOT case
++*/
++    TermWin_cursor = XCreateFontCursor(Xdisplay, 
++#ifndef FAKE_ROOT
++				       XC_xterm
++#else
++				       (Options&Opt_fake_root)?
++				       XC_left_ptr:XC_xterm
++#endif
++);
+     {
+ 		XColor          fg, bg;
+ 
+@@ -754,6 +770,11 @@
+ 		XQueryColor(Xdisplay, Xcmap, &fg);
+ 		bg.pixel = PixColors[Color_bg];
+ 		XQueryColor(Xdisplay, Xcmap, &bg);
++#ifdef FAKE_ROOT
++		if (Options&Opt_fake_root)
++		  XRecolorCursor(Xdisplay, TermWin_cursor, &bg, &fg);
++		else
++#endif
+ 		XRecolorCursor(Xdisplay, TermWin_cursor, &fg, &bg);
+     }
+ 
+@@ -763,7 +784,12 @@
+ 							 ButtonPressMask | 
+ 							 ButtonReleaseMask |
+ 		  					 Button1MotionMask | 
+-							 Button3MotionMask);
++				 Button3MotionMask 
++#ifdef FAKE_ROOT
++				 | EnterWindowMask | 
++				 LeaveWindowMask 
++#endif
++				 );
+ 	attributes.cursor = TermWin_cursor ;
+ /* the vt window */
+ #ifdef HAVE_AFTERIMAGE
+@@ -2361,6 +2387,11 @@
+ /* do it now to avoid unneccessary redrawing */
+     XMapWindow(Xdisplay, TermWin.vt);
+     XMapWindow(Xdisplay, TermWin.parent);
++#ifdef FAKE_ROOT
++/* put the window on the bottom of the stack if we are 'faking root' */
++    if (Options&Opt_fake_root)
++      XLowerWindow(Xdisplay, TermWin.parent);
++#endif
+ 
+ #if 0
+ #if defined(BACKGROUND_IMAGE) || defined(TRANSPARENT) || defined(_MYSTYLE_)
+diff -Nru aterm-1.0.1.orig/src/rxvt.h aterm-1.0.1/src/rxvt.h
+--- aterm-1.0.1.orig/src/rxvt.h	2007-08-02 14:35:31.000000000 +0200
++++ aterm-1.0.1/src/rxvt.h	2007-08-02 14:33:42.000000000 +0200
+@@ -785,6 +785,7 @@
+ #define Opt_transparent		(1LU<<13)
+ #define Opt_transparent_sb	(1LU<<14)
+ #define Opt_borderLess		(1LU<<16)
++#define Opt_fake_root       (1LU<<17)
+ 
+ /* place holder used for parsing command-line options */
+ #define Opt_Reverse		(1LU<<30)
+diff -Nru aterm-1.0.1.orig/src/xdefaults.c aterm-1.0.1/src/xdefaults.c
+--- aterm-1.0.1.orig/src/xdefaults.c	2007-08-02 14:35:30.000000000 +0200
++++ aterm-1.0.1/src/xdefaults.c	2007-08-02 14:23:19.000000000 +0200
+@@ -80,6 +80,9 @@
+ #ifdef GREEK_SUPPORT
+ static const char *rs_greek_keyboard = NULL;
+ #endif
++#ifdef FAKE_ROOT
++static const char *rs_fake_root = NULL;
++#endif
+ /*}}} */
+ 
+ /*{{{ monolithic option/resource structure: */
+@@ -316,6 +319,10 @@
+ 	 "scroll-on-tty-output inhibit"),
+     BOOL(rs_scrollKeypress, "scrollKey", "sk",
+          Opt_scrollKeypress, "scroll-on-keypress"),
++#ifdef FAKE_ROOT
++    BOOL(rs_fake_root, "fakeRoot", "fr", Opt_fake_root, 
++	 "fake root window embedding"),
++#endif
+     STRG(rs_minBufferWidth, "minBufferWidth", "mbw", "number",
+          "minimum number of columns stored in buffer"),
+     STRG(rs_saveLines, "saveLines", "sl", "number",

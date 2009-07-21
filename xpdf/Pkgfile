@@ -1,0 +1,30 @@
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Packager: Robert McMeekin, viper at mcmeekin dot info
+# Description: PDF viewer
+# URL: http://foolabs.com/xpdf
+# Depends on: lesstif, t1lib
+
+name=xpdf
+version=3.02
+release=4
+source=(ftp://ftp.foolabs.com/pub/xpdf/$name-$version.tar.gz
+	$name-${version}pl1.patch
+	$name-${version}pl2.patch
+	$name-${version}pl3.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-${version}pl1.patch
+    patch -p1 -i $SRC/$name-${version}pl2.patch
+    patch -p1 -i $SRC/$name-${version}pl3.patch
+    ./configure \
+	--prefix=/usr \
+        --with-Xm-library=/usr/lib \
+        --with-Xm-includes=/usr/include/Xm \
+	--with-freetype2-includes=/usr/include/freetype2 \
+        --sysconfdir=/etc \
+        --enable-a4-paper \
+        --enable-opi
+    make
+    make install DESTDIR=$PKG
+}

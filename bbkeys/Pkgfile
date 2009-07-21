@@ -1,0 +1,17 @@
+# Description: bbkeys, keybinding software for blackbox 
+# URL: 	       http://bbkeys.sourceforge.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  blackbox
+
+name=bbkeys
+version=0.9.1
+release=1
+source=(http://dl.sourceforge.net/sourceforge/bbkeys/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version 
+    ./configure --prefix=/usr --mandir=/usr/man 
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/doc
+}

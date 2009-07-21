@@ -1,0 +1,17 @@
+# Description: a set of tools for counting physical Source Lines of Code
+# URL: http://www.dwheeler.com/sloccount/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on:
+
+name=sloccount
+version=2.26
+release=1
+source=(http://www.dwheeler.com/sloccount/sloccount-$version.tar.gz)
+
+build() {
+	cd sloccount-$version
+	make
+	install -d -m 0755 $PKG/usr/bin
+	make PREFIX=$PKG/usr MAN_DIR=$PKG/usr/man install
+	rm -rf $PKG/usr/share/doc
+}

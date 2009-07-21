@@ -1,0 +1,18 @@
+# Description: Ruby bindings for libmusicbrainz
+# URL: http://www.pablotron.org/software/mb-ruby/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: ruby, libmusicbrainz
+
+name=ruby-musicbrainz
+version=0.3.0
+release=1
+source=(http://pablotron.org/download/mb-ruby-$version.tar.gz)
+
+build () {
+	cd mb-ruby-$version
+
+	ruby extconf.rb
+	make
+
+	make DESTDIR=$PKG install
+}

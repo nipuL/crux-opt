@@ -1,0 +1,23 @@
+# Description: nice command-line calendar program
+# URL: http://palcal.sourceforge.net/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: glib, gettext, readline
+
+name=pal
+version=0.4.3
+release=1
+source=(http://dl.sourceforge.net/palcal/$name-$version.tgz)
+
+build() {
+    cd $name-$version
+
+    find ./ -type f -exec sed -i 's|/etc|/usr/etc|g' {} \;
+    find ./ -type f -exec sed -i 's|/share/man|/man|g' {} \;
+
+    cd src
+    make
+    make DESTDIR=$PKG install-no-rm 		
+
+    rm -rf $PKG/usr/share/doc
+    rm -rf $PKG/usr/share/locale
+}

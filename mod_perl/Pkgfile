@@ -1,0 +1,26 @@
+# Description: Persistent Perl interpreter for the Apache HTTP server
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# URL:         http://perl.apache.org
+# Depends on:  apache, perl
+# Group:       apache
+
+name=mod_perl
+version=2.0.4
+release=2
+source=(http://perl.apache.org/dist/$name-$version.tar.gz)
+
+build(){
+    cd $name-$version
+    perl Makefile.PL \
+         MP_USE_DSO=1 \
+         MP_APXS=/usr/sbin/apxs
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/bin
+    rm -r $PKG/usr/lib/perl5/site_perl/5.10.?/linux/{Apache,Bundle}
+    rm $PKG/usr/man/man3/{Bundle::*,Apache::*}
+    find $PKG -regex '.*\(perllocal\.pod\|\.packlist\|\.bs\)' -delete
+    find $PKG -depth -empty -exec rm -rf {} \;
+}

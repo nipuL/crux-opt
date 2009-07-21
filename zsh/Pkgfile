@@ -1,0 +1,40 @@
+# Description: Very powerfull shell
+# URL: http://www.zsh.org/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libpcre
+
+name=zsh
+version=4.3.10
+release=2
+source=(http://www.zsh.org/pub/$name-$version.tar.bz2 \
+        zsh-lovers.1)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+        --prefix=/usr \
+	--mandir=/usr/man \
+        --enable-etcdir=/etc/zsh \
+        --enable-zshrc=/etc/zsh/zshrc \
+        --enable-zshlogin=/etc/zsh/zshlogin \
+        --enable-zshenv=/etc/zsh/zshenv \
+        --enable-fndir=/usr/share/zsh/$version/functions \
+        --enable-site-fndir=/usr/share/zsh/site-functions \
+        --enable-zsh-mem \
+        --enable-maildir-support \
+        --enable-function-subdirs \
+	--enable-pcre \
+	--enable-restricted-r \
+	--enable-lfs \
+        --enable-cap \
+        --with-curses-terminfo
+    make
+    make DESTDIR=$PKG install 
+
+    install -m 644 $SRC/zsh-lovers.1 $PKG/usr/man/man1/
+
+    # These completion files break things for CRUX' pkgutils,
+    # so remove them for now (see bug #381).
+    rm $PKG/usr/share/zsh/$version/functions/Completion/Unix/_pkg{add,rm,info}
+}

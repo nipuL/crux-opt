@@ -1,0 +1,21 @@
+# Description: Console IM client
+# URL: http://www.centerim.org/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: Simon Gloﬂner, viper at hometux dot de
+# Depends on: ncurses
+
+name=centerim
+version=4.22.6
+release=1
+source=(http://www.centerim.org/download/releases/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+	--prefix=/usr \
+	--mandir=/usr/man \
+	--disable-nls
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,19 @@
+# Description: Small and fast music player using the ncurses library
+# URL: http://cmus.sf.net/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Packager: Jukka Heino, jukka dot heino at gmail dot com
+# Depends on: 
+# Nice to have: alsa-lib, flac, libao, libid3tag, libmad, libmodplug, libmpcdec, libvorbis
+
+name=cmus
+version=2.2.0
+release=2
+source=(http://mirror.greaterscope.net/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure prefix=/usr mandir=/usr/man CONFIG_ARTS=n
+    make
+    make DESTDIR=$PKG install install-man
+    rm -rf $PKG/usr/share/{doc,cmus/*.theme}
+}

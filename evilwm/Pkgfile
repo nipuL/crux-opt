@@ -1,0 +1,18 @@
+# Description: The minimalist window manager
+# URL:         http://www.6809.org.uk/evilwm/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xorg-libxext xorg-libxrandr xorg-font-misc-misc xorg-font-alias
+
+name=evilwm
+version=1.0.1
+release=2
+source=(http://www.6809.org.uk/$name/$name-$version.tar.gz \
+        $name-config.patch $name-maximise.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-config.patch
+    patch -p1 -i $SRC/$name-maximise.patch
+    make 
+    make DESTDIR=$PKG install
+}

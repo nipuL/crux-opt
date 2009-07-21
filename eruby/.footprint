@@ -1,0 +1,16 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/eruby
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/eruby.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/liberuby.a
+lrwxrwxrwx	root/root	usr/lib/liberuby.so -> liberuby.so.1.0.5
+-rw-r--r--	root/root	usr/lib/liberuby.so.1.0.5
+drwxr-xr-x	root/root	usr/lib/ruby/
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/
+drwxr-xr-x	root/root	usr/lib/ruby/1.8/linux/
+-r-xr-xr-x	root/root	usr/lib/ruby/1.8/linux/eruby.so
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/eruby.1.gz

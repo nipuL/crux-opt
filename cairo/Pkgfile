@@ -1,7 +1,8 @@
 # Description: A 2D graphics library with support for multiple output devices
 # URL: http://www.cairographics.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: fontconfig, glitz, libpng, xorg-libxrender, xorg-libpixman
 # Nice to have: xorg-xcb-util
 

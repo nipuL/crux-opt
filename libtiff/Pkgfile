@@ -6,7 +6,7 @@
 
 name=libtiff
 version=3.8.2
-release=1
+release=2
 source=(ftp://ftp.remotesensing.org/libtiff/tiff-$version.tar.gz \
         $name-$version.patch)
 

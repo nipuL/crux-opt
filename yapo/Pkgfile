@@ -1,0 +1,14 @@
+# Description: yapo - Yet Another Ports Overview
+# URL:         http://jue.li/crux/yapo
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  prt-get, ncurses-ruby
+
+name=yapo
+version=0.3.2
+release=1
+source=(http://jue.li/crux/$name/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    make DESTDIR=$PKG install
+}

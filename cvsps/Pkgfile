@@ -1,0 +1,16 @@
+# Description: CVS patchset generator
+# URL: http://www.cobite.com/cvsps/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: 
+
+name=cvsps
+version=2.1
+release=1
+source=(http://www.cobite.com/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+	sed -i 's:share/man:man:g' Makefile
+	make
+	make prefix=$PKG/usr install
+}

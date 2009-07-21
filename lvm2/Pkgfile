@@ -1,0 +1,24 @@
+# Description: Userspace toolset for logical volume management
+# URL:         http://sourceware.org/lvm2/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Packager:    Mark Rosenstand, mark at borkware dot net
+
+name=lvm2
+version=2.02.49
+release=1
+source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
+
+build() {
+    cd LVM2.$version
+
+    ./configure --prefix=/usr \
+                --exec-prefix=/ \
+                --mandir=/usr/man \
+                --disable-readline
+    make -j1
+    make DESTDIR=$PKG install
+
+    install -d -m 0700 $PKG/etc/lvm/{archive,backup}
+    install -d -m 1777 $PKG/var/lock
+    install -d -m 0700 $PKG/var/lock/lvm
+}

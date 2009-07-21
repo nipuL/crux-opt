@@ -3,7 +3,6 @@
 # Packager: Matt Housh, jaeger at crux dot nu
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: hal
 
 name=hal-info
 version=20090414

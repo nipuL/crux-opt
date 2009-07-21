@@ -1,9 +1,9 @@
 # Description: Little CMS. A free color management engine.
-# URL: http://www.littlecms.com/
+# URL:         http://www.littlecms.com/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Daniel Mueller, daniel at danm dot de
-# Depends on: zlib, libtiff, libjpeg
+# Packager:    Daniel Mueller, daniel at danm dot de
+# Depends on:  zlib, libtiff, libjpeg
 
 name=lcms
 version=1.18a

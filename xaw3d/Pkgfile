@@ -18,5 +18,8 @@ build () {
     xmkmf
     make -j1 XPLIB=''
     make DESTDIR=$PKG install
+<<<<<<< HEAD:xaw3d/Pkgfile
     mv $PKG/usr/lib64 $PKG/usr/lib
+=======
+>>>>>>> 2.6:xaw3d/Pkgfile
 }

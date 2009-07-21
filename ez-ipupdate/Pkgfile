@@ -1,0 +1,19 @@
+# Description: Utility for updating the host name for many dynamic DNS services
+# URL:         http://www.ez-ipupdate.com/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=ez-ipupdate
+version=3.0.11b8
+release=2
+source=(http://ftp.debian.org/debian/pool/main/e/$name/${name}_${version}.orig.tar.gz \
+        $name.8 $name-$version.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 < ../$name-$version.patch
+    export CFLAGS="$CFLAGS -Wall"
+    ./configure --prefix=/usr
+    make 
+    make DESTDIR=$PKG install
+    install -D -m 644 ../$name.8 $PKG/usr/man/man8/$name.8
+}

@@ -1,0 +1,14 @@
+# Description: programmable bash completion for subversion
+# URL: http://subversion.tigris.org
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Mathias Herzog, mathu at gmx dot ch
+# Depends on: bash-completion subversion 
+
+name=subversion-bashcompletion
+version=1.5.5
+release=1
+source=(http://svn.collab.net/repos/svn/tags/$version/tools/client-side/bash_completion)
+
+build() {
+  install -D -m 755 bash_completion $PKG/usr/lib/bash-completion/subversion_complete
+}

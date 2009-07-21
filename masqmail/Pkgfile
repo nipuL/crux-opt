@@ -1,0 +1,40 @@
+# Description: Mail Transfer Agent for dialup networks 
+# URL:         http://www.sonic.net/~okurth/masqmail/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  glib
+
+name=masqmail
+version=0.2.21
+release=1
+source=(http://ftp.debian.org/debian/pool/main/m/masqmail/${name}_$version.orig.tar.gz \
+	masqmail masqmail.conf masqmail.alias inet.route)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-auth \
+                --enable-maildir \
+                --with-user=mail \
+                --with-group=mail 
+    make
+    make DESTDIR=$PKG install
+
+    ln -s masqmail $PKG/usr/sbin/sendmail
+    ln -s ../sbin/masqmail $PKG/usr/bin/mailq
+
+    install -m 644 $SRC/masqmail.{conf,alias} $PKG/etc/masqmail
+    install -m 644 $SRC/inet.route $PKG/etc/masqmail
+    echo -n "inet" > $PKG/etc/masqmail/connect_route
+    install -m 644 examples/example.* $PKG/etc/masqmail
+    install -m 644 examples/masqmail.conf $PKG/etc/masqmail/example.conf
+    install -D -m 755 $SRC/masqmail $PKG/etc/rc.d/masqmail
+    
+    sed -i -e "s/#host#/$(hostname)/g" \
+           -e "s/#domain#/$(hostname -d)/g" \
+           $PKG/etc/masqmail/masqmail.conf
+    
+   rm $PKG/usr/share/masqmail/tpl/*.tpl.*
+   touch $PKG/var/log/masqmail/{masqmail,debug}.log
+   chown mail:mail $PKG/var/log/masqmail/*
+   chown root:root $PKG/var/run    
+}

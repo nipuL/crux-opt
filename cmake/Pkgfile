@@ -1,7 +1,9 @@
 # Description: A cross-platform, open-source make system.
 # URL: http://www.cmake.org/
-# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
-# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Packager: Mark Rosenstand, mark at borkware dot net
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Antti Nykanen, aon at iki dot fi
 # Depends on: ncurses
 
 name=cmake

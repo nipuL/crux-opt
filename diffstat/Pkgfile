@@ -1,0 +1,17 @@
+# Description: Generates statistics for diffs
+# URL: http://invisible-island.net/diffstat/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+
+name=diffstat
+version=1.47
+release=1
+source=(ftp://invisible-island.net/$name/$name-$version.tgz)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+}

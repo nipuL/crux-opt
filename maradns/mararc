@@ -1,0 +1,62 @@
+#
+# /etc/mararc
+#
+
+# Base settings
+hide_disclaimer = "YES"
+chroot_dir = "/etc/maradns"
+maradns_uid = 99
+maradns_gid = 99
+random_seed_file = "/dev/urandom"
+
+# Timing and size settings
+maximum_cache_elements = 2048
+maxprocs = 96
+timeout_seconds = 5
+
+# Logging and debug settings
+timestamp_type = 4
+verbose_level = 3
+debug_msg_level = 3
+
+# The addresses mara bind to
+# CHANGING THIS IS REQUIRED !
+ipv4_bind_addresses = "127.0.0.1,192.168.0.1"
+
+# The various zones we support
+csv2 = {}
+csv2["localhost."] = "db.localhost"
+# csv2["example.net."] = "db.example.net"
+
+# ACL for localhost, localnet
+# CHANGING THIS IS REQUIRED !
+ipv4_alias = {}
+ipv4_alias["localhost"] = "127.0.0.0/8"
+ipv4_alias["localnet"] = "192.168.0.0/24"
+recursive_acl = "localhost,localnet"
+zone_transfer_acl = "localnet"
+admin_acl = "localhost,localnet"
+
+# The root servers which we use when making recursive queries.
+# http://www.icann.org
+ipv4_alias["icann"]  = "198.41.0.4,192.228.79.201,192.33.4.12,128.8.10.90,"
+ipv4_alias["icann"] += "192.203.230.10,192.5.5.241,192.112.36.4,"
+ipv4_alias["icann"] += "128.63.2.53,192.36.148.17,192.58.128.30,"
+ipv4_alias["icann"] += "193.0.14.129,199.7.83.42,202.12.27.33"
+
+# ORSN, Open Root Server Network (http://www.orsn.org)
+ipv4_alias["orsn"]  = "217.146.128.77,193.238.157.7,212.7.160.13,195.226.7.66,"
+ipv4_alias["orsn"] += "213.161.0.90,193.138.173.218,82.102.0.9,213.144.148.130,"
+ipv4_alias["orsn"] += "194.116.123.194,193.93.167.222,217.173.157.225,"
+ipv4_alias["orsn"] += "192.83.249.100,213.145.82.34"
+
+root_servers = {}
+root_servers["."] = "orsn"
+
+# upstream_servers = {}
+# upstream_servers["."] = "usually_your_isps_dns_servers"
+# ORSN, puplic nameservers
+# upstream_servers["."] = "217.146.139.5,62.157.101.211"
+
+
+# End of file

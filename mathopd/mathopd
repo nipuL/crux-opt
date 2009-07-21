@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# /etc/rc.d/mathopd: start/stop mathopd http daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/mathopd -f /etc/mathopd.conf
+	;;
+stop)
+	killall -q /usr/sbin/mathopd
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

@@ -1,0 +1,33 @@
+# Packager: Daniel Mueller, daniel at danm dot de
+# Maintainer: Johannes Winkelmann, jw at smts dot ch
+# URL: http://www.xemacs.org
+# Description: All packages for xemacs
+# Depends on: xemacs
+
+name=xemacs-sumo
+version=2009-02-17
+release=1
+source=(ftp://ftp.ch.xemacs.org/mirror/xemacs/packages/$name-$version.tar.bz2)
+build(){
+	install -d -m0755 $PKG/usr/lib/xemacs
+
+	find xemacs-packages \
+		-name "ChangeLog*" \
+		-o -name "*README*" \
+		-o -name "INSTALL*" \
+		-o -name "*NEWS*" \
+		-o -name "BUGS*" \
+		-o -name "AUTHORS" \
+		-o -name "COPYING" \
+		-o -name "TODO*"|xargs rm -f
+
+	rm -rf xemacs-packages/{info,etc/zenirc}
+
+    	find xemacs-packages -name "*.el" | while read file; do
+		[ -f ${file}c ] && rm -f $file
+    	done
+
+	mv xemacs-packages $PKG/usr/lib/xemacs/
+
+	chown -R root:root $PKG
+}

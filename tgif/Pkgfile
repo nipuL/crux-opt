@@ -1,0 +1,19 @@
+# Description: Xlib based interactive 2-D drawing tool
+# URL:         http://bourbon.usc.edu/tgif
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xorg-libxmu
+
+name=tgif
+version=4.1.45
+release=1
+source=( ftp://bourbon.usc.edu/pub/tgif/tgif-QPL-4.1.45.tar.gz \
+        $name-config.patch)
+
+build () {
+    cd $name-QPL-$version
+    patch -p1 < $SRC/$name-config.patch
+    xmkmf
+    make
+    make DESTDIR=$PKG install install.man
+    rm $PKG/usr/share/tgif/[CL]*
+}

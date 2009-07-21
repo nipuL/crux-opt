@@ -1,0 +1,15 @@
+# Description: Multiple device (RAID) admin tool
+# URL:         http://www.cse.unsw.edu.au/~neilb/source/mdadm/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=mdadm
+version=3.0
+release=1
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
+        $name-$version-vol_id.patch)
+
+build() {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-$version-vol_id.patch
+    make CXFLAGS="$CFLAGS" DESTDIR=$PKG MANDIR=/usr/man install
+}

@@ -1,0 +1,14 @@
+# Description: C/C++ source auditing tool
+# URL: http://www.dwheeler.com/flawfinder/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: python
+
+name=flawfinder
+version=1.27
+release=1
+source=(http://www.dwheeler.com/flawfinder/flawfinder-$version.tar.gz)
+
+build () {
+	cd flawfinder-$version
+	make INSTALL_DIR=$PKG/usr install
+}

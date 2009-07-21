@@ -1,0 +1,16 @@
+# Description: File manager with full-screen user interface
+# URL:         http://www.clex.sk
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ncurses
+
+name=clex
+version=4.4
+release=1
+source=(http://www.clex.sk/download/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+}

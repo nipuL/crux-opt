@@ -1,0 +1,22 @@
+# Description: utility library for X keyboard-related projects
+# URL: http://freedesktop.org/Software/LibXklavier
+# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libxml2, iso-codes
+
+name=libxklavier
+version=3.8
+release=1
+source=(http://download.gnome.org/sources/$name/$version/$name-$version.tar.bz2)
+
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr \
+              --disable-static \
+              --disable-doxygen \
+              --with-xkb-base=/etc/X11/xkb \
+              --with-x
+  make
+  make DESTDIR=$PKG install
+  rm -rf $PKG/usr/share/gtk-doc
+}

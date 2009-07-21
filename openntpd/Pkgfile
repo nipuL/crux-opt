@@ -1,0 +1,23 @@
+# Description: portable version of openbsd's ntpd implementation
+# URL: http://www.openntpd.org/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Packager: Matt Housh, jaeger at morpheus dot net
+
+name=openntpd
+version=3.9p1
+release=2
+source=(ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz \
+	ntpd)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+	--prefix=/usr \
+	--sysconfdir=/etc \
+	--with-privsep-user=ntp
+    make
+    make DESTDIR=$PKG install
+	
+    install -D -m 0755 $SRC/ntpd $PKG/etc/rc.d/ntpd
+}

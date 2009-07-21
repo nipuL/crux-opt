@@ -1,0 +1,24 @@
+# Description: Spam detection program that uses Bayesian analysis
+# URL:         http://spamprobe.sourceforge.net/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=spamprobe
+version=1.4d
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+        http://www.mission-base.com/peter/source/pbl_1_03.tar.gz
+        $name-$version-gcc43.patch)
+
+build () {
+    cd pbl_1_03
+    sed -i "/^CFLAGS/s/-O3/$CFLAGS/" makefile
+    make
+
+    cd $SRC/$name-$version
+    patch -p1 -i $SRC/$name-$version-gcc43.patch
+    ./configure --prefix=/usr \
+                --with-pbl=$SRC/pbl_1_03 \
+                --enable-default-8-bit
+    make 
+    make DESTDIR=$PKG install
+}

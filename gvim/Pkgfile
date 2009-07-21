@@ -17,6 +17,8 @@ source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2
 build () {
     cd vim72/src
 
+    cat $SRC/vim-7.2-patches/* | patch -p0 -d $SRC/vim72
+
     ./configure --prefix=/usr \
                 --with-vim-name=gvim \
                 --with-x=yes \

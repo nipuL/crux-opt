@@ -1,0 +1,37 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/c-client/
+-rw-r--r--	root/root	usr/include/c-client/c-client.h
+-rw-r--r--	root/root	usr/include/c-client/dummy.h
+-rw-r--r--	root/root	usr/include/c-client/env.h
+-rw-r--r--	root/root	usr/include/c-client/env_unix.h
+-rw-r--r--	root/root	usr/include/c-client/fdstring.h
+-rw-r--r--	root/root	usr/include/c-client/flockcyg.h
+-rw-r--r--	root/root	usr/include/c-client/flocksim.h
+-rw-r--r--	root/root	usr/include/c-client/flstring.h
+-rw-r--r--	root/root	usr/include/c-client/fs.h
+-rw-r--r--	root/root	usr/include/c-client/ftl.h
+-rw-r--r--	root/root	usr/include/c-client/imap4r1.h
+-rw-r--r--	root/root	usr/include/c-client/linkage.c
+-rw-r--r--	root/root	usr/include/c-client/linkage.h
+-rw-r--r--	root/root	usr/include/c-client/mail.h
+-rw-r--r--	root/root	usr/include/c-client/misc.h
+-rw-r--r--	root/root	usr/include/c-client/netmsg.h
+-rw-r--r--	root/root	usr/include/c-client/newsrc.h
+-rw-r--r--	root/root	usr/include/c-client/nl.h
+-rw-r--r--	root/root	usr/include/c-client/nntp.h
+-rw-r--r--	root/root	usr/include/c-client/osdep.h
+-rw-r--r--	root/root	usr/include/c-client/pseudo.h
+-rw-r--r--	root/root	usr/include/c-client/rfc822.h
+-rw-r--r--	root/root	usr/include/c-client/smtp.h
+-rw-r--r--	root/root	usr/include/c-client/sslio.h
+-rw-r--r--	root/root	usr/include/c-client/tcp.h
+-rw-r--r--	root/root	usr/include/c-client/tcp_unix.h
+-rw-r--r--	root/root	usr/include/c-client/unix.h
+-rw-r--r--	root/root	usr/include/c-client/utf8.h
+-rw-r--r--	root/root	usr/include/c-client/utf8aux.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libc-client.a
+lrwxrwxrwx	root/root	usr/lib/libc-client.so -> libc-client.so.1.0.0
+lrwxrwxrwx	root/root	usr/lib/libc-client.so.1 -> libc-client.so.1.0.0
+-rwxr-xr-x	root/root	usr/lib/libc-client.so.1.0.0

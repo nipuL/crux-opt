@@ -1,0 +1,11 @@
+--- clients/Motif-2.1/Makefile.in~	2008-06-17 18:17:50.845050248 +0300
++++ clients/Motif-2.1/Makefile.in	2008-06-17 18:17:55.406361652 +0300
+@@ -243,7 +243,7 @@
+ xmREVISION = @xmREVISION@
+ xmVERSION = @xmVERSION@
+ xmVer = @xmVer@
+-SUBDIRS = mwm xmbind uil
++SUBDIRS = xmbind uil
+ MAINTAINERCLEANFILES = Makefile.in
+ all: all-recursive
+ 

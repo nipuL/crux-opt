@@ -1,0 +1,24 @@
+# Description: A remote-mail retrieval utility
+# URL:         http://fetchmail.berlios.de/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=fetchmail
+version=6.3.10
+release=1
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-ssl=/usr \
+                --disable-nls
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/bin/fetchmailconf \
+           $PKG/usr/man/man?/fetchmailconf.? \
+           $PKG/usr/lib
+}

@@ -1,0 +1,25 @@
+# Description: Library for delta compression of streams
+# URL: http://librsync.sourceforge.net/
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: popt
+
+name=librsync
+version=0.9.7
+release=2
+source=(http://dl.sourceforge.net/${name}/${name}-${version}.tar.gz
+	librsync.patch)
+
+build() {
+    cd $name-$version
+
+    patch -p1 < $SRC/librsync.patch
+
+    ./configure \
+	--prefix=/usr \
+	--enable-shared
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/man/man1
+    rm -r $PKG/usr/bin
+}

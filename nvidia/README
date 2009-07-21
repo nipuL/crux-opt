@@ -1,5 +1,5 @@
 
-README for nvidia 1.0-8178+
+README for nvidia 1xx.xx
 
 
 
@@ -24,7 +24,7 @@ POST-INSTALL
 Use opt/gl-select from ports to select the correct gl/glx
 libraries and extensions like so:
 
-	# gl-select nvidia
+	# gl-select use nvidia
 
 
 POST-REMOVE
@@ -32,7 +32,7 @@ POST-REMOVE
 Use opt/gl-select from ports to revert to the xorg gl/glx libraries
 and extensions like so:
 
-	# gl-select xorg
+	# gl-select use xorg
 
 
 When UPGRADING/DOWNGRADING the nvidia port (where the version changes),
@@ -40,5 +40,5 @@ use gl-select to revert to xorg and then re-select nvidia in order to
 refresh the libGLcore and libGL symlinks, like so:
 
 	# prt-get update nvidia
-	# gl-select xorg; gl-select nvidia
+	# gl-select use xorg; gl-select use nvidia
 

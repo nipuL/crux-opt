@@ -1,6 +1,5 @@
 # Description: Apache HTTP server version 2.2.x
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # URL:         http://httpd.apache.org/
 # Depends on:  apr libpcre openssl zlib
 # Group:       apache

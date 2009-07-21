@@ -1,0 +1,39 @@
+# Description: A full-featured web proxy cache
+# URL:         http://www.squid-cache.org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=squid
+version=3.0.STABLE16
+release=1
+source=(http://www.squid-cache.org/Versions/v3/3.0/$name-$version.tar.bz2 \
+        squid squid-config.patch)
+
+build () {
+    cd $name-$version
+
+    patch -p1 -i $SRC/squid-config.patch
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc/squid \
+                --libexecdir=/usr/lib/squid \
+                --localstatedir=/var \
+                --datadir=/usr/share/squid \
+                --with-default-user=squid \
+                --enable-linux-netfilter \
+                --enable-err-languages=English \
+                --enable-storeio=ufs,aufs,diskd \
+                --with-large-files \
+                --with-pthreads \
+                --with-aufs-threads=16
+
+    make all
+    make DESTDIR=$PKG install
+
+    rm $PKG/usr/bin/{RunCache,RunAccel}
+    mv $PKG/usr/share/squid/errors/{English/*,.}
+    rm -r $PKG/usr/share/squid/errors/{English,templates}
+
+    install -d -m 0700 -o squid -g squid $PKG/var/{log/squid,squid}
+    install -D -m 755 $SRC/squid $PKG/etc/rc.d/squid
+}

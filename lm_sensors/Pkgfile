@@ -1,0 +1,17 @@
+# Description: Tools for monitoring system health (temperatures, voltages, fan speed, etc)
+# URL: http://www.lm-sensors.org
+# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Depends on: perl
+# Nice to have: i2c-tools
+
+name=lm_sensors
+version=3.1.1
+release=1
+source=(http://dl.lm-sensors.org/lm-sensors/releases/$name-$version.tar.bz2)
+
+build () {
+  cd $name-$version
+  make install PREFIX=/usr \
+               ETCDIR=/usr/etc \
+               DESTDIR=$PKG
+}

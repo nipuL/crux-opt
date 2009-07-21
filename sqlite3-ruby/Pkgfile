@@ -1,0 +1,19 @@
+# Description: Interface to the SQLite DB engine
+# URL:         http://sqlite-ruby.rubyforge.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ruby, sqlite3
+
+name=sqlite3-ruby
+version=1.2.4
+release=1
+source=(http://rubyforge.org/frs/download.php/42055/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+
+    ruby setup.rb config
+    ruby setup.rb setup
+    ruby setup.rb install --prefix=$PKG
+
+    mv $PKG/usr/lib/ruby/{site_ruby,vendor_ruby}
+}

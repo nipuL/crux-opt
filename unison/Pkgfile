@@ -1,0 +1,17 @@
+# Description: Bi-directional file synchronization tool
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Markus Ackermann, maol at symlink dot ch
+# URL:         http://www.cis.upenn.edu/~bcpierce/unison/
+# Depends on:  ocaml
+
+name=unison
+version=2.27.157
+release=1
+source=(http://www.cis.upenn.edu/~bcpierce/unison/download/releases/$name-$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    unset CFLAGS CXXFLAGS
+    make -j1 UISTYLE=text THREADS=true
+    install -D -m 755 unison $PKG/usr/bin/unison
+}

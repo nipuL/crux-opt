@@ -1,0 +1,18 @@
+# Description: Ruby bindings for Cairo
+# URL: http://cairographics.org/rcairo
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: ruby cairo
+
+name=ruby-cairo
+version=1.8.0
+release=1
+source=(http://cairographics.org/releases/rcairo-$version.tar.gz)
+
+build () {
+	cd rcairo-$version
+
+	ruby extconf.rb
+
+	make
+	make DESTDIR=$PKG install
+}

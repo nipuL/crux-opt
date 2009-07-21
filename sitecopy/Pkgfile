@@ -1,0 +1,21 @@
+# Description: Utility for maintaining remote web sites via FTP or WebDAV
+# URL:         http://www.manyfish.co.uk/sitecopy/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  neon
+
+name=sitecopy
+version=0.16.6
+release=1
+source=(http://www.manyfish.co.uk/sitecopy/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-neon=/usr \
+                --disable-nls \
+                --disable-debug
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/{doc,share,man/fr}
+}

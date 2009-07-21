@@ -1,0 +1,27 @@
+# Description: Tools for the Linux quota system
+# URL:         http://sourceforge.net/projects/linuxquota/
+# Packager:    Mikhail Kolesnik, mike at openbunker dot org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=quota
+version=3.17
+release=1
+source=(http://dl.sourceforge.net/sourceforge/linuxquota/$name-$version.tar.gz \
+        warnquota.conf)
+
+build(){
+    cd $name-tools
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc/quota \
+                --enable-nls=no \
+                --enable-altformat=yes \
+                --enable-rpc=yes \
+                --enable-nis=no \
+                --enable-bsd_behaviour=yes \
+                --enable-rootsbin=yes
+    make
+    make install ROOTDIR=$PKG
+    install -D -m 644 $SRC/warnquota.conf $PKG/etc/quota/warnquota.conf
+    find $PKG/etc/quota -type f | xargs sed -i 's|/etc|/etc/quota|'
+}

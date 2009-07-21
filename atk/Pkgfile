@@ -1,7 +1,8 @@
 # Description: A set of interfaces for accessibility
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: glib
 
 name=atk

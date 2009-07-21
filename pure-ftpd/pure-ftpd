@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# /etc/rc.d/pure-ftpd: start/stop pure-ftpd daemon
+#
+
+CONF=/etc/pure-ftpd.conf
+ARGS=$(sed -e '/^\s*$/d' -e '/^#/d' $CONF)
+
+CRT=/etc/ssl/certs/pure-ftpd.pem
+
+case $1 in
+start)
+	if [ ! -s $CRT ]; then 
+		/usr/bin/mksslcert $CRT $CRT
+	fi
+	/usr/sbin/pure-ftpd $ARGS
+	;;
+stop)
+	killall -q /usr/sbin/pure-ftpd
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

@@ -1,0 +1,22 @@
+# Description: WINE - Implementation of Windows DLL's and core.
+# URL: http://www.winehq.com/
+# Packager: Daniel Walpole, daniel at walpole dot id dot au
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: fontforge
+
+name=wine
+version=1.1.25
+release=1
+source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure \
+		--prefix=/usr \
+		--mandir=$PKG/usr/man \
+		--disable-nls
+	make depend
+	make
+	make prefix=$PKG/usr install
+	rm -rf $PKG/usr/man/{de,fr}.UTF-8
+}

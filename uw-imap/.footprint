@@ -1,0 +1,14 @@
+drwxr-xr-x	root/root	etc/
+drwxr-xr-x	root/root	etc/ssl/
+drwxr-xr-x	root/root	etc/ssl/certs/
+-rw-------	root/root	etc/ssl/certs/imapd.pem (EMPTY)
+-rw-------	root/root	etc/ssl/certs/ipop3d.pem (EMPTY)
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man8/
+-rw-r--r--	root/root	usr/man/man8/imapd.8.gz
+-rw-r--r--	root/root	usr/man/man8/ipopd.8.gz
+drwxr-xr-x	root/root	usr/sbin/
+-rwxr-xr-x	root/root	usr/sbin/imapd
+-rwxr-xr-x	root/root	usr/sbin/ipop2d
+-rwxr-xr-x	root/root	usr/sbin/ipop3d

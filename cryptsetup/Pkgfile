@@ -1,0 +1,25 @@
+# Description: user-friendly dm-crypt/LUKS interface
+# URL: http://luks.endorphin.org/dm-crypt
+# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Depends on: libdevmapper, libgcrypt, popt
+
+name=cryptsetup
+version=1.0.6
+release=1
+source=(http://luks.endorphin.org/source/$name-$version.tar.bz2
+        $name.diff)
+
+build() {
+    cd $name-$version
+
+    patch -Np1 -i $SRC/$name.diff
+   
+    touch m4/Makefile.in
+
+    ./configure \
+	--prefix=/usr \
+	--mandir=/usr/man \
+	--disable-nls
+    make
+    make DESTDIR=$PKG install
+}

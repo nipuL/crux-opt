@@ -1,0 +1,27 @@
+# Description: xterm replacement with transparency and fading
+# URL:         http://aterm.sourceforge.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  xorg-libxext xorg-libsm xorg-libxt xorg-font-misc-misc xorg-font-alias
+
+name=aterm
+version=1.0.1
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+        $name-fake_root.patch 
+        $name-fkeys.patch 
+        $name-$version-display-security-issue.patch)
+
+build () {
+    cd aterm-$version
+
+    patch -p1 -i $SRC/$name-$version-display-security-issue.patch
+    patch -p1 -i $SRC/$name-fake_root.patch
+    patch -p1 -i $SRC/$name-fkeys.patch
+
+    cp autoconf/configure.in .
+    autoconf
+    autoheader
+    ./configure --prefix=/usr --enable-fake-root --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+}

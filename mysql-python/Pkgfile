@@ -1,0 +1,17 @@
+# Description: MySQL interface for Python
+# URL:         http://sourceforge.net/projects/mysql-python/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  python, mysql
+
+name=mysql-python
+version=1.2-r618
+release=1
+source=(http://jue.li/crux/files/MySQL-python-$version.tar.gz \
+        http://cheeseshop.python.org/packages/2.6/s/setuptools/setuptools-0.6c9-py2.6.egg)
+
+build () {
+    cd MySQL-python-$version
+    cp $SRC/setuptools-0.6c9-py2.6.egg .
+    python setup.py install --root=$PKG --prefix=/usr
+    rm -r $PKG/usr/lib/python2.6/site-packages/*.egg-info
+}

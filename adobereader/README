@@ -1,0 +1,5 @@
+PRE-INSTALL
+
+It seems that the Mozilla plugin has problems
+with with stripping. Be sure to build the package
+with -ns option if you intend to use the plugin.

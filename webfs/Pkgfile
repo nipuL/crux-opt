@@ -1,0 +1,16 @@
+# Description: A simple HTTP server for static content
+# URL:         http://linux.bytesex.org/misc/webfs.html
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=webfs
+version=1.21
+release=3
+source=(http://dl.bytesex.org/releases/webfs/webfs-$version.tar.gz \
+        webfsd)
+
+build() {
+    cd $name-$version
+    make prefix=$PKG/usr mandir=$PKG/usr/man install
+    install -D -m 0755 $SRC/webfsd $PKG/etc/rc.d/webfsd
+}

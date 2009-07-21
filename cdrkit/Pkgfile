@@ -1,7 +1,8 @@
-# Description: Debian's fork of cdrtools
+# Description: A suite of programs for recording CDs and DVDs
 # URL: http://cdrkit.org/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Antti Nykanen, aon at iki dot fi
 # Depends on: cmake, libcap
 
 name=cdrkit

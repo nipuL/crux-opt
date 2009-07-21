@@ -1,0 +1,60 @@
+diff -Nru evilwm-1.0.1.orig/Makefile evilwm-1.0.1/Makefile
+--- evilwm-1.0.1.orig/Makefile	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/Makefile	2009-06-23 10:28:34.000000000 +0200
+@@ -71,7 +71,7 @@
+ #DEFINES += -DXDEBUG  # show some X calls
+ 
+ DEFINES += -DVERSION=\"$(version)\" $(DEBIAN)
+-CFLAGS  += $(INCLUDES) $(DEFINES) -Os -Wall
++CFLAGS  += $(INCLUDES) $(DEFINES) -Wall
+ #CFLAGS  += $(INCLUDES) $(DEFINES) -g -Wall
+ CFLAGS  += -W -Wstrict-prototypes -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Waggregate-return -Wnested-externs -Winline -Wwrite-strings -Wundef -Wsign-compare -Wmissing-prototypes -Wredundant-decls
+ LDFLAGS += $(LDPATH) $(LIBS)
+@@ -92,9 +92,9 @@
+ 
+ install: evilwm
+ 	if [ -f evilwm.exe ]; then mv evilwm.exe evilwm; fi
+-	mkdir -p $(prefix)/bin $(prefix)/share/man/man1
++	mkdir -p $(prefix)/bin $(prefix)/man/man1
+ 	install -s evilwm $(prefix)/bin
+-	install evilwm.1 $(prefix)/share/man/man1
++	install evilwm.1 $(prefix)/man/man1
+ 	#gzip -9 $(prefix)/share/man/man1/evilwm.1
+ 
+ dist:
+diff -Nru evilwm-1.0.1.orig/evilwm.1 evilwm-1.0.1/evilwm.1
+--- evilwm-1.0.1.orig/evilwm.1	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/evilwm.1	2009-06-23 10:28:34.000000000 +0200
+@@ -70,7 +70,7 @@
+ bottom-right of screen.
+ .IP I
+ Show information about current window.
+-.IP Equals
++.IP V
+ Maximise current window vertically (toggle).
+ .IP X
+ Maximise current window (toggle).
+diff -Nru evilwm-1.0.1.orig/evilwm.h evilwm-1.0.1/evilwm.h
+--- evilwm-1.0.1.orig/evilwm.h	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/evilwm.h	2009-06-23 10:33:36.000000000 +0200
+@@ -40,7 +40,7 @@
+ 
+ /* default settings */
+ 
+-#define DEF_FONT        "variable"
++#define DEF_FONT        "fixed"
+ #define DEF_FG          "goldenrod"
+ #define DEF_BG          "grey50"
+ #define DEF_BW          1
+diff -Nru evilwm-1.0.1.orig/keymap.h evilwm-1.0.1/keymap.h
+--- evilwm-1.0.1.orig/keymap.h	2009-06-23 10:28:06.000000000 +0200
++++ evilwm-1.0.1/keymap.h	2009-06-23 10:28:34.000000000 +0200
+@@ -14,7 +14,7 @@
+ #define KEY_LOWER	XK_Insert
+ #define KEY_ALTLOWER	XK_KP_Insert
+ #define KEY_INFO	XK_i
+-#define KEY_MAXVERT	XK_equal
++#define KEY_MAXVERT	XK_v
+ #define KEY_MAX		XK_x
+ #ifdef VWM
+ # define KEY_FIX		XK_f

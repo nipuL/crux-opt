@@ -1,8 +1,8 @@
 # Description: X.509 and CMS support library
 # URL: http://www.gnupg.org
-# Maintainer: Simon Gloßner, viper at hometux dot de
+# Maintainer: Simon Gloï¿½ner, viper at hometux dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Simon Gloßner, viper at hometux dot de
+# Packager: Simon Gloï¿½ner, viper at hometux dot de
 # Depends on: libgpg-error
 
 name=libksba

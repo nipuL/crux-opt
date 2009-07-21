@@ -4,9 +4,9 @@
 # Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
 
 name=nspr
-version=4.7.4
+version=4.8
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.7.4/src/$name-$version.tar.gz
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v4.8/src/$name-$version.tar.gz
         $name.pc.in)
 
 build() {
@@ -19,7 +19,8 @@ build() {
         --libdir=/usr/lib \
         --includedir=/usr/include/nspr \
         --enable-optimize="$CFLAGS" \
-        --disable-debug --enable-64bit
+        --disable-debug \
+        --enable-64bit
 
     make
     make DESTDIR=$PKG install

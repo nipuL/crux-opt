@@ -1,7 +1,8 @@
 # Description: ID3 tag manipulation library
 # URL: http://www.mars.org/home/rob/proj/mpeg/
-# Maintainer: Simon Gloßner, viper at hometux dot de
+# Maintainer: Simon Gloï¿½ner, viper at hometux dot de
 # Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Packager: Robert McMeekin, rrm3 at rrm3 dot org
 # Depends on: zlib
 
 name=libid3tag

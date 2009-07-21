@@ -1,0 +1,16 @@
+# Description: Extention library to use MySQL via Ruby
+# URL:         http://www.tmtm.org/en/mysql/ruby/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ruby, mysql
+
+name=mysql-ruby
+version=2.8.1
+release=1
+source=(http://tmtm.org/downloads/mysql/ruby/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    ruby extconf.rb --vendor --with-mysql-dir=/usr
+    make
+    make DESTDIR=$PKG install
+}

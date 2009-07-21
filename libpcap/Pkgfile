@@ -1,0 +1,19 @@
+# Description: Packet capture library
+# URL:         http://www.tcpdump.org
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=libpcap
+version=1.0.0
+release=1
+source=(http://www.tcpdump.org/release/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    install -d $PKG/usr/bin
+    sed -i '/ln [^-][^s]/s/ln/ln -s/' Makefile.in
+    ./configure --prefix=/usr --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install install-shared
+    ln -s $name.so.$version $PKG/usr/lib/$name.so.1 
+    ln -s $name.so.$version $PKG/usr/lib/$name.so
+}

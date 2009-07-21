@@ -1,0 +1,31 @@
+# Description: Editor based on the Scintilla editing component
+# URL:         http://www.scintilla.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  gtk
+
+name=scite
+version=179
+release=1
+source=(http://dl.sourceforge.net/sourceforge/scintilla/$name$version.tgz)
+
+build () {
+    cd scintilla/gtk
+    sed -i "s/-Os/$CXXFLAGS/" makefile
+    make GTK2=1
+
+    cd $SRC/$name/gtk
+    sed -i "s/-Os/$CXXFLAGS/" makefile
+    make GTK2=1 prefix=/usr
+    make DESTDIR=$PKG install
+
+    sed -i '/^#buffers/s/#//
+            /^#save.recent/s/#//
+            /^#tabbar.hide.one/s/#//' \
+           $PKG/usr/share/scite/SciTEGlobal.properties
+
+    chmod -x $PKG/usr/share/{applications,scite}/*
+    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/*.desktop
+    rm -r $PKG/usr/share/scite/*.html
+    install -D -m 644 ../doc/scite.1 $PKG/usr/man/man1/scite.1
+    ln -s SciTE $PKG/usr/bin/scite
+}

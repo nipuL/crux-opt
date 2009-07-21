@@ -1,0 +1,62 @@
+# Packager: Daniel Mueller, daniel at danm dot de
+# Maintainer: Johannes Winkelmann, jw at smts dot ch
+# URL: http://www.xemacs.org
+# Description: A highly customizable open source text editor and application development system
+# Depends on: xorg-xbitmaps, libtiff, libpng, ncurses, lesstif 
+
+name=xemacs
+version=21.4.21
+release=2
+source=(http://ftp.xemacs.org/pub/xemacs/xemacs-21.4/$name-$version.tar.gz
+	$name-$version-no_info.diff
+	$name-$version-etc-blacklist)
+        
+build(){
+	cd $name-$version
+	patch -p0 -i $SRC/$name-$version-no_info.diff
+
+	./configure --prefix=/usr --dynamic=yes --with-x11 \
+		--with-menubars=lucid --with-scrollbars=lucid \
+		--external-widget --with-jpeg --with-png --with-tiff \
+		--with-ncurses --with-pop --with-xfs \
+                --with-file-coding
+
+	make
+	make autoloads
+	
+	# create directory hierarchies
+	mkdir -p $PKG/usr/{bin,lib,man/man1}
+	mkdir -p $PKG/usr/lib/$name-$version/{etc,info,lisp}
+	mkdir -p $PKG/usr/lib/$name/lock
+
+	make prefix="$PKG/usr" install
+
+	(cd $PKG/usr/lib/$name-$version/etc; \
+		rm ctags.1; ln -s etags.1 ctags.1; \
+		rm gnuattach.1; ln -s gnuserv.1 gnuattach.1; \
+		rm gnuclient.1; ln -s gnuserv.1 gnuclient.1; \
+		rm gnudoit.1; ln -s gnuserv.1 gnudoit.1)
+	mv $PKG/usr/lib/$name-$version/etc/*.1 $PKG/usr/man/man1/
+
+	(cd $PKG/usr/bin; rm $name; \
+		mv $name-$version $name)
+
+	# remove conflicting files (emacs)
+	rm $PKG/usr/bin/{b2m,ctags,etags,rcs-checkin}
+	rm $PKG/usr/man/man1/{ctags.1,etags.1,xemacs-ja.1}
+	mv $PKG/usr/bin/$name-$version* $PKG/usr/bin/$name.dmp
+
+	find $PKG/usr/lib/$name-$version -name "*.el" | while read file; do
+		[ -f ${file}c ] && rm -f $file
+	done
+
+	rm -f $PKG/usr/lib/$name-$version/i686-pc-linux/include/{m,s}/README
+	rm -f $PKG/usr/lib/$name-$version/lisp/{ChangeLog.*,{,term/}README}
+
+	for i in $(< $SRC/$name-$version-etc-blacklist); do
+	        rm -rf $PKG/usr/lib/$name-$version/etc/$i
+        done
+
+	# correct permissions
+	chown -R root:root $PKG
+}

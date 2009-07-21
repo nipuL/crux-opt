@@ -1,0 +1,28 @@
+# Description: Framework and distribution system PHP
+# URL: http://pear.php.net/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: mod_php
+
+name=pear
+version=1.8.1
+release=1
+source=(http://pear.php.net/get/PEAR-$version.tgz \
+	http://pear.php.net/get/Archive_Tar-1.3.3.tgz \
+	http://pear.php.net/get/Console_Getopt-1.2.3.tgz
+	$name.conf http://www.varlock.com/files/$name-registry.tgz)
+
+build() {
+	cd PEAR-$version
+	mkdir -p $PKG/usr/{bin,etc,share/pear/php}
+	cp -r {PEAR{,5}.php,System.php,PEAR,OS} $PKG/usr/share/pear/php
+	cp -r ../Archive*/Archive $PKG/usr/share/pear/php
+	cp -r ../Console*/Console $PKG/usr/share/pear/php
+	install -m 644 scripts/*.php $PKG/usr/share/pear/php
+	sed -i 's|@php_bin@|/usr/bin/php|g' scripts/{pear.sh,pecl.sh}
+	sed -i 's|@php_dir@|/usr/share/pear/php|g' scripts/{pear.sh,pecl.sh}
+	install -m 755 scripts/pear.sh $PKG/usr/bin/pear
+	install -m 755 scripts/pecl.sh $PKG/usr/bin/pecl
+	install -m 644 ../$name.conf $PKG/usr/etc
+	cp -r ../.registry $PKG/usr/share/pear/php
+
+}

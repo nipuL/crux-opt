@@ -1,0 +1,67 @@
+diff -Nru popa3d-1.0.1.orig/Makefile popa3d-1.0.1/Makefile
+--- popa3d-1.0.1.orig/Makefile	2006-03-12 11:39:29.000000000 +0100
++++ popa3d-1.0.1/Makefile	2006-03-12 11:39:40.000000000 +0100
+@@ -3,13 +3,13 @@
+ RM = rm -f
+ MKDIR = mkdir -p
+ INSTALL = install -c
+-CFLAGS = -Wall -O2 -fomit-frame-pointer
++CFLAGS += -Wall -fomit-frame-pointer
+ # You may use OpenSSL's MD5 routines instead of the ones supplied here
+ #CFLAGS += -DHAVE_OPENSSL
+ LDFLAGS = -s
+ LIBS =
+ # Linux with glibc, FreeBSD, NetBSD
+-#LIBS += -lcrypt
++LIBS += -lcrypt
+ # HP-UX trusted system
+ #LIBS += -lsec
+ # Solaris (POP_STANDALONE, POP_VIRTUAL)
+@@ -24,7 +24,7 @@
+ #LIBS += -lcrypto
+ 
+ DESTDIR =
+-PREFIX = /usr/local
++PREFIX = /usr
+ SBINDIR = $(PREFIX)/sbin
+ MANDIR = $(PREFIX)/man
+ 
+diff -Nru popa3d-1.0.1.orig/params.h popa3d-1.0.1/params.h
+--- popa3d-1.0.1.orig/params.h	2006-03-12 11:39:29.000000000 +0100
++++ popa3d-1.0.1/params.h	2006-03-12 11:39:40.000000000 +0100
+@@ -13,7 +13,7 @@
+ /*
+  * Are we going to be a standalone server or start via an inetd clone?
+  */
+-#define POP_STANDALONE			0
++#define POP_STANDALONE			1
+ 
+ #if POP_STANDALONE
+ 
+@@ -103,7 +103,7 @@
+  * A pseudo-user to run as before authentication.  The user and its UID
+  * must not be used for any other purpose.
+  */
+-#define POP_USER			POP_SERVER
++#define POP_USER			"mail"
+ 
+ /*
+  * An empty directory to chroot to before authentication.  The directory
+@@ -191,7 +191,7 @@
+  *
+  * #undef this for qmail-style $HOME/Mailbox mailboxes.
+  */
+-#define MAIL_SPOOL_PATH			"/var/mail"
++#define MAIL_SPOOL_PATH			"/var/spool/mail"
+ 
+ #ifndef MAIL_SPOOL_PATH
+ /*
+@@ -216,7 +216,7 @@
+  */
+ #define SYSLOG_IDENT			POP_SERVER
+ #define SYSLOG_OPTIONS			LOG_PID
+-#define SYSLOG_FACILITY			LOG_DAEMON
++#define SYSLOG_FACILITY			LOG_MAIL
+ #define SYSLOG_PRI_LO			LOG_INFO
+ #define SYSLOG_PRI_HI			LOG_NOTICE
+ #define SYSLOG_PRI_ERROR		LOG_CRIT

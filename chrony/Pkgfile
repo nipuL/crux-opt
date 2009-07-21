@@ -1,0 +1,23 @@
+# Description: Network time protocol client/server
+# URL:         http://chrony.sunsite.dk/index.php
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  ncurses, readline
+
+name=chrony
+version=1.23
+release=1
+source=(http://chrony.sunsite.dk/download/$name-$version.tar.gz \
+        chronyd chrony.conf chrony.keys) 
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/doc
+
+    install -d $PKG/var/{lib,log}/chrony 
+    install -D -m 755 $SRC/chronyd $PKG/etc/rc.d/chronyd
+    install -m 600 $SRC/chrony.* $PKG/etc
+}

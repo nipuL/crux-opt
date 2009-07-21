@@ -1,0 +1,26 @@
+# Description: Cross-platform C++ GUI toolkit
+# URL:         http://www.fltk.org/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  libjpeg libpng xorg-libxft xorg-libxi xorg-libxinerama  
+
+name=fltk2
+version=r6671
+release=1
+source=(http://ftp.easysw.com/pub/fltk/snapshots/fltk-2.0.x-$version.tar.bz2)
+
+build() {
+    cd fltk-2.0.x-$version
+
+    sed -i '/fltk2-config/s/^\t/\t$(DESTDIR)/' fluid/Makefile
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-shared \
+                --enable-xft
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/man
+}
+

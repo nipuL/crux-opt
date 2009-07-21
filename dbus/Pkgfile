@@ -2,7 +2,8 @@
 # URL: http://freedesktop.org/wiki/Software_2fdbus
 # Packager: Matt Housh, jaeger at crux dot nu
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Fredrik Rinnestam, fredrik at obra dot se
 # Depends on: expat
 
 name=dbus

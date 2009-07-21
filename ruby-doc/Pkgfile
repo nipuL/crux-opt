@@ -1,0 +1,14 @@
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Description: Data files for the ri documentation system of Ruby 
+# URL:         http://www.ruby-lang.org
+# Depends on:  ruby
+
+name=ruby-doc
+version=1.9.1-p129
+release=1
+source=(ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-$version.tar.bz2)
+
+build () {
+    cd ruby-$version
+    rdoc --all --ri --op $PKG/usr/share/ri/1.9/system .
+}

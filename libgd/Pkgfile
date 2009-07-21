@@ -1,7 +1,6 @@
 # Description: gd libraries
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Jeremy Jones, jeremy at samnjack dot com
 # URL: http://www.libgd.org
 # Depends on: xorg-libxpm, libpng, libjpeg, freetype
 

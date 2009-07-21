@@ -1,0 +1,22 @@
+# Description: An all-platform Edonkey client.
+# URL: http://www.amule.org/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Packager: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: wxgtk, crypto++
+
+name=amule
+version=2.2.5
+release=1
+source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
+
+build() {
+	cd aMule-$version
+	export CFLAGS="${CFLAGS//-fstack-protector/}"
+	export CXXFLAGS="${CXXFLAGS//-fstack-protector/}"
+	./configure 	--prefix=/usr \
+			--mandir=/usr/man \
+			--disable-nls
+	make
+	make install DESTDIR=$PKG
+	rm -r $PKG/usr/{share/{doc,amule},man,lib,bin/autostart-xas}
+}

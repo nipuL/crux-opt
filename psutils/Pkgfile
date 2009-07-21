@@ -1,0 +1,29 @@
+# Description: Postscript Utilities
+# URL:         http://gershwin.ens.fr/vdaniel/Doc-Locale/Outils-Gnu-Linux/PsUtils/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Packager:    Martin Opel, mo at obbl-net dot de
+# Depends on:  ghostscript
+
+name=psutils
+version=1.17
+release=1
+source=(ftp://ftp.enst.fr/pub/unix/a2ps/$name-$version.tar.gz)
+
+build() {
+	cd $name
+	sed	-e "s|-DUNIX -O -Wall|-DUNIX -O2 -pipe -Wall|" \
+		-e "s|BINDIR = /usr/local/bin|BINDIR = /usr/bin|" \
+		-e "s|INCLUDEDIR = /usr/local/share/psutils|INCLUDEDIR = /usr/share/psutils|" \
+		-e "s|PERL = /usr/local/bin/perl|PERL = /usr/bin/perl|" \
+		-e "s|MANDIR = /usr/local/share/man|MANDIR = /usr/man|" \
+		Makefile.unix > Makefile.make
+	make -f Makefile.make
+	sed	-e "s|BINDIR = /usr/bin|BINDIR = $PKG/usr/bin|" \
+		-e "s|INCLUDEDIR = /usr/share/psutils|INCLUDEDIR = $PKG/usr/share/psutils|" \
+		-e "s|MANDIR = /usr/man|MANDIR = $PKG/usr/man|" \
+		-e "s|||" \
+		-e "s|||" \
+		Makefile.make > Makefile.install
+	mkdir -p $PKG/usr/{bin,share/psutils,man/man1}
+	make -f Makefile.install install
+}

@@ -1,0 +1,24 @@
+# Description: NetBSD FTP client
+# URL: ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/
+# Maintainer: Antti Nykanen, aon at iki dot fi
+# Depends on: 
+
+name=tnftp
+version=20070806
+release=1
+source=(ftp://ftp.netbsd.org/pub/NetBSD/misc/tnftp/$name-$version.tar.gz
+	$name-$version-glibc-2.8.diff)
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/$name-$version-glibc-2.8.diff
+	./configure \
+	    --prefix=$PKG/usr \
+	    --mandir=$PKG/usr/man \
+	    --program-prefix=tn
+
+	make
+	make install
+
+	mv $PKG/usr/man/{cat,man}1
+}

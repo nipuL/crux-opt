@@ -1,0 +1,16 @@
+# Description: "Essential" win32 binary codecs for mplayer, xine, etc.
+# URL: http://www.mplayerhq.hu/DOCS/codecs-status.html
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Antti Nykanen, aon at iki dot fi
+
+name=win32-essential-codecs
+version=20071007
+release=1
+source=(http://www3.mplayerhq.hu/MPlayer/releases/codecs/essential-$version.tar.bz2)
+
+build() {
+	cd essential-$version
+	mkdir -p $PKG/usr/lib/win32
+	install -m 0644 * $PKG/usr/lib/win32/
+	rm -f $PKG/usr/lib/win32/README
+}

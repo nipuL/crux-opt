@@ -1,0 +1,18 @@
+# Description: Simple Network Time Protocol server/client/utility
+# URL:         http://www.hpcf.cam.ac.uk/export/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=msntp
+version=1.6
+release=2
+source=(ftp://ftp.openpkg.org/sources/DST/$name/$name-$version.tar.gz \
+        $name-$version.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 < ../$name-$version.patch
+    make
+    mkdir -p $PKG/usr/{sbin,man/man1}
+    cp msntp $PKG/usr/sbin
+    cp msntp.1 $PKG/usr/man/man1
+}

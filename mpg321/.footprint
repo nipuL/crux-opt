@@ -1,0 +1,7 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/mpg123 -> mpg321
+-rwxr-xr-x	root/root	usr/bin/mpg321
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/mpg321.1.gz

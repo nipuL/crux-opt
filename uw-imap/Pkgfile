@@ -1,0 +1,31 @@
+# Description: University of Washington's IMAP/POP server
+# URL:         http://www.washington.edu/imap/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=uw-imap
+version=2007e
+release=1
+source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.gz)
+
+build () {
+    cd imap-${version::5}
+
+    sed -i 's/read x/x=y/' Makefile
+    make slx \
+        EXTRACFLAGS="$CFLAGS" \
+        SSLTYPE=unix \
+        SSLDIR=/usr \
+        SSLCERTS=/etc/ssl/certs \
+        IP=6
+
+    install -D -m 755 imapd/imapd $PKG/usr/sbin/imapd
+    install -m 755 ipopd/{ipop2d,ipop3d} $PKG/usr/sbin
+    install -D -m 644 src/imapd/imapd.8 $PKG/usr/man/man8/imapd.8
+    install -m 644 src/ipopd/ipopd.8 $PKG/usr/man/man8/ipopd.8
+    sed -i 's|/usr/etc/|/usr/sbin/|' $PKG/usr/man/man8/*
+
+    install -d $PKG/etc/ssl/certs/
+    touch $PKG/etc/ssl/certs/{imapd.pem,ipop3d.pem}
+    chmod 0600 $PKG/etc/ssl/certs/{imapd.pem,ipop3d.pem}
+}

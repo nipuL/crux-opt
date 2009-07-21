@@ -1,0 +1,32 @@
+diff -Nru ez-ipupdate-3.0.11b8.orig/ez-ipupdate.c ez-ipupdate-3.0.11b8/ez-ipupdate.c
+--- ez-ipupdate-3.0.11b8.orig/ez-ipupdate.c	2002-03-12 00:31:47.000000000 +0100
++++ ez-ipupdate-3.0.11b8/ez-ipupdate.c	2003-10-17 13:18:12.000000000 +0200
+@@ -140,7 +140,7 @@
+ #  include <signal.h>
+ #endif
+ #if HAVE_SYS_TIME_H
+-#  include <sys/time.h>
++#  include <time.h>
+ #endif
+ #if HAVE_SYS_WAIT_H
+ #  include <sys/wait.h>
+@@ -4215,7 +4215,6 @@
+ 
+   switch(ret)
+   {
+-    char *p;
+ 
+     case -1:
+       if(!(options & OPT_QUIET))
+diff -Nru ez-ipupdate-3.0.11b8.orig/md5.c ez-ipupdate-3.0.11b8/md5.c
+--- ez-ipupdate-3.0.11b8.orig/md5.c	2000-08-08 09:09:48.000000000 +0200
++++ ez-ipupdate-3.0.11b8/md5.c	2003-10-17 13:21:56.000000000 +0200
+@@ -30,7 +30,7 @@
+ #ifdef HAVE_STRING_H
+ # include <string.h>
+ #else
+-# include <strings.h>
++# include <string.h>
+ #endif
+ 
+ #include "md5.h"

@@ -12,6 +12,7 @@ source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2 \
 
 build () {
     export CFLAGS="$CFLAGS -fPIC"
+    
     cd $name-$version
 
     ./configure --prefix=/usr \

@@ -1,0 +1,19 @@
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Description: Allows you to embed Ruby code into HTML files
+# URL:         http://modruby.net/
+# Depends on:  ruby
+
+name=eruby
+version=1.0.5
+release=2
+source=(http://modruby.net/archive/$name-$version.tar.gz \
+        $name-$version.patch)
+
+build() {
+    cd $name-$version
+    patch -p0 -i $SRC/$name-$version.patch
+    #sed -i 's|/-linux/|/linux/|g' configure.rb
+    ./configure.rb --prefix=/usr --enable-shared
+    make
+    make DESTDIR=$PKG install
+}

@@ -1,0 +1,29 @@
+# Description: Replacement for Berkeley Mail and System V mailx command
+# URL:         http://nail.sourceforge.net/ 
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=mailx
+version=12.4
+release=1
+source=(http://dl.sourceforge.net/sourceforge/heirloom/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+
+    sed -i 's|/etc/nail.rc|/usr/etc/mailx.rc|' mailx.1
+
+    make install \
+         PREFIX=/usr \
+         SYSCONFDIR=/usr/etc \
+         MAILRC=/usr/etc/mailx.rc \
+         MANDIR=/usr/man \
+         SENDMAIL=/usr/sbin/sendmail \
+         MAILSPOOL=/var/spool/mail \
+         UCBINSTALL=/usr/bin/install \
+         DESTDIR=$PKG
+
+    ln -s mailx   $PKG/usr/bin/Mail
+    ln -s mailx   $PKG/usr/bin/mail
+    ln -s mailx.1 $PKG/usr/man/man1/mail.1
+}

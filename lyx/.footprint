@@ -101,6 +101,7 @@ drwxr-xr-x	root/root	usr/share/lyx/images/
 -rw-r--r--	root/root	usr/share/lyx/images/amssymb.png
 -rw-r--r--	root/root	usr/share/lyx/images/banner.png
 -rw-r--r--	root/root	usr/share/lyx/images/bookmark-goto.png
+-rw-r--r--	root/root	usr/share/lyx/images/bookmark-goto_0.png
 -rw-r--r--	root/root	usr/share/lyx/images/bookmark-save.png
 -rw-r--r--	root/root	usr/share/lyx/images/box-insert.png
 -rw-r--r--	root/root	usr/share/lyx/images/break-line.png
@@ -696,13 +697,16 @@ drwxr-xr-x	root/root	usr/share/lyx/images/math/
 -rw-r--r--	root/root	usr/share/lyx/images/split-view_horizontal.png
 -rw-r--r--	root/root	usr/share/lyx/images/split-view_vertical.png
 -rw-r--r--	root/root	usr/share/lyx/images/standard.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_align-center.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_align-left.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_align-right.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_append-column.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_append-row.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_delete-column.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_delete-row.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-align-center.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-align-left.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-align-right.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-valign-bottom.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-valign-middle.png
+-rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_m-valign-top.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_multicolumn.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-all-lines.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_set-border-lines.png
@@ -716,9 +720,6 @@ drwxr-xr-x	root/root	usr/share/lyx/images/math/
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_toggle-rotate-cell.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_toggle-rotate-tabular.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_unset-all-lines.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_valign-bottom.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_valign-middle.png
--rw-r--r--	root/root	usr/share/lyx/images/tabular-feature_valign-top.png
 -rw-r--r--	root/root	usr/share/lyx/images/tabular-insert.png
 -rw-r--r--	root/root	usr/share/lyx/images/textstyle-apply.png
 -rw-r--r--	root/root	usr/share/lyx/images/thesaurus-entry.png
@@ -781,6 +782,7 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/aapaper.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/aastex.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/achemso.layout
+-rw-r--r--	root/root	usr/share/lyx/layouts/acmsiggraph.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu-dtd.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu_stdclass.inc
 -rw-r--r--	root/root	usr/share/lyx/layouts/agu_stdcounters.inc
@@ -861,7 +863,6 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/logicalmkup.module
 -rw-r--r--	root/root	usr/share/lyx/layouts/ltugboat.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/lyxmacros.inc
--rw-r--r--	root/root	usr/share/lyx/layouts/manpage.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/memoir.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/minimalistic.module
 -rw-r--r--	root/root	usr/share/lyx/layouts/moderncv.layout
@@ -873,6 +874,7 @@ drwxr-xr-x	root/root	usr/share/lyx/layouts/
 -rw-r--r--	root/root	usr/share/lyx/layouts/numrevtex.inc
 -rw-r--r--	root/root	usr/share/lyx/layouts/paper.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/powerdot.layout
+-rw-r--r--	root/root	usr/share/lyx/layouts/recipebook.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/report.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/revtex.layout
 -rw-r--r--	root/root	usr/share/lyx/layouts/revtex4.layout
@@ -1041,6 +1043,7 @@ drwxr-xr-x	root/root	usr/share/lyx/scripts/
 -rw-r--r--	root/root	usr/share/lyx/symbols
 -rw-r--r--	root/root	usr/share/lyx/syntax.default
 drwxr-xr-x	root/root	usr/share/lyx/templates/
+-rw-r--r--	root/root	usr/share/lyx/templates/ACM-siggraph.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/ACM-sigplan.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/IEEEtran.lyx
 -rw-r--r--	root/root	usr/share/lyx/templates/JSS-article.lyx

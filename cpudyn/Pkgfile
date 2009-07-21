@@ -1,0 +1,17 @@
+# Description: Daemon to control the speed of mobile CPUs 
+# URL:         http://mnm.uib.es/~gallir/cpudyn/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=cpudyn
+version=1.0.1
+release=1
+source=(http://mnm.uib.es/~gallir/cpudyn/download/$name-$version.tgz \
+        cpudynd)
+
+build () {
+    cd $name
+    make
+    install -D -m 755 cpudynd $PKG/usr/sbin/cpudynd
+    install -D -m 644 cpudynd.8 $PKG/usr/man/man8/cpudynd.8
+    install -D -m 755 ../cpudynd $PKG/etc/rc.d/cpudynd
+}

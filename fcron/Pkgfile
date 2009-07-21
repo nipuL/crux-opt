@@ -1,0 +1,32 @@
+# Description: Enhanced periodical command scheduler like cron
+# URL:         http://fcron.free.fr
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+
+name=fcron
+version=3.0.4
+release=2
+source=(http://fcron.free.fr/archives/$name-$version.src.tar.gz \
+        fcron systab.orig)
+
+build () {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc/fcron \
+                --localstatedir=/var \
+                --mandir=/usr/man \
+                --with-spooldir=/var/spool/fcron \
+                --with-boot-install=no \
+                --with-username=fcron \
+                --with-groupname=fcron \
+                --with-pam=no \
+                --with-sendmail=/usr/sbin/sendmail
+
+    make
+    make -j1 DESTDIR=$PKG install
+
+    rm -r $PKG/{usr/{share,man/{fr,man3}},var/run}
+
+    install -D -m 755 $SRC/fcron $PKG/etc/rc.d/fcron
+    install -m 600 $SRC/systab.orig $PKG/var/spool/fcron
+}

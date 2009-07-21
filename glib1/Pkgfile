@@ -7,7 +7,7 @@
 
 name=glib1
 version=1.2.10
-release=1
+release=2
 source=(ftp://ftp.gtk.org/pub/gtk/v1.2/glib-$version.tar.gz \
 	glib-$version.patch)
 
@@ -15,6 +15,7 @@ build () {
     cd glib-$version
     patch -p1 < $SRC/glib-$version.patch
     linux32 ./configure --prefix=/usr
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/info

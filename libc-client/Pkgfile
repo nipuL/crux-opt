@@ -1,0 +1,32 @@
+# Description: University of Washington's IMAP/mail c-client library
+# URL:         http://www.washington.edu/imap/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  openssl
+
+name=libc-client
+version=2007e
+release=1
+source=(ftp://ftp.cac.washington.edu/imap/imap-$version.tar.gz)
+
+build () {
+    cd imap-${version::5}
+    sed -i 's/read x/x=y/' Makefile
+    echo y | make slx EXTRACFLAGS="$CFLAGS" \
+                      SSLTYPE=unix \
+                      SSLDIR=/usr \
+                      SSLCERTS=/etc/ssl/certs \
+                      IP=6
+    cd c-client
+    gcc -Wl,-soname,$name.so.1 -shared -fPIC -o $name.so.1.0.0 *.o
+
+    install -d $PKG/usr/{lib,include/c-client}
+
+    install -m 644 c-client.a $PKG/usr/lib/$name.a
+    install -m 755 $name.so.1.0.0 $PKG/usr/lib
+    ln -s $name.so.1.0.0 $PKG/usr/lib/$name.so.1
+    ln -s $name.so.1.0.0 $PKG/usr/lib/$name.so
+
+    install -m 644 *.h $PKG/usr/include/c-client
+    install -m 644 linkage.c $PKG/usr/include/c-client
+    rm $PKG/usr/include/c-client/os_*.h
+}

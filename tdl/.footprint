@@ -1,0 +1,14 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-r-xr-xr-x	root/root	usr/bin/tdl
+lrwxrwxrwx	root/root	usr/bin/tdla -> tdl
+lrwxrwxrwx	root/root	usr/bin/tdld -> tdl
+lrwxrwxrwx	root/root	usr/bin/tdlg -> tdl
+lrwxrwxrwx	root/root	usr/bin/tdll -> tdl
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-r--r--r--	root/root	usr/man/man1/tdl.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdla.1.gz -> tdl.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdld.1.gz -> tdl.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdlg.1.gz -> tdl.1.gz
+lrwxrwxrwx	root/root	usr/man/man1/tdll.1.gz -> tdl.1.gz

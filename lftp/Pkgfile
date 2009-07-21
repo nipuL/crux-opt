@@ -1,0 +1,21 @@
+# Description: Sophisticated command line based FTP client
+# URL: http://lftp.yar.ru/
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: openssl
+
+name=lftp
+version=3.7.13
+release=1
+source=(ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --disable-nls --with-openssl=/usr \
+	            --mandir=/usr/man --sysconfdir=/usr/etc
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -r $PKG/usr/lib
+}

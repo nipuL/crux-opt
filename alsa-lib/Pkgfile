@@ -1,11 +1,13 @@
 # Description: ALSA libraries
 # URL: http://www.alsa-project.org
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: python
 
 name=alsa-lib
 version=1.0.20
-release=1
+release=2
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 
 build() {

@@ -2,7 +2,7 @@
 # URL: http://freedesktop.org/Software/shared-mime-info
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: glib,libxml2,p5-xml-parser
+# Depends on: glib,libxml2,intltool
 # Group: gnome
 
 name=shared-mime-info

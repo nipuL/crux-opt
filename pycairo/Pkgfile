@@ -6,7 +6,7 @@
 # Depends on: cairo, python
 
 name=pycairo
-version=1.8.4
+version=1.8.6
 release=1
 source=(http://cairographics.org/releases/$name-$version.tar.gz)
 

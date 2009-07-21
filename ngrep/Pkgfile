@@ -1,0 +1,19 @@
+# Description: Network grep utility
+# URL:         http://ngrep.sourceforge.net
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  libpcap
+
+name=ngrep
+version=1.45
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --enable-ipv6 \
+                --with-pcap-includes=/usr/include/pcap
+    make
+    install -D -m 755 ngrep $PKG/usr/bin/ngrep
+    install -D -m 644 ngrep.8 $PKG/usr/man/man8/ngrep.8
+}

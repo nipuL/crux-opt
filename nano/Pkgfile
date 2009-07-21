@@ -1,9 +1,8 @@
 # Description: GNU pico clone (a tiny text editor)
-# URL: http://www.nano-editor.org
+# URL:         http://www.nano-editor.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
-# Packager: Simone Rota, sip at crux dot nu
-# Depends on:
+# Packager:    Simone Rota, sip at crux dot nu
 
 name=nano
 version=2.0.9
