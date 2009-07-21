@@ -1,6 +1,7 @@
 # Description: System call tracing utility (like trace, truss, etc)
 # URL:         http://www.liacs.nl/~wichert/strace/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=strace
 version=4.5.18

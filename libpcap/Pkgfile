@@ -1,6 +1,7 @@
 # Description: Packet capture library
 # URL:         http://www.tcpdump.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=libpcap
 version=1.0.0

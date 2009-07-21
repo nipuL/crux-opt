@@ -1,6 +1,7 @@
 # Description: Extented attributes library
 # URL: http://acl.bestbits.at/
 # Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:
 
 name=libattr

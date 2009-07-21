@@ -1,6 +1,7 @@
 # Description: community music metadatabase
 # URL: http://www.musicbrainz.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: expat
 
 name=libmusicbrainz

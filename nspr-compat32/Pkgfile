@@ -1,6 +1,7 @@
 # Description: Netscape Portable Runtime library
 # URL:         http://www.mozilla.org/projects/nspr/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: nspr
 
 name=nspr-compat32

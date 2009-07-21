@@ -1,6 +1,7 @@
 # Description: A free and portable TrueType font rendering engine
 # URL:         http://www.freetype.org
 # Maintainer:  Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  freetype zlib-compat32
 
 name=freetype-compat32

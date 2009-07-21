@@ -1,6 +1,7 @@
 # Description: A library of simple functions optimized for various CPUs.
 # URL: http://liboil.freedesktop.org/wiki/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: glib
 

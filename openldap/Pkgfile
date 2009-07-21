@@ -2,6 +2,7 @@
 # URL: http://www.openldap.org/
 # Packager: Daniel Mueller, daniel at danm dot de
 # Maintainer: Richard Poettler, richard dot poettler at gmail dot com
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: perl, openssl, cyrus-sasl
 
 name=openldap

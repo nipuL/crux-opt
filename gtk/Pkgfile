@@ -1,6 +1,7 @@
 # Description: A multi-platform toolkit for creating graphical user interfaces
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk

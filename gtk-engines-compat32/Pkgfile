@@ -1,6 +1,7 @@
 # Description: Default GTK+ theme engines
 # URL: http://gtk.themes.org/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: gtk-engines
 
 name=gtk-engines-compat32

@@ -1,6 +1,7 @@
 # Description: Tools for monitoring system health (temperatures, voltages, fan speed, etc)
 # URL: http://www.lm-sensors.org
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: perl
 # Nice to have: i2c-tools
 

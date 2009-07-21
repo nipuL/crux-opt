@@ -1,6 +1,7 @@
 # Description: nVIDIA Linux Display Driver
 # URL: http://www.nvidia.com/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: nvidia, gtk-compat32, gl-select-compat32, xorg-libx11-compat32, xorg-libxext-compat32
 
 name=nvidia-compat32

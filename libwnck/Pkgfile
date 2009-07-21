@@ -1,6 +1,7 @@
 # Description: Window Navigator Construction Kit library
 # URL: http://cvs.gnome.org/viewcvs/libwnck/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Depends on: gtk, startup-notification, intltool
 

@@ -1,6 +1,7 @@
 # Description: Fast CPU emulator and virtualizer
 # URL: http://nongnu.org/qemu/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libsdl
 # Optional: kqemu texi2html
 

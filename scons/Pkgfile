@@ -1,6 +1,7 @@
 # Description: Software construction tool
 # URL: http://www.scons.org
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: python
 
 name=scons

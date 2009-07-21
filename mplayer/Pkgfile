@@ -2,6 +2,7 @@
 # URL: http://www.mplayerhq.hu/
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch maintainer:  Fredrik Rinnestam, fredrik at obra dot se
 # Depends on: expat, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav

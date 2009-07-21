@@ -1,6 +1,7 @@
 # Description: Java 2 Runtime Kit
 # URL:         http://java.sun.com
 # Maintainer:  Juergen Daubert, jue at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=jre

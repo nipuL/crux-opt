@@ -1,6 +1,7 @@
 # Description: Cross-platform audio output library and plugins
 # URL: http://www.xiph.org/ao/
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Olle Gustafsson, ogg at linux dot se
 
 name=libao

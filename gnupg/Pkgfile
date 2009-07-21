@@ -1,6 +1,7 @@
 # Description: GNU privacy guard
 # URL: http://www.gnupg.org
 # Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: libgcrypt, libassuan, libksba, pinentry
 

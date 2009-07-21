@@ -1,6 +1,7 @@
 # Description: libmng - Mutliple Image Network Graphics 
 # URL:         http://www.libmng.com
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch maintainer: Fredrik Rinnestam, fredrik at obra dot se
 # Packager:    Daniel Mueller, daniel at danm dot de
 # Depends on:  zlib, libjpeg, lcms

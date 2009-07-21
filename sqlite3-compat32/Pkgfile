@@ -1,6 +1,7 @@
 # Description: SQL database engine
 # URL:         http://www.sqlite.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  sqlite3, ncurses-compat32, readline-compat32
 
 name=sqlite3-compat32

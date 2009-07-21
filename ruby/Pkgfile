@@ -1,4 +1,5 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Description: Ruby interpreter
 # URL:         http://www.ruby-lang.org
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
