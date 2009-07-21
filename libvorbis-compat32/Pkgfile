@@ -5,9 +5,9 @@
 # Depends on:  libvorbis libogg-compat32
 
 name=libvorbis-compat32
-version=1.2.0
+version=1.2.3
 release=1
-source=(http://downloads.xiph.org/releases/vorbis/libvorbis-$version.tar.gz)
+source=(http://downloads.xiph.org/releases/vorbis/libvorbis-$version.tar.bz2)
 
 build() {
     cd libvorbis-$version
