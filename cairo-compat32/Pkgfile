@@ -5,8 +5,8 @@
 # Depends on: cairo, fontconfig-compat32, glitz-compat32, libpng-compat32, xorg-libxrender-compat32, xorg-libpixman-compat32
 
 name=cairo-compat32
-version=1.8.6
-release=2
+version=1.8.8
+release=1
 source=(http://cairographics.org/releases/cairo-$version.tar.gz)
 
 build() {

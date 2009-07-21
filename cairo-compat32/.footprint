@@ -2,9 +2,9 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib32/
 -rw-r--r--	root/root	usr/lib32/libcairo.a
 -rwxr-xr-x	root/root	usr/lib32/libcairo.la
-lrwxrwxrwx	root/root	usr/lib32/libcairo.so -> libcairo.so.2.10800.6
-lrwxrwxrwx	root/root	usr/lib32/libcairo.so.2 -> libcairo.so.2.10800.6
--rwxr-xr-x	root/root	usr/lib32/libcairo.so.2.10800.6
+lrwxrwxrwx	root/root	usr/lib32/libcairo.so -> libcairo.so.2.10800.8
+lrwxrwxrwx	root/root	usr/lib32/libcairo.so.2 -> libcairo.so.2.10800.8
+-rwxr-xr-x	root/root	usr/lib32/libcairo.so.2.10800.8
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 -rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-ft.pc
 -rw-r--r--	root/root	usr/lib32/pkgconfig/cairo-glitz.pc
