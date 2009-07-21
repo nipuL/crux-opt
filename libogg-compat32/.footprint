@@ -2,8 +2,8 @@ drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib32/
 -rw-r--r--	root/root	usr/lib32/libogg.a
 -rwxr-xr-x	root/root	usr/lib32/libogg.la
-lrwxrwxrwx	root/root	usr/lib32/libogg.so -> libogg.so.0.5.3
-lrwxrwxrwx	root/root	usr/lib32/libogg.so.0 -> libogg.so.0.5.3
--rwxr-xr-x	root/root	usr/lib32/libogg.so.0.5.3
+lrwxrwxrwx	root/root	usr/lib32/libogg.so -> libogg.so.0.6.0
+lrwxrwxrwx	root/root	usr/lib32/libogg.so.0 -> libogg.so.0.6.0
+-rwxr-xr-x	root/root	usr/lib32/libogg.so.0.6.0
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 -rw-r--r--	root/root	usr/lib32/pkgconfig/ogg.pc
