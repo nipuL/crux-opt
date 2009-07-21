@@ -5,7 +5,7 @@
 # Depends on: glib
 
 name=glib-compat32
-version=2.20.1
+version=2.20.4
 release=1
 source=(ftp://ftp.gnome.org/pub/GNOME/sources/glib/2.18/glib-$version.tar.bz2)
 
