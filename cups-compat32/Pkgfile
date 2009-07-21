@@ -1,11 +1,11 @@
 # Description: CUPS - Common UNIX Printing System
 # URL:         http://www.cups.org
-# Maintainer:  Jürgen Daubert, juergen dot daubert at t-online dot de
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  cups, libpng-compat32, libtiff-compat32, openssl-compat32
 
 name=cups-compat32
-version=1.3.10
+version=1.3.11
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/cups-$version-source.tar.bz2
     cups-config.patch cups-config32 $name.conf)
@@ -15,22 +15,22 @@ build () {
     patch -p1 < $SRC/cups-config.patch
 
     ./configure --prefix=/usr \
-	--libdir=/usr/lib32 \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
-        --with-docdir=/usr/share/cups/doc \
-        --with-logdir=/var/log/cups \
-        --with-cups-user=daemon \
-        --with-cups-group=lp \
-        --with-languages="" \
-        --without-{java,perl,php,python} \
-        --enable-threads \
-        --enable-ssl=yes \
-	--enable-gnutls=no \
-	--enable-openssl=yes \
-	--with-openssl-libs=/usr/lib32 \
-	--with-openssl-includes=/usr/include32 \
-	--enable-pam=no
+                --libdir=/usr/lib32 \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --with-docdir=/usr/share/cups/doc \
+                --with-logdir=/var/log/cups \
+                --with-cups-user=daemon \
+                --with-cups-group=lp \
+                --with-languages="" \
+                --without-{java,perl,php,python} \
+                --enable-threads \
+                --enable-ssl=yes \
+	            --enable-gnutls=no \
+	            --enable-openssl=yes \
+	            --with-openssl-libs=/usr/lib32 \
+	            --with-openssl-includes=/usr/include32 \
+	            --enable-pam=no
 
     make
     make BUILDROOT=$PKG install
