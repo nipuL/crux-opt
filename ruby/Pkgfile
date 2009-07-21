@@ -4,7 +4,7 @@
 # Depends on:  db, gdbm, ncurses, openssl, readline, zlib
 
 name=ruby
-version=1.9.1-p129
+version=1.9.1-p243
 release=1
 source=(ftp://ftp.ruby-lang.org/pub/$name/1.9/$name-$version.tar.bz2 \
         $name-arch.patch)
