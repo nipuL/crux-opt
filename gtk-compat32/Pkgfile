@@ -5,7 +5,7 @@
 # Depends on: gtk, atk-compat32, libtiff-compat32, pango-compat32, xorg-libsm-compat32, xorg-libxcursor-compat32, xorg-libxinerama-compat32, xorg-libxrandr-compat32
 
 name=gtk-compat32
-version=2.16.1
+version=2.16.4
 release=1
 source=(http://download.gnome.org/sources/gtk+/2.16/gtk+-$version.tar.bz2 \
 	gdk-pixbuf.loaders gtk.immodules \
