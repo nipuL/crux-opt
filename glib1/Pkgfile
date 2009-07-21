@@ -15,7 +15,6 @@ build () {
     cd glib-$version
     patch -p1 < $SRC/glib-$version.patch
     linux32 ./configure --prefix=/usr
-    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     rm -rf $PKG/usr/info

@@ -1,7 +1,6 @@
 # Description: Concurrent Versions System
 # URL:         https://www.cvshome.org/
 # Maintainer:  Antti Nykanen, aon at iki dot fi
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=cvs
 version=1.11.23

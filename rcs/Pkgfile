@@ -1,7 +1,6 @@
 # Description: Version control and project management software
 # URL:         http://www.gnu.org/directory/rcs.html
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Jens Fischer, jens dot fischer at gmx dot li
 
 name=rcs

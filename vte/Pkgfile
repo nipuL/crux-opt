@@ -1,7 +1,6 @@
 # Description: Virtual Terminal Emulator
 # URL: http://developer.gnome.org/arch/gnome/widgets/vte.html
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on: gtk p5-xml-parser
 

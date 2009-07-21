@@ -1,7 +1,6 @@
 # Description: An image viewer for X
 # URL: http://gqview.sourceforge.net/
 # Maintainer: Juergen Daubert, juergen dot daubert at t-onlione dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: gtk
 
 name=gqview

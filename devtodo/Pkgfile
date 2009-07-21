@@ -1,7 +1,6 @@
 # Description: command line application for maintaining lists of tasks
 # URL: http://swapoff.org/DevTodo
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=devtodo
 version=0.1.20

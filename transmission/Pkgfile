@@ -1,7 +1,6 @@
 # Description: BitTorrent client/daemon with command-line and optional gtk user interface
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  openssl curl
 
 name=transmission

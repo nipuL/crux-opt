@@ -1,7 +1,6 @@
 # Description: Fast, lightweight, standards-compliant window manager
 # URL: http://www.icculus.org/openbox/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: xorg-libxinerama, xorg-libxrandr, xorg-libsm, glib, libxml2, pango
 
 name=openbox

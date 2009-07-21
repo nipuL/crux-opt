@@ -1,7 +1,6 @@
 # Description: a free alternative to the OpenGL Utility Toolkit (GLUT) library
 # URL: http://freeglut.sourceforge.net
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: mesa3d
 
 name=freeglut

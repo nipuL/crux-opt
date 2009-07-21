@@ -1,7 +1,6 @@
 # Description: A small relay-only MTA based on libesmtp
 # URL: http://esmtp.sourceforge.net
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on: libesmtp
 
 name=esmtp

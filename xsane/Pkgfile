@@ -1,7 +1,6 @@
 # Description: Scanner frontend and GIMP plugin for sane
 # URL:         http://www.xsane.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  gimp, sane
 
 name=xsane

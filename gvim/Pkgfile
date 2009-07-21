@@ -1,7 +1,6 @@
 # Description: GTK version of the vim editor
 # URL:         http://www.vim.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Depends on:  vim, gtk
 
 name=gvim

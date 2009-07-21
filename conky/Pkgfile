@@ -1,7 +1,6 @@
 # Description: Light-weight system monitor
 # URL:         http://conky.sourceforge.net/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch Packager: Fredrik Rinnestam, fredrik at obra dot se
 # Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 

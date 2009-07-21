@@ -1,6 +1,5 @@
 # Description: Kernel module for Atheros based 802.11a/b/g cards
 # Maintainer: Till Biedermann, tillbiedermann at yahoo dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # URL: http://madwifi.org
 # Depends on: sharutils
 

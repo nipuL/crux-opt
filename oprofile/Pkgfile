@@ -1,7 +1,6 @@
 # Description: A system-wide profiler for Linux
 # URL: http://oprofile.sourceforge.net
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: popt
 
 name=oprofile

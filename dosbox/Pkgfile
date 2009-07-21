@@ -1,7 +1,6 @@
 # Description: SDL-based DOS emulator for classic games
 # URL: http://dosbox.sourceforge.net
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: 
 # Depends on: libsdl
 

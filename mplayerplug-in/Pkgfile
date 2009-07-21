@@ -1,7 +1,6 @@
 # Description: Embedded video player for Firefox
 # URL: http://mplayerplug-in.sourceforge.net
 # Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: sten, nick dot steeves at shaw dot ca
 # Depends on: mplayer, xulrunner
 

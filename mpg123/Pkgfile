@@ -1,7 +1,6 @@
 # Description: Commandline MP3 player 
 # URL:         http://www.mpg123.de
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
 # Depends on:  libtool, alsa-lib
 
 name=mpg123
