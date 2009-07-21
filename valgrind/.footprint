@@ -80,8 +80,8 @@ drwxr-xr-x	root/root	usr/lib/valgrind/
 drwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/cachegrind
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/callgrind
--rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/exp-drd
--rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/exp-omega
+-rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/drd
+-rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/exp-ptrcheck
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/helgrind
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/lackey
 -rw-r--r--	root/root	usr/lib/valgrind/amd64-linux/libcoregrind.a
@@ -90,8 +90,8 @@ drwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/memcheck
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/none
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_core.so
--rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_exp-drd.so
--rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_exp-omega.so
+-rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_drd.so
+-rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_exp-ptrcheck.so
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_helgrind.so
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_massif.so
 -rwxr-xr-x	root/root	usr/lib/valgrind/amd64-linux/vgpreload_memcheck.so
