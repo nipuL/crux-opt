@@ -1,17 +1,16 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL:         http://www.mozilla.org/projects/security/pki/nss/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
 # Depends on:  nss nspr-compat32 sqlite3-compat32
 
 name=nss-compat32
-version=3.12.0
+version=3.12.3
 release=1
-source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_RTM/src/nss-3.12.tar.gz \
+source=(ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_12_3_RTM/src/nss-3.12.3.tar.bz2 \
         nss-config.in)
 
 build() {
-    cd nss-${version%.*}
+    cd nss-$version
 
     local file
 
