@@ -1,7 +1,7 @@
 # Description: The standard termulator.
 # URL: http://dickey.his.com/xterm/xterm.html
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Han Boetes, han at mijncomputer dot nl
 # Depends on: xorg-libxaw xorg-font-alias xorg-font-misc-misc
 

@@ -2,7 +2,7 @@
 # URL: http://crux.nu/gitweb/?p=ports/opt.git;a=tree;f=gl-select 
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: xorg-server
 
 name=gl-select

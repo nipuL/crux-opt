@@ -1,7 +1,7 @@
 # Description: POSIX.1e capabilities library
 # URL: http://linux.kernel.org/pub/linux/libs/security/linux-privs/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libattr
 
 name=libcap

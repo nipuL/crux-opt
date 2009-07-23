@@ -1,7 +1,7 @@
 # Description: Library of PNG support functions.
 # URL:         http://www.libpng.org
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  zlib
 
 name=libpng

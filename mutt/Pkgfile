@@ -1,7 +1,6 @@
 # Description: Text-based email client that sucks less
 # URL:         http://www.mutt.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  gdbm ncurses openssl zlib
 
 name=mutt

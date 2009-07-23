@@ -1,7 +1,7 @@
 # Description: Internationalization tool collection.
 # URL: http://freshmeat.net/projects/intltool/
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: p5-xml-parser
 
 name=intltool

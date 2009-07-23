@@ -1,7 +1,7 @@
 # Description: A full featured cross platform office suite (binary)
 # URL: http://www.openoffice.org
 # Maintainer: Simone Rota, sip at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: mesa3d, xorg-libxaw, xorg-libxcursor, xorg-libxft, xorg-libxinerama, xorg-libxi, xorg-libxrandr
 
 name=openoffice

@@ -1,7 +1,7 @@
 # Description: Interface for userspace filesystems
 # URL:         http://fuse.sourceforge.net/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 
 name=fuse

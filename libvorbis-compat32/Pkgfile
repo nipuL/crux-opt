@@ -1,7 +1,7 @@
 # Description: Vorbis codec library
 # URL:         http://www.xiph.org/ogg/vorbis/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  libvorbis libogg-compat32
 
 name=libvorbis-compat32

@@ -1,7 +1,7 @@
 # Description: An OpenGL image compositing library
 # URL: http://www.freedesktop.org/Software/glitz
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot ay
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: glitz, mesa3d-compat32
 
 name=glitz-compat32

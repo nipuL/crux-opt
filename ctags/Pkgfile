@@ -2,7 +2,7 @@
 # URL: http://ctags.sourceforge.net
 # Packager: Havard Moen, vanilje at netcom dot no
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=ctags
 version=5.7

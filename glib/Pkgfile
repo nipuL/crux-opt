@@ -1,7 +1,7 @@
 # Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libpcre
 
 name=glib

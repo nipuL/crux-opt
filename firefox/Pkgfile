@@ -1,7 +1,7 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: xulrunner
 
 name=firefox

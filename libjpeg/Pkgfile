@@ -1,7 +1,7 @@
 # Description: Library of JPEG support functions.
 # URL:         http://www.ijg.org/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch Packager:  Hannes Mayer, crux86_64 at ecarux dot de
 
 name=libjpeg

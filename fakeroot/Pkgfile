@@ -1,7 +1,7 @@
 # Description: Run commands in an environment faking root privileges
 # URL:         http://packages.debian.org/unstable/utils/fakeroot
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=fakeroot
 version=1.12.4

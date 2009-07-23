@@ -1,7 +1,7 @@
 # Description: Standard theme engines for GTK+2
 # URL:         http://live.gnome.org/GnomeArt/Tutorials/GtkEngines
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  gtk intltool
 
 name=gtk-engines

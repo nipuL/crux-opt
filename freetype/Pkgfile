@@ -1,7 +1,7 @@
 # Description: A free and portable TrueType font rendering engine
 # URL:         http://www.freetype.org
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  zlib
 
 name=freetype

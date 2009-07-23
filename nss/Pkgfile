@@ -1,7 +1,7 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL:         http://www.mozilla.org/projects/security/pki/nss/
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  nspr sqlite3
 
 name=nss

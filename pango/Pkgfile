@@ -1,7 +1,7 @@
 # Description: A library for layout and rendering of text
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Arch Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: cairo, glib, xorg-libsm, xorg-libxext, xorg-libxft
 
 name=pango

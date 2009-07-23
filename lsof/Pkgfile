@@ -1,7 +1,7 @@
 # Description: list open files
 # URL: http://people.freebsd.org/~abe/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Arch Maintainer: Fredrik Rinnestam, fredrik at obra dot se
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: sten, nick dot steeves at shaw dot ca
 
 name=lsof
