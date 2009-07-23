@@ -6,19 +6,18 @@
 # Depends on: fontforge-compat32
 
 name=wine-compat32
-version=1.1.24
+version=1.1.26
 release=1
 source=(http://ibiblio.org/pub/linux/system/emulators/wine/wine-$version.tar.bz2)
 
 build() {
 	cd wine-$version
-	./configure --prefix=/usr \
-	    --libdir=/usr/lib32 \
-	    --prefix=/usr \
+	./configure --prefix=$PKG/usr \
+	    --libdir=$PKG/usr/lib32 \
 	    --mandir=$PKG/usr/man \
 	    --disable-nls
 	make depend
 	make
-	make prefix=$PKG/usr install
+	make install
 	rm -rf $PKG/usr/man/{de,fr}.UTF-8
 }
