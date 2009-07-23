@@ -160,10 +160,6 @@ drwxr-xr-x	root/root	usr/lib/ruby/1.9/json/add/
 -rw-r--r--	root/root	usr/lib/ruby/1.9/json/common.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/json/editor.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/json/ext.rb
--rw-r--r--	root/root	usr/lib/ruby/1.9/json/pure.rb
-drwxr-xr-x	root/root	usr/lib/ruby/1.9/json/pure/
--rw-r--r--	root/root	usr/lib/ruby/1.9/json/pure/generator.rb
--rw-r--r--	root/root	usr/lib/ruby/1.9/json/pure/parser.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/json/version.rb
 -rw-r--r--	root/root	usr/lib/ruby/1.9/kconv.rb
 drwxr-xr-x	root/root	usr/lib/ruby/1.9/linux/
