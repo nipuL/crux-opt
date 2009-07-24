@@ -9,10 +9,12 @@ name=cyrus-sasl
 version=2.1.23
 release=1
 source=(ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/$name-$version.tar.gz \
-        saslauthd)
+        saslauthd $name-$version-gcc44.patch)
 
 build(){
 	cd $name-$version
+
+	patch -p0 -i $SRC/$name-$version-gcc44.patch
 
 	./configure \
 	    --prefix=/usr \
