@@ -4,7 +4,7 @@
 # Depends on:  openssl curl
 
 name=transmission
-version=1.72
+version=1.73
 release=1
 source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
 
