@@ -19,7 +19,7 @@ build() {
 	#export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
 	./configure --prefix=/usr \
 	    --mandir=/usr/man \
-	    --codecsdir=/usr/lib/amd64 \
+	    --codecsdir=/usr/lib/win32 \
 	    --enable-largefiles
 	make
 	make DESTDIR=$PKG install
