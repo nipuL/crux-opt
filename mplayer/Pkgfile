@@ -8,9 +8,9 @@
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav
 
 name=mplayer
-version=20090226.28734
+version=export-2009-07-25
 release=1
-source=(http://distfiles.gentoo.org/distfiles/$name-$version.tar.bz2
+source=(http://crux.nu/~lucas/files/$name-$version.tar.bz2
 	http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mplayer.conf)
 
@@ -18,12 +18,11 @@ build() {
 	cd $name-$version
 
 	# Keep in line with mplayer CFLAGS, but allow people to set their own march/mtune values.
-	export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
+	#export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
 	./configure --prefix=/usr \
-		--mandir=/usr/man \
-		--codecsdir=/usr/lib/amd64 \
-		--enable-largefiles
-
+	    --mandir=/usr/man \
+	    --codecsdir=/usr/lib/amd64 \
+	    --enable-largefiles
 	make
 	make DESTDIR=$PKG install
 
@@ -41,5 +40,5 @@ build() {
 
 	# finish up
 	rmdir $PKG/usr/lib
-	chown -R root:root $PKG
+	find $PKG -name '*.desc' | xargs chmod g-w
 }
