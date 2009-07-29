@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/gitk
 drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/git-core/
+-rwxr-xr-x	root/root	usr/lib/git-core/git
 -rwxr-xr-x	root/root	usr/lib/git-core/git-add
 -rwxr-xr-x	root/root	usr/lib/git-core/git-add--interactive
 -rwxr-xr-x	root/root	usr/lib/git-core/git-am
