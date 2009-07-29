@@ -5,7 +5,7 @@
 # Group:       apache
 
 name=apache
-version=2.2.11
+version=2.2.12
 release=1
 source=(http://www.apache.org/dist/httpd/httpd-$version.tar.bz2 \
         $name-ssl_cert.patch crux.layout apache)
