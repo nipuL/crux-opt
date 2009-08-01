@@ -6,7 +6,7 @@
 name=ghostscript
 version=8.70
 release=1
-source=(http://ghostscript.com/releases/$name-$version.tar.bz2 \
+source=(http://ghostscript.com/releases/$name-$version.tar.xz \
         http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
 build () {
