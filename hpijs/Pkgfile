@@ -4,7 +4,7 @@
 # Depends on:  foomatic-filters
 
 name=hpijs
-version=3.9.2
+version=3.9.8
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
@@ -14,7 +14,12 @@ build () {
     ./configure --prefix=/usr \
                 --with-hpppddir=/usr/share/cups/model/HP \
                 --enable-hpijs-only-build \
+                --enable-hpijs-install \
+                --disable-hpcups-install \
+                --disable-cups-drv-install \
+                --enable-foomatic-drv-install \
                 --enable-foomatic-ppd-install
+    
     make
     make DESTDIR=$PKG install
 
@@ -22,5 +27,4 @@ build () {
     ln -s /usr/bin/foomatic-rip $PKG/usr/lib/cups/filter/foomatic-rip-hplip
 
     rm -r $PKG/usr/share/{hplip,doc}
-    rm $PKG/usr/share/cups/model/HP/*.ppd
 }
