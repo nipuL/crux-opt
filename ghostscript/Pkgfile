@@ -5,9 +5,9 @@
 # Depends on:  cups, fontconfig, xorg-libxt, xorg-libxext
 
 name=ghostscript
-version=8.64
+version=8.70
 release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2 \
+source=(http://ghostscript.com/releases/$name-$version.tar.xz \
         http://dl.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz)
 
 build () {
@@ -20,13 +20,13 @@ build () {
                 --enable-cups \
                 --disable-gtk \
                 --with-drivers=ALL
-    make -j1 so
+
+    make so
     make DESTDIR=$PKG install soinstall
     cp -r $SRC/fonts $PKG/usr/share/ghostscript
 
     mv $PKG/usr/bin/gsc $PKG/usr/bin/gs
     rm $PKG/usr/bin/gsx
-    chown root:lp $PKG/etc/cups
     rm -r $PKG/usr/{share/ghostscript/$version/{examples,doc},man/de}
     rm $PKG/usr/share/ghostscript/fonts/[CRT]*
 }
