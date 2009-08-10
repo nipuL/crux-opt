@@ -100,8 +100,6 @@ drwxr-xr-x	root/root	usr/lib/gstreamer-0.10/
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstaudioresample.so
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstaudiotestsrc.la
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstaudiotestsrc.so
--rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstcdparanoia.la
--rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstcdparanoia.so
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstdecodebin.la
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstdecodebin.so
 -rwxr-xr-x	root/root	usr/lib/gstreamer-0.10/libgstdecodebin2.la
