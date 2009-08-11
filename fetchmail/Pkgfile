@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.10
+version=6.3.11
 release=1
 source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
