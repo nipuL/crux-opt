@@ -1,15 +1,15 @@
 # Maintainer:  Johannes Winkelmann, jw at smts dot ch
-# URL:         http://www.caliban.org/bash/index.shtml#completion
+# URL:         http://bash-completion.alioth.debian.org/
 # Description: Bash completion functions
 
 name=bash-completion
-version=20060301
+version=1.0
 release=1
-source=(http://www.caliban.org/files/bash/$name-$version.tar.gz init_bc)
+source=(http://$name.alioth.debian.org/files/$name-$version.tar.gz)
 
 build() {
-    mkdir -p $PKG/usr/share/bash-completion
-    cp bash_completion/bash_completion $PKG/usr/share/bash-completion
-    install -m 0755 init_bc $PKG/usr/share/bash-completion
-    install -d -m 0755 $PKG/usr/lib/bash-completion
+    cd $name-$version
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+    make DESTDIR=$PKG install
 }

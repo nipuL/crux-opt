@@ -5,11 +5,11 @@
 # Depends on: firefox
 
 name=firefox-flash-plugin
-version=10.0.22.87
+version=10.0.32.18
 release=1
 source=(http://fpdownload.macromedia.com/get/flashplayer/current/install_flash_player_${version%%.*}_linux.tar.gz)
 
 build() {
-  install -D -m 0755 install_flash_player_${version%%.*}_linux/libflashplayer.so \
+  install -D -m 0755 libflashplayer.so \
     $PKG/usr/lib/firefox/plugins/libflashplayer.so
 }
