@@ -7,7 +7,7 @@
 
 name=tetex
 version=3.0
-release=3
+release=4
 source=(ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-src-$version.tar.gz \
     ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-texmf-$version.tar.gz \
     ftp://dante.ctan.org/pub/tex/systems/unix/teTeX/current/distrib/$name-texmfsrc-$version.tar.gz \
@@ -32,6 +32,21 @@ build() {
 		--with-system-ncurses \
 		--with-system-t1lib \
 		--with-system-gd
+
+    # Files generated during make, use conflicing getline function.
+    # Build these manually first.
+    cd texk/web2c
+    for i in tangleboot tangle mft otangle weave
+    do
+	make ${i}.c
+	sed 's|getline|&_|' -i ${i}.[ch]
+    done
+    cd ../../
+
+    # Fix some more getline conflicts
+    sed 's|getline|&_|' -i texk/web2c/mpware/mpto.c
+    sed 's|getline|&_|' -i texk/dvipsk/afm2tfm.c
+
     make
 
     # temp fix, this tools tries to write in real root

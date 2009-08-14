@@ -1,5 +1,5 @@
 POST-INSTALL:
 put the following line in your ~/.bashrc: 
-  . /usr/share/bash-completion/init_bc
+  . /etc/bash_completion
 
 You can put additional init code into ~/.bash_completion

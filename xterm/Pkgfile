@@ -6,7 +6,7 @@
 # Depends on: xorg-libxaw xorg-font-alias xorg-font-misc-misc
 
 name=xterm
-version=243
+version=244
 release=1
 source=(ftp://invisible-island.net/$name/$name-$version.tgz \
         configure.diff)

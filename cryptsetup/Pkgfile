@@ -4,17 +4,12 @@
 # Depends on: lvm2, libgcrypt, popt
 
 name=cryptsetup
-version=1.0.6
-release=2
-source=(http://$name.googlecode.com/files/$name-$version.tar.bz2
-        $name.diff)
+version=1.0.7
+release=1
+source=(http://$name.googlecode.com/files/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-
-    patch -Np1 -i $SRC/$name.diff
-   
-    touch m4/Makefile.in
 
     ./configure \
 	--prefix=/usr \

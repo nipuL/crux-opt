@@ -5,7 +5,7 @@
 # Depends on: xorg, libtiff, ctags
 
 name=emacs
-version=22.3
+version=23.1
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
 	$name-$version-etc-blacklist)
@@ -18,7 +18,8 @@ build() {
 		--libexecdir=/usr/lib \
 		--mandir=/usr/man \
 		--localstatedir=/usr/lib/emacs/$version \
-		--with-x
+		--with-x \
+		--without-makeinfo
 
 	make
 	make DESTDIR=$PKG install
@@ -28,12 +29,12 @@ build() {
 		[ -f ${file%.gz}c ] && rm -f $file
 	done
 
-	rm -f $PKG/usr/bin/emacs-$version 
-	rm -f $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1}
-	rm -f $PKG/usr/share/emacs/$version/lisp/{COPYING,{,term/}README}
+	rm $PKG/usr/bin/emacs-$version 
+	rm $PKG/usr/{bin/{c,e}tags,man/man1/{c,e}tags.1}
+	rm $PKG/usr/share/emacs/$version/lisp/{COPYING,calc/README.prev,nxml/TODO,{,term/,international/}README}
 
 	for i in $(< $SRC/$name-$version-etc-blacklist); do
-		rm -rf $PKG/usr/share/emacs/$version/etc/$i
+		rm -r $PKG/usr/share/emacs/$version/etc/$i
 	done
 
 	chown -R root:root $PKG

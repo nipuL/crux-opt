@@ -5,7 +5,7 @@
 # Depends on: xulrunner
 
 name=firefox
-version=3.5.1
+version=3.5.2
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version-source.tar.bz2
         mozconfig)
