@@ -1,6 +1,6 @@
-diff -Nru vsftpd-2.1.2.orig/Makefile vsftpd-2.1.2/Makefile
---- vsftpd-2.1.2.orig/Makefile	2009-06-02 16:39:21.000000000 +0200
-+++ vsftpd-2.1.2/Makefile	2009-06-02 16:39:36.000000000 +0200
+diff -Nru vsftpd-2.2.0.orig/Makefile vsftpd-2.2.0/Makefile
+--- vsftpd-2.2.0.orig/Makefile	2009-08-13 10:56:15.000000000 +0200
++++ vsftpd-2.2.0/Makefile	2009-08-13 10:56:35.000000000 +0200
 @@ -3,7 +3,7 @@
  INSTALL	=	install
  IFLAGS  = -idirafter dummyinc
@@ -36,9 +36,9 @@ diff -Nru vsftpd-2.1.2.orig/Makefile vsftpd-2.1.2/Makefile
  
  clean:
  	rm -f *.o *.swp vsftpd
-diff -Nru vsftpd-2.1.2.orig/builddefs.h vsftpd-2.1.2/builddefs.h
---- vsftpd-2.1.2.orig/builddefs.h	2009-06-02 16:39:21.000000000 +0200
-+++ vsftpd-2.1.2/builddefs.h	2009-06-02 16:39:36.000000000 +0200
+diff -Nru vsftpd-2.2.0.orig/builddefs.h vsftpd-2.2.0/builddefs.h
+--- vsftpd-2.2.0.orig/builddefs.h	2009-08-13 10:56:15.000000000 +0200
++++ vsftpd-2.2.0/builddefs.h	2009-08-13 10:56:35.000000000 +0200
 @@ -1,9 +1,9 @@
  #ifndef VSF_BUILDDEFS_H
  #define VSF_BUILDDEFS_H
@@ -52,10 +52,10 @@ diff -Nru vsftpd-2.1.2.orig/builddefs.h vsftpd-2.1.2/builddefs.h
  
  #endif /* VSF_BUILDDEFS_H */
  
-diff -Nru vsftpd-2.1.2.orig/tunables.c vsftpd-2.1.2/tunables.c
---- vsftpd-2.1.2.orig/tunables.c	2009-06-02 16:39:21.000000000 +0200
-+++ vsftpd-2.1.2/tunables.c	2009-06-02 16:39:36.000000000 +0200
-@@ -244,7 +244,7 @@
+diff -Nru vsftpd-2.2.0.orig/tunables.c vsftpd-2.2.0/tunables.c
+--- vsftpd-2.2.0.orig/tunables.c	2009-08-13 10:56:15.000000000 +0200
++++ vsftpd-2.2.0/tunables.c	2009-08-13 10:56:35.000000000 +0200
+@@ -246,7 +246,7 @@
    /* -rw------- */
    tunable_chown_upload_mode = 0600;
  
@@ -64,7 +64,7 @@ diff -Nru vsftpd-2.1.2.orig/tunables.c vsftpd-2.1.2/tunables.c
    install_str_setting("ftp", &tunable_ftp_username);
    install_str_setting("root", &tunable_chown_username);
    install_str_setting("/var/log/xferlog", &tunable_xferlog_file);
-@@ -271,11 +271,11 @@
+@@ -273,11 +273,11 @@
    install_str_setting(0, &tunable_user_sub_token);
    install_str_setting("/etc/vsftpd.email_passwords",
                        &tunable_email_password_file);
@@ -78,9 +78,9 @@ diff -Nru vsftpd-2.1.2.orig/tunables.c vsftpd-2.1.2/tunables.c
    install_str_setting(0, &tunable_dsa_private_key_file);
    install_str_setting(0, &tunable_ca_certs_file);
  }
-diff -Nru vsftpd-2.1.2.orig/vsftpd.conf vsftpd-2.1.2/vsftpd.conf
---- vsftpd-2.1.2.orig/vsftpd.conf	2009-06-02 16:39:21.000000000 +0200
-+++ vsftpd-2.1.2/vsftpd.conf	2009-06-02 16:39:36.000000000 +0200
+diff -Nru vsftpd-2.2.0.orig/vsftpd.conf vsftpd-2.2.0/vsftpd.conf
+--- vsftpd-2.2.0.orig/vsftpd.conf	2009-08-13 10:56:15.000000000 +0200
++++ vsftpd-2.2.0/vsftpd.conf	2009-08-13 10:56:35.000000000 +0200
 @@ -8,11 +8,25 @@
  # Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
  # capabilities.
@@ -107,9 +107,9 @@ diff -Nru vsftpd-2.1.2.orig/vsftpd.conf vsftpd-2.1.2/vsftpd.conf
  #
  # Uncomment this to enable any form of FTP write command.
  #write_enable=YES
-diff -Nru vsftpd-2.1.2.orig/vsftpd.conf.5 vsftpd-2.1.2/vsftpd.conf.5
---- vsftpd-2.1.2.orig/vsftpd.conf.5	2009-06-02 16:39:21.000000000 +0200
-+++ vsftpd-2.1.2/vsftpd.conf.5	2009-06-02 16:39:36.000000000 +0200
+diff -Nru vsftpd-2.2.0.orig/vsftpd.conf.5 vsftpd-2.2.0/vsftpd.conf.5
+--- vsftpd-2.2.0.orig/vsftpd.conf.5	2009-08-13 10:56:15.000000000 +0200
++++ vsftpd-2.2.0/vsftpd.conf.5	2009-08-13 10:56:35.000000000 +0200
 @@ -953,21 +953,21 @@
  This option specifies the location of the RSA certificate to use for SSL
  encrypted connections.
