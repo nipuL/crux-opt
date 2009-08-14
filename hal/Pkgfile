@@ -6,7 +6,7 @@
 # Depends on: dbus-glib, hal-info
 
 name=hal
-version=0.5.12
+version=0.5.13
 release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
 	hal.conf
@@ -31,7 +31,6 @@ build() {
     make DESTDIR=$PKG install
     install -D -o root -g root -m 0755 $SRC/rc.hald \
 	$PKG/etc/rc.d/hald
-    mv $PKG/usr/udev $PKG/etc/
     rm -rf $PKG/usr/share/{doc,locale}
     rm -rf $PKG/usr/share/gtk-doc
     cp $SRC/hal.conf $PKG/usr/etc/dbus-1/system.d/
