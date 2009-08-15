@@ -4,22 +4,23 @@
 # Depends on:  gimp, sane
 
 name=xsane
-version=0.996
+version=0.997
 release=1
 source=(http://www.xsane.org/download/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
     ./configure --prefix=/usr \
+                --mandir=/usr/man \
                 --disable-nls \
                 --enable-gtk2 \
                 --enable-gimp2
     make
-    make prefix=$PKG/usr install
+    make DESTDIR=$PKG install
 
-    rm -r $PKG/usr/sbin $PKG/usr/share/sane/xsane/doc
+    rm -r $PKG/usr/{sbin,share/sane/xsane/doc}
     rm $PKG/usr/share/sane/xsane/xsane-gpl.txt
 
-    mkdir -p $PKG/usr/lib/gimp/2.0/plug-ins
+    install -d $PKG/usr/lib/gimp/2.0/plug-ins
     ln -s /usr/bin/xsane $PKG/usr/lib/gimp/2.0/plug-ins
 }
