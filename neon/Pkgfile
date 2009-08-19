@@ -5,7 +5,7 @@
 # Depends on:  openssl expat 
 
 name=neon
-version=0.28.5
+version=0.28.6
 release=1
 source=(http://www.webdav.org/$name/$name-$version.tar.gz)
 
