@@ -1,11 +1,11 @@
 # Description: user-friendly dm-crypt/LUKS interface
 # URL: http://code.google.com/p/cryptsetup/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
-# Depends on: lvm2, libgcrypt, popt
+# Depends on: libdevmapper,  util-linux-ng, libgcrypt, popt
 
 name=cryptsetup
 version=1.0.7
-release=1
+release=2
 source=(http://$name.googlecode.com/files/$name-$version.tar.bz2)
 
 build() {
@@ -17,4 +17,8 @@ build() {
 	--disable-nls
     make
     make DESTDIR=$PKG install
+
+    ./configure --prefix=/usr --enable-static
+    make
+    install -D -m 755 src/cryptsetup $PKG/sbin/cryptsetup.static
 }

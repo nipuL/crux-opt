@@ -5,9 +5,9 @@
 # Packager: Simone Rota, sip at crux dot nu
 
 name=jdk
-version=1.6.0_14
+version=1.6.0_15
 release=1
-source=(http://download.java.net/dlj/binaries/jdk-6u14-dlj-linux-amd64.bin)
+source=(http://download.java.net/dlj/binaries/jdk-6u15-dlj-linux-amd64.bin)
 
 build(){
 	mkdir -p $PKG/usr/lib; cd $PKG/usr/lib

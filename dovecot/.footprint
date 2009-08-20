@@ -263,6 +263,7 @@ drwxr-xr-x	root/root	usr/include/dovecot/src/lib/
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/str.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/strescape.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/strfuncs.h
+-rw-r--r--	root/root	usr/include/dovecot/src/lib/time-util.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/unichar.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/unix-socket-create.h
 -rw-r--r--	root/root	usr/include/dovecot/src/lib/unlink-directory.h
