@@ -4,13 +4,13 @@
 # Packager:    Jukka Heino, jukka dot heino at gmail dot com
 
 name=fuse
-version=2.7.4
+version=2.8.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr --disable-kernel-module
+    ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
     rm -r $PKG/{dev,etc/init.d}

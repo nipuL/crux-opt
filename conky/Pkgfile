@@ -4,7 +4,7 @@
 # Depends on:  glib, xorg-libxdamage, xorg-libxext, xorg-libxft
 
 name=conky
-version=1.7.1.1
+version=1.7.2
 release=1
 source=(http://dl.sourceforge.net/sourceforge/conky/$name-$version.tar.bz2)
 
@@ -18,4 +18,5 @@ build() {
                 --enable-mpd 
     make
     make DESTDIR=$PKG install
+    rm -r $PKG/usr/lib
 }
