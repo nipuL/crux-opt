@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=ccrypt
-version=1.8
+version=1.9
 release=1
 source=(http://ccrypt.sourceforge.net/download/$name-$version.tar.gz)
 
