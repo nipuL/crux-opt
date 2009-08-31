@@ -6,7 +6,7 @@
 
 name=mod_perl
 version=2.0.4
-release=2
+release=3
 source=(http://perl.apache.org/dist/$name-$version.tar.gz)
 
 build(){
@@ -16,7 +16,7 @@ build(){
          MP_APXS=/usr/sbin/apxs
 
     make
-    make DESTDIR=$PKG install
+    make -j1 DESTDIR=$PKG install
 
     rm -r $PKG/usr/bin
     rm -r $PKG/usr/lib/perl5/site_perl/5.10.?/linux/{Apache,Bundle}
