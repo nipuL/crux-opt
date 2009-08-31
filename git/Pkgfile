@@ -6,7 +6,7 @@
 
 name=git
 version=1.6.4.2
-release=1
+release=2
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
 build() {
