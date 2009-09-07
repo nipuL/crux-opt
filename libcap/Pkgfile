@@ -4,17 +4,15 @@
 # Depends on: libattr
 
 name=libcap
-version=2.16
+version=2.17
 release=2
 source=(ftp://ftp.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.6/libcap-$version.tar.gz
-	$name-$version-makefile.patch
-	$name-$version-drop-linux-workarounds.patch)
+	$name-$version-makefile.patch)
 
 build () {
 	cd libcap-$version
 	
 	patch -p0 -i $SRC/$name-$version-makefile.patch
-	patch -p0 -i $SRC/$name-$version-drop-linux-workarounds.patch
 
 	make
 	make \

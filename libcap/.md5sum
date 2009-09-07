@@ -1,3 +1,2 @@
-7327a51597db092d7549310b670b5366  libcap-2.16-drop-linux-workarounds.patch
-0d1cee9631768d29b43f450832668687  libcap-2.16-makefile.patch
-9e075fda242c4070ba76407064c13302  libcap-2.16.tar.gz
+0d1cee9631768d29b43f450832668687  libcap-2.17-makefile.patch
+fa8c3841ce491b379de316a195e65da2  libcap-2.17.tar.gz
