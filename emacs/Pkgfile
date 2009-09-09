@@ -1,7 +1,7 @@
 # Description: an extensible, customizable, self-documenting real-time display editor
 # URL: http://www.gnu.org/software/emacs/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Depends on: xorg, libtiff, ctags
+# Depends on: xorg, libtiff, libungif, ctags
 
 name=emacs
 version=23.1
