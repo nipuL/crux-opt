@@ -11,6 +11,5 @@ drwxr-xr-x	root/root	usr/sbin/
 drwxr-xr-x	root/root	var/
 drwxr-xr-x	root/root	var/lib/
 drwx------	root/root	var/lib/samhain/
--rw-r-----	root/root	var/lib/samhain/samhain_file (EMPTY)
 drwxr-xr-x	root/root	var/log/
 -rw-r-----	root/root	var/log/samhain.log (EMPTY)
