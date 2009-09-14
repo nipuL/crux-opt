@@ -1,6 +1,6 @@
-diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-example.conf
---- dovecot-1.2.rc4.orig/dovecot-example.conf	2009-05-18 12:42:23.000000000 +0200
-+++ dovecot-1.2.rc4/dovecot-example.conf	2009-05-18 12:44:52.000000000 +0200
+diff -Nru dovecot-1.2.5.orig/dovecot-example.conf dovecot-1.2.5/dovecot-example.conf
+--- dovecot-1.2.5.orig/dovecot-example.conf	2009-09-14 09:32:16.000000000 +0200
++++ dovecot-1.2.5/dovecot-example.conf	2009-09-14 09:32:30.000000000 +0200
 @@ -17,11 +17,11 @@
  # --sysconfdir=/etc --localstatedir=/var --with-ssldir=/etc/ssl
  
@@ -121,9 +121,9 @@ diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-exam
 -  #pop3_uidl_format = %08Xu%08Xv
 +  pop3_uidl_format = %08Xu%08Xv
  
-   # POP3 logout format string:
-   #  %i - total number of bytes read from client
-@@ -720,7 +720,7 @@
+   # Permanently save UIDLs sent to POP3 clients, so pop3_uidl_format changes
+   # won't change those UIDLs. Currently this works only with Maildir.
+@@ -724,7 +724,7 @@
    #deliver_log_format = msgid=%m: %$
  
    # Binary to use for sending mails.
@@ -132,7 +132,7 @@ diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-exam
  
    # Subject: header to use for rejection mails. You can use the same variables
    # as for rejection_reason below.
-@@ -739,7 +739,7 @@
+@@ -743,7 +743,7 @@
  ##
  
  # Executable location
@@ -141,7 +141,7 @@ diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-exam
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -868,7 +868,7 @@
+@@ -872,7 +872,7 @@
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -150,7 +150,7 @@ diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-exam
      # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
      # [cache_key=<key>] [<service name>]
      #
-@@ -901,7 +901,7 @@
+@@ -905,7 +905,7 @@
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
@@ -159,7 +159,7 @@ diff -Nru dovecot-1.2.rc4.orig/dovecot-example.conf dovecot-1.2.rc4/dovecot-exam
  
    # System users (NSS, /etc/passwd, or similiar)
    # In many systems nowadays this uses Name Service Switch, which is
-@@ -914,10 +914,10 @@
+@@ -918,10 +918,10 @@
    # Shadow passwords for system users (NSS, /etc/shadow or similiar).
    # Deprecated by PAM nowadays.
    # <doc/wiki/PasswordDatabase.Shadow.txt>
