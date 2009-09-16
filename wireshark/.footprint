@@ -91,6 +91,7 @@ drwxr-xr-x	root/root	usr/share/wireshark/diameter/
 -rw-r--r--	root/root	usr/share/wireshark/diameter/chargecontrol.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.dtd
 -rw-r--r--	root/root	usr/share/wireshark/diameter/dictionary.xml
+-rw-r--r--	root/root	usr/share/wireshark/diameter/eap.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/etsie2e4.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/gqpolicy.xml
 -rw-r--r--	root/root	usr/share/wireshark/diameter/imscxdx.xml
