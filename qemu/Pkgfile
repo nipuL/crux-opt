@@ -1,27 +1,28 @@
 # Description: Fast CPU emulator and virtualizer
-# URL: http://nongnu.org/qemu/
-# Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: libsdl
-# Optional: kqemu texi2html
+# URL:         http://www.qemu.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Lucas Hazel, lucas at die dot net dot au
+# Depends on:  libsdl
+# Optional:    kqemu texi2html
 
 name=qemu
-version=0.10.5
+version=0.10.6
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-	    --cc="${CC:=gcc}" \
-	    --host-cc="${CC:=gcc}"
-	make
-	make DESTDIR=$PKG install
+  cd $name-$version
+  ./configure --prefix=/usr \
+      --cc="${CC:=gcc}" \
+      --host-cc="${CC:=gcc}"
+  make
+  make DESTDIR=$PKG install
 
-	# Documentaion will only be installed if texi2html is installed.
+  # Documentaion will only be installed if texi2html is installed.
 
-	if [ -d "$PKG/usr/share/man" ]; then
-	    mv $PKG/usr/share/man $PKG/usr/man
-	fi
-	
-	rm -rf $PKG/usr/share/doc
+  if [ -d "$PKG/usr/share/man" ]; then
+      mv $PKG/usr/share/man $PKG/usr/man
+  fi
+  
+  rm -rf $PKG/usr/share/doc
 }
