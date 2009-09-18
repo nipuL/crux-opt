@@ -1,6 +1,6 @@
 # Description: Terminal based IRC client for UNIX systems
 # URL: http://www.irssi.org/
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Daniel K. Gebhart, dkg at con-fuse dot org
 # Depends on: glib
 
@@ -13,17 +13,17 @@ build () {
     cd $name-$version
 
     ./configure \
-	--prefix=/usr \
-	--mandir=/usr/man \
+  --prefix=/usr \
+  --mandir=/usr/man \
         --enable-ipv6 \
         --with-proxy
     make
     make DESTDIR=$PKG install
 
     find $PKG \
-	-name .packlist -or \
-	-name perllocal.pod -or \
-	-name '*.bs' -or \
-	-name autosplit.ix | xargs rm
+  -name .packlist -or \
+  -name perllocal.pod -or \
+  -name '*.bs' -or \
+  -name autosplit.ix | xargs rm
     rm -rf $PKG/usr/{include,share/doc}
 }
