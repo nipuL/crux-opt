@@ -1,5 +1,5 @@
 # Packager:     Simone Rota, sip at crux dot nu
-# Maintainer:   Richard Poettler, richard dot poettler at gmail dot com
+# Maintainer:   Thomas Penteker, tek at serverop dot de
 # Description:  an interactive process viewer
 # URL:          http://htop.sourceforge.net/
 # Depends on:   ncurses
