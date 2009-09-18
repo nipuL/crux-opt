@@ -1,7 +1,7 @@
 # Description: Extracts RAR archives
-# URL: http://www.rarlab.com/rar_add.htm
-# Maintainer: Richard Poettler, richard dot poettler at gmail dot com
-# Packager: Jukka Heino, jukka dot heino at gmail dot com
+# URL:         http://www.rarlab.com/rar_add.htm
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Jukka Heino, jukka dot heino at gmail dot com
 # Depends on:
 
 name=unrar
