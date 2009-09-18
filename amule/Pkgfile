@@ -1,11 +1,10 @@
 # Description: An all-platform Edonkey client.
 # URL: http://www.amule.org/
 # Maintainer: Antti Nykanen, aon at iki dot fi
-# Packager: Daniel Walpole, daniel at walpole dot id dot au
 # Depends on: wxgtk, crypto++
 
 name=amule
-version=2.2.5
+version=2.2.6
 release=1
 source=(http://download.berlios.de/amule/aMule-$version.tar.bz2)
 
