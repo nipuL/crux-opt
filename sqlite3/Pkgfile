@@ -5,7 +5,7 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.6.17
+version=3.6.18
 release=1
 
 source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)

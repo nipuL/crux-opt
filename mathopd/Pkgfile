@@ -4,17 +4,20 @@
 
 name=mathopd
 version=1.5p6
-release=1
+release=2
 source=(http://www.mathopd.org/dist/$name-$version.tar.gz \
         http://jue.li/misc/dir_cgi/dir_cgi-1.1.tar.gz \
         http://www.mathopd.org/doc/mathopd.8.gz \
         http://www.mathopd.org/doc/mathopd.conf.5.gz \
-        mathopd-config.patch mathopd.conf mathopd)
+        mathopd-config.patch mathopd.conf mathopd \
+        mathopd-getline.patch)
 
 build () {
     cd $name-$version/src
 
     patch -p2 -i $SRC/mathopd-config.patch
+    patch -p2 -i $SRC/mathopd-getline.patch
+
     make
 
     install -d $PKG/{var/log,etc/rc.d,usr/{bin,sbin,man/man{8,5}}}

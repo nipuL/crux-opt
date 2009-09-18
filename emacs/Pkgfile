@@ -2,7 +2,7 @@
 # URL: http://www.gnu.org/software/emacs/
 # Maintainer: Antti Nykanen, aon at iki dot fi
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: xorg, libtiff, ctags
+# Depends on: xorg, libtiff, libungif, ctags
 
 name=emacs
 version=23.1

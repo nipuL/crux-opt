@@ -6,7 +6,7 @@
 # Depends on: apr, neon, expat, sqlite3
 
 name=subversion
-version=1.6.4
+version=1.6.5
 release=1
 source=(http://subversion.tigris.org/downloads/$name-$version.tar.bz2)
 

@@ -11,6 +11,7 @@ lrwxrwxrwx	root/root	sbin/lvcreate -> lvm
 lrwxrwxrwx	root/root	sbin/lvdisplay -> lvm
 lrwxrwxrwx	root/root	sbin/lvextend -> lvm
 -r-xr-xr-x	root/root	sbin/lvm
+-r-xr-xr-x	root/root	sbin/lvm.static
 lrwxrwxrwx	root/root	sbin/lvmchange -> lvm
 lrwxrwxrwx	root/root	sbin/lvmdiskscan -> lvm
 -r-xr-xr-x	root/root	sbin/lvmdump

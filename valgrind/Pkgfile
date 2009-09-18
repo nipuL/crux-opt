@@ -4,7 +4,7 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=valgrind
-version=3.4.1
+version=3.5.0
 release=1
 source=(http://$name.org/downloads/$name-$version.tar.bz2)
 

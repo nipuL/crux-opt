@@ -5,13 +5,15 @@
 # Depends on:  libpng, libtiff, openssl
 
 name=cups
-version=1.3.11
+version=1.4.1
 release=2
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
-        cups-config.patch cups)
+        cups-config.patch cups cups-st3332.patch)
 
 build () {
     cd $name-$version
+
+    patch -p1 -i $SRC/cups-st3332.patch
     patch -p1 -i $SRC/cups-config.patch
 
     ./configure --prefix=/usr \
@@ -21,24 +23,26 @@ build () {
                 --localstatedir=/var \
                 --with-docdir=/usr/share/cups/doc \
                 --with-logdir=/var/log/cups \
+                --with-dbusdir=/usr/etc/dbus-1 \
                 --with-cups-user=daemon \
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --enable-threads \
+                --without-rcdir \
                 --enable-ssl \
                 --enable-gnutls=no \
                 --enable-openssl=yes \
                 --enable-pam=no \
-                --enable-pdftops=no
+                --enable-pdftops=no \
+                --enable-libusb=no
 
     make
-    make BUILDROOT=$PKG DBUSDIR=/usr/etc/dbus-1 install
+    make BUILDROOT=$PKG install
 
-    rm -rf $PKG/etc/{rc*.d,init.d}
-    rm -rf $PKG/usr/share/{locale,icons,applications}
+    rm -r $PKG/usr/share/{icons,applications}
     chmod 0755 $PKG/var/{cache,spool}   
-
+    chmod -R +w $PKG
+ 
     install -d $PKG/etc/ssl/{certs,keys}
     touch $PKG/etc/ssl/certs/cups.crt
     touch $PKG/etc/ssl/keys/cups.key

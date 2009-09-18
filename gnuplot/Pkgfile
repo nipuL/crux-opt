@@ -3,10 +3,10 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Martin Opel, mo at obbl-net dot de
-# Depends on:  ncurses, readline, libpng, xorg-libx11, xorg-libxau
+# Depends on:  ncurses, readline, libgd, xorg-libx11, xorg-libxau
 
 name=gnuplot
-version=4.2.5
+version=4.2.6
 release=1
 source=(http://dl.sourceforge.net/sourceforge/gnuplot/$name-$version.tar.gz)
 

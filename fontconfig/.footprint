@@ -52,6 +52,8 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/fc-cat
 -rwxr-xr-x	root/root	usr/bin/fc-list
 -rwxr-xr-x	root/root	usr/bin/fc-match
+-rwxr-xr-x	root/root	usr/bin/fc-query
+-rwxr-xr-x	root/root	usr/bin/fc-scan
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/fontconfig/
 -rw-r--r--	root/root	usr/include/fontconfig/fcfreetype.h
@@ -60,9 +62,9 @@ drwxr-xr-x	root/root	usr/include/fontconfig/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfontconfig.a
 -rwxr-xr-x	root/root	usr/lib/libfontconfig.la
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.3.0
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.3.0
--rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.3.0
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.4.3
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.4.3
+-rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.4.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x	root/root	usr/man/
@@ -71,6 +73,8 @@ drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/fc-cat.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-list.1.gz
 -rw-r--r--	root/root	usr/man/man1/fc-match.1.gz
+-rw-r--r--	root/root	usr/man/man1/fc-query.1.gz
+-rw-r--r--	root/root	usr/man/man1/fc-scan.1.gz
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcAtomicCreate.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcAtomicDeleteNew.3.gz
@@ -101,6 +105,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcCharSetIntersect.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetIntersectCount.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetIsSubset.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcCharSetMerge.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetNew.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetNextPage.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcCharSetSubtract.3.gz
@@ -125,6 +130,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcConfigGetRescanInterval.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigHome.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigParseAndLoad.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcConfigReference.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigSetCurrent.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigSetRescanInterval.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcConfigSubstitute.3.gz
@@ -176,6 +182,7 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcLangSetCreate.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetDestroy.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetEqual.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcLangSetGetLangs.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetHasLang.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcLangSetHash.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcMatrixCopy.3.gz
@@ -208,6 +215,8 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/FcPatternDuplicate.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcPatternEqual.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcPatternEqualSubset.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcPatternFilter.3.gz
+-rw-r--r--	root/root	usr/man/man3/FcPatternFormat.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcPatternGet-Type.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcPatternGet.3.gz
 -rw-r--r--	root/root	usr/man/man3/FcPatternHash.3.gz

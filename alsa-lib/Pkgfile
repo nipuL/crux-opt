@@ -6,8 +6,8 @@
 # Depends on: python
 
 name=alsa-lib
-version=1.0.20
-release=2
+version=1.0.21a
+release=1
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 
 build() {

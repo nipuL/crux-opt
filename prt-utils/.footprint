@@ -23,6 +23,7 @@ drwxr-xr-x	root/root	usr/lib/prtverify/
 -rw-r--r--	root/root	usr/lib/prtverify/00_prtverify_lib.awk
 -rw-r--r--	root/root	usr/lib/prtverify/05_file_check.awk
 -rw-r--r--	root/root	usr/lib/prtverify/10_file_check_clean_repo.awk
+-rw-r--r--	root/root	usr/lib/prtverify/20_encoding.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_evil_cmds.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_maintainer_email.awk
 -rw-r--r--	root/root	usr/lib/prtverify/20_missing_deps.awk
