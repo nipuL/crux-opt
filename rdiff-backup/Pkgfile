@@ -1,10 +1,11 @@
 # Description: Local/remote mirroring+incremental backup
-# URL: http://www.nongnu.org/rdiff-backup/
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
-# Depends on: python, rdiff, librsync
+# URL:         http://www.nongnu.org/rdiff-backup/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Simon Gloﬂner, viper at hometux dot de
+# Depends on:  python, rdiff, librsync
 
 name=rdiff-backup
-version=1.2.4
+version=1.2.8
 release=1
 source=(http://savannah.nongnu.org/download/${name}/${name}-${version}.tar.gz)
 
