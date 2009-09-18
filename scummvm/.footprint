@@ -8,11 +8,10 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/pixmaps/
 -rw-r--r--	root/root	usr/share/pixmaps/scummvm.xpm
 drwxr-xr-x	root/root	usr/share/scummvm/
--rw-r--r--	root/root	usr/share/scummvm/classic080.ini
 -rw-r--r--	root/root	usr/share/scummvm/drascula.dat
 -rw-r--r--	root/root	usr/share/scummvm/kyra.dat
 -rw-r--r--	root/root	usr/share/scummvm/lure.dat
--rw-r--r--	root/root	usr/share/scummvm/modern.ini
--rw-r--r--	root/root	usr/share/scummvm/modern.zip
+-rw-r--r--	root/root	usr/share/scummvm/pred.dic
 -rw-r--r--	root/root	usr/share/scummvm/queen.tbl
+-rw-r--r--	root/root	usr/share/scummvm/scummmodern.zip
 -rw-r--r--	root/root	usr/share/scummvm/sky.cpt
