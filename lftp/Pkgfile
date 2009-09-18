@@ -4,7 +4,7 @@
 # Depends on: openssl
 
 name=lftp
-version=4.0.0
+version=4.0.1
 release=1
 source=(ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/$name-$version.tar.lzma)
 
