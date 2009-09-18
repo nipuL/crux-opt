@@ -1,8 +1,8 @@
 # Description: Pager that can also be used as a text-based web browser
-# URL: http://w3m.sourceforge.net/
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
-# Packager: Han Boetes, han at mijncomputer dot dl
-# Depends on: boehm-gc
+# URL:         http://w3m.sourceforge.net/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Han Boetes, han at mijncomputer dot dl
+# Depends on:  boehm-gc
 
 name=w3m
 version=0.5.2
@@ -17,7 +17,7 @@ build() {
     ./configure \
         --prefix=/usr \
         --libexecdir=/usr/lib \
-	--mandir=/usr/man \
+  --mandir=/usr/man \
         --disable-image \
         --disable-gopher \
         --disable-japanese \
