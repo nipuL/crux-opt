@@ -5,7 +5,7 @@
 # Depends on:  fontconfig, freetype-compat32, expat-compat32
 
 name=fontconfig-compat32
-version=2.6.0
+version=2.7.3
 release=1
 source=(http://fontconfig.org/release/fontconfig-$version.tar.gz)
 
