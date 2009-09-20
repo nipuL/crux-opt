@@ -5,14 +5,17 @@
 # Depends on:  cups, libpng-compat32, libtiff-compat32, openssl-compat32
 
 name=cups-compat32
-version=1.3.11
+version=1.4.1
 release=1
 source=(http://ftp.easysw.com/pub/cups/$version/cups-$version-source.tar.bz2
-    cups-config.patch cups-config32 $name.conf)
+    cups-config.patch cups-st3332.patch cups-config32 $name.conf)
 
 build () {
     cd cups-$version
+
     patch -p1 < $SRC/cups-config.patch
+    patch -p1 < $SRC/cups-st3332.patch
+
 
     ./configure --prefix=/usr \
                 --libdir=/usr/lib32 \
@@ -20,23 +23,26 @@ build () {
                 --localstatedir=/var \
                 --with-docdir=/usr/share/cups/doc \
                 --with-logdir=/var/log/cups \
+                --with-dbusdir=/usr/etc/dbus-1 \
                 --with-cups-user=daemon \
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --enable-threads \
+                --without-rcdir \
                 --enable-ssl=yes \
-	            --enable-gnutls=no \
-	            --enable-openssl=yes \
-	            --with-openssl-libs=/usr/lib32 \
-	            --with-openssl-includes=/usr/include32 \
-	            --enable-pam=no
+                --enable-gnutls=no \
+                --enable-openssl=yes \
+                --with-openssl-libs=/usr/lib32 \
+                --with-openssl-includes=/usr/include32 \
+                --enable-pam=no \
+                --enable-pdftops=no \
+                --enable-libusb=no
 
     make
     make BUILDROOT=$PKG install
 
     rm -rf $PKG/{etc,var}
-    rm -rf $PKG/usr/{bin/*,include,lib{,64},man,sbin,share}
+    rm -rf $PKG/usr/{bin/*,etc,include,lib{,64},man,sbin,share}
     
     install -m 0755 $SRC/cups-config32 $PKG/usr/bin/cups-config32
     install -D -m0544 -oroot -groot $SRC/$name.conf $PKG/etc/pkgmk.conf.d/$name.conf

@@ -6,6 +6,14 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/cups-config32
 drwxr-xr-x	root/root	usr/lib32/
 lrwxrwxrwx	root/root	usr/lib32/libcups.so -> libcups.so.2
--rwxr-xr-x	root/root	usr/lib32/libcups.so.2
+-r-xr-xr-x	root/root	usr/lib32/libcups.so.2
+lrwxrwxrwx	root/root	usr/lib32/libcupscgi.so -> libcupscgi.so.1
+-r-xr-xr-x	root/root	usr/lib32/libcupscgi.so.1
+lrwxrwxrwx	root/root	usr/lib32/libcupsdriver.so -> libcupsdriver.so.1
+-r-xr-xr-x	root/root	usr/lib32/libcupsdriver.so.1
 lrwxrwxrwx	root/root	usr/lib32/libcupsimage.so -> libcupsimage.so.2
--rwxr-xr-x	root/root	usr/lib32/libcupsimage.so.2
+-r-xr-xr-x	root/root	usr/lib32/libcupsimage.so.2
+lrwxrwxrwx	root/root	usr/lib32/libcupsmime.so -> libcupsmime.so.1
+-r-xr-xr-x	root/root	usr/lib32/libcupsmime.so.1
+lrwxrwxrwx	root/root	usr/lib32/libcupsppdc.so -> libcupsppdc.so.1
+-r-xr-xr-x	root/root	usr/lib32/libcupsppdc.so.1
