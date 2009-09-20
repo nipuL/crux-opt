@@ -2,12 +2,12 @@
 # URL: http://www.gtk.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: glib
+# Depends on: glib libpcre-compat32
 
 name=glib-compat32
-version=2.20.4
+version=2.20.5
 release=1
-source=(ftp://ftp.gnome.org/pub/GNOME/sources/glib/2.18/glib-$version.tar.bz2)
+source=(http://download.gnome.org/sources/glib/2.20/glib-$version.tar.bz2)
 
 build () {
     cd glib-$version
