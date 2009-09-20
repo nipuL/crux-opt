@@ -3,13 +3,13 @@ drwxr-xr-x	root/root	usr/lib32/
 lrwxrwxrwx	root/root	usr/lib32/libpng.a -> libpng12.a
 lrwxrwxrwx	root/root	usr/lib32/libpng.la -> libpng12.la
 lrwxrwxrwx	root/root	usr/lib32/libpng.so -> libpng12.so
-lrwxrwxrwx	root/root	usr/lib32/libpng.so.3 -> libpng.so.3.38.0
--rwxr-xr-x	root/root	usr/lib32/libpng.so.3.38.0
+lrwxrwxrwx	root/root	usr/lib32/libpng.so.3 -> libpng.so.3.40.0
+-rwxr-xr-x	root/root	usr/lib32/libpng.so.3.40.0
 -rw-r--r--	root/root	usr/lib32/libpng12.a
 -rwxr-xr-x	root/root	usr/lib32/libpng12.la
-lrwxrwxrwx	root/root	usr/lib32/libpng12.so -> libpng12.so.0.38.0
-lrwxrwxrwx	root/root	usr/lib32/libpng12.so.0 -> libpng12.so.0.38.0
--rwxr-xr-x	root/root	usr/lib32/libpng12.so.0.38.0
+lrwxrwxrwx	root/root	usr/lib32/libpng12.so -> libpng12.so.0.40.0
+lrwxrwxrwx	root/root	usr/lib32/libpng12.so.0 -> libpng12.so.0.40.0
+-rwxr-xr-x	root/root	usr/lib32/libpng12.so.0.40.0
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 lrwxrwxrwx	root/root	usr/lib32/pkgconfig/libpng.pc -> libpng12.pc
 -rw-r--r--	root/root	usr/lib32/pkgconfig/libpng12.pc
