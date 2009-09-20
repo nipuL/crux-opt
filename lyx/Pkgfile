@@ -3,17 +3,18 @@
 # Maintainer: Johannes Winkelmann, jw at smts dot ch
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Simone Rota, sip at crux dot nu
-# Depends on: tetex, qt4, imagemagick
+# Depends on: tetex, qt4, imagemagick, boost
 
 name=lyx
 version=1.6.3
-release=1
+release=2
 source=(ftp://ftp.lyx.org/pub/$name/stable/1.6.x/$name-$version.tar.bz2)
 
 build(){
   cd $name-$version
   export QTDIR=/usr/share/qt4
   ./configure --prefix=/usr --with-frontend=qt4 --disable-nls \
+      --without-included-boost \
       --mandir=/usr/man
   make
   make DESTDIR=$PKG install
