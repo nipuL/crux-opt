@@ -5,7 +5,7 @@
 # Depends on: alsa-lib
 
 name=alsa-lib-compat32
-version=1.0.20
+version=1.0.21a
 release=1
 source=(ftp://ftp.alsa-project.org/pub/lib/alsa-lib-$version.tar.bz2)
 
