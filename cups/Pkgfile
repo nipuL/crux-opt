@@ -6,7 +6,7 @@
 
 name=cups
 version=1.4.1
-release=2
+release=3
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
         cups-config.patch cups cups-st3332.patch)
 
@@ -39,7 +39,7 @@ build () {
     make
     make BUILDROOT=$PKG install
 
-    rm -r $PKG/usr/share/{icons,applications}
+    rm -rf $PKG/usr/share/{icons,applications}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
  
