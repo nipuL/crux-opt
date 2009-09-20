@@ -2,10 +2,10 @@
 # URL: http://dri.freedesktop.org/
 # Maintainer: Tilman Sauerbeck, tilman at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on: libdrm
+# Depends on: libdrm libpthread-stubs-compat32
 
 name=libdrm-compat32
-version=2.4.12
+version=2.4.13
 release=1
 source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2)
 
