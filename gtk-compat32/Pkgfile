@@ -5,12 +5,13 @@
 # Depends on: gtk, atk-compat32, libtiff-compat32, pango-compat32, xorg-libsm-compat32, xorg-libxcursor-compat32, xorg-libxinerama-compat32, xorg-libxrandr-compat32
 
 name=gtk-compat32
-version=2.16.5
+version=2.16.6
 release=1
 source=(http://download.gnome.org/sources/gtk+/2.16/gtk+-2.16.4.tar.bz2 \
     http://download.gnome.org/sources/gtk+/2.16/gtk+-2.16.4-2.16.5.diff.gz \
-	gdk-pixbuf.loaders gtk.immodules \
-	gtk-register-32.sh)
+    http://download.gnome.org/sources/gtk+/2.16/gtk+-2.16.5-2.16.6.diff.gz \
+    gdk-pixbuf.loaders gtk.immodules \
+    gtk-register-32.sh)
 
 compat32_dep_check $name cups || exit 1
 
@@ -18,6 +19,7 @@ build () {
     cd gtk+-2.16.4
 
     zcat $SRC/gtk+-2.16.4-2.16.5.diff.gz | patch -p1
+    zcat $SRC/gtk+-2.16.5-2.16.6.diff.gz | patch -p1
 
     ./configure --prefix=/usr \
 	--libdir=/usr/lib32 \
