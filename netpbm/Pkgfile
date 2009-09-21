@@ -4,7 +4,7 @@
 # Depends on: ghostscript
 
 name=netpbm
-version=10.35.67
+version=10.35.68
 release=1
 source=(http://crux.nu/~aon/$name/$name-$version.tar.gz
 	Makefile.config)
