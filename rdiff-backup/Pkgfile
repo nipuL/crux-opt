@@ -2,7 +2,7 @@
 # URL:         http://www.nongnu.org/rdiff-backup/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager:    Simon Gloﬂner, viper at hometux dot de
-# Depends on:  python, rdiff, librsync
+# Depends on:  python, rdiff
 
 name=rdiff-backup
 version=1.2.8
