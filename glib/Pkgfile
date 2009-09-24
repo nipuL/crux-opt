@@ -4,9 +4,9 @@
 # Depends on: libpcre
 
 name=glib
-version=2.20.5
+version=2.22.0
 release=1
-source=(http://download.gnome.org/sources/$name/2.20/$name-$version.tar.bz2)
+source=(http://download.gnome.org/sources/$name/2.22/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
