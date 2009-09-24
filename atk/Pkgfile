@@ -4,9 +4,9 @@
 # Depends on: glib
 
 name=atk
-version=1.26.0
+version=1.28.0
 release=1
-source=(http://download.gnome.org/sources/$name/1.26/$name-$version.tar.bz2)
+source=(http://download.gnome.org/sources/$name/1.28/$name-$version.tar.bz2)
 
 build () {
 	cd $name-$version
