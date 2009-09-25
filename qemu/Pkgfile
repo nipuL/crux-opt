@@ -6,7 +6,7 @@
 # Optional:    kqemu texi2html
 
 name=qemu
-version=0.10.6
+version=0.11.0
 release=1
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
