@@ -3,14 +3,12 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
-version=3.0
-release=2
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
-        $name-$version-vol_id.patch)
+version=3.0.2
+release=1
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    patch -p1 -i $SRC/$name-$version-vol_id.patch
     make CXFLAGS="$CFLAGS" all mdadm.static
     make DESTDIR=$PKG MANDIR=/usr/man install
     install -m755 mdadm.static $PKG/sbin
