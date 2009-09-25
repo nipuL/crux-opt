@@ -4,11 +4,13 @@
 
 name=mdadm
 version=3.0.2
-release=1
-source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz)
+release=2
+source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
+        mdadm-3.0-vol_id.patch)
 
 build() {
     cd $name-$version
+    patch -p1 -i $SRC/mdadm-3.0-vol_id.patch
     make CXFLAGS="$CFLAGS" all mdadm.static
     make DESTDIR=$PKG MANDIR=/usr/man install
     install -m755 mdadm.static $PKG/sbin
