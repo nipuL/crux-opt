@@ -6,7 +6,7 @@
 
 name=p5-html-tagset
 version=3.04
-release=2
+release=3
 source=(http://www.cpan.org/authors/id/S/SB/SBURKE/HTML-Tagset-$version.tar.gz)
 
 build() {
