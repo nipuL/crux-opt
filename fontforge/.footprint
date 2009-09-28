@@ -49,7 +49,6 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/ofl.h
 -rw-r--r--	root/root	usr/include/fontforge/pfaedit.h
 -rw-r--r--	root/root	usr/include/fontforge/plugins.h
--rw-r--r--	root/root	usr/include/fontforge/prefpage.h
 -rw-r--r--	root/root	usr/include/fontforge/print.h
 -rw-r--r--	root/root	usr/include/fontforge/psfont.h
 -rw-r--r--	root/root	usr/include/fontforge/savefont.h
