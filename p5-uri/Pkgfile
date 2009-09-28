@@ -5,8 +5,8 @@
 # Depends on:  perl
 
 name=p5-uri
-version=1.37
-release=2
+version=1.40
+release=1
 source=(ftp://ftp.demon.co.uk/pub/CPAN/modules/by-module/URI/URI-$version.tar.gz)
 
 build() {
