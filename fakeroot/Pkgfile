@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=fakeroot
-version=1.13
+version=1.13.1
 release=1
 source=(http://ftp.de.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
 
