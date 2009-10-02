@@ -5,7 +5,7 @@
 # Depends on:   ncurses
 
 name=htop
-version=0.8.1
+version=0.8.3
 release=1
 source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
 
