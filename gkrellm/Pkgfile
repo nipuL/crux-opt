@@ -6,12 +6,13 @@
 
 name=gkrellm
 version=2.3.2
-release=1
+release=2
 source=(http://members.dslextreme.com/users/billw/$name/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
     sed -i '/^enable_nls/s/1/0/' Makefile
+    sed -i 's/\<getline\>/get_line/' src/client.c
     make PREFIX=/usr 
     make INSTALLROOT=$PKG/usr MANDIR=$PKG/usr/man/man1 install
     mkdir -p $PKG/usr/lib/gkrellm2/plugins 
