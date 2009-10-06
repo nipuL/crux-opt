@@ -1,12 +1,13 @@
 # Description: Qt Free Edition
 # URL: http://www.trolltech.com
-# Maintainer: Johannes Winkelmann, jw at smts dot ch
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Johannes Winkelmann, jw at smts dot ch
 # Depends on: fontconfig glib libmng libpng mesa3d xorg-libxcursor xorg-libxi xorg-libxinerama xorg-libxrandr dbus
 
 name=qt4
-version=4.5.2
+version=4.5.3
 release=1
-source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.bz2)
+source=(ftp://ftp.trolltech.com/pub/qt/source/qt-x11-opensource-src-$version.tar.gz)
 
 build () {
     cd qt-x11-opensource-src-$version
