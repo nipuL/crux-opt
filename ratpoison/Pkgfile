@@ -5,10 +5,11 @@
 
 name=ratpoison
 version=1.4.4
-release=1
+release=2
 source=(http://savannah.nongnu.org/download/$name/$name-$version.tar.gz)
 
 build() {
+	export CFLAGS="$CFLAGS -DHAVE_GETLINE"
 	cd $name-$version
 	./configure --prefix=/usr --mandir=/usr/man
 	make
