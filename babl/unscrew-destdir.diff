@@ -1,0 +1,58 @@
+--- babl-0.1.0.orig/extensions/Makefile.am	2009-04-17 12:05:15.000000000 -0500
++++ babl-0.1.0/extensions/Makefile.am	2009-08-19 00:53:21.435970261 -0500
+@@ -1,7 +1,7 @@
+ if OS_WIN32
+ AM_LDFLAGS = -module -no-undefined
+ else
+-AM_LDFLAGS = -module
++AM_LDFLAGS = -module -avoid-version
+ endif
+ 
+ noinst_HEADERS = util.h
+@@ -12,7 +12,7 @@
+ 	-I$(top_srcdir)/babl		\
+ 	-I$(top_srcdir)/extensions
+ 
+-extdir = $(DESTDIR)$(libdir)/babl-@BABL_API_VERSION@
++extdir = $(libdir)/babl-@BABL_API_VERSION@
+ ext_LTLIBRARIES = \
+ 	CIE-Lab.la      \
+ 	gegl-fixups.la  \
+--- babl-0.1.0.orig/extensions/Makefile.in	2009-10-08 18:53:10.291822456 +0200
++++ babl-0.1.0/extensions/Makefile.in	2009-10-08 19:00:41.271777227 +0200
+@@ -288,12 +288,12 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ install-extLTLIBRARIES: $(ext_LTLIBRARIES)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(extdir)" || $(MKDIR_P) "$(DESTDIR)$(extdir)"
++	test -z "$(extdir)" || $(MKDIR_P) "$(extdir)"
+ 	@list='$(ext_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    f=$(am__strip_dir) \
+-	    echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(extLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) '$$p' '$(DESTDIR)$(extdir)/$$f'"; \
+-	    $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(extLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) "$$p" "$(DESTDIR)$(extdir)/$$f"; \
++	    echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(extLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) '$$p' '$(extdir)/$$f'"; \
++	    $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(extLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) "$$p" "$(extdir)/$$f"; \
+ 	  else :; fi; \
+ 	done
+ 
+@@ -301,8 +301,8 @@
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(ext_LTLIBRARIES)'; for p in $$list; do \
+ 	  p=$(am__strip_dir) \
+-	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(extdir)/$$p'"; \
+-	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(extdir)/$$p"; \
++	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(extdir)/$$p'"; \
++	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(extdir)/$$p"; \
+ 	done
+ 
+ clean-extLTLIBRARIES:
+@@ -453,7 +453,7 @@
+ check: check-am
+ all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+ installdirs:
+-	for dir in "$(DESTDIR)$(extdir)"; do \
++	for dir in "$(extdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am

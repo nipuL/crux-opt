@@ -1,0 +1,44 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/babl-0.0/
+drwxr-xr-x	root/root	usr/include/babl-0.0/babl/
+-rw-r--r--	root/root	usr/include/babl-0.0/babl/babl-macros.h
+-rw-r--r--	root/root	usr/include/babl-0.0/babl/babl-types.h
+-rw-r--r--	root/root	usr/include/babl-0.0/babl/babl-version.h
+-rw-r--r--	root/root	usr/include/babl-0.0/babl/babl.h
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/babl-0.0/
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/CIE-Lab.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/CIE-Lab.so -> CIE-Lab.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/CIE-Lab.so.0 -> CIE-Lab.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/CIE-Lab.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gegl-fixups.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gegl-fixups.so -> gegl-fixups.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gegl-fixups.so.0 -> gegl-fixups.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gegl-fixups.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gggl-lies.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gggl-lies.so -> gggl-lies.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gggl-lies.so.0 -> gggl-lies.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gggl-lies.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gggl.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gggl.so -> gggl.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gggl.so.0 -> gggl.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gggl.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gimp-8bit.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gimp-8bit.so -> gimp-8bit.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/gimp-8bit.so.0 -> gimp-8bit.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/gimp-8bit.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/naive-CMYK.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/naive-CMYK.so -> naive-CMYK.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/naive-CMYK.so.0 -> naive-CMYK.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/naive-CMYK.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/sse-fixups.la
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/sse-fixups.so -> sse-fixups.so.0.0.0
+lrwxrwxrwx	root/root	usr/lib/babl-0.0/sse-fixups.so.0 -> sse-fixups.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/babl-0.0/sse-fixups.so.0.0.0
+-rwxr-xr-x	root/root	usr/lib/libbabl-0.0.la
+lrwxrwxrwx	root/root	usr/lib/libbabl-0.0.so -> libbabl-0.0.so.0.100.0
+lrwxrwxrwx	root/root	usr/lib/libbabl-0.0.so.0 -> libbabl-0.0.so.0.100.0
+-rwxr-xr-x	root/root	usr/lib/libbabl-0.0.so.0.100.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/babl.pc
