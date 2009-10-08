@@ -1,6 +1,6 @@
 # Description: A small library defining error values for GnuPG components
 # URL: http://www.gnupg.org
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
 
@@ -10,9 +10,9 @@ release=1
 source=(ftp://ftp.gnupg.org/gcrypt/libgpg-error/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure --prefix=/usr --disable-nls
-	make
-	make DESTDIR=$PKG install
+  ./configure --prefix=/usr --disable-nls
+  make
+  make DESTDIR=$PKG install
 }

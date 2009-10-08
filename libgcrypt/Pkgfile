@@ -1,9 +1,8 @@
 # Description: A general purpose cryptographic library based on GnuPG
 # URL: http://www.gnupg.org
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: libgpg-error
 
 name=libgcrypt
 version=1.4.4
@@ -11,14 +10,14 @@ release=1
 source=(ftp://ftp.gnupg.org/gcrypt/libgcrypt/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
+  cd $name-$version
 
-	./configure \
-	    --prefix=/usr \
-	    --disable-padlock-support
-	make
-	make DESTDIR=$PKG install
+  ./configure \
+      --prefix=/usr \
+      --disable-padlock-support
+  make
+  make DESTDIR=$PKG install
 
-	rm -rf $PKG/usr/sbin
-	rm -rf $PKG/usr/share/info
+  rm -rf $PKG/usr/sbin
+  rm -rf $PKG/usr/share/info
 }

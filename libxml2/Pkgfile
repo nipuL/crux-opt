@@ -6,7 +6,7 @@
 # Depends on:  zlib
 
 name=libxml2
-version=2.7.4
+version=2.7.6
 release=1
 source=(ftp://xmlsoft.org/libxml2/$name-$version.tar.gz)
 

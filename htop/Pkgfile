@@ -1,12 +1,12 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:     Simone Rota, sip at crux dot nu
-# Maintainer:   Richard Poettler, richard dot poettler at gmail dot com
+# Maintainer:   Thomas Penteker, tek at serverop dot de
 # Description:  an interactive process viewer
 # URL:          http://htop.sourceforge.net/
 # Depends on:   ncurses
 
 name=htop
-version=0.8.1
+version=0.8.3
 release=1
 source=(http://dl.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz)
 

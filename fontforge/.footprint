@@ -16,6 +16,7 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/charset.h
 -rw-r--r--	root/root	usr/include/fontforge/config.h
 -rw-r--r--	root/root	usr/include/fontforge/configure-pfaedit.h
+-rw-r--r--	root/root	usr/include/fontforge/delta.h
 -rw-r--r--	root/root	usr/include/fontforge/dynamic.h
 -rw-r--r--	root/root	usr/include/fontforge/edgelist.h
 -rw-r--r--	root/root	usr/include/fontforge/edgelist2.h
@@ -43,11 +44,11 @@ drwxr-xr-x	root/root	usr/include/fontforge/
 -rw-r--r--	root/root	usr/include/fontforge/libffstamp.h
 -rw-r--r--	root/root	usr/include/fontforge/lookups.h
 -rw-r--r--	root/root	usr/include/fontforge/mm.h
+-rw-r--r--	root/root	usr/include/fontforge/namehash.h
 -rw-r--r--	root/root	usr/include/fontforge/nonlineartrans.h
 -rw-r--r--	root/root	usr/include/fontforge/ofl.h
 -rw-r--r--	root/root	usr/include/fontforge/pfaedit.h
 -rw-r--r--	root/root	usr/include/fontforge/plugins.h
--rw-r--r--	root/root	usr/include/fontforge/prefpage.h
 -rw-r--r--	root/root	usr/include/fontforge/print.h
 -rw-r--r--	root/root	usr/include/fontforge/psfont.h
 -rw-r--r--	root/root	usr/include/fontforge/savefont.h
@@ -71,9 +72,9 @@ lrwxrwxrwx	root/root	usr/lib/libfontforge.so -> libfontforge.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libfontforge.so.1 -> libfontforge.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libfontforge.so.1.0.0
 -rwxr-xr-x	root/root	usr/lib/libgdraw.la
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.4.0.7
-lrwxrwxrwx	root/root	usr/lib/libgdraw.so.4 -> libgdraw.so.4.0.7
--rwxr-xr-x	root/root	usr/lib/libgdraw.so.4.0.7
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so -> libgdraw.so.4.0.8
+lrwxrwxrwx	root/root	usr/lib/libgdraw.so.4 -> libgdraw.so.4.0.8
+-rwxr-xr-x	root/root	usr/lib/libgdraw.so.4.0.8
 -rwxr-xr-x	root/root	usr/lib/libgioftp.la
 lrwxrwxrwx	root/root	usr/lib/libgioftp.so -> libgioftp.so.1.0.0
 lrwxrwxrwx	root/root	usr/lib/libgioftp.so.1 -> libgioftp.so.1.0.0
@@ -222,6 +223,24 @@ drwxr-xr-x	root/root	usr/share/fontforge/pixmaps/
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/stylessmallcaps.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/stylessubsuper.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/styleswireframe.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/tools3drotate.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolselipse.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsflip.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsfreehand.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsknife.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsmagnify.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolspen.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsperspective.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolspointer.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolspoly.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsrect.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsrotate.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsruler.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsscale.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsscroll.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsskew.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsspiro.png
+-rw-r--r--	root/root	usr/share/fontforge/pixmaps/toolsstar.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/transformfliphor.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/transformflipvert.png
 -rw-r--r--	root/root	usr/share/fontforge/pixmaps/transformrotate180.png

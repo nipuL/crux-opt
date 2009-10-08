@@ -1,6 +1,6 @@
 # Description: Garbage collection and memory leak detection for C and C++
 # URL: http://www.hpl.hp.com/personal/Hans_Boehm/gc/
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Packager: Han Boetes, han at mijncomputer dot dl
 
 name=boehm-gc

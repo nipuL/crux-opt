@@ -1,8 +1,8 @@
-# Packager: Simone Rota, sip at crux dot nu
-# Maintainer: Johannes Winkelmann, jw at smts dot ch
 # Description: a graphical login utility
-# URL: http://slim.berlios.de
-# Depends on: xorg-libxft, xorg-libxmu, xorg-xauth, libjpeg, libpng
+# URL:         http://slim.berlios.de
+# Packager:    Simone Rota, sip at crux dot nu
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  xorg-xauth, libjpeg, libpng
 
 name=slim
 version=1.3.1

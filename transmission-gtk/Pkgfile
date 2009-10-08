@@ -2,12 +2,12 @@
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Depends on:  openssl curl intltool gtk
+# Depends on:  curl intltool gtk
 
 name=transmission-gtk
-version=1.74
+version=1.75
 release=1
-source=(http://download.m0k.org/transmission/files/transmission-$version.tar.bz2)
+source=(http://download.m0k.org/transmission/files/transmission-$version.tar.xz)
 
 build() {
     cd transmission-$version

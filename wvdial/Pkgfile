@@ -1,23 +1,23 @@
 # Description: Weave Dial - PPP dialer
 # URL:         http://open.nit.ca/wiki/?page=WvDial
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  ppp, openssl
+# Depends on:  ppp
 
 name=wvdial
-version=1.60
-release=6
-source=(http://alumnit.ca/download/$name-$version.tar.gz \
-        http://wvstreams.googlecode.com/files/wvstreams-4.6.tar.gz \
-        $name-$version.patch $name-$version-scandir.patch)
+version=1.61
+release=1
+source=(http://wvstreams.googlecode.com/files/$name-$version.tar.gz \
+        http://wvstreams.googlecode.com/files/wvstreams-4.6.1.tar.gz \
+        $name-$version.patch)
 
 build() {
-    cd wvstreams-4.6
+    cd wvstreams-4.6.1
     ./configure --prefix=/usr --without-{pam,tcl,qt,dbus}
     make -j1
 
     cd $SRC/$name-$version
-    patch -p1 -i $SRC/$name-$version-scandir.patch
     patch -p1 -i $SRC/$name-$version.patch
-    make -j1 CXXOPTS="$CXXFLAGS" WVS=$SRC/wvstreams-4.6
+    ./configure
+    make -j1 WVS=$SRC/wvstreams-4.6.1
     make DESTDIR=$PKG install
 }

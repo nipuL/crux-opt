@@ -1,18 +1,18 @@
 # Description: Script Creation Utility for Maniac Mansion Virtual Machine
-# URL: http://www.scummvm.org/
-# Packager: Matt Housh, jaeger at crux dot nu
-# Maintainer: Richard Poettler, richard dot poettler at gmail dot com
-# Depends on: libsdl libogg libmad mpeg2dec flac
+# URL:         http://www.scummvm.org/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Matt Housh, jaeger at crux dot nu
+# Depends on:  libsdl libmad libmpeg2 flac
 
 name=scummvm
-version=0.12.0
+version=1.0.0rc1
 release=1
 source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.bz2)
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --mandir=/usr/man
-	make
-	make DESTDIR=$PKG install
-	rm -rf $PKG/usr/share/doc
+  cd $name-$version
+  ./configure --prefix=/usr --mandir=/usr/man
+  make
+  make DESTDIR=$PKG install
+  rm -rf $PKG/usr/share/doc
 }

@@ -1,12 +1,12 @@
 # Description: BitTorrent client/daemon with command-line and optional gtk user interface
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  openssl curl
+# Depends on:  curl
 
 name=transmission
-version=1.74
+version=1.75
 release=1
-source=(http://download.m0k.org/$name/files/$name-$version.tar.bz2)
+source=(http://download.m0k.org/$name/files/$name-$version.tar.xz)
 
 build() {
     cd $name-$version

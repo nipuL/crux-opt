@@ -1,8 +1,8 @@
 # Description: IPC library for the GnuPG components
 # URL: http://www.gnupg.org/
-# Maintainer: Simon Gloï¿½ner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Simon Gloï¿½ner, viper at hometux dot de
+# Packager:    Simon Gloßner, viper at hometux dot de
 # Depends on: libpth
 
 name=libassuan

@@ -12,4 +12,5 @@ build() {
 	make CXXFLAGS="$CXXFLAGS"
 	make PREFIX=$PKG/usr install
 	rm -rf $PKG/usr/bin
+	chmod 644 $PKG/usr/include/cryptopp/*.h
 }

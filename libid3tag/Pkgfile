@@ -1,6 +1,6 @@
 # Description: ID3 tag manipulation library
 # URL: http://www.mars.org/home/rob/proj/mpeg/
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer:  Thomas Penteker, tek at serverop dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Robert McMeekin, rrm3 at rrm3 dot org
 # Depends on: zlib
@@ -14,7 +14,7 @@ source=(http://dl.sourceforge.net/mad/${name}-${version}.tar.gz \
 build() {
     mkdir -p $PKG/usr/lib/pkgconfig/
     sed "s/#version#/$version/" id3tag.pc > $PKG/usr/lib/pkgconfig/id3tag.pc
-	
+  
     cd $name-$version
 
     ./configure --prefix=/usr

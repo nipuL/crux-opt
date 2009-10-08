@@ -6,8 +6,8 @@
 # Nice to have: tk
 
 name=git
-version=1.6.4.2
-release=2
+version=1.6.4.4
+release=1
 source=(http://www.kernel.org/pub/software/scm/$name/$name-{,manpages-}$version.tar.bz2)
 
 build() {

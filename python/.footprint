@@ -1297,7 +1297,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/json/
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.2-py2.6.egg-info
+-rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.3-py2.6.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bytesio.so
@@ -1420,9 +1420,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-tk/
 -rw-r--r--	root/root	usr/lib/python2.6/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.2.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.3.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.2.final.0.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.3.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyo
@@ -1963,6 +1963,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/sqlite3/
 -rw-r--r--	root/root	usr/lib/python2.6/tempfile.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/test/
 -rw-r--r--	root/root	usr/lib/python2.6/test/185test.db
+-rw-r--r--	root/root	usr/lib/python2.6/test/Sine-1000Hz-300ms.aif
 -rw-r--r--	root/root	usr/lib/python2.6/test/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/__init__.pyo
@@ -2254,6 +2255,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rwxr-xr-x	root/root	usr/lib/python2.6/test/test_aepack.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_aepack.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_aepack.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_aifc.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_aifc.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_aifc.pyo
 -rwxr-xr-x	root/root	usr/lib/python2.6/test/test_al.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_al.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_al.pyo
@@ -2775,6 +2779,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_lib2to3.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_lib2to3.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_lib2to3.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_linecache.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_linecache.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_linecache.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_linuxaudiodev.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_linuxaudiodev.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_linuxaudiodev.pyo
@@ -3072,6 +3079,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/test/decimaltestdata/
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_smtplib.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_smtplib.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_smtplib.pyo
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_smtpnet.py
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_smtpnet.pyc
+-rw-r--r--	root/root	usr/lib/python2.6/test/test_smtpnet.pyo
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_socket.py
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_socket.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/test/test_socket.pyo

@@ -1,12 +1,12 @@
 # Description: Collection of scripts for CRUX, mainly oriented towards package and port management
 # URL: http://crux.nu/Wiki/PrtUtils
-# Maintainer: Johannes Winkelmann, jw at smts dot ch
+# Maintainer: Juergen Daubert, jue at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Martin Opel, mo at obbl-net dot de
 # Depends on: prt-get
 
 name=prt-utils
-version=0.9.2
+version=0.9.3
 release=1
 source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.gz)
 

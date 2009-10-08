@@ -145,7 +145,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/cyr_convert.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/datetime.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/dl.h
--rw-r--r--	root/root	usr/include/php/ext/standard/dns.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/exec.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/file.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/flock_compat.h
@@ -162,6 +161,7 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_browscap.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_crypt.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_dir.h
+-rw-r--r--	root/root	usr/include/php/ext/standard/php_dns.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_ext_syslog.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_filestat.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/php_fopen_wrappers.h
@@ -192,7 +192,6 @@ drwxr-xr-x	root/root	usr/include/php/ext/standard/
 -rw-r--r--	root/root	usr/include/php/ext/standard/streamsfuncs.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/uniqid.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/url.h
--rw-r--r--	root/root	usr/include/php/ext/standard/url_scanner.h
 -rw-r--r--	root/root	usr/include/php/ext/standard/url_scanner_ex.h
 drwxr-xr-x	root/root	usr/include/php/ext/xml/
 -rw-r--r--	root/root	usr/include/php/ext/xml/expat_compat.h

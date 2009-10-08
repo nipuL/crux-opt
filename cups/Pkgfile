@@ -28,7 +28,7 @@ build () {
                 --with-cups-group=lp \
                 --with-languages="" \
                 --without-{java,perl,php,python} \
-                --without-rcdir \
+                --without-{rcdir,menudir,icondir}  \
                 --enable-ssl \
                 --enable-gnutls=no \
                 --enable-openssl=yes \
@@ -39,7 +39,6 @@ build () {
     make
     make BUILDROOT=$PKG install
 
-    rm -rf $PKG/usr/share/{icons,applications}
     chmod 0755 $PKG/var/{cache,spool}   
     chmod -R +w $PKG
  
