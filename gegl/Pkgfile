@@ -1,0 +1,17 @@
+# Description: graph based image processing framework
+# URL: http://gegl.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on: babl, gtk
+
+name=gegl
+version=0.1.0
+release=1
+source=(ftp://ftp.gimp.org/pub/$name/0.1/$name-$version.tar.bz2)
+
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr --disable-docs
+  make
+  make DESTDIR=$PKG install
+}
