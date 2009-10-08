@@ -6,10 +6,11 @@
 
 name=mpeg2dec
 version=0.4.1
-release=1
+release=2
 source=(http://libmpeg2.sourceforge.net/files/$name-$version.tar.gz)
 
 build () {
+        export CFLAGS="$CFLAGS -fPIC"
 	cd $name-$version
 	./configure --prefix=/usr
 	make
