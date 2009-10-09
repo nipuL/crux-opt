@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=fakeroot
-version=1.13.1
+version=1.14
 release=1
-source=(http://ftp.de.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
 
 build () {
     cd $name-$version
