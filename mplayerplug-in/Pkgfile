@@ -1,19 +1,18 @@
 # Description: Embedded video player for Firefox
 # URL: http://mplayerplug-in.sourceforge.net
-# Maintainer: Jose V Beneyto, sepen at users dot sourceforge dot net
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Packager: sten, nick dot steeves at shaw dot ca
-# Depends on: mplayer, xulrunner
+# Depends on: mplayer xulrunner
 
 name=mplayerplug-in
 version=3.55
-release=1
-source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+release=2
+source=(http://dl.sourceforge.net/sourceforge/$name/$name-$version.tar.gz \
+        $name-$version.patch)
 
 build () {
   cd $name-$version
-  
-  sed -i 's|MOZILLA_HOME=`$PKG_CONFIG --variable=libdir libxul`|MOZILLA_HOME=`$PKG_CONFIG --variable=sdkdir libxul`/bin|' configure
-  sed -i 's|GECKO_IDLDIR=`$PKG_CONFIG --variable=idldir libxul`|GECKO_IDLDIR=`$PKG_CONFIG --variable=idldir libxul`/stable|' configure
+  patch -p1 -i $SRC/$name-$version.patch
 
   ./configure --prefix=/usr \
               --with-x \
