@@ -3,9 +3,9 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=dnsmasq
-version=2.50
+version=2.51
 release=1
-source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.gz \
+source=(http://www.thekelleys.org.uk/$name/$name-$version.tar.lzma \
         $name-config.patch dnsmasq)
 
 build () {
