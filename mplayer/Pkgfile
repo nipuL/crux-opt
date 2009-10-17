@@ -4,11 +4,11 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:     Matt Housh, jaeger at morpheus dot net
 # Depends on:   expat, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm
-# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav
+# Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav, libdca
 
 name=mplayer
 version=export-2009-09-19
-release=1
+release=2
 source=(http://crux.nu/~lucas/files/$name-$version.tar.bz2
   http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
   mplayer.conf)
@@ -17,7 +17,7 @@ build() {
   cd $name-$version
 
   # Keep in line with mplayer CFLAGS, but allow people to set their own march/mtune values.
-  export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer"
+  export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer -fno-strict-aliasing"
   ./configure --prefix=/usr \
       --mandir=/usr/man \
       --codecsdir=/usr/lib/win32 \

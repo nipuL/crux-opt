@@ -4,7 +4,7 @@
 # Depends on:  libtool, alsa-lib
 
 name=mpg123
-version=1.9.0
+version=1.9.1
 release=1
 source=(http://www.mpg123.de/download/$name-$version.tar.bz2)
 

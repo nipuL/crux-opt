@@ -4,7 +4,7 @@
 # Depends on:  libjpeg libpng xorg-libxft xorg-libxi xorg-libxinerama  
 
 name=fltk2
-version=r6879
+version=r6916
 release=1
 source=(http://ftp.easysw.com/pub/fltk/snapshots/fltk-2.0.x-$version.tar.bz2)
 

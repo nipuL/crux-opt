@@ -1,0 +1,21 @@
+# Description: Dynamic, any to any, pixel format translation library
+# URL: http://gegl.org/babl
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager: Simone Rota, sip at crux dot nu
+# Depends on:
+
+name=babl
+version=0.1.0
+release=1
+source=(ftp://ftp.gtk.org/pub/babl/0.1/$name-$version.tar.bz2 \
+        unscrew-destdir.diff)
+
+build() {
+  cd $name-$version
+
+  patch -i ../unscrew-destdir.diff -p1
+
+  ./configure --prefix=/usr
+  make
+  make DESTDIR=$PKG install
+}
