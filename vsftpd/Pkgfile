@@ -4,7 +4,7 @@
 # Depends on:  openssl libcap
 
 name=vsftpd
-version=2.2.0
+version=2.2.1
 release=1
 source=(ftp://vsftpd.beasts.org/users/cevans/$name-$version.tar.gz \
         $name-config.patch vsftpd)
