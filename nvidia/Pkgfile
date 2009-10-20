@@ -5,9 +5,9 @@
 # Depends on: gtk gl-select
 
 name=nvidia
-version=185.18.36
+version=190.40
 release=1
-source=(http://us.download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
+source=(ftp://download.nvidia.com/XFree86/Linux-x86/$version/NVIDIA-Linux-x86-$version-pkg0.run \
         $name-makefile.patch)
 
 build() {
