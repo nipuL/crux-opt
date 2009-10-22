@@ -3,8 +3,8 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=mdadm
-version=3.0.2
-release=2
+version=3.0.3
+release=1
 source=(http://www.kernel.org/pub/linux/utils/raid/$name/$name-$version.tar.gz
         mdadm-3.0-vol_id.patch)
 
