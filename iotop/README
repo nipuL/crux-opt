@@ -1,2 +1,0 @@
-To work properly, iotop needs a kernel > 2.6.20 with I/O accounting support
-(TASK_IO_ACCOUNTING).
