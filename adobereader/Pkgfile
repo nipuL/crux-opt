@@ -5,7 +5,7 @@
 # Depends on: gtk libstdc++-compat
 
 name=adobereader
-version=9.1.3
+version=9.2
 release=1
 source=(ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/$version/enu/AdbeRdr${version}-1_i486linux_enu.tar.bz2)
 PKGMK_NO_STRIP="yes"
