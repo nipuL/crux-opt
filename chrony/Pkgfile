@@ -1,12 +1,12 @@
 # Description: Network time protocol client/server
-# URL:         http://chrony.sunsite.dk/index.php
+# URL:         http://chrony.tuxfamily.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Depends on:  ncurses, readline
 
 name=chrony
 version=1.23
 release=1
-source=(http://chrony.sunsite.dk/download/$name-$version.tar.gz \
+source=(http://download.tuxfamily.org/$name/$name-$version.tar.gz
         chronyd chrony.conf chrony.keys) 
 
 build () {
