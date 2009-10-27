@@ -5,14 +5,18 @@
 
 name=ruby-musicbrainz
 version=0.3.0
-release=1
-source=(http://pablotron.org/download/mb-ruby-$version.tar.gz)
+release=2
+source=(http://pablotron.org/download/mb-ruby-$version.tar.gz $name.diff)
 
 build () {
 	cd mb-ruby-$version
 
+	# make it build with ruby 1.9
+	patch -p1 -i $SRC/$name.diff
+
 	ruby extconf.rb
 	make
 
-	make DESTDIR=$PKG install
+	install -m 755 -D musicbrainz.so \
+		$PKG/usr/lib/ruby/site_ruby/1.9/linux/musicbrainz.so
 }
