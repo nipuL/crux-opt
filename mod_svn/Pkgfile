@@ -4,7 +4,7 @@
 # Depends on:  subversion apache
 
 name=mod_svn
-version=1.6.5
+version=1.6.6
 release=1
 source=(http://subversion.tigris.org/downloads/subversion-$version.tar.bz2)
 
