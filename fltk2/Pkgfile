@@ -4,14 +4,12 @@
 # Depends on:  libjpeg libpng xorg-libxft xorg-libxi xorg-libxinerama  
 
 name=fltk2
-version=r6916
+version=r6921
 release=1
 source=(http://ftp.easysw.com/pub/fltk/snapshots/fltk-2.0.x-$version.tar.bz2)
 
 build() {
     cd fltk-2.0.x-$version
-
-    sed -i '/fltk2-config/s/^\t/\t$(DESTDIR)/' fluid/Makefile
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
