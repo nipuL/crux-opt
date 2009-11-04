@@ -4,7 +4,7 @@
 # Depends on:  libdevmapper
 
 name=lvm2
-version=2.02.53
+version=2.02.54
 release=1
 source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
 
@@ -17,7 +17,7 @@ build() {
                 --disable-readline \
                 --enable-static_link
 
-    make -j1
+    make
     make DESTDIR=$PKG install
 
     rm -r $PKG/{lib,usr/include}
