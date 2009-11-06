@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=tmux
-version=1.0
+version=1.1
 release=1
 source=(http://dl.sourceforge.net/$name/$name/$name-$version/$name-$version.tar.gz)
 
