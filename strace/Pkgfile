@@ -3,7 +3,7 @@
 # Maintainer:  Tilman Sauerbeck, tilman at crux dot nu
 
 name=strace
-version=4.5.18
+version=4.5.19
 release=1
 source=(http://dl.sourceforge.net/$name/$name-$version.tar.bz2)
 
