@@ -7,7 +7,7 @@
 name=psutils
 version=1.17
 release=1
-source=(ftp://ftp.enst.fr/pub/unix/a2ps/$name-$version.tar.gz)
+source=(ftp://ftp.uni-frankfurt.de/pub/Mirrors/gentoo.org/distfiles/$name-$version.tar.gz)
 
 build() {
 	cd $name
