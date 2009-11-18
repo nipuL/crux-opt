@@ -4,7 +4,7 @@
 # Depends on: cairo, glib, xorg-libsm, xorg-libxext, xorg-libxft
 
 name=pango
-version=1.26.0
+version=1.26.1
 release=1
 source=(http://download.gnome.org/sources/$name/1.26/$name-$version.tar.bz2 \
 	pango.modules)
