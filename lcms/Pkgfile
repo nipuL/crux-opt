@@ -5,12 +5,12 @@
 # Depends on:  zlib, libtiff, libjpeg
 
 name=lcms
-version=1.18a
+version=1.19
 release=1
 source=(http://www.littlecms.com/$name-$version.tar.gz)
 
 build() {
-    cd $name-${version/%[a-z]/}
+    cd $name-$version
     ./configure --prefix=/usr \
                 --without-python \
                 --mandir=/usr/man
