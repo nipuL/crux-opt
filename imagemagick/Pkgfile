@@ -1,11 +1,11 @@
 # Description: Image manipulation wizard
-# Packager: danm, maol, jaeger, sip
-# Maintainer: Richard Poettler, richard dot poettler at gmail dot com
-# URL: http://imagemagick.sourceforge.net/
-# Depends on: freetype ghostscript lcms libungif libxml2
+# URL:         http://www.imagemagick.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Packager:    danm, maol, jaeger, sip
+# Depends on:  libtool freetype ghostscript lcms libungif libxml2
 
 name=imagemagick
-version=6.5.5-10
+version=6.5.7-10
 release=1
 source=(ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-$version.tar.xz)
 
@@ -13,16 +13,16 @@ build () {
     cd ImageMagick-${version}
 
     ./configure --prefix=/usr \
-        --mandir=/usr/man \
-	--enable-shared \
-	--with-perl \
-	--without-rsvg
+                --mandir=/usr/man \
+                --enable-shared \
+                --with-perl \
+                --without-rsvg
 
     make
-    mkdir -p $PKG/usr/
-    make DESTDIR=$PKG PREFIX=$PKG/usr install
+    make DESTDIR=$PKG install
 
-    rm -rf $PKG/usr/share/doc
-    find $PKG \( -name ChangeLog -o -name LICENSE -o -name .packlist -o -name perllocal.pod \) -delete
+    rm -r $PKG/usr/share/doc
+    find $PKG -regex '.*\(ChangeLog\|LICENSE\|NEWS\.txt\)$' -delete 
+    find $PKG -regex '.*\(\.packlist\|perllocal.pod\|\.bs\)$' -delete
     find $PKG -type d -empty -delete
 }
