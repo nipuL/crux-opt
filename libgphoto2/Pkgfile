@@ -2,7 +2,7 @@
 # URL:         http://www.gphoto.org/proj/libgphoto2/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Packager:    Matt Housh, jaeger at crux dot nu
-# Depends on:  libtool libusb libjpeg libexif
+# Depends on:  libtool libusb-compat libjpeg libexif
 
 name=libgphoto2
 version=2.4.7
