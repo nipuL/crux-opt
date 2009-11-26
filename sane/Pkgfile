@@ -1,7 +1,7 @@
 # Description: Scanner Access Now Easy - Scanner driver for Linux
 # URL:         http://www.sane-project.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  libusb, libjpeg
+# Depends on:  libusb-compat libjpeg
 
 name=sane
 version=1.0.20
