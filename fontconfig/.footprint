@@ -62,9 +62,9 @@ drwxr-xr-x	root/root	usr/include/fontconfig/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libfontconfig.a
 -rwxr-xr-x	root/root	usr/lib/libfontconfig.la
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.4.3
-lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.4.3
--rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.4.3
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so -> libfontconfig.so.1.4.4
+lrwxrwxrwx	root/root	usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.4.4
+-rwxr-xr-x	root/root	usr/lib/libfontconfig.so.1.4.4
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x	root/root	usr/man/

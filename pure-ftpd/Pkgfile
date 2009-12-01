@@ -4,7 +4,7 @@
 # Depends on:  openssl
 
 name=pure-ftpd
-version=1.0.22
+version=1.0.26
 release=1
 source=(ftp://ftp.pureftpd.org/pub/$name/releases/$name-$version.tar.bz2 \
         pure-ftpd pure-ftpd.conf)

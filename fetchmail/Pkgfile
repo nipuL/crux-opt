@@ -4,9 +4,9 @@
 # Depends on:  openssl
 
 name=fetchmail
-version=6.3.12
+version=6.3.13
 release=1
-source=(http://download.berlios.de/$name/$name-$version.tar.lzma)
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version

@@ -4,7 +4,7 @@
 # Depends on:  xorg-libxmu xorg-font-adobe-75dpi xorg-font-adobe-100dp
 
 name=tgif
-version=4.2.1
+version=4.2.2
 release=1
 source=(ftp://bourbon.usc.edu/pub/tgif/tgif-QPL-$version.tar.gz)
 

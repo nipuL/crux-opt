@@ -4,9 +4,9 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=fakeroot
-version=1.14
+version=1.14.4
 release=1
-source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/f/$name/${name}_$version.orig.tar.bz2)
 
 build () {
     cd $name-$version

@@ -1297,7 +1297,7 @@ drwxr-xr-x	root/root	usr/lib/python2.6/json/
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/keyword.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/
--rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.4rc2-py2.6.egg-info
+-rw-r--r--	root/root	usr/lib/python2.6/lib-dynload/Python-2.6.4-py2.6.egg-info
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bisect.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bsddb.so
 -rwxr-xr-x	root/root	usr/lib/python2.6/lib-dynload/_bytesio.so
@@ -1420,9 +1420,9 @@ drwxr-xr-x	root/root	usr/lib/python2.6/lib-tk/
 -rw-r--r--	root/root	usr/lib/python2.6/lib-tk/turtle.pyo
 drwxr-xr-x	root/root	usr/lib/python2.6/lib2to3/
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.4.candidate.2.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/Grammar2.6.4.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar.txt
--rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.4.candidate.2.pickle
+-rw-r--r--	root/root	usr/lib/python2.6/lib2to3/PatternGrammar2.6.4.final.0.pickle
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.py
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyc
 -rw-r--r--	root/root	usr/lib/python2.6/lib2to3/__init__.pyo

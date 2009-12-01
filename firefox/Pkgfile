@@ -1,11 +1,11 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Fredrik Rinnestam, fredrik at rinnestam dot se
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: xulrunner
 
 name=firefox
-version=3.5.3
+version=3.5.5
 release=1
 source=(http://releases.mozilla.org/pub/mozilla.org/$name/releases/$version/source/$name-$version.source.tar.bz2
         mozconfig)

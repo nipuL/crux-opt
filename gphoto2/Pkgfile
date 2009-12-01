@@ -5,7 +5,7 @@
 # Depends on:  ncurses readline libtool popt libgphoto2
 
 name=gphoto2
-version=2.4.5
+version=2.4.7
 release=1
 source=(http://download.sourceforge.net/sourceforge/gphoto/$name-$version.tar.gz)
 

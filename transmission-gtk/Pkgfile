@@ -1,11 +1,11 @@
-# Description: BitTorrent client/daemon with command-line and optional gtk user interface
+# Description: BitTorrent client with gtk user interface
 # URL:         http://transmission.m0k.org/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on:  curl intltool gtk
 
 name=transmission-gtk
-version=1.75
+version=1.76
 release=1
 source=(http://download.m0k.org/transmission/files/transmission-$version.tar.xz)
 

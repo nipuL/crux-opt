@@ -1,13 +1,13 @@
 # Description: Mozilla Web Browser Component
 # URL: http://www.mozilla.com/firefox/
-# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Maintainer: Fredrik Rinnestam, fredrik at rinnestam dot se
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libidl, nss, gtk, perl, python, dbus-glib, alsa-lib
 
 name=xulrunner
-version=1.9.1.3
-release=2
-source=(http://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.5.3/source/firefox-3.5.3.source.tar.bz2
+version=1.9.1.5
+release=1
+source=(http://releases.mozilla.org/pub/mozilla.org/firefox/releases/3.5.5/source/firefox-3.5.5.source.tar.bz2
         mozconfig $name.diff)
 
 build() {

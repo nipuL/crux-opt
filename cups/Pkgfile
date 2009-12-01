@@ -5,15 +5,14 @@
 # Depends on:  libpng, libtiff, openssl
 
 name=cups
-version=1.4.1
-release=3
+version=1.4.2
+release=1
 source=(http://ftp.easysw.com/pub/cups/$version/$name-$version-source.tar.bz2 \
-        cups-config.patch cups cups-st3332.patch)
+        cups-config.patch cups)
 
 build () {
     cd $name-$version
 
-    patch -p1 -i $SRC/cups-st3332.patch
     patch -p1 -i $SRC/cups-config.patch
 
     ./configure --prefix=/usr \
