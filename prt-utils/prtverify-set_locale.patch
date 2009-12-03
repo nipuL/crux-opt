@@ -1,0 +1,12 @@
+diff --git a/prtverify.in b/prtverify.in
+index 185cab4..fd9a882 100644
+--- a/prtverify.in
++++ b/prtverify.in
+@@ -159,6 +159,7 @@ main() {
+ 
+ ### Main
+ 
++export LC_ALL=C
+ shopt -s nullglob
+ trap "cleanup" HUP INT QUIT TERM
+ 
