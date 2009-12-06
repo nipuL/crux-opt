@@ -4,7 +4,7 @@
 # Depends on: libpcre
 
 name=glib
-version=2.22.2
+version=2.22.3
 release=1
 source=(http://download.gnome.org/sources/$name/2.22/$name-$version.tar.bz2)
 
