@@ -1,7 +1,7 @@
 # Description: Console IM client
 # URL:         http://www.centerim.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Simon Gloﬂner, viper at hometux dot de
+# Packager:    Simon Glossner, viper at hometux dot de
 # Depends on:  ncurses
 
 name=centerim

@@ -1,6 +1,6 @@
 # Description: nice command-line calendar program
 # URL: http://palcal.sourceforge.net/
-# Maintainer: Simon Gloﬂner, viper at hometux dot de
+# Maintainer: Simon Glossner, viper at hometux dot de
 # Depends on: glib, gettext, readline
 
 name=pal

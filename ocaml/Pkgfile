@@ -1,7 +1,7 @@
 # Description: Objective CAML Compiler
 # URL:         http://caml.inria.fr/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Packager:    Erlend Bergsås Mikkelsen, howl at online dot no
+# Packager:    Erlend Bergsas Mikkelsen, howl at online dot no
 # Depends on:  ncurses, gdbm
 
 name=ocaml
