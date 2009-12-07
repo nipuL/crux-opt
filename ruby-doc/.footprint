@@ -262,6 +262,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Bignum/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%2f-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%3c%3c-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%3c%3d%3e-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%3d%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%3e%3e-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Bignum/%5b%5d-i.yaml
@@ -433,8 +434,10 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/CSV/Table/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/parse_headers-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/parse_line-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/puts-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/raw_encoding-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/read-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/read-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/read_io-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/read_to_char-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/readline-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/CSV/readlines-c.yaml
@@ -1466,6 +1469,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Fixnum/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3c%3d%3e-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3c%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3c-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3d%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3e%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Fixnum/%3e%3e-i.yaml
@@ -1521,6 +1525,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Float/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3c%3d%3e-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3c%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3c-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3d%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3e%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Float/%3e-i.yaml
@@ -1936,7 +1941,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Fork/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Fork/execute-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Help/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Help/cdesc-Help.yaml
--rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Help/execute-c.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/Help/execute-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/IrbCommand/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/IrbCommand/cdesc-IrbCommand.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/ExtendCommand/IrbCommand/execute-i.yaml
@@ -2007,9 +2012,9 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/History/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/History/size-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/cdesc-HistorySavingAbility.yaml
--rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/create_finalizer-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/extended-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/load_history-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/HistorySavingAbility/save_history-i.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/InputCompletor/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/InputCompletor/cdesc-InputCompletor.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/InputCompletor/select_message-c.yaml
@@ -2168,6 +2173,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/IRB/WorkSpace/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/initialize_tracer-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/irb-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/irb_abort-c.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/irb_at_exit-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/irb_exit-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/load_modules-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/IRB/parse_opts-c.yaml
@@ -9182,6 +9188,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/RubyLex/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/identify_number-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/identify_quotation-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/identify_string-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/identify_string_dvar-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/initialize_input-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/lex-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/RubyLex/lex_init-i.yaml
@@ -9536,6 +9543,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/String/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%2b-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%3c%3c-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%3c%3d%3e-i.yaml
+-rw-r--r--	root/root	usr/share/ri/1.9/system/String/%3d%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%3d%7e-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/String/%5b%5d%3d-i.yaml
@@ -9803,6 +9811,7 @@ drwxr-xr-x	root/root	usr/share/ri/1.9/system/Struct/
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Struct/yaml_tag_class_name-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Struct/yaml_tag_read_class-c.yaml
 drwxr-xr-x	root/root	usr/share/ri/1.9/system/Symbol/
+-rw-r--r--	root/root	usr/share/ri/1.9/system/Symbol/%3d%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Symbol/%3d%3d-i.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Symbol/all_symbols-c.yaml
 -rw-r--r--	root/root	usr/share/ri/1.9/system/Symbol/cdesc-Symbol.yaml
