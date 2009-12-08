@@ -5,15 +5,12 @@
 # Depends on: gtk p5-xml-parser
 
 name=vte
-version=0.20.5
+version=0.23.1
 release=1
 source=(ftp://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.bz2)
 
 build() {
   cd $name-$version
-  sed -e '/^IT_PROG_INTLTOOL/d' -i configure.in
-  sed -e '/^SUBDIRS/s/po//' -i Makefile.in
-  autoconf
   ./configure --prefix=/usr \
               --libexecdir=/usr/lib/$name \
               --disable-static \
