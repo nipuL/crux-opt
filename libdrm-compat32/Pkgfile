@@ -5,7 +5,7 @@
 # Depends on: libdrm libpthread-stubs-compat32
 
 name=libdrm-compat32
-version=2.4.13
+version=2.4.15
 release=1
 source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2)
 
