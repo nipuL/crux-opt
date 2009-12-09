@@ -1,8 +1,8 @@
 # Description: The GNU Portable Threads library
 # URL: http://www.gnu.org/software/pth/
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer: Simon Glossner, viper at hometux dot de
+# Packager: Simon Glossner, viper at hometux dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Simon Glo�ner, viper at hometux dot de
 
 name=libpth
 version=2.0.7

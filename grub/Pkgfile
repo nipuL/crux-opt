@@ -1,6 +1,6 @@
 # Description: GNU GRUB (GRand Unified Bootloader)
 # URL: http://www.gnu.org/software/grub/
-# Packager: Daniel M�ller, daniel at danm dot de
+# Packager: Daniel Mueller, daniel at danm dot de
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: gettext

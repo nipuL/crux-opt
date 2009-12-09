@@ -2,7 +2,7 @@
 # URL: http://www.gnupg.org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager:    Simon Gloﬂner, viper at hometux dot de
+# Packager:    Simon Glossner, viper at hometux dot de
 # Depends on: libgpg-error
 
 name=libksba

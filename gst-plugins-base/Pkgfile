@@ -3,7 +3,7 @@
 # Maintainer: Jose V Beneyto, sepen at crux dot nu
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Matt Housh, jaeger at morpheus dot net
-# Depends on: alsa-lib e2fsprogs glibc gstreamer liboil libvorbis pango xorg-libxv
+# Depends on: alsa-lib e2fsprogs glibc gstreamer liboil libvorbis pango xorg-libxv xorg-libxcomposite
 
 name=gst-plugins-base
 version=0.10.25

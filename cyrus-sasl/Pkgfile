@@ -1,6 +1,6 @@
 # Description: Simple Authentication and Security Layer
 # URL: http://asg.web.cmu.edu/sasl/sasl-library.html
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer: Simon Glossner, viper at hometux dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Daniel Mueller, daniel at danm dot de
 # Depends on: db, openssl

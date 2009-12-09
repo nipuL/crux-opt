@@ -1,8 +1,8 @@
 # Description: High-quality MPEG Audio Decoder library
 # URL: http://www.underbit.com/products/mad/
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer: Simon Glossner, viper at hometux dot de
+# Packager: Rene Thuemmler, rene dot thuemmler at gmx dot net
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
-# Packager: Rene Th�mmler, rene dot thuemmler at gmx dot net
 
 name=libmad
 version=0.15.1b

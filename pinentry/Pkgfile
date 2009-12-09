@@ -1,6 +1,6 @@
 # Description: Secure PinEntry Dialog
 # URL: http://www.gnupg.org
-# Maintainer: Simon Glo�ner, viper at hometux dot de
+# Maintainer: Simon Glossner, viper at hometux dot de
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Alan Mizrahi, alan at mizrahi dot com dot ve
 # Depends on: ncurses, xorg-libx11
