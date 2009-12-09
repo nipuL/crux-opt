@@ -6,7 +6,7 @@
 # Depends on:  libxml2 zlib-compat32
 
 name=libxml2-compat32
-version=2.7.4
+version=2.7.6
 release=1
 source=(ftp://xmlsoft.org/libxml2/libxml2-$version.tar.gz)
 
