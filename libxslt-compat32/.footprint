@@ -4,15 +4,15 @@ drwxr-xr-x	root/root	usr/bin/
 drwxr-xr-x	root/root	usr/lib32/
 -rw-r--r--	root/root	usr/lib32/libexslt.a
 -rwxr-xr-x	root/root	usr/lib32/libexslt.la
-lrwxrwxrwx	root/root	usr/lib32/libexslt.so -> libexslt.so.0.8.13
-lrwxrwxrwx	root/root	usr/lib32/libexslt.so.0 -> libexslt.so.0.8.13
--rwxr-xr-x	root/root	usr/lib32/libexslt.so.0.8.13
+lrwxrwxrwx	root/root	usr/lib32/libexslt.so -> libexslt.so.0.8.15
+lrwxrwxrwx	root/root	usr/lib32/libexslt.so.0 -> libexslt.so.0.8.15
+-rwxr-xr-x	root/root	usr/lib32/libexslt.so.0.8.15
 drwxr-xr-x	root/root	usr/lib32/libxslt-plugins/
 -rw-r--r--	root/root	usr/lib32/libxslt.a
 -rwxr-xr-x	root/root	usr/lib32/libxslt.la
-lrwxrwxrwx	root/root	usr/lib32/libxslt.so -> libxslt.so.1.1.24
-lrwxrwxrwx	root/root	usr/lib32/libxslt.so.1 -> libxslt.so.1.1.24
--rwxr-xr-x	root/root	usr/lib32/libxslt.so.1.1.24
+lrwxrwxrwx	root/root	usr/lib32/libxslt.so -> libxslt.so.1.1.26
+lrwxrwxrwx	root/root	usr/lib32/libxslt.so.1 -> libxslt.so.1.1.26
+-rwxr-xr-x	root/root	usr/lib32/libxslt.so.1.1.26
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 -rw-r--r--	root/root	usr/lib32/pkgconfig/libexslt.pc
 -rw-r--r--	root/root	usr/lib32/pkgconfig/libxslt.pc

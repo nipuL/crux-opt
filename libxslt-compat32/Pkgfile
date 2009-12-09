@@ -5,7 +5,7 @@
 # Depends on: libxslt libxml2-compat32
 
 name=libxslt-compat32
-version=1.1.24
+version=1.1.26
 release=1
 source=(ftp://xmlsoft.org/libxml2/libxslt-$version.tar.gz)
 
