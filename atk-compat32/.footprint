@@ -1,8 +1,8 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/lib32/
 -rwxr-xr-x	root/root	usr/lib32/libatk-1.0.la
-lrwxrwxrwx	root/root	usr/lib32/libatk-1.0.so -> libatk-1.0.so.0.2609.1
-lrwxrwxrwx	root/root	usr/lib32/libatk-1.0.so.0 -> libatk-1.0.so.0.2609.1
--rwxr-xr-x	root/root	usr/lib32/libatk-1.0.so.0.2609.1
+lrwxrwxrwx	root/root	usr/lib32/libatk-1.0.so -> libatk-1.0.so.0.2809.1
+lrwxrwxrwx	root/root	usr/lib32/libatk-1.0.so.0 -> libatk-1.0.so.0.2809.1
+-rwxr-xr-x	root/root	usr/lib32/libatk-1.0.so.0.2809.1
 drwxr-xr-x	root/root	usr/lib32/pkgconfig/
 -rw-r--r--	root/root	usr/lib32/pkgconfig/atk.pc

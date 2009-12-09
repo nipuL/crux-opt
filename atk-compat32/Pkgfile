@@ -5,9 +5,9 @@
 # Depends on: atk, glib-compat32
 
 name=atk-compat32
-version=1.26.0
+version=1.28.0
 release=1
-source=(http://download.gnome.org/sources/atk/1.22/atk-$version.tar.bz2)
+source=(http://download.gnome.org/sources/atk/1.28/atk-$version.tar.bz2)
 
 build () {
 	cd atk-$version
