@@ -5,7 +5,7 @@
 # Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=hal-info
-version=20090414
+version=20091130
 release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz)
 
