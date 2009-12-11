@@ -2,7 +2,6 @@
 # URL: http://libmpeg2.sourceforge.net/
 # Packager: Tilman Sauerbeck, tilman at code-monkey dot de
 # Maintainer: Richard Poettler, richard dot poettler at gmail dot com
-# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=mpeg2dec
 version=0.4.1
