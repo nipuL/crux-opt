@@ -5,7 +5,7 @@
 # Depends on: dbus-glib, hal-info
 
 name=hal
-version=0.5.12
+version=0.5.14
 release=1
 source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz \
 	hal.conf
