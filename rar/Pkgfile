@@ -4,7 +4,7 @@
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=rar
-version=3.9.0
+version=3.9.1b1
 release=1
 source=(http://www.rarlab.com/rar/rarlinux-$version.tar.gz)
 
