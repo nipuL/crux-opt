@@ -4,7 +4,7 @@
 # Depends on:  ncurses, readline
 
 name=sqlite3
-version=3.6.20
+version=3.6.21
 release=1
 
 source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)
@@ -12,7 +12,9 @@ source=(http://www.sqlite.org/sqlite-amalgamation-$version.tar.gz)
 build () {
     cd sqlite-$version
 
-    ./configure --prefix=/usr CFLAGS="$CFLAGS -DNDEBUG"
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                CFLAGS="$CFLAGS -DNDEBUG"
 
     make
     make DESTDIR=$PKG install
