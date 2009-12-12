@@ -4,7 +4,7 @@ drwxr-xr-x	root/root	usr/lib/ROX-Lib2/
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/.DirIcon
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/AppInfo.xml
 -rwxr-xr-x	root/root	usr/lib/ROX-Lib2/AppRun
--rw-------	root/root	usr/lib/ROX-Lib2/ROX-Lib2.xml
+-rw-r--r--	root/root	usr/lib/ROX-Lib2/ROX-Lib2.xml
 drwxr-xr-x	root/root	usr/lib/ROX-Lib2/python/
 -rwxr-xr-x	root/root	usr/lib/ROX-Lib2/python/check.sh
 -rwxr-xr-x	root/root	usr/lib/ROX-Lib2/python/make_docs.py
@@ -33,6 +33,7 @@ drwxr-xr-x	root/root	usr/lib/ROX-Lib2/python/rox/
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/saving.py
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/session.py
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/settings.py
+-rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/singleton.py
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/su.py
 -rw-r--r--	root/root	usr/lib/ROX-Lib2/python/rox/suchild.py
 -rwxr-xr-x	root/root	usr/lib/ROX-Lib2/python/rox/suchild.sh

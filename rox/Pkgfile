@@ -5,7 +5,7 @@
 # Depends on: libglade, shared-mime-info
 
 name=rox
-version=2.9
+version=2.10
 release=1
 source=(http://dl.sourceforge.net/sourceforge/rox/$name-filer-$version.tar.bz2)
 

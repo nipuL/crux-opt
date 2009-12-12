@@ -5,7 +5,7 @@
 # Depends on: poppler
 
 name=poppler-data
-version=0.3.0
+version=0.4.0
 release=1
 source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
 
