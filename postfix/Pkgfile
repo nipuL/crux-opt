@@ -1,6 +1,7 @@
 # Description: Postfix Mail Transport Agent (MTA)
 # URL: http://www.postfix.org
 # Maintainer: Simon Glossner, viper at hometux dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Victor, victord at users dot berlios dot de
 # Depends on: cyrus-sasl, openssl, db
 
