@@ -1,6 +1,7 @@
 # Description: Perl Uniform Resource Identifiers Library.
 # URL:         http://search.cpan.org/~gaas/URI-1.35/
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Han Boetes han at mijncomputer dot nl
 # Depends on:  perl
 
