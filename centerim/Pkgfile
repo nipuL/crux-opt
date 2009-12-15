@@ -5,7 +5,7 @@
 # Depends on:  ncurses
 
 name=centerim
-version=4.22.8
+version=4.22.9
 release=1
 source=(http://www.centerim.org/download/releases/$name-$version.tar.gz)
 
