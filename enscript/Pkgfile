@@ -1,11 +1,11 @@
 # Description: GNU enscript, converts ASCII files to PostScript
-# URL:         http://people.ssh.fi/mtr/genscript/
+# URL:         http://www.gnu.org/software/enscript/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=enscript
 version=1.6.4
 release=1
-source=(http://www.iki.fi/mtr/genscript/$name-$version.tar.gz)
+source=(http://www.sfr-fresh.com/unix/misc/$name-$version.tar.gz)
 
 build () {
     cd $name-$version

@@ -4,7 +4,7 @@
 # Packager:    Simone Rota, sip at crux dot nu
 
 name=nano
-version=2.2.0
+version=2.2.1
 release=1
 source=(http://www.nano-editor.org/dist/v2.2/$name-$version.tar.gz)
 
