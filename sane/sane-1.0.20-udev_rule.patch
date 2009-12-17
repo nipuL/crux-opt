@@ -1,0 +1,30 @@
+diff -Nru sane-backends-1.0.20.orig/tools/sane-desc.c sane-backends-1.0.20/tools/sane-desc.c
+--- sane-backends-1.0.20.orig/tools/sane-desc.c	2009-12-17 09:46:40.000000000 +0100
++++ sane-backends-1.0.20/tools/sane-desc.c	2009-12-17 09:54:01.000000000 +0100
+@@ -3475,7 +3475,7 @@
+ 	    }
+ 	}
+       printf ("\n");
+-      printf ("ATTR{idVendor}==\"%s\", ATTR{idProduct}==\"%s\", MODE=\"%s\", GROUP=\"%s\", ENV{libsane_matched}=\"yes\"\n",
++      printf ("ATTRS{idVendor}==\"%s\", ATTRS{idProduct}==\"%s\", MODE=\"%s\", GROUP=\"%s\", ENV{libsane_matched}=\"yes\"\n",
+ 	      usbid->usb_vendor_id + 2,  usbid->usb_product_id + 2, DEVMODE, DEVGROUP);
+       usbid = usbid->next;
+     }
+@@ -3488,7 +3488,7 @@
+   printf ("SUBSYSTEMS!=\"scsi\", GOTO=\"libsane_scsi_rules_end\"\n\n");
+   printf ("LABEL=\"libsane_scsi_rules_begin\"\n");
+   printf ("# Generic: SCSI device type 6 indicates a scanner\n");
+-  printf ("KERNEL==\"sg[0-9]*\", NAME=\"%%k\", ATTRS{type}==\"6\", MODE=\"%s\", GROUP=\"%s\"\n", DEVMODE, DEVGROUP);
++  printf ("KERNEL==\"sg[0-9]*\", ATTRS{type}==\"6\", MODE=\"%s\", GROUP=\"%s\"\n", DEVMODE, DEVGROUP);
+   printf ("# Some scanners advertise themselves as SCSI device type 3\n");
+ 
+   while (scsiid)
+@@ -3521,7 +3521,7 @@
+ 	    }
+         }
+       printf ("\n");
+-      printf ("KERNEL==\"sg[0-9]*\", NAME=\"%%k\", ATTRS{type}==\"3\", ATTRS{vendor}==\"%s\", ATTRS{model}==\"%s\", MODE=\"%s\", GROUP=\"%s\"\n",
++      printf ("KERNEL==\"sg[0-9]*\", ATTRS{type}==\"3\", ATTRS{vendor}==\"%s\", ATTRS{model}==\"%s\", MODE=\"%s\", GROUP=\"%s\"\n",
+ 	      scsiid->scsi_vendor_id, scsiid->scsi_product_id, DEVMODE, DEVGROUP);
+       scsiid = scsiid->next;
+     }
