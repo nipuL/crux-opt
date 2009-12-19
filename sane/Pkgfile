@@ -6,11 +6,14 @@
 
 name=sane
 version=1.0.20
-release=1
-source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz)
+release=2
+source=(ftp://ftp.sane-project.org/pub/$name/$name-backends-$version/$name-backends-$version.tar.gz
+        $name-$version-udev_rule.patch)
 
 build () {
     cd $name-backends-$version
+
+    patch -p1 -i $SRC/$name-$version-udev_rule.patch
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
@@ -21,9 +24,7 @@ build () {
     make
     make -j1 DESTDIR=$PKG install
 
-    install -d $PKG/etc/udev/rules.d
-    install -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d
-    sed -i 's/usb_device/usb/' $PKG/etc/udev/rules.d/libsane.rules
+    install -D -m 644 tools/udev/libsane.rules $PKG/etc/udev/rules.d/85-libsane.rules
 
     chown root:root $PKG/{var,var/lock}
     chmod 0755 $PKG/var
