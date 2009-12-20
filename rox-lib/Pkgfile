@@ -1,6 +1,7 @@
 # Description: Support library for ROX apps
 # URL: http://rox.sourceforge.net/phpwiki/index.php/ROX-Lib
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Simone Rota, sip at crux dot nu
 # Depends on: pygtk
 
