@@ -1,6 +1,7 @@
 # Description: Dynamic, any to any, pixel format translation library
 # URL: http://gegl.org/babl
 # Maintainer:  Thomas Penteker, tek at serverop dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Simone Rota, sip at crux dot nu
 # Depends on:
 
