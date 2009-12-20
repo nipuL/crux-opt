@@ -1,6 +1,7 @@
 # Description: Objective CAML Compiler
 # URL:         http://caml.inria.fr/
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Erlend Bergsas Mikkelsen, howl at online dot no
 # Depends on:  ncurses, gdbm
 
