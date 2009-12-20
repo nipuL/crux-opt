@@ -1,6 +1,7 @@
 # Description: Rodent-independent window manager
 # URL: http://ratpoison.nongnu.org/
 # Maintainer: Antti Nykanen, aon at iki dot fi
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: xorg-libxinerama, xorg-libxtst
 
 name=ratpoison
