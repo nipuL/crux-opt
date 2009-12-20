@@ -2,6 +2,7 @@
 # URL: N/A
 # Packager: Matt Housh, jaeger at morpheus dot net
 # Maintainer: Lucas Hazel, lucas at die dot net dot au
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 
 name=gl-select-compat32
 version=1.3
