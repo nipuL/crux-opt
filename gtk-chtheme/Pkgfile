@@ -1,6 +1,7 @@
 # Description: Theme changer for GTK2
 # URL: http://plasmasturm.org/programs/gtk-chtheme
 # Maintainer: Juergen Daubert, juergen dot daubert at t-online dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager: Simone Rota, sip at crux dot nu
 # Depends on: gtk
 
