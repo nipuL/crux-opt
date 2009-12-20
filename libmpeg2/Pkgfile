@@ -2,6 +2,7 @@
 # URL:         http://libmpeg2.sourceforge.net/
 # Packager:    acrux, acrux at linuxmail dot org
 # Maintainer:  Thomas Penteker, tek at serverop dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Depends on: libsdl, xorg-libxv, xorg-libsm
 
 name=libmpeg2
