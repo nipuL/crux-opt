@@ -1,6 +1,7 @@
 # Description: The GIMP
 # URL:         http://www.gimp.org/
 # Maintainer:  Thomas Penteker, tek at serverop dot de
+# Arch Maintainer: Lucas Hazel, lucas at die dot net dot au
 # Packager:    Simone Rota, sip at crux dot nu
 # Depends on:  libart_lgpl, xorg-libxmu, xorg-libxpm, intltool, gegl
 # Nice to have: gimp-print
