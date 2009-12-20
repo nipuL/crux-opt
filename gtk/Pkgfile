@@ -4,13 +4,14 @@
 # Depends on: atk, hicolor-icon-theme, libtiff, pango, xorg-libsm, xorg-libxcursor, xorg-libxinerama, xorg-libxrandr
 
 name=gtk
-version=2.18.4
+version=2.18.5
 release=1
 source=(http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.0.tar.bz2 \
         http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.0-2.18.1.diff.gz \
         http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.1-2.18.2.diff.gz \
         http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.2-2.18.3.diff.gz \
         http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.3-2.18.4.diff.gz \
+        http://download.gnome.org/sources/gtk+/2.18/${name}+-2.18.4-2.18.5.diff.gz \
 	gdk-pixbuf.loaders gtk.immodules \
 	gtk-register.sh)
 
@@ -21,6 +22,7 @@ build () {
 	zcat $SRC/${name}+-2.18.1-2.18.2.diff.gz | patch -p1
 	zcat $SRC/${name}+-2.18.2-2.18.3.diff.gz | patch -p1
 	zcat $SRC/${name}+-2.18.3-2.18.4.diff.gz | patch -p1
+	zcat $SRC/${name}+-2.18.4-2.18.5.diff.gz | patch -p1
 
 	./configure --prefix=/usr \
 		--mandir=/usr/man --without-libjasper
