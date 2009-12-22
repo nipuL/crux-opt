@@ -4,7 +4,7 @@
 # Depends on:  ncurses
 
 name=gdb
-version=7.0
+version=7.0.1
 release=1
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
