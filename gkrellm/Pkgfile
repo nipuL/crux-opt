@@ -5,15 +5,14 @@
 # Depends on:  gtk, openssl
 
 name=gkrellm
-version=2.3.2
-release=2
+version=2.3.3
+release=1
 source=(http://members.dslextreme.com/users/billw/$name/$name-$version.tar.bz2)
 
 build () {
     cd $name-$version
-    sed -i '/^enable_nls/s/1/0/' Makefile
-    sed -i 's/\<getline\>/get_line/' src/client.c
-    make PREFIX=/usr 
-    make INSTALLROOT=$PKG/usr MANDIR=$PKG/usr/man/man1 install
-    mkdir -p $PKG/usr/lib/gkrellm2/plugins 
+    export PREFIX=/usr
+    make enable_nls=0
+    make enable_nls=0 DESTDIR=$PKG MANDIR=$PKG/usr/man/man1 install
+    install -d $PKG/usr/lib/gkrellm2/plugins 
 }
