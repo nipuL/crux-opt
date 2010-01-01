@@ -1,0 +1,7 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/lib32/
+-rw-r--r--	root/root	usr/lib32/libungif.a
+-rwxr-xr-x	root/root	usr/lib32/libungif.la
+lrwxrwxrwx	root/root	usr/lib32/libungif.so -> libungif.so.4.1.4
+lrwxrwxrwx	root/root	usr/lib32/libungif.so.4 -> libungif.so.4.1.4
+-rwxr-xr-x	root/root	usr/lib32/libungif.so.4.1.4
