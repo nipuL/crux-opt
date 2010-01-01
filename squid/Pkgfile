@@ -3,7 +3,7 @@
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
 
 name=squid
-version=3.0.STABLE20
+version=3.0.STABLE21
 release=1
 source=(http://www.squid-cache.org/Versions/v3/3.0/$name-$version.tar.bz2 \
         squid squid-config.patch)

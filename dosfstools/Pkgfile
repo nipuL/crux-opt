@@ -6,7 +6,7 @@
 # Depends on:
 
 name=dosfstools
-version=3.0.6
+version=3.0.7
 release=1
 source=(http://www.daniel-baumann.ch/software/$name/$name-$version.tar.bz2)
 

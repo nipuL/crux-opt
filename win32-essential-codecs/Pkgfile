@@ -5,12 +5,12 @@
 
 name=win32-essential-codecs
 version=20071007
-release=1
+release=2
 source=(http://www3.mplayerhq.hu/MPlayer/releases/codecs/essential-$version.tar.bz2)
 
 build() {
 	cd essential-$version
-	mkdir -p $PKG/usr/lib/win32
-	install -m 0644 * $PKG/usr/lib/win32/
-	rm -f $PKG/usr/lib/win32/README
+	mkdir -p $PKG/usr/share/codecs
+	install -m 0644 * $PKG/usr/share/codecs/
+	rm -f $PKG/usr/lib
 }

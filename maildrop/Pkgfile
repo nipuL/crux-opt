@@ -4,7 +4,7 @@
 # Depends on:  gdbm libpcre
 
 name=maildrop
-version=2.2.0
+version=2.3.0
 release=1
 source=(http://dl.sourceforge.net/sourceforge/courier/$name-$version.tar.bz2)
 

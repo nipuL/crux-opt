@@ -1,23 +1,22 @@
 # Description: GNU Midnight Commander
 # URL:         http://www.midnight-commander.org
 # Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
-# Depends on:  e2fsprogs, glib
+# Depends on:  ncurses glib
 
 name=mc
-version=4.6.2
-release=2
-source=(http://www.midnight-commander.org/downloads/$name-$version.tar.gz)
+version=4.7.0
+release=1
+source=(http://www.midnight-commander.org/downloads/$name-$version.tar.lzma)
 
 build () {
     cd $name-$version
 
-    aclocal
-    automake -a
-
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --libexecdir=/usr/lib \
-                --disable-nls
+                --disable-nls \
+                --with-screen=ncurses
+
     make
     make DESTDIR=$PKG install
 

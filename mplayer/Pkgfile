@@ -7,7 +7,7 @@
 # Nice to have: libsdl, libjpeg, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav, libdca
 
 name=mplayer
-version=export-2009-09-19
+version=export-2009-12-26
 release=2
 source=(http://crux.nu/~lucas/files/$name-$version.tar.bz2
   http://www1.mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
@@ -20,8 +20,9 @@ build() {
   export CFLAGS="$(echo $CFLAGS | sed -e 's/-O[s0-3]/-O3/') -ffast-math -fomit-frame-pointer -fno-strict-aliasing"
   ./configure --prefix=/usr \
       --mandir=/usr/man \
-      --codecsdir=/usr/lib/win32 \
-      --enable-largefiles
+      --codecsdir=/usr/share/codecs \
+      --enable-largefiles \
+      --confdir=/etc
   make
   make DESTDIR=$PKG install
 
@@ -34,8 +35,9 @@ build() {
   ln -s font-arial-14-iso-8859-1 $PKG/usr/share/mplayer/font
 
   # config
-  install -m 644 $SRC/mplayer.conf $PKG/usr/etc/mplayer/
-  install -m 644 etc/input.conf $PKG/usr/etc/mplayer/
+  mkdir -p $PKG/etc/mplayer
+  install -m 644 $SRC/mplayer.conf $PKG/etc/mplayer/
+  install -m 644 etc/input.conf $PKG/etc/mplayer/
 
   # finish up
   rmdir $PKG/usr/lib
