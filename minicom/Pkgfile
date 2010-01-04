@@ -5,14 +5,18 @@
 # Depends on:
 
 name=minicom
-version=2.3
-release=2
+version=2.4
+release=1
 source=(http://alioth.debian.org/frs/download.php/2332/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
-	sed 's/getline(/gethistline(/g' -i src/minicom.c
-	./configure --prefix=/usr --disable-nls --mandir=/usr/man
-	make
-	make DESTDIR=$PKG install
+  cd $name-2.3
+  sed 's/getline(/gethistline(/g' -i src/minicom.c
+
+  ./configure --prefix=/usr \
+              --disable-nls \
+              --mandir=/usr/man
+
+  make
+  make DESTDIR=$PKG install
 }
