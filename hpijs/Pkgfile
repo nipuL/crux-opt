@@ -4,7 +4,7 @@
 # Depends on:  cups
 
 name=hpijs
-version=3.9.10
+version=3.9.12
 release=1
 source=(http://dl.sourceforge.net/sourceforge/hplip/hplip-$version.tar.gz)
 
@@ -16,7 +16,7 @@ build () {
                 --enable-hpcups-install \
                 --with-hpppddir=/usr/share/cups/model/HP \
                 --disable-network-build
-    
+
     make
     make DESTDIR=$PKG install
 
