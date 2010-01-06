@@ -5,12 +5,14 @@
 # Depends on:  xaw3d, ghostscript
 
 name=gv
-version=3.6.7
+version=3.6.8
 release=1
 source=(http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz)
 
 build () {
     cd $name-$version
+    sed -i '87,90s/^/dnl /' configure.ac
+    autoreconf
     ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
